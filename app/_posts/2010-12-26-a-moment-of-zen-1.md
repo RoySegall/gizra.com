@@ -1,7 +1,7 @@
 ---
 tags:
 - Drupal-planet
-- OG
+- Organic Groups
 permalink: /content/moment-zen-1/
 title: "A moment of Zen #1"
 created: 1293377393
