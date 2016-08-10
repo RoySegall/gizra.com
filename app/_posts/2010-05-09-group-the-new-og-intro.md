@@ -1,8 +1,7 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
-- Group
-- OG
+- Organic Groups
 permalink: /content/group-intro/
 title: Group (the new OG) intro
 created: 1273414312
