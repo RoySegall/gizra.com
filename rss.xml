@@ -4,10 +4,47 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Tue, 23 Aug 2016 22:01:20 +0300</lastBuildDate>
-    <pubDate>Tue, 23 Aug 2016 22:01:20 +0300</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2016 21:04:40 +0300</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2016 21:04:40 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>OG8 development mindset</title>
+        <description>
+          &lt;p&gt;As OG8 is steadily being built, I have noticed a certain pattern - or a mindset - we&amp;rsquo;ve been following which I think is worth sharing.&lt;/p&gt;
+
+&lt;p&gt;OG8 is the third time I&amp;rsquo;ve written OG for Drupal. The first OG7 version was a head jump into the Entity goodness that Drupal 7 brought along with Entity API. The second version was taking a small step back away from the Entity fiesta, but took two steps forward into the field API.&lt;/p&gt;
+
+&lt;p&gt;I think that as a developer I have matured since then. Edge cases are no longer my concern. I mean, I&amp;rsquo;m making sure that edge cases can be done and the API will cater to it, but I won&amp;rsquo;t go too far and implement them. It&amp;rsquo;s not that in OG7 we tried to tackle all of the edge cases, but in OG8 it&amp;rsquo;s even less.&lt;/p&gt;
+
+&lt;p&gt;In fact, although we write a lot of new code as part of the porting, as the way we write modules for Drupal 8 has changed considerably, writing OG8 feels like&amp;hellip; Well, it feels like I&amp;rsquo;m mostly &lt;em&gt;deleting&lt;/em&gt; files.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/og8-development-mindset/image1.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Removing lines of code is so much better than adding&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;h2&gt;Myths Debunked&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s not too rare to hear rants about OG. Often they are not backed by actual data, or even refer to older versions.  &lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/og8-development-mindset/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/og8-development-mindset</link>
+        <guid>http://www.gizra.com/content/og8-development-process</guid>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 +0300</pubDate>
+      </item>
     
       <item>
         <title>Getting started with a Core Initiative</title>
