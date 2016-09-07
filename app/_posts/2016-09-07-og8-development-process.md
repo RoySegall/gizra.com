@@ -29,7 +29,10 @@ It's not too rare to hear rants about OG. Often they are not backed by actual da
 
 I was even quite surprised to find out in one of DrupalCon BOFs that an "OG alternative" module (that now seems to be without any much activity for the past year) was created by an author that never bothered to check OG 7.x-2.x. They knew OG 6 and kind of knew OG 7.x-1.x, and yet they used to bash OG pretty badly.
 
-Being in that BOF was both funny, and a little sad at the same time.  
+(And just to prevent any mistake, but still not call out loud the module name. I am not referring to the Group module. The above section is about another module. About my positive and negative [critique](http://www.gizra.com/content/og-message-stack-drupal8/) to Group you can read here)
+
+Being in that BOF was both funny, and a little sad at the same time.
+
 Now, don't get me wrong. There's nothing bad with alternatives. In fact Message and RESTful modules have grown as alternatives to existing solutions, but they all grew after a deep understanding of all the existing solutions.
 
 So, just for the fun, here are the rants ordered by popularity:
