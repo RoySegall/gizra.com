@@ -1,5 +1,5 @@
 ---
-title: "OG8 development mindset"
+title: "OG8 Development Mindset"
 tags:
   - "Drupal-planet"
   - "Organic Groups"
