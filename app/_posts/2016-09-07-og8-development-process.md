@@ -71,7 +71,7 @@ I have a healthy obsession over quality and the idea of "correctness." How can y
 
 Here's one of my favorite images, a Drupal 8 developer sees on a daily basis.
 
-** Add Exception image **
+{% include thumbnail.html image_path="assets/images/posts/og8-development-mindset/exception.jpg" caption="Better have an error than wrong data" %}
 
 It's an exception throw by code that was not satisfied with the data it received. It's not a notice, appearing in a red box on top of your page, which your brain has learned to ignore. It's an "in your face" error message that makes sure you stop being lazy, and fix your code.
 
