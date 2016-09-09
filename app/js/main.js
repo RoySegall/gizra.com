@@ -9,7 +9,7 @@ $(function() {
 
 $(function() {
   // Add deep anchor links to post pages.
-  anchors.add('#post-page h2, #post-page h3');
+  anchors.add('#post-page h2, #post-page h3, #case-page h2, #case-page h3');
 });
 
 $(document).ready(function(){
