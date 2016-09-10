@@ -46,13 +46,10 @@
   margin-bottom: 20px;
 
   .post-teaser {
-    @extend .soft-box;
     box-shadow: none;
     position: relative;
-    margin-bottom: 28px;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    border-radius: 6px;
+    margin-bottom: 1.5em;
+    padding: 5px;
 
     > * {
       margin-right: 10px;
@@ -134,11 +131,10 @@
 
 @include desktop {
   .blog .article .main-image {
-    height: 275px;
+    height: 185px;
   }
 
   .post-teaser {
-    height: 400px;
     overflow: hidden;
   }
 }
