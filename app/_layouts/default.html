@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        {% include title.html %}
-        <meta name="description" content="{{ page.description }}">
-        <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      {% include title.html %}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta content="{{ site.title }}" property="og:site_name">
+
+      {% if page.title %}
+        <meta content="{{ page.title }}" property="og:title">
+      {% else %}
+        <meta content="{{ site.title }}" property="og:title">
+      {% endif %}
+
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+      <meta name="{{ page.description }}" name="og:description">
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@gizra_drupal" />
+      {% endif %}
+
+      {% if page.image %}
+      <meta name="{{ site.url }}{{ page.image }}" name="og:image">
+      {% endif %}
 
       <!-- Favicon for all platforms -->
       <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
