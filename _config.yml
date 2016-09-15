@@ -212,14 +212,14 @@ authors:
       github: anvmn
       avatar: male.jpg
       image: anvmn.jpg
-  - savyoncohen:
+  - SavyonCohen:
       name: Savyon Cohen
       title: Developer
       is_member: true
       bio: I'm the mother of twins... What is your superpower?
       email: savyon@gizra.com
       github: savyoncohen
-      avatar: female.jpg
+      avatar: savyoncohen.jpg
       image: savyoncohen.jpg
   - ybaras:
       name: Yoav Baras
