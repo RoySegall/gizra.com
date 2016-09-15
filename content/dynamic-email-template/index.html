@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      
+    
+
+<title>Creating a Dynamic Email Template in Drupal</title>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta content="Gizra" property="og:site_name">
+
+      
+        <meta content="Creating a Dynamic Email Template in Drupal" property="og:title">
+      
+
+      
+
+      
+      <meta name="http://www.gizra.com/assets/images/posts/email-template/thumb.jpg" name="og:image">
+      
+
+      <!-- Favicon for all platforms -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.5691.png">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.e5f8.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.17e1.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.7353.png" sizes="16x16">
+      <link rel="manifest" href="/images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#000000">
+      <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- End favicon for all platforms -->
+
+      <link rel="stylesheet" href="/css/main.e27e.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+      <!-- Begin Inspectlet Embed Code -->
+      <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 314054580]);
+      (function() {
+      function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+      })();
+      </script>
+      <!-- End Inspectlet Embed Code -->
+
+    </head>
+    <body>
+
+    <!-- Main content -->
+    
+  
+
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+    
+  
+
+
+<header id="header-global">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+  
+
+<span class="gizra-logo"><a href="/">gizra</a></span>
+<h1 class="sr-only">Gizra</h1>
+<nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/#about" class="smooth-scroll-to">About</a></li>
+      <li><a href="/services">Our Work</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/fit">Do We Fit?</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+    </div>
+  </div>
+</header>
+<article id="post-page">
+  <div class="container">
+    <div class="row">
+      <div id="post-title" class="col-sm-10 col-sm-offset-1">
+        <h1><a href="/content/dynamic-email-template">Creating a Dynamic Email Template in Drupal </a></h1>
+        <div class="post-author">By Savyon Cohen</div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="post-data" class="col-sm-2 col-sm-offset-1">
+  			<div id="post-label">
+  		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+  			</div>
+        <div class="date">15 Sep 2016</div>
+        <section class="author-details">
+          <div class="image-wrapper">
+            <img src="/images/team/avatars/SavyonCohen.2449.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="text-wrapper">
+            <span class="name">Savyon Cohen</span>
+            
+            <div class="title">Developer</div>
+            <div class="bio">I'm the mother of twins... What is your superpower?</div>
+          </div>
+        </section>
+        <div class="tags">
+          <div class="title">Tags:</div>
+          
+            <ul class="inline">
+              
+              
+
+  
+    
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
+    
+  
+
+
+            </ul>
+          
+        </div>
+      </div>
+      <div id="post-content" class="col-sm-8">
+
+        <p>Creating a plain text email with Drupal is a simple task. However, when you want to send a nicely designed message with a logo, an article, a linked button or any other unique design with dynamic content personalized for each user, it can get complicated.</p>
+
+<p>The complication stems not from the dynamic content, but rather from the fact that the CSS that can be applied inside email templates is limited. In general, targeting multiple email clients can be worse then getting your CSS to work on IE9!</p>
+
+<p>This post will walk you through a solution we use to address these requirements, but before jumping in, let me first explain Gizra&rsquo;s approach to themes. We don&rsquo;t use custom CSS in Drupal themes. When we start building a website, we divide our work into several milestones, the first is creating a clean and static markup, using Jekyll. At Gizra, we take pixel perfect very seriously, and by doing the markup first, we can concentrate on building our App pages exactly the way they are suppose to look, test their responsiveness, show our clients a first draft, and fix bugs before getting into the logic. We use gulp to compile the SASS files into one CSS file, and after doing that, we copy the CSS file to the themes folder. Then we take our static pages, cut them into pieces, and use them in Drupal themes and plugins.</p>
+
+<p>By doing this, we can focus on our logic without worrying about how it may look with different dynamic content. Focusing on Frontend and Backend as separate tasks makes building websites easier and faster. Even fixing bugs discovered while implementing dynamic content can now be easily fixed. Our
+<a href="http://www.gizra.com/content/custom-css-as-contrib-with-jekyll/">No more CSS in your Drupal Theme!</a> blog post talks more extensively about the way we work with Drupal themes.</p>
+
+<p>The same approach is implemented when we create an email template. We first build the email markup with static content, and then we use it to create dynamic content messages. Oh, and we cheat, because we don&rsquo;t write a single line of HTML or CSS!</p>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/email-template/email_example.jpg">
+    
+
+  </div>
+  
+    <div class="caption">A demo email template created for this post</div>
+  
+</div>
+
+<!-- more -->
+
+<h2>Creating an email template</h2>
+
+<p>When we build a website we need to take into consideration that our users use different browsers and adjust our CSS rules so that our website will look pretty much the same in all of them. Achieving this is more difficult when it comes to emails.<br>
+Our users use different email services and view their emails on different browsers. Each email may look a bit different on each browser or software. Some of the email services do not support all HTML tags and CSS designs. We can&rsquo;t use everything we use in our website for example: Gmail and Outlook users have poor support for float, margin and padding. Also, some email services may overwrite our design and replace it with its defaults like links color, or image visibility. Another issue is the screen widths where mobile or tablet users view emails very differently.</p>
+
+<p>Our way to overcome this problem is to design our emails with nested tables since they are supported by most email services. However, this is still not enough. To make sure that our email will look the way we want, we need to set a specific width for each table cell and that&rsquo;s a lot of work. After creating our email template we need to find a way to test it and make sure that it looks the way we meant on every media or mail service.</p>
+
+<p>This is when we decided to take advantage of <a href="https://mailchimp.com/">Mailchimp&rsquo;s</a> wysiwyg editor. In the editor we can build the static version of the email, that will include links, images, videos, etc.</p>
+
+<p>We use the editor to create the email friendly HTML and CSS for us, and later use the <code>export</code> functionality to grab it and move it into Drupal.</p>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/email-template/mailchimp_wysiwyg.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Mailchimp wysiwyg editor</div>
+  
+</div>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/email-template/mailchimp_components.jpg">
+    
+
+  </div>
+  
+    <div class="caption">Mailchimp content items</div>
+  
+</div>
+
+<p>Behind the scenes, Mailchimp converted my design into nested tables with the most mail supported CSS rules. There is also an option to view the source on the Mailchimp editor and do my own adjustments.
+I upload my images to Mailchimp&rsquo;s cloud, so I won&rsquo;t have to worry about my users email software blocking images attached to the email.</p>
+
+<p>Mailchimp also gives us the opportunity to test our email template on desktop, mobile, and inbox software such as different versions of Outlook, Gmail, and Yahoo on different browsers.
+After finishing the email template, I go to my templates list and export it as an HTML file, which is combined with the inline CSS. Next we need to wire it into Drupal.</p>
+
+<h2>From Static to Dynamic</h2>
+
+<p>The idea is now to take the static HTML and slowly introduce the dynamic content.</p>
+
+<p>Instead of calling <code>drupal_mail()</code> directly we usually use the Message and Message notify modules to send the emails. It has the advantage that each mail is saved in the system, so it&rsquo;s easier to track (and find bugs, if there are any).</p>
+
+<p>One way to do this, is to create a theme function that has a tpl file, were we have our HTML. Then when creating the message we can replace a dynamic token with the content of <code>theme(&#39;my_email_template&#39;, $variables)</code></p>
+
+<p>But in order to convert the static parts to dynamic, we need to see the result. Sending an email on every change can be time consuming and make debugging harder, so we start by seeing the email inside our site, while we develop it. To do that, we can define in <code>hook_menu()</code> a debug path like <code>message-email-debug/%</code> where the argument will be the message ID.  </p>
+
+<p>However we&rsquo;ll need to make sure to disable our site CSS before we view our message, because it might change the way we view the emails. We can safely remove all CSS, since the email&rsquo;s CSS is inlined.</p>
+<div class="highlight"><pre><code class="php language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Implements hook_css_alter().</span>
+<span class="sd"> *</span>
+<span class="sd"> * Remove all CSS</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">example_css_alter</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$css</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$item</span> <span class="o">=</span> <span class="nx">menu_get_item</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$item</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;message-email-debug/%&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nv">$css</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We can also go ahead and override <code>page.tpl.php</code> so on <code>message-email-debug</code> it will print out only <code>&lt;?php print render($page[&#39;content&#39;]); ?&gt;</code> without any other elements.</p>
+
+<p>At this point, we can start converting our static into dynamic HTML, while being sure that the final HTML it guaranteed to work in email clients.</p>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+<section id="post-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
+        
+        <a href="/content/og8-development-mindset">
+          <div id="previous-label" class="text-small">
+            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;OG8 Development Mindset</span>
+            <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
+          </div>
+        </a>
+        
+      </div>
+      <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-3">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+
+    <!--Footer -->
+    
+  <div id="contact">
+    <footer id="footer" role="contentinfo">
+      <div class="footer-wrapper">
+        <div class="background">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title">Talk to us</h2>
+                <div class="clearfix">
+                  <address>
+                    <div class="strong">Israel Headquarters</div>
+                    <span>5 Brenner Street, Tel Aviv</span>
+                      <a class="telephone" href="tel:+97233731222">+972-3-3731222</a>
+                    <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+                  </address>
+                  <address class="separator">
+                    <div class="strong">North America Office</div>
+                    <span>106 West 32nd Street, 2nd Floor, New York, NY 10001</span>
+                    <a class="telephone" href="tel:+13476864508">212-634-1687</a>
+                    <a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a>
+                  </address>
+                  <div class="separator social-links">
+                    <span class="link github">
+                      <a href="https://github.com/Gizra" target="_blank"><i class="fa fa-github-square"></i><span class="link-text">Gizra's Github Account</span></a>
+                    </span>
+                    <span class="link twitter">
+                      <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i><span class="link-text">Gizra's Twitter Account</span></a>
+                    </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i><span class="link-text">Gizra's LinkedIn Page</span></a>
+                    </span>
+                    <span class="link facebook">
+                      <a href="https://www.facebook.com/gizraltd/timeline" target="_blank"><i class="fa fa-facebook-square"></i><span class="link-text">Gizra's Facebook Page</span></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+    <script src="/js/plugins.806b.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.f755.js"></script>
+    </body>
+</html>
