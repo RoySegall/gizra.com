@@ -6,6 +6,7 @@ permalink: "/content/dynamic-email-template"
 layout: post
 author: SavyonCohen
 image: /assets/images/posts/email-template/thumb.jpg
+description: "Creating plain text emails with Drupal is simple, but a nicely designed message with unique design and dynamic content, can get complicated. This post explains how to make beautiful, dynamic emails using Drupal."
 ---
 
 {% include setup %}
