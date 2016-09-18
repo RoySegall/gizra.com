@@ -2,10 +2,12 @@
 title: Let’s talk about authentication
 tags:
   - Restful
+  - Drupal-planet
 permalink: "/content/restful-access-token"
 layout: post
-published: true
 author: RoySegall
+image: /assets/images/posts/access-token/cookies.jpg
+description: "Creating plain text emails with Drupal is simple, but a nicely designed message with unique design and dynamic content, can get complicated. This post explains how to make beautiful, dynamic emails using Drupal."
 ---
 
 {% include setup %}
