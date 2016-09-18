@@ -1,8 +1,8 @@
 ---
 title: Let’s talk about authentication
 tags:
-  - Restful
   - Drupal-planet
+  - RESTful
 permalink: "/content/restful-access-token"
 layout: post
 author: RoySegall
@@ -12,30 +12,30 @@ description: "Creating plain text emails with Drupal is simple, but a nicely des
 
 {% include setup %}
 
-When talking on a traditional Drupal site we don’t need to handle authentication
-- Drupal got our back: a user submit the login form, get a cookie and start
+When talking about a traditional Drupal site, we don’t need to handle authentication
+because Drupal got our back - a user submits the login form, gets a cookie and starts
 using your awesome site. But what about decoupled sites? How can we authenticate
 the user?
 
 Before diving into that part we need to understand the authentication types
-provided by restful:
+provided by RESTful:
 
   1. CSRF token - Used to make sure a cookie was not hijacked by XSS.
-  2. Access token - Restful will generate an access token and bind it to the
+  2. Access token - RESTful will generate an access token and bind it to the
   user.
 
 <!-- more -->
 
-Another important thing: in order to use access token authentication you’ll need
+Important: in order to use access token authentication you’ll need
 to enable the module `restful_token_auth`.
 
 #Generating the access token#
 
-I’ll display how to generate an access token using Angular JS. If the
-authentication process will pass, the end point will return an object with 3
+Below is how to generate an access token using Angular JS. If the
+authentication process passes, the end point will return an object with 3
 values:
 
-  1. access_token - This is the token which represent the user in any request.
+  1. access_token - This is the token which represents the user in any request.
   2. expires_in - The amount of seconds in which the access token is valid.
   3. refresh_token - Once the the token is no longer valid you'll need to ask
   for a new one using the refresh token.
@@ -65,7 +65,7 @@ And this is what you’ll get back:
 ```
 
 #Refreshing access token#
-As mentioned above the access token only valid for specific amount of time,
+As mentioned above, the access token is only valid for a specific amount of time,
 usually 24 hours, and you’ll need to check it before the request:
 
 ```javascript
@@ -81,8 +81,8 @@ if (new Date().getTime() > localStorageService.get('expire_in')) {
 ```
 
 #Using the access token#
-OK. We got the access token and we can refresh it when it's no longer valid. The
-next thing you need to know is how inject the access token to the header:
+OK, so we got the access token and we can refresh it when it's no longer valid. The
+next thing you need to know is how to inject the access token into the header:
 
 ```javascript
 $http.post('http://localhost/drupal/api/article', {
