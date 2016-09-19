@@ -97,7 +97,7 @@ authors:
       image: ishadakota.jpg
   - RachelBaram:
       name: Rachel Baram
-      title: Business Development & Marketing
+      title: Business Development
       is_member: true
       bio: Loves to make things make sense.
       email: rachel@gizra.com
@@ -168,7 +168,7 @@ authors:
       avatar: male.jpg
       image: male.jpg
   - DavidKohav:
-      name: David Kochav
+      name: David Kohav
       title: QA Engineer
       is_member: true
       bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
