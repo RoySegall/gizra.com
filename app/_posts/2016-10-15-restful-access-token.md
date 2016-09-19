@@ -7,7 +7,7 @@ permalink: "/content/restful-access-token"
 layout: post
 author: RoySegall
 image: /assets/images/posts/access-token/cookies.jpg
-description: "Creating plain text emails with Drupal is simple, but a nicely designed message with unique design and dynamic content, can get complicated. This post explains how to make beautiful, dynamic emails using Drupal."
+description: "Authenticate users using access token in RESTful requests"
 ---
 
 {% include setup %}
