@@ -1,5 +1,5 @@
 ---
-title: Let’s talk about authentication
+title: Let’s Talk about Decoupled Authentication
 tags:
   - Drupal-planet
   - RESTful
@@ -7,13 +7,14 @@ permalink: "/content/restful-access-token"
 layout: post
 author: RoySegall
 image: /assets/images/posts/access-token/cookies.jpg
-description: "Authenticate users using access token in RESTful requests"
+description: "Normally in Drupal we don’t need to worry about authentication, This post 
+explains how to handle authentication with decoupled sites with Angular JS."
 ---
 
 {% include setup %}
 
 When talking about a traditional Drupal site, we don’t need to handle authentication
-because Drupal got our back - a user submits the login form, gets a cookie and starts
+because Drupal has our back: a user submits the login form, gets a cookie, and starts
 using your awesome site. But what about decoupled sites? How can we authenticate
 the user?
 
@@ -29,7 +30,7 @@ provided by RESTful:
 Important: in order to use access token authentication you’ll need
 to enable the module `restful_token_auth`.
 
-#Generating the access token#
+##Generating the access token##
 
 Below is how to generate an access token using Angular JS. If the
 authentication process passes, the end point will return an object with 3
@@ -40,7 +41,7 @@ values:
   3. refresh_token - Once the the token is no longer valid you'll need to ask
   for a new one using the refresh token.
 
-You can see below a small Angular JS code:
+You can see below a small amount of Angular JS code:
 
 ```javascript
 $http.get('http://localhost/drupal/api/login-token', {
@@ -64,7 +65,7 @@ And this is what you’ll get back:
 }
 ```
 
-#Refreshing access token#
+##Refreshing access token##
 As mentioned above, the access token is only valid for a specific amount of time,
 usually 24 hours, and you’ll need to check it before the request:
 
@@ -80,7 +81,7 @@ if (new Date().getTime() > localStorageService.get('expire_in')) {
 }
 ```
 
-#Using the access token#
+##Using the access token##
 OK, so we got the access token and we can refresh it when it's no longer valid. The
 next thing you need to know is how to inject the access token into the header:
 
