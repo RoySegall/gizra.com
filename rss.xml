@@ -4,10 +4,50 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Wed, 21 Sep 2016 13:25:13 -0500</lastBuildDate>
-    <pubDate>Wed, 21 Sep 2016 13:25:13 -0500</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 16:45:38 +0300</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 16:45:38 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Yesod (and Haskell) from a Drupal (and PHP) Perspective</title>
+        <description>
+          &lt;p&gt;In Gizra, we run an unusual stack. Drupal, our bread and butter, serves as the backend and is complimented by &lt;a href=&quot;http://elm-lang.org/&quot;&gt;Elm&lt;/a&gt; for the front end, and as of recently &lt;a href=&quot;http://www.yesodweb.com/&quot;&gt;Yesod&lt;/a&gt; - a Haskell framework.&lt;br&gt;
+Before Yesod, we were running NodeJs as our proxy server for light tasks or real-time messages.&lt;/p&gt;
+
+&lt;p&gt;But ever since I came across Elm, Javascript and I are hardly friends. I respect it, but can no longer turn my eye from its shortcomings. Functional programming has caught my heart and mind.&lt;/p&gt;
+
+&lt;p&gt;In this post I&amp;rsquo;m not going to try and present strong points on why &lt;em&gt;you&lt;/em&gt; should adapt this stack, but rather share with you the unique path we are paving.&lt;/p&gt;
+
+&lt;h2&gt;Elm&lt;/h2&gt;
+
+&lt;p&gt;Elm was my first dip into the functional programming (FP) world. I recommend starting from there. It&amp;rsquo;s way more gentle than Haskell, and it has, of course, one important advantage - it helps you build rock solid, crazily fast, joy-filling, web apps.&lt;/p&gt;
+
+&lt;p&gt;Maybe this &lt;a href=&quot;http://www.gizra.com/content/faithful-elm-amazing-router/&quot;&gt;post and video&lt;/a&gt; will get you excited as well.&lt;/p&gt;
+
+&lt;h2&gt;Gentle Intro to Haskell&lt;/h2&gt;
+
+&lt;p&gt;A good way to start explaining what&amp;rsquo;s so special about Haskell is to dive directly into Haskell. While PHP is defined (by some) as a &amp;ldquo;productive&amp;rdquo; language, Haskell is often blamed (by some) as being an &amp;ldquo;academic language&amp;rdquo;. Both statements are probably wrong.&lt;/p&gt;
+
+&lt;p&gt;Often when mentioning Haskell, we talk about the compiler and the type system. They are truly marvelous tools. For the type system, I think the Elm post I lined above should be enough to get the hang of it. But I&amp;rsquo;d like to continue and reveal a bit more by highlighting mini examples on how Haskell makes us approach development tasks differently.&lt;/p&gt;
+
+&lt;h3&gt;Lists&lt;/h3&gt;
+
+&lt;p&gt;Below are examples from the REPL (the interactive shell for Haskell)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;haskell language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What we have here are two lists of integers that are appended to each other. A list of integers is represented as &lt;code&gt;[Int]&lt;/code&gt; in Haskell. The &lt;code&gt;++&lt;/code&gt; is the operation that causes those two lists to be grouped into a single one.&lt;/p&gt;
+
+&lt;p&gt;Haskell comes with some handy shortcuts.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/haskell-yesod-php-drupal/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/haskell-yesod-php-drupal</link>
+        <guid>http://www.gizra.com/content/yesod-drupal</guid>
+        <pubDate>Thu, 22 Sep 2016 00:00:00 +0300</pubDate>
+      </item>
     
       <item>
         <title>Creating a Dynamic Email Template in Drupal</title>
@@ -42,7 +82,7 @@
         </description>
         <link>http://www.gizra.com/content/dynamic-email-template</link>
         <guid>http://www.gizra.com/content/email-template-in-drupal</guid>
-        <pubDate>Thu, 15 Sep 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 15 Sep 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -79,7 +119,7 @@
         </description>
         <link>http://www.gizra.com/content/og8-development-mindset</link>
         <guid>http://www.gizra.com/content/og8-development-process</guid>
-        <pubDate>Wed, 07 Sep 2016 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -106,7 +146,7 @@
         </description>
         <link>http://www.gizra.com/content/getting-started-with-drupal-core-initiative</link>
         <guid>http://www.gizra.com/content/getting-started-with-a-core-initiative</guid>
-        <pubDate>Sat, 20 Aug 2016 00:00:00 -0500</pubDate>
+        <pubDate>Sat, 20 Aug 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -134,16 +174,16 @@
         </description>
         <link>http://www.gizra.com/content/elm-electron-build</link>
         <guid>http://www.gizra.com/content/elm-with-electron</guid>
-        <pubDate>Thu, 28 Jul 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 28 Jul 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
-        <title>Faithful Elm and the Amazing Router</title>
+        <title>Faithful Elm Amazing Router</title>
         <description>
-          &lt;p&gt;I&amp;rsquo;m going to give an Elm session in the next &lt;a href=&quot;http://yougottalovefrontend.com/#page-speakers&quot;&gt;YGLF conf&lt;/a&gt;. This was a great excuse to free up some hours to work on a new v0.17 SPA (Single Page Application). You won&amp;rsquo;t believe what happened next&amp;hellip;&lt;/p&gt;
+          &lt;p&gt;&lt;strike&gt;I&amp;rsquo;m going to give&lt;/strike&gt; &lt;a href=&quot;https://youtu.be/FgaoOgJ5CAU&quot;&gt;I gave&lt;/a&gt; an Elm session in &lt;a href=&quot;http://yougottalovefrontend.com/#page-speakers&quot;&gt;YGLF conf&lt;/a&gt;. This was a great excuse to free up some hours to work on a new v0.17 SPA (Single Page Application). You won&amp;rsquo;t believe what happened next&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;Well, actually, you would: it was an awesome experience :)&lt;br&gt;
-In fact I&amp;rsquo;ve reached the point that the backend me is becoming jealous of frontend me.&lt;/p&gt;
+&lt;p&gt;Well, actually, you would: it was an awesome experience. :)&lt;br&gt;
+In fact, I&amp;rsquo;ve reached the point that the backend me is becoming jealous of the frontend me.&lt;/p&gt;
 
 &lt;div class=&quot;demo-block text-center&quot;&gt;
   &lt;a class=&quot;demo&quot; target=_blank&quot; href=&quot;http://elm-spa-example.gizra.com/&quot;&gt;View demo&lt;/a&gt;
@@ -166,20 +206,20 @@ In fact I&amp;rsquo;ve reached the point that the backend me is becoming jealous
 &lt;/div&gt;
 
 &lt;p&gt;My goal with building this demo app, was to give a small, yet realistic, look into how Elm
-allows us to accomplish daily tasks such as Http requests, routing, access, and more.
+allows us to accomplish daily tasks such as HTTP requests, routing, access, and more.
 It was important for me to structure it in the same way that we structure larger apps built for production, so that it could demonstrate more effectively how Elm can be used in a project.&lt;/p&gt;
 
-&lt;p&gt;If you are interested in Elm, and want to get a feeling of how it could be built for your apps, this might be a good starting point. I&amp;rsquo;ve even wanted to add a single test to show how that could be done. But Elm being such a fun, predictable, opinionated, and fun (no mistake here, it deserves the double fun) to work with, I&amp;rsquo;ve ended up adding more and more tests.&lt;br&gt;
+&lt;p&gt;If you are interested in Elm, and want to get a feeling of how it could be built for your apps, this might be a good starting point. I even wanted to add a single test to show how it could be done. But Elm being such a fun, predictable, opinionated, and fun (no mistake here, it deserves the double fun) to work with, I ended up adding more and more tests.&lt;br&gt;
 Isn&amp;rsquo;t that yet another great sign for Elm? I was adding unit tests for a &lt;em&gt;demo&lt;/em&gt; app, while we hardly added any unit tests for our Angular apps in production!&lt;/p&gt;
 
-&lt;p&gt;I was holding myself from adding too many features, but I couldn&amp;rsquo;t resist polishing the existing ones, and adding &lt;em&gt;lots&lt;/em&gt; of comments. With the compiler&amp;rsquo;s tough love and ever growing unit tests, any change was
-so easy it almost felt like cheating (and note that I rarely write &amp;ldquo;easy&amp;rdquo; or &amp;ldquo;trivial&amp;rdquo; on development issues).&lt;/p&gt;
+&lt;p&gt;I held myself back from adding too many features, but I couldn&amp;rsquo;t resist polishing the existing ones, and adding &lt;em&gt;lots&lt;/em&gt; of comments. With the compiler&amp;rsquo;s tough love and ever growing unit tests, changes were
+so easy it almost felt like cheating (and note that I rarely write &amp;ldquo;easy&amp;rdquo; or &amp;ldquo;trivial&amp;rdquo; about development issues).&lt;/p&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/faithful-elm-amazing-router/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/06/16/faithful-elm-amazing-router.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/content/faithful-elm-amazing-router</link>
-        <guid>http://www.gizra.com/content/faithful-elm-amazing-router</guid>
-        <pubDate>Thu, 16 Jun 2016 00:00:00 -0500</pubDate>
+        <link>http://www.gizra.com/2016/06/16/faithful-elm-amazing-router.html</link>
+        <guid>http://www.gizra.com/2016/06/16/faithful-elm-amazing-router</guid>
+        <pubDate>Thu, 16 Jun 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -207,7 +247,7 @@ old mistakes. One of the mistakes was treating users and content (i.e. non-user 
         </description>
         <link>http://www.gizra.com/content/og-message-stack-drupal8</link>
         <guid>http://www.gizra.com/content/og-message-stack-drupal8</guid>
-        <pubDate>Thu, 09 Jun 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 09 Jun 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -254,7 +294,7 @@ files from an outside directory directly into Drupal. I gave my good friend &lt;
         </description>
         <link>http://www.gizra.com/content/drupal-8-attachment-migration</link>
         <guid>http://www.gizra.com/content/drupal8-migrate-files</guid>
-        <pubDate>Wed, 08 Jun 2016 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 08 Jun 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -274,7 +314,7 @@ files from an outside directory directly into Drupal. I gave my good friend &lt;
         </description>
         <link>http://www.gizra.com/content/gizra-way-webinar-budget-goggles</link>
         <guid>http://www.gizra.com/content/first-gizra-webinar</guid>
-        <pubDate>Tue, 07 Jun 2016 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 07 Jun 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -345,7 +385,7 @@ files from an outside directory directly into Drupal. I gave my good friend &lt;
         </description>
         <link>http://www.gizra.com/content/12-things-learned-first-drupalcon</link>
         <guid>http://www.gizra.com/content/drupal-new-orleans-first-time</guid>
-        <pubDate>Tue, 17 May 2016 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 17 May 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -378,7 +418,7 @@ files from an outside directory directly into Drupal. I gave my good friend &lt;
         </description>
         <link>http://www.gizra.com/content/job-post-goes-viral</link>
         <guid>http://www.gizra.com/content/facebook-post</guid>
-        <pubDate>Mon, 04 Apr 2016 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 04 Apr 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -397,7 +437,7 @@ with the least possible amount of surprises or bugs.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/migration-best-practices</link>
         <guid>http://www.gizra.com/content/migration-best-practices</guid>
-        <pubDate>Fri, 01 Apr 2016 00:00:00 -0500</pubDate>
+        <pubDate>Fri, 01 Apr 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -433,7 +473,7 @@ on a machine you don&amp;rsquo;t have direct access to, and there is no browser.
         </description>
         <link>http://www.gizra.com/content/docker-travis-ci</link>
         <guid>http://www.gizra.com/content/docker-ci</guid>
-        <pubDate>Wed, 30 Mar 2016 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 30 Mar 2016 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -452,7 +492,7 @@ might give you a nudge in the right direction.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/how-think-elm</link>
         <guid>http://www.gizra.com/content/how-think-elm</guid>
-        <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -491,7 +531,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/elm-i18n-type-safety</link>
         <guid>http://www.gizra.com/content/elm-i18n</guid>
-        <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -522,7 +562,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/budget-goggles</link>
         <guid>http://www.gizra.com/content/budget-goggles</guid>
-        <pubDate>Thu, 17 Mar 2016 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 17 Mar 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -555,7 +595,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/our-shoov-dashboard</link>
         <guid>http://www.gizra.com/content/our-dashboard</guid>
-        <pubDate>Sun, 13 Mar 2016 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 13 Mar 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -592,7 +632,7 @@ The future is already here — it&amp;rsquo;s just not very evenly distributed.
         </description>
         <link>http://www.gizra.com/content/gizra-alpha/</link>
         <guid>http://www.gizra.com/content/gizra-alpha</guid>
-        <pubDate>Thu, 10 Mar 2016 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 10 Mar 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -626,7 +666,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/xss-attack</link>
         <guid>http://www.gizra.com/content/xss-attack-caught</guid>
-        <pubDate>Mon, 29 Feb 2016 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 29 Feb 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -655,7 +695,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/entity-relationships</link>
         <guid>http://www.gizra.com/content/entity-relations-graph</guid>
-        <pubDate>Sun, 24 Jan 2016 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 24 Jan 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -684,7 +724,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/apps-entity-restrictions</link>
         <guid>http://www.gizra.com/content/apps-entity-restrictions</guid>
-        <pubDate>Sun, 17 Jan 2016 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 17 Jan 2016 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -713,7 +753,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/elm-hedley-overview</link>
         <guid>http://www.gizra.com/content/hedley-overview</guid>
-        <pubDate>Wed, 30 Dec 2015 00:00:00 -0600</pubDate>
+        <pubDate>Wed, 30 Dec 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -746,7 +786,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/planet-elm</link>
         <guid>http://www.gizra.com/content/planet-elm</guid>
-        <pubDate>Mon, 23 Nov 2015 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 23 Nov 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -781,7 +821,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/mindful-custom-breakpoints-bootstrap</link>
         <guid>http://www.gizra.com/content/mindful-custom-breakpoint-bootstrap</guid>
-        <pubDate>Thu, 19 Nov 2015 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 19 Nov 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -811,7 +851,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/elm-challenge</link>
         <guid>http://www.gizra.com/content/elm-challenge</guid>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -833,7 +873,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/decoupled-drupal-drupalcon-los-angeles</link>
         <guid>http://www.gizra.com/content/drupalcon-la</guid>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -861,7 +901,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/thinking-choosing-elm</link>
         <guid>http://www.gizra.com/content/thinking-elm</guid>
-        <pubDate>Thu, 22 Oct 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -913,7 +953,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/elmlang-headless-drupal</link>
         <guid>http://www.gizra.com/content/elmlang</guid>
-        <pubDate>Thu, 01 Oct 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 01 Oct 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -972,7 +1012,7 @@ I just know I love my job; love my husband; love my kids (definitely not in that
         </description>
         <link>http://www.gizra.com/content/sticky-floors-happy-kids</link>
         <guid>http://www.gizra.com/content/sticky-floor-happy-kids</guid>
-        <pubDate>Tue, 29 Sep 2015 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 29 Sep 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1014,7 +1054,7 @@ Do you remember that time in the past where functional testing was just a &lt;em
         </description>
         <link>http://www.gizra.com/content/visual-regression-tutorials</link>
         <guid>http://www.gizra.com/content/visual-regression-tutorials</guid>
-        <pubDate>Tue, 04 Aug 2015 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 04 Aug 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1062,7 +1102,7 @@ Do you remember that time in the past where functional testing was just a &lt;em
         </description>
         <link>http://www.gizra.com/content/visual-monitor-drupal</link>
         <guid>http://www.gizra.com/content/visual-monitor-drupal</guid>
-        <pubDate>Mon, 20 Jul 2015 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 20 Jul 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1104,7 +1144,7 @@ PhantomJS is usually the easiest to configure and hook into the CI workflow late
         </description>
         <link>http://www.gizra.com/content/phantomjs-chrome-docker-selenium-standalone</link>
         <guid>http://www.gizra.com/content/docker-selenium-standalone</guid>
-        <pubDate>Thu, 25 Jun 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 25 Jun 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1140,7 +1180,7 @@ As awesome as services like Pingdom are, they still provide very little insight 
         </description>
         <link>http://www.gizra.com/content/live-monitor-shoov-irony</link>
         <guid>http://www.gizra.com/content/shoov-post-mortem</guid>
-        <pubDate>Mon, 01 Jun 2015 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 01 Jun 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1180,7 +1220,7 @@ As awesome as services like Pingdom are, they still provide very little insight 
         </description>
         <link>http://www.gizra.com/content/restful-backbone-marionette</link>
         <guid>http://www.gizra.com/content/restful-backbone</guid>
-        <pubDate>Sat, 23 May 2015 00:00:00 -0500</pubDate>
+        <pubDate>Sat, 23 May 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1222,7 +1262,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/visual-regression-travis-shoov-ngrok</link>
         <guid>http://www.gizra.com/content/shoov-travis</guid>
-        <pubDate>Wed, 20 May 2015 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 20 May 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1251,7 +1291,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/shoov-monitor-twitter</link>
         <guid>http://www.gizra.com/content/shoov-twitter</guid>
-        <pubDate>Thu, 07 May 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 07 May 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1285,7 +1325,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/angularjs-ui-router</link>
         <guid>http://www.gizra.com/content/angularjs-ui-router</guid>
-        <pubDate>Thu, 30 Apr 2015 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 30 Apr 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1320,7 +1360,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/cross-browser-visual-regression-with-shoov</link>
         <guid>http://www.gizra.com/content/shoov-multiple-platforms</guid>
-        <pubDate>Wed, 29 Apr 2015 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 29 Apr 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1359,7 +1399,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/simpletest-behat-drupal-8</link>
         <guid>http://www.gizra.com/content/drupal8-behat</guid>
-        <pubDate>Tue, 28 Apr 2015 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 28 Apr 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1394,7 +1434,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/shoov-ci-tests-live-site</link>
         <guid>http://www.gizra.com/content/shoov-ci-build</guid>
-        <pubDate>Tue, 14 Apr 2015 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 14 Apr 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1423,7 +1463,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/shoov-ui-regression</link>
         <guid>http://www.gizra.com/content/shoov-into</guid>
-        <pubDate>Wed, 01 Apr 2015 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 01 Apr 2015 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1452,7 +1492,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/headless-drupal-terminal</link>
         <guid>http://www.gizra.com/content/restful-blessed</guid>
-        <pubDate>Mon, 02 Mar 2015 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 02 Mar 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1470,7 +1510,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/logs-easy-way</link>
         <guid>http://www.gizra.com/content/logs-http</guid>
-        <pubDate>Mon, 02 Feb 2015 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 02 Feb 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1486,7 +1526,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/automatic-qa</link>
         <guid>http://www.gizra.com/content/automatic-qa</guid>
-        <pubDate>Sun, 01 Feb 2015 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 01 Feb 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1515,7 +1555,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/phantomcss-ui-regression</link>
         <guid>http://www.gizra.com/content/phantomcss</guid>
-        <pubDate>Sun, 04 Jan 2015 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 04 Jan 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1533,7 +1573,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/yo-hedley</link>
         <guid>http://www.gizra.com/content/yo-hedley</guid>
-        <pubDate>Fri, 26 Dec 2014 00:00:00 -0600</pubDate>
+        <pubDate>Fri, 26 Dec 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1555,7 +1595,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/behat-vs-casper-for-drupal</link>
         <guid>http://www.gizra.com/content/behat-drupal-phantomjs</guid>
-        <pubDate>Thu, 04 Dec 2014 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 04 Dec 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1573,7 +1613,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/todo-restful-backend</link>
         <guid>http://www.gizra.com/content/todo-restful</guid>
-        <pubDate>Sun, 23 Nov 2014 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 23 Nov 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1597,7 +1637,7 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
         </description>
         <link>http://www.gizra.com/content/behat-the-right-way</link>
         <guid>http://www.gizra.com/content/behat-the-right-way</guid>
-        <pubDate>Mon, 17 Nov 2014 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 17 Nov 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1614,7 +1654,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         </description>
         <link>http://www.gizra.com/content/restful-discovery</link>
         <guid>http://www.gizra.com/content/restful-discovery</guid>
-        <pubDate>Thu, 30 Oct 2014 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 30 Oct 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1632,7 +1672,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         </description>
         <link>http://www.gizra.com/content/gizra-we-have-got-your-headless-covered</link>
         <guid>http://www.gizra.com/content/gizra-weve-got-your-headless-covered</guid>
-        <pubDate>Sun, 19 Oct 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 19 Oct 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1658,7 +1698,7 @@ I would argue that at least 95% of the developers who expose their web-service s
         </description>
         <link>http://www.gizra.com/content/headless-drupal-form-api-drupal9</link>
         <guid>http://www.gizra.com/content/headless-drupal-form-api-9</guid>
-        <pubDate>Thu, 24 Jul 2014 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 24 Jul 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1688,7 +1728,7 @@ And if that&amp;rsquo;s not enough for the readers excited by the idea of a deco
         </description>
         <link>http://www.gizra.com/content/headless-drupal-inline-edit</link>
         <guid>http://www.gizra.com/content/headless-drupal-inline-edit</guid>
-        <pubDate>Mon, 14 Jul 2014 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 14 Jul 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1732,7 +1772,7 @@ And if that&amp;rsquo;s not enough for the readers excited by the idea of a deco
         </description>
         <link>http://www.gizra.com/content/backend-free-apps-grunt-jekyll-d3js</link>
         <guid>http://www.gizra.com/content/grunt-jekyll-and-d3</guid>
-        <pubDate>Thu, 10 Jul 2014 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 10 Jul 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1766,7 +1806,7 @@ And if that&amp;rsquo;s not enough for the readers excited by the idea of a deco
         </description>
         <link>http://www.gizra.com/content/restful-angular-forms</link>
         <guid>http://www.gizra.com/content/restful-angular-forms</guid>
-        <pubDate>Wed, 09 Jul 2014 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 09 Jul 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1792,7 +1832,7 @@ of a page, in comparison to the time it takes to get it&amp;rsquo;s markup right
         </description>
         <link>http://www.gizra.com/content/custom-css-as-contrib-with-jekyll</link>
         <guid>http://www.gizra.com/content/jekyll-css</guid>
-        <pubDate>Tue, 01 Jul 2014 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1806,7 +1846,7 @@ Note that example is using Jekyll for simplicity, however the same technique can
         </description>
         <link>http://www.gizra.com/content/custom-breakpoint-bootstrap-sass</link>
         <guid>http://www.gizra.com/content/creating-a-custom-grid-in-sass-bootstrap</guid>
-        <pubDate>Wed, 25 Jun 2014 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 25 Jun 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1827,7 +1867,7 @@ Emmet uses these abbreviations to parse them in runtime and transform them into 
         </description>
         <link>http://www.gizra.com/content/emmet-tutorial/</link>
         <guid>http://www.gizra.com/content/emmet-tutorial</guid>
-        <pubDate>Sun, 08 Jun 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 08 Jun 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1841,7 +1881,7 @@ Emmet uses these abbreviations to parse them in runtime and transform them into 
         </description>
         <link>http://www.gizra.com/content/how-to-submit-an-application-to-itunes-app-store</link>
         <guid>http://www.gizra.com/content/how-to-submit-an-application-to-itunes-app-store</guid>
-        <pubDate>Mon, 26 May 2014 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 26 May 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1863,7 +1903,7 @@ And you know what? I&amp;rsquo;m really excited about this idea. It feels like I
         </description>
         <link>http://www.gizra.com/content/the-amitaibu-show</link>
         <guid>http://www.gizra.com/content/the-amitaibu-show</guid>
-        <pubDate>Sun, 25 May 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 25 May 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1897,7 +1937,7 @@ If you share the same feeling reading the above lines, this blog post if for you
         </description>
         <link>http://www.gizra.com/content/how-to-have-lunch-without-speaking-drupal</link>
         <guid>http://www.gizra.com/content/how-to-have-lunch-without-speaking-drupal</guid>
-        <pubDate>Thu, 22 May 2014 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 22 May 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1938,7 +1978,7 @@ It works fine, however the JSON it exposes has too much information.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/restful-server</link>
         <guid>http://www.gizra.com/content/restful-server</guid>
-        <pubDate>Tue, 06 May 2014 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 06 May 2014 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -1960,7 +2000,7 @@ It works fine, however the JSON it exposes has too much information.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/casa-del-lector</link>
         <guid>http://www.gizra.com/content/casa-del-lector</guid>
-        <pubDate>Thu, 13 Mar 2014 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 13 Mar 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1973,7 +2013,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/zariz-entity-reference</link>
         <guid>http://www.gizra.com/content/zariz-entity-reference</guid>
-        <pubDate>Mon, 20 Jan 2014 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 20 Jan 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1989,7 +2029,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/openscholar-new-bilbio</link>
         <guid>http://www.gizra.com/content/openscholar-new-bilbio</guid>
-        <pubDate>Mon, 20 Jan 2014 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 20 Jan 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2003,7 +2043,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/zariz-on-tv</link>
         <guid>http://www.gizra.com/content/zariz-on-tv</guid>
-        <pubDate>Thu, 16 Jan 2014 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 16 Jan 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2019,7 +2059,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/drupal-x5-faster</link>
         <guid>http://www.gizra.com/content/zariz-static</guid>
-        <pubDate>Thu, 09 Jan 2014 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 09 Jan 2014 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2041,7 +2081,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/zariz-in-pics</link>
         <guid>http://www.gizra.com/content/zariz-in-pics</guid>
-        <pubDate>Tue, 24 Dec 2013 00:00:00 -0600</pubDate>
+        <pubDate>Tue, 24 Dec 2013 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2063,7 +2103,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/zariz-means-agile</link>
         <guid>http://www.gizra.com/content/zariz-means-quick</guid>
-        <pubDate>Wed, 11 Dec 2013 00:00:00 -0600</pubDate>
+        <pubDate>Wed, 11 Dec 2013 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2076,7 +2116,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/the-about-story</link>
         <guid>http://www.gizra.com/content/the-about-story</guid>
-        <pubDate>Thu, 31 Oct 2013 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 31 Oct 2013 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2088,7 +2128,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/how-we-use-github-issues</link>
         <guid>http://www.gizra.com/content/how-we-use-github-issues</guid>
-        <pubDate>Thu, 31 Oct 2013 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 31 Oct 2013 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2121,7 +2161,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics</link>
         <guid>http://www.gizra.com/content/tipali-a-tool-for-easily-finding-polio-vaccination-clinics</guid>
-        <pubDate>Wed, 04 Sep 2013 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 04 Sep 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2137,7 +2177,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/open-source-real-world/</link>
         <guid>http://www.gizra.com/content/open-source-real-world</guid>
-        <pubDate>Wed, 28 Aug 2013 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 28 Aug 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2151,7 +2191,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/dekyll-new-github-pages-flavor/</link>
         <guid>http://www.gizra.com/content/dekyll-new-github-pages-flavor</guid>
-        <pubDate>Sun, 14 Jul 2013 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 14 Jul 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2175,7 +2215,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/dekyll-drupal-on-jekyll/</link>
         <guid>http://www.gizra.com/content/dekyll-drupal-on-jekyll</guid>
-        <pubDate>Sun, 30 Jun 2013 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 30 Jun 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2191,7 +2231,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/gizra-drupalcon-portland/</link>
         <guid>http://www.gizra.com/content/drupalcon-portland</guid>
-        <pubDate>Sun, 23 Jun 2013 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 23 Jun 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2203,7 +2243,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/the-gizra-way/</link>
         <guid>http://www.gizra.com/content/how-we-roll</guid>
-        <pubDate>Mon, 17 Jun 2013 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 17 Jun 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2217,7 +2257,7 @@ that the reference will change on the fly. For example:&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/harvard-openscholar/</link>
         <guid>http://www.gizra.com/content/harvard-openscholar</guid>
-        <pubDate>Tue, 04 Jun 2013 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 04 Jun 2013 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2231,7 +2271,7 @@ Oh, and you can also migrate data from other (older) sites.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/migrate-and-baking-content/</link>
         <guid>http://www.gizra.com/content/migrate-and-baking-content</guid>
-        <pubDate>Thu, 27 Dec 2012 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 27 Dec 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2252,7 +2292,7 @@ Oh, and you can also migrate data from other (older) sites.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/drupal-nodejs-pantheon-and-heroku/</link>
         <guid>http://www.gizra.com/content/drupal-node-js-pantheon-and-heroku</guid>
-        <pubDate>Wed, 19 Dec 2012 00:00:00 -0600</pubDate>
+        <pubDate>Wed, 19 Dec 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2273,7 +2313,7 @@ Drupal 7 has Message-subscribe &amp;amp; Message-notify&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/message-subscribe-new-subscription-system/</link>
         <guid>http://www.gizra.com/content/message-subscribe-a-new-subscription-system</guid>
-        <pubDate>Wed, 31 Oct 2012 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 31 Oct 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2286,7 +2326,7 @@ If your not a total geek the first 15 minutes will be enough. Unless you are int
         </description>
         <link>http://www.gizra.com/content/drupalcamp-montreal-keynote/</link>
         <guid>http://www.gizra.com/content/drupalcamp-montreal-keynote</guid>
-        <pubDate>Thu, 18 Oct 2012 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 18 Oct 2012 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2299,7 +2339,7 @@ Message can help with many tasks from simple logs to complicated activity stream
         </description>
         <link>http://www.gizra.com/content/what-message-module-and-its-new-features/</link>
         <guid>http://www.gizra.com/content/what-is-message-module-and-its-new-features</guid>
-        <pubDate>Thu, 12 Jul 2012 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 12 Jul 2012 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2313,7 +2353,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/about-strong-partnership-and-winning-game-bowling/</link>
         <guid>http://www.gizra.com/content/about-strong-partnership-and-winning-a-game-of-bowling</guid>
-        <pubDate>Mon, 09 Jul 2012 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 09 Jul 2012 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2330,7 +2370,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/how-deal-colliding-aliases/</link>
         <guid>http://www.gizra.com/content/how-to-deal-with-colliding-aliases</guid>
-        <pubDate>Thu, 01 Mar 2012 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 01 Mar 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2344,7 +2384,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/banner-rotator/</link>
         <guid>http://www.gizra.com/content/banner-rotator</guid>
-        <pubDate>Thu, 16 Feb 2012 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 16 Feb 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2358,7 +2398,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/commerce-product-subform/</link>
         <guid>http://www.gizra.com/content/commerce-product-subform</guid>
-        <pubDate>Sun, 29 Jan 2012 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 29 Jan 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2376,7 +2416,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/sending-lots-emails-hint-drush/</link>
         <guid>http://www.gizra.com/content/sending-lots-of-emails-hint-with-drush</guid>
-        <pubDate>Tue, 24 Jan 2012 00:00:00 -0600</pubDate>
+        <pubDate>Tue, 24 Jan 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2390,7 +2430,7 @@ Do you dig what I am saying?  You know, one cannot even be sure it&amp;rsquo;s a
         </description>
         <link>http://www.gizra.com/content/message-notify-multilingual-email-notifications/</link>
         <guid>http://www.gizra.com/content/message-notify-multilingual-email-notifications</guid>
-        <pubDate>Sun, 01 Jan 2012 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 01 Jan 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2419,7 +2459,7 @@ As usual we can make a content type (Clubs in this example) a group, through the
         </description>
         <link>http://www.gizra.com/content/og7-and-entity-reference-part-2/</link>
         <guid>http://www.gizra.com/content/og7-and-entity-reference-part-2</guid>
-        <pubDate>Wed, 07 Dec 2011 00:00:00 -0600</pubDate>
+        <pubDate>Wed, 07 Dec 2011 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2449,7 +2489,7 @@ Please do &lt;a href=&quot;http://www.gizra.com/contact&quot;&gt;contact&lt;/a&g
         </description>
         <link>http://www.gizra.com/content/og7-and-entity-reference-sponsor-me/</link>
         <guid>http://www.gizra.com/content/og7-and-entity-reference-sponsor-me</guid>
-        <pubDate>Sun, 20 Nov 2011 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 20 Nov 2011 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2470,7 +2510,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         </description>
         <link>http://www.gizra.com/content/about-walk-bojanz-damz-and-i-had-london/</link>
         <guid>http://www.gizra.com/content/about-that-walk-bojanz-damz-and-i-had-in-london</guid>
-        <pubDate>Fri, 04 Nov 2011 00:00:00 -0500</pubDate>
+        <pubDate>Fri, 04 Nov 2011 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2484,7 +2524,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         </description>
         <link>http://www.gizra.com/content/drupalcamp-spain-sevilla/</link>
         <guid>http://www.gizra.com/content/drupalcamp-spain-sevilla</guid>
-        <pubDate>Sun, 02 Oct 2011 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 02 Oct 2011 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2496,7 +2536,7 @@ Damien, being Damien, gave me a Damien answer. Bojan, being Bojan, explained it 
         </description>
         <link>http://www.gizra.com/content/og7-drupalcon-london/</link>
         <guid>http://www.gizra.com/content/og7-drupalcon-london</guid>
-        <pubDate>Sun, 18 Sep 2011 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 18 Sep 2011 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2519,7 +2559,7 @@ for example allow a user to submit a node and register in the same time.
         </description>
         <link>http://www.gizra.com/content/user-modal/</link>
         <guid>http://www.gizra.com/content/user-modal</guid>
-        <pubDate>Mon, 27 Jun 2011 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 27 Jun 2011 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2548,7 +2588,7 @@ The group membership idea is awesome (thanks donquixote). The problem is actuall
         </description>
         <link>http://www.gizra.com/content/og-7x-11-rc2-out/</link>
         <guid>http://www.gizra.com/content/og-7-x-1-1-rc2-is-out</guid>
-        <pubDate>Wed, 18 May 2011 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 18 May 2011 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2564,7 +2604,7 @@ The group membership idea is awesome (thanks donquixote). The problem is actuall
         </description>
         <link>http://www.gizra.com/content/ctools-context-tutorial/</link>
         <guid>http://www.gizra.com/content/ctools-context-tutorial</guid>
-        <pubDate>Wed, 11 May 2011 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 11 May 2011 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2583,7 +2623,7 @@ Migrate extra module enables import of file field.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/data-migration-part-2/</link>
         <guid>http://www.gizra.com/content/data-migration-part-2</guid>
-        <pubDate>Mon, 24 Jan 2011 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 24 Jan 2011 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2606,7 +2646,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/data-migration-part-1/</link>
         <guid>http://www.gizra.com/content/data-migration-part-1</guid>
-        <pubDate>Thu, 06 Jan 2011 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 06 Jan 2011 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2622,7 +2662,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/drupalcamp-athens/</link>
         <guid>http://www.gizra.com/content/drupalcamp-athens</guid>
-        <pubDate>Sun, 26 Dec 2010 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 26 Dec 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2634,7 +2674,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/moment-zen-1/</link>
         <guid>http://www.gizra.com/content/a-moment-of-zen-1</guid>
-        <pubDate>Sun, 26 Dec 2010 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 26 Dec 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2650,7 +2690,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/rounded-corners/</link>
         <guid>http://www.gizra.com/content/rounded-corners</guid>
-        <pubDate>Wed, 20 Oct 2010 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 20 Oct 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2664,7 +2704,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/message-example-github-news-feed/</link>
         <guid>http://www.gizra.com/content/message-example-github-news-feed</guid>
-        <pubDate>Wed, 29 Sep 2010 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 29 Sep 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2678,7 +2718,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/og7-session-drupalcon-copenhagen/</link>
         <guid>http://www.gizra.com/content/og7-session-in-drupalcon-copenhagen</guid>
-        <pubDate>Tue, 07 Sep 2010 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 07 Sep 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2693,7 +2733,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/let-sleeping-dogs-lie/</link>
         <guid>http://www.gizra.com/content/let-sleeping-dogs-lie</guid>
-        <pubDate>Sat, 03 Jul 2010 00:00:00 -0500</pubDate>
+        <pubDate>Sat, 03 Jul 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2712,7 +2752,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/views-and-panels-ajaxified/</link>
         <guid>http://www.gizra.com/content/views-and-panels-ajaxified</guid>
-        <pubDate>Wed, 30 Jun 2010 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 30 Jun 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2731,7 +2771,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/message-module-and-ctools-plugin/</link>
         <guid>http://www.gizra.com/content/message-module-and-ctools-plugin</guid>
-        <pubDate>Thu, 10 Jun 2010 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 10 Jun 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2744,7 +2784,7 @@ Since last post I&amp;rsquo;ve added a new method that allow file upload with Se
         </description>
         <link>http://www.gizra.com/content/code-sample-drutnet/</link>
         <guid>http://www.gizra.com/content/code-sample-for-drutnet-api-connect-load-node-save-node-and-upload-file</guid>
-        <pubDate>Mon, 17 May 2010 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 17 May 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2767,7 +2807,7 @@ Since last post I&amp;rsquo;ve added a new method that allow file upload with Se
         </description>
         <link>http://www.gizra.com/content/group-intro/</link>
         <guid>http://www.gizra.com/content/group-the-new-og-intro</guid>
-        <pubDate>Sun, 09 May 2010 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 09 May 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2791,7 +2831,7 @@ DrutNet API has a &lt;code&gt;Services&lt;/code&gt; class:
         </description>
         <link>http://www.gizra.com/content/drutnet-drupal-net-api/</link>
         <guid>http://www.gizra.com/content/drutnet-drupal-net-api</guid>
-        <pubDate>Thu, 29 Apr 2010 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 29 Apr 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2813,7 +2853,7 @@ dvessel&amp;rsquo;s Ninesixty takes the power of grid 960 -that we really love a
         </description>
         <link>http://www.gizra.com/content/zen-960/</link>
         <guid>http://www.gizra.com/content/zen-960</guid>
-        <pubDate>Mon, 26 Apr 2010 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 26 Apr 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2827,7 +2867,7 @@ dvessel&amp;rsquo;s Ninesixty takes the power of grid 960 -that we really love a
         </description>
         <link>http://www.gizra.com/content/message-module-intro/</link>
         <guid>http://www.gizra.com/content/message-module-intro</guid>
-        <pubDate>Thu, 22 Apr 2010 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 22 Apr 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2841,7 +2881,7 @@ dvessel&amp;rsquo;s Ninesixty takes the power of grid 960 -that we really love a
         </description>
         <link>http://www.gizra.com/content/dynamic-landing-pages/</link>
         <guid>http://www.gizra.com/content/dynamic-landing-pages</guid>
-        <pubDate>Wed, 14 Apr 2010 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 14 Apr 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2857,7 +2897,7 @@ dvessel&amp;rsquo;s Ninesixty takes the power of grid 960 -that we really love a
         </description>
         <link>http://www.gizra.com/content/ctools-context-and-message/</link>
         <guid>http://www.gizra.com/content/ctools-context-and-message</guid>
-        <pubDate>Mon, 05 Apr 2010 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 05 Apr 2010 00:00:00 +0300</pubDate>
       </item>
     
       <item>
@@ -2872,7 +2912,7 @@ In 960 you have CSS classes that can be used to set elements width and position.
         </description>
         <link>http://www.gizra.com/content/thinking-grid-960/</link>
         <guid>http://www.gizra.com/content/thinking-960</guid>
-        <pubDate>Thu, 21 Jan 2010 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 21 Jan 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2891,7 +2931,7 @@ The tutorial will cover the &amp;ldquo;Rule sets&amp;rdquo; concept in Rules mod
         </description>
         <link>http://www.gizra.com/content/user-points-rules-style/</link>
         <guid>http://www.gizra.com/content/user-points-rules-style</guid>
-        <pubDate>Thu, 14 Jan 2010 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 14 Jan 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2909,7 +2949,7 @@ OG brings roles and permissions to the _group level.
         </description>
         <link>http://www.gizra.com/content/organic-groups-7/</link>
         <guid>http://www.gizra.com/content/organic-groups-7</guid>
-        <pubDate>Sun, 03 Jan 2010 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 03 Jan 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2921,7 +2961,7 @@ OG brings roles and permissions to the _group level.
         </description>
         <link>http://www.gizra.com/content/using-git-write-patches/</link>
         <guid>http://www.gizra.com/content/using-git-to-write-patches</guid>
-        <pubDate>Sun, 27 Dec 2009 00:00:00 -0600</pubDate>
+        <pubDate>Sun, 27 Dec 2009 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2965,7 +3005,7 @@ Meh, no kittens should die.&lt;/p&gt;
         </description>
         <link>http://www.gizra.com/content/outsourcing-kittens/</link>
         <guid>http://www.gizra.com/content/outsourcing-and-kittens</guid>
-        <pubDate>Mon, 14 Dec 2009 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 14 Dec 2009 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2986,7 +3026,7 @@ Let&amp;rsquo;s take the &amp;ldquo;usual&amp;rdquo; home page as an example:&lt
         </description>
         <link>http://www.gizra.com/content/does-every-page-really-need-be-node/</link>
         <guid>http://www.gizra.com/content/does-every-page-really-need-to-be-a-node</guid>
-        <pubDate>Mon, 07 Dec 2009 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 07 Dec 2009 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -3007,7 +3047,7 @@ It seems that the new addition to CCK, the new hook&lt;/em&gt;widget&lt;em&gt;se
         </description>
         <link>http://www.gizra.com/content/hookwidgetsettingsalter-and-pandora/</link>
         <guid>http://www.gizra.com/content/hook_widget_settings_alter-and-pandora</guid>
-        <pubDate>Thu, 19 Nov 2009 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 19 Nov 2009 00:00:00 +0200</pubDate>
       </item>
     
 
