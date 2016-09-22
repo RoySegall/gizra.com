@@ -6,7 +6,6 @@ tags:
 permalink: "/content/faithful-elm-amazing-router"
 layout: post
 image: "/assets/images/posts/faithful-elm-amazing-router/thumb.jpg"
-description: "
 ---
 
 {% include setup %}
