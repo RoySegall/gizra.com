@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      
+    
+
+<title>Faithful Elm and the Amazing Router</title>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta property="og:site_name" content="Gizra">
+
+      
+        <meta property="og:title" content="Faithful Elm and the Amazing Router">
+      
+
+      
+
+      
+      <meta property="og:image" content="http://www.gizra.com/assets/images/posts/faithful-elm-amazing-router/thumb.jpg">
+      
+
+      <!-- Favicon for all platforms -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.4fe6.png">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.c391.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.2d07.png" sizes="194x194">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.8557.png" sizes="96x96">
+      <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.8b66.png" sizes="192x192">
+      <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.a93c.png" sizes="16x16">
+      <link rel="manifest" href="/images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#000000">
+      <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- End favicon for all platforms -->
+
+      <link rel="stylesheet" href="/css/main.dae8.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6558346-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+      <!-- Begin Inspectlet Embed Code -->
+      <script type="text/javascript" id="inspectletjs">
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 314054580]);
+      (function() {
+      function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+      setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+      })();
+      </script>
+      <!-- End Inspectlet Embed Code -->
+
+    </head>
+    <body>
+
+    <!-- Main content -->
+    
+  
+
+
+
+  
+    
+      
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<header id="header-global">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        
+  
+
+<span class="gizra-logo"><a href="/">gizra</a></span>
+<h1 class="sr-only">Gizra</h1>
+<nav id="nav" role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/#about" class="smooth-scroll-to">About</a></li>
+      <li><a href="/services">Our Work</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/fit">Do We Fit?</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+    </div>
+  </div>
+</header>
+<article id="post-page">
+  <div class="container">
+    <div class="row">
+      <div id="post-title" class="col-sm-10 col-sm-offset-1">
+        <h1><a href="/content/faithful-elm-amazing-router">Faithful Elm and the Amazing Router </a></h1>
+        <div class="post-author">By Amitai Burstein</div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="post-data" class="col-sm-2 col-sm-offset-1">
+  			<div id="post-label">
+  		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
+  			</div>
+        <div class="date">16 Jun 2016</div>
+        <section class="author-details">
+          <div class="image-wrapper">
+            <img src="/images/team/avatars/amitaibu.a340.jpg" class="img-circle img-responsive">
+          </div>
+          <div class="text-wrapper">
+            <span class="name">Amitai Burstein</span>
+            
+              <span class="twitter">(@amitaibu)</span>
+            
+            <div class="title">CTO, Co-Owner</div>
+            <div class="bio">Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.</div>
+          </div>
+        </section>
+        <div class="tags">
+          <div class="title">Tags:</div>
+          
+            <ul class="inline">
+              
+              
+
+  
+    
+      <li><a href="/tags.html#Elm-ref">Elm</a></li>
+    
+  
+
+
+            </ul>
+          
+        </div>
+      </div>
+      <div id="post-content" class="col-sm-8">
+
+        <p><strike>I&rsquo;m going to give</strike> <a href="https://youtu.be/FgaoOgJ5CAU">I gave</a> an Elm session in <a href="http://yougottalovefrontend.com/#page-speakers">YGLF conf</a>. This was a great excuse to free up some hours to work on a new v0.17 SPA (Single Page Application). You won&rsquo;t believe what happened next&hellip;</p>
+
+<p>Well, actually, you would: it was an awesome experience. :)<br>
+In fact, I&rsquo;ve reached the point that the backend me is becoming jealous of the frontend me.</p>
+
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="http://elm-spa-example.gizra.com/">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/Gizra/elm-spa-example">Get the source code</a>
+</div>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/faithful-elm-amazing-router/image1.gif">
+    
+
+  </div>
+  
+    <div class="caption">Fetch GitHub user&rsquo;s info on this fake login.</div>
+  
+</div>
+
+<p>My goal with building this demo app, was to give a small, yet realistic, look into how Elm
+allows us to accomplish daily tasks such as HTTP requests, routing, access, and more.
+It was important for me to structure it in the same way that we structure larger apps built for production, so that it could demonstrate more effectively how Elm can be used in a project.</p>
+
+<p>If you are interested in Elm, and want to get a feeling of how it could be built for your apps, this might be a good starting point. I even wanted to add a single test to show how it could be done. But Elm being such a fun, predictable, opinionated, and fun (no mistake here, it deserves the double fun) to work with, I ended up adding more and more tests.<br>
+Isn&rsquo;t that yet another great sign for Elm? I was adding unit tests for a <em>demo</em> app, while we hardly added any unit tests for our Angular apps in production!</p>
+
+<p>I held myself back from adding too many features, but I couldn&rsquo;t resist polishing the existing ones, and adding <em>lots</em> of comments. With the compiler&rsquo;s tough love and ever growing unit tests, changes were
+so easy it almost felt like cheating (and note that I rarely write &ldquo;easy&rdquo; or &ldquo;trivial&rdquo; about development issues).</p>
+
+<!-- more -->
+
+<p>In general, at least for me, the great thing that Elm brings to the table is the reduced cognitive load. We don&rsquo;t need to remember too much about our application at every single moment. This means we can concentrate on our current component and make sure it&rsquo;s being wired in correctly to the entire application.</p>
+
+<p>With <a href="https://github.com/avh4/elm-format">Elm-format</a> we don&rsquo;t even need to bother ourselves with the file format; and along with the Atom integration on every save, we get consistent looking files.</p>
+
+<h2>Wiring Multiple Components</h2>
+
+<p>One of the questions I see people struggle with is how should the different components communicate with each other. I won&rsquo;t get into depth here, but rather give some pointers to the code base. The gist of things:</p>
+
+<ol>
+<li>Main module is mostly boilerplate, and it cares only about the App module.</li>
+<li>The App module is conveniently <a href="https://github.com/Gizra/elm-spa-example/tree/1.0.0/src/elm/App">split</a> into Model, Update, and View files. This is the heart of our
+web app, and it is responsible for calling and delegating the work to the right modules (a.k.a components) via its <code>update</code> function.</li>
+<li>Same for the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/View.elm#L103-L117">view</a>: it&rsquo;s calling the child modules.</li>
+<li>Any module, like the <code>App</code> for example, is always communicating <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L26">downwards</a> to its child modules. It needs to know about the child module, but the child doesn&rsquo;t need to know about it. Nor does the parent module need to know about the grandchildren, if they exist.</li>
+<li>Child modules can pass information back to the parent module. Really! It&rsquo;s done in the update function by simply returning more info. While the typical signature of an <code>update</code> function is <code>(Model, Cmd Msg)</code> nothing stops the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/Pages/Login/Update.elm#L25">child&rsquo;s update</a> function from being <code>(Model, Cmd Msg, Int)</code>, where <code>Int</code> will be some numeric value the <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Update.elm#L28-L29">parent</a> can act on.</li>
+</ol>
+
+<h2>Elm Route Url</h2>
+
+<p>With the new official <a href="https://github.com/elm-lang/navigation">Navigation</a> module in place, the need for SPA routers has been met. However, Navigation isn&rsquo;t just a router module, it&rsquo;s providing the building blocks for <em>other</em> routing solutions. It merely has a certain solution as a &ldquo;serving suggestion&rdquo;.</p>
+
+<p>@rgrempel&rsquo;s <a href="https://github.com/rgrempel/elm-route-hash">elm-route-url</a> module indeed builds on the foundations of Navigation, however it takes a different approach, which I personally prefer. As you may have read in one of my previous posts under the <a href="http://www.gizra.com/content/thinking-choosing-elm/">Url change is not routing</a> paragraph, elm-route-url allows us to add routing (i.e. actually changing the URL) <em>after</em> the fact, with very little change to the existing code base. For example, when I wrote the demo app, I started step by step, wiring different components into my app.</p>
+
+<p>The App.Model has a property called <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Model.elm#L9-L17">activePage</a> which is, as the name implies, responsible for knowing which page is active. In fact, I have written the entire app without having a URL change. Just to emphasize, there were &ldquo;page&rdquo; changes, they were simply not reflected in the URL.</p>
+
+<p>So once I wanted to wire-in the Navigation, I realized I needed to change my existing app. For example, in my <code>update</code> function I should have changed the return value from <code>(model, Cmd.none)</code> to <code>(model, Navigation.newUrl (toUrl newModel))</code></p>
+
+<p>Same with the <code>init</code> function: I had to change the signature from <code>init : ( Model, Cmd Msg )</code> to <code>init : Result String Int -&gt; (Model, Cmd Msg)</code>. Nothing too dramatic, but I preferred avoiding it.</p>
+
+<p>This is where I believe Elm route URL&rsquo;s approach shines. The <code>init</code> and <code>update</code> function can remain exactly as they were, while we can add our routing needs via a completely <a href="https://github.com/Gizra/elm-spa-example/blob/1.0.0/src/elm/App/Router.elm">separate</a> set of functions. This makes the addition of routing consistent with my experience of building the app one step at a time, and knowing that what went into it is stable, solid, and most likely not to change if there are no new requirements.</p>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+<section id="post-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
+        
+        <a href="/content/og-message-stack-drupal8">
+          <div id="previous-label" class="text-small">
+            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Organic Groups and Message Stack in Drupal 8</span>
+            <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
+          </div>
+        </a>
+        
+      </div>
+      <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
+        
+        <a href="/content/elm-electron-build">
+          <div id="next-label" class="text-small">
+            <span class="hidden-xs">Elmctron - where Elm and Electron meet&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
+            <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-3">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'gizra';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+
+    <!--Footer -->
+    
+  <div id="contact">
+    <footer id="footer" role="contentinfo">
+      <div class="footer-wrapper">
+        <div class="background">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title">Talk to us</h2>
+                <div class="clearfix">
+                  <address>
+                    <div class="strong">Israel Headquarters</div>
+                    <span>5 Brenner Street, Tel Aviv</span>
+                      <a class="telephone" href="tel:+97233731222">+972-3-3731222</a>
+                    <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+                  </address>
+                  <address class="separator">
+                    <div class="strong">North America Office</div>
+                    <span>106 West 32nd Street, 2nd Floor, New York, NY 10001</span>
+                    <a class="telephone" href="tel:+13476864508">212-634-1687</a>
+                    <a class="email" href="mailto:usoffice@gizra.com">usoffice@gizra.com</a>
+                  </address>
+                  <div class="separator social-links">
+                    <span class="link github">
+                      <a href="https://github.com/Gizra" target="_blank"><i class="fa fa-github-square"></i><span class="link-text">Gizra's Github Account</span></a>
+                    </span>
+                    <span class="link twitter">
+                      <a href="https://twitter.com/gizra_drupal" target="_blank"><i class="fa fa-twitter-square"></i><span class="link-text">Gizra's Twitter Account</span></a>
+                    </span>
+                    <span class="link linkedin">
+                      <a href="https://www.linkedin.com/company/gizra-ltd" target="_blank"><i class="fa fa-linkedin-square"></i><span class="link-text">Gizra's LinkedIn Page</span></a>
+                    </span>
+                    <span class="link facebook">
+                      <a href="https://www.facebook.com/gizraltd/timeline" target="_blank"><i class="fa fa-facebook-square"></i><span class="link-text">Gizra's Facebook Page</span></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+    <script src="/js/plugins.493a.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <script src="/js/scripts.f755.js"></script>
+    </body>
+</html>
