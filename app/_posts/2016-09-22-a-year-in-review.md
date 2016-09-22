@@ -1,5 +1,5 @@
 ---
-title: "A Year in Review"
+title: "A Year in Review - 5 ways I am living The Gizra Way"
 tags:
   - The Gizra Way
 permalink: "/content/a-year-in-review"
