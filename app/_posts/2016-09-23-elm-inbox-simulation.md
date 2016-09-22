@@ -1,8 +1,11 @@
 ---
-title: "Getting started with a Core Initiative"
+title: "Web Frameworks, Proof of Concept, and Building an Inbox Simulation"
 tags:
-  - "Drupal-planet"
-  - JSON API
+  - Semantic UI
+  - Elm
+  - Learning Management Systems
+  - Online Training and Assessment
+  - Inbox Simulation
 permalink: "/content/elm-inbox-simulation"
 layout: post
 image: "/assets/images/posts/elm-inbox-simulation/thumb.jpg"
@@ -37,5 +40,32 @@ I answered (dubiously), "Well, it should look and feel like an Outlook inbox, an
 
 "Yeah, something like that."
 
-##The Scafolding of an Inbox, Semantic UI and Elm (also Jekyll, NodeJS and other stuff along the way)
+##The Scafolding of an Inbox
+So I opened a repository for the project, which at Gizra starts with a stack that includes a location to create static prototype pages served by Jekyll and automatically updated and published by Gulp. The Semantic UI CSS framework is included so that we get all the goodies that come with that and don't need to recreate the wheel on design elements (we recently switched from Bootstrap, and I already like it a lot better, if not just because our prototypes don't look like [every *&%!-ing Bootstrap website ever](http://adventurega.me/bootstrap/)).
+
+In a perfect world, I wanted three things: 1) an inbox that looked realistic, 2) a dashboard that reflected activity in the inbox, and 3) an admin screen that allowed manipulation of the inbox content.
+
+I started with the admin screen, because that seemed the least daunting.
+
+{% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/admin-sketch.jpg" caption="I am a terrible sketch artist, and I often don't carry paper. This was sketched on a napkin from a coffee shop." %}
+
+Once I had the idea, I just moved quickly into the static prototype, because my CSS skills dramatically outweigh my drawing skills.
+
+{% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/admin-prototype.jpg" caption="That's a little better." %}
+
+The next step was the inbox itself, and because I wanted it to look like Outlook, we figured we could try to grab the HTML, CSS and JS from an Outlook Online account that I had created for this purpose. 
+
+What a ridiculous mess that was. 
+
+About 30 minutes into that task, I realized it would be easier just to recreate the inbox from scratch. Semantic UI made it pretty easy - with all the font awesome icons already there, and the fact that it's flexbox friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict BEM principles, which we also recently started at Gizra.
+
+{% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/inbox-prototype.jpg" caption="Starting to look like the real thing." %}
+
+And with that, I made a pull request, and went to bed.
+
+##Making it dynamic with Elm
+The next day some strange miracle had occurred.
+
+Amitai had [created a basic Elm app](https://github.com/Gizra/inbox-simulation/pull/6), [converted my HTML markup to Elm](https://github.com/Gizra/inbox-simulation/pull/8), and [created a basic model for a functioning app](https://github.com/Gizra/inbox-simulation/pull/12).
+
 
