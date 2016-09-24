@@ -86,7 +86,12 @@ We spent the next day or two refining features, polishing the layout, and replac
 
 Of course, I needed to add a few tweaks to the layout, and add sample emails that were more realistic, and some logic that made sense. To do that I had to get into Elm and figure out how it works - in particular how to make it present the HTML syntax I needed. It turns out that was pretty logical and straightforward. I've barely scratched the surface, but I'm pretty pleased to have my first few commits on an Elm project.
 
+##What We Didn't Do
+In this case, we ignored all other features, even how to permanently store the data -- just a simple single page application that shows a realistic inbox with a few features. Ultimately, any LMS is a content management system, and in CMS tasks our framework of choice is Drupal. If we wanted to demonstrate backend capability, Drupal could help us with the same MVP mindset. Just put a few modules together, create the nodes, expose them with RESTful, and you get to a shared `model` between the frontend and the backend.
+
+But that's more than we wanted to do here. I never even got my admin screen - there wasn't enough time, and there's other stuff to do. 
+
 ##The Result
-You can look at the [Github repository](https://github.com/Gizra/inbox-simulation) and try out the [sample application](http://inbox-simulation.gizra.com/), but the final product is a simple response to a complex need. We got there by breaking down problem into small surmountable tasks - a method we call [The Gizra Way](http://www.gizra.com/#gizra-way). In this case, we ignored all other features, even how to permanently store the data -- just a simple single page application that shows a realistic inbox with a few features. I never git my admin screen - there wasn't enough time, and there's other stuff to do.
+You can look at the [Github repository](https://github.com/Gizra/inbox-simulation) and try out the [sample application](http://inbox-simulation.gizra.com/), but the final product is a simple response to a complex need. We got there by breaking down problem into small surmountable tasks - a method we call [The Gizra Way](http://www.gizra.com/#gizra-way). 
 
 We are, of course, helped enormously by a robust set of web frameworks that are helping us do web tasks, faster, with greater flexibility, and with a preciseness like never before.
