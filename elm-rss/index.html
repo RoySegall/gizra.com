@@ -4,10 +4,182 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 22 Sep 2016 15:32:06 -0500</lastBuildDate>
-    <pubDate>Thu, 22 Sep 2016 15:32:06 -0500</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2016 15:13:55 -0500</lastBuildDate>
+    <pubDate>Sat, 24 Sep 2016 15:13:55 -0500</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+
+      
+      <item>
+        <title>Web Frameworks, Proof of Concept, and Building an Inbox Simulation</title>
+        <description>
+          &lt;h2&gt;Baseball, Apple Pie, and Web Frameworks&lt;/h2&gt;
+
+&lt;p&gt;I like baseball better than football (the American version). Football is a &lt;a href=&quot;https://www.youtube.com/watch?v=_Z_7eu64y6c&quot;&gt;game of inches&lt;/a&gt; &amp;ndash; but it&amp;rsquo;s measured in yards. Imprecise scope is built into the system. Baseball, on the other hand, is a game of wildly random occurrences that are often measured to the third decimal place. An &lt;a href=&quot;http://sabr.org/sabermetrics&quot;&gt;entire framework exists&lt;/a&gt; to understand the smallest, yet important, details of the game.&lt;/p&gt;
+
+&lt;p&gt;What I like about baseball is what I like about the current state of web applications. There is a growing set of frameworks that allow you to &amp;ldquo;scratch your own itch&amp;rdquo; and be precise about your scope in ways that you never could before. I really like going to web conferences, and seeing things like Drupal being used as a backend to serve content to some other front-end framework (enter your favorite: Angular, React, Ember) that can bend, shape, and re-present that content in ways that Drupal never imagined.&lt;/p&gt;
+
+&lt;p&gt;And as a web development agency that focuses on complex content management, that has huge &amp;ndash; and really exciting &amp;ndash; implications for how we do business.&lt;/p&gt;
+
+&lt;h2&gt;What&amp;rsquo;s a Major Corporatation To Do?&lt;/h2&gt;
+
+&lt;p&gt;Take for example a conversation that started with someone that does training and assessment at a Fortune 50 corporation &amp;ndash; one that trains a lot of employees. At some point she asked me &amp;ldquo;Do you guys do inbox simulations?&amp;rdquo; I had to think for a second if I even knew what inbox simulation was - and it turns out, it&amp;rsquo;s exactly what it sounds like: a simulated email inbox to test and assess an employee&amp;rsquo;s response and prioritization skills. &lt;/p&gt;
+
+&lt;p&gt;My first response was &amp;ldquo;No,&amp;rdquo; and my second &amp;ndash; almost immediate &amp;ndash; followup was, &amp;ldquo;but I don&amp;rsquo;t see why we couldn&amp;rsquo;t.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The problem they had was that none of the software they had tried was giving them precisely what they needed. And that&amp;rsquo;s not surprising. There are more than 500 Learning Management Systems on the market, each with it&amp;rsquo;s own bloated feature set trying to solve specific use cases with general tools. It&amp;rsquo;s also not surprising that &lt;a href=&quot;http://www.capterra.com/learning-management-system-software/user-research&quot;&gt;fewer than 25%&lt;/a&gt; of corporate LMS users are &amp;ldquo;very satisfied&amp;rdquo; with their system. Given the large features sets and the likely time it took to get them to market, most of them are probably built on technology that&amp;rsquo;s already five years old.&lt;/p&gt;
+
+&lt;h2&gt;Enter Proof of Concept&lt;/h2&gt;
+
+&lt;p&gt;That conversation led to a &amp;ldquo;show us what you can do&amp;rdquo; meeting. This was a problem because, well, we had never done it before. My five-or-six-years-ago brain said to myself, &amp;ldquo;We can&amp;rsquo;t possibly create a demo of an inbox simulation &amp;ndash; I&amp;rsquo;ll just put together a slide deck that explains what I&amp;rsquo;m talking about here with web frameworks.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s when &lt;a href=&quot;http://www.gizra.com/team/#amitaibu&quot;&gt;Amitai&lt;/a&gt; said, &amp;ldquo;Let&amp;rsquo;s create an inbox simulation for your meeting &amp;ndash; we can do it in &lt;a href=&quot;http://elm-lang.org/&quot;&gt;Elm&lt;/a&gt;. Open a repo and I&amp;rsquo;ll show you how. What should it have?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I answered (dubiously), &amp;ldquo;Well, it should look and feel like an Outlook inbox, and we should be able to demonstrate that their training logic can be applied to simple email tasks.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;You mean like if you respond one way, you get a certain response back.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Yeah, something like that.&amp;rdquo;&lt;/p&gt;
+
+&lt;h2&gt;The Scafolding of an Inbox&lt;/h2&gt;
+
+&lt;p&gt;So I opened a &lt;a href=&quot;https://github.com/Gizra/inbox-simulation&quot;&gt;repository&lt;/a&gt; for the project, which at Gizra starts with a stack that includes a location to create static prototype pages served by &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and is automatically updated and published by &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;. The &lt;a href=&quot;http://semantic-ui.com/&quot;&gt;Semantic UI&lt;/a&gt; CSS framework is included so that we get all the goodies that come with it and don&amp;rsquo;t need to recreate the wheel on design elements (we recently switched from Bootstrap, and I already like it a lot better, if not just because our prototypes don&amp;rsquo;t look like &lt;a href=&quot;http://adventurega.me/bootstrap/&quot;&gt;every Bootstrap website ever&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;In a perfect world, I wanted three things: &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;An &lt;strong&gt;inbox&lt;/strong&gt; that looked realistic.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;dashboard&lt;/strong&gt; that reflected activity in the inbox. &lt;/li&gt;
+&lt;li&gt;An &lt;strong&gt;admin screen&lt;/strong&gt; that allowed manipulation of the inbox content.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I started with the admin screen, because that seemed the least daunting.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-inbox-simulator/admin-sketch.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;I am a terrible sketch artist, and I often don&amp;rsquo;t carry paper. This was sketched on a napkin from a coffee shop.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;Once I had the idea, I moved quickly into the static prototype, because my CSS skills dramatically outweigh my drawing skills.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-inbox-simulator/admin-prototype.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;That&amp;rsquo;s a little better.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;The next step was the inbox itself, and because I wanted it to look like Outlook, we figured we could try to grab the HTML, CSS and JS from an Outlook Online account that I had created for this purpose. &lt;/p&gt;
+
+&lt;p&gt;What a ridiculous mess that was. &lt;/p&gt;
+
+&lt;p&gt;Thirty minutes into that task, I realized it would be easier \ to recreate the inbox from scratch. Semantic UI made it pretty easy.The Font Awesome icons already there, and the fact that it&amp;rsquo;s &lt;a href=&quot;https://www.w3.org/TR/css-flexbox/&quot;&gt;flexbox&lt;/a&gt; friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict [BEM]{http://getbem.com/) principles, which we also recently started at Gizra).&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-inbox-simulator/inbox-prototype.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Starting to look like the real thing.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;And with that, I made a pull request, and went to bed.&lt;/p&gt;
+
+&lt;h2&gt;Making it dynamic with Elm&lt;/h2&gt;
+
+&lt;p&gt;The next day, some strange miracle had occurred.&lt;/p&gt;
+
+&lt;p&gt;Amitai had &lt;a href=&quot;https://github.com/Gizra/inbox-simulation/pull/6&quot;&gt;created a basic Elm app&lt;/a&gt;, &lt;a href=&quot;https://github.com/Gizra/inbox-simulation/pull/8&quot;&gt;converted my HTML markup to Elm&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Gizra/inbox-simulation/pull/12&quot;&gt;created a basic model for a functioning app&lt;/a&gt;. I had heard Amitai speak and have read about how Elm&amp;rsquo;s compiler, which catches runtime errors, makes development so much faster, but seeing it in action was pretty amazing. Our conversation on Github:&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-inbox-simulator/github-conversation.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;The Elm is strong with this one.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;Creating that dashboard referenced in the conversation was faitly easy too. Semantic UI has a lot of &lt;a href=&quot;http://semantic-ui.com/collections/table.html&quot;&gt;nice looking tables&lt;/a&gt; and classes to vary the look enough to get a lot of different options. I found one I liked, filled it with enough dummy data to give it the feel of a real dashboard, and we were all set.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, Amitai created a nifty little delayed response function. If you choose a particular response (in this case, some version of &amp;ldquo;ignore&amp;rdquo;), you get a followup email demanding your attention.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/elm-inbox-simulator/delayed-response.gif&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Don&amp;rsquo;t ignore my emails!.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;We spent the next day or two refining features, polishing the layout, and replacing the dummy text.&lt;/p&gt;
+
+&lt;p&gt;Of course, I needed to add a few tweaks to the layout, and add sample emails that were more realistic, and some logic that made sense. To do that I had to get into Elm and figure out how it works - in particular how to make it present the HTML syntax I needed. It turns out that was pretty logical and straightforward. I&amp;rsquo;ve barely scratched the surface, but I&amp;rsquo;m pretty pleased to have my first few commits on an Elm project.&lt;/p&gt;
+
+&lt;h2&gt;The Result&lt;/h2&gt;
+
+&lt;p&gt;You can look at the &lt;a href=&quot;https://github.com/Gizra/inbox-simulation&quot;&gt;Github repository&lt;/a&gt; and try out the &lt;a href=&quot;http://inbox-simulation.gizra.com/&quot;&gt;sample application&lt;/a&gt;, but the final product is a simple response to a complex need. We got there in several days by breaking down a complex problem into small surmountable tasks - a method we call &lt;a href=&quot;http://www.gizra.com/#gizra-way&quot;&gt;The Gizra Way&lt;/a&gt;. In this case, we ignored all other features, even how to permanently store the data &amp;ndash; just a simple single page application that shows a realistic inbox with a few features. I never got my admin screen - there wasn&amp;rsquo;t enough time, and there&amp;rsquo;s other stuff to do.&lt;/p&gt;
+
+&lt;p&gt;We are, of course, helped enormously by a robust set of web frameworks that are helping us do web tasks, faster, with greater flexibility, and with a preciseness like never before.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-inbox-simulation/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/elm-inbox-simulation</link>
+        <guid>http://www.gizra.com/content/elm-inbox-simulation</guid>
+        <pubDate>Sat, 24 Sep 2016 00:00:00 -0500</pubDate>
+      </item>
+      
     
       
       
