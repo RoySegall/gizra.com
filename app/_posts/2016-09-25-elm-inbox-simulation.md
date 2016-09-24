@@ -3,9 +3,9 @@ title: "Web Frameworks, Proof of Concept, and Building an Inbox Simulation"
 tags:
   - Semantic UI
   - Elm
-  - Learning Management Systems
-  - Online Training and Assessment
+  - LMS
   - Inbox Simulation
+  - "Drupal-planet"
 permalink: "/content/elm-inbox-simulation"
 layout: post
 image: "/assets/images/posts/elm-inbox-simulator/thumb.jpg"
