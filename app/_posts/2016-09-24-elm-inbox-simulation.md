@@ -23,7 +23,7 @@ What I like about baseball is what I like about the current state of web applica
 
 And as a web development agency that focuses on complex content management, that has huge -- and really exciting -- implications for how we do business.
 
-##What's a Major Corporatation To Do?
+##What's a Major Corporation To Do?
 Take for example a conversation that started with someone that does training and assessment at a Fortune 50 corporation -- one that trains a lot of employees. At some point she asked me "Do you guys do inbox simulations?" I had to think for a second if I even knew what inbox simulation was - and it turns out, it's exactly what it sounds like: a simulated email inbox to test and assess an employee's response and prioritization skills. 
 
 My first response was "No," and my second -- almost immediate -- followup was, "but I don't see why we couldn't."
