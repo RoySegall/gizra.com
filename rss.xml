@@ -4,10 +4,43 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Wed, 28 Sep 2016 14:24:14 -0400</lastBuildDate>
-    <pubDate>Wed, 28 Sep 2016 14:24:14 -0400</pubDate>
+    <lastBuildDate>Wed, 28 Sep 2016 14:29:00 -0400</lastBuildDate>
+    <pubDate>Wed, 28 Sep 2016 14:29:00 -0400</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>A Year in Review - 5 Ways I am Living The Gizra Way</title>
+        <description>
+          &lt;p&gt;I joined Gizra exactly a year ago. One of my first tasks was to create a content piece describing The Gizra Way. For me it was all still theory.  Over the past year, working at Gizra has taken me out of my comfort zone and slowly the company’s way of doing things has seeped into my consciousness and taken over in the best possible way.  Here are 5 ways I am living The Gizra Way:
+&lt;ol&gt;
+&lt;li&gt;I am better at using &lt;strong&gt;the Gizra Way filter&lt;/strong&gt;.  In approaching a task, I remember - most of the time - to ask  “Is this the Gizra Way?”  I had to get my hand slapped a few times to internalize this. A silly, but effective example: I opened a document to manage urgent website changes I wanted to implement. Amitai looked at me with eyes that said “Really?” and schooled me in his honest and direct way. I needlessly complicated the process with extra steps and documents. Since then, I have become comfortable with Github and even enjoyed the fact that the “Issues” I open are only a tab away from the “Pull Requests” that are implementing them. I have learned to cut out superfluous steps that would slow implementation, and that includes me speaking Gizra’s common language by using the same tools as the developers.&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;The ever-elusive &lt;strong&gt;Work-life balance is not a myth&lt;/strong&gt;.  It always sounded like a nice concept but I never actually saw it implemented beyond a lot of lip-service and some flex-hour initiatives. In Gizra, it comes from top-down led by personal example.  I was even inspired to jot down my &lt;a href=&quot;http://www.gizra.com/content/job-post-goes-viral/&quot;&gt;impressions&lt;/a&gt; about Gizra’s efforts to bring in female employees to round out the development team.  Because personal life is seen as a legitimate priority here, I found myself released from the ongoing stress of hiding my family constraints. I speak freely about my children (I don’t overshare pictures because we all know that kid pictures are really only interesting to their parents).  When the babysitter falls through, I can be honest about my reason for moving a meeting out by an hour.  It&amp;rsquo;s a relief and the energy I save is funneled into my work.&lt;/li&gt;&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/year-in-review/rachel-gizra.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Work-life balance is not a myth.&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;&lt;li&gt;I made &lt;strong&gt;timeboxing&lt;/strong&gt; personal.  I immediately connected with the idea of fixing a time period for every task in order to set expectation and avoid scope creep.  I have enthusiastically applied it to my personal, already evolved, time management strategy. It is becoming - as I am still a work in process - an amazing way for me to tackle annoying tasks, overcome procrastination, and manage my perfectionism. The angst of an overwhelming task is put at bay by setting a timebox with the purpose of making a dent, rather than the goal of finishing the whole task.  What seems too large to approach, becomes possible.&lt;/li&gt;&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/a-year-in-review/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/a-year-in-review</link>
+        <guid>http://www.gizra.com/content/a-year-in-review</guid>
+        <pubDate>Wed, 28 Sep 2016 00:00:00 -0400</pubDate>
+      </item>
     
       <item>
         <title>Web Frameworks, Proof of Concept, and Building an Inbox Simulation</title>
@@ -203,39 +236,6 @@ Before Yesod, we were running NodeJs as our proxy server for light tasks or real
         </description>
         <link>http://www.gizra.com/content/haskell-yesod-php-drupal</link>
         <guid>http://www.gizra.com/content/yesod-drupal</guid>
-        <pubDate>Thu, 22 Sep 2016 00:00:00 -0400</pubDate>
-      </item>
-    
-      <item>
-        <title>A Year in Review - 5 Ways I am Living The Gizra Way</title>
-        <description>
-          &lt;p&gt;I joined Gizra exactly a year ago. One of my first tasks was to create a content piece describing The Gizra Way. For me it was all still theory.  Over the past year, working at Gizra has taken me out of my comfort zone and slowly the company’s way of doing things has seeped into my consciousness and taken over in the best possible way.  Here are 5 ways I am living The Gizra Way:
-&lt;ol&gt;
-&lt;li&gt;I am better at using &lt;strong&gt;the Gizra Way filter&lt;/strong&gt;.  In approaching a task, I remember - most of the time - to ask  “Is this the Gizra Way?”  I had to get my hand slapped a few times to internalize this. A silly, but effective example: I opened a document to manage urgent website changes I wanted to implement. Amitai looked at me with eyes that said “Really?” and schooled me in his honest and direct way. I needlessly complicated the process with extra steps and documents. Since then, I have become comfortable with Github and even enjoyed the fact that the “Issues” I open are only a tab away from the “Pull Requests” that are implementing them. I have learned to cut out superfluous steps that would slow implementation, and that includes me speaking Gizra’s common language by using the same tools as the developers.&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;The ever-elusive &lt;strong&gt;Work-life balance is not a myth&lt;/strong&gt;.  It always sounded like a nice concept but I never actually saw it implemented beyond a lot of lip-service and some flex-hour initiatives. In Gizra, it comes from top-down led by personal example.  I was even inspired to jot down my &lt;a href=&quot;http://www.gizra.com/content/job-post-goes-viral/&quot;&gt;impressions&lt;/a&gt; about Gizra’s efforts to bring in female employees to round out the development team.  Because personal life is seen as a legitimate priority here, I found myself released from the ongoing stress of hiding my family constraints. I speak freely about my children (I don’t overshare pictures because we all know that kid pictures are really only interesting to their parents).  When the babysitter falls through, I can be honest about my reason for moving a meeting out by an hour.  It&amp;rsquo;s a relief and the energy I save is funneled into my work.&lt;/li&gt;&lt;/p&gt;
-
-&lt;div class=&quot;thumbnail&quot;&gt;
-  &lt;div class=&quot;img-wrapper&quot;&gt;
-
-    
-
-    
-      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/year-in-review/rachel-gizra.jpg&quot;&gt;
-    
-
-  &lt;/div&gt;
-  
-    &lt;div class=&quot;caption&quot;&gt;Work-life balance is not a myth.&lt;/div&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;&lt;li&gt;I made &lt;strong&gt;timeboxing&lt;/strong&gt; personal.  I immediately connected with the idea of fixing a time period for every task in order to set expectation and avoid scope creep.  I have enthusiastically applied it to my personal, already evolved, time management strategy. It is becoming - as I am still a work in process - an amazing way for me to tackle annoying tasks, overcome procrastination, and manage my perfectionism. The angst of an overwhelming task is put at bay by setting a timebox with the purpose of making a dent, rather than the goal of finishing the whole task.  What seems too large to approach, becomes possible.&lt;/li&gt;&lt;/p&gt;
-
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/a-year-in-review/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
-        </description>
-        <link>http://www.gizra.com/content/a-year-in-review</link>
-        <guid>http://www.gizra.com/content/a-year-in-review</guid>
         <pubDate>Thu, 22 Sep 2016 00:00:00 -0400</pubDate>
       </item>
     
