@@ -41,7 +41,7 @@ I answered (dubiously), "Well, it should look and feel like an Outlook inbox, an
 
 "Yeah, something like that."
 
-##The Scafolding of an Inbox
+##The Scaffolding of an Inbox
 So I opened a [repository](https://github.com/Gizra/inbox-simulation) for the project, which at Gizra starts with a stack that includes a location to create static prototype pages served by [Jekyll](https://jekyllrb.com/) and is automatically updated and published by [Gulp](http://gulpjs.com/). The [Semantic UI](http://semantic-ui.com/) CSS framework is included so that we get all the goodies that come with it and don't need to recreate the wheel on design elements (we recently switched from Bootstrap, and I already like it a lot better, if not just because our prototypes don't look like [every Bootstrap website ever](http://adventurega.me/bootstrap/)).
 
 In a perfect world, I wanted three things: 
