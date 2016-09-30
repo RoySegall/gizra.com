@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 29 Sep 2016 16:28:36 -0500</lastBuildDate>
-    <pubDate>Thu, 29 Sep 2016 16:28:36 -0500</pubDate>
+    <lastBuildDate>Fri, 30 Sep 2016 08:37:30 -0500</lastBuildDate>
+    <pubDate>Fri, 30 Sep 2016 08:37:30 -0500</pubDate>
     <ttl>1800</ttl>
 
     
@@ -80,7 +80,7 @@
 
 &lt;p&gt;&amp;ldquo;Yeah, something like that.&amp;rdquo;&lt;/p&gt;
 
-&lt;h2&gt;The Scafolding of an Inbox&lt;/h2&gt;
+&lt;h2&gt;The Scaffolding of an Inbox&lt;/h2&gt;
 
 &lt;p&gt;So I opened a &lt;a href=&quot;https://github.com/Gizra/inbox-simulation&quot;&gt;repository&lt;/a&gt; for the project, which at Gizra starts with a stack that includes a location to create static prototype pages served by &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and is automatically updated and published by &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;. The &lt;a href=&quot;http://semantic-ui.com/&quot;&gt;Semantic UI&lt;/a&gt; CSS framework is included so that we get all the goodies that come with it and don&amp;rsquo;t need to recreate the wheel on design elements (we recently switched from Bootstrap, and I already like it a lot better, if not just because our prototypes don&amp;rsquo;t look like &lt;a href=&quot;http://adventurega.me/bootstrap/&quot;&gt;every Bootstrap website ever&lt;/a&gt;).&lt;/p&gt;
 
