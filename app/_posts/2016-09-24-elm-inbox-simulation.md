@@ -62,7 +62,7 @@ The next step was the inbox itself, and because I wanted it to look like Outlook
 
 What a ridiculous mess that was. 
 
-Thirty minutes into that task, I realized it would be easier \ to recreate the inbox from scratch. Semantic UI made it pretty easy.The Font Awesome icons already there, and the fact that it's [flexbox](https://www.w3.org/TR/css-flexbox/) friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict [BEM]{http://getbem.com/) principles, which we also recently started at Gizra).
+Thirty minutes into that task, I realized it would be easier to recreate the inbox from scratch. Semantic UI made it pretty easy.The Font Awesome icons already there, and the fact that it's [flexbox](https://www.w3.org/TR/css-flexbox/) friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict [BEM](http://getbem.com/) principles, which we also recently started at Gizra).
 
 {% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/inbox-prototype.jpg" caption="Starting to look like the real thing." %}
 
