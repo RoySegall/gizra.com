@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Fri, 30 Sep 2016 08:37:30 -0500</lastBuildDate>
-    <pubDate>Fri, 30 Sep 2016 08:37:30 -0500</pubDate>
+    <lastBuildDate>Sat, 01 Oct 2016 07:17:41 -0500</lastBuildDate>
+    <pubDate>Sat, 01 Oct 2016 07:17:41 -0500</pubDate>
     <ttl>1800</ttl>
 
     
@@ -130,7 +130,7 @@
 
 &lt;p&gt;What a ridiculous mess that was. &lt;/p&gt;
 
-&lt;p&gt;Thirty minutes into that task, I realized it would be easier \ to recreate the inbox from scratch. Semantic UI made it pretty easy.The Font Awesome icons already there, and the fact that it&amp;rsquo;s &lt;a href=&quot;https://www.w3.org/TR/css-flexbox/&quot;&gt;flexbox&lt;/a&gt; friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict [BEM]{http://getbem.com/) principles, which we also recently started at Gizra).&lt;/p&gt;
+&lt;p&gt;Thirty minutes into that task, I realized it would be easier to recreate the inbox from scratch. Semantic UI made it pretty easy.The Font Awesome icons already there, and the fact that it&amp;rsquo;s &lt;a href=&quot;https://www.w3.org/TR/css-flexbox/&quot;&gt;flexbox&lt;/a&gt; friendly, meant that I had a pretty good static version up in about 4 hours (it could have been faster, but it was my first time really using Semantic UI, and I was trying to follow strict &lt;a href=&quot;http://getbem.com/&quot;&gt;BEM&lt;/a&gt; principles, which we also recently started at Gizra).&lt;/p&gt;
 
 &lt;div class=&quot;thumbnail&quot;&gt;
   &lt;div class=&quot;img-wrapper&quot;&gt;
