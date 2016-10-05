@@ -38,7 +38,16 @@ This will get you off the ground with your new and shiny _Jekyll Progressive Web
 
 ## How to use it
 
-To install it you'll need [Yeoman](http://yeoman.io/) (install it with `npm install -g yo`). Then install the generator with `npm install -g jekyll-starter-kit`. After the generator is installed you can generate your new project `yo jekyll-starter-kit`.
+To install it you'll need [Yeoman](http://yeoman.io/). Then install the generator
+```shell
+npm install -g jekyll-starter-kit
+```
+
+After the generator is installed you can generate your new project
+```shell
+yo jekyll-starter-kit
+```
+
 If you need more info look at the [GitHub Repo](https://github.com/nirgn975/jekyll-starter-kit).
 
 To make sure you'll not ran into any issues I write tests, a lot of tests! (I make it a priority to get to 100% coverage, and I have the badge to prove it). But if you do need some help we can chat on the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
