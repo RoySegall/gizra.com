@@ -14,13 +14,13 @@ published: true
 
 {% include setup %}
 
-I always love [Jekyll](jekyllrb.com), I think it's a great tool! but lately I was hearing a lot about PWA (Progressive Web Apps), you know the kind of web apps that feels like a native apps, with welcome screen, a shortcut on your phone, offline support, and what not. I have a bunch of static websites built with Jekyll so I start implement those new and shinny toys, one by one, in my static websites.
+I love [Jekyll](jekyllrb.com). I think it's a great tool! But lately I have been hearing a lot about PWA (Progressive Web Apps), you know the kind of web app that feels like a native app, with a welcome screen, a shortcut on your phone, offline support, and what not. So, I start implementing these new and shiny toys, one by one, on the bunch of static websites I built with Jekyll.
 
-As a result I was ran into [Google Web Starter Kit](https://github.com/google/web-starter-kit) - "a Boilerplating & Tooling for Multi-Device Development". And even do couple of Pull Requests there.
+During this endeavor I ran into [Google Web Starter Kit](https://github.com/google/web-starter-kit) - "a Boilerplating & Tooling for Multi-Device Development" and even did a couple of Pull Requests there.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/google-web-starter-kit-prs.jpg" caption="Google Web Starter Kit PRs" %}
 
-In the Google Repo I learned a lot about PWA and as I was building those features into my static websites I notice there isn't any material out there about PWA features with Jekyll. And I kept hearing the voice of obi one kenobi in my head telling me "This is not the open source way! You shouldn't keep this knowledge to myself". So here comes the **Jekyll Starter Kit** generator.
+In the Google Repo I learned a lot about PWA and as I was building the features into my static websites I notice there isn't any material out there about PWA features with Jekyll. I kept hearing the voice of Obi-Wan Kenobi in my head telling me "This is not the open-source way! You shouldn't keep this knowledge to yourself". So here it is - the **Jekyll Starter Kit** generator.
 
 <!-- more -->
 
@@ -51,6 +51,6 @@ yo jekyll-starter-kit
 
 If you need more info look at the [GitHub Repo](https://github.com/nirgn975/jekyll-starter-kit).
 
-To make sure you'll not ran into any issues I write tests, a lot of tests! (I make it a priority to get to 100% coverage). But if you do need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
+To make sure you won't run into any issues I wrote tests, a lot of tests! (I make it a priority to get to 100% coverage). But if you do need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
 
-If you want to help keep making this generator better, you're awesome! Go to the [Want to help](https://github.com/nirgn975/jekyll-starter-kit#want-to-help) section in the README and start from there.
+If you would like to help make this generator better, you're awesome! Go to the [Want to help](https://github.com/nirgn975/jekyll-starter-kit#want-to-help) section in the README and start from there.
