@@ -13,13 +13,13 @@ published: true
 
 {% include setup %}
 
-I always love [Jekyll](jekyllrb.com), I think it's a great tool! but lately I was hearing a lot about PWA (Progressive Web Apps), you know the kind of web apps that feels like a native apps, with welcome screen, a shortcut on your phone, offline support, and what not. I have a bunch of static web apps built with Jekyll so I start implements those new and shinny toys, one by one, in my static websites.
+I always love [Jekyll](jekyllrb.com), I think it's a great tool! but lately I was hearing a lot about PWA (Progressive Web Apps), you know the kind of web apps that feels like a native apps, with welcome screen, a shortcut on your phone, offline support, and what not. I have a bunch of static websites built with Jekyll so I start implement those new and shinny toys, one by one, in my static websites.
 
 As a result I was ran into [Google Web Starter Kit](https://github.com/google/web-starter-kit) - "a Boilerplating & Tooling for Multi-Device Development". And even do couple of Pull Requests there.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/google-web-starter-kit-prs.jpg" caption="Google Web Starter Kit PRs" %}
 
-In the Google Repo I learned a lot about PWA and as I was building those features into my static websites I notice there isn't any material out there about PWA features with Jekyll. And, as always, I shouldn't keep this knowledge to myself (I kept hearing the voice of obi one kenobi in my head telling me "This is not the open source way!"). So here comes the **Jekyll Starter Kit** generator.
+In the Google Repo I learned a lot about PWA and as I was building those features into my static websites I notice there isn't any material out there about PWA features with Jekyll. And I kept hearing the voice of obi one kenobi in my head telling me "This is not the open source way! You shouldn't keep this knowledge to myself". So here comes the **Jekyll Starter Kit** generator.
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ What options do you have in this generator?
   * Check your build on [Travis-CI](https://travis-ci.org/) with [html-proofer](https://github.com/gjtorikian/html-proofer).
   * Deploy your website to GitHub (on `gh-pages`) or Firebase, with only one command.
 
-This will get you off the ground with your new and shiny Jekyll Progressive Web App.
+This will get you off the ground with your new and shiny _Jekyll Progressive Web App_.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/jekyll-starter-kit.jpg" caption="Jekyll Starter Kit logo" %}
 
