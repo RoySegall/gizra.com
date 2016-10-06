@@ -35,22 +35,24 @@ Some of the options are basic like the option to choose between HTML or [Pug (Ja
 
 This should get you off the ground with your new and shiny _Jekyll Progressive Web App_. But we don't just want to get you off the ground, that's why we generating a service worker automagically every time you deploy the app that precaches resources (with [sw-precache](https://github.com/GoogleChrome/sw-precache)), and let you choose to deploy your website to GitHub pages or Firebase, with only one command.
 
-If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article about it. But what service worker means for you is that not only the user can visit your website when he or she doesn't have internet connection, it also mean that when they comeback to your website, it will load much faster! And when the user clicks on some internal link in your website, again, it'll load much faster! And we handel
+If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article about it. But what service worker means for you is that not only the user can visit your website when he or she doesn't have an internet connection, it also mean that when they comeback to your website, it will load much faster! And when the user clicks on some internal link in your website, again, it'll load much faster!
 
 ## How to use it
 
 To install it you'll need [Yeoman](http://yeoman.io/). Then install the generator
-```shell
+
+```
 npm install -g generator-jekyll-starter-kit
 ```
 
 And you can generate your new project
-```shell
+
+```
 yo jekyll-starter-kit
 ```
 
 If you need more info look at the [GitHub Repo](https://github.com/nirgn975/jekyll-starter-kit).
 
-To make sure you won't run into any issues I wrote tests, a lot of tests! (I make it a priority to get to 100% coverage). But if you do need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
+To make sure you won't run into any issues I wrote tests, a lot of tests! I write the tests with [mocha](https://mochajs.org/) and make it a priority to get to 100% coverage, I simulate every option and test that you get the right configuration for your project. But if you do need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
 
 If you would like to help make this generator better, you're awesome! Go to the [Want to help](https://github.com/nirgn975/jekyll-starter-kit#want-to-help) section in the README and start from there.
