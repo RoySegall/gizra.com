@@ -27,23 +27,21 @@ In the Google Repo I learned a lot about PWA and as I was building the features 
 
 ## What do you get
 
-
-When you generate your website, it'll look like any other website you generate with Jekyll
+When you generate your website, it'll look like any other website you generate with Jekyll, no matter the options you choose.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/screenshot-jekyll-starter-kit-website.jpg" caption="Jekyll Starter Kit logo" %}
 
 Some of the options are basic like the option to choose between HTML or [Pug (Jade)](https://github.com/pugjs/pug), and `css`, `sass` or `scss`. Others are just Best Practices from [Google Web Starter Kit](https://github.com/google/web-starter-kit), like `humans` and `manifest` files. But the really good ones are writing ES2015 (with Babel) already configured (if you choose it), and even [Travis-CI](https://travis-ci.org/) integration to check your build with [html-proofer](https://github.com/gjtorikian/html-proofer).
 
-This should get you off the ground with your new and shiny _Jekyll Progressive Web App_. But we don't just want to get you off the ground, that's why we  generating a service worker automagically every time you deploy the app that precaches resources (with [sw-precache](https://github.com/GoogleChrome/sw-precache)), and let you choose to deploy your website to GitHub pages or Firebase, with only one command.
+This should get you off the ground with your new and shiny _Jekyll Progressive Web App_. But we don't just want to get you off the ground, that's why we generating a service worker automagically every time you deploy the app that precaches resources (with [sw-precache](https://github.com/GoogleChrome/sw-precache)), and let you choose to deploy your website to GitHub pages or Firebase, with only one command.
 
-If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article about it. But what service worker means for you is that not only the user can visit your website when he or she doesn't have internet connection, it also mean that when they comeback to your website, it will load much faster! And when the user click on some internal link in your website, again, it'll load much faster!
-
+If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article about it. But what service worker means for you is that not only the user can visit your website when he or she doesn't have internet connection, it also mean that when they comeback to your website, it will load much faster! And when the user clicks on some internal link in your website, again, it'll load much faster! And we handel
 
 ## How to use it
 
 To install it you'll need [Yeoman](http://yeoman.io/). Then install the generator
 ```shell
-npm install -g jekyll-starter-kit
+npm install -g generator-jekyll-starter-kit
 ```
 
 And you can generate your new project
