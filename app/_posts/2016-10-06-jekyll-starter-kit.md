@@ -53,6 +53,6 @@ yo jekyll-starter-kit
 
 If you need more info look at the [GitHub Repo](https://github.com/nirgn975/jekyll-starter-kit).
 
-To make sure you don't run into issues I wrote tests, a lot of tests! The tests were written with [mocha](https://mochajs.org/), and with the priority to get to 100% coverage. Every option and test was simulated so you can get the right configuration for your project. But if you still need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
+To make sure you don't run into issues I wrote tests, a lot of tests! The tests were written with [mocha](https://mochajs.org/), and with the priority to get to 100% coverage. Every option was simulated so you can get the right configuration for your project. But if you still need some help we can chat in the [gitter room](https://gitter.im/jekyll_starter_kit/Lobby).
 
 If you would like to help make this generator better, you're awesome! Go to the [Want to help](https://github.com/nirgn975/jekyll-starter-kit#want-to-help) section in the README and start from there.
