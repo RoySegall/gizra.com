@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/Gizra/Gizra.svg?branch=master)](https://travis-ci.org/Gizra/Gizra)
-
 # Gizra
 > The gizra.com website
 
