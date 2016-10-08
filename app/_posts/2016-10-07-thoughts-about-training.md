@@ -81,4 +81,26 @@ Well, if knowledge is also in the workers heads, let's get it out from there and
 In pedagogical world it's called Peer learning. In other words, students teaching each other. In this way people are given the opportunity to demonstrate their knowledge, the message is that everyone has a responsibility for learning and we also learn and teach. It's a start of creating a culture of contribution and sharing of knowledge.
 How to implement this? Well, I am still think about it, promising to update in the next post.
 
+##What to teach?
+[placeholder]
+
+##What about Work Plan?
+I am by nature a very planned person. I used to work with well defined goals and not release a product before it is complete. Therefore, my natural tendency was to start work on a training plan program, and only then begin to do training session to the employees.
+
+Well, that didn't happen. In the second week of my work I found myself teaching subject that I learned only a few days earlier. It felt like they threw me into the water from a height Olympic springboard, it was so high I could hear myself screaming before I hit the water. 
+I'm not used to be where I'm not an expert on what I'm going to talk about. I did it but not at all convinced that this was the right way.
+
+But then I came across in Scrum and more I read האסימונים התחילו ליפול.
+Unlike traditional method which has detailed documents defining goals and objectives, Scrum has concise lists (backlog) and a lot of practice face to face with all the people involved. In addition, there is an emphasis on achieving efficacy: How useful things we created in a given period?
+
+If I was sticking to my familiar method, it is likely the first two months I was only builds training programs, learning content, prepare lessons and only then start teaching.
+In practice, today, only three months in my new job, I already teach 12 classes in four different topics. At this rate (בקצב הזה) excites me to know where we will be in a year from now…
+
+Is the first training sessions was good? No, of course they could be much better if I had more time to study the matter and prepare. But going back to the Scrum model, they were the best training version I could release at that time. I knew I had enough trainings along the way, so I could continue to improve while movinig.
+If I did not jump into the water so early, it may be that only now I had the first training session. So maybe I was more confident standing in front of the class, but we were moving forward much slowly. Maybe even this post couldn’t be written because I wouldn't understand a lot of things I understand now.
+
+Still hard to shake off old patterns and even when I am writing these lines I find it difficult to release and say, this is good enough version of the post. I still have a lot of open questions, and I still could not fully answer the question: how to set up a training program in a small company.
+But I remind myself to think "scrumy" and say: Let Go, even in Rugby they don't stay with their arms interlocked all the time.
+
+
 
