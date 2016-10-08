@@ -65,4 +65,20 @@ On the other hand, do not give yourself. Un-Knowing should motivate you to act! 
 Good employees are employees who know their job.
 Excellent employees are employees who know what they do not know, and continue learning.
 
+##Who knows better, the teacher or the student?
+The basic premise we have become accustomed to is that the specialists should teach. Big companies that have organized training department, tend to experts (external or internal) to provide training on topics in which they specialize.
+But what about small companies that have a smaller number of employees and limited resources?
+
+Gizra is technology-intensive work environment, that constantly added new tools. People come from all kinds of backgrounds and with different levels of knowledge on various topics. Therefore, it is clear that there are more than a few issues that employees know better than me, the trainer.
+This point bothered me greatly - at first I thought I should take all the responsibility on the knowledge, the trainer has to know everything about what she have to teach. I quickly realized that even though I really want to, I can not know everything. So what is most important is that what I do know, I can teach better.
+If so, it is important that I have a good training skills, but how to succeed in bridging the knowledge gaps?
+
+Once, when I was in Education field, before I entered the web development world, I worked in a wonderful place called The Secular Yeshiva. This is a place where secular people learn and take responsibility for setting their Jewish identity.
+One method, שהשאירה בי חותם, was the ancient Jewish method: Hevruta (learning with partners).
+Hevruta is learning in small groups (3-5 people), and the idea is that the group is an arena where no one has authority over knowledge. Learning occurs during the exchange of ideas and knowledge sharing among participants.
+
+Well, if knowledge is also in the workers heads, let's get it out from there and share it with everyone.
+In pedagogical world it's called Peer learning. In other words, students teaching each other. In this way people are given the opportunity to demonstrate their knowledge, the message is that everyone has a responsibility for learning and we also learn and teach. It's a start of creating a culture of contribution and sharing of knowledge.
+How to implement this? Well, I am still think about it, promising to update in the next post.
+
 
