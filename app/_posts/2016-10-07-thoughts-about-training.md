@@ -35,3 +35,27 @@ It says something very important for me about Gizra - they wants to invest in th
 But how to get there? This is a question that I still do not have a full answer for it.
 So in the meantime I will share with you just a thoughts.
 
+##Teach them swim or throw them to the water?
+Are employees need to get organized training, includes the study of all the swimming movements, or perhaps to just show them the pool and let them reveal themselves?
+In other words: Who is responsible for Learning, the worker or the guide?
+
+When I came to Gizra, they threw me into the water. The water in Gizra is very deep! It was a very frustrating experience. I know how to swim and I did all the moves I know, and yet I felt a lot of times I'm drowning. It was a new pool, different water temperature, and it tooks time before I learned how to take a rest in the shallow water and where is the ladder to exit the pool. To say the truth, I'm still learning.
+For a new employee, it is a very inconvenient experience, even stressful, and I admit that sometimes raised in my head go back to my previous work, familiar and cozy, where I knew how to swim well.
+What kept me going is the very early understanding of "The Gizra Way": You are allowed to make a mistake here. The message was clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I noticed my mistakes, learn from them and make all efforts not to be wrong in the same place twice.
+
+Organized training advantage is that it facilitates the entry process which is not an easy as it is. It prevents unnecessary frustrations and allows more rapid learning. From the first moment the person understand what is expected from him, the knowledge is gradually built, and he makes less mistakes. I believe that eventually it significantly shortens the "newbie" time.
+On the other hand this process can make passive workers, they just needs to come to class and they will get all the answers.
+
+When someone thrown into the water he must be active. Study the movements on his own. The message is that you have responsibility for your learning. There is a value for questioning and self-discovery, and it encourages initiative and a "ראש גדול". I think that when a person finally figure out something on his own, he gets greater satisfaction.
+
+In the web development world, quickly and constantly changing, this is a very important skill to learn alone. But of course all this should take place in an environment demands excellence on the one hand, but on the other hand let you go wrong and learn from mistakes. I found this atmosphere at Gizra and we need to preserve it.
+
+However, I am still trying to find the right formula that would combine structured learning and independent study.
+What issues important to teach the class?
+What should leave for self-study?
+How to encourage curiosity to learn on your own?
+How to create a safe and comfortable atmosphere to study alone? 
+How to make frustration become motivation and not despair?
+
+And what about the company goods (טובת החברה)? What is the fastest way to train an employee? How much אורך נשימה the company has to absorb mistakes?
+
