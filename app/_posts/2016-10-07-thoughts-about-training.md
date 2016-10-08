@@ -59,3 +59,10 @@ How to make frustration become motivation and not despair?
 
 And what about the company goods (טובת החברה)? What is the fastest way to train an employee? How much אורך נשימה the company has to absorb mistakes?
 
+##Google is man's and woman’s best friend
+Over a learning process, it is very important to convey the message that should not be afraid to say: I do not know. No one expects you to know everything, especially when you are a newbie. To be honest, in this point when I write these words and still a newbie myself at Gizra, I feel that there are more things I do not know than things I know. 
+On the other hand, do not give yourself. Un-Knowing should motivate you to act! Have you heard any idea that you do not understand? Met in Unknown tool that not clear to you what it is doing? Google it! Ask and not loosen it until you know.
+Good employees are employees who know their job.
+Excellent employees are employees who know what they do not know, and continue learning.
+
+
