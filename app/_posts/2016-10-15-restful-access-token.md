@@ -7,7 +7,7 @@ permalink: "/content/restful-access-token"
 layout: post
 author: RoySegall
 image: /assets/images/posts/access-token/cookies.jpg
-description: "Normally in Drupal we don’t need to worry about authentication, This post 
+description: "Normally in Drupal we don’t need to worry about authentication, This post
 explains how to handle authentication with decoupled sites with Angular JS."
 ---
 
@@ -28,17 +28,19 @@ provided by RESTful:
 <!-- more -->
 
 Important: in order to use access token authentication you’ll need
-to enable the module `restful_token_auth`.
+to enable the module [restful_token auth](https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth)
+(which is a sub module of the [Restful](https://github.com/RESTful-Drupal/restful)
+module).
 
-##Generating the access token##
+## Generating the access token
 
 Below is how to generate an access token using Angular JS. If the
 authentication process passes, the end point will return an object with 3
 values:
 
-  1. access_token - This is the token which represents the user in any request.
-  2. expires_in - The amount of seconds in which the access token is valid.
-  3. refresh_token - Once the the token is no longer valid you'll need to ask
+  1. `access_token` - This is the token which represents the user in any request.
+  2. `expires_in` - The amount of seconds in which the access token is valid.
+  3. `refresh_token` - Once the the token is no longer valid you'll need to ask
   for a new one using the refresh token.
 
 You can see below a small amount of Angular JS code:
@@ -65,7 +67,7 @@ And this is what you’ll get back:
 }
 ```
 
-##Refreshing access token##
+## Refreshing access token
 As mentioned above, the access token is only valid for a specific amount of time,
 usually 24 hours, and you’ll need to check it before the request:
 
@@ -81,7 +83,7 @@ if (new Date().getTime() > localStorageService.get('expire_in')) {
 }
 ```
 
-##Using the access token##
+## Using the access token
 OK, so we got the access token and we can refresh it when it's no longer valid. The
 next thing you need to know is how to inject the access token into the header:
 
@@ -98,3 +100,7 @@ $http.post('http://localhost/drupal/api/article', {
   console.log('Cool! You posted a new article.');
 });
 ```
+
+You can have a look on our [yo hedley](https://github.com/Gizra/generator-hedley)
+generator to see how we [implemented](http://bit.ly/2dVYTg5) HTTP interceptor to
+improve the process displayed above.
