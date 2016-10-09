@@ -82,7 +82,14 @@ In pedagogical world it's called Peer learning. In other words, students teachin
 How to implement this? Well, I am still think about it, promising to update in the next post.
 
 ##What to teach?
-[placeholder]
+Trainings on technology? Training on skills and practices?
+Where to start? There is so much to learn and who should know what?
+One of the principles of Scrum is that everyone needs to know everything! This way everyone can perform any task (Characterizing the structure, testing, Front end, Back end, etc.), So if there is a strain on one team, another team can help him.
+In addition, project managers, marketers and even customers need to understand the development work, to create a common language in order that communication will be much more effective and clear.
+
+Therefore, we need to find a way to create מערך שיעור that work for everyone.  We should take into consideration that developers come with different world Concepts (עולם מושגים) from project managers come with, and therefore training needs to be adjusted. For example, when talking about 'How to approach a mission" developers will be very clear with terms such as query and relationship, but they may have difficulty to explain it in literal language and go straight talking in programming language. Marketing and project managers rather easily understand the story, since most of their work is to understand the needs of customers, but may find it difficult to take apart the entities and identify the relationships between them.
+If we want to create a common language for everyone, we need to understand these differences and consider them during training.
+
 
 ##What about Work Plan?
 I am by nature a very planned person. I used to work with well defined goals and not release a product before it is complete. Therefore, my natural tendency was to start work on a training plan program, and only then begin to do training session to the employees.
