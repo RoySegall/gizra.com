@@ -69,4 +69,4 @@ In fact, the string that is wrapped with `Left` is the one we will use as an err
 
 <!-- more -->
 
-{% include thumbnail.html image_path="assets/images/posts/email-template/mailchimp_components.jpg" caption="Mailchimp content items" %}
+{% include thumbnail.html image_path="assets/images/posts/yesod-forms-restful/validation-error.jpg" caption="Validation errors" %}
