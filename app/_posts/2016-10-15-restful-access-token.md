@@ -21,14 +21,17 @@ the user?
 Before diving into that part we need to understand the authentication types
 provided by RESTful:
 
-  1. CSRF token - Used to make sure a cookie was not hijacked by XSS.
+  1. CSRF token - Will help the server to make sure the request is a valid
+  request. If you'll inspect a standard Drupal form you can see the form
+  contains a token. That token help Drupal to ensure the submitted form is valid
+  form and not a fraud form. You can read more in this [blog post](https://cloudunder.io/blog/csrf-token/).
   2. Access token - RESTful will generate an access token and bind it to the
   user.
 
 <!-- more -->
 
 Important: in order to use access token authentication you’ll need
-to enable the module [restful_token auth](https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth)
+to enable the module [RESTful token authentication](https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth)
 (which is a sub module of the [Restful](https://github.com/RESTful-Drupal/restful)
 module).
 
