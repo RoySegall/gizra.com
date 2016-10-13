@@ -4,10 +4,56 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 06 Oct 2016 11:08:11 +0300</lastBuildDate>
-    <pubDate>Thu, 06 Oct 2016 11:08:11 +0300</pubDate>
+    <lastBuildDate>Thu, 13 Oct 2016 20:53:04 +0300</lastBuildDate>
+    <pubDate>Thu, 13 Oct 2016 20:53:04 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Jekyll Progressive Web App Starter Kit Generator</title>
+        <description>
+          &lt;p&gt;I love &lt;a href=&quot;jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;. I think it&amp;rsquo;s a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.&lt;/p&gt;
+
+&lt;p&gt;During this endeavor I ran into &lt;a href=&quot;https://github.com/google/web-starter-kit&quot;&gt;Google Web Starter Kit&lt;/a&gt; - &amp;ldquo;a Boilerplating &amp;amp; Tooling for Multi-Device Development&amp;rdquo; and even did a couple of Pull Requests there.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/jekyll-starter-kit/google-web-starter-kit-prs.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Google Web Starter Kit PRs&lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;In the Google Repo I learned a lot about PWA, and as I was building the features into my static websites, I noticed there weren&amp;rsquo;t any materials out there about PWA features with Jekyll. I kept hearing the voice of Obi-Wan Kenobi in my head telling me &amp;ldquo;This is not the open-source way! You shouldn&amp;rsquo;t keep this knowledge to yourself&amp;rdquo;. So here it is - the &lt;strong&gt;Jekyll Starter Kit&lt;/strong&gt; generator.&lt;/p&gt;
+
+&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;div class=&quot;img-wrapper&quot;&gt;
+
+    
+
+    
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/jekyll-starter-kit/jekyll-starter-kit.jpg&quot;&gt;
+    
+
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;caption&quot;&gt;Jekyll Starter Kit logo&lt;/div&gt;
+  
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/jekyll-starter-kit/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/jekyll-starter-kit</link>
+        <guid>http://www.gizra.com/content/jekyll-starter-kit</guid>
+        <pubDate>Thu, 13 Oct 2016 00:00:00 +0300</pubDate>
+      </item>
     
       <item>
         <title>A Year in Review - 5 Ways I am Living The Gizra Way</title>
