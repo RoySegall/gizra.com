@@ -21,9 +21,10 @@ During this endeavor I ran into [Google Web Starter Kit](https://github.com/goog
 
 In the Google Repo I learned a lot about PWA, and as I was building the features into my static websites, I noticed there weren't any materials out there about PWA features with Jekyll. I kept hearing the voice of Obi-Wan Kenobi in my head telling me "This is not the open-source way! You shouldn't keep this knowledge to yourself". So here it is - the **Jekyll Starter Kit** generator.
 
+{% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/jekyll-starter-kit.jpg" caption="Jekyll Starter Kit logo" %}
+
 <!-- more -->
 
-{% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/jekyll-starter-kit.jpg" caption="Jekyll Starter Kit logo" %}
 
 ## What do you get
 
