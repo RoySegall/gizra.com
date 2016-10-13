@@ -56,15 +56,21 @@ npm run gulp deploy
 
 I take my own little resume website and using Jekyll Starter Kit generator I convert it from just the Jekyll website it was before, to a full PWA website.
 
-The old website was load 10 requests, which is 160KB and finish loading in 332 ms.
+The old website was load 7 requests and finish loading in 370 ms.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-old-network-tab.jpg" caption="Old Resume Network Tab" %}
 
-The new website was load
+The new website was load 8 requests (with the new service worker) and finish loading in 466 ms. But as you can see the `sw.js` file was loaded after the site was finished loading, it doesn't interrupt the user (it's after the red line in the `Timeline` section).
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-new-network-tab.jpg" caption="New Resume Network Tab" %}
 
-As we can see.. And the next load (comeback user)..
+So, we get a little overhead in our tiny one page website. But on the second reload we cut back the files size to 97KB and finish load the website in 160 ms (about a third), because almost all of the files are loading from the service worker.
+
+{% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-new-network-reload.jpg" caption="New Resume After Reload" %}
+
+And after couple of milliseconds it load the the `sw.js` from cache (because it doesn't changed) and the `Finish` text update to 1.18s (but it doesn't matter to us because the website already finished loading).
+
+{% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-new-reload-with-sw.jpg" caption="New Resume After Reload With SW" %}
 
 ## How to use it
 
