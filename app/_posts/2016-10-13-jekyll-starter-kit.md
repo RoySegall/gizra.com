@@ -68,7 +68,7 @@ So, we got a little overhead in our tiny one page website, but on the second rel
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-new-network-reload.jpg" caption="New Resume After Reload" %}
 
-And after a couple of milliseconds it loaded the the `sw.js` from cache (because it didn't change) and the `Finish` text updated in 1.18s (but this doesn't matter to us because the website already finished loading).
+And after a couple of milliseconds it loaded the the `sw.js` from cache (because it didn't change) and the `Finish` text updated to 1.18s (but this doesn't matter to us because the website already finished loading).
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/resume-new-reload-with-sw.jpg" caption="New Resume After Reload With SW" %}
 
