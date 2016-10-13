@@ -1,9 +1,9 @@
 ---
-title: "Jekyll Starter Kit Generator"
+title: "Jekyll Progressive Web App Starter Kit Generator"
 tags:
   - Jekyll
   - Yeoman
-  - Progressive Web Apps
+  - Progressive Web App
 permalink: "/content/jekyll-starter-kit"
 layout: post
 author: NirGalon
@@ -13,13 +13,13 @@ published: true
 
 {% include setup %}
 
-I love [Jekyll](jekyllrb.com). I think it's a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web app that feels like a native app, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.
+I love [Jekyll](jekyllrb.com). I think it's a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.
 
 During this endeavor I ran into [Google Web Starter Kit](https://github.com/google/web-starter-kit) - "a Boilerplating & Tooling for Multi-Device Development" and even did a couple of Pull Requests there.
 
 {% include thumbnail.html image_path="assets/images/posts/jekyll-starter-kit/google-web-starter-kit-prs.jpg" caption="Google Web Starter Kit PRs" %}
 
-In the Google Repo I learned a lot about PWA and as I was building the features into my static websites, I noticed there weren't any materials out there about PWA features with Jekyll. I kept hearing the voice of Obi-Wan Kenobi in my head telling me "This is not the open-source way! You shouldn't keep this knowledge to yourself". So here it is - the **Jekyll Starter Kit** generator.
+In the Google Repo I learned a lot about PWA, and as I was building the features into my static websites, I noticed there weren't any materials out there about PWA features with Jekyll. I kept hearing the voice of Obi-Wan Kenobi in my head telling me "This is not the open-source way! You shouldn't keep this knowledge to yourself". So here it is - the **Jekyll Starter Kit** generator.
 
 <!-- more -->
 
@@ -33,20 +33,20 @@ When you generate your website, it'll look like any other website you generate w
 
 Some of the options are basic like the option to choose between HTML or [Pug (Jade)](https://github.com/pugjs/pug), and `css`, `sass` or `scss`. Others are just best practices from [Google Web Starter Kit](https://github.com/google/web-starter-kit), like `humans` and `manifest` files. But the really good ones write ES2015 (with Babel) already configured (if you choose it).
 
-This should get you off the ground with your new and shiny _Jekyll Progressive Web App_. But we don't just want to get you off the ground, and that's why we generate a service worker automagically every time you deploy the app that precaches resources (with [sw-precache](https://github.com/GoogleChrome/sw-precache)).
+This should get you off the ground with your new and shiny _Jekyll Progressive Web App_. But we don't just want to get you off the ground, and that's why a service worker is automagically generated every time you deploy the app that precaches resources (with [sw-precache](https://github.com/GoogleChrome/sw-precache)).
 
-If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article. Bottom line, service worker fetch all the static resources after the page finish loading and save them in the browser cache. This means that not only can the user visit your website without an Internet connection, it also mean that when they comeback to your website, it will load much faster (because the browser will check the cache first)! And when the user clicks on some internal link in your website, again, it'll load much faster! (because the next page is also a static page, the service worker already load it and save it in the cache).
+If you don't know what service worker is, [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) is a great article. Bottom line, service worker fetchs all the static resources after the page finishes loading and saves them in the browser cache. This means that not only can the user visit your website without an Internet connection, it also mean that when they come back to your website, it will load much faster (because the browser will check the cache first)! And when the user clicks on some internal link in your website, again, it'll load much faster (because the next page is also a static page, the service worker already loads it and saves it in the cache)!
 
-Tests are also very important and this is not something we see much in a static websites. That's why we add [Travis-CI](https://travis-ci.org/) option. All you have to do is enable the service, (if you choose this option you'll get a `.travis.yml` file, already configured). And it'll check your build output with [html-proofer](https://github.com/gjtorikian/html-proofer).
+Tests are also very important and this is not something we see much in static websites. That's why we add the [Travis-CI](https://travis-ci.org/) option. All you have to do is enable the service - if you choose this option you'll get a `.travis.yml` file, already configured and it'll check your build output with [html-proofer](https://github.com/gjtorikian/html-proofer).
 
-Some of the things html-proofer check are:
+Some of the things html-proofer checks:
 
   * Every `img` has an `alt` tag, internal and external `src` aren't broken.
-  * Every `a` (internal and external) are working.
-  * Your external `script` are loading, and the internal `script` references are valid.
+  * Every `a` (internal and external) is working.
+  * Your external `script` load, and the internal `script` references are valid.
   * Whether your HTML markup is valid.
 
-Finally, when you finish building you website, you'll want to deploy it. And we get you covered on that as well. You can choose to deploy your shiny new website to GitHub (with gh-pages) or to Firebase. Whatever you choose you'll have to only type one command
+Finally, when you finish building you website, you'll want to deploy it. And we got you covered on that as well. You can choose to deploy your shiny new website to GitHub (with gh-pages) or to Firebase. Whatever you choose you'll only have to type one command
 
 ```
 npm run gulp deploy
@@ -54,7 +54,7 @@ npm run gulp deploy
 
 # A case study
 
-I take my own little resume website and using Jekyll Starter Kit generator I convert it from just the Jekyll website it was before, to a full PWA website.
+Take my own little resume website and using Jekyll Starter Kit generator I convert it from just the Jekyll website it was before, to a full PWA website.
 
 The old website was load 7 requests and finish loading in 370 ms.
 
