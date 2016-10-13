@@ -4,7 +4,7 @@ tags:
   - Jekyll
   - Yeoman
   - Progressive Web App
-permalink: "/content/jekyll-starter-kit"
+permalink: "/content/jekyll-starter-kit/"
 layout: post
 author: NirGalon
 image: /assets/images/posts/jekyll-starter-kit/thumb.jpg
