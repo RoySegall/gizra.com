@@ -60,12 +60,22 @@ Next, we say that we return an `Either` value. That is, if there is an error, we
 
 In fact, the string that is wrapped with `Left` is the one we will use as an error message, both in the form and in the RESTful response.
 
+This validation is quite simple. There is no need to interact with the outside world, no need to do any DB query, or ask for a user's input. We just check the number is above 0.
 
+The 3rd rule however, does require an interaction with the DB. This is why you will notice the signature is slightly more complicated.
 
+```haskell
+validateNoExistingPrice :: Int -> Handler (Either Text Int)
+validateNoExistingPrice price = do
+    existing <- runDB $ count [ItemPrice ==. price]
+    return $ if (existing > 0)
+        then Left "Price already exists"
+        else Right price
+```
 
+As you can see, the return value is now wrapped with a `Handler`. Without getting into scary words like Monad and IO, it's enough to understand that by simply having this `Handler` in place, means our function is now capable to interact with our HTTP requests, user session, DB, etc'.
 
-
-
+And indeed, on the first line we do a count query, to return all the items that already have the given price. Again, talking about type safety, this query isn't just a regukar query. It's a type-safe query, that will not compile if we give it wrong values. That `ItemPrice`
 
 <!-- more -->
 
