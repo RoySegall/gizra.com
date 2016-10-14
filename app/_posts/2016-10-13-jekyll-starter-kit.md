@@ -13,7 +13,7 @@ published: true
 
 {% include setup %}
 
-I love [Jekyll](jekyllrb.com). I think it's a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.
+I love [Jekyll](http://jekyllrb.com/). I think it's a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.
 
 During this endeavor I ran into [Google Web Starter Kit](https://github.com/google/web-starter-kit) - "a Boilerplating & Tooling for Multi-Device Development" and even did a couple of Pull Requests there.
 
