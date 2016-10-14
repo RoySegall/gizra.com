@@ -8,6 +8,7 @@ permalink: "/content/jekyll-starter-kit/"
 layout: post
 author: NirGalon
 image: /assets/images/posts/jekyll-starter-kit/thumb.jpg
+description: "Creating an open-source tool for generating static websites using Jekyll with Progressive Web App (PWA) features and full test coverage."
 published: true
 ---
 
