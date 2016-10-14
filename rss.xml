@@ -4,15 +4,15 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 13 Oct 2016 21:16:26 +0300</lastBuildDate>
-    <pubDate>Thu, 13 Oct 2016 21:16:26 +0300</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 21:11:40 +0300</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 21:11:40 +0300</pubDate>
     <ttl>1800</ttl>
 
     
       <item>
         <title>Jekyll Progressive Web App Starter Kit Generator</title>
         <description>
-          &lt;p&gt;I love &lt;a href=&quot;jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;. I think it&amp;rsquo;s a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.&lt;/p&gt;
+          &lt;p&gt;I love &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. I think it&amp;rsquo;s a great tool! But lately I have been hearing a lot about Progressive Web Apps (PWA) - you know the kind of web apps that feel like native apps, with a welcome screen, a shortcut on your phone, offline support, and more. So, I started implementing these new and shiny toys, one by one, on a bunch of static websites I built with Jekyll.&lt;/p&gt;
 
 &lt;p&gt;During this endeavor I ran into &lt;a href=&quot;https://github.com/google/web-starter-kit&quot;&gt;Google Web Starter Kit&lt;/a&gt; - &amp;ldquo;a Boilerplating &amp;amp; Tooling for Multi-Device Development&amp;rdquo; and even did a couple of Pull Requests there.&lt;/p&gt;
 
