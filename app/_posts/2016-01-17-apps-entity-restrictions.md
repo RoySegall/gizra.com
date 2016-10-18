@@ -3,7 +3,6 @@ title: "Drupal, Hippies and Backend Restrictions"
 tags:
   - RESTful
   - "Drupal-planet"
-  - Shop Talk
 permalink: "/content/apps-entity-restrictions"
 author: RoySegall
 layout: post
