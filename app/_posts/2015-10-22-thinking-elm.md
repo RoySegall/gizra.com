@@ -4,7 +4,6 @@ tags:
   - Headless Drupal
   - Elm
   - "Drupal-planet"
-  - Shop Talk
 permalink: "/content/thinking-choosing-elm"
 layout: post
 published: true
