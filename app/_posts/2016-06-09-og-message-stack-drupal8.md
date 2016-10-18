@@ -5,7 +5,6 @@ tags:
   - Organic Groups
   - Message Stack
   - "Drupal-planet"
-  - Shop Talk
 permalink: "/content/og-message-stack-drupal8"
 layout: post
 image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"
