@@ -2,7 +2,6 @@
 title: How To Think Elm
 tags:
   - Elm
-  - Shop Talk
 permalink: /content/how-think-elm
 layout: post
 image: /assets/images/posts/think-elm/thumb.jpg
