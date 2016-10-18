@@ -3,7 +3,6 @@ title: "Faithful Elm and the Amazing Router"
 keywords: Organic Groups, Drupal 8
 tags:
   - Elm
-  - Shop Talk
 permalink: "/content/faithful-elm-amazing-router"
 layout: post
 image: "/assets/images/posts/faithful-elm-amazing-router/thumb.jpg"
