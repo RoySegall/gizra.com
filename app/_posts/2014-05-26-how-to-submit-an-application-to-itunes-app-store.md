@@ -2,10 +2,7 @@
 title: How to submit an application to iTunes App Store
 tags:
   - AngularJs
-  - iTunes
   - iOS
-  - Apple
-  - iTunes App Store
 permalink: "/content/how-to-submit-an-application-to-itunes-app-store"
 layout: post
 published: true

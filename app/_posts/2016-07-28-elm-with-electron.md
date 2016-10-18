@@ -3,6 +3,7 @@ title: "Elmctron - where Elm and Electron meet"
 tags:
   - Elm
   - Electron
+  - Shop Talk
 permalink: "/content/elm-electron-build"
 layout: post
 author: NirGalon

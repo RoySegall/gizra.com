@@ -2,7 +2,7 @@
 title: Introducing Emmet!
 tags:
 - Emmet
-- tutorial
+- Tutorial
 - HTML
 - CSS
 - Drupal-planet

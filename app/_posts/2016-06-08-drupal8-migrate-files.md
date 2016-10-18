@@ -4,6 +4,7 @@ tags:
   - "Drupal 8"
   - "Drupal-planet"
   - "Migration"
+  - "Shop Talk"
 permalink: "/content/drupal-8-attachment-migration"
 author: RoySegall
 layout: post

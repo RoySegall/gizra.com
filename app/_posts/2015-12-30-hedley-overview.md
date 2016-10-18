@@ -2,10 +2,11 @@
 title: "Elm-Hedley, App Overview"
 tags:
   - Elm
+  - Shop Talk
 permalink: "/content/elm-hedley-overview"
 layout: post
 published: true
---- 
+---
 
 {% include setup %}
 

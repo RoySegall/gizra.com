@@ -2,9 +2,10 @@
 title: "Organic Groups and Message Stack in Drupal 8"
 keywords: Organic Groups, Drupal 8
 tags:
-  - Organic groups
-  - Message stack
+  - Organic Groups
+  - Message Stack
   - "Drupal-planet"
+  - Shop Talk
 permalink: "/content/og-message-stack-drupal8"
 layout: post
 image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"

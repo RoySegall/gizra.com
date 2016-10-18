@@ -3,7 +3,9 @@ title: Migration Best Practices
 keywords: Drupal
 tags:
   - "Drupal-planet"
-  - Migrate
+  - Migrate Module
+  - Migration
+  - Shop Talk 
   - QA
   - Behat
 permalink: "/content/migration-best-practices"

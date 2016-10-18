@@ -2,6 +2,7 @@
 title: "Planet Elm"
 tags:
   - Elm
+  - Shop Talk
 permalink: "/content/planet-elm"
 layout: post
 published: true

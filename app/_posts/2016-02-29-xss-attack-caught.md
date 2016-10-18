@@ -5,6 +5,7 @@ tags:
   - "Drupal-planet"
   - Security
   - XSS
+  - Shop Talk
 permalink: "/content/xss-attack"
 layout: post
 published: true

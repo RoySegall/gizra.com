@@ -2,6 +2,7 @@
 title: Elm Challenge
 tags:
   - Elm
+  - Shop Talk
 permalink: "/content/elm-challenge"
 layout: post
 published: true
