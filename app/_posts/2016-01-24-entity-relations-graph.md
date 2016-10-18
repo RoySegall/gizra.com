@@ -4,7 +4,6 @@ description: Drupal 7 module that generates an entities diagram graph
 keywords: Drupal
 tags:
   - "Drupal-planet"
-  - Shop Talk
 permalink: "/content/entity-relationships"
 layout: post
 published: true
