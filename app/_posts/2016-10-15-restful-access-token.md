@@ -8,23 +8,23 @@ layout: post
 author: RoySegall
 image: /assets/images/posts/access-token/cookies.jpg
 description: "Normally in Drupal we don’t need to worry about authentication, This post
-explains how to handle authentication with decoupled sites with Angular JS."
+explains how to handle authentication for decoupled sites with Angular JS."
 ---
 
 {% include setup %}
 
 When talking about a traditional Drupal site, we don’t need to handle authentication
-because Drupal has our back: a user submits the login form, gets a cookie, and starts
-using your awesome site. But what about decoupled sites? How can we authenticate
+because Drupal has our back - a user submits the log-in form, gets a cookie, and starts
+using the awesome site. But what about decoupled sites? How can we authenticate
 the user?
 
-Before diving into that part we need to understand the authentication types
+Before diving into this, we need to understand the authentication types
 provided by RESTful:
 
-  1. CSRF token - Will help the server to make sure the request is a valid
-  request. If you'll inspect a standard Drupal form you can see the form
+  1. CSRF token - Helps the server to make sure the request is a valid
+  request. If you inspect a standard Drupal form, you will see that it
   contains a token. That token help Drupal to ensure the submitted form is valid
-  form and not a fraud form. You can read more in this [blog post](https://cloudunder.io/blog/csrf-token/).
+  and not a fraud. You can read more in this [blog post](https://cloudunder.io/blog/csrf-token/).
   2. Access token - RESTful will generate an access token and bind it to the
   user.
 
@@ -32,8 +32,7 @@ provided by RESTful:
 
 Important: in order to use access token authentication you’ll need
 to enable the module [RESTful token authentication](https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth)
-(which is a sub module of the [Restful](https://github.com/RESTful-Drupal/restful)
-module).
+(which is a submodule of [RESTful](https://github.com/RESTful-Drupal/restful)).
 
 ## Generating the access token
 
@@ -43,7 +42,7 @@ values:
 
   1. `access_token` - This is the token which represents the user in any request.
   2. `expires_in` - The amount of seconds in which the access token is valid.
-  3. `refresh_token` - Once the the token is no longer valid you'll need to ask
+  3. `refresh_token` - Once the token is no longer valid, you'll need to ask
   for a new one using the refresh token.
 
 You can see below a small amount of Angular JS code:
@@ -70,9 +69,9 @@ And this is what you’ll get back:
 }
 ```
 
-## Refreshing access token
+## Refreshing an access token
 As mentioned above, the access token is only valid for a specific amount of time,
-usually 24 hours, and you’ll need to check it before the request:
+usually 24 hours, so you’ll need to check it before the request:
 
 ```javascript
 if (new Date().getTime() > localStorageService.get('expire_in')) {
