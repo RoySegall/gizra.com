@@ -5,7 +5,6 @@ tags:
   - "Drupal-planet"
   - Migrate Module
   - Migration
-  - Shop Talk 
   - QA
   - Behat
 permalink: "/content/migration-best-practices"
