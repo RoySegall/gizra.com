@@ -1,8 +1,8 @@
 ---
 tags:
 - Node.js
-- Pantheoen
-- tutorial
+- Pantheon
+- Tutorial
 - Drupal-planet
 permalink: /content/drupal-nodejs-pantheon-and-heroku/
 title: Drupal, Node.js, Pantheon, and Heroku

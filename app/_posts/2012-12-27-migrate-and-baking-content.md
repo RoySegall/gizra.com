@@ -1,7 +1,8 @@
 ---
 tags:
 - Drupal-planet
-- Migrate
+- Migrate Module
+- Migration
 permalink: /content/migrate-and-baking-content/
 title: Migrate, and baking content
 created: 1356611190
