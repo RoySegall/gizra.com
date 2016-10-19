@@ -10,8 +10,6 @@ description: "Create a Yesod entity that can be created and validated by forms a
 
 {% include setup %}
 
-Follow the [README](https://github.com/Gizra/yesod-form-restful-example#installation) to see how to run this locally.
-
 We have had a few entrepreneur projects in Gizra along the years, but as of last year one of them
 started picking up. [Circuit Auction](http://www.circuitauction.com/) is all in one solution for auctions houses: from a back office to manage their catalogs, to online site to show it and a web app for real time
 auctions.
@@ -25,7 +23,11 @@ Yesod is one of those solutions. And one that makes me feel much safer than the 
 ## Single File App
 
 Our Yesod projects start from a [scaffolded](http://www.yesodweb.com/book/scaffolding-and-the-site-template) project that already comes with lots of different parts to get
-us up to speed, however I wanted to isolate my use case. Yesod allows us to have our app defined in a single file. In fact it even allows us to have the [dependency declared](https://github.com/Gizra/yesod-form-restful-example/blob/8863f70bba4ece37c2aa50ceb0a8e207c6189ebb/Item.hs#L2-L8) as-well, so Stack - Haskell's build too, can build it for us.
+us up to speed, however I wanted to isolate my use case. To good thing is that Yesod allows us to have our app defined in a single file, so we can concentrate on a clean installation, instead of chasing different files.
+
+Follow the [README](https://github.com/Gizra/yesod-form-restful-example#installation) to see how to run this locally.
+
+. In fact it even allows us to have the [dependency declared](https://github.com/Gizra/yesod-form-restful-example/blob/8863f70bba4ece37c2aa50ceb0a8e207c6189ebb/Item.hs#L2-L8) as-well, so Stack - Haskell's build too, can build it for us.
 
 Declare our [model](https://github.com/Gizra/yesod-form-restful-example/blob/8863f70bba4ece37c2aa50ceb0a8e207c6189ebb/Item.hs#L36-L40). It's a simple one `Item` has only a single property that accepts only `Int` values.
 
