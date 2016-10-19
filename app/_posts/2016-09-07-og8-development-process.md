@@ -6,6 +6,7 @@ tags:
 permalink: "/content/og8-development-mindset"
 layout: post
 image: "/assets/images/posts/og8-development-mindset/thumb.jpg"
+description: "An update on Organic Groups for Drupal 8, a take on mature contributed project maintenance, and the importance of automatic tests, all rolled into one."
 published: true
 ---
 

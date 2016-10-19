@@ -7,6 +7,7 @@ permalink: "/content/getting-started-with-drupal-core-initiative"
 layout: post
 image: "/assets/images/posts/getting-started-with-a-core-initiative/thumb.jpg"
 author: DavidHernandez
+description: "New to Gizra, but a long-time leader in the Drupal Spain Community, David Hernandez walks through getting involved in one of Drupal's Core Initiatives."
 published: true
 ---
 
