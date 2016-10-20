@@ -1,5 +1,5 @@
 ---
-title: "Are playing Rugby in the meeting room? - Thoughts on setting up a training program."
+title: "What happened when I thought they are playing Rugby in the meeting room? - Thoughts on how to set up a training program for a small company.
 "
 tags:
   - The Gizra Way
@@ -8,32 +8,32 @@ permalink: "/content/thoughts-about-training"
 layout: post
 author: LiatSade
 image:  ""
-description: "What is the best way to train and develop employees in a small and cool company like Gizra? I share with you my thoughts."
+description: "My job is to train and develop employees so that they can improve their skills and knowledge. This role exists in many big companies, but what is the best way to do it in a small and cool company like Gizra? I share with you my thoughts."
 ---
 
 {% include setup %}
 
 It all started when I came across an ongoing Gizra calendar event with the title 'Scrum'.
-I didn't know the word and I wasn't invited to these meetings. But when I come across something unfamiliar, my curiosity took over.
-So I used Google Translate, but the result I got did not make sense:
+I didn't know the word and I wasn't invited to these meetings. But when I come across something unfamiliar, my curiosity takes over.
+So I used Google Translate, but the result I got did not make any sense:
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/scrum_google_translate.jpg" %}
 
-Google Translate known as not precise and sometimes translates words in a funny way, but it was too much.
+Google Translate, as any non-English native speaker knowns, is not precise and sometimes translates words in funny ways, but this was too much.
 I thought to myself, what the hell is going on in the meeting room???
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/rugby_scrum.jpg" %}
 
-Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby player, I realized that I was probably missing something.
-So I asked the father of Google Translate: Google itself. Then the picture has become much more relaxing. Actually, it has become a fascinating!
+Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby players, I realized that I was probably missing something.
+So I asked the father of Google Translate - Google itself. Things were starting to make sense and fascinating!
 I found myself rolling from one article to another, reading about the Scrum method and enthusiastic about the idea. 
 
-When I started to work at Gizra three months ago, I got the title: Employee training & development. Except that this title was very excited for me  (I excited from anything that has the word 'training'), I do not really know what I should do with it. The exposure to the Scrum method led me to rethink about my role in Gizra.
+When I started to work at Gizra three months ago, I received the title 'Employee Training & Development.' Eventhough this was exciting to me (I get excited with anything that has the word 'training' in it), I was not really sure what I should do with it. The exposure to the Scrum method helped me rethink my role in Gizra.
 
-Scrum base on the Agile methodology, which is a lighter weight approach to software development than many of the traditional approaches. Scrum, unlike other traditional methods, built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: The clients come with new demands, according to the changes in the market and born of new technologies.
-The more I read about Scrum I realized that not just the development process needs to be agile, also the training process should take into consideration these changes. What we teach today, will not necessarily appropriate to what the employees need to know tomorrow, so the training program should be built that it would be flexible to changes and new requirements.
+As Scrum is based on the Agile methodology - an iterative light-weight approach to software development - unlike traditional methods, it is built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: new demands by clients, market changes, new technologies, and so forth.
+So the more I read about Scrum, I realized that training process should needs to be agile to match the development process implemented in Gizra. What we teach today, will not necessarily be useful to employees tomorrow, so the training program should be built in a way that makes it flexible to changes and new requirements.
 
-I do not know many companies with 20+ employees who have decided to invest full time job in the role of employee training. Frankly, I do not know any such company.
+I do not know many companies with 25+ employees who have decided to invest full time job in the role of employee training. Frankly, I do not know any such company.
 It says something very important for me about Gizra - they wants to invest in their best employees and make them even better.
 But how to get there? This is a question that I still do not have a full answer for it.
 So in the meantime I will share with you just a thoughts.
