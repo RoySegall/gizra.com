@@ -31,12 +31,12 @@ I found myself rolling from one article to another, reading about the Scrum meth
 When I started to work at Gizra three months ago, I received the title 'Employee Training & Development.' Eventhough this was exciting to me (I get excited with anything that has the word 'training' in it), I was not really sure what I should do with it. The exposure to the Scrum method helped me rethink my role in Gizra.
 
 As Scrum is based on the Agile methodology - an iterative light-weight approach to software development - unlike traditional methods, it is built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: new demands by clients, market changes, new technologies, and so forth.
-So the more I read about Scrum, I realized that training process should needs to be agile to match the development process implemented in Gizra. What we teach today, will not necessarily be useful to employees tomorrow, so the training program should be built in a way that makes it flexible to changes and new requirements.
+So the more I read about Scrum, I realized that the training process needs to also be agile. What we teach today, will not necessarily be useful to employees tomorrow, so the training program should be built in a way that makes it flexible to changes and new requirements.
 
-I do not know many companies with 25+ employees who have decided to invest full time job in the role of employee training. Frankly, I do not know any such company.
-It says something very important for me about Gizra - they wants to invest in their best employees and make them even better.
-But how to get there? This is a question that I still do not have a full answer for it.
-So in the meantime I will share with you just a thoughts.
+I have not heard about many companies with 20+ employees, make the decision to invest a full-time role to employee training. Frankly, I don't know of any such company.
+For me, it says something very important - Gizra wants to invest in their great employees to make them even better.
+But how to get there? This is a question that I still do not have a full answer for.
+So in the meantime, I will just share with you my thoughts.
 
 
 ##Teach them swim or throw them to the water?
