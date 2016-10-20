@@ -105,7 +105,7 @@ But then I came across in Scrum and more I read האסימונים התחילו 
 Unlike traditional method which has detailed documents defining goals and objectives, Scrum has concise lists (backlog) and a lot of practice face to face with all the people involved. In addition, there is an emphasis on achieving efficacy: How useful things we created in a given period?
 
 If I was sticking to my familiar method, it is likely the first two months I was only builds training programs, learning content, prepare lessons and only then start teaching.
-In practice, today, only three months in my new job, I already teach 12 classes in four different topics. At this rate (בקצב הזה) excites me to know where we will be in a year from now…
+In practice, today, only three months in my new job, I already teach 15 classes in 5 different topics. At this rate (בקצב הזה) excites me to know where we will be in a year from now…
 
 Is the first training sessions was good? No, of course they could be much better if I had more time to study the matter and prepare. But going back to the Scrum model, they were the best training version I could release at that time. I knew I had enough trainings along the way, so I could continue to improve while movinig.
 If I did not jump into the water so early, it may be that only now I had the first training session. So maybe I was more confident standing in front of the class, but we were moving forward much slowly. Maybe even this post couldn’t be written because I wouldn't understand a lot of things I understand now.
