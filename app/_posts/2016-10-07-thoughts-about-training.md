@@ -39,11 +39,11 @@ But how to get there? This is a question that I still do not have a full answer 
 So in the meantime, I will just share with you my thoughts.
 
 
-##Teach them swim or throw them to the water?
-Are employees need to get organized training, includes the study of all the swimming movements, or perhaps to just show them the pool and let them reveal themselves?
-In other words: Who is responsible for Learning, the worker or the guide?
+##Teach them to swim or throw them in the deep end?
+Do employees require organized training or should we just show them the pool and let them reveal things for themselves?
+In other words: Who is responsible for learning, the worker or the trainer?
 
-When I came to Gizra, they threw me into the water. The water in Gizra is very deep! It was a very frustrating experience. I know how to swim and I did all the moves I know, and yet I felt a lot of times I'm drowning. It was a new pool, different water temperature, and it tooks time before I learned how to take a rest in the shallow water and where is the ladder to exit the pool. To say the truth, I'm still learning.
+When I came to Gizra, they threw me into the deep end. The water in Gizra is very deep! It was a very frustrating experience. I know how to swim and I did all the moves I know, and yet I felt a lot of times I'm drowning. It was a new pool, different water temperature, and it tooks time before I learned how to take a rest in the shallow water and where is the ladder to exit the pool. To say the truth, I'm still learning.
 For a new employee, it is a very inconvenient experience, even stressful, and I admit that sometimes raised in my head go back to my previous work, familiar and cozy, where I knew how to swim well.
 What kept me going is the very early understanding of "The Gizra Way": You are allowed to make a mistake here. The message was clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I noticed my mistakes, learn from them and make all efforts not to be wrong in the same place twice.
 
