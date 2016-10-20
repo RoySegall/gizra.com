@@ -8,7 +8,7 @@ permalink: "/content/thoughts-about-training"
 layout: post
 author: LiatSade
 image:  ""
-description: "My job is to train and develop employees so that they can improve their skills and knowledge. This role exists in many big companies, but what is the best way to do it in a small and cool company like Gizra? I share with you my thoughts."
+description: "What is the best way to train and develop employees in a small and cool company like Gizra? I share with you my thoughts."
 ---
 
 {% include setup %}
