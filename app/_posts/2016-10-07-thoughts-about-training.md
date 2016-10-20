@@ -26,14 +26,18 @@ I thought to myself, what the hell is going on in the meeting room???
 
 Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby player, I realized that I was probably missing something.
 So I asked the father of Google Translate: Google itself. Then the picture has become much more relaxing. Actually, it has become a fascinating!
-I found myself rolling from one article to another, reading about the Scrum method and enthusiastic about the idea. Luckily I try to stick to the Time Boxing method of time management, so at some point I had to stop, otherwise it could devouring my all day. 
-The exposure to the Scrum method led me to think about my role as a trainer in Gizra. After all, if I work in company who has adopted a work method based on the concept of Agile, the training also need to support in this method.
+I found myself rolling from one article to another, reading about the Scrum method and enthusiastic about the idea. 
 
-When I started to work at Gizra three months ago, I got the title: Employee training & development. Except that this title was very excited for me  (I excited from anything that has the word 'training'), I do not really know what I should do with it. Fortunately, Amitai also not entirely knew. Great, there's nothing more exciting from לחרוש קרקע בתולה
+When I started to work at Gizra three months ago, I got the title: Employee training & development. Except that this title was very excited for me  (I excited from anything that has the word 'training'), I do not really know what I should do with it. The exposure to the Scrum method led me to rethink about my role in Gizra.
+
+Scrum base on the Agile methodology, which is a lighter weight approach to software development than many of the traditional approaches. Scrum, unlike other traditional methods, built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: The clients come with new demands, according to the changes in the market and born of new technologies.
+The more I read about Scrum I realized that not just the development process needs to be agile, also the training process should take into consideration these changes. What we teach today, will not necessarily appropriate to what the employees need to know tomorrow, so the training program should be built that it would be flexible to changes and new requirements.
+
 I do not know many companies with 20+ employees who have decided to invest full time job in the role of employee training. Frankly, I do not know any such company.
 It says something very important for me about Gizra - they wants to invest in their best employees and make them even better.
 But how to get there? This is a question that I still do not have a full answer for it.
 So in the meantime I will share with you just a thoughts.
+
 
 ##Teach them swim or throw them to the water?
 Are employees need to get organized training, includes the study of all the swimming movements, or perhaps to just show them the pool and let them reveal themselves?
