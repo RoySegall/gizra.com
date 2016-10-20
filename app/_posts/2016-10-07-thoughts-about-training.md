@@ -1,6 +1,6 @@
 ---
-title: "What happened when I thought they are playing Rugby in the meeting room? - Thoughts on how to set up a training program for a small company.
-"
+title: "Are they playing Rugby in the meeting room? - thoughts on setting up a training program."
+
 tags:
   - The Gizra Way
   - Training
