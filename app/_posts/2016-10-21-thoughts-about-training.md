@@ -1,5 +1,5 @@
 ---
-title: "Are they playing Rugby in the meeting room? Thoughts on setting up a training program."
+title: "Play Rugby in the meeting room? Thoughts about employee training program"
 
 tags:
   - The Gizra Way
