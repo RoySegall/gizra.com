@@ -19,38 +19,39 @@ So I used Google Translate, but the result I got did not make any sense:
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/scrum_google_translate.jpg" %}
 
-Google Translate, as any native non-English speaker knows, is not precise and sometimes translates words in funny ways, but this was too much. What was going on in the meeting room???
+Google Translate, as any native non-English speaker knows, is not precise and sometimes translates words in funny ways, but this was too much. What was going on in the meeting room?!
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/rugby_scrum.jpg" %}
 
-Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby players, I realized that I was probably missing something.
-So I asked the father of Google Translate - Google itself. Things were starting to make sense and I was fascinated.
-I found myself rolling from one article to another, reading about the Scrum method with enthusiasm. 
+Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby players, I realized that I was probably missing something.  
+So I asked the father of Google Translate - Google itself.   Things were starting to make sense and I was fascinated.  
+I found myself rolling from one article to another, reading about the Scrum method with enthusiasm.
 
-When I started to work at Gizra three months ago, I received the title 'Employee Training & Development.' Even though this was exciting to me - I get excited with anything that has the word 'training' in it - I was not really sure what I should do with it. The exposure to the Scrum method helped me think about my role in Gizra.
+When I started to work at Gizra three months ago, I received the title 'Employee Training & Development'. Even though this was exciting to me - I get excited with anything that has the word 'training' in it - I was not really sure what I should do with it. The exposure to the Scrum method helped me think about my role in Gizra.
 
-As Scrum is based on the Agile methodology - an iterative light-weight approach to software development - and unlike traditional methods, it is built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: new demands by clients, market changes, new technologies, and so forth.
+As Scrum is based on the Agile methodology - an iterative light-weight approach to software development - and unlike traditional methods, it is built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: new demands by clients, market changes, new technologies, and so forth.  
 So the more I read about Scrum, the more I realized that Gizra's training process needs to also be agile. What we teach today will not necessarily be useful to employees tomorrow, so the training program should be built in a way that is flexible to changes and new requirements.
 
-I don't know of many 20+ employee companies that make the decision to invest a full-time role to employee training. Frankly, I don't know of any.
-For me, it says something very important - Gizra wants to invest in their already great employees to make them even better.
-But how do we get there? This is a question that I still don't have a full answer for.
+I don't know of many 20+ employee companies that make the decision to invest a full-time role to employee training. Frankly, I don't know of any.  
+For me, it says something very important - Gizra wants to invest in their already great employees to make them even better.  
+But how do we get there? This is a question that I still don't have a full answer for.  
 So in the meantime, I will just share my thoughts.
 
+## Teach them to swim or throw them in the deep end?
 
-##Teach them to swim or throw them in the deep end?
 Do employees require organized training or should we just show them the pool and let them reveal things for themselves?
 In other words, who is responsible for learning, the employee or the trainer?
 
 When I came to Gizra, they threw me into the deep end. The water in Gizra is very deep!   
 It was a frustrating experience. I know how to swim and I did all the moves, and yet I felt a lot of times that I was drowning. It was a new pool, a different water temperature, and it took time before I learned to take a rest in the shallow water, and where the ladder was located so I could get out.  
 To tell you the truth, I'm still learning.  
-For a new employee, it is a very inconvenient experience, even stressful, and I admit that sometimes I flirted with the thought of going back to my previous job, familiar and cozy, where I knew how to swim well.  
-What kept me going is the very early understanding of "The Gizra Way" that allows you to make mistakes. The message is clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I took note of my mistakes, learned from them, and made all the efforts not to do them again. 
+For a new employee, it is a very inconvenient experience, even stressful, and I admit that sometimes I flirted with the thought of going back to my previous job, familiar and cozy, where I knew how to swim well.
+
+What kept me going is the very early understanding of "The Gizra Way" that allows you to make mistakes. The message is clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I took note of my mistakes, learned from them, and made all the efforts not to do them again.
 
 An organized training plan's main advantage is that it facilitates the entry process, which is already difficult. It prevents added frustrations and allows for more rapid learning. From the first moment an employee understands what is expected from her, the knowledge is gradually built, and she makes less mistakes. I believe that this significantly shortens the "newbie" time.
 
-On the other hand this process can create passive workers - they just needs to come to class and they will get all the answers.  
+On the other hand this process can create passive workers - they just need to come to class and they will get all the answers.  
 When someone is thrown into the deep end, they must be active. Learn the movements on their own. The message is that you have responsibility for your learning. There is value in questioning and self-discovery, and it encourages initiative.  
 I think when a person finally figure out something on their own, they get much greater satisfaction.
 
@@ -65,14 +66,16 @@ How to make frustration a motivator instead of a source of despair?
 
 And what about the good of the company? What is the fastest way to train an employee? How much breathing room does Gizra have to absorb mistakes?
 
-##Google is our best friend
+## Google is our best friend
+
 Throughout the learning process, it is very important to convey that we should not be afraid to say 'I don't know.' No one expects you to know everything, especially when you are a newbie.  
 To be honest, at this point, I am still a newbie myself at Gizra. I feel that there are more things I don't know than things I do.  
 On the other hand, don't give up on yourself. Not knowing should motivate you to act! Have you heard any concept that you don't understand? Have you come across a tool that you don't know what it does? Google it! Keep asking, and don't stop, until you know.  
 Good employees are employees who know their job.  
 Excellent employees are employees who know what they don't know, and continue learning.
 
-##Who knows better, the teacher or the student?
+## Who knows better, the teacher or the student?
+
 The basic premise we have become accustomed to is that the specialists should teach. Big companies that have organized training department, let experts (external or internal) provide training on topics in which they specialize.  
 But what about small companies that have a smaller number of employees and limited resources?
 
@@ -88,7 +91,8 @@ Well, if knowledge is also in the workers heads, let's get it out there and shar
 In the pedagogical world, it's called Peer Learning. In other words, students teaching each other. In this way people are given the opportunity to demonstrate their knowledge, the message is that everyone has a responsibility for learning, and to teach. It's a start of creating a culture of contribution and sharing of knowledge.  
 How to implement this? Well, I am still thinking about it, promising to update in the next post.
 
-##What to teach?
+## What to teach?
+
 Should we be training on technology, or skills and practices?  
 Where to start? There is so much to learn and who should know what?  
 One of the principles of Scrum is that everyone needs to know everything! This way, everyone can perform any task (characterizing the structure, testing, Front end, Back end, etc.), so if there was a strain on one team, another team can help out.  
@@ -100,7 +104,7 @@ Marketing and project managers would rather easily understand the story, since m
 If we want to create a common language for everyone, we need to understand these differences and consider them during training.
 
 
-##What about a Training Plan?
+## What about a Training Plan?
 I am, by nature, a very planned person. I am used to working with well defined goals and to release a product only when it is complete. Therefore, my natural tendency was to start work on a training program, and only then begin with training sessions to the employees.
 
 Well, that didn't happen. On the second week on the job, I found myself teaching a subject that I just learned a few days earlier. It felt like they threw me into the deep end from a height of an Olympic springboard - it was so high I could hear myself screaming before I hit the water.   
@@ -117,6 +121,3 @@ If I did not jump into the deep end so early, I would probably, only now, be giv
 
 It is still hard to shake off old habits and even when I am writing these sentences I find it difficult to release and say, this is a good enough version of the post. There are a lot of open questions, and I still can not fully answer the question: how to set up a training program in a small company.  
 But I remind myself to think "scrum" and say: "Let Go! Even in Rugby they don't stay with their arms interlocked all the time."
-
-
-
