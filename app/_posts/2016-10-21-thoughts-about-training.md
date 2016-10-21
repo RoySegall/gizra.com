@@ -6,8 +6,8 @@ tags:
   - Training
 permalink: "/content/thoughts-about-training"
 layout: post
-author: LiatSade
-image:  ""
+author: LiatSadeSaadon
+image: "/assets/images/posts/thoughts-about-training/thumb.jpg"
 description: "What is the best way to train and develop employees in a small and cool company like Gizra? I share with you my thoughts."
 ---
 
