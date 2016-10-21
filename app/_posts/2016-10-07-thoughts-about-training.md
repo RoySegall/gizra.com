@@ -19,15 +19,15 @@ So I used Google Translate, but the result I got did not make any sense:
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/scrum_google_translate.jpg" %}
 
-Google Translate, as any native non-English speaker knowns, is not precise and sometimes translates words in funny ways, but this was too much. What was going on in the meeting room???
+Google Translate, as any native non-English speaker knows, is not precise and sometimes translates words in funny ways, but this was too much. What was going on in the meeting room???
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/rugby_scrum.jpg" %}
 
 Well, because I didn't hear strange noises from the room, and didn't see anybody walking around dressed like rugby players, I realized that I was probably missing something.
 So I asked the father of Google Translate - Google itself. Things were starting to make sense and I was fascinated.
-I found myself rolling from one article to another, reading about the Scrum method with enthusiasium. 
+I found myself rolling from one article to another, reading about the Scrum method with enthusiasm. 
 
-When I started to work at Gizra three months ago, I received the title 'Employee Training & Development.' Eventhough this was exciting to me - I get excited with anything that has the word 'training' in it - I was not really sure what I should do with it. The exposure to the Scrum method helped me think about my role in Gizra.
+When I started to work at Gizra three months ago, I received the title 'Employee Training & Development.' Even though this was exciting to me - I get excited with anything that has the word 'training' in it - I was not really sure what I should do with it. The exposure to the Scrum method helped me think about my role in Gizra.
 
 As Scrum is based on the Agile methodology - an iterative light-weight approach to software development - and unlike traditional methods, it is built on the premise that it is impossible to think in advance about all the possible scenarios. In a dynamic world, especially when it comes to software development, changes occur all the time: new demands by clients, market changes, new technologies, and so forth.
 So the more I read about Scrum, the more I realized that Gizra's training process needs to also be agile. What we teach today will not necessarily be useful to employees tomorrow, so the training program should be built in a way that is flexible to changes and new requirements.
@@ -44,7 +44,7 @@ In other words, who is responsible for learning, the employee or the trainer?
 
 When I came to Gizra, they threw me into the deep end. The water in Gizra is very deep! It was a frustrating experience. I know how to swim and I did all the moves, and yet I felt a lot of times that I was drowning. It was a new pool, a different water temperature, and it took time before I learned to take a rest in the shallow water, and where the ladder was located so I could get out. To tell you the truth, I'm still learning.
 For a new employee, it is a very inconvenient experience, even stressful, and I admit that sometimes I flirted with the thought of going back to my previous job, familiar and cozy, where I knew how to swim well.
-What kept me going is the very early understanding of "The Gizra Way" that allowes you to make mistakes. The message is clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I took note of my mistakes, learned from them, and made all the efforts not to do them again. 
+What kept me going is the very early understanding of "The Gizra Way" that allows you to make mistakes. The message is clear: the important thing is to keep doing, make mistakes and do better next time. I realized that nobody would fire me because I was wrong, as long as I took note of my mistakes, learned from them, and made all the efforts not to do them again. 
 
 An organized training plan's main advantage is that it facilitates the entry process, which is already difficult. It prevents added frustrations and allows for more rapid learning. From the first moment an employee understands what is expected from her, the knowledge is gradually built, and she makes less mistakes. I believe that this significantly shortens the "newbie" time.
 On the other hand this process can create passive workers - they just needs to come to class and they will get all the answers.
@@ -57,7 +57,7 @@ However, I am still trying to find the right formula that would combine structur
 What topics are important to teach in class and what should be left for independent study?
 How to encourage curiosity?
 How to create a safe and comfortable atmosphere for self-study? 
-How to make frustration a motivater instead of a source of despair?
+How to make frustration a motivator instead of a source of despair?
 
 And what about the good of the company? What is the fastest way to train an employee? How much breathing room does Gizra  have to absorb mistakes?
 
@@ -106,7 +106,7 @@ If I stayed with my familiar method, it is likely that for the first two months 
 In practice, today, only three months into my new job, I have taught 15 classes on 5 different topics. At this rate, I am excited to see where we will be in a year from now.
 
 Was my first training session any good? No, and of course it could have been much better, if I had more time to study the subject and prepare. But going back to the Scrum model, it was the best training version I could release at that time. I knew I had enough training sessions along the way, so I could improve while doing.
-If I did not jump into the deep end so early, I would probably, only now, be giving the first training session. I may have been more confident standing in front of the class, but moving forward at a much slowler pace. Even this post couldn’t be written because I wouldn't have understood a lot of things I understand now.
+If I did not jump into the deep end so early, I would probably, only now, be giving the first training session. I may have been more confident standing in front of the class, but moving forward at a much slower pace. Even this post couldn’t be written because I wouldn't have understood a lot of things I understand now.
 
 It is still hard to shake off old habits and even when I am writing these sentences I find it difficult to release and say, this is a good enough version of the post. There are a lot of open questions, and I still can not fully answer the question: how to set up a training program in a small company.
 But I remind myself to think "scrum" and say: "Let Go! Even in Rugby they don't stay with their arms interlocked all the time."
