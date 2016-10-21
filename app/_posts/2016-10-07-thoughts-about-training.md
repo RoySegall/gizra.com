@@ -1,5 +1,5 @@
 ---
-title: "Are they playing Rugby in the meeting room? - thoughts on setting up a training program."
+title: "Are they playing Rugby in the meeting room? Thoughts on setting up a training program."
 
 tags:
   - The Gizra Way
@@ -14,7 +14,7 @@ description: "What is the best way to train and develop employees in a small and
 {% include setup %}
 
 It all started when I came across an ongoing Gizra calendar event with the title 'Scrum'.
-I didn't know the word and I wasn't invited to these meetings. But when I came across something unfamiliar, my curiosity took over.
+I didn't know the word and I wasn't invited to these meetings. But it was something unfamiliar, and my curiosity peaked.
 So I used Google Translate, but the result I got did not make any sense:
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/scrum_google_translate.jpg" %}
@@ -34,7 +34,7 @@ So the more I read about Scrum, the more I realized that Gizra's training proces
 
 I don't know of many 20+ employee companies that make the decision to invest a full-time role to employee training. Frankly, I don't know of any.
 For me, it says something very important - Gizra wants to invest in their already great employees to make them even better.
-But how to get there? This is a question that I still don't have a full answer for.
+But how do we get there? This is a question that I still don't have a full answer for.
 So in the meantime, I will just share my thoughts.
 
 
@@ -51,7 +51,7 @@ On the other hand this process can create passive workers - they just needs to c
 
 When someone is thrown into the deep end, they must be active. Learn the movements on their own. The message is that you have responsibility for your learning. There is value in questioning and self-discovery, and it encourages initiative. I think when a person finally figure out something on their own, they get much greater satisfaction.
 
-In the web development world, where things are quickly and constantly changing, this is a very important skill to learn alone. All of this should take place in an environment that demands excellence, but still lets you get it wrong and learn from mistakes. I found this enviornment at Gizra and we need to preserve it.
+In the web development world, where things are quickly and constantly changing, this is a very important skill to learn alone. All of this should take place in an environment that demands excellence, but still lets you get it wrong and learn from mistakes. I found this environment at Gizra and we need to preserve it.
 
 However, I am still trying to find the right formula that would combine structured learning and independent study.
 What topics are important to teach in class and what should be left for independent study?
@@ -62,7 +62,7 @@ How to make frustration a motivator instead of a source of despair?
 And what about the good of the company? What is the fastest way to train an employee? How much breathing room does Gizra  have to absorb mistakes?
 
 ##Google is our best friend
-Throughout the learning process, it is very important to convey that we should not be afraid to say 'I don't know.' No one expects you to know everything, especially when you are a newbie. To be honest, at this point, I am still a newbie myself at Gizra. I feel that there are more things I don't know than things I do know.
+Throughout the learning process, it is very important to convey that we should not be afraid to say 'I don't know.' No one expects you to know everything, especially when you are a newbie. To be honest, at this point, I am still a newbie myself at Gizra. I feel that there are more things I don't know than things I do.
 On the other hand, don't give up on yourself. Not knowing should motivate you to act! Have you heard any concept that you don't understand? Have you come across a tool that you don't know what it does? Google it! Keep asking, and don't stop, until you know.
 Good employees are employees who know their job.
 Excellent employees are employees who know what they don't know, and continue learning.
@@ -71,7 +71,7 @@ Excellent employees are employees who know what they don't know, and continue le
 The basic premise we have become accustomed to is that the specialists should teach. Big companies that have organized training department, let experts (external or internal) provide training on topics in which they specialize.
 But what about small companies that have a smaller number of employees and limited resources?
 
-Gizra is technology intensive and is constantly searching and adding new and better tools to its stack. People come from all kinds of backgrounds and with different levels of knowledge on various topics. Therefore, it is clear that there are more than a few topics that employees know better than me, the trainer.
+Gizra is technology intensive and is constantly searching and adding new and better tools to its stack. People come from all kinds of backgrounds and with different levels of knowledge on various technologies. Therefore, it is clear that there are more than a few topics that employees know better than me, the trainer.
 This point bothered me greatly. At first I thought I should take all the responsibility on the knowledge - the trainer has to know everything about what she has to teach. I quickly realized that even though I really wanted to, I can not know everything. However, whatever I do teach, I teach really well.
 So, I understood that it is important that I have excellent training skills, but still, how do I bridge the knowledge gaps?
 
@@ -79,33 +79,33 @@ In my far past when I worked in the Education field, before I entered the web de
 One method, that is still with me today, was the ancient Jewish method - Hevruta (learning with partners).
 Hevruta is about learning in small groups (3-5 people), and the idea is that the group is a space where no one has authority over knowledge. Learning occurs during the exchange of ideas and knowledge-sharing among participants.
 
-Well, if knowledge is also in the workers heads, let's get it out there and share it with everyone.
+Well, if knowledge is also in the workers heads, let's get it out there and share it with everybody.
 In the pedagogical world, it's called Peer Learning. In other words, students teaching each other. In this way people are given the opportunity to demonstrate their knowledge, the message is that everyone has a responsibility for learning, and to teach. It's a start of creating a culture of contribution and sharing of knowledge.
 How to implement this? Well, I am still thinking about it, promising to update in the next post.
 
 ##What to teach?
-Should we trainings on technology, skills and practices?
+Should we be training on technology, or skills and practices?
 Where to start? There is so much to learn and who should know what?
-One of the principles of Scrum is that everyone needs to know everything! This way, everyone can perform any task (Characterizing the structure, testing, Front end, Back end, etc.), so if there was a strain on one team, another team can help out.
+One of the principles of Scrum is that everyone needs to know everything! This way, everyone can perform any task (characterizing the structure, testing, Front end, Back end, etc.), so if there was a strain on one team, another team can help out.
 In addition, project managers, marketers and even customers need to understand the basics of development work, to create a common language for more effective and clear communication.
 
-Therefore, we need to find a way to create a learning program that works for everyone.  We should take into consideration that developers come with different set of concepts from project managers, and therefore the training should be able to be adjusted. For example, when talking about [How to approach a new task](https://www.thegizraway.com/approach_data_structure_task.html), developers will be very clear with terms such as query and relationship, but they may have difficulty explaining it in literal terms and go straight to talking in programming language. Marketing and project managers would rather easily understand the story, since most of their work is to understand the customer's needs, but may find it difficult to break it down entities and identify the relationships between them.
+Therefore, we need to find a way to create a learning program that works for everyone.  We should take into consideration that developers come with a different set of concepts than project managers, and therefore the training should be able to be adjusted. For example, when talking about [How to approach a new task](https://www.thegizraway.com/approach_data_structure_task.html), developers will be very clear with terms such as query and relationship, but they may have difficulty explaining it in literal terms and go straight to talking in programming language. Marketing and project managers would rather easily understand the story, since most of their work is to understand the customer's needs, but may find it difficult to break it down to entities and identify the relationships between them.
 If we want to create a common language for everyone, we need to understand these differences and consider them during training.
 
 
 ##What about a Training Plan?
-I am, by nature, a very planned person. I am used to working with well defined goals and to release a product only when it was complete. Therefore, my natural tendency was to start work on a training program, and only then begin with training sessions to the employees.
+I am, by nature, a very planned person. I am used to working with well defined goals and to release a product only when it is complete. Therefore, my natural tendency was to start work on a training program, and only then begin with training sessions to the employees.
 
 Well, that didn't happen. On the second week on the job, I found myself teaching a subject that I just learned a few days earlier. It felt like they threw me into the deep end from a height of an Olympic springboard - it was so high I could hear myself screaming before I hit the water. 
 I'm not used to being anything less than an expert on a subject that I teach. I did it but I was not at all convinced that this was the right way.
 
-But then I came across Scrum and the more I read the more things fell into place.
+But then I came across Scrum and the more I read, the more things fell into place.
 Unlike traditional methods which have detailed documents defining goals and objectives, Scrum has concise lists (backlog) and a lot of face to face interaction with all the people involved. In addition, there is an emphasis on achieving efficacy - how many useful things were created in a given period.
 
-If I stayed with my familiar method, it is likely that for the first two months I would spend on builds a training program, learning content, preparing lessons, and only then start teaching.
+If I stayed with my familiar method, it is likely that for the first two months I would have spent on builds a training program, learning content, preparing lessons, and only then started teaching.
 In practice, today, only three months into my new job, I have taught 15 classes on 5 different topics. At this rate, I am excited to see where we will be in a year from now.
 
-Was my first training session any good? No, and of course it could have been much better, if I had more time to study the subject and prepare. But going back to the Scrum model, it was the best training version I could release at that time. I knew I had enough training sessions along the way, so I could improve while doing.
+Was my first training session any good? No, and of course it could have been much better if I had more time to study the subject and prepare. But going back to the Scrum model, it was the best training version I could release at that time. I knew I had enough training sessions along the way, so I could improve while doing.
 If I did not jump into the deep end so early, I would probably, only now, be giving the first training session. I may have been more confident standing in front of the class, but moving forward at a much slower pace. Even this post couldn’t be written because I wouldn't have understood a lot of things I understand now.
 
 It is still hard to shake off old habits and even when I am writing these sentences I find it difficult to release and say, this is a good enough version of the post. There are a lot of open questions, and I still can not fully answer the question: how to set up a training program in a small company.
