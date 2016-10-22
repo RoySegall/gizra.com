@@ -13,20 +13,28 @@ explains how to handle authentication for decoupled sites with Angular JS."
 
 {% include setup %}
 
-When talking about a traditional Drupal site, we don’t need to handle authentication
-because Drupal has our back - a user submits the log-in form, gets a cookie, and starts
-using the awesome site. But what about decoupled sites? How can we authenticate
-the user?
+When talking about a traditional Drupal site, we don’t need to handle
+authentication because Drupal has our back - a user submits the log-in form,
+gets a cookie, and starts using the awesome site. But what about decoupled sites?
+How can we authenticate the user?
 
 Before diving into this, we need to understand the authentication types
 provided by RESTful:
 
-  1. CSRF token - Helps the server to make sure the request is a valid
-  request. If you inspect a standard Drupal form, you will see that it
-  contains a token. That token help Drupal to ensure the submitted form is valid
-  and not a fraud. You can read more in this [blog post](https://cloudunder.io/blog/csrf-token/).
+  1. Cookie - Validating the user cookie is not something new for us. We have
+  been doing it for years, and it's one of the first techniques web developers
+  acquire. But to validate the request we need to pass a CSRF token. This token
+  helps to [make sure](http://bit.ly/2eErvMI) the form, was not a fraud. A good
+  example for that could be a form that tweet on the behalf os us on Twitter.
+  The existence if a valid CSRF in the request make sure an internet scam did
+  not generate the form and uploaded to Twitter, a photo of a cat when you're a
+  dog person.
+
   2. Access token - RESTful will generate an access token and bind it to the
-  user.
+  user. Unlike the cookie which needs a CSRF token to be valid by Restful, we
+  get a "two for one" deal. The existence of the access token in the DB is
+  verified and reference us to the user which being represented by that access
+  token.
 
 <!-- more -->
 
@@ -86,8 +94,9 @@ if (new Date().getTime() > localStorageService.get('expire_in')) {
 ```
 
 ## Using the access token
-OK, so we got the access token and we can refresh it when it's no longer valid. The
-next thing you need to know is how to inject the access token into the header:
+OK, so we got the access token and we can refresh it when it's no longer valid.
+The next thing you need to know is how to inject the access token into the
+header:
 
 ```javascript
 $http.post('http://localhost/drupal/api/article', {
