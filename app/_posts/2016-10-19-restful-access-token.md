@@ -24,7 +24,7 @@ provided by RESTful:
   1. Cookie - Validating the user cookie is not something new for us. We have
   been doing it for years, and it's one of the first techniques web developers
   acquire. But, to validate the request we need to pass a CSRF token. This token
-  helps [make sure](http://bit.ly/2eErvMI) the form was not a fraud. An
+  helps [make sure](https://github.com/RESTful-Drupal/restful/blob/b5f717945081be3f1aa22968f140a3b6d056fea1/src/Plugin/authentication/CookieAuthentication.php#L49) the form was not a fraud. An
   example could be a form that tweets on the behalf of us on Twitter.
   The existence of a valid CSRF in the request would make sure an internet scam could
   not generate the form and upload to Twitter a photo of a cat, when you're a
