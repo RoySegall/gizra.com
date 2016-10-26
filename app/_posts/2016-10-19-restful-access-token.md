@@ -7,14 +7,14 @@ permalink: "/content/restful-access-token"
 layout: post
 author: RoySegall
 image: /assets/images/posts/access-token/cookies.jpg
-description: "Normally in Drupal we don’t need to worry about authentication, This post
+description: "Normally in Drupal we don’t need to worry about authentication. This post
 explains how to handle authentication for decoupled sites with Angular JS."
 ---
 
 {% include setup %}
 
-When talking about a traditional Drupal site, we don’t need to handle
-authentication because Drupal has our back - a user submits the log-in form,
+For a traditional Drupal site, we don’t need to handle
+authentication, because Drupal has our back - a user submits the login form,
 gets a cookie, and starts using the awesome site. But what about decoupled sites?
 How can we authenticate the user?
 
@@ -23,17 +23,17 @@ provided by RESTful:
 
   1. Cookie - Validating the user cookie is not something new for us. We have
   been doing it for years, and it's one of the first techniques web developers
-  acquire. But to validate the request we need to pass a CSRF token. This token
-  helps to [make sure](http://bit.ly/2eErvMI) the form, was not a fraud. A good
-  example for that could be a form that tweet on the behalf os us on Twitter.
-  The existence if a valid CSRF in the request make sure an internet scam did
-  not generate the form and uploaded to Twitter, a photo of a cat when you're a
+  acquire. But, to validate the request we need to pass a CSRF token. This token
+  helps [make sure](http://bit.ly/2eErvMI) the form was not a fraud. An
+  example could be a form that tweets on the behalf of us on Twitter.
+  The existence of a valid CSRF in the request would make sure an internet scam could
+  not generate the form and upload to Twitter a photo of a cat, when you're a
   dog person.
 
   2. Access token - RESTful will generate an access token and bind it to the
   user. Unlike the cookie which needs a CSRF token to be valid by Restful, we
-  get a "two for one" deal. The existence of the access token in the DB is
-  verified and reference us to the user which being represented by that access
+  get a two-for-one deal. The existence of the access token in the DB is
+  verified and references us to the user which is represented by that access
   token.
 
 <!-- more -->
