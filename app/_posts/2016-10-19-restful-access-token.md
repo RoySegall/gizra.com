@@ -38,13 +38,13 @@ provided by RESTful:
 
 <!-- more -->
 
-Important: in order to use access token authentication you’ll need
+Important: in order to use access token authentication, you’ll need
 to enable the module [RESTful token authentication](https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth)
 (which is a submodule of [RESTful](https://github.com/RESTful-Drupal/restful)).
 
 ## Generating the access token
 
-Below is how to generate an access token using Angular JS. If the
+Below is how an access token is generated using Angular JS. If the
 authentication process passes, the end point will return an object with 3
 values:
 
@@ -112,6 +112,6 @@ $http.post('http://localhost/drupal/api/article', {
 });
 ```
 
-You can have a look on our [yo hedley](https://github.com/Gizra/generator-hedley)
+You can have a look at our [yo hedley](https://github.com/Gizra/generator-hedley)
 generator to see how we [implemented](http://bit.ly/2dVYTg5) HTTP interceptor to
 improve the process displayed above.
