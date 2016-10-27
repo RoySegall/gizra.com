@@ -1,7 +1,8 @@
 ---
 tags:
 - Drupal-planet
-- Migrate
+- Migrate Module
+- Migration
 permalink: /content/data-migration-part-2/
 title: Data Migration - part 2
 created: 1295877669

@@ -1,7 +1,7 @@
 ---
 tags:
 - Drupal-planet
-- tutorial
+- Tutorial
 - CTools
 permalink: /content/ctools-context-tutorial/
 title: CTools context tutorial

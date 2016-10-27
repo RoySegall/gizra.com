@@ -1,8 +1,8 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
-- OG
-- Drupalcon
+- Organic Groups
+- DrupalCon
 permalink: /content/og7-session-drupalcon-copenhagen/
 title: OG7 session in Drupalcon Copenhagen
 created: 1283894417

@@ -1,6 +1,6 @@
 ---
 tags:
-- gizra alpha
+- Gizra Alpha
 permalink: /content/gizra-alpha/
 title: Gizra Alpha
 created: 1457426160

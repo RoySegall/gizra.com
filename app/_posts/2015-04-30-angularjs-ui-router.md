@@ -3,7 +3,7 @@ title: "AngularJs Ui-Router"
 tags:
   - AngularJs
   - "Ui-Router"
-  - Javascript
+  - JavaScript
 permalink: "/content/angularjs-ui-router"
 layout: post
 author: YaronMiro
