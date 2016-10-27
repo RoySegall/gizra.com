@@ -113,5 +113,5 @@ $http.post('http://localhost/drupal/api/article', {
 ```
 
 You can have a look at our [yo hedley](https://github.com/Gizra/generator-hedley)
-generator to see how we [implemented](http://bit.ly/2dVYTg5) HTTP interceptor to
+generator to see how we [implemented](https://github.com/Gizra/generator-hedley/blob/38cf1b88da79469379ab66c0d219dcde9ab763e2/app/templates/client/app/scripts/app.js#L162) HTTP interceptor to
 improve the process displayed above.
