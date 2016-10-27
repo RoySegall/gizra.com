@@ -6,18 +6,25 @@
       
     
 
-<title>Backend-free apps with Grunt, jekyll and D3.js</title>
+<title>Let’s Talk about Decoupled Authentication</title>
 
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
       <meta property="og:site_name" content="Gizra">
 
       
-        <meta property="og:title" content="Backend-free apps with Grunt, jekyll and D3.js">
+        <meta property="og:title" content="Let’s Talk about Decoupled Authentication">
       
 
       
+      <meta name="description" content="Normally in Drupal we don’t need to worry about authentication. This post explains how to handle authentication for decoupled sites with Angular JS.">
+      <meta property="og:description" content="Normally in Drupal we don’t need to worry about authentication. This post explains how to handle authentication for decoupled sites with Angular JS.">
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@gizra_drupal" />
+      
 
+      
+      <meta property="og:image" content="http://www.gizra.com/assets/images/posts/access-token/cookies.jpg">
       
 
       <!-- Favicon for all platforms -->
@@ -105,87 +112,87 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -248,8 +255,8 @@
   <div class="container">
     <div class="row">
       <div id="post-title" class="col-sm-10 col-sm-offset-1">
-        <h1><a href="/content/backend-free-apps-grunt-jekyll-d3js">Backend-free apps with Grunt, jekyll and D3.js </a></h1>
-        <div class="post-author">By Carlos Mantilla</div>
+        <h1><a href="/content/restful-access-token">Let’s Talk about Decoupled Authentication </a></h1>
+        <div class="post-author">By Roy Segall</div>
       </div>
     </div>
     <div class="row">
@@ -257,16 +264,16 @@
   			<div id="post-label">
   		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
   			</div>
-        <div class="date">10 Jul 2014</div>
+        <div class="date">27 Oct 2016</div>
         <section class="author-details">
           <div class="image-wrapper">
-            <img src="/images/team/avatars/ceoaliongroo.dc93.jpg" class="img-circle img-responsive">
+            <img src="/images/team/avatars/RoySegall.a616.jpg" class="img-circle img-responsive">
           </div>
           <div class="text-wrapper">
-            <span class="name">Carlos Mantilla</span>
+            <span class="name">Roy Segall</span>
             
-            <div class="title">Full stack developer</div>
-            <div class="bio">AngularJs, d3js, nodejs. Everythis JS!</div>
+            <div class="title">Team Lead</div>
+            <div class="bio">Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.</div>
           </div>
         </section>
         <div class="tags">
@@ -278,11 +285,9 @@
 
   
     
-      <li><a href="/tags.html#Grunt-ref">Grunt</a></li>
+      <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
-      <li><a href="/tags.html#Jekyll-ref">Jekyll</a></li>
-    
-      <li><a href="/tags.html#d3js-ref">d3js</a></li>
+      <li><a href="/tags.html#RESTful-ref">RESTful</a></li>
     
   
 
@@ -293,71 +298,101 @@
       </div>
       <div id="post-content" class="col-sm-8">
 
-        <p>When we started working on a mobile web site for <a href="http://www.gizra.com/content/casa-del-lector/">Casa del Lector</a>&rsquo;s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:</p>
+        <p>For a traditional Drupal site, we don’t need to handle
+authentication, because Drupal has our back - a user submits the login form,
+gets a cookie, and starts using the awesome site. But what about decoupled sites?
+How can we authenticate the user?</p>
 
-<div class="thumbnail">
-  <div class="img-wrapper">
+<p>Before diving into this, we need to understand the authentication types
+provided by RESTful:</p>
 
-    
-
-    
-      <img src="/assets/images/posts/backendless-apps/image1.jpg">
-    
-
-  </div>
-  
-    <div class="caption">App is faster than 96% of other websites</div>
-  
-</div>
-
-<p>The data was entered by the client on a 3rd party desktop tool which exported it to XML. We used a bunch of open source tools to massage it a bit and prepare it for the App. Since the project is open sourced you can check out the <a href="https://github.com/Gizra/CDL">actual code</a>.</p>
-
-<div class="thumbnail">
-  <div class="img-wrapper">
-
-    
-
-    
-      <img src="/assets/images/posts/casa-del-lector/cdl-item.gif">
-    
-
-  </div>
-  
-    <div class="caption">The App in action</div>
-  
-</div>
+<ol>
+<li><p>Cookie - Validating the user cookie is not something new for us. We have
+been doing it for years, and it&rsquo;s one of the first techniques web developers
+acquire. But, to validate the request we need to pass a CSRF token. This token
+helps <a href="https://github.com/RESTful-Drupal/restful/blob/b5f717945081be3f1aa22968f140a3b6d056fea1/src/Plugin/authentication/CookieAuthentication.php#L49">make sure</a> the form was not a fraud. An
+example could be a form that tweets on the behalf of us on Twitter.
+The existence of a valid CSRF in the request would make sure an internet scam could
+not generate the form and upload to Twitter a photo of a cat, when you&rsquo;re a
+dog person.</p></li>
+<li><p>Access token - RESTful will generate an access token and bind it to the
+user. Unlike the cookie which needs a CSRF token to be valid by Restful, we
+get a two-for-one deal. The existence of the access token in the DB is
+verified and references us to the user which is represented by that access
+token.</p></li>
+</ol>
 
 <!-- more -->
 
-<h3>Grunt</h3>
+<p>Important: in order to use access token authentication, you’ll need
+to enable the module <a href="https://github.com/RESTful-Drupal/restful/tree/7.x-2.x/modules/restful_token_auth">RESTful token authentication</a>
+(which is a submodule of <a href="https://github.com/RESTful-Drupal/restful">RESTful</a>).</p>
 
-<p>Grunt was an obvious choice for processing the XML data and getting it ready for Jekyll&rsquo;s consumption. Since we are already working with <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator-jekyllrb</a> we were able to add our own custom tasks.</p>
+<h2>Generating the access token</h2>
 
-<p>Here are some notable Grunt plugins we have used:</p>
+<p>Below is how an access token is generated using Angular JS. If the
+authentication process passes, the end point will return an object with 3
+values:</p>
 
-<ul>
-<li><a href="https://github.com/yoniholmes/grunt-text-replace">grunt-text-replace</a>: Sanitizing text, removing tags, and many text manipulation can be achieved using this great plugin</li>
-<li><a href="https://github.com/mathiasbynens/he">he</a>: This one you would use to deal with HTML encoding and decoding. Useful for non-english websites (CDL has a version in <a href="http://gizra.github.io/CDL-ES/">Spanish</a>) </li>
-<li><a href="https://github.com/jashkenas/underscore">underscore</a>: Manipulating complex JSON objects and array made easy. </li>
-<li><a href="https://github.com/assemble/grunt-convert">grunt-convert</a>: Converting to/ from JSON, YAML and XML is very handy when consuming data from 3rd party source</li>
-</ul>
+<ol>
+<li><code>access_token</code> - This is the token which represents the user in any request.</li>
+<li><code>expires_in</code> - The amount of seconds in which the access token is valid.</li>
+<li><code>refresh_token</code> - Once the token is no longer valid, you&rsquo;ll need to ask
+for a new one using the refresh token.</li>
+</ol>
 
-<p>You can see the configuration in the <a href="https://github.com/Gizra/CDL/blob/master/Gruntfile.js">Gruntfile.js</a></p>
+<p>You can see below a small amount of Angular JS code:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;http://localhost/drupal/api/login-token&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="s1">&#39;Basic &#39;</span> <span class="o">+</span> <span class="nx">Base64</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="nx">username</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nx">password</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;access_token&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>And this is what you’ll get back:</p>
+<div class="highlight"><pre><code class="json language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;access_token&quot;</span><span class="p">:</span> <span class="s2">&quot;Y3wQua-qFY-mukslgPaLqKdNmlGdBQK4dly-UhlJcYk&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Bearer&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;expires_in&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+  <span class="nt">&quot;refresh_token&quot;</span><span class="p">:</span> <span class="s2">&quot;xRP-nnKA05GGsN-jr80Z_hfPHqrkpyjAtevDSeTLbYU&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Refreshing an access token</h2>
 
-<h3>Jekyll</h3>
+<p>As mentioned above, the access token is only valid for a specific amount of time,
+usually 24 hours, so you’ll need to check it before the request:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">&gt;</span> <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;expire_in&#39;</span><span class="p">))</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">refresh_token</span> <span class="o">=</span> <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">);</span>
+  <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;http://localhost/drupal/refresh-token/&#39;</span> <span class="o">+</span> <span class="nx">refresh_token</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;access_token&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">);</span>
+    <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;refresh_token&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">refresh_token</span><span class="p">);</span>
+    <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;expire_in&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">expires_in</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2>Using the access token</h2>
 
-<p>Grunt tasks generate JSON files from the XML, properly encode and injected it into Jekyll.<br>
-Jekyll was used to create the actual HTML. Nothing too fancy here, but it served its purpose - generating the HTML that we&rsquo;ll later <code>grunt deploy</code> into GitHub Pages.</p>
-
-<h3>D3js</h3>
-
-<p><a href="http://d3js.org/">D3.js</a> is an excellent library with great documentation and examples. However to improve mobile performance, we had to look beyond the common examples and API recommendations. Some tips:</p>
-
-<ul>
-<li>Emulators are nice, but in the end the HTML, CSS and JS should be tested on actual devices. Luckily for us the devices in the exhibition were known, so it was easier to target them. We used <a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome</a> and <a href="https://developer.apple.com/safari/tools/">Safari</a> remote developer tools to get internal insight of the application</li>
-<li>Removing the <a href="http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away">300ms</a> delay of double-tap zoom was a good start but of course not enough. In fact, the most difficult issues were in relation to events handling and animations. Try to apply throttle or <a href="http://drupalmotion.com/article/debounce-and-throttle-visual-explanation">debounce</a> when handling Zoom or Drag, so they animations don&rsquo;t choke the app and overload the <a href="https://github.com/mbostock/d3/wiki/Behaviors">d3js behaviors</a>.</li>
-<li>I also highly recommend the fabulous talk of <a href="http://www.youtube.com/watch?v=90NsjKvz9Ns&amp;list=PL37ZVnwpeshFXOP2lqCUykYPXYNsK_fgN&amp;feature=share">Mark DiMarco</a> from JSConf 2014, who presented alternatives to handling the user interaction and animation in d3js. This helped us do further optimizations and make pthis project a success</li>
-</ul>
+<p>OK, so we got the access token and we can refresh it when it&rsquo;s no longer valid.
+The next thing you need to know is how to inject the access token into the
+header:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">$http</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;http://localhost/drupal/api/article&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;access-token&#39;</span><span class="o">:</span> <span class="nx">localStorageService</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;access_token&#39;</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;label&#39;</span><span class="o">:</span> <span class="s1">&#39;foo&#39;</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Cool! You posted a new article.&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>You can have a look at our <a href="https://github.com/Gizra/generator-hedley">yo hedley</a>
+generator to see how we <a href="https://github.com/Gizra/generator-hedley/blob/38cf1b88da79469379ab66c0d219dcde9ab763e2/app/templates/client/app/scripts/app.js#L162">implemented</a> HTTP interceptor to
+improve the process displayed above.</p>
 
 
       </div>
@@ -369,22 +404,15 @@ Jekyll was used to create the actual HTML. Nothing too fancy here, but it served
     <div class="row">
       <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
         
-        <a href="/content/restful-angular-forms">
+        <a href="/content/thoughts-about-training">
           <div id="previous-label" class="text-small">
-            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Headless Drupal, One form at a time</span>
+            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Play Rugby in the meeting room? Thoughts about employee training program</span>
             <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
           </div>
         </a>
         
       </div>
       <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
-        
-        <a href="/content/headless-drupal-inline-edit">
-          <div id="next-label" class="text-small">
-            <span class="hidden-xs">Headless Drupal - Inline edit&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-            <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
-          </div>
-        </a>
         
       </div>
     </div>

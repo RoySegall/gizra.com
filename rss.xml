@@ -4,10 +4,44 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 27 Oct 2016 11:45:56 +0300</lastBuildDate>
-    <pubDate>Thu, 27 Oct 2016 11:45:56 +0300</pubDate>
+    <lastBuildDate>Thu, 27 Oct 2016 20:06:52 +0300</lastBuildDate>
+    <pubDate>Thu, 27 Oct 2016 20:06:52 +0300</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Let’s Talk about Decoupled Authentication</title>
+        <description>
+          &lt;p&gt;For a traditional Drupal site, we don’t need to handle
+authentication, because Drupal has our back - a user submits the login form,
+gets a cookie, and starts using the awesome site. But what about decoupled sites?
+How can we authenticate the user?&lt;/p&gt;
+
+&lt;p&gt;Before diving into this, we need to understand the authentication types
+provided by RESTful:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Cookie - Validating the user cookie is not something new for us. We have
+been doing it for years, and it&amp;rsquo;s one of the first techniques web developers
+acquire. But, to validate the request we need to pass a CSRF token. This token
+helps &lt;a href=&quot;https://github.com/RESTful-Drupal/restful/blob/b5f717945081be3f1aa22968f140a3b6d056fea1/src/Plugin/authentication/CookieAuthentication.php#L49&quot;&gt;make sure&lt;/a&gt; the form was not a fraud. An
+example could be a form that tweets on the behalf of us on Twitter.
+The existence of a valid CSRF in the request would make sure an internet scam could
+not generate the form and upload to Twitter a photo of a cat, when you&amp;rsquo;re a
+dog person.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Access token - RESTful will generate an access token and bind it to the
+user. Unlike the cookie which needs a CSRF token to be valid by Restful, we
+get a two-for-one deal. The existence of the access token in the DB is
+verified and references us to the user which is represented by that access
+token.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/restful-access-token/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/restful-access-token</link>
+        <guid>http://www.gizra.com/content/restful-access-token</guid>
+        <pubDate>Thu, 27 Oct 2016 00:00:00 +0300</pubDate>
+      </item>
     
       <item>
         <title>Play Rugby in the meeting room? Thoughts about employee training program</title>
@@ -1235,7 +1269,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/elm-challenge</link>
         <guid>http://www.gizra.com/content/elm-challenge</guid>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -1257,7 +1291,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
         </description>
         <link>http://www.gizra.com/content/decoupled-drupal-drupalcon-los-angeles</link>
         <guid>http://www.gizra.com/content/drupalcon-la</guid>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -2710,7 +2744,7 @@ If your not a total geek the first 15 minutes will be enough. Unless you are int
         </description>
         <link>http://www.gizra.com/content/drupalcamp-montreal-keynote/</link>
         <guid>http://www.gizra.com/content/drupalcamp-montreal-keynote</guid>
-        <pubDate>Thu, 18 Oct 2012 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 18 Oct 2012 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -3074,7 +3108,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/rounded-corners/</link>
         <guid>http://www.gizra.com/content/rounded-corners</guid>
-        <pubDate>Wed, 20 Oct 2010 00:00:00 +0300</pubDate>
+        <pubDate>Wed, 20 Oct 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
@@ -3088,7 +3122,7 @@ Migrate V2 uses &lt;a href =&quot;http://drupal.org/project/drush&quot;&gt;Drush
         </description>
         <link>http://www.gizra.com/content/message-example-github-news-feed/</link>
         <guid>http://www.gizra.com/content/message-example-github-news-feed</guid>
-        <pubDate>Wed, 29 Sep 2010 00:00:00 +0300</pubDate>
+        <pubDate>Wed, 29 Sep 2010 00:00:00 +0200</pubDate>
       </item>
     
       <item>
