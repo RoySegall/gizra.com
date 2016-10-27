@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        {% include title.html %}
-        <meta name="description" content="{{ page.description }}">
-        <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      {% include title.html %}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <meta property="og:site_name" content="{{ site.title }}">
+
+      {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}">
+      {% else %}
+        <meta property="og:title" content="{{ site.title }}">
+      {% endif %}
+
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+      <meta property="og:description" content="{{ page.description }}">
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@gizra_drupal" />
+      {% endif %}
+
+      {% if page.image %}
+      <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+      {% endif %}
 
       <!-- Favicon for all platforms -->
       <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
@@ -24,7 +41,6 @@
       <!-- build:css({app,.tmp}) /css/main.css -->
       <link rel="stylesheet" href="/css/main.css">
       <!-- endbuild -->
-      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface&text=gizra' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hind:400,600,300,500' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,800' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -58,6 +74,7 @@
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
     <script src="/_bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="/_bower_components/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script src="/_bower_components/anchor-js/anchor.js"></script>
     <!-- endbuild -->
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>

@@ -11,7 +11,7 @@
     padding-bottom: 40px;
 
     #slogan {
-      margin-top: 70px;
+      margin-top: 50px;
       position: relative;
       overflow: hidden;
       color: white;
@@ -79,11 +79,15 @@
 // Desktop Media query.
 @include desktop {
   
-  .header-homepage, #gizra-way, #about, #testimonials, #from-our-blog {
+  .header-homepage, #gizra-way, #about, #testimonials {
     height: 100vh;
     max-height: 1000px;
     min-height: 650px;
   }
+  
+   #from-our-blog {
+     height: 1000px;
+   }
 
   #homepage .header-homepage #slogan {
     margin-left: 15px;

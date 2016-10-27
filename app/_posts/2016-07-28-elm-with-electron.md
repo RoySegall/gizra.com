@@ -1,5 +1,5 @@
 ---
-title: "Elmctron - where Elm and Electron meet"
+title: "Elmctron - Build Desktop Apps with Elm and Electron"
 tags:
   - Elm
   - Electron

@@ -75,24 +75,16 @@ authors:
       github: OritGeron
       avatar: OritGeron.jpg
       image: OritGeron.jpg
-  - HelenaEksler:
-      name: Helena Eksler
-      title: Team Lead
+  - kazabooboo:
+      name: Adar Earon
+      title: USA Director
       is_member: true
-      bio: Cooking well, doesn't matter - dinner or code.
-      email: helena@gizra.com
-      github: HelenaEksler
-      avatar: HelenaEksler.jpg
-      image: HelenaEksler.jpg
-  - bitamar:
-      name: Itamar Bar-Lev
-      title: Team Lead
-      is_member: true
-      bio: Something about Itamar
-      email: itamar@gizra.com
-      github: bitamar
-      avatar: male.jpg
-      image: bitamar.jpg
+      bio: I don't really need tips on how to fall asleep. I have twins.
+      email: adar@gizra.com
+      twitter: kzbooboo
+      github: kazabooboo
+      avatar: kazabooboo.jpg
+      image: kazabooboo.jpg
   - IshaDakota:
       name: Adam Stewart
       title: USA CTO
@@ -103,25 +95,24 @@ authors:
       github: IshaDakota
       avatar: IshaDakota.jpg
       image: ishadakota.jpg
-  - kazabooboo:
-      name: Adar Earon
-      title: USA Director
+  - RachelBaram:
+      name: Rachel Baram
+      title: Business Development
       is_member: true
-      bio: I don't really need tips on how to fall asleep. I have twins.
-      email: adar@gizra.com
-      twitter: kzbooboo
-      github: kazabooboo
-      avatar: kazabooboo.jpg
-      image: male.jpg
-  - NaderSafadi:
-      name: Nader Safadi
-      title: Team Lead
+      bio: Loves to make things make sense.
+      email: rachel@gizra.com
+      github: RachelBaram
+      avatar: RachelBaram.jpg
+      image: RachelBaram.jpg
+  - LiatSadeSaadon:
+      name: Liat Sade Saadon
+      title: Employee Training & Development
       is_member: true
-      bio: Show me the source code and I'll be happy!
-      email: nader@gizra.com
-      github: nader77
-      avatar: nedSaf.jpg
-      image: nedSaf.jpg
+      bio: Drupal - Just when I thought I was out... they pull me back in
+      email: liat@gizra.com
+      github: liatsade
+      avatar: liatsade.jpg
+      image: liatsade.jpg
   - RoySegall:
       name: Roy Segall
       title: Team Lead
@@ -131,26 +122,53 @@ authors:
       github: RoySegall
       avatar: RoySegall.jpg
       image: RoySegall.jpg
-  - Moo64c:
-      name: Amir Arbel
-      title: Developer
+  - NaderSafadi:
+      name: Nader Safadi
+      title: Team Lead
       is_member: true
-      bio: Something about Amir
-      email: amir@gizra.com
-      github: Moo64c
+      bio: Show me the source code and I'll be happy!
+      email: nader@gizra.com
+      github: nader77
+      avatar: nedSaf.jpg
+      image: nader77.jpg
+  - bitamar:
+      name: Itamar Bar-Lev
+      title: Team Lead
+      is_member: true
+      bio: Something about Itamar
+      email: itamar@gizra.com
+      github: bitamar
       avatar: male.jpg
-      image: male.jpg
+      image: bitamar.jpg
   - ordavidil:
       name: Or David
-      title: Developer
+      title: Team Lead
       is_member: true
       bio: Something about Or
       email: or@gizra.com
       github: ordavidil
       avatar: male.jpg
       image: ordavidil.jpg
+  - efratn:
+      name: Efrat Nitzan
+      title: Account Manager
+      is_member: true
+      bio: Something about Efrat
+      email: efrat@gizra.com
+      github: efratn
+      avatar: female.jpg
+      image: efratn.jpg
+  - Moo64c:
+      name: Amir Arbel
+      title: Developer
+      is_member: false
+      bio: Something about Amir
+      email: amir@gizra.com
+      github: Moo64c
+      avatar: male.jpg
+      image: male.jpg
   - DavidKohav:
-      name: David Kochav
+      name: David Kohav
       title: QA Engineer
       is_member: true
       bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
@@ -158,24 +176,6 @@ authors:
       github: DavidKohav
       avatar: male.jpg
       image: DavidKohav.jpg
-  - shahardo:
-      name: Shahar Dolev
-      title: Developer
-      is_member: true
-      bio: Something about Shahar
-      email: shahar@gizra.com
-      github: shahardo
-      avatar: male.jpg
-      image: male.jpg
-  - YaronMiro:
-      name: Yaron Miro
-      title: UX/UI Developer
-      is_member: true
-      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
-      email: yaron@gizra.com
-      github: YaronMiro
-      avatar: YaronMiro.jpg
-      image: YaronMiro.jpg
   - NirGalon:
       name: Nir Galon
       title: Developer
@@ -185,15 +185,6 @@ authors:
       github: nirgn975
       avatar: NirGalon.jpg
       image: NirGalon.jpg
-  - Pavel:
-      name: Pavel Pirozhenko
-      title: Developer
-      is_member: true
-      bio: A geek who always want to learn new things.
-      email: pavel@gizra.com
-      github: ppavels
-      avatar: PavelPirozhenko.jpg
-      image: Pavel.jpg
   - GuyTepper:
       name: Guy Tepper
       title: Developer
@@ -203,30 +194,128 @@ authors:
       github: guytepper
       avatar: GuyTepper.jpg
       image: Guy.jpg
-  - RachelBaram:
-      name: Rachel Baram
-      title: Business Development & Marketing
+  - Pavel:
+      name: Pavel Pirozhenko
+      title: Developer
       is_member: true
-      bio: Loves to make things make sense.
-      email: rachel@gizra.com
-      github: RachelBaram
-      avatar: RachelBaram.jpg
-      image: RachelBaram.jpg
+      bio: A geek who always want to learn new things.
+      email: pavel@gizra.com
+      github: ppavels
+      avatar: PavelPirozhenko.jpg
+      image: Pavel.jpg
+  - anvmn:
+      name: Anatoly Vaitsman
+      title: Developer
+      is_member: true
+      bio: Somthing about Anatoly.
+      email: anatoly@gizra.com
+      github: anvmn
+      avatar: male.jpg
+      image: anvmn.jpg
+  - SavyonCohen:
+      name: Savyon Cohen
+      title: Developer
+      is_member: true
+      bio: I'm the mother of twins... What is your superpower?
+      email: savyon@gizra.com
+      github: savyoncohen
+      avatar: SavyonCohen.jpg
+      image: savyoncohen.jpg
+  - ybaras:
+      name: Yoav Baras
+      title: Developer
+      is_member: true
+      bio: Somthing about Yoav.
+      email: yoav@gizra.com
+      github: ybaras
+      avatar: male.jpg
+      image: ybaras.jpg
+  - DavidBronfen:
+      name: David Bronfen
+      title: Developer
+      is_member: true
+      bio: Half human half cat.
+      email: davidb@gizra.com
+      github: DavidBronfen
+      avatar: male.jpg
+      image: DavidBronfen.jpg
+  - ItamarGronich:
+      name: Itamar Gronich
+      title: Developer
+      is_member: true
+      bio: Enthusiast and autodedact FED.
+      email: itamargronich@gizra.com
+      github: ItamarGronich
+      avatar: male.jpg
+      image: ItamarGronich.jpg
+  - MoodyUser:
+      name: Yoni Mood
+      title: Developer
+      is_member: true
+      bio: Somthing about Yoni.
+      email: yoni@gizra.com
+      github: MoodyUser
+      avatar: male.jpg
+      image: MoodyUser.jpg
+  - DavidHernandez:
+      name: David Hernandez
+      title: Developer
+      is_member: true
+      bio: Community Driven Developer and Free (as in freedom) Software enthusiast.
+      email: david.hernandez@gizra.com
+      github: DavidHernandez
+      avatar: DavidHernandez.jpg
+      image: DavidHernandez.jpg
+  - YaronMiro:
+      name: Yaron Miro
+      title: UX/UI Developer
+      is_member: false
+      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
+      email: yaron@gizra.com
+      github: YaronMiro
+      avatar: YaronMiro.jpg
+      image: YaronMiro.jpg
+  - shahardo:
+     name: Shahar Dolev
+     title: Developer
+     is_member: false
+     bio: Something about Shahar
+     email: shahar@gizra.com
+     github: shahardo
+     avatar: male.jpg
+     image: male.jpg
+  - HelenaEksler:
+     name: Helena Eksler
+     title: Team Lead
+     is_member: false
+     bio: Cooking well, doesn't matter - dinner or code.
+     email: helena@gizra.com
+     github: HelenaEksler
+     avatar: HelenaEksler.jpg
+     image: HelenaEksler.jpg
+  - ceoaliongroo:
+     name: Carlos Mantilla
+     title: Full stack developer
+     is_member: false
+     bio: AngularJs, d3js, nodejs. Everythis JS!
+     avatar: ceoaliongroo.jpg
   - itamarbu:
       name: Itamar Burstein
       title: Industrial Designer
       is_member: false
       bio: My designs have been endorsed by companies such as VIA France, Roche Bobois, Metalarte, Ligne Roset & Jofebar. That's pretty awesome.
       avatar: itamarbu.jpg
-  - ceoaliongroo:
-      name: Carlos Mantilla
-      title: Full stack developer
-      is_member: false
-      bio: AngularJs, d3js, nodejs. Everythis JS!
-      avatar: ceoaliongroo.jpg
   - lukeherrington:
       name: Luke Herrington
       title: Developer
       is_member: false
       bio: Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.
       avatar: lukeherrington.jpg
+  - You:
+      name: You?
+      is_member: false
+      image: placeholder-dog.jpg
+  - OrMaybeYou?:
+      name: Or maybe you?
+      is_member: false
+      image: placeholder-cat.jpg
