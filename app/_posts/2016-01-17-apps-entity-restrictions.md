@@ -1,7 +1,7 @@
 ---
 title: "Drupal, Hippies and Backend Restrictions"
 tags:
-  - Restful
+  - RESTful
   - "Drupal-planet"
 permalink: "/content/apps-entity-restrictions"
 author: RoySegall

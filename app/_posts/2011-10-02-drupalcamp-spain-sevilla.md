@@ -1,8 +1,8 @@
---- 
-tags: 
+---
+tags:
 - Drupal-planet
-- movie
-- Drupalcamp
+- Recorded Presentation
+- DrupalCamp
 - OG7
 permalink: /content/drupalcamp-spain-sevilla/
 title: Drupalcamp Spain - Sevilla

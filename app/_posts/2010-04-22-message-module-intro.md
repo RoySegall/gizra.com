@@ -1,8 +1,8 @@
---- 
-tags: 
+---
+tags:
 - Message
 - CTools
-- tutorial
+- Tutorial
 - Drupal-planet
 permalink: /content/message-module-intro/
 title: Message module intro

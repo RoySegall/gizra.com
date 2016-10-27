@@ -2,7 +2,6 @@
 tags:
   - Zariz
   - Dekyll
-  - CMS
   - "Drupal-planet"
 permalink: "/content/zariz-means-agile"
 title: Zariz Means Agile

@@ -14,7 +14,7 @@ description: "What is the best way to train and develop employees in a small and
 {% include setup %}
 
 It all started when I came across an ongoing Gizra calendar event with the title 'Scrum'.
-I didn't know the word and I wasn't invited to these meetings. But it was something unfamiliar, and my curiosity peaked.
+I didn't know the word and I wasn't invited to these meetings. But it was something unfamiliar, and my curiosity piqued.
 So I used Google Translate, but the result I got did not make any sense:
 
 {% include thumbnail.html image_path="assets/images/posts/thoughts-about-training/scrum_google_translate.jpg" %}

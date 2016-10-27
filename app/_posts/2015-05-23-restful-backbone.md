@@ -3,7 +3,7 @@ title: Forking Todo Restful with Backbone.Marionette
 tags:
   - RESTful
   - "Drupal-planet"
-  - "Guest post"
+  - "Guest Post"
 permalink: "/content/restful-backbone-marionette"
 layout: post
 published: true

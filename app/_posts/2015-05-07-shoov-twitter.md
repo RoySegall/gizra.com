@@ -2,7 +2,7 @@
 title: How we could monitor Twitter (if we had to)
 tags:
   - Shoov
-  - Visual regression
+  - Visual Regression
   - Behat
   - "Drupal-planet"
 permalink: "/content/shoov-monitor-twitter"

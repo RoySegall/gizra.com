@@ -1,7 +1,7 @@
 ---
 tags:
 - Views
-- tutorial
+- Tutorial
 - Drupal-planet
 permalink: /content/banner-rotator/
 title: Banner rotator

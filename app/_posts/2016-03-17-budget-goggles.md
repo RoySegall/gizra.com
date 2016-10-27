@@ -2,7 +2,7 @@
 tags:
   - "Drupal-planet"
   - The Gizra Way
-  - Project management
+  - Project Management
 permalink: /content/budget-goggles
 title: "Budget Goggles: A Common Language and Setting Expectations"
 layout: post

@@ -1,6 +1,6 @@
 ---
 tags:
-- Commerce
+- eCommerce
 - Subform
 - CTools
 - Drupal-planet
