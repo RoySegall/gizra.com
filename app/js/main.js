@@ -139,4 +139,30 @@ $(document).ready(function(){
     teamMemberInfoOnHover();
   }
 
+  // Infinitescroll.
+  $('.row.posts').infinitescroll({
+    // Selector for the paged navigation (it will be hidden).
+    navSelector  : "#pager",
+    nextSelector : "li.next a:first",
+    // Selector for the NEXT link (to page 2).
+    itemSelector : ".row.posts .col-sm-6"
+    // Selector for all retrieved items.
+  });
+
+  // To top button.
+  $(window).scroll(function() {
+    if ($(this).scrollTop() != 0) {
+      $('#toTop').fadeIn();
+    }
+    else {
+      $('#toTop').fadeOut();
+    }
+  });
+
+  $('#toTop').click(function() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+  });
+
 });

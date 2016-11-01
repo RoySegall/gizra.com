@@ -6,38 +6,7 @@
     } 
 
   #pager {
-    list-style: none;
-    margin-top: 14px;
-    margin-bottom: 85px;
-
-    .pager-nav {
-      padding-left: 0;
-      list-style-type: none;
-      font-size: 1.2em;
-      font-weight: 500;
-    }
-
-    .prev,
-    .next {
-      width: 50%;
-
-      a {
-        text-decoration: none;
-      }
-    }
-
-    .prev {
-      float: left;
-    }
-
-    .next {
-      float: right;
-      text-align: right;
-    }
-
-    a {
-      color: $gizra-orange;
-    }
+    display: none;
   }
 }
 
@@ -132,7 +101,24 @@
   }
 }
 
+#toTop {
+  display: none;
+  font-size: -webkit-xxx-large;
+  position: fixed;
+  bottom: 200px;
+  cursor: pointer;
+}
+
 @include desktop {
+
+  #footer {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 4000;
+  }
+
   .blog .article .main-image {
     height: 275px;
   }
