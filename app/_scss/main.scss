@@ -1,1 +1,74 @@
 @import 'compass/css3';
+
+header {
+  .navigation {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    border: none;
+    box-shadow: none;
+    justify-content: center;
+    
+    .item {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      flex: 1 1 0;
+      align-self: center;
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+    }
+    .item:before {
+      background: none;
+    }
+
+  }
+}
+
+.intro-text {
+  margin-top: 80px;
+  padding: 0px 40px;
+  text-align: center;
+  height: 600px;
+}
+
+.intro-text__lead {
+  padding: 10px 0;
+  font-size: 5.5vw;
+  background: black;
+  color: white;
+}
+
+
+.intro-text__sub {
+  padding: 10px 0px;
+  font-size: 4.8vw;
+}
+
+
+$body-font-size: 21px;
+$h1-font-size: 1.98 * $body-font-size;
+$h2-font-size: 1.618 * $body-font-size;
+$h3-font-size: 1 * $body-font-size;
+
+
+body {
+  font-family: 'Merriweather', serif;
+  font-size: $body-font-size;
+  line-height: 1.618;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
