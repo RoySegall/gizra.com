@@ -82,7 +82,11 @@
     margin-top: 15px;
   }
 
-  #team-page .member-box .popup-block .info .title {
-    font-size: 0.75em;
+  #team-page .member-box .popup-block .info {
+    bottom: 15%;
+
+    .title {
+      font-size: 0.75em;
+    }
   }
 }
