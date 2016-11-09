@@ -44,7 +44,7 @@ But reading the essence of what Sandy Maguire ([@isovector](https://github.com/i
 
 * I would assume (but don't know for a fact), that the author might have liked [PureScript](http://www.purescript.org/) better, since it would give him powerful tools he could put to use.
 
-* Are type classes the right thing for Elm? Maybe - I don't know. But I can see also see the case of why not. And the "why not" is an important part in this post.
+* Are type classes the right thing for Elm? Maybe - I don't know. But I can also see the case of why not. And the "why not" is an important part in this post.
 
 Right now in Gizra we have about five different Elm projects in different stages and different scale. This means our need for Elm developers is constantly increasing. If we were to choose PureScript, the developers' skill threshold would have been - in my opinion - too high. Not to mention that we would have a smaller pool of devs to choose from.
 
