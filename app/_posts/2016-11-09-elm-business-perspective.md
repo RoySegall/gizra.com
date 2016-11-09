@@ -12,7 +12,7 @@ description: "Elm is not just technically great, it also allows building busines
 
 Elm, like any rising open source project, is getting both positive endorsements and negative critiques. Reading the good ones, is always fun; but the negative ones are just as important.
 
-Today, I came across today this: [Elm Is Wrong](http://reasonablypolymorphic.com/blog/elm-is-wrong), and realized that I've always read the good and bad critiques from a _technical_ point of view, but I have yet to read about what it means from a _business_ perspective.
+Today, I came across this: [Elm Is Wrong](http://reasonablypolymorphic.com/blog/elm-is-wrong), and realized that I've always read the good and bad critiques from a _technical_ point of view, but I have yet to read about what it means from a _business_ perspective.
 
 I can assure you it's a different perspective. One that is about dollars and the cost of bugs - not about "type classes" or "higher kinded types."
 
@@ -26,7 +26,7 @@ Being the co-owner of Gizra means that I'm very mindful to our choices. I consta
 
 ## Correctness
 
-Elm fits very nicely into this mindset. In fact, because I have been exposed to functional programing (one of the things which Elm makes so approachable), I am now able to articulate how in Gizra we really care about correctness. But we care about it not from the marketing point of view of saying "we care about quality, because we are awesome," but rather from the accounting point of view which says, "we care about quality, because we cannot charge for fixing our own bugs."
+Elm fits very nicely into this mindset. In fact, because I have been exposed to functional programing (one of the things which Elm makes so approachable), I saw a different level of "safety" and "guarantees". Thanks to Elm I am now able to better articulate how in Gizra we are caring about correctness. But we care about it not from the marketing point of view of saying "we care about quality, because we are awesome," but rather from the accounting point of view which says, "we care about quality, because we cannot charge for fixing our own bugs."
 
 This mindset is also the reason we have chosen [Yesod](http://www.yesodweb.com/) (Haskell) over the more popular [Elixir](http://elixir-lang.org/) (Erlang). Because in the type of projects we have in Gizra, and as service providers, making sure we don't introduce bugs and regressions is more important than "low-latency, distributed and fault-tolerant systems."
 
