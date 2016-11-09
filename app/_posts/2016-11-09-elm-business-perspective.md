@@ -46,9 +46,8 @@ But reading the essence of what Sandy Maguire ([@isovector](https://github.com/i
 
 * Are type classes the right thing for Elm? Maybe - I don't know. But I can also see the case of why not. And the "why not" is an important part in this post.
 
-Right now in Gizra we have about five different Elm projects in different stages and different scale. This means our need for Elm developers is constantly increasing. If we were to choose PureScript, the developers' skill threshold would have been - in my opinion - too high. Not to mention that we would have a smaller pool of devs to choose from.
-
-Elm is easy. I mean, it takes some learning, but I know that I can get my devs productive with it quickly - quicker than Angular or React.
+Right now in Gizra we have about five different Elm projects in different stages and different scale. This means our need for Elm developers is constantly increasing.  
+Luckily Elm is easy. I mean, it takes some learning, but I know that I can get my devs productive with it quickly - quicker than Angular or React.
 
 But than again, Elm is not _too_ easy. This means that almost every developer I see that is already involved in Elm is a seasoned developer. Getting experienced developers on board means that they are immediately productive, which means we gain more per hour.
 
