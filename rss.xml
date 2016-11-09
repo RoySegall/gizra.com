@@ -4,10 +4,26 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Thu, 27 Oct 2016 20:06:52 +0300</lastBuildDate>
-    <pubDate>Thu, 27 Oct 2016 20:06:52 +0300</pubDate>
+    <lastBuildDate>Wed, 09 Nov 2016 22:25:16 +0200</lastBuildDate>
+    <pubDate>Wed, 09 Nov 2016 22:25:16 +0200</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Elm from a Business Perspective</title>
+        <description>
+          &lt;p&gt;Elm, like any rising open source project, is getting both positive endorsements and negative critiques. Reading the good ones, is always fun; but the negative ones are just as important.&lt;/p&gt;
+
+&lt;p&gt;Today, I came across this: &lt;a href=&quot;http://reasonablypolymorphic.com/blog/elm-is-wrong&quot;&gt;Elm Is Wrong&lt;/a&gt;, and realized that I&amp;rsquo;ve always read the good and bad critiques from a &lt;em&gt;technical&lt;/em&gt; point of view, but I have yet to read about what it means from a &lt;em&gt;business&lt;/em&gt; perspective.&lt;/p&gt;
+
+&lt;p&gt;I can assure you it&amp;rsquo;s a different perspective. One that is about dollars and the cost of bugs - not about &amp;ldquo;type classes&amp;rdquo; or &amp;ldquo;higher kinded types.&amp;rdquo;&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-business-perspective/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/elm-business-perspective</link>
+        <guid>http://www.gizra.com/content/elm-business-perspective</guid>
+        <pubDate>Wed, 09 Nov 2016 00:00:00 +0200</pubDate>
+      </item>
     
       <item>
         <title>Let’s Talk about Decoupled Authentication</title>
