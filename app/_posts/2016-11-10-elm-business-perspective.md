@@ -48,10 +48,21 @@ Are type classes the right thing for Elm? Maybe, I don't know. But I can see als
 
 Elm is easy. I mean, it takes some learning, but in Gizra we have right now about five different Elm projects in different stages. This means our need for Elm developers is constantly increasing.
 
-If we were to choose PureScript, the developers' skill treshold would have been, in my opinion too high.
+If we were to choose PureScript, the developers' skill treshold would have been, in my opinion too high. Not to mention that we would have a smaller poll of devs to choose from.
 
 But than again, Elm is not _too_ easy. Which means that almost every developer I see that does Elm is a seasoned developer. Getting experienced develoeprs on board, means they are immediately productive. Which means we gain more per hour.
 
 And the highly opinionated Elm Architecture means that having a team of 3-4 developers hacking on the same repo, are all working around the same concepts, and can lower the required communication time, since looking at the `Model` and the `Msg` reveals the entire concept without leaking the implementation details.
 
 And of course Elm's type system and compiler makes it so, that I know that we'll have lesser bugs.
+
+you got me point. More dollars, right?  
+Well, not just.
+
+There's also the case for developers moral. My completely un-scientific insight, is that Gizra's devs who dealt with Angular hated it. And the ones that do Elm, love it.
+
+Such developers are likely to stay more time in the company, be more engaged with the community, and help spread our name around the globe.
+
+## Is Elm Perfect?
+
+No. But for us, and I believe for many others, it's a wonderful solution, with or without type classes.
