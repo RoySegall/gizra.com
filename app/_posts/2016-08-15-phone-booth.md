@@ -18,7 +18,7 @@ Most of my work days start inside a booth, sitting in a small dark cell, speakin
 
 Gizra expanded to what some people say is the greatest city in the world, operating from a co-working space in Manhattan. A space where the booth I speak about is located. The booth provides privacy and is also the right place to go, in such an environment, when taking a phone call or meeting. I doubt that the guy I am sharing a power strip with cares to hear me speaking about Drupal modules, NYC tax breaks for startups, or Brice’s daughter’s ear infection. 
 
-Out of the total 20+ Gizra team, there has been increasingly more of us working remotely. Some of us are in Israel but live far away (well, relativity) from the city of Tel Aviv, and others, are on different continents altogether. It has been a real challenge for all of us -  those that work remotely, and for those that work from desks at the main office - how not to be strangers to each other, and how to feel that we are part of the same team, sharing the same culture, visions, values, and even internal jokes. How Gizra has or is planning to address this challenge, we will keep for a future post. 
+Out of the total 20+ Gizra team, there has been increasingly more of us working remotely. Some of us are in Israel but live far away (well, relativity) from the city of Tel Aviv, and others, are on different continents altogether. It has been a real challenge for all of us -  those that work remotely, and for those that work from desks at the main office - how not to be strangers to each other, and how to feel that we are part of the same team, sharing the same culture, visions, values, and even internal jokes. 
 
 I would like to go back to the phone booth.
 
