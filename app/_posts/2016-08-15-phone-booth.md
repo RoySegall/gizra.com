@@ -24,11 +24,11 @@ I would like to go back to the phone booth.
 
 ## Co-working space practices, The Gizra Way 
 
-After few months here,  I came up with the Gizra Way [link] for co-working space etiquette. This is not one of those “do not steal someone else's food from the fridge" or "don't bring stinky meals” lists. If you don’t know that, then you should look for a basic etiquette class. Do those still exist? Anyways...
+After few months here, I came up with the Gizra Way [link] practices for co-working spaces. This is not one of those “Do not steal someone else's food from the fridge." or "Don't bring stinky meals.” lists. If you don’t know that, then you should look for a basic etiquette class. Do those still exist? Anyways...
 
-1. <b>Time box your day (and have your headphones on)</b> : When working by yourself without anyone around to interrupt you, it’s easy to be carried away and not notice that you have been researching hotels for an upcoming trip to DC for more than hour now. Fix a time period for every task in order to put boundaries on the task so that you don’t need to skip lunch (see #2).  I use a timer that alerts me every 25 min, and encourages me to take quick mental breaks. In Gizra, we use our own grassroots system to log in project contributions hours, we call it Productivity [link to module]. Why the headphones? This is the open space equivalent for “do not disturb” sign. If your co-space neighbors do not know that, move to a different desk or different space altogether. 
+1. <b>Time box your day (and put your headphones on)</b> : When working by yourself without anyone around to interrupt you, it’s easy to be carried away and not notice that you have been researching hotels for an upcoming trip to DC for more than hour now. Fix a time period for every task in order to put boundaries on the task so that you don’t need to skip lunch (see #2).  I use a timer that alerts me every 25 min, and encourages me to take quick mental breaks. In Gizra, we use our own grassroots system to log in project contribution hours, we call it Productivity [link to module]. Why the headphones? This is the open space equivalent for “do not disturb” sign. If your co-space neighbors do not know that, move to a different desk or a different space altogether. 
 
-2. <b> Do not eat at your desk/laptop: </b> Go out for lunch, and if the weather permits, eat outside. Packing your own lunch or ordering in? Take a real break from work and your screen, and have it in the common area. You won't be sitting there by yourself for too long and that person sitting next to you might be someone who is looking for your expertise, or can help you on a project that you’re working on.
+2. <b> Do not eat at your desk/laptop: </b> Go out for lunch, and if the weather permits, eat outside. Packing your own lunch or ordering in? Take a real break from work and your screen, and have it in the common area. You won't be sitting there by yourself for too long, and that person sitting next to you might be someone who is looking for your expertise, or can help you on a project that you’re working on.
 
 3. <b> Investment in community:</b> One of Gizra’ core values is contributing to Open Source projects. Treat the co-working space as your community and find ways to share your knowledge or expertise with your peers: mentorship program, seminars, free tips, and if you feel very happy - throw a happy hour event.
 
@@ -38,4 +38,5 @@ After few months here,  I came up with the Gizra Way [link] for co-working space
 
 6. <b> Just be kind: </b> Basic decency rules of life don’t change according to where you are.
 
-7. <b> yeah , use the booth for your phone and skype calls:</b>  it is a throwback for old times.
+7. <b> Yeah, use the phone booth for your phone and skype calls:</b>  it is a throwback to the good old days.
+
