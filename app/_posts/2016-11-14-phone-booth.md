@@ -10,6 +10,8 @@ description: "Working remotely surrounded by strangers is a challenge which can 
 published: true
 ---
 
+{% include setup %}
+
 I am sure you have noticed that the era of public telephone booths is coming to an end. On the NYC streets there are only four remaining public phone booths - waiting there for Superman to change his costume, or more likely to  give a homeless person a break from the cold. I wouldn’t bother to note this striking revelation except that recently I have begun a tight personal relationship with a phone booth and it's not that [remaining relic](https://www.google.com/maps/@40.798488,-73.9708797,3a,75y,331.88h,66.79t/data=!3m6!1e1!3m4!1sA4uG2WJ2hYS7mpq2EPwO7g!2e0!7i13312!8i6656) a few blocks from my house.
 
 Most of my work days start inside a booth, sitting in a small dark cell, speaking with someone from Gizra HQ, located across the ocean from me. 
