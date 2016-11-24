@@ -7,7 +7,7 @@ permalink: "/content/elm-electron-build"
 layout: post
 author: NirGalon
 image: /assets/images/posts/elm-electron-build/thumb.jpg
-description:"I took my love for Elm another step forward and created a dev tool for running Elm inside Electron."
+description:"Nir Galon takes his love for Elm a step forward and creates a dev tool for running Elm inside Electron."
 published: true
 ---
 
