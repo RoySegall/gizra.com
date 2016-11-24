@@ -9,6 +9,7 @@ tags:
 permalink: "/content/gizra-way-webinar-budget-goggles"
 layout: post
 image: "/assets/images/posts/gizra-way-webinar-budget-goggles/thumb.jpg"
+Description: "For the first in a web series, Amitai Burstein discusses how a budget and time driven discovery process gets a project off on the right foot."
 author: IshaDakota
 ---
 

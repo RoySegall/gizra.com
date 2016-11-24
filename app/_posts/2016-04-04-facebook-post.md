@@ -7,6 +7,7 @@ tags:
 permalink: "/content/job-post-goes-viral"
 layout: post
 image: "/assets/images/posts/facebook-post/thumb.jpg"
+Description: "Rachel Baram's impression of a job posting calling women and mothers to join Gizra."
 author: RachelBaram
 ---
 

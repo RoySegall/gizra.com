@@ -8,6 +8,7 @@ permalink: "/content/drupal-8-attachment-migration"
 author: RoySegall
 layout: post
 image: "/assets/images/posts/drupal-8-migrate/thumb.jpg"
+Description: "How reaching out to community members helped us find a solution to migrate files from Drupal 7 and outside directories, into Drupal 8."
 published: true
 ---
 

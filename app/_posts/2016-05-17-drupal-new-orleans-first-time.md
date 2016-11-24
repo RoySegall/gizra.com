@@ -7,6 +7,7 @@ tags:
 permalink: "/content/12-things-learned-first-drupalcon"
 layout: post
 image: "/assets/images/posts/first-drupalcon-nola/thumb.jpg"
+Description: "Adar Earon shares about his overwhelmingly great experience at his first DrupalCon."
 author: kazabooboo
 ---
 
