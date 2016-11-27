@@ -1,6 +1,6 @@
 ---
 tags:
-  - "Project management"
+  - "Project Management"
   - "Drupal-planet"
   - "GitHub"
 permalink: "/content/how-we-use-github-issues"

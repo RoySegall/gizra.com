@@ -1,8 +1,8 @@
---- 
+---
 tags: 
-- OG7
-- Drupalcon
-- movie
+- Organic Groups
+- DrupalCon
+- Recorded Presentation
 - Drupal-planet
 permalink: /content/og7-drupalcon-london/
 title: OG7 Drupalcon London

@@ -4,8 +4,9 @@ layout: post
 title: Tipa.li – a Tool for Easily Finding Polio Vaccination Clinics
 author: niryariv
 tags:
-  - "Open source"
-  - "Drupal-planet"
+  - Drupal-planet
+  - Open Source
+
 ---
 
 

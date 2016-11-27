@@ -3,7 +3,7 @@ title: A Job Posting Goes Viral
 keywords: Drupal
 tags:
   - The Gizra Way
-  - Office culture
+  - Office Culture
 permalink: "/content/job-post-goes-viral"
 layout: post
 image: "/assets/images/posts/facebook-post/thumb.jpg"

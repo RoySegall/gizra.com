@@ -1,6 +1,6 @@
 ---
 tags:
-  - Project management
+  - Project Management
   - Drupal-planet
 permalink: /content/the-gizra-way/
 title: The Gizra Way - How We Roll (and Rollback)
@@ -54,5 +54,3 @@ It's a 9 hour workday, five days a week. People with kids leave early once a wee
 This is something that was important to me even back when I was Gizra's client. That kind of pacing makes for long term thinking, code that's better thought out, and a positive work environment.
 
 This last point is the most important one. Gizra wouldn't come up with these practices if we were constantly chasing after some deadline. Good environment makes for good code.
-
-
