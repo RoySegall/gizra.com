@@ -3,8 +3,7 @@ title: "Next in Nonprofits Podcast: Open Source, CMS, and Web Project Planning"
 tags:
   - Nonprofit
   - UX
-  - Gizra Way
-  - Budget Goggles
+  - The Gizra Way
 permalink: "/content/next-in-nonprofit-podcast"
 layout: post
 image: "/assets/images/posts/nonprofit-podcast/thumb.jpg"
