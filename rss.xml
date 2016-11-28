@@ -4,10 +4,28 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Mon, 14 Nov 2016 16:13:29 -0600</lastBuildDate>
-    <pubDate>Mon, 14 Nov 2016 16:13:29 -0600</pubDate>
+    <lastBuildDate>Mon, 28 Nov 2016 16:39:52 -0600</lastBuildDate>
+    <pubDate>Mon, 28 Nov 2016 16:39:52 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Next in Nonprofits Podcast: Open Source, CMS, and Web Project Planning</title>
+        <description>
+          &lt;p&gt;I had the opportunity to speak with Steve Bolan at &lt;a href=&quot;http://www.nextinnonprofits.com&quot;&gt;Next in Nonprofits&lt;/a&gt; about nonprofit organizations doing technology planning and outreach using open-source tools and working with content management systems and planning. Having been in nonprofit work for the better part of this decade and the last, it was interesting to reflect in my current role (as a CTO in a for profit agency) with my past brain (as a nonprofit executive).&lt;/p&gt;
+
+&lt;p&gt;It was a fun conversation that wandered onto many topics in nonprofit tech (the value of open source, &lt;a href=&quot;http://www.gizra.com/#gizra-way&quot;&gt;The Gizra Way&lt;/a&gt;, and user design and interaction), the bottom line to which is that we need to think about our users first and our technology second when it comes to building web projects.&lt;/p&gt;
+
+&lt;p&gt;Check out the podcast below, or over at the &lt;a href=&quot;http://www.nextinnonprofits.com/2016/11/gizra/&quot;&gt;Next in Nonprofits site&lt;/a&gt;, along with a host of other great podcasts in the series.&lt;/p&gt;
+
+&lt;iframe src=&quot;http://tunein.com/embed/player/t109974291/&quot; style=&quot;width:100%;height:110px;&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/next-in-nonprofit-podcast/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/next-in-nonprofit-podcast</link>
+        <guid>http://www.gizra.com/content/nonprofit-podcast</guid>
+        <pubDate>Mon, 28 Nov 2016 00:00:00 -0600</pubDate>
+      </item>
     
       <item>
         <title>Talking from a Phone Booth: Strategies for Working Remotely</title>
