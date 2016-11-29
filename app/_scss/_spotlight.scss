@@ -1,0 +1,25 @@
+#spotlight {
+  .spotlight__project {
+    .spotlight__project__item {
+      .spotlight__project__item__img {
+        position: relative;
+        display: block;
+        border: 1px solid #C5C5C5;
+        margin-bottom: 12px;
+        overflow: hidden;
+        background: black;
+  
+        img {
+          @include transition(all 0.5s ease-in-out);
+          position: relative;
+          width: 100%;
+  
+          &:hover {
+            @include transform(scale(1.15));
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
