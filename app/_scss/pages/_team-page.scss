@@ -53,8 +53,9 @@
         list-style-type: none;
         padding: 0;
 
+
         li {
-          display: inline;
+          display: inline-block;
           margin-left: 5%;
           margin-right: 5%;
           color: white;
@@ -83,16 +84,17 @@
 @include mobile {
 
   #team-page .member-box .popup-block {
-    ul {
-      margin-top: 15px;
-    }
 
     .info {
       bottom: 0;
-    }
 
-    .title {
-      padding-bottom: 0;
+      ul {
+        margin-top: 15px;
+      }
+
+      .title {
+        padding-bottom: 0;
+      }
     }
   }
 }
@@ -102,10 +104,10 @@
   #team-page .member-box .popup-block {
     .info {
       font-size: .65em;
-    }
 
-    .title {
-      line-height: 1.5;
+      .title {
+        line-height: 1.5;
+      }
     }
   }
 }
