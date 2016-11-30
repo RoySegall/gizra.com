@@ -14,19 +14,21 @@
               <!-- E-mail -->
               <li>
                 <a href="mailto:{{ member.email }}">
-                  <img src="/images/team/at.png" alt="email">
+                  <i class="fa fa-at" aria-hidden="true"></i>
                 </a>
               </li>
               <!-- Github -->
               <li>
                 <a target="_blank" href="https://github.com/{{ member.github }}">
-                  <img src="/images/team/github.png" alt="github">
+                  <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
               </li>
               <!-- Twitter -->
               {% if member.twitter %}
                 <li>
-                  <a target="_blank" href="https://twitter.com/{{ member.twitter }}"><img src="/images/team/twitter.png" alt="twitter"></a>
+                  <a target="_blank" href="https://twitter.com/{{ member.twitter }}">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
                 </li>
               {% endif %}
             </ul>
