@@ -12,7 +12,7 @@
             <div class="title">{{ member.title }}</div>
             <ul>
               <!-- E-mail -->
-              <li class="hidden-xs">
+              <li>
                 <a href="mailto:{{ member.email }}">
                   <img src="/images/team/at.png" alt="email">
                 </a>
@@ -25,7 +25,7 @@
               </li>
               <!-- Twitter -->
               {% if member.twitter %}
-                <li class="hidden-xs">
+                <li>
                   <a target="_blank" href="https://twitter.com/{{ member.twitter }}"><img src="/images/team/twitter.png" alt="twitter"></a>
                 </li>
               {% endif %}
