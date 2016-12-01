@@ -211,15 +211,6 @@ authors:
       github: ItamarGronich
       avatar: male.jpg
       image: ItamarGronich.jpg
-  - MoodyUser:
-      name: Yoni Mood
-      title: Developer
-      is_member: true
-      bio: Somthing about Yoni.
-      email: yoni@gizra.com
-      github: MoodyUser
-      avatar: male.jpg
-      image: MoodyUser.jpg
   - DavidHernandez:
       name: David Hernandez
       title: Developer
@@ -229,6 +220,15 @@ authors:
       github: DavidHernandez
       avatar: DavidHernandez.jpg
       image: DavidHernandez.jpg
+  - MoodyUser:
+      name: Yoni Mood
+      title: Developer
+      is_member: false
+      bio: Somthing about Yoni.
+      email: yoni@gizra.com
+      github: MoodyUser
+      avatar: male.jpg
+      image: MoodyUser.jpg
   - GuyTepper:
       name: Guy Tepper
       title: Developer
