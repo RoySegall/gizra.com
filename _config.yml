@@ -55,16 +55,6 @@ authors:
       github: bricel
       avatar: bricel.jpg
       image: bricel.jpg
-  - niryariv:
-      name: Nir Yariv
-      title: CPO
-      is_member: true
-      bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
-      email: nir@gizra.com
-      twitter: niryariv
-      github: niryariv
-      avatar: niryariv.jpg
-      image: niryariv.jpg
   - OritiMG:
       name: Orit Geron
       title: Operations Manager
@@ -158,24 +148,6 @@ authors:
       github: efratn
       avatar: female.jpg
       image: efratn.jpg
-  - Moo64c:
-      name: Amir Arbel
-      title: Developer
-      is_member: false
-      bio: Something about Amir
-      email: amir@gizra.com
-      github: Moo64c
-      avatar: male.jpg
-      image: male.jpg
-  - DavidKohav:
-      name: David Kohav
-      title: QA Engineer
-      is_member: true
-      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
-      email: david@gizra.com
-      github: DavidKohav
-      avatar: male.jpg
-      image: DavidKohav.jpg
   - NirGalon:
       name: Nir Galon
       title: Developer
@@ -185,15 +157,6 @@ authors:
       github: nirgn975
       avatar: NirGalon.jpg
       image: NirGalon.jpg
-  - GuyTepper:
-      name: Guy Tepper
-      title: Developer
-      is_member: true
-      bio: Somthing about Guy.
-      email: guy.tepper@gizra.com
-      github: guytepper
-      avatar: GuyTepper.jpg
-      image: Guy.jpg
   - Pavel:
       name: Pavel Pirozhenko
       title: Developer
@@ -266,6 +229,43 @@ authors:
       github: DavidHernandez
       avatar: DavidHernandez.jpg
       image: DavidHernandez.jpg
+  - GuyTepper:
+      name: Guy Tepper
+      title: Developer
+      is_member: false
+      bio: Somthing about Guy.
+      email: guy.tepper@gizra.com
+      github: guytepper
+      avatar: GuyTepper.jpg
+      image: Guy.jpg
+  - Moo64c:
+      name: Amir Arbel
+      title: Developer
+      is_member: false
+      bio: Something about Amir
+      email: amir@gizra.com
+      github: Moo64c
+      avatar: male.jpg
+      image: male.jpg
+  - DavidKohav:
+      name: David Kohav
+      title: QA Engineer
+      is_member: false
+      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
+      email: david@gizra.com
+      github: DavidKohav
+      avatar: male.jpg
+      image: DavidKohav.jpg
+  - niryariv:
+      name: Nir Yariv
+      title: CPO
+      is_member: false
+      bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
+      email: nir@gizra.com
+      twitter: niryariv
+      github: niryariv
+      avatar: niryariv.jpg
+      image: niryariv.jpg
   - YaronMiro:
       name: Yaron Miro
       title: UX/UI Developer
