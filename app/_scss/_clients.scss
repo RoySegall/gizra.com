@@ -7,6 +7,11 @@
     font-size: 2.244em;
   }
 
+  h2.sub-title {
+    @include title;
+    font-size: 1.2em;
+  }
+
   .clients {
     list-style: none;
     padding: 0;

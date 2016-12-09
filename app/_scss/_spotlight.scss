@@ -1,5 +1,11 @@
-#spotlight {
+#spotlight {  
+  .title {
+    font-size: 2.244em
+  }
+  
   .spotlight__project {
+    margin-bottom: 25px;
+    
     .spotlight__project__item {
       .spotlight__project__item__img {
         position: relative;
