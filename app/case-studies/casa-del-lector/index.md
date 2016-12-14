@@ -14,7 +14,7 @@ header_url: /assets/images/cases/casa-del-lector/header.jpg
 facts:
   - Created a clean, fluid, and highly-responsive  navigation through a large set of visual artifacts.
   - Developed a continuous integration process which allowed site admins to import large amounts of content while continuously regenerating static pages.
-  - The solution leveraged existing hosting solutions the delivered a fast cost-efficient product.
+  - The solution leveraged existing hosting solutions that delivered a fast cost-efficient product.
 techs:
   - Data-Driven Document (D3)
   - JavaScript
@@ -32,14 +32,14 @@ Museum educators had charted a complex path that they wanted museum goers to exp
 {% include thumbnail.html image_path="assets/images/cases/casa-del-lector/image1.jpg" caption="Opening night Event at Casa Del Lector - exhibit goers use a tablet to navigate the complementary material to the exhibit."%}
  
 ##The Vision
-Casa del Lector sought a tablet-optimized app that would supplement that somewhat minimal exhibit in the museum itself with the archival material from elsewhere. With a “touch-enhanced” experience, exhibit viewers could interact with the objects in front of them, as well as a rich collection of outside artifacts and contextualization that made the objects come alive.
+Casa del Lector sought a tablet-optimized app that would supplement the somewhat minimal exhibit in the museum itself with the archival material from elsewhere. With a “touch-enhanced” experience, exhibit viewers could interact with the objects in front of them, as well as a rich collection of outside artifacts and contextualization that made the objects come alive.
 
 Additionally, a web application could do what a physical exhibit could not - draw explicit links between streams of thought, with immediate delivery of the content that drives that connection. All of this takes place in the viewer’s hands in a self-directed fashion.
 
 {% include thumbnail.html image_path="assets/images/cases/casa-del-lector/image3.jpg" caption="Clean presentation of material from the National Library of Israel to complement the exhibit at Casa Del Lector."%}
 
 ##Gizra’s Solution
-From a technological perspective, the obstacle to implementation was chiefly in how to assemble all of the media in an efficient manner and present it to viewers in the way that reflected the museum educators’ vision. In addition, the application needed to use best-practice “touch” features and have a fluid and fast interface for viewers so that the online experience could be as visually smooth as the in-person experience.
+From a technological perspective, the obstacle to implementation was chiefly in how to assemble all of the media in an efficient manner and present it to viewers in a way that reflected the museum educators’ vision. In addition, the application needed to use best-practice “touch” features and have a fluid and fast interface for viewers so that the online experience could be as visually smooth as the in-person experience.
  
 For the front-end, Gizra proposed to use the [Data-Driven Document (D3) project](https://d3js.org/), a JS framework that focuses on document transformations and transitions and helped achieve much of the look and feel that the museum had envisioned. Because it only modifies the attributes that actually change, D3 is able to reduce overhead and allow graphical complexity with a more fluid visualization.
 
