@@ -139,6 +139,15 @@ authors:
       github: ordavidil
       avatar: male.jpg
       image: ordavidil.jpg
+  - noamcastel:
+      name: Noam Castel
+      title: Team Lead
+      is_member: false
+      bio: Something about Noam
+      email: noam@gizra.com
+      github: noamoss
+      avatar: male.jpg
+      image: noam.jpg
   - efratn:
       name: Efrat Nitzan
       title: Account Manager
