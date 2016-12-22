@@ -10,6 +10,8 @@
   h2.sub-title {
     @include title;
     font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 
   .clients {
@@ -41,15 +43,15 @@
         .popup-block {
           display: none;
           position: absolute;
-          top: 50%;
+          top: 75%;
           padding: 0 6px;
           transform: translateY(-50%);
           font-size: 14px;
-          line-height: 1.2em;
 
           p {
             display: inline-block;
             color: $gizra-black;
+            line-height: 1.2em;
           }
 
           span {

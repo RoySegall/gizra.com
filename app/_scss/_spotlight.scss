@@ -1,6 +1,17 @@
-#spotlight {  
+#spotlight {
+  margin-bottom: 60px;
+  
+  
   .title {
-    font-size: 2.244em
+    font-size: 2.244em;
+    margin-bottom: 30px;
+    
+    .gizra-logo-inline {
+      font-family: Abril Fatface;
+      color: $gizra-orange;
+      font-size: 67px;
+      letter-spacing: 1.9px;
+    }
   }
   
   .spotlight__project {
@@ -24,6 +35,17 @@
             @include transform(scale(1.15));
             opacity: 0.5;
           }
+        }
+      }
+      
+      .spotlight__project__item__text {
+        h3 {
+          margin: 0;
+        }
+        
+        .spotlight__project__item__text__caption {
+          font-size: 16px;
+          line-height: 1.5;
         }
       }
     }
