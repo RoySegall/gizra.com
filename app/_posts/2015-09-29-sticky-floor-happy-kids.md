@@ -1,8 +1,7 @@
 ---
 title: Sticky Floors and Happy Kids
-tags: 
+tags:
   - Office Culture
-  - Life
 permalink: "/content/sticky-floors-happy-kids"
 layout: post
 author: OritiMG
@@ -16,7 +15,7 @@ There's a saying "Good moms have sticky floors, messy kitchens, laundry piles, d
 
 {% include thumbnail.html  image_path="assets/images/posts/happy-kids/wonder-woman.jpg" %}
 
-I have 3 kids (recent one is brand new - in fact I'm writing this post while being on maternity leave), which I absolutely adore and admire with every breath they take, a husband that I'm (still, after so many years together) crazy about and, lucky me, I love my job and co-workers. 
+I have 3 kids (recent one is brand new - in fact I'm writing this post while being on maternity leave), which I absolutely adore and admire with every breath they take, a husband that I'm (still, after so many years together) crazy about and, lucky me, I love my job and co-workers.
 
 I must be the fortunate one to hit the jackpot as a most people I know are not even satisfied with one thing, let alone three!  
 

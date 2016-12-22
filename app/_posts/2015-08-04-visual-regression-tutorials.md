@@ -3,6 +3,8 @@ title: Visual Regression Tutorials
 tags:
   - Shoov
   - Visual Monitor
+  - Visual Regression
+  - Tutorial
   - "Drupal-planet"
 permalink: "/content/visual-regression-tutorials"
 layout: post

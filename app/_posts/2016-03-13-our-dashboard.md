@@ -1,7 +1,7 @@
 ---
 tags:
 - Shoov
-- Project management
+- Project Management
 permalink: /content/our-shoov-dashboard
 title: Our Shoov Dashboard
 layout: post

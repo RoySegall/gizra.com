@@ -2,7 +2,7 @@
 tags:
 - OG7
 - Drupal-planet
-- Drupalcamp
+- DrupalCamp
 permalink: /content/drupalcamp-montreal-keynote/
 title: DrupalCamp Montreal Keynote
 created: 1350587175

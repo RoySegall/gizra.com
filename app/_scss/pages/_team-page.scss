@@ -31,12 +31,16 @@
         bottom: 20%;
         width: 100%;
         z-index: 3000;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
       }
 
       .name,
       .title {
         color: white;
         text-transform: uppercase;
+        max-width: 95%;
       }
 
       .name {
@@ -46,14 +50,15 @@
 
       ul {
         list-style-type: none;
-        margin-top: 43px;
         padding: 0;
+
 
         li {
           display: inline;
-          margin-left: 5%;
-          margin-right: 5%;
+          margin-left: 2%;
+          margin-right: 2%;
           color: white;
+          font-size: 38px;
         }
 
         img {
@@ -78,7 +83,31 @@
 // Mobile Media query.
 @include mobile {
 
-  #team-page .member-box .popup-block ul {
-    margin-top: 15px;
+  #team-page .member-box .popup-block {
+
+    .info {
+      bottom: 0;
+
+      ul {
+        margin-top: 15px;
+      }
+
+      .title {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// Mobile less than 480px
+@media (max-width: 480px) {
+  #team-page .member-box .popup-block {
+    .info {
+      font-size: .65em;
+
+      .title {
+        line-height: 1.5;
+      }
+    }
   }
 }

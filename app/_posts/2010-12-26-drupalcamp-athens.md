@@ -1,8 +1,8 @@
 ---
 tags:
 - Drupal-planet
-- OG
-- Drupalcamp
+- Organic Groups
+- DrupalCamp
 permalink: /content/drupalcamp-athens/
 title: Drupalcamp Athens
 created: 1293365482

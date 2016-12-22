@@ -1,10 +1,8 @@
 ---
 title: Casa del Lector
 tags:
-  - "casa del lector"
   - d3js
-  - server-free
-  - mobile
+  - Mobile
 permalink: "/content/casa-del-lector"
 layout: post
 published: true

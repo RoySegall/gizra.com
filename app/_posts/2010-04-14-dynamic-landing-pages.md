@@ -1,7 +1,7 @@
 ---
 tags:
 - Drupal-planet
-- tutorial
+- Tutorial
 - Panels
 permalink: /content/dynamic-landing-pages/
 title: Dynamic landing pages

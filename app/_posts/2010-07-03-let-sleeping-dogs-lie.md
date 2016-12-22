@@ -1,7 +1,7 @@
 ---
 tags:
 - Drupal-planet
-- OG
+- Organic Groups
 permalink: /content/let-sleeping-dogs-lie/
 title: Let sleeping dogs lie
 created: 1278181343

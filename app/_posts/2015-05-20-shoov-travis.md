@@ -2,7 +2,7 @@
 title: Visual regression tests on every commit
 tags:
   - Shoov
-  - Visual regression
+  - Visual Regression
   - "Drupal-planet"
 permalink: "/content/visual-regression-travis-shoov-ngrok"
 layout: post

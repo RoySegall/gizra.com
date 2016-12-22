@@ -1,7 +1,7 @@
 ---
 tags:
 - Drupal-planet
-- Drupalcon
+- DrupalCon
 permalink: /content/about-walk-bojanz-damz-and-i-had-london/
 title: About that walk bojanz, Damz and I had in London
 created: 1320442252

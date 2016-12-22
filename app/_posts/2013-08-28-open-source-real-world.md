@@ -5,6 +5,8 @@ layout: post
 author: itamarbu
 tags:
     - Drupal-planet
+    - Open Source
+    - Guest Post
 ---
 
 
