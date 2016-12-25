@@ -147,10 +147,17 @@
 // Desktop Media query.
 @include desktop {
   
-  .header-homepage, #gizra-way, #about, #testimonials {
+  .header-homepage, #gizra-way, #about {
     height: 100vh;
     max-height: 1000px;
     min-height: 750px;
+  }
+  
+  #testimonials {
+    height: 100vh;
+    max-height: 1000px;
+    min-height: 800px;
+    
   }
   
    #from-our-blog {
