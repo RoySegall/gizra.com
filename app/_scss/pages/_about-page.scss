@@ -14,7 +14,15 @@
   }
 
   .section3 {
+    margin-top: 50px;
     margin-bottom: 50px;
+    
+    .closing {
+      text-align: center;
+      color: $gizra-blue;
+      font-size: 24px;
+      font-weight: 400;
+    }
   }
 
   .section4 {
@@ -54,4 +62,5 @@
 .section1 p:first-child:first-letter {
   font-size: 50px;
   font-family: 'Abril Fatface';
+  color: $gizra-blue;
 }
