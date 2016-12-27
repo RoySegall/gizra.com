@@ -24,6 +24,10 @@ markdown: redcarpet
 redcarpet:
   extensions: ['fenced_code_blocks', 'tables', 'smart']
 
+# Jekyll redirect gem
+gems:
+  - jekyll-redirect-from
+
 pygments: true
 
 title : Gizra
