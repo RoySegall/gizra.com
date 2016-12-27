@@ -22,6 +22,11 @@
       color: $gizra-blue;
       font-size: 24px;
       font-weight: 400;
+      
+      .inline-logo {
+        font-family: 'Abril Fatface';
+        color: $gizra-orange;
+      }
     }
   }
 
@@ -49,7 +54,24 @@
     background-attachment: fixed;
     background-size: cover;
   }
-
+  
+  .section-contact {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+   
+    a {
+       text-decoration: none;
+       padding:  10px 20px;
+       border: 2px solid $gizra-blue;
+     }
+     
+     a:hover, a:focus {
+       border: 2px solid #244b80;
+    }
+  }
+  
   @media (max-width: 767px) {
 
     .section4 {
@@ -60,7 +82,13 @@
 }
 
 .section1 p:first-child:first-letter {
-  font-size: 50px;
+  font-size: 75px;
   font-family: 'Abril Fatface';
-  color: $gizra-blue;
+  color: $gizra-orange;
+  float: left;
+  line-height: 1.2;
+  line-height: 60px; 
+  padding-top: 4px; 
+  padding-right: 8px; 
+  padding-left: 3px;
 }
