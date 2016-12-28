@@ -45,7 +45,7 @@
 @include desktop {
 
   #work {
-
+        
     .clients {
       height: 100px;
 
@@ -89,6 +89,11 @@
 // Mobile Media query.
 @include mobile {
   #work {
+
+    h2.sub-title {
+      text-align: center;
+    }
+
     .clients {
       margin-top: 10px;
       text-align: center;
