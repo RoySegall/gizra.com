@@ -18,6 +18,14 @@
     margin-bottom: 25px;
     
     .spotlight__project__item {
+      @include mobile {
+        margin-bottom: 40px;
+        
+        &.last {
+          margin-bottom: 0;
+        }
+      }
+    
       .spotlight__project__item__img {
         position: relative;
         display: block;
