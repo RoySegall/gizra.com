@@ -5,13 +5,11 @@
     background: #292929;
     background: url('/images/header/homepage-background.jpg') no-repeat center top;
     background-size: cover;
-    background-attachment: fixed;
     width: 100%;
     text-align: left;
     padding-bottom: 40px;
 
     #slogan {
-      margin-top: 50px;
       position: relative;
       overflow: hidden;
       color: white;
@@ -21,22 +19,23 @@
         color: white;
         font-family: "Hind", sans-serif;
         font-weight: bold;
-        font-size: 37.5px;
+        text-align: center;
       }
 
       #sub-slogan {
-        margin: 1em 0 0;
+        border: 2px solid white;
+        text-align: center;
 
         p {
           font-family: "Raleway", sans-serif;
-          font-size: 27px;
           line-height: 1.2em;
+          font-weight: 400;
         }
       }
 
       #about-us-story {
         font-family: "Raleway", sans-serif;
-        margin-top: 1.5em;
+        margin-top: 1em;
         font-weight: 500;
 
         a {
@@ -76,13 +75,138 @@
   }
 }
 
+// Mobile Media query.
+@include mobile {
+  .header-homepage {
+
+    #slogan {
+      margin-top: 10px;
+      
+      h2 {
+        font-size: 30px;
+      }
+
+      #sub-slogan {
+        margin: 1.5em auto 0;
+        padding: 20px 20px 10px; 
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
 // Desktop Media query.
 @include desktop {
+
+  .header-homepage {
+
+    #slogan {
+      margin-top: 50px;
+      
+      h2 {
+        font-size: 70px;
+      }
+
+      #sub-slogan {
+        margin: 3em auto 0;
+        width: 60%;
+        padding: 20px 30px 10px; 
+
+        p {
+          font-size: 22.5px;
+        }
+      }
+    }
+
+    .cloud-a, .cloud-b, .cloud-c {
+      position: absolute;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .cloud-a {
+      top: 20%;
+      width: 200px;
+      height: 200px;
+      opacity: 0.4;
+      animation: cloud-a 75s linear infinite;
+      -webkit-animation: cloud-a 75s linear infinite;
+      -ms-animation: cloud-a 75s linear infinite;
+      -moz-animation: cloud-a 75s linear infinite;
+      -o-animation: cloud-a 75s linear infinite;
+      background: url('/images/homepage/cloud-a.png') no-repeat;
+    }
+
+    @keyframes cloud-a {
+      0% {
+        left: 10%;
+      }
+      
+      100% {
+        left: 120%;
+      }
+    }
+
+    .cloud-b {
+      top: 30%;
+      width: 500px;
+      height: 316px;
+      opacity: 0.5;
+      animation: cloud-b 150s linear infinite;
+      -webkit-animation: cloud-b 150s linear infinite;
+      -ms-animation: cloud-b 150s linear infinite;
+      -moz-animation: cloud-b 150s linear infinite;
+      -o-animation: cloud-b 150s linear infinite;
+      background: url('/images/homepage/cloud-b.png') no-repeat;
+    }
+
+    @keyframes cloud-b {
+      0% {
+        left: 50%;
+      }
+      
+      100% {
+        left: 120%;
+      }
+    }
+
+    .cloud-c {
+      top: 60%;
+      width: 600px;
+      height: 200px;
+      opacity: 0.5;
+      animation: cloud-c 250s linear infinite;
+      -webkit-animation: cloud-c 250s linear infinite;
+      -ms-animation: cloud-c 250s linear infinite;
+      -moz-animation: cloud-c 250s linear infinite;
+      -o-animation: cloud-c 250s linear infinite;
+      background: url('/images/homepage/cloud-c.png') no-repeat;
+    }
+
+    @keyframes cloud-c {
+      0% {
+        left: 0%;
+      }
+      100% {
+        left: 120%;
+      }
+    }
+  }
   
-  .header-homepage, #gizra-way, #about, #testimonials {
+  .header-homepage, #gizra-way, #about {
     height: 100vh;
     max-height: 1000px;
-    min-height: 650px;
+    min-height: 750px;
+  }
+  
+  #testimonials {
+    height: 100vh;
+    max-height: 1000px;
+    min-height: 800px;
+    
   }
   
    #from-our-blog {

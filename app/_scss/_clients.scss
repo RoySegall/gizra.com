@@ -7,6 +7,13 @@
     font-size: 2.244em;
   }
 
+  h2.sub-title {
+    @include title;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
   .clients {
     list-style: none;
     padding: 0;
@@ -15,13 +22,30 @@
       vertical-align: middle;
     }
   }
+
+  .contact-label {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+  
+    a {
+      text-decoration: none;
+      padding:  10px 20px;
+      border: 2px solid $gizra-blue;
+    }
+    
+    a:hover, a:focus {
+      border: 2px solid #244b80;
+    }
+  }
 }
 
 // Desktop Media query.
 @include desktop {
 
   #work {
-
+        
     .clients {
       height: 100px;
 
@@ -36,15 +60,15 @@
         .popup-block {
           display: none;
           position: absolute;
-          top: 50%;
+          top: 75%;
           padding: 0 6px;
           transform: translateY(-50%);
           font-size: 14px;
-          line-height: 1.2em;
 
           p {
             display: inline-block;
             color: $gizra-black;
+            line-height: 1.2em;
           }
 
           span {
@@ -65,6 +89,11 @@
 // Mobile Media query.
 @include mobile {
   #work {
+
+    h2.sub-title {
+      text-align: center;
+    }
+
     .clients {
       margin-top: 10px;
       text-align: center;
