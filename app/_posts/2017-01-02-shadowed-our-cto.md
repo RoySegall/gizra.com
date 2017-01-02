@@ -38,8 +38,10 @@ Many times you do not know how to approach the problem, and sometimes you just n
 This is exactly what needs to be done - without looking back, without regret the time spent, without getting stuck the previous path just because you have already started to go there. Always keep an open mind, be willing to try and make a mistake, this is the best way to learn and grow. That is what success made of.
 
 ##Be glad to get comments, it's free!
-No one likes to get bad comments, and it may be frustrating to get them for every little thing, but I think it is necessary. This is something that you should not be compromise on, if we want to be the best. This is a wonderful opportunity to get better and I think people have to be thankful that someone review their code carefully and remarks it. It's a gift you should take with both hands!  
-On the other hand, enjoy the compliments. Did you get a good comment, appreciated your work? Read it at least twice, it's satisfied and it belongs to you!
+No one likes to get bad comments, and it may be frustrating to get them for every little thing, but I think it is necessary. This is something that you should not be compromise on, if we want to be the best. This is a wonderful opportunity to get better and I think people have to be thankful that someone review their code carefully and remarks it.  
+Actually, When I watched Amitai, I noticed that he writes detailed and accurate comments (which I very appreciate) but on the other hand, his compliments are general and contain one or two word or even just an icon. I turned his attention to this, because I think that when someone is doing something good, he needs to hear a good word. It’s nice and it gives you feeling of valued for the effort you made. No need to save good words when they are appropriate.  
+So here where Amitai had the chance to improve himself.  
+As I say, comments are a gift you should take with both hands! But you also should enjoy the compliments. Did you get a good comment, appreciate your work? Read it at least twice, it's satisfied and you earned it!
 
 To summarize, I think it inspires and teaches to watch another person work (for me it also satisfies curiosity and voyeurism). I highly recommend to anyone to do it at least once.  
 Chose a good developer, ask to be his shadow for a few hours, come curious, ask him to verbalize what he is doing, take a good look, pay attention to detail, ask questions, you can also write notes to yourself. I promise - you will learn a lot!
