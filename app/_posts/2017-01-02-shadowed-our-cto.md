@@ -15,7 +15,7 @@ description: ""
 Most of the software development work is to solve problems. For some time I was trying to work out whether there is a formula, strategy, something that can be taught - how to solve a problem? I cleared my day and for a few hours I became a shadow of Amitai, Gizra’s CTO, hoping to learn something from it. It was fascinating!
 
 Most of the time Amitai was busy writing code in Elm.
-I (still) do not know Elm and so I understood very little of the code written, but the truth is it doesn’t matter at all, because I learned a lot just by looking at his way of working. And because what I love most is to teach others what I have learned on my own, here it is:
+I (still) do not know Elm and so I understood very little of the code written, but the truth is it doesn’t matter at all, because I learned a lot just by looking at his way of working. And because what I love most is to teach others what I have learned on my own, here is what I have learned from watching:
 
 ##Without Shortcuts
 Work orderly, make small steps but correct one, focus on one thing and not jump from one place to another. If you must leave an open edge in a certain place, record it so you can easily go back there later.  Write organized code with clear hierarchies, use clear names for variables and functions. Do not be stingy with comments to explain what the code is doing.
