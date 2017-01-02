@@ -3,11 +3,11 @@ title: "I shadowed our CTO for a day and this is what I learned"
 tags:
   - The Gizra Way
   - Training
-permalink: ""
+permalink: "/content/shadowed-our-cto"
 layout: post
-image: "" 
+image: "/assets/images/posts/shadowed-cto/thumb.jpg" 
 author: LiatSadeSaadon
-description: ""
+description: "Not every day your manager gives you permission to peek at his work. At Gizra, you can actually do this every day."
 ---
 
 {% include setup %}
