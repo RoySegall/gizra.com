@@ -12,23 +12,23 @@ description: "Not every day your manager gives you permission to peek at his wor
 
 {% include setup %}
 
-Most of the software development work is to solve problems. For some time I was trying to work out whether there is a formula, strategy, something that can be taught - how to solve a problem? I cleared my day and for a few hours I became a shadow of Amitai, Gizra’s CTO, hoping to learn something from it. It was fascinating!
+Most of software development is about solving problems. For some time now, I have been trying to work out whether there is a formula or strategy that can be taught about how to solve a problem. In pursuit of an answer, I cleared my day and shadowed Amitai, Gizra’s CTO, for a good few hours - hoping to learn something from it. And it was fascinating!
 
-Most of the time Amitai was busy writing code in Elm.
-I (still) do not know Elm and so I understood very little of the code written, but the truth is it doesn’t matter at all, because I learned a lot just by looking at his way of working. And because what I love most is to teach others what I have learned on my own, here is what I have learned from watching:
+For most of the day Amitai was busy writing code in Elm.
+I don't (yet) know Elm so I understood very little of the code, but the truth is, it didn’t matter - because I learned a lot about his way of working. And because what I love most is to teach others what I have learned, here are my observations:
 
 ##Without Shortcuts
-Work orderly, make small steps but correct one, focus on one thing and not jump from one place to another. If you must leave an open edge in a certain place, record it so you can easily go back there later.  Write organized code with clear hierarchies, use clear names for variables and functions. Do not be stingy with comments to explain what the code is doing.
+Work in an orderly manner. Take small steps but correct ones. Focus on one thing, and don't jump from one place to another. If you must leave a loose end, record it so you can easily go back there later.  Write organized code with clear hierarchies, using clear names for variables and functions. Do not be stingy with comments to explain what the code does.
 
 ##Recording
-Write in GitHub every step you are doing, even if you are the only one working on this project, and no one else going to read it. The documentation forcing you to constantly be aware of your steps, and if you get lost, you can always go back and check what you already have been tried and what you didn’t yet try.  
-Write so that everyone else understands what you wrote - I saw Amitai doing code review  and how hard it is to go inside another developer mind. Be kind, explain clearly what you did, attach screenshots when you submit Pull Request - it makes others life so much easier.
+Document in GitHub every step you take, even if you are the only one working on the project, and no one is going to read it. The documentation forcing you to constantly be aware of your steps, and if you get lost, you can always go back and check what you have already tried and what you didn’t yet get to.  
+Write in a way that everyone can understand. Watching Amitai doing a code review helped me appreciate how hard it is to go inside another developer's mind. Be kind, explain clearly what you did, attach screenshots when you submit a Pull Request - it makes life so much easier for others.
 
 ##Don’t believe yourself
-Even though you know you are a good developer, you can’t trust yourself without checking your work. Check your code again and again, to see in your eyes that the code is doing what you expected. Do it in small pieces, so it will be easier to identify where the problem if the code does not work.
+Even though you know you are a good developer, you can’t trust yourself without checking your work. Check your code again and again, to see with your own eyes that the code is doing what you expected. Do it in small pieces, so it will be easier to identify where the problem is if the code does not work.
 
 ##Don’t panic / get discouraged when things do not work
-Problems are part of the road and need to believe all the time that you can solve them. I heard  Amitai said it many times during his struggling with the code: “We will be there soon”, “Believe me we reach the end ... ". It's a big difference from saying to yourself: “Oh, this is not going well, this is too difficult for me” or “I'm not good enough for this”.  
+Problems are part of the journey and you need to believe that you can solve them. While Amitai was truggling with the code, I heard him say over and over sentences like: “We will be there soon”, “Believe me we will reach the end ... ". It's a big difference from saying to yourself: “Oh, this is not going well, this is too difficult for me” or “I'm not good enough for this”.  
 I admit there was a moment I thought: maybe he needs ask someone instead of breaking his head. But the fact he didn’t even mentioned this option, and it was clear that he is going to deal with it, no matter what, was very impressed. Guess what? In the end, he succeeded solving the problem.
 
 ##Dare to start over again
