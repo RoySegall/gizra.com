@@ -3,10 +3,10 @@ title: "I shadowed our CTO for a day and this is what I learned"
 tags:
   - The Gizra Way
   - Training
-permalink: "/content/shadowed-our-cto"
-layout: post
-image: "/assets/images/posts/shadowed-cto/thumb.jpg" 
-author: LiatSadeSaadon
+permalink: "/content/shadowed-our-cto"  
+layout: post  
+image: "/assets/images/posts/shadowed-cto/thumb.jpg"   
+author: LiatSadeSaadon  
 description: "It is not every day your manager gives you permission to peek at his work. At Gizra, you can actually do this."
 ---
 
@@ -15,7 +15,9 @@ description: "It is not every day your manager gives you permission to peek at h
 Most of software development is about solving problems. For some time now, I have been trying to work out whether there is a formula or strategy that can be taught about how to solve a problem. In pursuit of an answer, I cleared my day and shadowed Amitai, Gizra’s CTO, for a good few hours - hoping to learn something from it. And it was fascinating!
 
 For most of the day Amitai was busy writing code in Elm.
-I don't (yet) know Elm so I understood very little of the code, but the truth is, it didn’t matter - because I learned a lot about his way of working. And because what I love most is to teach others what I have learned, here are my observations:
+I don't (yet) know Elm so I understood very little of the code, but the truth is, it didn’t matter - because I learned a lot about his way of working.  
+I'm not sure I've found an answer to how to solve a problem, but I certainly recognize some characteristics needed to become a better developer: "great work processes, the right attitude, and good old humble pie."
+And because what I love most is to teach others what I have learned, here are my observations:
 
 ##Without Shortcuts
 Work in an orderly manner. Take small steps but correct ones. Focus on one thing, and don't jump from one place to another. If you must leave a loose end, record it so you can easily go back at a later time.  Write organized code with clear hierarchies, using clear names for variables and functions. Do not be stingy with comments to explain what the code does.
