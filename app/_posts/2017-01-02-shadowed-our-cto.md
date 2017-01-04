@@ -41,7 +41,7 @@ This is exactly what needs to be done - without looking back, without regret abo
 
 ##Be glad to get comments, it's free!
 No one likes to get bad comments, and it may be frustrating to get them for every little thing, but I think it is necessary. If you we want to be the best, this is something that you should not compromise on. This is a wonderful opportunity to get better, and I think people should be thankful that someone has taken the time to review their code carefully and write comments.  
-When I watched Amitai, I noticed that he wrote detailed and accurate comments (which I very much appreciate), but on the other hand, his compliments were general and only contained one or two word or just an icon. I brought this to his attention, because I believe that when someone does something well, they need to hear specific positive feedback to feel valued for their efforts. When it is warranted, there is no need to save on good words.  
+When I watched Amitai, I noticed that he wrote detailed and accurate comments (which I very much appreciate), but on the other hand, his compliments were general and only contained one or two words or just an icon. I brought this to his attention, because I believe that when someone does something well, they need to hear specific positive feedback to feel valued for their efforts. When it is warranted, there is no need to save on good words.  
 So this is an area Amitai has the chance to improve himself.  
 As I was saying, comments are a gift you should take with both hands! You also should enjoy the compliments. Did you receive positive feedback? Read it at least twice - it's satisfing and you earned it!
 
