@@ -16,7 +16,7 @@ Most of software development is about solving problems. For some time now, I hav
 
 For most of the day Amitai was busy writing code in Elm.
 I don't (yet) know Elm so I understood very little of the code, but the truth is, it didn’t matter - because I learned a lot about his way of working.  
-I'm not sure I've found an answer to how to solve a problem, but I certainly recognize some characteristics needed to become a better developer: "great work processes, the right attitude, and good old humble pie."
+I'm not sure I've found an answer to how to solve a problem, but I certainly recognize some characteristics needed to become a better developer: great work processes, the right attitude, and staying humble."
 And because what I love most is to teach others what I have learned, here are my observations:
 
 ##Without Shortcuts
