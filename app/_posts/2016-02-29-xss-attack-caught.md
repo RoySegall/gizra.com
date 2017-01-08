@@ -9,6 +9,7 @@ permalink: "/content/xss-attack"
 layout: post
 published: true
 image: "/assets/images/posts/xss-attack/image0.jpg"
+Description: "One of the major security concerns in websites and web applications is Cross Site Scripting (XSS). We found a nice solution for it that can be easily applied in your projects."
 author: HelenaEksler
 ---
 

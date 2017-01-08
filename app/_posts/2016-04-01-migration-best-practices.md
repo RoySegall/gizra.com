@@ -11,6 +11,7 @@ permalink: "/content/migration-best-practices"
 layout: post
 published: true
 image: "/assets/images/posts/migration-best-practices/thumb.jpg"
+Description: "Here are some of the best practices we apply in Gizra to ensure a smooth migration project, with the least possible amount of surprises or bugs."
 author: HelenaEksler
 ---
 

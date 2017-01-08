@@ -8,6 +8,7 @@ permalink: "/content/entity-relationships"
 layout: post
 published: true
 image: "/assets/images/posts/entity-relations/image1.jpg"
+Description:"We like to look at a project before diving into the code through its data structure. The different entities and their relations can tell us a lot about the business logic."
 author: bricel
 ---
 

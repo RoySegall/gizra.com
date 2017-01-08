@@ -6,6 +6,7 @@ permalink: /content/our-shoov-dashboard
 title: Our Shoov Dashboard
 layout: post
 image: /assets/images/posts/our-dashboard/thumb.jpg
+Description:"Please meet our dashboard Shoov. Basically every project we work on has full test coverage but Shoov also provides us with a visual regression testing harness."
 author: niryariv
 ---
 
