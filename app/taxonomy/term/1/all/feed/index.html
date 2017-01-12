@@ -28,7 +28,7 @@ title : RSS Feed
           &lt;p&gt;&lt;a href=&quot;http://{{ site.production_url }}{{ post.url }}/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
         <link>http://{{ site.production_url }}{{ post.url }}</link>
-        <guid>http://{{ site.production_url }}{{ post.id }}</guid>
+        <guid isPermaLink="false">http://{{ site.production_url }}{{ post.id }}</guid>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       </item>
       {% endif %}
