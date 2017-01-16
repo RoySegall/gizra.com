@@ -75,11 +75,11 @@ Amitai had [created a basic Elm app](https://github.com/Gizra/inbox-simulation/p
 
 {% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/github-conversation.jpg" caption="The Elm is strong with this one." %}
 
-Creating that dashboard referenced in the conversation was faitly easy too. Semantic UI has a lot of [nice looking tables](http://semantic-ui.com/collections/table.html) and classes to vary the look enough to get a lot of different options. I found one I liked, filled it with enough dummy data to give it the feel of a real dashboard, and we were all set.
+Creating that dashboard referenced in the conversation was fairly easy too. Semantic UI has a lot of [nice looking tables](http://semantic-ui.com/collections/table.html) and classes to vary the look enough to get a lot of different options. I found one I liked, filled it with enough dummy data to give it the feel of a real dashboard, and we were all set.
 
 In the meantime, Amitai created a nifty little delayed response function. If you choose a particular response (in this case, some version of "ignore"), you get a followup email demanding your attention.
 
-{% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/delayed-response.gif" caption="Don't ignore my emails!." %}
+{% include thumbnail.html image_path="assets/images/posts/elm-inbox-simulator/delayed-response.gif" caption="Don't ignore my emails!" %}
 
 We spent the next day or two refining features, polishing the layout, and replacing the dummy text.
 
