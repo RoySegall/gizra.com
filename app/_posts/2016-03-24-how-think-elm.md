@@ -5,7 +5,7 @@ tags:
 permalink: /content/how-think-elm
 layout: post
 image: /assets/images/posts/think-elm/thumb.jpg
-Description: "If you haven't ever seen Elm, or already develop in Elm and want to better understand "how to think Elm" this presentation might give you a nudge in the right direction."
+description: "If you haven't ever seen Elm, or already develop in Elm and want to better understand how to think Elm, this presentation might give you a nudge in the right direction."
 ---
 
 {% include setup %}
