@@ -8,6 +8,7 @@ tags:
 permalink: "/content/og-message-stack-drupal8"
 layout: post
 image: "/assets/images/posts/og-message-stack-drupal8/thumb.jpg"
+Description: "Amitai gives an overview of Organic Groups and Message stack Drupal 8 readiness along with some personal thoughts about contribution to Drupal 8 in general."
 ---
 
 {% include setup %}

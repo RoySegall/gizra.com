@@ -6,6 +6,7 @@ tags:
 permalink: "/content/faithful-elm-amazing-router"
 layout: post
 image: "/assets/images/posts/faithful-elm-amazing-router/thumb.jpg"
+description: "Building an Elm demo app to show how Elm can be used in a project."
 ---
 
 {% include setup %}

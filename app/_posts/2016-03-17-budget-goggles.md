@@ -7,6 +7,7 @@ permalink: /content/budget-goggles
 title: "Budget Goggles: A Common Language and Setting Expectations"
 layout: post
 image: /assets/images/posts/budget-goggles/thumb.jpg
+Description:"By default IT projects will fail. They may still launch but not accomplish any one of the following requirements of a successful project: on time, within budget, with happy users."
 author: RachelBaram
 ---
 

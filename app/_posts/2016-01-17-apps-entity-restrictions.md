@@ -7,13 +7,14 @@ permalink: "/content/apps-entity-restrictions"
 author: RoySegall
 layout: post
 image: "/assets/images/posts/apps-entity-restrictions/burner.jpg"
+Description: "You might have heard of Burning Man. It's not for me. And yet, I found myself going to the hackathon of our local Burning man community as an enthusiastic Drupal developer."
 published: true
 ---
 
 
 {% include setup %}
 
-You might have heard of [Burning Man](http://burningman.org/). Basically it's a lot of hippies settling down in the desert for a few days, setting up small camps with diffrent themes that make up a big, temporary city.
+You might have heard of [Burning Man](http://burningman.org/). Basically it's a lot of hippies settling down in the desert for a few days, setting up small camps with different themes that make up a big, temporary city.
 
 It's not for me.
 
