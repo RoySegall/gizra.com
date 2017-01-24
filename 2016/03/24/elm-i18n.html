@@ -1,0 +1,65 @@
+<p>We&rsquo;ve reached the point we needed to translate one of our Elm apps to multiple languages.</p>
+
+<div class="demo-block text-center">
+  <a class="demo" target=_blank" href="https://gizra.github.io/elm-i18n-example/">View demo</a>
+  <a class="code" target=_blank" href="https://github.com/Gizra/elm-i18n-example">Get the source code</a>
+</div>
+
+<div class="thumbnail">
+  <div class="img-wrapper">
+
+    
+
+    
+      <img src="http://www.gizra.com/assets/images/posts/elm-i18n/image1.gif">
+    
+
+  </div>
+  
+</div>
+
+<p>We looked for existing solutions and stumbled upon the elm-i18n library. This
+of course made us happy, to see that someone has already solved the problem for us. However, when we looked at the <a href="https://github.com/lukewestby/elm-i18n/tree/84d7da3a51d52a89d1e3371bfeb4f34eab05341c#example">example</a> something felt missing. Type safety.</p>
+
+<p>In Gizra we deal most hours of our working days with PHP, so you can say we are
+fearless developers. That is, we hope and believe our code is right, and
+worst case we know we will catch our bugs on run time.</p>
+
+<p>But Elm can make us better developers, and give us some safety!</p>
+
+<!-- more -->
+
+<h2>Type Safety</h2>
+
+<p>If you look at <code>show (i18nText &quot;I am {0} years old.&quot; [&quot;24&quot;])</code> you might notice that there is no guarantee that the string is even translated to other languages. Further more, are we sure that we are sending the correct number of arguments (in the above case it&rsquo;s <code>24</code>)?</p>
+
+<p>I jumped into the Elm channel and had a very nice chat with @lukewestby, elm-i18n library author, which pointed out some really good points (like the need for type safety not just for the strings, but for the arguments as-well).</p>
+
+<p>This was no doubt yet another case for the great power of open source, collaboration, and friendly community: I came to the chat with a half baked solution, and left with a complete one.</p>
+
+<p>The entire logic of the translation is in <a href="https://github.com/Gizra/elm-i18n-example/blob/master/Translation/Utils.elm">this</a> short file. We define our translation as types.</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">TranslationId</span>
+  <span class="ow">=</span> <span class="kt">Login</span>
+  <span class="o">|</span> <span class="kt">WelcomeBack</span> <span class="p">{</span><span class="n">name</span> <span class="kt">:</span> <span class="kt">String</span><span class="p">}</span>
+</code></pre></div>
+<p>All the strings in our app will be represented in this <code>TranslationId</code> type, along with their required arguments. By having this, we can now do things like:</p>
+<div class="highlight"><pre><code class="haskell language-haskell" data-lang="haskell"><span class="nf">div</span> <span class="kt">[]</span> <span class="p">[</span><span class="n">text</span> <span class="o">&lt;|</span> <span class="n">translate</span> <span class="kt">Spanish</span> <span class="kt">Login</span><span class="p">]</span>
+<span class="c1">-- Result: &quot;Por favor haga login&quot;</span>
+
+<span class="nf">div</span> <span class="kt">[]</span> <span class="p">[</span><span class="n">text</span> <span class="o">&lt;|</span> <span class="n">translate</span> <span class="kt">English</span> <span class="o">&lt;|</span> <span class="kt">WelcomeBack</span> <span class="p">{</span><span class="n">name</span> <span class="ow">=</span> <span class="s">&quot;Elm lover&quot;</span><span class="p">}]</span>
+<span class="c1">-- Result: &quot;Welcome back Elm lover&quot;</span>
+</code></pre></div>
+<p>This is one of the great powers of Elm! By having those types, we let the compiler help us with preventing silly mistakes.</p>
+
+<p>We can now never try to translate a non existing string. We also can not try to call a string, without passing all the arguments.
+Or, we can&rsquo;t ever miss translating an existing string.<br>
+It&rsquo;s all covered by Elm&rsquo;s types.</p>
+
+<p>Go ahead, and see the <a href="https://github.com/Gizra/elm-i18n-example/blob/master/App/View.elm#L11">View.elm</a> file or the <a href="https://github.com/Gizra/elm-i18n-example/blob/master/Translation/Test.elm">unit tests</a>.</p>
+
+<h2>Next steps</h2>
+
+<p>Developers don&rsquo;t necessarily speak all the app&rsquo;s languages. I mean, we are a smart bunch, but there&rsquo;s a limit, right? :)</p>
+
+<p>What often happens is that translation is written in different text files (e.g. in PO format). So our next plan is to write a script that will get as input those files, and will auto-generate an Elm file that will contain
+valid code with all the strings.</p>
