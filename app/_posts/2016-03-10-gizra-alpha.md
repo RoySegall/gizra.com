@@ -6,7 +6,7 @@ title: Gizra Alpha
 created: 1457426160
 layout: post
 image: "/assets/images/posts/gizra-alpha/thumb.jpg"
-Description:"Gizra began its life as a product company but instead ended up doing projects for clients. It is time to take Gizra to the next level and put a real effort behind our products side."
+description: "Gizra began its life as a product company but instead ended up doing projects for clients. It is time to take Gizra to the next level and put a real effort behind our products side."
 author: niryariv
 
 ---
