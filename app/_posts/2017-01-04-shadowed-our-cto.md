@@ -16,7 +16,7 @@ Most of software development is about solving problems. For some time now, I hav
 
 For most of the day Amitai was busy writing code in Elm. I don't (yet) know Elm so I understood very little of the code, but the truth is, it didn’t matter - because I learned a lot about his way of working.  
 
-I'm not sure I've found an answer to how to solve a problem, but I certainly recognize some characteristics that are needed to become a better developer: great work processes, the right attitude, and staying humble." And because what I love most is to teach others what I have learned. Here are my observations:
+I'm not sure I've found an answer to how to solve a problem, but I certainly recognize some characteristics that are needed to become a better developer: great work processes, the right attitude, and staying humble. And because what I love most is to teach others what I have learned, here are my observations:
 
 ##Without Shortcuts
 Work in an orderly manner. Take small, but correct, steps. Focus on one thing, and don't jump from one place to another. If you must leave a loose end, record it so you can easily go back at a later time.  Write organized code with clear hierarchies, using clear names for variables and functions. Do not be stingy with comments to explain what the code does.
@@ -43,7 +43,7 @@ There are times it is not clear about how to approach a problem, but sometimes y
 This is exactly what needs to be done - without looking back, without regret about the time spent, without getting stuck on the previous path just because you already went there. Always keep an open mind, be willing to try and make a mistake, this is the best way to learn and grow. This is what success is made of.
 
 ##Be Glad to Get Comments, It's Free!
-No one likes to get bad comments, and it may be frustrating to get them for every little thing, but I think it is necessary. If you we want to be the best, this is something that you should not compromise on. This is a wonderful opportunity to get better, and I think people should be thankful that someone has taken the time to review their code carefully and write comments.  
+No one likes to get bad comments, and it may be frustrating to get them for every little thing, but I think it is necessary. If you want to be the best, this is something that you should not compromise on. This is a wonderful opportunity to get better, and I think people should be thankful that someone has taken the time to review their code carefully and write comments.  
 
 When I watched Amitai, I noticed that he wrote detailed and accurate comments (which I very much appreciate), but on the other hand, his compliments were general and only contained one or two words or just an icon. I brought this to his attention, because I believe that when someone does something well, they need to hear specific positive feedback to feel valued for their efforts. When it is warranted, there is no need to save on good words.  
 
