@@ -6,20 +6,25 @@
       
     
 
-<title>Budget Goggles: A Common Language and Setting Expectations</title>
+<title>Entities Diagram Graph</title>
 
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
       <meta property="og:site_name" content="Gizra">
 
       
-        <meta property="og:title" content="Budget Goggles: A Common Language and Setting Expectations">
+        <meta property="og:title" content="Entities Diagram Graph">
       
 
       
+      <meta name="description" content="Drupal 7 module that generates an entities diagram graph">
+      <meta property="og:description" content="Drupal 7 module that generates an entities diagram graph">
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@gizra_drupal" />
+      
 
       
-      <meta property="og:image" content="http://www.gizra.com/assets/images/posts/budget-goggles/thumb.jpg">
+      <meta property="og:image" content="http://www.gizra.com/assets/images/posts/entity-relations/image1.jpg">
       
 
       <!-- Favicon for all platforms -->
@@ -80,23 +85,23 @@
 
   
     
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
       
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
     
   
 
@@ -255,8 +260,8 @@
   <div class="container">
     <div class="row">
       <div id="post-title" class="col-sm-10 col-sm-offset-1">
-        <h1><a href="/content/budget-goggles">Budget Goggles: A Common Language and Setting Expectations </a></h1>
-        <div class="post-author">By Rachel Baram</div>
+        <h1><a href="/content/entity-relationships">Entities Diagram Graph </a></h1>
+        <div class="post-author">By Brice Lenfant</div>
       </div>
     </div>
     <div class="row">
@@ -264,16 +269,18 @@
   			<div id="post-label">
   		 		<a href="/blog"><span class="label label-default">Gizra Blog</span></a>
   			</div>
-        <div class="date">17 Mar 2016</div>
+        <div class="date">24 Jan 2016</div>
         <section class="author-details">
           <div class="image-wrapper">
-            <img src="/images/team/avatars/RachelBaram.b879.jpg" class="img-circle img-responsive">
+            <img src="/images/team/avatars/bricel.f3f2.jpg" class="img-circle img-responsive">
           </div>
           <div class="text-wrapper">
-            <span class="name">Rachel Baram</span>
+            <span class="name">Brice Lenfant</span>
             
-            <div class="title">Business Development</div>
-            <div class="bio">Loves to make things make sense.</div>
+              <span class="twitter">(@briceAtGizra)</span>
+            
+            <div class="title">CEO, Co-Owner</div>
+            <div class="bio">Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.</div>
           </div>
         </section>
         <div class="tags">
@@ -287,10 +294,6 @@
     
       <li><a href="/tags.html#Drupal-planet-ref">Drupal-planet</a></li>
     
-      <li><a href="/tags.html#The Gizra Way-ref">The Gizra Way</a></li>
-    
-      <li><a href="/tags.html#Project Management-ref">Project Management</a></li>
-    
   
 
 
@@ -300,13 +303,11 @@
       </div>
       <div id="post-content" class="col-sm-8">
 
-        <p>By default IT projects will fail. They may still launch but not accomplish any one of the following requirements of a successful project: on time, within budget, with happy users.</p>
+        <p>We are often challenged with the maintenance of existing projects that were developed by other agencies, or a new developer arrives and we need to quickly bring them on board. The complexity of legacy projects can be very high and the risk of breaking existing logic is something we want to avoid.</p>
 
-<p>Gizra addresses this by defining the ambiguous with the simple but powerful principle that the <strong>budget dictates the project</strong>. It all begins (and ends) at the price estimation. Our budget breakdown creates a common language for all stakeholders and sets expectations early on.</p>
+<p>One way we like to look at a project before diving into the code is through its data structure. The different entities and their relations can tell us a lot about the business logic of the site and its internal logic. We assumed that if we could <em>easily</em> generate a graph with all the bundles, entities, and their relations this complex task would be easier.</p>
 
-<p>After a <strong>discovery phase</strong>, the project is broken down to <strong>timeboxed tasks</strong> - each with a clear deadline and cost to produce the deliverable. We set the maximum time to complete a task at 12 hours because this number is easily grasped by all stakeholders. Every feature and bug has a price tag and we encourage our clients <em>not</em> to try to buy them all (at least not at first).</p>
-
-<p>An example of our budget breakdown:</p>
+<p>Having done this for a while now, I believe our assumption was right. Taking our open-source <a href="https://github.com/Gizra/productivity#gizra-productivity">Productivity project</a> (Gizra&rsquo;s internal ERP/Project management system) as an example, it&rsquo;s much easier to look at the following graph and understand that <code>Work session</code>, <code>Time tracking</code>, <code>Payment</code>, and <code>Github Issue</code> bundles are pointing at a <code>Project</code>, which in turn points to an <code>Account</code> bundle. <code>Github Issue</code> can also reference itself.</p>
 
 <div class="thumbnail">
   <div class="img-wrapper">
@@ -314,7 +315,7 @@
     
 
     
-      <img src="http://www.gizra.com/assets/images/posts/budget-goggles/image1.jpg">
+      <img src="http://www.gizra.com/assets/images/posts/entity-relations/image1.jpg">
     
 
   </div>
@@ -323,15 +324,33 @@
 
 <!-- more -->
 
-<p>The awareness of time increases productivity. Deliverables and deadline expectations are clear and the risk of scope creep and over engineering (the enemy of good is perfect) is mitigated. Awareness of cost encourages thinking about value - does it make sense for our clients to pay this much for this task?</p>
+<p>Thanks to <a href="https://www.drupal.org/u/damien-tournoud">Damien Tournoud&rsquo;s</a> <a href="https://www.drupal.org/project/1438582/git-instructions">previous work</a> getting the graph out wasn&rsquo;t too complicated. His sanbox module already output the entities and bundles. It was merely missing the relationships between them, and a UI to display the graph.</p>
 
-<p>In the rare case that a task exceeds the timebox, a <strong>review process</strong> is triggered to identify the cause and is quickly remedied. Identifying an issue - such as a wrong estimate, design problems, lack of understanding of a task, or missing critical information - at the task level,  before it compounds, ensures a <strong>low cost of mistakes</strong>.</p>
+<p>So, standing on the shoulders of giants, we&rsquo;ve adapted the code and now have an <a href="https://github.com/Gizra/entitiesdiagram">Entities Diagram</a> module.</p>
 
-<p>Determining success at the task level - was the task completed on time and in budget - provides a <strong>real-time measurement of success</strong>. At any stage of the project we have a measurable way to identify where we stand and how aligned we are with the set expectations.</p>
+<h2>Usage</h2>
 
-<p>In the case of lean demonstrations of a product idea (<strong>Proof-of-Concept, Prototype, Minimal Viable Product</strong>) the scope is not yet defined so the uncertainty and inherent risk can be immediately addressed by first timeboxing at the project-wide level. Web based product ideas can be successfully demonstrated within 3-4 months of development and with 1-3 developers which is easily translated into a budget range. With this anchor, clients can move forward confidently with the project.</p>
+<p>There are two interfaces to get the graph:</p>
 
-<p>The beauty of this budget driven approach is that it works for most type and size projects. Gizra has found this to be an invaluable premise in our efforts to execute successful projects.</p>
+<h3>Drush</h3>
+
+<p>When using Drush we need the <a href="http://www.graphviz.org/doc/info/command.html">Graphviz</a> command line library to generate the graph,
+since the module only generates text file in the <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language">DOT language</a>.</p>
+
+<p>Use this from the command line to get an image:<br>
+<code>drush entitiesdiagram | dot -Gratio=0.7 -Eminlen=2 -T png -o ./test.png</code></p>
+
+<h3>UI</h3>
+
+<p>Craft your URL according to your needs:</p>
+
+<ul>
+<li>All the entities at <code>/admin/entities-diagram</code></li>
+<li>Only the node&rsquo;s bundles <code>/admin/entities-diagram/node</code></li>
+<li>A simplified graph of the node&rsquo;s bundles, with no fields at <code>/admin/entities-diagram/node/false</code></li>
+</ul>
+
+<p>Simple, but powerful.</p>
 
 
       </div>
@@ -343,9 +362,9 @@
     <div class="row">
       <div class="col-sm-3 col-sm-offset-3 col-xs-6 previous">
         
-        <a href="/content/our-shoov-dashboard">
+        <a href="/content/apps-entity-restrictions">
           <div id="previous-label" class="text-small">
-            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Our Shoov Dashboard</span>
+            <span class="hidden-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Drupal, Hippies and Backend Restrictions</span>
             <span class="visible-xs"><i class="fa fa-chevron-circle-left"></i>&nbsp;Previous post</span>
           </div>
         </a>
@@ -353,9 +372,9 @@
       </div>
       <div class="col-sm-3 col-sm-offset-2 col-xs-6 next">
         
-        <a href="/content/elm-i18n-type-safety">
+        <a href="/content/xss-attack">
           <div id="next-label" class="text-small">
-            <span class="hidden-xs">Elm i18n and Type Safety&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
+            <span class="hidden-xs">Cross-Site Scripting attack detection&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
             <span class="visible-xs">Next post&nbsp;<i class="fa fa-chevron-circle-right"></i></span>
           </div>
         </a>

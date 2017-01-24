@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Tue, 24 Jan 2017 06:14:02 -0600</lastBuildDate>
-    <pubDate>Tue, 24 Jan 2017 06:14:02 -0600</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 06:33:49 -0600</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 06:33:49 -0600</pubDate>
     <ttl>1800</ttl>
 
     
@@ -788,7 +788,7 @@ Before Yesod, we were running NodeJs as our proxy server for light tasks or real
       </item>
     
       <item>
-        <title>Elm With Electron</title>
+        <title>Elmctron - Build Desktop Apps with Elm and Electron</title>
         <description>
           &lt;p&gt;I work at Gizra, so it was only a matter of time before Elm infected me as well, and I think it&amp;rsquo;s growing on me.&lt;/p&gt;
 
@@ -808,10 +808,10 @@ Before Yesod, we were running NodeJs as our proxy server for light tasks or real
 &lt;li&gt;Start the electron app.&lt;/li&gt;
 &lt;/ul&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/07/28/elm-with-electron.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-electron-build/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/07/28/elm-with-electron.html</link>
-        <guid>http://www.gizra.com/2016/07/28/elm-with-electron</guid>
+        <link>http://www.gizra.com/content/elm-electron-build</link>
+        <guid>http://www.gizra.com/content/elm-with-electron</guid>
         <pubDate>Thu, 28 Jul 2016 00:00:00 -0500</pubDate>
       </item>
     
@@ -1115,7 +1115,7 @@ on a machine you don&amp;rsquo;t have direct access to, and there is no browser.
       </item>
     
       <item>
-        <title>How Think Elm</title>
+        <title>How To Think Elm</title>
         <description>
           &lt;p&gt;The 2nd Elm - TLV meetup was lots of fun. But it was in Hebrew, and the intersection
 between Hebrew speakers and Elm devs is still very limited.&lt;/p&gt;
@@ -1126,15 +1126,15 @@ might give you a nudge in the right direction.&lt;/p&gt;
 
 &lt;iframe width=&quot;480&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/tx07ysIrAz8?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/03/24/how-think-elm.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/how-think-elm/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/03/24/how-think-elm.html</link>
-        <guid>http://www.gizra.com/2016/03/24/how-think-elm</guid>
+        <link>http://www.gizra.com/content/how-think-elm</link>
+        <guid>http://www.gizra.com/content/how-think-elm</guid>
         <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
       </item>
     
       <item>
-        <title>Elm I18n</title>
+        <title>Elm i18n and Type Safety</title>
         <description>
           &lt;p&gt;We&amp;rsquo;ve reached the point we needed to translate one of our Elm apps to multiple languages.&lt;/p&gt;
 
@@ -1165,10 +1165,10 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
 
 &lt;p&gt;But Elm can make us better developers, and give us some safety!&lt;/p&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/03/24/elm-i18n.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/elm-i18n-type-safety/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/03/24/elm-i18n.html</link>
-        <guid>http://www.gizra.com/2016/03/24/elm-i18n</guid>
+        <link>http://www.gizra.com/content/elm-i18n-type-safety</link>
+        <guid>http://www.gizra.com/content/elm-i18n</guid>
         <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
       </item>
     
@@ -1204,7 +1204,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Our Dashboard</title>
+        <title>Our Shoov Dashboard</title>
         <description>
           &lt;p&gt;Hi there! Please meet our dashboard:&lt;/p&gt;
 
@@ -1229,10 +1229,10 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m kidding of course. We all make mistakes - we&amp;rsquo;re only human. But Shoov isn&amp;rsquo;t.&lt;/p&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/03/13/our-dashboard.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/our-shoov-dashboard/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/03/13/our-dashboard.html</link>
-        <guid>http://www.gizra.com/2016/03/13/our-dashboard</guid>
+        <link>http://www.gizra.com/content/our-shoov-dashboard</link>
+        <guid>http://www.gizra.com/content/our-dashboard</guid>
         <pubDate>Sun, 13 Mar 2016 00:00:00 -0600</pubDate>
       </item>
     
@@ -1266,10 +1266,10 @@ The future is already here — it&amp;rsquo;s just not very evenly distributed.
   
 &lt;/div&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/03/10/gizra-alpha.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/gizra-alpha//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/03/10/gizra-alpha.html</link>
-        <guid>http://www.gizra.com/2016/03/10/gizra-alpha</guid>
+        <link>http://www.gizra.com/content/gizra-alpha/</link>
+        <guid>http://www.gizra.com/content/gizra-alpha</guid>
         <pubDate>Thu, 10 Mar 2016 00:00:00 -0600</pubDate>
       </item>
     
@@ -1308,7 +1308,7 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
       </item>
     
       <item>
-        <title>Entity Relations Graph</title>
+        <title>Entities Diagram Graph</title>
         <description>
           &lt;p&gt;We are often challenged with the maintenance of existing projects that were developed by other agencies, or a new developer arrives and we need to quickly bring them on board. The complexity of legacy projects can be very high and the risk of breaking existing logic is something we want to avoid.&lt;/p&gt;
 
@@ -1329,10 +1329,10 @@ And to avoid it - you would like to have some kind of &amp;ldquo;vaccine&amp;rdq
   
 &lt;/div&gt;
 
-          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/2016/01/24/entity-relations-graph.html/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/entity-relationships/&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
         </description>
-        <link>http://www.gizra.com/2016/01/24/entity-relations-graph.html</link>
-        <guid>http://www.gizra.com/2016/01/24/entity-relations-graph</guid>
+        <link>http://www.gizra.com/content/entity-relationships</link>
+        <guid>http://www.gizra.com/content/entity-relations-graph</guid>
         <pubDate>Sun, 24 Jan 2016 00:00:00 -0600</pubDate>
       </item>
     
