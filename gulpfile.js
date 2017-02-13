@@ -24,7 +24,7 @@ var svgmin = require('gulp-svgmin');
 // This will build the site with the production settings
 gulp.task("jekyll:dev", $.shell.task("bundle exec jekyll build"));
 gulp.task("jekyll-rebuild", ["jekyll:dev", "js"], function() {
-    reload;
+  reload;
 });
 
 // Almost identical to the above task, but instead we load in the build configuration
@@ -37,159 +37,159 @@ gulp.task("jekyll:local-prod", $.shell.task("bundle exec jekyll build --config _
 
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function() {
-    // Looks at the style.scss file for what to include and creates a style.css file
-    return gulp.src("src/assets/scss/style.scss")
-        .pipe($.sass())
-        // AutoPrefix your CSS so it works between browsers
-        .pipe($.autoprefixer("last 1 version", {
-            cascade: true
-        }))
-        // Directory your CSS file goes to
-        .pipe(gulp.dest("src/assets/stylesheets/"))
-        .pipe(gulp.dest("serve/assets/stylesheets/"))
-        .pipe(gulp.dest("site/assets/stylesheets/"))
-        // Outputs the size of the CSS file
-        .pipe($.size({
-            title: "styles"
-        }))
-        // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
-        .pipe(reload({
-            stream: true
-        }));
+  // Looks at the style.scss file for what to include and creates a style.css file
+  return gulp.src("src/assets/scss/style.scss")
+    .pipe($.sass())
+    // AutoPrefix your CSS so it works between browsers
+    .pipe($.autoprefixer("last 1 version", {
+      cascade: true
+    }))
+    // Directory your CSS file goes to
+    .pipe(gulp.dest("src/assets/stylesheets/"))
+    .pipe(gulp.dest("serve/assets/stylesheets/"))
+    .pipe(gulp.dest("site/assets/stylesheets/"))
+    // Outputs the size of the CSS file
+    .pipe($.size({
+      title: "styles"
+    }))
+    // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
+    .pipe(reload({
+      stream: true
+    }));
 });
 
 gulp.task("js", function() {
-    gulp.src('src/assets/javascript/*.js')
-        .pipe(gulp.dest('serve/assets/javascript'))
-        .pipe(gulp.dest("site/assets/javascript/"));
+  gulp.src('src/assets/javascript/*.js')
+    .pipe(gulp.dest('serve/assets/javascript'))
+    .pipe(gulp.dest("site/assets/javascript/"));
 });
 
 // Optimizes the images that exists
 gulp.task("images", function() {
-    return gulp.src("src/assets/images/**/*")
-        .pipe($.changed("site/assets/images"))
-        .pipe($.imagemin({
-            // Lossless conversion to progressive JPGs
-            progressive: true,
-            // Interlace GIFs for progressive rendering
-            interlaced: true
-        }))
-        .pipe(gulp.dest("site/assets/images"))
-        .pipe($.size({
-            title: "images"
-        }));
+  return gulp.src("src/assets/images/**/*")
+    .pipe($.changed("site/assets/images"))
+    .pipe($.imagemin({
+      // Lossless conversion to progressive JPGs
+      progressive: true,
+      // Interlace GIFs for progressive rendering
+      interlaced: true
+    }))
+    .pipe(gulp.dest("site/assets/images"))
+    .pipe($.size({
+      title: "images"
+    }));
 });
 
 // Copy over fonts to the "site" directory
 gulp.task("fonts", function() {
-    return gulp.src("src/assets/fonts/**")
-        .pipe(gulp.dest("site/assets/fonts"))
-        .pipe($.size({
-            title: "fonts"
-        }));
+  return gulp.src("src/assets/fonts/**")
+    .pipe(gulp.dest("site/assets/fonts"))
+    .pipe($.size({
+      title: "fonts"
+    }));
 });
 
 // Copies favicon to the site folder
 gulp.task("copy:favicons", function() {
-    return gulp.src("src/assets/favicons/**/*")
-        .pipe(gulp.dest("site/assets/favicons"));
+  return gulp.src("src/assets/favicons/**/*")
+    .pipe(gulp.dest("site/assets/favicons"));
 });
 
 // Copy bower.
 gulp.task("copy:bower", function() {
-    return gulp.src(["serve/bower_components/**/*"])
-        .pipe(gulp.dest("site/bower_components"))
-        .pipe($.size({
-            title: "Bower"
-        }))
+  return gulp.src(["serve/bower_components/**/*"])
+    .pipe(gulp.dest("site/bower_components"))
+    .pipe($.size({
+      title: "Bower"
+    }))
 });
 
 // Copy over vendors to the "site" directory
 gulp.task("vendors", function() {
-    return gulp.src("src/assets/javascript/vendors/**")
-        .pipe(gulp.dest("site/assets/javascript/vendors"))
-        .pipe($.size({
-            title: "vendors"
-        }));
+  return gulp.src("src/assets/javascript/vendors/**")
+    .pipe(gulp.dest("site/assets/javascript/vendors"))
+    .pipe($.size({
+      title: "vendors"
+    }));
 });
 
 // Copy xml and txt files to the "site" directory
 gulp.task("copy", function() {
-    return gulp.src(["serve/*.txt", "serve/*.xml"])
-        .pipe(gulp.dest("site"))
-        .pipe($.size({
-            title: "Copy xml, txt"
-        }))
+  return gulp.src(["serve/*.txt", "serve/*.xml"])
+    .pipe(gulp.dest("site"))
+    .pipe($.size({
+      title: "Copy xml, txt"
+    }))
 });
 
 gulp.task("cname", function() {
-    return gulp.src(["serve/CNAME"])
-        .pipe(gulp.dest("site"))
-        .pipe($.size({
-            title: "CNAME"
-        }))
+  return gulp.src(["serve/CNAME"])
+    .pipe(gulp.dest("site"))
+    .pipe($.size({
+      title: "CNAME"
+    }))
 });
 
 
 // Optimizes all the CSS, HTML and concats the JS etc
 gulp.task("html", ["styles"], function() {
-    var assets = $.useref.assets({
-        searchPath: "serve"
-    });
+  var assets = $.useref.assets({
+    searchPath: "serve"
+  });
 
-    return gulp.src("serve/**/*.html")
-        .pipe(assets)
-        // Concatenate JavaScript files and preserve important comments
-        .pipe($.if("*.js", $.uglify({
-            preserveComments: "some"
-        })))
-        // Minify CSS
-        .pipe($.if("*.css", $.minifyCss()))
-        // Start cache busting the files
-        .pipe($.revAll({
-            ignore: [".eot", ".svg", ".ttf", ".woff"]
-        }))
-        .pipe(assets.restore())
-        // Conctenate your files based on what you specified in _layout/header.html
-        .pipe($.useref())
-        // Replace the asset names with their cache busted names
-        .pipe($.revReplace())
-        // Minify HTML
-        .pipe($.if("*.html", $.htmlmin({
-            removeComments: true,
-            removeCommentsFromCDATA: true,
-            removeCDATASectionsFromCDATA: true,
-            collapseWhitespace: true,
-            collapseBooleanAttributes: true,
-            removeAttributeQuotes: true,
-            removeRedundantAttributes: true,
-            keepClosingSlash: true
-        })))
-        // Send the output to the correct folder
-        .pipe(gulp.dest("site"))
-        .pipe($.size({
-            title: "optimizations"
-        }));
+  return gulp.src("serve/**/*.html")
+    .pipe(assets)
+    // Concatenate JavaScript files and preserve important comments
+    .pipe($.if("*.js", $.uglify({
+      preserveComments: "some"
+    })))
+    // Minify CSS
+    .pipe($.if("*.css", $.minifyCss()))
+    // Start cache busting the files
+    .pipe($.revAll({
+      ignore: [".eot", ".svg", ".ttf", ".woff"]
+    }))
+    .pipe(assets.restore())
+    // Conctenate your files based on what you specified in _layout/header.html
+    .pipe($.useref())
+    // Replace the asset names with their cache busted names
+    .pipe($.revReplace())
+    // Minify HTML
+    .pipe($.if("*.html", $.htmlmin({
+      removeComments: true,
+      removeCommentsFromCDATA: true,
+      removeCDATASectionsFromCDATA: true,
+      collapseWhitespace: true,
+      collapseBooleanAttributes: true,
+      removeAttributeQuotes: true,
+      removeRedundantAttributes: true,
+      keepClosingSlash: true
+    })))
+    // Send the output to the correct folder
+    .pipe(gulp.dest("site"))
+    .pipe($.size({
+      title: "optimizations"
+    }));
 });
 
 
 // Task to upload your site to your personal GH Pages repo
 gulp.task("deploy", function() {
-    // Deploys your optimized site, you can change the settings in the html task if you want to
-    return gulp.src("./site/**/*")
-        .pipe($.ghPages({
-            // Currently only personal GitHub Pages are supported so it will upload to the master
-            // branch and automatically overwrite anything that is in the directory
-            cacheDir: "./.tmp"
-        }));
+  // Deploys your optimized site, you can change the settings in the html task if you want to
+  return gulp.src("./site/**/*")
+    .pipe($.ghPages({
+      // Currently only personal GitHub Pages are supported so it will upload to the master
+      // branch and automatically overwrite anything that is in the directory
+      cacheDir: "./.tmp"
+    }));
 });
 
 // Run JS Lint against your JS
 gulp.task("jslint", function() {
-    gulp.src("./serve/assets/javascript/*.js")
-        // Checks your JS code quality against your .jshintrc file
-        .pipe($.jshint(".jshintrc"))
-        .pipe($.jshint.reporter());
+  gulp.src("./serve/assets/javascript/*.js")
+    // Checks your JS code quality against your .jshintrc file
+    .pipe($.jshint(".jshintrc"))
+    .pipe($.jshint.reporter());
 });
 
 // Runs "jekyll doctor" on your site to check for errors with your configuration
@@ -200,41 +200,41 @@ gulp.task("doctor", $.shell.task("bundle exec jekyll doctor"));
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
 gulp.task("serve:dev", ["styles", "jekyll:dev", "js"], function() {
-    bs = browserSync({
-        notify: true,
-        open: true,
-        // tunnel: "",
-        server: {
-            baseDir: "serve"
-        }
-    });
+  bs = browserSync({
+    notify: true,
+    open: true,
+    // tunnel: "",
+    server: {
+      baseDir: "serve"
+    }
+  });
 });
 
 // These tasks will look for files that change while serving and will auto-regenerate or
 // reload the website accordingly. Update or add other files you need to be watched.
 gulp.task("watch", function() {
-    gulp.watch([
-        "src/**/*.md",
-        "src/**/*.html",
-        "src/**/*.xml",
-        "src/**/*.txt",
-        "src/**/*.js"
-    ], ["jekyll-rebuild", reload]);
-    gulp.watch(["serve/assets/stylesheets/*.css"], reload({
-        stream: true
-    }));
-    gulp.watch(["src/assets/scss/**/*.scss"], ["styles", reload]);
+  gulp.watch([
+    "src/**/*.md",
+    "src/**/*.html",
+    "src/**/*.xml",
+    "src/**/*.txt",
+    "src/**/*.js"
+  ], ["jekyll-rebuild", reload]);
+  gulp.watch(["serve/assets/stylesheets/*.css"], reload({
+    stream: true
+  }));
+  gulp.watch(["src/assets/scss/**/*.scss"], ["styles", reload]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
 gulp.task("serve:prod", ["publish-local"], function() {
-    bs = browserSync({
-        notify: false,
-        // tunnel: true,
-        server: {
-            baseDir: "site"
-        }
-    });
+  bs = browserSync({
+    notify: false,
+    // tunnel: true,
+    server: {
+      baseDir: "site"
+    }
+  });
 });
 
 // Default task, run when just writing "gulp" in the terminal
@@ -250,52 +250,52 @@ gulp.task("build-local", ["doctor", "jekyll:local-prod", "styles", "js"], functi
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function() {
-    gulp.start(
-        "html",
-        "copy",
-        "copy:bower",
-        "copy:favicons",
-        "cname",
-        "images",
-        "fonts",
-        "vendors",
-        "js"
-    );
+  gulp.start(
+    "html",
+    "copy",
+    "copy:bower",
+    "copy:favicons",
+    "cname",
+    "images",
+    "fonts",
+    "vendors",
+    "js"
+  );
 });
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish-local", ["build-local"], function() {
-    gulp.start(
-        "html",
-        "copy",
-        "copy:bower",
-        "copy:favicons",
-        "cname",
-        "images",
-        "fonts",
-        "vendors",
-        "js"
-    );
+  gulp.start(
+    "html",
+    "copy",
+    "copy:bower",
+    "copy:favicons",
+    "cname",
+    "images",
+    "fonts",
+    "vendors",
+    "js"
+  );
 });
 
 
 
 
 gulp.task('svgstore', function() {
-    return gulp
-        .src('src/images/elements/*.svg')
-        .pipe(svgmin(function(file) {
-            return {
-                plugins: [{
-                    removeTitle: true
-                }, {
-                    cleanupNumericValues: {
-                        floatPrecision: 1
-                    }
-                }]
-            }
-        }))
-        .pipe(svgstore())
-        .pipe(gulp.dest('src/_includes/'));
+  return gulp
+    .src('src/images/elements/*.svg')
+    .pipe(svgmin(function(file) {
+      return {
+        plugins: [{
+          removeTitle: true
+        }, {
+          cleanupNumericValues: {
+            floatPrecision: 1
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore())
+    .pipe(gulp.dest('src/_includes/'));
 });
