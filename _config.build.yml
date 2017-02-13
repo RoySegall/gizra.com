@@ -10,12 +10,15 @@ lsi: false
 limit_posts: 0
 url: http://www.gizra.com
 
+# Allow incremental rebuild
+incremental: false
+
 
 source: 'src'
 destination: 'serve'
 
-disqus :
-  short_name : gizra
+disqus:
+  short_name: gizra
 
 google:
   tracking_id: 'UA-6558346-3'
