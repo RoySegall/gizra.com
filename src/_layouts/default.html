@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% case page.title %}
+    {% when 'Blog' %}
+      {% capture title %}Gizra's Blog{% if paginator.page > 1 %} | Page {{ paginator.page }}{% endif %}{% endcapture %}
+    {% else %}
+      {% assign title = page.title %}
+  {% endcase %}
+
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}">
+  {% else %}
+    <meta property="og:title" content="{{ site.title }}">
+  {% endif %}
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gizra_drupal" />
+  {% endif %}
+
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
+
+  <!-- Favicon for all platforms -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/assets/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End favicon for all platforms -->
+
+  <link href="https://fonts.googleapis.com/css?family=Rasa" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" integrity="sha256-wT6CFc7EKRuf7uyVfi+MQNHUzojuHN2pSw0YWFt2K5E=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/stylesheets/style.css" />
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js" integrity="sha256-flVaeawsBV96vCHiLmXn03IRJym7+ZfcLVvUWONCas8=" crossorigin="anonymous"></script>
+</head>
+
+<body class="pushable">
+
+  <div class="ui sidebar inverted vertical menu left">
+    <a class="item active" href="/">
+      Home
+    </a>
+    <a class="item" href="/team">
+      Team
+    </a>
+    <a class="item" href="/blog">
+      Blog
+    </a>
+    <a class="item" href="/projects">
+      Projects
+    </a>
+    <a class="item" href="/contact">
+      Contact
+    </a>
+  </div>
+
+  <div class="pusher">
+    <div class="ui grid container">
+
+        {% include header.html %}
+
+        {{ content }}
+
+
+    </div>
+
+    {% include footer.html %}
+
+</div>
+  <script src="/bower_components/anchor-js/anchor.min.js"></script>
+  <script src="/assets/javascript/script.js"></script>
+</body>
+
+</html>

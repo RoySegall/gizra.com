@@ -1,42 +1,40 @@
-# Jekyll configuration precedence:
-# 1. Gruntfile task
-# 2. config.build.yml
-# 3. config.yml
-
-name: yo-jekyllrb
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: Jekyll-base
 description:
-author:
-  name: Amitai Burstein
-  email: amitai@gizra.com
+tagline:
+url: http://localhost:3000
 
-# Grunt handles images and assets.
-exclude: ['images', 'css', 'js', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+source: src
+destination: serve
 
-include: ['.htaccess']
+wrapper_classes:
+  full: "sixteen wide column"
+  narrow: "sixteen wide tablet twelve wide computer sixteen wide mobile centered column"
 
-# _config.build.yml sets future and show_drafts to false on `grunt build`
-future: true
-show_drafts: true
+collections:
+  story:
+    output: true
+  case-studies:
+    output: true
 
-# Markdown library
-markdown: redcarpet
-redcarpet:
-  extensions: ['fenced_code_blocks', 'tables', 'smart']
+# Allow incremental rebuild
+incremental: true
 
-# Jekyll redirect gem
 gems:
+  - jekyll-paginate
   - jekyll-redirect-from
 
-pygments: true
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 title : Gizra
 excerpt_separator: "<!-- more -->"
 
-paginate: 10
+paginate: 12
 paginate_path: "blog/page:num"
-
-url: http://www.gizra.com
 
 authors:
   - amitaibu:
@@ -45,6 +43,7 @@ authors:
       is_member: true
       bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/the-about-story/">The about story</a>.
       email: amitai@gizra.com
+      drupal: amitaibu
       twitter: amitaibu
       github: amitaibu
       avatar: amitaibu.jpg
@@ -55,6 +54,7 @@ authors:
       is_member: true
       bio: Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.
       email: brice@gizra.com
+      drupal:  bricel
       twitter: briceAtGizra
       github: bricel
       avatar: bricel.jpg
@@ -72,7 +72,7 @@ authors:
   - kazabooboo:
       name: Adar Earon
       title: USA Director
-      is_member: true
+      is_member: false
       bio: I don't really need tips on how to fall asleep. I have twins.
       email: adar@gizra.com
       twitter: kzbooboo
@@ -85,6 +85,7 @@ authors:
       is_member: true
       bio: If I'm not here, I'm at Wrigley Field.
       email: adam@gizra.com
+      drupal: IshaDakota
       twitter: adamhstewart
       github: IshaDakota
       avatar: IshaDakota.jpg
@@ -146,7 +147,7 @@ authors:
   - noamcastel:
       name: Noam Castel
       title: Team Lead
-      is_member: false
+      is_member: true
       bio: Loves home-made hummus and is still trying to convince people that computers and nature do not contradict.
       email: noam@gizra.com
       github: noamoss
@@ -164,7 +165,7 @@ authors:
   - NirGalon:
       name: Nir Galon
       title: Developer
-      is_member: true
+      is_member: false
       bio: A geek who always want to learn new things.
       email: nir.galon@gizra.com
       github: nirgn975

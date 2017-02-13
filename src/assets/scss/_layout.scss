@@ -1,0 +1,32 @@
+body.pushable {
+  &,
+  & > .pusher {
+    background-color: #f5f5f5 !important;
+  }
+}
+
+.pusher > .ui.grid.container {
+  // Keep footer on the bottom of the page.
+  // @todo: Adjust for tablet/ mobile
+  min-height: calc(100vh - 100px);
+  // Prevent trying to "stretch" the main content when it is short.
+  // This is needed for the Team page, where filtering the team may result
+  // with the main window becoming shorter.
+  display: block;
+}
+
+.gizra-logo svg {
+  transform: scale(0.5);
+}
+
+.menu.bar {
+  padding: 2em 0;
+}
+
+footer.ui.vertical.segment {
+  margin-top: 30px;
+
+  .column.icons > a {
+    color: white;
+  }
+}
