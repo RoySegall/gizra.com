@@ -49,7 +49,7 @@ init flags =
                             Basics.floor <| toFloat randomNumber2 / 6
 
                         rotation =
-                            toFloat randomNumber3 / 200 - 3
+                            toFloat randomNumber3 / 50 - 10
 
                         _ =
                             Debug.log "rotation" rotation
