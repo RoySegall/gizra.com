@@ -1,0 +1,32 @@
+---
+layout: default
+title: The Team
+---
+
+<div class="{{ site.wrapper_classes.full }}">
+
+  {% include page_header.html url=page.url title=page.title%}
+
+  <div id="team-app"></div>
+  <script src="{{site.url}}/assets/javascript/Main.js"></script>
+  <script>
+
+      function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      var randomNumbers = [];
+
+      for (i = 0; i < 300; i++) {
+        randomNumbers.push(getRandomInt(0, 1000));
+      }
+
+
+      var node = document.getElementById('team-app');
+      var app = Elm.Main.embed(node, {
+        randomNumbers: randomNumbers
+    });
+  </script>
+
+
+</div>

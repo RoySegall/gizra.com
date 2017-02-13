@@ -1,0 +1,10 @@
+#blog-page {
+  .ui.cards > .card > a > .image > img {
+    width: 100%;
+  }
+
+  .content.top {
+    height: 60px;
+    flex-grow: 0;
+  }
+}

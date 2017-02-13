@@ -1,0 +1,21 @@
+<div class="ui segments">
+  <div class="ui attached center aligned segment">
+
+    {% if include.iframe != nil %}
+      {{ include.iframe }}
+    {% endif %}
+
+    {% if include.image_path != nil %}
+    <div class="ui image">
+      <img src="{{site.url}}/{{ include.image_path }}">
+    </div>
+    {% endif %}
+  </div>
+
+
+  {% if include.caption != nil %}
+    <div class="ui attached center aligned caption segment">
+      {{ include.caption }}
+    </div>
+  {% endif %}
+</div>

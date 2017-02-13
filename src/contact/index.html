@@ -1,0 +1,53 @@
+---
+layout: default
+title: Contact Us
+description: Contact form for Gizra
+keywords: Gizra, Drupal, Contact
+---
+
+<div class="{{ site.wrapper_classes.narrow }}">
+
+  {% include page_header.html url=page.url title=page.title%}
+
+  <div class="ui raised padded segment">
+
+    <form class="ui form" action="https://formspree.io/info@gizra.com" method="POST">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name">
+      </div>
+
+      <div class="field">
+        <label>Company or organization</label>
+        <input type="text" name="company">
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="_replyto"required>
+      </div>
+
+      <div class="field">
+        <label>Phone number</label>
+        <input type="text" name="phone" required>
+      </div>
+
+      <div class="field">
+        <label>Tell us a little about your project</label>
+        <textarea name="project" rows="5"></textarea>
+      </div>
+
+      <button class="ui primary button" type="submit">Send</button>
+
+      <input type="hidden" name="_next" value="//gizra.com/contact/thank-you">
+    </form>
+
+    <div class="ui divider"></div>
+
+    <p>
+      Or just email us at <a class="email" href="mailto:info@gizra.com">info@gizra.com</a>
+    </p>
+
+  </div>
+
+</div>

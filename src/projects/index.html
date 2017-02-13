@@ -1,0 +1,243 @@
+---
+layout: default
+title: Project Portfolio
+---
+
+<div class="{{ site.wrapper_classes.full }}">
+
+  {% include page_header.html url=page.url title=page.title%}
+
+  <div class="ui segments">
+
+    <!-- OpenScholar -->
+    {% capture project_content %}
+    <p>
+      OpenScholar is a full-featured solution for university systems, powering thousands
+      of Harvard University websites. Its strength is in its ability to allow departments, faculty, students, and
+      projects to spin up websites with the click of a button, and with enforceable standards,
+      look and feel, and sensible defaults.
+    </p>
+    <p>
+      Gizra is an integral part of the core development team for OpenScholar stemming from our
+      intimate knowledge of the Drupal-contributed Organic Groups module on top of which OpenScholar
+      is built. In addition, Gizra developed the entire automatic test suite, which is now the
+      largest of any Drupal distributions.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="Harvard OpenScholar"
+        client="Harvard University"
+        url="openscholar.harvard.edu"
+        image="openscholar.jpg"
+        content=project_content
+        case_study="/case-studies/openscholar"
+      %}
+
+      <!-- OpSys -->
+
+      {% capture project_content %}
+      <p>
+        The European Commission selected Gizra to create a project tool to manage
+        billions of Euros invested in developing world projects. Gizra helped define the tool
+        and was responsible for design, implementation, and deployment. The challenge was to
+        provide a simple and clean interface to vast amounts of data in a large multilingual
+        organization.
+
+        Our success led to the complementary Capacity4Dev project, where Gizra is in charge of
+        the UX, consulting, and development of the new version.
+      </p>
+      {% endcapture %}
+
+        {% include project.html
+          title="OpSys"
+          client="The European Commission"
+          image="opsys.jpg"
+          content=project_content
+        %}
+
+      <!-- Unfpa -->
+
+      {% capture project_content %}
+      <p>
+        Gizra was one of several agencies contracted to build and maintain 160 websites, including
+        the organization’s main website. Gizra was specifically selected for expertise in Drupal,
+        continuous integration, and high-level quality assurance. Gizra helped plan the architecture
+        and performed the code review for all sites, as well as setting up a new hosting environment
+        that reduced cost and considerably boosted performance. In ongoing development, complex Drupal
+        tasks are handed over to our developers.
+      </p>
+      {% endcapture %}
+
+        {% include project.html
+          title="United Nations Population Fund"
+          client="The United Nations"
+          url="unfpa.org"
+          image="unfpa.jpg"
+          content=project_content
+        %}
+
+      <!-- Case Del Lector -->
+
+      {% capture project_content %}
+      <p>
+        The National Library of Israel commissioned Gizra to create a virtual exhibition for
+        Madrid’s Casa del Lector museum. Visitors were given tablets to navigate the exhibition
+        content via an interactive map-like interface, providing access to video, audio, and
+        text-based media. The visitor could tap a node and instantaneously highlight its connections
+        within the network of content. A second tap took the user to the node content which
+        contained various options to interact with material. This sleek design and innovative
+        approach was a refreshing alternative to usual museum tours.
+      </p>
+      {% endcapture %}
+
+        {% include project.html
+          title="Casa del Lector Exhibit"
+          client="National Library of Israel & Casa del Lector Madrid"
+          url="gizra.github.io/CDL"
+          image="casa-del-lector.jpg"
+          content=project_content
+          case_study="/case-studies/casa-del-lector"
+        %}
+
+
+      <!-- Huji -->
+
+
+      {% capture project_content %}
+      <p>
+        Gizra developed and implemented the new responsive design for The Hebrew University of
+        Jerusalem Admissions Department. Faced with the need to convey its well-established
+        brand, and speak to a multitude of potential applicants, the University sought Gizra
+        for a solution. Together, we transformed the existing traditional site into a
+        user-friendly, but content-rich, fully-accessible interface, geared to the demanding
+        needs of its user community.
+      </p>
+      {% endcapture %}
+
+        {% include project.html
+          title="The Hebrew University of Jerusalem Admissions"
+          client="The Hebrew University of Jerusalem"
+          url="info.huji.ac.il"
+          image="huji-admissions.jpg"
+          content=project_content
+        %}
+
+    <!-- Taglit Fellows -->
+
+    {% capture project_content %}
+    <p>
+      Birthright Israel, the largest Jewish Educational project in the world, needed to develop a
+      recruitment, registration, and online-learning platform for its U.S.-based experiential
+      educators. Through this platform, the initiative trains 200 educators a year.
+    </p>
+    <p>
+      Gizra helped to develop a streamlined user experience that allowed applicants to learn
+      about the program, register, and participate in three learning modules that prepared
+      participants in key concepts in experiential education and best practices in program
+      planning for an educational experience in Israel. In addition, Gizra developed a resources
+      exchange which allows fellows to document program design and share and reflect with other
+      cohort members.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="Birthright Israel Fellows On-Line Learning"
+        client="The iCenter"
+        url="www.birthrightisraelfellows.com"
+        image="birthright-fellows.jpg"
+        content=project_content
+      %}
+
+    <!-- iCenter -->
+
+    {% capture project_content %}
+    <p>
+      The iCenter sought out Gizra for their third project together based on the successes
+      and learnings from the workflow on previous projects.
+    </p>
+    <p>
+      When the iCenter looked to redesign their website, they had an aggressive timetable
+      in order to launch before their biennial  international conference. By applying The Gizra
+      Way with clear and constant communication through online task tracking and regular
+      face-to-face (video conferenced) scrum meetings, the project was completed within the
+      time frame and the anticipated budget, without the need to divert precious human resources
+      away from other important projects.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="The iCenter for Israel Education"
+        client="The iCenter"
+        url="www.theicenter.org"
+        image="icenter.jpg"
+        content=project_content
+      %}
+
+    <!-- IBLI -->
+
+    {% capture project_content %}
+    <p>
+      The IBLI project questioned the logic of the status quo of insurance access to pastoral
+      farmers in Kenya. The client needed a way to demonstrate that they could compile existing
+      data, process it with known algorithms, and produce logical, readable maps so that farmers
+      in Africa could be insured on the open market.
+    </p>
+    <p>
+      With Gizra’s help, ILRI was able to focus on the things that they were good at: providing
+      high-level research and working with local farmers to adopt to change. Gizra was able to
+      work on the technological mechanism to help make that change.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="Index-Based Livestock Insurance"
+        client="The International Livestock Research Institute"
+        image="ibli.jpg"
+        content=project_content
+        case_study="/case-studies/ibli"
+      %}
+
+    <!-- Commerce Kickstart -->
+
+    {% capture project_content %}
+    <p>
+      Built in collaboration with Commerce Guys, Commerce Kickstart is high performance and
+      easy to use eCommerce-focused Drupal distribution, used by McDonald’s, LUSH and
+      other leading brands. The project allows retail operations to leverage the strengths of Drupal's
+      complex content management and permissions, while providing a full-suite of tools necessary for
+      e-commerce.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="Commerce Kickstart"
+        client="The Commerce Guys"
+        url="www.commercekickstart.com"
+        image="commerce-kickstart.jpg"
+        content=project_content
+      %}
+
+    <!-- Kedem -->
+
+    {% capture project_content %}
+    <p>
+      Gizra presents a new approach in live and online auction trade - exposing and positioning
+      traditional Judaica objects and manuscripts, in this case, in an in-house online platform
+      especially developed to simplify the procedure of public auctions. Bidding is made
+      easy and accessible at any time online, simplifying the process for both the seller
+      and purchaser, thereby increasing the number of transactions.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="Kedem Live & Mail Auctions"
+        client="Kedem Auctions House"
+        url="www.kedem-auctions.com"
+        image="kedem-auctions.jpg"
+        content=project_content
+      %}
+
+  </div>
+
+</div>
