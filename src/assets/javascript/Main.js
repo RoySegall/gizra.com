@@ -10005,7 +10005,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																_0: 'SavyonCohen',
 																_1: {
 																	name: 'Savyon Cohen',
-																	image: 'SavyonCohen.jpg',
+																	image: 'savyoncohen.jpg',
 																	socialNetworks: {
 																		ctor: '::',
 																		_0: _Gizra$elm_spa_exmple$People_Model$Email('savyon@gizra.com'),

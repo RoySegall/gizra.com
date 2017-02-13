@@ -367,7 +367,7 @@ people =
       )
     , ( "SavyonCohen"
       , { name = "Savyon Cohen"
-        , image = "SavyonCohen.jpg"
+        , image = "savyoncohen.jpg"
         , socialNetworks =
             [ Email "savyon@gizra.com"
             , Github "savyoncohen"
