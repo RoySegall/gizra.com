@@ -126,7 +126,7 @@ gulp.task("cname", function() {
     return gulp.src(["serve/CNAME"])
         .pipe(gulp.dest("site"))
         .pipe($.size({
-            title: "CNAMe"
+            title: "CNAME"
         }))
 });
 
