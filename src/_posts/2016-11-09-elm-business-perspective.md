@@ -41,9 +41,7 @@ First it's important for me to note that I really disliked the foul language and
 But reading the essence of what Sandy Maguire ([@isovector](https://github.com/isovector)) wrote, made a few things clear to me:
 
 * Sandy Maguire seems to be a better developer than me. That is, he knows way more about Haskell, type classes, and polymorphism than I know. As one that learns (and struggles) with Haskell, I can really appreciate it.
-
 * I would assume (but don't know for a fact), that the author might have liked [PureScript](http://www.purescript.org/) better, since it would give him powerful tools he could put to use.
-
 * Are type classes the right thing for Elm? Maybe - I don't know. But I can also see the case of why not. And the "why not" is an important part in this post.
 
 Right now in Gizra we have about five different Elm projects in different stages and different scale. This means our need for Elm developers is constantly increasing.  

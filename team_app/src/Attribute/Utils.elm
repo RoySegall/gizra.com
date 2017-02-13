@@ -10,7 +10,7 @@ attributeToString : Attribute -> String
 attributeToString attribute =
     case attribute of
         DoingSports ->
-            "Doing Sports"
+            "Playing Sports"
 
         FamilyAttr family ->
             toString family

@@ -14060,7 +14060,7 @@ var _Gizra$elm_spa_exmple$Attribute_Utils$attributeToString = function (attribut
 	var _p0 = attribute;
 	switch (_p0.ctor) {
 		case 'DoingSports':
-			return 'Doing Sports';
+			return 'Playing Sports';
 		case 'FamilyAttr':
 			return _elm_lang$core$Basics$toString(_p0._0);
 		case 'FoodAttr':
