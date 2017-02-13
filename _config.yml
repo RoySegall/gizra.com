@@ -8,6 +8,9 @@ url: http://localhost:3000
 source: src
 destination: serve
 
+disqus:
+  short_name: 'gizra'
+
 wrapper_classes:
   full: "sixteen wide column"
   narrow: "sixteen wide tablet twelve wide computer sixteen wide mobile centered column"
