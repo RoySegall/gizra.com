@@ -1,3 +1,8 @@
+//Colors
+$gizra-orange: #e27058;
+$gizra-blue: #578E9B;
+$gizra-blue-dark: #244b80;
+
 @import 'blog_list';
 @import 'homepage';
 @import 'layout';
@@ -5,13 +10,18 @@
 @import 'team';
 @import 'pygments';
 
-//Colors
-
-$gizra-orange: #e27058;
-
 body {
   font-family: 'Esteban', serif;
 }
+
+a {
+  color: $gizra-blue;
+}
+
+a:hover {
+  color: $gizra-blue-dark;
+}
+
 ol,
 p,
 ul {
