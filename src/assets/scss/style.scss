@@ -10,6 +10,10 @@ $gizra-blue-dark: #244b80;
 @import 'team';
 @import 'pygments';
 
+body {
+  font-family: 'Esteban', serif;
+}
+
 a {
   color: $gizra-blue;
 }

@@ -1,14 +1,29 @@
 .intro {
   color: white;
   margin-top: 20px;
+  
+  .tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: black;
+    padding-top: 120px;
+  }
 
   p {
     font-size: 22px;
-    font-family: 'Rasa', serif;
     color: black;
 
     &.first {
       font-size: 27px;
     }
   }
+}
+
+.stories {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  color: $gizra-blue;
+  padding: 3rem;
 }
