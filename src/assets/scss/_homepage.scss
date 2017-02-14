@@ -3,12 +3,10 @@
   margin-top: 20px;
   
   .tagline {
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     color: black;
-    
-    .gizra-logo {
-      font-family: 'Abril Fatface';
-    }
+    padding-top: 120px;
   }
 
   p {
@@ -18,6 +16,5 @@
     &.first {
       font-size: 27px;
     }
-    
   }
 }
