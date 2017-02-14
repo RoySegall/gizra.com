@@ -1,14 +1,23 @@
 .intro {
   color: white;
   margin-top: 20px;
+  
+  .tagline {
+    font-size: 40px;
+    color: black;
+    
+    .gizra-logo {
+      font-family: 'Abril Fatface';
+    }
+  }
 
   p {
     font-size: 22px;
-    font-family: 'Rasa', serif;
     color: black;
 
     &.first {
       font-size: 27px;
     }
+    
   }
 }
