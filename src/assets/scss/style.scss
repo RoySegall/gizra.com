@@ -10,6 +10,14 @@ $gizra-blue-dark: #244b80;
 @import 'team';
 @import 'pygments';
 
+a {
+  color: $gizra-blue;
+}
+
+a:hover {
+  color: $gizra-blue-dark;
+}
+
 ol,
 p,
 ul {
