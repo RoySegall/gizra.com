@@ -1,7 +1,14 @@
 //Colors
 $gizra-orange: #e27058;
 $gizra-blue: #578E9B;
+$gizra-blue-shadow: #3a626b;
 $gizra-blue-dark: #244b80;
+$gizra-blue-dark-shadow: #172f4f;
+
+//Font Stacks
+$esteban: 'Esteban', serif;
+$montserat: 'Montserat', sans-serif;
+$gizra: 'Abril Fatface', sans-serif;
 
 @import 'blog_list';
 @import 'homepage';
@@ -25,8 +32,8 @@ a:hover {
 ol,
 p,
 ul {
-  font-size: 1.25em;
-  line-height: 1.6em;
+  font-size: 1.4rem;
+  line-height: 1.618;
 }
 
 header {
@@ -55,6 +62,36 @@ footer {
   color: rgba(0, 0, 0, 0.87);
 }
 
+// Semantic UI Overrides
+.ui.header {
+  font-family: 'Montserat', sans-serif;
+}
+
+.ui.label {
+  font-family: 'Montserat', sans-serif;
+}
+
+.ui.teal.label, .ui.teal.labels .label {
+  background-color: $gizra-blue !important;
+}
+
+.ui.teal.ribbon.label {
+  border-color: $gizra-blue-shadow !important;
+}
+
+.ui.teal.labels .label:hover, a.ui.teal.label:hover {
+  background-color: $gizra-blue-dark !important;
+  border-color: $gizra-blue-dark-shadow !important;
+}
+
+.ui.header .ui.label {
+  margin-left: 2.05rem;
+}
+
+.card {
+  font-family: $montserat;
+}
+
 // Fix a Semnatic UI bug where secondary segment doesn't get styling if inside
 // horizontal segments
 .ui.horizontal.segments > .ui.secondary.segment {
@@ -63,6 +100,8 @@ footer {
 }
 
 blockquote {
+  font-size: 1.25rem;
+  line-height: 1.618;
   background: #f9f9f9;
   border-left: 3px solid #ccc;
   margin: 1.5em 10px;
