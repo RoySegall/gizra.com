@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="ui grid centered case-study">
-  <div class="twelve wide column">
+
+  <div class="{{ site.wrapper_classes.narrow }}">
+
     <div class="ui raised very padded segment {{ page.color }}">
 
       <h1 class="ui dividing header">
@@ -13,7 +15,7 @@ layout: default
         <div class="sub header">
            {{ page.subtitle }} // {{ page.client }}
            {% if page.site %}
-            // <a href="{{ page.site }}">{{ page.site }}</a>
+            // <a href="http://{{ page.site }}">{{ page.site }}</a>
            {% endif %}
         </div>
 
