@@ -411,7 +411,7 @@ people =
       , { name = "David Bronfen"
         , image = "DavidBronfen.jpg"
         , socialNetworks =
-            [ Email "davidb@gizra.com"
+            [ Email "david.bronfen@gizra.com"
             , Github "DavidBronfen"
             ]
         , title = "Developer"
