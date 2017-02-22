@@ -10122,7 +10122,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			image: 'DavidBronfen.jpg',
 																			socialNetworks: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$People_Model$Email('davidb@gizra.com'),
+																				_0: _Gizra$elm_spa_exmple$People_Model$Email('david.bronfen@gizra.com'),
 																				_1: {
 																					ctor: '::',
 																					_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidBronfen'),
