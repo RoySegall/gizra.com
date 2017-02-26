@@ -5,8 +5,9 @@
   .tagline {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 40px;
     color: black;
+    font-size: 40px;
+    line-height: 1.5;
     padding-top: 120px;
   }
 
@@ -21,9 +22,10 @@
 }
 
 .stories {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 21px;
-  color: $gizra-blue;
   padding: 3rem;
+
+  .ui.segment {
+    font-family: 'Montserrat', sans-serif;
+    color: $gizra-blue;  
+  }
 }
