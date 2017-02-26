@@ -7879,7 +7879,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$Married = {ctor: 'Married'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Kids = {ctor: 'Kids'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Vegan = {ctor: 'Vegan'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Vegetarian = {ctor: 'Vegetarian'};
-var _Gizra$elm_spa_exmple$Attribute_Model$Pescaterian = {ctor: 'Pescaterian'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Pescetarian = {ctor: 'Pescetarian'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Paleo = {ctor: 'Paleo'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Kosher = {ctor: 'Kosher'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Ukrainian = {ctor: 'Ukrainian'};
@@ -8954,7 +8954,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 							_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
 							_1: {
 								ctor: '::',
-								_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Pescaterian),
+								_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Pescetarian),
 								_1: {
 									ctor: '::',
 									_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),

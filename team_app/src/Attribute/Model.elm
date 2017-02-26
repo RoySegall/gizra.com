@@ -27,7 +27,7 @@ type Family
 type Food
     = Kosher
     | Paleo
-    | Pescaterian
+    | Pescetarian
     | Vegetarian
     | Vegan
 
