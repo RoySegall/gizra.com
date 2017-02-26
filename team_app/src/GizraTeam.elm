@@ -21,7 +21,7 @@ people =
             [ DoingSports
             , FamilyAttr Kids
             , FamilyAttr Married
-            , FoodAttr Pescaterian
+            , FoodAttr Pescetarian
             , GenderAttr Male
             , LanguageAttr Hebrew
             , LanguageAttr English
