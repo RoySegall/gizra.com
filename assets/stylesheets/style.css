@@ -359,11 +359,20 @@ footer.ui.vertical.segment {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+body {
+  font-family: 'Esteban', serif; }
+
+a {
+  color: #578E9B; }
+
+a:hover {
+  color: #244b80; }
+
 ol,
 p,
 ul {
-  font-size: 1.25em;
-  line-height: 1.6em; }
+  font-size: 1.4rem;
+  line-height: 1.618; }
 
 header .tagline {
   font-style: italic;
@@ -375,11 +384,32 @@ header .tagline {
 .ui.header > .content > a {
   color: rgba(0, 0, 0, 0.87); }
 
+.ui.header {
+  font-family: 'Montserat', sans-serif; }
+
+.ui.label {
+  font-family: 'Montserat', sans-serif; }
+
+.ui.teal.label, .ui.teal.labels .label {
+  background-color: #578E9B !important; }
+
+.ui.teal.ribbon.label {
+  border-color: #3a626b !important; }
+
+.ui.teal.labels .label:hover, a.ui.teal.label:hover {
+  background-color: #244b80 !important;
+  border-color: #172f4f !important; }
+
+.card {
+  font-family: "Montserat", sans-serif; }
+
 .ui.horizontal.segments > .ui.secondary.segment {
   background: #f3f4f5;
   color: rgba(0, 0, 0, 0.6); }
 
 blockquote {
+  font-size: 1.25rem;
+  line-height: 1.618;
   background: #f9f9f9;
   border-left: 3px solid #ccc;
   margin: 1.5em 10px;
