@@ -399,11 +399,17 @@ people =
             ]
         , title = "Developer"
         , attributes =
-            [ GenderAttr Male
+            [ DoingSports
+            , GenderAttr Male
             , LanguageAttr Hebrew
             , LanguageAttr English
+            , LivedAbroad
+            , MusicWhileWorking
             , NationalityAttr Israel
+            , Pet
             , PreferedWorkHoursAttr NineToFive
+            , Tattoo
+            , TvAndMovieGenereAttr Comedy
             ]
         }
       )
