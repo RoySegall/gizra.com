@@ -361,6 +361,30 @@ people =
             ]
         }
       )
+    , ( "AronNovak"
+      , { name = "Aron Novak"
+        , image = "AronNovak.jpg"
+        , socialNetworks =
+            [ Email "aron@gizra.com"
+            , Github "AronNovak"
+            , Drupal "aron-novak"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ DoingSports
+            , FamilyAttr Married
+            , FamilyAttr Kids
+            , LanguageAttr English
+            , LanguageAttr Hungarian
+            , MusicWhileWorking
+            , NationalityAttr Hungary
+            , PreferedWorkHoursAttr NineToFive
+            , Tattoo
+            , TvAndMovieGenereAttr SciFi
+            , WorkingRemote
+            ]
+        }
+      )
     , ( "Pavel"
       , { name = "Pavel Pirozhenko"
         , image = "Pavel.jpg"
