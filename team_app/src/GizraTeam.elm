@@ -308,6 +308,59 @@ people =
             ]
         }
       )
+    , ( "DavidHernandez"
+      , { name = "David Hernandez"
+        , image = "DavidHernandez.jpg"
+        , socialNetworks =
+            [ Email "david.hernandez@gizra.com"
+            , Github "DavidHernandez"
+            , Drupal "david-hernández"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ FoodAttr Vegan
+            , GenderAttr Male
+            , LanguageAttr Catalonian
+            , LanguageAttr English
+            , LanguageAttr Spanish
+            , LivedAbroad
+            , MusicWhileWorking
+            , NationalityAttr Spain
+            , Pet
+            , PreferedWorkHoursAttr EarlyRise
+            , PreferedWorkHoursAttr NineToFive
+            , PreferedWorkHoursAttr NightOwl
+            , Tattoo
+            , TvAndMovieGenereAttr SciFi
+            , WorkingRemote
+            ]
+        }
+      )
+    , ( "RyanRempel"
+      , { name = "Ryan Rempel"
+        , image = "RyanRempel.jpg"
+        , socialNetworks =
+            [ Email "ryan@gizra.com"
+            , Github "DavidHernandez"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ DoingSports
+            , FamilyAttr Married
+            , FamilyAttr Kids
+            , LanguageAttr English
+            , MusicAttr Sing
+            , NationalityAttr Canada
+            , Pet
+            , PreferedWorkHoursAttr NineToFive
+            , PreferedWorkHoursAttr NightOwl
+            , Tattoo
+            , TvAndMovieGenereAttr Comedy
+            , TvAndMovieGenereAttr SciFi
+            , WorkingRemote
+            ]
+        }
+      )
     , ( "Pavel"
       , { name = "Pavel Pirozhenko"
         , image = "Pavel.jpg"
@@ -463,34 +516,6 @@ people =
             , SportAttr CrossFit
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr Drama
-            ]
-        }
-      )
-    , ( "DavidHernandez"
-      , { name = "David Hernandez"
-        , image = "DavidHernandez.jpg"
-        , socialNetworks =
-            [ Email "david.hernandez@gizra.com"
-            , Github "DavidHernandez"
-            , Drupal "david-hernández"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ FoodAttr Vegan
-            , GenderAttr Male
-            , LanguageAttr Catalonian
-            , LanguageAttr English
-            , LanguageAttr Spanish
-            , LivedAbroad
-            , MusicWhileWorking
-            , NationalityAttr Spain
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , PreferedWorkHoursAttr NineToFive
-            , PreferedWorkHoursAttr NightOwl
-            , Tattoo
-            , TvAndMovieGenereAttr SciFi
-            , WorkingRemote
             ]
         }
       )

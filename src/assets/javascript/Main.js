@@ -9828,68 +9828,310 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 													ctor: '::',
 													_0: {
 														ctor: '_Tuple2',
-														_0: 'Pavel',
+														_0: 'DavidHernandez',
 														_1: {
-															name: 'Pavel Pirozhenko',
-															image: 'Pavel.jpg',
+															name: 'David Hernandez',
+															image: 'DavidHernandez.jpg',
 															socialNetworks: {
 																ctor: '::',
-																_0: _Gizra$elm_spa_exmple$People_Model$Email('pavel@gizra.com'),
+																_0: _Gizra$elm_spa_exmple$People_Model$Email('david.hernandez@gizra.com'),
 																_1: {
 																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$People_Model$Github('ppavels'),
-																	_1: {ctor: '[]'}
+																	_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																	_1: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$People_Model$Drupal('david-hernández'),
+																		_1: {ctor: '[]'}
+																	}
 																}
 															},
 															title: 'Developer',
 															attributes: {
 																ctor: '::',
-																_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegan),
 																_1: {
 																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																	_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
 																	_1: {
 																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Catalonian),
 																		_1: {
 																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																			_1: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spanish),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Ukrainian),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spain),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																										_1: {
 																											ctor: '::',
 																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Soccer),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Volleyball),
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																														_1: {ctor: '[]'}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'RyanRempel',
+															_1: {
+																name: 'Ryan Rempel',
+																image: 'RyanRempel.jpg',
+																socialNetworks: {
+																	ctor: '::',
+																	_0: _Gizra$elm_spa_exmple$People_Model$Email('ryan@gizra.com'),
+																	_1: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																		_1: {ctor: '[]'}
+																	}
+																},
+																title: 'Developer',
+																attributes: {
+																	ctor: '::',
+																	_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																	_1: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																		_1: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																			_1: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																				_1: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
+																					_1: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Canada),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Pavel',
+																_1: {
+																	name: 'Pavel Pirozhenko',
+																	image: 'Pavel.jpg',
+																	socialNetworks: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$People_Model$Email('pavel@gizra.com'),
+																		_1: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$People_Model$Github('ppavels'),
+																			_1: {ctor: '[]'}
+																		}
+																	},
+																	title: 'Developer',
+																	attributes: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																		_1: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																			_1: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																				_1: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																					_1: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Ukrainian),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																													_1: {
+																														ctor: '::',
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Soccer),
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Volleyball),
+																															_1: {
+																																ctor: '::',
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
+																																_1: {
+																																	ctor: '::',
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
+																																			_1: {ctor: '[]'}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'anvmn',
+																	_1: {
+																		name: 'Anatoly Vaitsman',
+																		image: 'anvmn.jpg',
+																		socialNetworks: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$People_Model$Email('anatoly@gizra.com'),
+																			_1: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$People_Model$Github('anvmn'),
+																				_1: {ctor: '[]'}
+																			}
+																		},
+																		title: 'Developer',
+																		attributes: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																			_1: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																				_1: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																					_1: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
+																													_1: {
+																														ctor: '::',
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																														_1: {
+																															ctor: '::',
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
 																															_1: {
 																																ctor: '::',
 																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
@@ -9913,243 +10155,21 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			}
 																		}
 																	}
-																}
-															}
-														}
-													},
-													_1: {
-														ctor: '::',
-														_0: {
-															ctor: '_Tuple2',
-															_0: 'anvmn',
-															_1: {
-																name: 'Anatoly Vaitsman',
-																image: 'anvmn.jpg',
-																socialNetworks: {
-																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$People_Model$Email('anatoly@gizra.com'),
-																	_1: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$People_Model$Github('anvmn'),
-																		_1: {ctor: '[]'}
-																	}
-																},
-																title: 'Developer',
-																attributes: {
-																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																	_1: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
-																														_1: {
-																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																															_1: {ctor: '[]'}
-																														}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														},
-														_1: {
-															ctor: '::',
-															_0: {
-																ctor: '_Tuple2',
-																_0: 'SavyonCohen',
-																_1: {
-																	name: 'Savyon Cohen',
-																	image: 'savyoncohen.jpg',
-																	socialNetworks: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$People_Model$Email('savyon@gizra.com'),
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$People_Model$Github('savyoncohen'),
-																			_1: {ctor: '[]'}
-																		}
-																	},
-																	title: 'Developer',
-																	attributes: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kosher),
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Female),
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																														_1: {ctor: '[]'}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															},
-															_1: {
-																ctor: '::',
-																_0: {
-																	ctor: '_Tuple2',
-																	_0: 'ybaras',
-																	_1: {
-																		name: 'Yoav Baras',
-																		image: 'ybaras.jpg',
-																		socialNetworks: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$People_Model$Email('yoav@gizra.com'),
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$People_Model$Github('ybaras'),
-																				_1: {ctor: '[]'}
-																			}
-																		},
-																		title: 'Developer',
-																		attributes: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																													_1: {ctor: '[]'}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
 																},
 																_1: {
 																	ctor: '::',
 																	_0: {
 																		ctor: '_Tuple2',
-																		_0: 'DavidBronfen',
+																		_0: 'SavyonCohen',
 																		_1: {
-																			name: 'David Bronfen',
-																			image: 'DavidBronfen.jpg',
+																			name: 'Savyon Cohen',
+																			image: 'savyoncohen.jpg',
 																			socialNetworks: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$People_Model$Email('davidb@gizra.com'),
+																				_0: _Gizra$elm_spa_exmple$People_Model$Email('savyon@gizra.com'),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidBronfen'),
+																					_0: _Gizra$elm_spa_exmple$People_Model$Github('savyoncohen'),
 																					_1: {ctor: '[]'}
 																				}
 																			},
@@ -10159,53 +10179,41 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegetarian),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kosher),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Italian),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Female),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
 																															_1: {
 																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																																	_1: {
-																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																																		_1: {
-																																			ctor: '::',
-																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
-																																			_1: {ctor: '[]'}
-																																		}
-																																	}
-																																}
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																_1: {ctor: '[]'}
 																															}
 																														}
 																													}
@@ -10225,16 +10233,16 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																		ctor: '::',
 																		_0: {
 																			ctor: '_Tuple2',
-																			_0: 'ItamarGronich',
+																			_0: 'ybaras',
 																			_1: {
-																				name: 'Itamar Gronich',
-																				image: 'ItamarGronich.jpg',
+																				name: 'Yoav Baras',
+																				image: 'ybaras.jpg',
 																				socialNetworks: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$People_Model$Email('itamargronich@gizra.com'),
+																					_0: _Gizra$elm_spa_exmple$People_Model$Email('yoav@gizra.com'),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$People_Model$Github('ItamarGronich'),
+																						_0: _Gizra$elm_spa_exmple$People_Model$Github('ybaras'),
 																						_1: {ctor: '[]'}
 																					}
 																				},
@@ -10256,31 +10264,23 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$PlayingInstrument),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
-																															_1: {
-																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
-																																	_1: {ctor: '[]'}
-																																}
-																															}
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																															_1: {ctor: '[]'}
 																														}
 																													}
 																												}
@@ -10298,70 +10298,70 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			ctor: '::',
 																			_0: {
 																				ctor: '_Tuple2',
-																				_0: 'DavidHernandez',
+																				_0: 'DavidBronfen',
 																				_1: {
-																					name: 'David Hernandez',
-																					image: 'DavidHernandez.jpg',
+																					name: 'David Bronfen',
+																					image: 'DavidBronfen.jpg',
 																					socialNetworks: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$People_Model$Email('david.hernandez@gizra.com'),
+																						_0: _Gizra$elm_spa_exmple$People_Model$Email('davidb@gizra.com'),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$People_Model$Drupal('david-hernández'),
-																								_1: {ctor: '[]'}
-																							}
+																							_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidBronfen'),
+																							_1: {ctor: '[]'}
 																						}
 																					},
 																					title: 'Developer',
 																					attributes: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegan),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegetarian),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Catalonian),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spanish),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Italian),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spain),
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																															_1: {
 																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																																_1: {
 																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																																	_1: {
 																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
 																																		_1: {
 																																			ctor: '::',
-																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
+																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																																			_1: {
 																																				ctor: '::',
-																																				_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
-																																				_1: {ctor: '[]'}
+																																				_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																				_1: {
+																																					ctor: '::',
+																																					_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
+																																					_1: {ctor: '[]'}
+																																				}
 																																			}
 																																		}
 																																	}
@@ -10379,7 +10379,81 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			},
-																			_1: {ctor: '[]'}
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'ItamarGronich',
+																					_1: {
+																						name: 'Itamar Gronich',
+																						image: 'ItamarGronich.jpg',
+																						socialNetworks: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$People_Model$Email('itamargronich@gizra.com'),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$People_Model$Github('ItamarGronich'),
+																								_1: {ctor: '[]'}
+																							}
+																						},
+																						title: 'Developer',
+																						attributes: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$PlayingInstrument),
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																													_1: {
+																														ctor: '::',
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																														_1: {
+																															ctor: '::',
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																															_1: {
+																																ctor: '::',
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																																_1: {
+																																	ctor: '::',
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
+																																			_1: {ctor: '[]'}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				},
+																				_1: {ctor: '[]'}
+																			}
 																		}
 																	}
 																}
