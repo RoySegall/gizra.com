@@ -399,11 +399,17 @@ people =
             ]
         , title = "Developer"
         , attributes =
-            [ GenderAttr Male
+            [ DoingSports
+            , GenderAttr Male
             , LanguageAttr Hebrew
             , LanguageAttr English
+            , LivedAbroad
+            , MusicWhileWorking
             , NationalityAttr Israel
+            , Pet
             , PreferedWorkHoursAttr NineToFive
+            , Tattoo
+            , TvAndMovieGenereAttr Comedy
             ]
         }
       )
@@ -482,6 +488,55 @@ people =
             , PreferedWorkHoursAttr EarlyRise
             , PreferedWorkHoursAttr NineToFive
             , PreferedWorkHoursAttr NightOwl
+            , Tattoo
+            , TvAndMovieGenereAttr SciFi
+            , WorkingRemote
+            ]
+        }
+      )
+    , ( "RyanRempel"
+      , { name = "Ryan Rempel"
+        , image = "RyanRempel.jpg"
+        , socialNetworks =
+            [ Email "ryan@gizra.com"
+            , Github "DavidHernandez"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ DoingSports
+            , FamilyAttr Married
+            , FamilyAttr Kids
+            , LanguageAttr English
+            , MusicAttr Sing
+            , NationalityAttr Canada
+            , Pet
+            , PreferedWorkHoursAttr NineToFive
+            , PreferedWorkHoursAttr NightOwl
+            , Tattoo
+            , TvAndMovieGenereAttr Comedy
+            , TvAndMovieGenereAttr SciFi
+            , WorkingRemote
+            ]
+        }
+      )
+    , ( "AronNovak"
+      , { name = "Aron Novak"
+        , image = "AronNovak.jpg"
+        , socialNetworks =
+            [ Email "aron@gizra.com"
+            , Github "AronNovak"
+            , Drupal "aron-novak"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ DoingSports
+            , FamilyAttr Married
+            , FamilyAttr Kids
+            , LanguageAttr English
+            , LanguageAttr Hungarian
+            , MusicWhileWorking
+            , NationalityAttr Hungary
+            , PreferedWorkHoursAttr NineToFive
             , Tattoo
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote

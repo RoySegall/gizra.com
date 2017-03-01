@@ -37,6 +37,7 @@ type Language
     | Catalonian
     | English
     | Hebrew
+    | Hungarian
     | Italian
     | German
     | Spanish
@@ -58,6 +59,7 @@ type Music
 type Nationality
     = Austria
     | Canada
+    | Hungary
     | Israel
     | Spain
     | UK

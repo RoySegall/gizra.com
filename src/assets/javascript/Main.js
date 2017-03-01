@@ -7888,6 +7888,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$French = {ctor: 'French'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Spanish = {ctor: 'Spanish'};
 var _Gizra$elm_spa_exmple$Attribute_Model$German = {ctor: 'German'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Italian = {ctor: 'Italian'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Hungarian = {ctor: 'Hungarian'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Hebrew = {ctor: 'Hebrew'};
 var _Gizra$elm_spa_exmple$Attribute_Model$English = {ctor: 'English'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Catalonian = {ctor: 'Catalonian'};
@@ -7900,6 +7901,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$USA = {ctor: 'USA'};
 var _Gizra$elm_spa_exmple$Attribute_Model$UK = {ctor: 'UK'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Spain = {ctor: 'Spain'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Israel = {ctor: 'Israel'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Hungary = {ctor: 'Hungary'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Canada = {ctor: 'Canada'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Austria = {ctor: 'Austria'};
 var _Gizra$elm_spa_exmple$Attribute_Model$NightOwl = {ctor: 'NightOwl'};
@@ -10091,20 +10093,44 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																		title: 'Developer',
 																		attributes: {
 																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
 																			_1: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
-																							_1: {ctor: '[]'}
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
 																						}
 																					}
 																				}
@@ -10355,7 +10381,151 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			},
-																			_1: {ctor: '[]'}
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'RyanRempel',
+																					_1: {
+																						name: 'Ryan Rempel',
+																						image: 'RyanRempel.jpg',
+																						socialNetworks: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$People_Model$Email('ryan@gizra.com'),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																								_1: {ctor: '[]'}
+																							}
+																						},
+																						title: 'Developer',
+																						attributes: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Canada),
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																													_1: {
+																														ctor: '::',
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																														_1: {
+																															ctor: '::',
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																															_1: {
+																																ctor: '::',
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																																_1: {
+																																	ctor: '::',
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																																			_1: {ctor: '[]'}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'AronNovak',
+																						_1: {
+																							name: 'Aron Novak',
+																							image: 'AronNovak.jpg',
+																							socialNetworks: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$People_Model$Email('aron@gizra.com'),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$People_Model$Github('AronNovak'),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$People_Model$Drupal('aron-novak'),
+																										_1: {ctor: '[]'}
+																									}
+																								}
+																							},
+																							title: 'Developer',
+																							attributes: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungarian),
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																													_1: {
+																														ctor: '::',
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungary),
+																														_1: {
+																															ctor: '::',
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																															_1: {
+																																ctor: '::',
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																																_1: {
+																																	ctor: '::',
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																																		_1: {ctor: '[]'}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					},
+																					_1: {ctor: '[]'}
+																				}
+																			}
 																		}
 																	}
 																}
@@ -11453,14 +11623,13 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 		F2(
 			function (attribute, _p4) {
 				var _p5 = _p4;
-				var _p7 = _p5._1;
-				var randomNumber3 = getRandomNumber((_p7 * 3) + 2);
+				var _p6 = _p5._1;
+				var randomNumber3 = getRandomNumber((_p6 * 3) + 2);
 				var rotation = (_elm_lang$core$Basics$toFloat(randomNumber3) / 50) - 10;
-				var _p6 = A2(_elm_lang$core$Debug$log, 'rotation', rotation);
-				var randomNumber2 = getRandomNumber((_p7 * 3) + 1);
+				var randomNumber2 = getRandomNumber((_p6 * 3) + 1);
 				var y = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber2) / 6);
-				var randomNumber1 = getRandomNumber(_p7 * 3);
+				var randomNumber1 = getRandomNumber(_p6 * 3);
 				var x = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber1) * 1.19);
 				var magent = {
@@ -11472,7 +11641,7 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 				return {
 					ctor: '_Tuple2',
 					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p5._0),
-					_1: _p7 + 1
+					_1: _p6 + 1
 				};
 			}),
 		{ctor: '_Tuple2', _0: _eeue56$elm_all_dict$EveryDict$empty, _1: 0},
