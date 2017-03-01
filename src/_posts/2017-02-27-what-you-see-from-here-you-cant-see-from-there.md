@@ -38,33 +38,29 @@ But knowing _when_ and _how_ to ask is also vital.
 
 To minimize disruptions, it is important to come prepared with a precise and clearly formulated question. The answer to your question should ideally be binary. Something like "yes, you are in the right direction" or "No, because this and that". If the answer isn't one of these possibilities, you might have probably not went over properly over the task. Remember, "Managers do not know everything".
 
-## How I have developed as an employee
+## How I feel today
 
-The request to express myself with the tools that I feel they are not my home court - to write the post, dealing with the needs to write a review, coping and thinking what to write and what not worthy, all this made me deal with something that probably I would not get there if I was not going through this process. I realized that I could say everything, whatever I think would be helpful for the individual and collective level.
+After shadowing, we are requested to prepare a report. And possibly a blog post.
 
-One of the turning points I had in Gizra was the moment the management decided to change my role from developer to a QA.
-My criticism about all the process started when I asked Amitai, "What I need to do to success in this role?", his response was “you should be excellent”.
-I felt a little strange, it seemed to me like the success of this position isn’t really important to the company, something along the lines of: “this is the position, be excellent, good luck, bye!”
-A solitude against this mega big thing to deal with, in addition, the fact that I do not get a guiding hand, made me feel a bit confused.
-Just want to say that I was not coming from a place of stress or helplessness, I just need help in propulsion of large and complex process.
+Using written words to describe my thoughts is definitely not placing me in my comfort zone. In fact, I feel that the pictures I have taken scattered in the post might be better reflecting what I'm trying to convey. However, having to do that forces me to go through a process which I feel contributes a lot to the way I look at things, here's on example:
+
+One of the turning points I had in Gizra was when it was decided to change my role from a developer to a QA.
+
+I remember I asked Amitai, "What do I need to do in order to succeed in this role?", and his response was "you should be excellent".
+
+That was a horrible answer. It seemed to me like he was actually saying: "this is the position, good luck and bye!"
+
+While I still hold my criticism about how that question was answered, I must admit that after the experience I understand that it actually meant what it said. That is, no matter what task you are given, truly try to be excellent.
 
 {% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/locked.jpg" caption="Locked" %}
 
-## How I feel today
-
-Today, After the process I went through I feel I can produce a lot from the transformation to this role.
-Furthermore this is another field I can learn from, it will allow me to deal with new situations that might come along.
-I know that I need to go through the whole process from the beginning to the end of it,
-But also I know that I won't be able to do this by own, I need a professional guidance, at least at the beginning in order to start the process.
-Every single person has its own way and his own progress to pass through.
-
-{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg" caption="Highlights and shadows (we need both for a balanced life)." %}
 
 ## What my friends think of it
 
-A couple of days after the experience with Amitai, I met some of my friends and one of them asked me what's new at my workplace.
-I shared all of them with what i've been through during that day and I've noticed that all of them were hypnotized and things weren't very clear to them - like, how could it be that I set with my CEO, and had to write a criticism about him that was accepted by him, and also created a dialogue between two people with no barriers.
-The friend who asked the most questions is the owner of a business in the fashion industry here in Israel and a few shops around the globe. she was amazed by this process, and immediately informed she has to embrace this idea and start doing it at her business. I was so happy that I have succeeded to give the experience and to give inspiration to people that know nothing about our field.
+A couple of days after this experience, I met some of my friends and one of them asked me what's new at my workplace.
 
-I took all the pics at the building that Gizra is located.
-The photos tries to combine with my inner feeling about the daily routine as an employee at Gizra.
+I shared with them what I've been through and I've noticed that all of them were hypnotized. It was completely puzzling for them - how could it be that I set with one of the company owners, and had to write a criticism about him. And not only was it accepted by him, but he actually encouraged me and guided me in writing this post.
+
+The friend who asked the most questions is an owner of a business in the fashion industry in Israel and a few shops around the globe. she was amazed by this process, and immediately told me she is going to embrace this idea and start doing it at her business. I was so happy that I have succeeded to give the experience and to give inspiration to people regardless of their field of expertise.
+
+I took all the pics at the building that Gizra Israel is located. If my words have not explained my ideas and thoughts, I hope the pictures have.
