@@ -1,14 +1,13 @@
 ---
 title: "What you see from here, you can’t see from there"
 tags:
-  - The Gizra Way
-permalink: "/content/what-you-see-from-here-you-cant-see-from-there/"
+  - The Gizra Way  
+permalink: "/content/what-you-see-from-here-you-cant-see-from-there/"  
 layout: post  
-image: /assets/images/posts/what-you-see-from-here/thumb.jpg   
-author: DavidBronfen
+image: /assets/images/posts/what-you-see-from-here/thumb.jpg    
+author: DavidBronfen  
 description: "A few days ago I took part in an experience that is rather rare in most workplaces."
 ---
-
 
 
 ## What you see from here, you can’t see from there:
