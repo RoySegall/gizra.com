@@ -11623,14 +11623,13 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 		F2(
 			function (attribute, _p4) {
 				var _p5 = _p4;
-				var _p7 = _p5._1;
-				var randomNumber3 = getRandomNumber((_p7 * 3) + 2);
+				var _p6 = _p5._1;
+				var randomNumber3 = getRandomNumber((_p6 * 3) + 2);
 				var rotation = (_elm_lang$core$Basics$toFloat(randomNumber3) / 50) - 10;
-				var _p6 = A2(_elm_lang$core$Debug$log, 'rotation', rotation);
-				var randomNumber2 = getRandomNumber((_p7 * 3) + 1);
+				var randomNumber2 = getRandomNumber((_p6 * 3) + 1);
 				var y = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber2) / 6);
-				var randomNumber1 = getRandomNumber(_p7 * 3);
+				var randomNumber1 = getRandomNumber(_p6 * 3);
 				var x = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber1) * 1.19);
 				var magent = {
@@ -11642,7 +11641,7 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 				return {
 					ctor: '_Tuple2',
 					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p5._0),
-					_1: _p7 + 1
+					_1: _p6 + 1
 				};
 			}),
 		{ctor: '_Tuple2', _0: _eeue56$elm_all_dict$EveryDict$empty, _1: 0},
