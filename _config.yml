@@ -5,6 +5,8 @@ description:
 tagline:
 url: http://localhost:3000
 
+future: true
+
 source: src
 destination: serve
 
