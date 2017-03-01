@@ -2,7 +2,7 @@
 title: "What you see from here, you can’t see from there"
 tags:
   - The Gizra Way  
-permalink: "/content/what-you-see-from-here-you-cant-see-from-there/"  
+permalink: "/content/i-also-shadowed-our-cto/"  
 layout: post  
 image: /assets/images/posts/what-you-see-from-here/thumb.jpg    
 author: DavidBronfen  
