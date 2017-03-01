@@ -16,9 +16,13 @@ A few days ago I took part in an experience that is rather rare in most workplac
 I was invited to shadow Amitai, the CTO, and co-owner of Gizra, for a full day, in order to understand how things work from his perspective.  
 My impressions of this day are varied, but most importantly I understood things that I would not have learned if not going through this experience. In the end, I feel that I had one of the more interesting experiences and lessons a workplace can offer its employees that not only enhance me professionally but also opened my mind to how to tackle daily tasks.
 
+{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/cut-the-darkness.jpg" caption="Cut the darkness" %}
+
 ## The employer-employee relationship - it’s not what you thought.
 
 The idea of allowing your employees to sit next to you, watch the day-to-day activities from the executive manager’s chair, to encourage employees to review the manager, and then conduct a genuine and honest conversation and provide answers to difficult questions - are all indications of a real desire to improve, and create an open and accepting process with the employee.
+
+{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/view-from-above-indoor.jpg" caption="It's all from above" %}
 
 ## Make sure you understand
 
@@ -27,7 +31,6 @@ If we can get all the required information and to understand them in the early s
 
 It is easy to get distracted in our modern world. To minimize “disruptions”, it is very important to come prepared with a precise and clearly formulated question. The answer to your question should be something like “yes, you are in the right direction” or “No, you're not in the right direction”. If the answer isn't one of these possibilities, you did not prepared enough and your question, as a result, has done more harm than good.
 
-
 ## Managers do not knows everything
 The first mission we were supposed to do was to give a price offer to a RFP that our company wants to participate. we need to calculate the time and effort to the project and to give the cost, the beautiful thing I saw during this quiet not simple process was the faith and trust in yourself that you can do this, and of course the way: Amitai chose to ignore a certain part of the demands because he thought that there is a better way to show the company he stands in front of.
 
@@ -35,6 +38,7 @@ My conclusion:
 Trusting your abilities isn't less important than knowledge, if not even a whole lot more.
 The power and strength is not to give a count and meaning to the lack of things, or the missions that requires a lot of effort - to break us down, it is a choice between giving up and trying to do better.
 
+{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/against-the-nature.jpg" caption="Against the nature" %}
 
 ## How I have developed as an employee
 The request to express myself with the tools that I feel they are not my home court - to write the post, dealing with the needs to write a review, coping and thinking what to write and what not worthy, all this made me deal with something that probably I would not get there if I was not going through this process. I realized that I could say everything, whatever I think would be helpful for the individual and collective level.
@@ -46,6 +50,7 @@ I felt a little strange, it seemed to me like the success of this position isn�
 A solitude against this mega big thing to deal with, in addition, the fact that I do not get a guiding hand, made me feel a bit confused.
 Just want to say that I was not coming from a place of stress or helplessness, I just need help in propulsion of large and complex process.
 
+{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/locked.jpg" caption="Locked" %}
 ## How i feel today
 Today, After the process I went through I feel I can produce a lot from the transformation to this role.
 Furthermore this is another field I can learn from, it will allow me to deal with new situations that might come along. 
@@ -53,8 +58,12 @@ I know that I need to go through the whole process from the beginning to the end
 But also I know that I won't be able to do this by own, I need a professional guidance, at least at the beginning in order to start the process. 
 Every single person has its own way and his own progress to pass through.
 
+{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg" caption="Highlights and shadows (we need both for a balanced life)." %}
+
 ## The conclusion
 A couple of days after the experience with Amitai, I met some of my friends and one of them asked me what's new at my workplace.
 I shared all of them with what i've been through during that day and I've noticed that all of them were hypnotized and things weren't very clear to them - like, how could it be that I set with my CEO, and had to write a criticism about him that was accepted by him, and also created a dialogue between two people with no barriers.
 The friend who asked the most questions is the owner of a business in the fashion industry here in Israel and a few shops around the globe. she was amazed by this process, and immediately informed she has to embrace this idea and start doing it at her business. I was so happy that I have succeeded to give the experience and to give inspiration to people that know nothing about our field.
 
+I took all the pics at the building that Gizra is located.
+The photos tries to combine with my inner feeling about the daily routine as an employee at Gizra.
