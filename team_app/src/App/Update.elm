@@ -51,9 +51,6 @@ init flags =
                         rotation =
                             toFloat randomNumber3 / 50 - 10
 
-                        _ =
-                            Debug.log "rotation" rotation
-
                         magent =
                             { selected = False
                             , position = Position x y
