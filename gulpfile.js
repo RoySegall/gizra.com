@@ -20,11 +20,17 @@ var source = require("vinyl-source-stream");
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 
+var del = require('del');
+
 // Runs the build command for Jekyll to compile the site locally
 // This will build the site with the production settings
 gulp.task("jekyll:dev", $.shell.task("bundle exec jekyll build"));
-gulp.task("jekyll-rebuild", ["jekyll:dev", "js"], function() {
+gulp.task("jekyll-rebuild", ["clean:serve", "jekyll:dev", "js"], function() {
   reload;
+});
+
+gulp.task("clean:serve", function() {
+  return del(['serve/blog/**/*', 'serve/content/**/*']);
 });
 
 // Almost identical to the above task, but instead we load in the build configuration
