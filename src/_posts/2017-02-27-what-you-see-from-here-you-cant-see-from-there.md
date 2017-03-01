@@ -6,33 +6,37 @@ permalink: "/content/what-you-see-from-here-you-cant-see-from-there/"
 layout: post  
 image: /assets/images/posts/what-you-see-from-here/thumb.jpg    
 author: DavidBronfen  
-description: "A few days ago I took part in an experience that is rather rare in most workplaces."
+description: "A few days ago I took part in a rare experience - I have shadowed my boss."
 ---
 
-A few days ago I took part in an experience that is rather rare in most workplaces.I was invited to shadow Amitai, the CTO, and co-owner of Gizra, for a full day, in order to understand how things work from his perspective.
+A few days ago I took part in an experience that is rather rare in most workplaces. I was invited to shadow Amitai, the CTO, and co-owner of Gizra, for a full day, in order to understand how things work from his perspective.
 
-My impressions of this day are varied, but most importantly I understood things that I would not have learned if not going through this experience. In the end, I feel that I had one of the more interesting experiences and lessons a workplace can offer its employees that not only enhanced me professionally but also opened my mind to how to tackle daily tasks.
+My impressions of this day are varied, but most importantly I understood things that I would not have learned if not going through this experience. In the end, I feel that I had one of the more interesting experiences and lessons a workplace can offer its employees. It didn't only enhance me professionally but also opened my mind on how to approach daily tasks.
 
-The idea of allowing your employees to sit next to you, watch the day-to-day activities from the executive manager’s chair, to encourage employees to review the manager, and then conduct a genuine and honest conversation and provide answers to difficult questions - are all indications of a real desire to improve, and create an open and accepting process with the employee.
+Amitai was constantly explaining his thoughts and actions, to make it clear for me what was his line of thought.
+
+The idea of allowing your employees to sit next to you, watch the day-to-day activities from the manager's chair, to encourage employees to review the manager, and then conduct a genuine and honest conversation and provide answers to difficult questions - are all indications of a real desire to improve, and create an open and accepting process with the employee.
+
+Every type of feedback, so even Amitai can improve was accepted. In fact one of the special things for me in this experience is that even writing the negative feedback _publicly_ is encouraged.
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/view-from-above-indoor.jpg" caption="It's all from above" %}
 
 ## Managers do not know everything
 
-The first mission we were supposed to do was to write a price offer to a RFP. We needed to calculate the time and effort to the project and to give a price offer. The beautiful thing I saw during this quiet not simple process was the faith and trust in yourself that you can do this, and of course the way: Amitai chose to ignore a certain part of the demands because he thought that there is a better way to show the company.
+On the first task I got to observe, we were supposed to write a price offer to a RFP. We needed to estimate the time and effort to the project and to give a price offer. The beautiful thing I saw during this quiet not simple process was the self-trust Amitai was showing in very unclear task - RFPs expect fixed price offers based on very little information.
 
-Trusting your abilities isn't less important than knowledge, if not even a whole lot more.
-The power and strength is not to give a count and meaning to the lack of things, or the missions that requires a lot of effort - to break us down, it is a choice between giving up and trying to do better.
+Trusting your abilities isn't less important than knowledge. It what allows one to not easily give up and follow a gut feeling in pursuit of trying to do better.
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/against-the-nature.jpg" caption="Against the nature" %}
 
-## Make sure you understand
+## Articulate the problem
 
-I suddenly realized how important it is to understand as much as possible when you get a task to perform.  
-If we can get all the required information and to understand them in the early stage, we will prevent in advance the problems that might show up while we are working on something. my conclusion is that’s worth to spend a few more minutes to ask all the questions and see all the issues with our eyes.
+I realized how important it is to understand as much as possible when you get a task to perform.  
+If we can get all the required information and to understand them in the early stage, we will prevent in advance the problems that might show up while we are working on something.
 
-It is easy to get distracted in our modern world. To minimize “disruptions”, it is very important to come prepared with a precise and clearly formulated question. The answer to your question should be something like “yes, you are in the right direction” or “No, you're not in the right direction”. If the answer isn't one of these possibilities, you did not prepared enough and your question, as a result, has done more harm than good.
+But knowing _when_ and _how_ to ask is also vital.
 
+To minimize disruptions, it is important to come prepared with a precise and clearly formulated question. The answer to your question should ideally be binary. Something like "yes, you are in the right direction" or "No, because this and that". If the answer isn't one of these possibilities, you might have probably not went over properly over the task. Remember, "Managers do not know everything".
 
 ## How I have developed as an employee
 
