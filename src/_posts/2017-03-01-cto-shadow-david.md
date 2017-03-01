@@ -17,7 +17,7 @@ Amitai was constantly explaining his thoughts and actions, to make it clear for 
 
 The idea of allowing your employees to sit next to you, watch the day-to-day activities from the manager's chair, to encourage employees to review the manager, and then conduct a genuine and honest conversation and provide answers to difficult questions - are all indications of a real desire to improve, and create an open and accepting process with the employee.
 
-Every type of feedback, so even Amitai can improve was accepted. In fact one of the special things for me in this experience is that even writing the negative feedback _publicly_ is encouraged.
+Every type of feedback (so even Amitai can improve) was accepted. In fact, one of the special things for me in this experience is that even writing the negative feedback _publicly_ is encouraged.
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/view-from-above-indoor.jpg" caption="It's all from above" %}
 
@@ -61,8 +61,8 @@ A couple of days after this experience, I met some of my friends and one of them
 
 I shared with them what I've been through and I've noticed that all of them were hypnotized. It was completely puzzling for them - how could it be that I set with one of the company owners, and had to write a criticism about him. And not only was it accepted by him, but he actually encouraged me and guided me in writing this post.
 
-The friend who asked the most questions is an owner of a business in the fashion industry in Israel and a few shops around the globe. she was amazed by this process, and immediately told me she is going to embrace this idea and start doing it at her business. I was so happy that I have succeeded to give the experience and to give inspiration to people regardless of their field of expertise.
+The friend who asked the most questions is an owner of a business in the fashion industry in Israel and a few shops around the globe. She was amazed by this process, and immediately told me she is going to embrace this idea and start doing it at her business. I was so happy that I have succeeded to give the experience and to give inspiration to people regardless of their field of expertise.
 
-I took all the pics at the building that Gizra Israel is located. If my words have not explained my ideas and thoughts, I hope the pictures have.
-
-{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg" %}
+{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg"
+caption="I took all the pics at the building that Gizra Israel is located. If my words have not explained my ideas and thoughts, I hope the pictures have."
+%}
