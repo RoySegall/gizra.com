@@ -9,7 +9,7 @@ author: DavidBronfen
 description: "A few days ago I took part in an experience that is rather rare in most workplaces."
 ---
 
-{% include setup %}
+
 
 ## What you see from here, you can’t see from there:
 
