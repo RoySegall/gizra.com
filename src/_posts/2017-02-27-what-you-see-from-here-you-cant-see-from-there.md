@@ -17,13 +17,10 @@ The idea of allowing your employees to sit next to you, watch the day-to-day act
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/view-from-above-indoor.jpg" caption="It's all from above" %}
 
-{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/cut-the-darkness.jpg" caption="Cut the darkness" %}
+## Managers do not know everything
 
-## Managers do not knows everything
+The first mission we were supposed to do was to write a price offer to a RFP. We needed to calculate the time and effort to the project and to give a price offer. The beautiful thing I saw during this quiet not simple process was the faith and trust in yourself that you can do this, and of course the way: Amitai chose to ignore a certain part of the demands because he thought that there is a better way to show the company.
 
-The first mission we were supposed to do was to give a price offer to a RFP that our company wants to participate. we need to calculate the time and effort to the project and to give the cost, the beautiful thing I saw during this quiet not simple process was the faith and trust in yourself that you can do this, and of course the way: Amitai chose to ignore a certain part of the demands because he thought that there is a better way to show the company he stands in front of.
-
-My conclusion:  
 Trusting your abilities isn't less important than knowledge, if not even a whole lot more.
 The power and strength is not to give a count and meaning to the lack of things, or the missions that requires a lot of effort - to break us down, it is a choice between giving up and trying to do better.
 
@@ -47,7 +44,7 @@ I felt a little strange, it seemed to me like the success of this position isnâ€
 A solitude against this mega big thing to deal with, in addition, the fact that I do not get a guiding hand, made me feel a bit confused.
 Just want to say that I was not coming from a place of stress or helplessness, I just need help in propulsion of large and complex process.
 
-{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/locked.jpg" caption="Locked" %}
+{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/locked.jpg" caption="Locked" %}
 
 ## How I feel today
 
@@ -57,7 +54,7 @@ I know that I need to go through the whole process from the beginning to the end
 But also I know that I won't be able to do this by own, I need a professional guidance, at least at the beginning in order to start the process.
 Every single person has its own way and his own progress to pass through.
 
-{% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg" caption="Highlights and shadows (we need both for a balanced life)." %}
+{% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/highlights-and-shadows.jpg" caption="Highlights and shadows (we need both for a balanced life)." %}
 
 ## What my friends think of it
 
