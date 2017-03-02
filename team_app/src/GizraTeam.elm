@@ -499,7 +499,7 @@ people =
         , image = "RyanRempel.jpg"
         , socialNetworks =
             [ Email "ryan@gizra.com"
-            , Github "DavidHernandez"
+            , Github "rgrempel"
             ]
         , title = "Developer"
         , attributes =
