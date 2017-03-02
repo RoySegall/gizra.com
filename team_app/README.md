@@ -14,7 +14,7 @@ npm install -g elm@0.18.0 # Or whatever version is specified in elm-package.json
 `gulp` will watch the app and copy it to Jekyll's assets.
 
 
-### New employee photos
+## New employee photos
 
 Please take a medium/medium full shot of yourself on a black/dark gray background. 
 
