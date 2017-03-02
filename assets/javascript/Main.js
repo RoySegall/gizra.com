@@ -10394,7 +10394,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																							_0: _Gizra$elm_spa_exmple$People_Model$Email('ryan@gizra.com'),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																								_0: _Gizra$elm_spa_exmple$People_Model$Github('rgrempel'),
 																								_1: {ctor: '[]'}
 																							}
 																						},
