@@ -26,4 +26,5 @@ Use a professional camera if possible, try to avoid using smartphones.
 Open a PR and upload the photos to the following directions
 
 `src/assets/images/team/avatars`
+
 `src/assets/images/team/members`
