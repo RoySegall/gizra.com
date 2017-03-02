@@ -21,18 +21,15 @@ All types of feedback are accepted, so even Amitai can improve. In fact, one of 
 
 ## Managers do not know everything
 
-The first task I got to observe, was to prepare the technical description and price estimate for an RFP. We needed to estimate the time and effort for the project and translate that into a price offer. The beautiful thing I saw during this quiet not simple process was the self-trust Amitai was showing in very unclear task - RFPs expect fixed price offers based on very little information.
+The first task I got to observe, was to prepare the technical description and price estimate for a badly defined RFP. We could have easily been discouraged, and run around in circles answering the technical questions and trying to estimate the time and effort.  The beautiful thing I saw was the self-trust Amitai showed.  He knew there was a better way to provide a fixed price offer based on very little information, and with some effort, he figured it out.
 
-Trusting your abilities isn't less important than knowledge. It what allows one to not easily give up and follow a gut feeling in pursuit of trying to do better.
+Trusting your abilities isn't less important than knowledge. It makes sure you don't give up and reminds you to follow your gut feeling in pursuit of trying to do better.
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/against-the-nature.jpg" caption="Against the nature" %}
 
 ## Articulate the problem
 
-I realized how important it is to invest effort early on in understanding a task before it is to performed.  
-If we can get all the required information and to understand them in the early stage, we will prevent in advance the problems that might show up while we are working on something.
-
-But knowing _when_ and _how_ to ask is also vital.
+I realized how important it is to invest effort early on in understanding a task before it is to performed.  It helps take on in advance problems that might show up later in the task. And knowing _when_ and _how_ to ask is vital.
 
 To minimize disruptions, it is important to come prepared with a precise and clearly formulated question. The answer to your question should ideally be binary. Something like "yes, you are in the right direction" or "No, because this and that". If the answer isn't one of these possibilities, you probably did not go over the task properly. Remember, "Managers do not know everything".
 
@@ -40,11 +37,11 @@ To minimize disruptions, it is important to come prepared with a precise and cle
 
 After shadowing, we are requested to prepare a report. And possibly a blog post.
 
-Using written words to describe my thoughts is definitely not placing me in my comfort zone. In fact, I feel that the pictures I took and scattered in the post may better reflect what I'm trying to convey. However, having to do this forces me to go through a process that I feel contributed a lot to the way I look at things, here's on example:
+Using written words to describe my thoughts is definitely out of my comfort zone. In fact, I feel that the pictures I took and scattered in the post may better reflect what I'm trying to convey. However, having to do this forces me to go through a process that I feel contributed a lot to the way I look at things, here's an example:
 
-One of the turning points I had in Gizra was when it was decided to change my role from a developer to a QA specilist.
+One of the turning points I had in Gizra was when my role changed from developer to a QA specialist.
 
-I asked Amitai, "What do I need to do in order to succeed in this role?", and his response was "you should be excellent".
+I asked Amitai, "What do I need to do in order to succeed in this role?", and his response was "you should be excellent."
 
 That was a horrible answer. It seemed to me like he was actually saying: "this is the position, good luck and bye!"
 
@@ -57,7 +54,7 @@ While I still hold my criticism about how that question was answered, I must adm
 
 A couple of days after this experience, I met some of my friends and one of them asked me what's new at my workplace.
 
-I shared with them what I've been through and I've noticed that all of them were hypnotized. It was completely puzzling for them - how could it be that I go to sit with one of the company owners, and had to write a criticism about him. And not only was it accepted by him, but he actually encouraged me and guided me to write a post about it. 
+I shared with them what I've been through and I noticed that all of them were hypnotized. It was completely puzzling for them - how could it be that I got to sit with one of the company owners, and was asked to write criticism about him. And not only was it accepted by him, but he actually encouraged me and guided me to write a post about it. 
 
 The friend who asked the most questions is an owner of a business in the fashion industry in Israel and has a few shops around the globe. She was amazed by this process, and immediately told me she is going to embrace this idea and start doing it at her business. I was so happy that I was able to share my experience and even provide inspiration to people regardless of their field of expertise.
 
