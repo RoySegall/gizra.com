@@ -14,12 +14,13 @@ npm install -g elm@0.18.0 # Or whatever version is specified in elm-package.json
 `gulp` will watch the app and copy it to Jekyll's assets.
 
 
-### New employe photos
+### New employee photos
 
-Please take a medium/medium full shot of yourself on a black/dark grey background. 
+Please take a medium/medium full shot of yourself on a black/dark gray background. 
 Use a professional camera if possible, try to avoid using smartphones. 
 
-***Member dimenssions** 401 * 600 pixel 
+**Member dimenssions** 401 * 600 pixel 
+
 **Avatar dimenssions** 80 * 80 pixel
 
 Open a PR and upload the photos to the following directions
