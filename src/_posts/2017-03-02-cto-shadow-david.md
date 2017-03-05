@@ -1,5 +1,5 @@
 ---
-title: "What you see from here, you can’t see from there"
+title: "What You See from Here, You Can't See from There"
 tags:
   - The Gizra Way  
 permalink: "/content/i-also-shadowed-our-cto/"  
@@ -19,7 +19,7 @@ All types of feedback are accepted, so even Amitai can improve. In fact, one of 
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/view-from-above-indoor.jpg" caption="It's all from above" %}
 
-## Managers do not know everything
+## Managers Do Not Know Everything
 
 The first task I got to observe, was to prepare the technical description and price estimate for a badly defined RFP. We could have easily been discouraged, and run around in circles answering the technical questions and trying to estimate the time and effort.  The beautiful thing I saw was the self-trust Amitai showed.  He knew there was a better way to provide a fixed price offer based on very little information, and with some effort, he figured it out.
 
@@ -27,13 +27,13 @@ Trusting your abilities isn't less important than knowledge. It makes sure you d
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/against-the-nature.jpg" caption="Against the nature" %}
 
-## Articulate the problem
+## Articulate the Oroblem
 
 I realized how important it is to invest effort early on in understanding a task before it is to performed.  It helps take on in advance problems that might show up later in the task. And knowing _when_ and _how_ to ask is vital.
 
 To minimize disruptions, it is important to come prepared with a precise and clearly formulated question. The answer to your question should ideally be binary. Something like "yes, you are in the right direction" or "No, because this and that". If the answer isn't one of these possibilities, you probably did not go over the task properly. Remember, "Managers do not know everything".
 
-## How I feel today
+## How I Feel Today
 
 After shadowing, we are requested to prepare a report. And possibly a blog post.
 
@@ -50,7 +50,7 @@ While I still hold my criticism about how that question was answered, I must adm
 {% include thumbnail.html image_path="/assets/images/posts/what-you-see-from-here/locked.jpg" caption="Locked" %}
 
 
-## What my friends think of it
+## What My Friends Think of It
 
 A couple of days after this experience, I met some of my friends and one of them asked me what's new at my workplace.
 
