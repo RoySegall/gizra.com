@@ -19,7 +19,7 @@ A company that understand that if you want to have a career, your children are n
 
 [pix of lavi eating lunch at the office]
 
-Since that viral post, and in a matter of a year there are now five of us, all working mothers, that hold key positions - Account Manager, QA specialist, Employee Training & Development, Business Development Director and Operations Manager. The wonderful part of it is that I’ve never been in a workplace that it feels so natural to be one of “the girls”. Imagine my surprise to find out that there’s no drama, no hidden intentions, and no judgement. The blunt-in-your-face attitude is there as well - who knew?!? 
+Since that viral post, and in a matter of a year there are now five of us, all working mothers, that hold key positions - Account Manager, QA specialist, Employee Training & Development, Business Development Director and Operations Manager. The wonderful part of it is that I’ve never been in a workplace that it feels so natural to be one of “the girls”. Imagine my surprise to find out, despite my stereotyped feelings, that all of my presumptions were faded away. There’s no drama, no hidden intentions, and no judgement. The blunt-in-your-face attitude is there as well - who knew?!?
 
 I really look forward to those days that all of the women are in the office - to share failures, wins, worries, and celebrations. We are friends. We are professional co-workers. We have each other’s back. We support and encourage each other. We are happy for the other’s successes. We help move the company forward, and there’s nothing we can't accomplish. These ladies makes me a better person, a better mother, a better woman!
 
