@@ -12,7 +12,7 @@ description: Especially for international women’s day, Orit is refuting an old
 
 “Women are incapable of solidarity.” I bet you’ve heard this once or twice in your life, especially in an office environment. I want to refute this. 
 
-I must admit that I am guilty of believing this sentiment. I felt it growing up. I was a “tomboy.” I mostly hung out with my male-cousins and my brother. For me it was easier - I thought it meant no drama, no hidden intentions, no judgement - just blunt-in-your-face attitude. I luckily did not skip all together on the opportunity to bring wonderful women into my life. It just meant that I handpicked my girlfriends. Those that survived my aggressive filtering, still remain my girlfriends until this day and I can't imagine how my life would have looked like without them.
+I must admit that I am guilty of believing this sentiment. I felt it growing up. I was a “tomboy”. I mostly hung out with my male-cousins and my brother. For me it was easier - I thought it meant no drama, no hidden intentions, no judgement - just blunt-in-your-face attitude. I luckily did not skip all together on the opportunity to bring wonderful women into my life. It just meant that I handpicked my girlfriends. Those that survived my aggressive filtering, still remain my girlfriends until this day and I can't imagine how my life would have looked like without them.
 
 [pix of wonderwoman and the guys]
 
