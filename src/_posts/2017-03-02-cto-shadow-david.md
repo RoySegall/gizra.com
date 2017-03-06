@@ -27,7 +27,7 @@ Trusting your abilities isn't less important than knowledge. It makes sure you d
 
 {% include thumbnail.html  image_path="/assets/images/posts/what-you-see-from-here/against-the-nature.jpg" caption="Against the nature" %}
 
-## Articulate the Oroblem
+## Articulate the Problem
 
 I realized how important it is to invest effort early on in understanding a task before it is to performed.  It helps take on in advance problems that might show up later in the task. And knowing _when_ and _how_ to ask is vital.
 
