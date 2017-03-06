@@ -1,5 +1,5 @@
 ---
-title: It's not a wonder, women
+title: It's Not a Wonder, Women.
 tags:
   - Office Culture
 permalink: "/content/its-not-a-wonder-women/"
@@ -7,7 +7,7 @@ layout: post
 image:
 author: OritiMG
 published: true
-description: Especially for international women’s day, Orit is refuting an old sentiment. It’s not a wonder to be in a pro-feminine workplace, at least at Gizra
+description: Especially for International Women’s Day, Orit is refuting an old sentiment. It’s not a wonder to be in a pro-women workplace, at least at Gizra.
 ---
 
 “Women are incapable of solidarity.” I bet you’ve heard this once or twice in your life, especially in an office environment. I want to refute this. 
