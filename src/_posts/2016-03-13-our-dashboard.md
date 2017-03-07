@@ -2,7 +2,7 @@
 tags:
 - Shoov
 - Project Management
-permalink: "/content/our-shoov-dashboar/"
+permalink: "/content/our-shoov-dashboard/"
 title: Our Shoov Dashboard
 layout: post
 image: /assets/images/posts/our-dashboard/thumb.jpg
