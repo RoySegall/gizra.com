@@ -7,7 +7,7 @@ layout: post
 image: "/assets/images/posts/why-drupal/thumb.jpeg"
 author: DavidHernandez
 published: true
-description: "Sometimes, we have to stop what we are doing and think a little of why we do it."
+description: "Sometimes, we have to stop what we are doing and think a little about why we do it."
 ---
 This post is a translation of the transcript of the lightning talk I gave during [DrupalCamp Spain 2017](https://2017.drupalcamp.es/) in Madrid. The title of the talk was "[Why Drupal](https://2017.drupalcamp.es/sessions/why-drupal-davidbaltha)" and talked about my personal reasons for developing with Drupal. You can find the slides, with the transcript in Spanish [here](http://slides.com/david_hernandez/why-drupal/).
 
@@ -21,7 +21,7 @@ This post is a translation of the transcript of the lightning talk I gave during
 
 *I do not know why you choose to use Drupal, but in this session, I will tell you why I do.*
 
-*But before jumping into conclusions, let's start from the beginning.*
+*But before jumping to the conclusions, let's start from the beginning.*
 
 ![About me](/assets/images/posts/why-drupal/about-me.png)
 
@@ -51,11 +51,11 @@ This post is a translation of the transcript of the lightning talk I gave during
 
 *To end privilege. But, as this is extremely complicated, we need to continue moving in that direction in little steps.*
 
-*Do I have more privileges than the other person? If so, then I have to use those privileges to help them and to help the rest of the people who also lacks this privilege.*
+*Do I have more privileges than the other person? If so, then I have to use those privileges to help them and to help the rest of the people who also lack this privilege.*
 
-*Is there people abusing their privilege? If so, then I have to confront them, even if their abuse does not directly affects me or even if it helps me, to stop the abuse of the less privileged people.*
+*Are there people abusing their privilege? If so, then I have to confront them, even if their abuse does not directly affects me or even if it helps me, to stop the abuse of the less privileged people.*
 
-*When we gain something before the other person, we need to ask ourselves why did we receive it. Was it because we had more merits, or was it because we have more privileges? We have to make the differences of privileges more visible so people are aware of those differences.*
+*When we gain something before another person, we need to ask ourselves why did we receive it. Was it because we had more merits, or was it because we have more privileges? We have to make the differences of privileges more visible so people are aware of those differences.*
 
 *But... How is all of this related to Drupal?*
 
