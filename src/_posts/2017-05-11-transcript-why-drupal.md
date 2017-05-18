@@ -1,5 +1,5 @@
 ---
-title: Transcript of a lightning session: Why Drupal?
+title: "Transcript of a lightning session: Why Drupal?"
 tags:
   - DrupalCamp
 permalink: "/content/lightning-session-why-drupal/"
