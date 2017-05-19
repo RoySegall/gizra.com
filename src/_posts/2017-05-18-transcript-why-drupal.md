@@ -35,7 +35,7 @@ I work for a company that allowed me to come today to this conference, instead o
 
 I was born to a family that allowed me to finish my studies, and to live abroad to continue my training.
 
-I live in a country that has one of the best passports in the world for travelling and most of the borders are open for me with no trouble.
+I live in a country that has one of the best passports in the world for traveling and most of the borders are open for me with no trouble.
 
 The colour of my skin makes it that in most places, everybody is helpful and mindful. A colour that does not make me a suspect by default.
 
