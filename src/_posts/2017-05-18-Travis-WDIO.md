@@ -10,21 +10,21 @@ published: false
 description: "Breaking tests is easy, finding the root cause should not be."
 ---
 
-Chances are that you already using Travis or another Cool CI to execute your tests, to deploy and so on. Very often getting boolean or textual output from the execution is enough, knowing that which tests are failing is enough to start to debug the problematic code part in a minute. With WebdriverI/O (referring it as WDIO later) and with an architecture, where frontend and backend is decoupled, it's much more complicated.
+Chances are that you already using Travis or another Cool CI to execute your tests, to deploy and so on. Very often getting boolean or textual output from the execution is enough, knowing that which tests are failing is a good starting point to start to debug the problematic code part. In our case, with WebdriverI/O (referring it as WDIO later) and with an architecture, where frontend and backend is decoupled, it's much more complicated.
 
-It might be that the browser could not click on an element, or the frontend could not contact the backend, or the frontend has a runtime error (you might face with it, but at Gizra, we use Elm, where it is practically impossible), who knows, even the browser could crash due to lack of memory. One way is to manually start reproducing what Travis does, it's fun at first time, but doing it again and again is just a waste of time. Then our CTO, Amitai gave excellent pointers about dockerized Selenium, then insisted that having video recordings is much better than simple static screenshots and it was so true.
+It might be that the browser could not click on an element, or the frontend could not contact the backend, or the frontend has a runtime error (you might face with it, but at Gizra, we use Elm, where it is practically impossible), who knows, even the browser could crash due to lack of memory, the same applies to Travis that might run out of memory. One way is to manually start reproducing what Travis does, it's fun at first time, but doing it again and again is just a waste of time. Then our CTO, Amitai gave excellent pointers about dockerized Selenium, then insisted that having video recordings is much better than simple static screenshots and it was so true.
 
-These days at Gizra, on client projects, we can benefit of knowing exactly how and why our browser-based tests failed. There was just guessing before.
+These days at Gizra, on client projects, we can benefit of knowing exactly how and why our browser-based tests failed. The fact that we already used [Docker inside Travis](http://www.gizra.com/content/docker-travis-ci/) helped a lot, but this additional video recording on the browser based test makes the life of the developers much easier.
 
 ## Ingredients
 
 Let's overview what's bundled into Drupal Elm Starter recently and who is responsible for what.
 
-Upon a push, GitHub invokes Travis to start a build, just the standard like at many projects at GitHub since a long time.
+Upon a push, GitHub invokes Travis to start a build, that is just the standard like at many projects at GitHub since a long time.
 
 Travis executes a set of [shell scripts](https://github.com/Gizra/drupal-elm-starter/blob/master/.travis.yml#L9) according to the [build matrix](https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix), the only noteworthy thing is that using the build matrix with environment variables can be used to test the things in parallel, like one element of the matrix is the WDIO test, another element could be any kind of [Lint](https://en.wikipedia.org/wiki/Lint_(software)) to scrutinize the code quality.
 
-Docker Compose (https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/docker\_files/docker-compose.yml) launches two containers, one with the application and the test code, the other with a Selenium Grid (https://github.com/zalando/zalenium). It also helps to talk the containers to [each other](https://docs.docker.com/compose/networking/) via expressive hostnames.
+From now, we only focus on one element of the build matrix. Docker Compose (https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/docker\_files/docker-compose.yml) launches two containers, one with the application and the test code, the other with a Selenium Grid (https://github.com/zalando/zalenium). It also helps to talk the containers to [each other](https://docs.docker.com/compose/networking/) via expressive hostnames.
 
 The WDIO executes our test suites, but the Selenium host is not localhost, but address of the other Docker container.
 
