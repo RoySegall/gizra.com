@@ -27,7 +27,7 @@ But before jumping to the conclusions, let's start from the beginning.
 
 I am David Hernández and for me, it is a privilege to be here, sharing this lightning talk with all of you.
 
-![Privilege](/assets/images/posts/why-drupal/priviledge.png)
+![Privilege](/assets/images/posts/why-drupal/privilege.png)
 
 And I mean it.
 
@@ -35,19 +35,19 @@ I work for a company that allowed me to come today to this conference, instead o
 
 I was born to a family that allowed me to finish my studies, and to live abroad to continue my training.
 
-I live in a country that has one of the best passports in the world for travelling and most of the borders are open for me with no trouble.
+I live in a country that has one of the best passports in the world for traveling and most of the borders are open for me with no trouble.
 
 The colour of my skin makes it that in most places, everybody is helpful and mindful. A colour that does not make me a suspect by default.
 
 My gender doesn't cause people to question why I have not settled yet, and why I do not yet have a family and children. My gender always helped me to find good jobs and better conditions than the fifty percent of the population of my country, under the same conditions.
 
-![The problem of privilege](/assets/images/posts/why-drupal/problem-of-priviledge.png)
+![The problem of privilege](/assets/images/posts/why-drupal/problem-of-privilege.png)
 
 And this continues forever. And it is a problem. But does it have a solution?
 
 In my opinion, there is a really simple solution.
 
-![The end of privilege](/assets/images/posts/why-drupal/end-of-priviledge.png)
+![The end of privilege](/assets/images/posts/why-drupal/end-of-privilege.png)
 
 To end privilege. But, as this is extremely complicated, we need to continue moving in that direction in little steps.
 
