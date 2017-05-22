@@ -8,7 +8,7 @@ permalink: "/content/travis-wdio/"
 layout: post
 published: true
 author: AronNovak
-description: "Breaking tests is easy, finding the root cause should not be."
+description: "Breaking tests is easy, finding the root cause should be likewise."
 ---
 
 Chances are that you already using Travis or another Cool CI to execute your tests, to deploy and so on. Very often getting boolean or textual output from the execution is enough, knowing that which tests are failing is a good starting point to start to debug the problematic code part. In our case, with WebdriverI/O (referring it as WDIO later) and with an architecture, where frontend and backend is decoupled, it's much more complicated.
@@ -19,7 +19,7 @@ These days at Gizra, on client projects, we can benefit of knowing exactly how a
 
 ## Ingredients
 
-Let's overview what's bundled into Drupal Elm Starter recently and who is responsible for what.
+Let's overview what's bundled into [Drupal Elm Starter](https://github.com/Gizra/drupal-elm-starter) recently and who is responsible for what.
 
 Upon a push, GitHub invokes Travis to start a build, that is just the standard like at many projects at GitHub since a long time.
 
