@@ -5,6 +5,7 @@ tags:
   - Travis
   - Drupal Elm Starter
 permalink: "/content/travis-wdio/"
+image: "/assets/images/posts/travis-wdio/thumb.png"
 layout: post
 published: true
 author: AronNovak
