@@ -39,9 +39,38 @@ events - similar to Webhooks.
 Slack, Facebook Messagner, Skype, Telegram provides a integration with bot in
 some way or another but, in this blog post we will focus on Slack.
 
-## Write your first bot is easy than you think
+## Write your first bot is easy than you think, right?
+So, you want to write your first bot - You came to the write place. What do we
+need for that? First, go and create a bot in your team. You can do it under
+`http://yourteam.slack.com/apps` and create a custom bot integration.
 
-Just use Nuntius...
+The next thing you need to start and use a library. There are something like a
+quadrillions libraries - PHP, NodeJS, Python and couple in Go lang. But, what do
+we need from a library? We need an easy set up, listening to events and acting,
+understanding from the text what kind of task the user asks from us to do and
+a lot more than that. Sound a bit frustrating, no? You are right!
+
+When I came to write the first task I saw that analyze the text is more that
+just find the a matching function to the text because when having a lot of tasks
+our code will get long and messy. And that's why I created Nuntius. A PHP
+framework based on Symfony components which organize the code.
+
+## Introducing Nuntius
+Though [Nuntius](http://nuntius.xyz) is well documented let's start and see how
+easy is to set a task. After
+[settings up nuntius](http://nuntius.xyz/Nuntius_Slack_Bot.html) we need to
+write the first command.
+
+## Hooks? Event dispatching?
+No and no. In order to make things easy Nuntius does not use hooks or events
+dispatching to integrate with custom commands. Instead, all of the integrations
+defined in a YML file.
+
+In our `hooks.local.yml` we will add a custom task:
+<script src="https://gist.github.com/RoySegall/8b6f57d49281352b6f5217c902d2c023.js"></script>
+
+Our task will be located at `src/Custom/LookForAPicture.php`:
+<script src="https://gist.github.com/RoySegall/2bf556c2994b0bc89bc5ede26605f366.js"></script>
 
 ## External services
 
