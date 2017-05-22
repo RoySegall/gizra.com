@@ -534,6 +534,7 @@ people =
             , FamilyAttr Kids
             , LanguageAttr English
             , LanguageAttr Hungarian
+            , LivedAbroad
             , MusicWhileWorking
             , NationalityAttr Hungary
             , PreferedWorkHoursAttr NineToFive

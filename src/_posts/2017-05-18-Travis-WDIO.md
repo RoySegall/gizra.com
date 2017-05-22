@@ -6,7 +6,8 @@ tags:
   - Drupal Elm Starter
 permalink: "/content/travis-wdio/"
 layout: post
-published: false
+published: true
+author: AronNovak
 description: "Breaking tests is easy, finding the root cause should not be."
 ---
 
