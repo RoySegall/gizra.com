@@ -3,7 +3,9 @@ title: Travis and WDIO - Breaking out of the Black Box
 tags:
   - Devops
   - Travis
-  - Drupal Elm Starter
+  - Drupal
+  - Elm
+  - Drupal-planet
 permalink: "/content/travis-wdio/"
 image: "/assets/images/posts/travis-wdio/thumb.png"
 layout: post
@@ -47,7 +49,7 @@ Seems impossible, right?
 
 My experience is that this rigorous workflow helped me to find creative ways to solve the problems (not talking about ugly hacks here - just merely changing the way to find proper solutions), if the complexity is adequately calibrated to the developer, it triggers good stress that helps in problem solving too and contributes to the work satisfaction.
 
-Let's see how I was led to make it happen, these are beyond this company handbook, as of course this is domain-specific, while a handbook should not be.
+Let's see how I was led to make it happen.
 
 ### Dissect steps
 It seems to be obvious that you need to break the problem into smaller chunks, but when the testability is so problematic, you must follow this principle very strictly. In this case, the most helpful was to test the different units in the simplest environment as possible. For instance there's a Bash script that's responsible for the GitHub upload. Instead of launching the script via Travis or via a [similar local environment](https://docs.travis-ci.com/user/common-build-problems/#Running-a-Container-Based-Docker-Image-Locally), in the native local environment, just feeding the script with the proper environment variables, what Travis would do, helped to speed up the process to almost real time debuggability.
