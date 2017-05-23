@@ -330,6 +330,15 @@ authors:
       is_member: false
       bio: Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.
       avatar: lukeherrington.jpg
+  - AronNovak:
+     name: Áron Novák
+     title: developer
+     is_member: true
+     bio: Started with Drupal 4.7, passionate about performance and automation these days.
+     email: aron@gizra.com
+     github: AronNovak
+     avatar: AronNovak.jpg
+     image: AronNovak.jpg
   - You:
       name: You?
       is_member: false
