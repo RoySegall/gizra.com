@@ -4,10 +4,100 @@
     <description></description>
     <title>Gizra</title>
     <link>http://www.gizra.com</link>
-    <lastBuildDate>Fri, 19 May 2017 13:01:13 -0500</lastBuildDate>
-    <pubDate>Fri, 19 May 2017 13:01:13 -0500</pubDate>
+    <lastBuildDate>Tue, 23 May 2017 12:21:47 -0500</lastBuildDate>
+    <pubDate>Tue, 23 May 2017 12:21:47 -0500</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Travis and WDIO - Breaking out of the Black Box</title>
+        <description>
+          &lt;p&gt;Chances are that you already using Travis or another Cool CI to execute your tests. Very often getting boolean or textual output from the execution is enough, because knowing which tests are failing is a good starting point to start to debug the problematic code. In our case, with WebdriverI/O (WDIO) and with an architecture where the frontend and backend are decoupled, it’s much more complicated.&lt;/p&gt;
+
+&lt;p&gt;It might be that the browser could not click on an element, or the frontend could not contact the backend, or the frontend has a runtime error (well, you might be faced with it, but at Gizra we use &lt;a href=&quot;http://elm-lang.org/&quot;&gt;Elm&lt;/a&gt;, where it is practically impossible). Who knows, even the browser could crash due to lack of memory - the same applies to Travis too. One solution is to manually start reproducing what Travis does. It’s fun the first time, but doing it again and again is just a waste of time. But recently, our CTO, Amitai gave excellent pointers about dockerized Selenium and insisted that having video recordings is much better than simple static screenshots - and it was so true.&lt;/p&gt;
+
+&lt;p&gt;These days at Gizra - on client projects - we can benefit by knowing exactly how and why our browser-based tests failed. The fact that we already used &lt;a href=&quot;http://www.gizra.com/content/docker-travis-ci/&quot;&gt;Docker inside Travis&lt;/a&gt; helped a lot, but this additional video recording on the browser-based test makes the life of the developers much easier.&lt;/p&gt;
+
+&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;/h2&gt;
+
+&lt;p&gt;Let’s overview what’s bundled into &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter&quot;&gt;Drupal Elm Starter&lt;/a&gt;, and who is responsible for what.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Upon a push, GitHub invokes Travis to start a build, that’s just the standard for many projects on GitHub for a long time.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Travis executes a set of &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/.travis.yml#L9&quot;&gt;shell scripts&lt;/a&gt; according to the &lt;a href=&quot;https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix&quot;&gt;build matrix&lt;/a&gt;. The only noteworthy thing is that using the build matrix with environment variables can be used to test the things in parallel - like one element of the matrix is the WDIO test, and another element could be any kind of &lt;a href=&quot;https://en.wikipedia.org/wiki/Lint_(software)&quot;&gt;Lint&lt;/a&gt; to scrutinize the code quality.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;From this point, we only focus on one element of the build matrix. Docker Compose &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/docker\_files/docker-compose.yml&quot;&gt;launches&lt;/a&gt; two containers, one with the application and the test code, the other with a &lt;a href=&quot;https://github.com/zalando/zalenium&quot;&gt;Selenium Grid&lt;/a&gt;. It also helps the containers talk to &lt;a href=&quot;https://docs.docker.com/compose/networking/&quot;&gt;each other&lt;/a&gt; via expressive hostnames.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The WDIO executes our test suites, but the Selenium host is not localhost, but rather the address of the other Docker container. This way Zalenium is able to &lt;a href=&quot;https://github.com/zalando/zalenium#using-it&quot;&gt;record a video&lt;/a&gt; of the WDIO tests, it hosts the browser, the Selenium Grid and ffmpeg to encode the movie on-the-fly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Google Drive hosts the videos of the &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/test_server.sh#L77&quot;&gt;failed tests&lt;/a&gt;. To use Google Drive programmatically, &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/server/README.md#google-drive-integration&quot;&gt;several steps&lt;/a&gt; are needed, but the &lt;a href=&quot;https://github.com/prasmussen/gdrive&quot;&gt;gdrive&lt;/a&gt; uploader tool has excellent documentation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In the very end, &lt;a href=&quot;https://github.com/Gizra-robot&quot;&gt;Gizra Robot&lt;/a&gt; posts a comment on the &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/test_server.sh#L94&quot;&gt;conversation thread of the pull request&lt;/a&gt;. Adding a robot user to GitHub &lt;a href=&quot;https://help.github.com/articles/differences-between-user-and-organization-accounts/&quot;&gt;is not different&lt;/a&gt; from adding a human - you can create a new GitHub user and dedicate it to this purpose. The exact process is &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/server/README.md#github-integration&quot;&gt;documented&lt;/a&gt; in the repository.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-result&quot;&gt;The result&lt;/h3&gt;
+
+&lt;p&gt;You can see an example video of the test on a &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/pull/93#issuecomment-298260575&quot;&gt;recent pull request&lt;/a&gt;. The icing on the cake is that if you receive the GitHub notification email to your GMail inbox, you can launch a video straight from there via a YouTube player!&lt;/p&gt;
+
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;http://www.gizra.com/assets/images/posts/travis-wdio/sample-recording.gif&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      WebdriverI/O in action
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;h2 id=&quot;lessons-learned&quot;&gt;Lessons learned&lt;/h2&gt;
+
+&lt;p&gt;I joined Gizra three months ago, and the &lt;a href=&quot;https://www.thegizraway.com/&quot;&gt;Gizra Way&lt;/a&gt;’s time-box/escalation system helped a lot to accomplish this task, where many layers of the CI stack were new to me. Needless to say, debugging Travis is hard. And then, you need to wait. And wait. A lot. Then your issue has a &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/issues/83&quot;&gt;timebox&lt;/a&gt; on it, so hard things must be done quickly and by following best practices.&lt;/p&gt;
+
+&lt;p&gt;Seems impossible, right?&lt;/p&gt;
+
+&lt;p&gt;My experience is that this rigorous workflow helped me to find creative ways to solve the problems (not talking about ugly hacks here - just merely changing the way to find proper solutions), if the complexity is adequately calibrated to the developer, it triggers good stress that helps in problem solving too and contributes to the work satisfaction.&lt;/p&gt;
+
+&lt;p&gt;Let’s see how I was led to make it happen.&lt;/p&gt;
+
+&lt;h3 id=&quot;dissect-steps&quot;&gt;Dissect steps&lt;/h3&gt;
+&lt;p&gt;It seems to be obvious that you need to break the problem into smaller chunks, but when the testability is so problematic, you must follow this principle very strictly. In this case, the most helpful was to test the different units in the simplest environment as possible. For instance there’s a Bash script that’s responsible for the GitHub upload. Instead of launching the script via Travis or via a &lt;a href=&quot;https://docs.travis-ci.com/user/common-build-problems/#Running-a-Container-Based-Docker-Image-Locally&quot;&gt;similar local environment&lt;/a&gt;, in the native local environment, just feeding the script with the proper environment variables, what Travis would do, helped to speed up the process to almost real time debuggability.&lt;/p&gt;
+
+&lt;p&gt;Even a small Bash construct can be extracted and tested separately. Same for a &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; invocation that posts a comment on GitHub. So in the end, I enjoyed the efficiency that came from the way of testing all the things with the minimally needed context - without all the hassle.&lt;/p&gt;
+
+&lt;h3 id=&quot;invest-in-easy-troubleshooting&quot;&gt;Invest in easy troubleshooting&lt;/h3&gt;
+&lt;p&gt;It was a strong sign that we wanted to invest a significant amount to have this functionality at our project template, at Elm Starter, just to help future work. Similarly on the low level, it was mandatory at some point to be able to SSH into the Travis build. It’s enabled for private repositories, but in our case, it was mandatory to write to Travis support and this way, for our public repository, it was possible to use this functionality. It helped a lot to understand why the process behaves differently than at the local environment.&lt;/p&gt;
+
+&lt;h3 id=&quot;contributing-what-you-can&quot;&gt;Contributing what you can&lt;/h3&gt;
+&lt;p&gt;During the implementation, there were some issues with Zalenium, the side container, which provided Selenium Grid and the video recording (https://github.com/zalando/zalenium/pull/92). It got merged to upstream after 12 days, mostly the time the maintainer waited for my answer. It is just a little documentation fix, but it might save fellow developers frustration. On my side, I had the confirmation from the most capable person that I should not try to use &lt;code class=&quot;highlighter-rouge&quot;&gt;--abort-on-exit&lt;/code&gt; with that container. Such scenarios reinforces the best practice, give back what you have, either it is knowledge, a patch or a full-blown solution.&lt;/p&gt;
+
+&lt;h2 id=&quot;takeaway&quot;&gt;Takeaway&lt;/h2&gt;
+
+&lt;p&gt;The solution that is publicly available at the &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/tree/master/ci-scripts&quot;&gt;repository&lt;/a&gt; is easy to re-use in any project that has a similar browser-based test, the only criteria is that it should support the execution on a Selenium Grid. You might capture videos of your pure Simpletest, Behat, WDIO or Nightwatch.js (and who knows what kind of other test frameworks are out there in the wild) test suite and port this code from Drupal Elm Starter to easily understand why your test fails, the only criteria is that you should be able to execute Zalenium Docker container aside. Pull requests are more than welcome to make the process more robust or even sleeker!&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;http://www.gizra.com/content/travis-wdio//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>http://www.gizra.com/content/travis-wdio/</link>
+        <guid>http://www.gizra.com/content/Travis-WDIO</guid>
+        <pubDate>Mon, 22 May 2017 00:00:00 -0500</pubDate>
+      </item>
     
       <item>
         <title>Transcript of a lightning session: Why Drupal?</title>
