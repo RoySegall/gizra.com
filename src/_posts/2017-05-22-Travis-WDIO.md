@@ -40,6 +40,7 @@ Let's overview what's bundled into [Drupal Elm Starter](https://github.com/Gizra
 
 You can see an example video of the test on a [recent pull request](https://github.com/Gizra/drupal-elm-starter/pull/93#issuecomment-298260575). The icing on the cake is that if you receive the GitHub notification email to your GMail inbox, you can launch a video straight from there via a YouTube player!
 
+{% include thumbnail.html image_path="src/assets/images/posts/travis-wdio/sample-recording.gif" caption="WebdriverI/O in action"%}
 
 ## Lessons learned
 
