@@ -79,31 +79,25 @@ a picture of a cute kitten which will take away your sorrow.
 
 We will need to search for pictures via a REST request. I found a nice service
 for that - [pixabay](https://pixabay.com). You'll need to register and get an
-API key for that. Let's have a look on the code to get the picture:
+API key for that.
 
-`https://pixabay.com/api/?key=5448988-e415bead9b59fdbc6dce61b6c&q=dog&image_type=photo`
+After acquiring the access token we need to store it somewhere. The best place
+would be in the `credentials.local.yml`:
 
-Our next step is to send the image as an attachment to a message. In order to
-send a simple message we will need to do someting like that:
+<script src="https://gist.github.com/RoySegall/53be42b81314186a5e308cb8fad3cad3.js"></script>
 
-```php
-$this->client->getDMByUserId('USER_ID')->then(function (ChannelInterface $channel) {
- $this->client->send('Hi user!', $channel);
-});
-```
+Let's have a look on the code to get the picture:
 
-But this is for a simple text. Let's see how we can send a rich text by Slack
-best practices:
+<script src="https://gist.github.com/RoySegall/d648637cf5518ab3f5e06dec704d2621.js"></script>
 
-```php
-use the pay load
-```
+ What we need to do is to return the image url and that's it! And this the full
+ code:
 
-Combine all the stuff together will look like that:
+<script src="https://gist.github.com/RoySegall/94a3fbae852dbbfa26c0bbfe20436472.js"></script>
 
-```php
-Full code
-```
+And this the result:
+
+![Why Drupal?](/assets/images/posts/nuntius-bot/result.png)
 
 ## External services
 
