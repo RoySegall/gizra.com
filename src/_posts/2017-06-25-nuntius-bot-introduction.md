@@ -72,6 +72,45 @@ In our `hooks.local.yml` we will add a custom task:
 Our task will be located at `src/Custom/LookForAPicture.php`:
 <script src="https://gist.github.com/RoySegall/2bf556c2994b0bc89bc5ede26605f366.js"></script>
 
+After implementing the task we can start and code. So what this task should do?
+Get a keyword, look for image which relate to that keyword and then send it as
+an attachment to the message. Basically, when you feeling down you could as for
+a picture of a cute kitten which will take away your sorrow.
+
+We will need to search for pictures via a REST request. I found a nice service
+for that - [pixabay](https://pixabay.com). You'll need to register and get an
+API key for that. Let's have a look on the code to get the picture:
+
+`https://pixabay.com/api/?key=5448988-e415bead9b59fdbc6dce61b6c&q=dog&image_type=photo`
+
+Our next step is to send the image as an attachment to a message. In order to
+send a simple message we will need to do someting like that:
+
+```php
+$this->client->getDMByUserId('USER_ID')->then(function (ChannelInterface $channel) {
+ $this->client->send('Hi user!', $channel);
+});
+```
+
+But this is for a simple text. Let's see how we can send a rich text by Slack
+best practices:
+
+```php
+use the pay load
+```
+
+Combine all the stuff together will look like that:
+
+```php
+Full code
+```
+
 ## External services
 
 Wit.io, api.ai
+
+# Is that the end?
+
+Now, this is just the start. Just like QA moved to automated combined with
+manual tests the bot revolution will look just the same. Eventually, someone
+will need to code the bots. no?
