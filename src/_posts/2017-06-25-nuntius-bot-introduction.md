@@ -97,14 +97,41 @@ Let's have a look on the code to get the picture:
 
 And this the result:
 
-![Why Drupal?](/assets/images/posts/nuntius-bot/result.png)
+![Embed image in slack](/assets/images/posts/nuntius-bot/image.jpg)
+
+## But wait, there's more!
+Slack was kind for us and embed the picture for us. But that is not the best
+practice. One of slack best practices are the attachments. Attachment makes the
+message much more reach and eventually will give us something like that:
+
+![Improved embed image in slack](/assets/images/posts/nuntius-bot/better_image.jpg)
+
+The code is a bit complex than the simple URL we returned:
+<script src="https://gist.github.com/RoySegall/b872dccfb12c01cbd2fa080c27fd281b.js"></script>
 
 ## External services
 
-Wit.io, api.ai
+You mind was blown, I know. But what next? If you thought that branch of
+development left without any SAAS solution you are wrong. Since bots need to
+interact with people, and that require from deep learning and natural language
+analyze there are two famous players in the market(for now) -
+[api.ai](https://api.ai) and [wit.ai](https://wit.ai).
+
+In a nut shell, they will give you informative object which you could interact
+with and could be trained with deep learning.
 
 # Is that the end?
+No, this is just the start. Unless you are a big company like Apple, Google or
+Facebook you probably won't provide solution like Siri and other bots.
 
-Now, this is just the start. Just like QA moved to automated combined with
-manual tests the bot revolution will look just the same. Eventually, someone
-will need to code the bots. no?
+Bots, as I can see it, will be another interaction with your product, could
+provide simple way to get information and will customize the information a user
+get from your product:
+* When are you lunch the new version.
+* Tell users the site is under maintenance for now.
+* Notify the user when a new season of a TV show us lunching(I was informed
+about Silicon valley new season via Facebook Messenger.)
+
+Don't forget that QA was pretty much manually. Now, QA is automated but still
+need to be written and maintained. We might be killing one field but creating a
+new field.
