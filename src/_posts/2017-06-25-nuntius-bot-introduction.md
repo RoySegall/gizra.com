@@ -99,14 +99,14 @@ Let's have a look on the code to get the picture:
 
 And this is the result:
 
-![Embed image in slack](/assets/images/posts/nuntius-bot/image.jpg)
+![Embed image in slack](/assets/images/posts/nuntius-bot/bad_kitten_image.jpg)
 
 ## But wait, there's more!
 Slack was kind for us and embedded the picture for us. But that is not the best
 practice. One of slack best practices are the attachments. Attachment makes the
 message much more reach and eventually will give us something like that:
 
-![Improved embed image in slack](/assets/images/posts/nuntius-bot/better_image.jpg)
+![Improved embed image in slack](/assets/images/posts/nuntius-bot/good_kitten_image.jpg)
 
 The code is a bit complex than the simple URL we returned:
 <script src="https://gist.github.com/RoySegall/b872dccfb12c01cbd2fa080c27fd281b.js"></script>
