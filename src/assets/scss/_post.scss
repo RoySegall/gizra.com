@@ -2,6 +2,12 @@
   display: flex;
 }
 
+.gist {
+  .ui.table tr td {
+    border-top: none;
+  }
+}
+
 // Mobile
 @media only screen and (max-width:767px) {
   // Move the author image below the header.
