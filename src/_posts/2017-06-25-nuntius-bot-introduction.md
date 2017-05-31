@@ -45,20 +45,20 @@ one way or another, but in this post we will focus on Slack.
  First, create a bot in your team. You can do it under
 `http://yourteam.slack.com/apps` and create a custom bot integration.
 
-Next you;ll need to start and use a library. There's something like a
-quadrillion libraries - PHP, NodeJS, Python and couple in Go lang. For 
-our purposes, we need an easy setup, listening to events and acting - for instance,
+Next you'll need to start with a library. There's something like a
+quadrillion libraries - PHP, NodeJS, Python, and couple in Go lang. For 
+our purposes, we need an easy setup, listening to events and acting, 
 understanding from the text what kind of task the user requires, and even
 more (cron tasks for reminders, incoming web hooks, DB layer, etc.).
-Sounds a bit daunting, no? You are right!
+Sounds a bit daunting, no? You're right!
 
-When I came to write the first task, I saw that analyzing the text is more than
-just matching a function to the text - when there are a lot of tasks,
+When I started to write the first task, I saw that analyzing the text is more than
+just matching a function to the text. When there are a lot of tasks,
 the code will get long and messy. And that's why I created Nuntius: a PHP
 framework based on Symfony components that helped me organize the code.
 
 ## Introducing Nuntius
-Though [Nuntius](http://nuntius.xyz) is well-documented let's start and see how
+Though [Nuntius](http://nuntius.xyz) is well-documented, let's see how
 easy is to set up a task. After
 [settings up nuntius](http://nuntius.xyz/Nuntius_Slack_Bot.html) we need to
 write the first task.
@@ -74,14 +74,14 @@ In our `hooks.local.yml` we will add a custom task:
 Our task will be located at `src/Custom/LookForAPicture.php`:
 <script src="https://gist.github.com/RoySegall/2bf556c2994b0bc89bc5ede26605f366.js"></script>
 
-After implementing the task, we can start and code. So, what this task should
-do? Get a keyword, look for an image which relates to that keyword and sends it
+After implementing the task, we can start to code. So, what should this task 
+do? Get a keyword, look for an image which relates to that keyword, and send it
 as an attachment to the message. When you are feeling down you could ask for a
-picture of a cute kitten which will take away your sorrow.
+picture of a cute kitten to take away your sorrow.
 
 We will need to search for pictures via a REST request. I found a nice service
-for that - [pixabay](https://pixabay.com). You'll need to register and get an
-API key for that.
+for that: [pixabay](https://pixabay.com). You'll need to register and get an
+API key.
 
 After acquiring the access token, we need to store it somewhere. The best place
 would be in the `credentials.local.yml` which located under the `settings`
@@ -89,7 +89,7 @@ library:
 
 <script src="https://gist.github.com/RoySegall/53be42b81314186a5e308cb8fad3cad3.js"></script>
 
-Let's have a look on the code to get the picture:
+Let's have a look at the code to get the picture:
 
 <script src="https://gist.github.com/RoySegall/d648637cf5518ab3f5e06dec704d2621.js"></script>
 
@@ -102,40 +102,40 @@ And this is the result:
 
 ![Embed image in slack](/assets/images/posts/nuntius-bot/bad_kitten_image.jpg)
 
-## But wait, there's more!
-Slack was kind for us and embedded the picture for us. But that is not the best
-practice. One of slack best practices are the attachments. Attachment makes the
-message much more reach and eventually will give us something like that:
+## But Wait, There's More!
+Slack was kind and embedded the picture for us, but it's not the best
+practice. Using attachments makes the
+message much more readable and gives us something like this:
 
 ![Improved embed image in slack](/assets/images/posts/nuntius-bot/good_kitten_image.jpg)
 
-The code is a bit complex than the simple URL we returned:
+The code is a bit more complex than the simple URL we returned:
 <script src="https://gist.github.com/RoySegall/b872dccfb12c01cbd2fa080c27fd281b.js"></script>
 
-## External services
+## External Services
 
-Your mind was blown, I know. But what next? If you thought that this branch of
-development left without any SAAS solution, you are wrong. Since bots need to
-interact with people who require deep learning and natural language analyze.
-There are two famous players in the market(for now) -
+Your mind was blown, I know. But what's next? If you thought that this branch of
+development is left without any SAAS solution, you are wrong. Bots need to
+interact with people and require deep learning and natural language analysis.
+There are two famous players in the market (for now) -
 [api.ai](https://api.ai) and [wit.ai](https://wit.ai).
 
-In a nutshell, they will give you informative object which you could interact
-with and could be trained with deep learning.
+In a nutshell, they will give you informative object to interact
+with and train with deep learning.
 
-# Is that the end?
+# Is That the End?
 No. Skynet is not around the corner, and HAL 9000 isn't going to be in NASA's
 new spaceships. This is just the beginning. Unless you are a big company like
-Apple, Google or Facebook you probably won't provide a solution like Siri and
+Apple, Google, or Facebook you probably won't provide a solution like Siri and
 other bots.
 
 Bots, as I can see it, will be another interaction with the product and can
-provide a simple way to get information:
-* When are you going lunch the new version.
-* Tell users the site is under maintenance for now or when it's back.
-* Notify the user when a new season of a TV show is going to lunch(I was
+provide a simple way to get information like:
+* When are you going launch the new version?
+* Let users know that the site is under maintenance for now, and when it's back.
+* Notify the user when a new season of a TV show is going to launch (I was
   informed about Silicon Valley new season via Facebook Messenger.)
 
-Don't forget that QA was pretty much manually. Now, QA is automated but still
+Don't forget that QA was once done pretty much manually. Now, QA is automated but still
 need to be written and maintained. We might be killing one field but creating a
 new field.
