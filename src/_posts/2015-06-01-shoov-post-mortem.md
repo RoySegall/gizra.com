@@ -59,7 +59,7 @@ As you might have noticed (and I can't blame you if you didn't) the `&` char was
 
 After quickly solving the error by hardcoding the `&` char I've decided to spend some time in figuring how I could prevent this from happening again. (Remember: Shoov means "again" in Hebrew for this very reason...)
 
-I've noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to [Loggly](https://www.gizra.com/content/logs-easy-way/) I wasn't notified about it.
+I've noticed that even though RESTful has thrown an exception when it got the result from GitHub, and even though the site is piping the logs to [Loggly](/content/logs-easy-way/) I wasn't notified about it.
 
 So, the first thing I've done was to write a [pull-request](https://github.com/RESTful-Drupal/restful/pull/522/files) to RESTful to make sure that exceptions are registered in the watchdog. This means we now got that part covered not just for Shoov, but for all users of RESTful!
 

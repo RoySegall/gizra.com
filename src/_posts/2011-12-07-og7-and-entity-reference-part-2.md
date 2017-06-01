@@ -7,7 +7,7 @@ title: OG7 and Entity reference - Part 2
 created: 1323296892
 layout: post
 ---
-Following my <a href="https://www.gizra.com/content/og7-and-entity-reference-sponsor-me">previous</a> post, and after getting some great reaction from the community via IRC and in Drupalcamp Toulouse, I’d like to share both my thoughts about the sponsoring and about the technical stuff.
+Following my <a href="/content/og7-and-entity-reference-sponsor-me">previous</a> post, and after getting some great reaction from the community via IRC and in Drupalcamp Toulouse, I’d like to share both my thoughts about the sponsoring and about the technical stuff.
 
 The sponsoring, which already has <a href="http://funnymonkey.com/">FunnyMonkey</a> committing to pay almost half the price, and providing on top of that developer hours, was something I’ve decided to do only after I was convinced there are some big players using OG7.
 The thing is that _anyway I intend to do this change. The sponsoring is just giving it a boost, and making sure it will be _sooner than later!

@@ -28,7 +28,7 @@ We're not SCRUM fundamentalists and when the project finds its pace we may switc
 
 One thing that's particualrly tricky with Drupal and similar CMS systems is that a part of the logic is actually in the database, rather than the code. This can make it hard to deploy code on a new environment if you don't make sure to keep everything synchronized.
 
-Our solution makes use of some excellent Drupal modules like Features and [Migrate](https://www.gizra.com/content/migrate-and-baking-content/), adds a few of our own methods and concentrates everything in an ``install.sh`` which every Gizra project has in its root dir. Whenever we pull code this script is executed and completely rebuilds everything from scratch, installing Drupal + modules + DB + migrated content.
+Our solution makes use of some excellent Drupal modules like Features and [Migrate](/content/migrate-and-baking-content/), adds a few of our own methods and concentrates everything in an ``install.sh`` which every Gizra project has in its root dir. Whenever we pull code this script is executed and completely rebuilds everything from scratch, installing Drupal + modules + DB + migrated content.
 
 Whenever someone pulls code from Git, they run ``install.sh``. This means the _whole_ environment is constantly being rebuilt across developers' machines. This keeps us honest. You can't take shortcuts and if you left something out, the code will break in the code review before we merge it to master.
 

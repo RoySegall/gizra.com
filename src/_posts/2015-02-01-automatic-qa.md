@@ -98,7 +98,7 @@ One time setup:
 git clone git@github.com:Gizra/Gizra.git
 cd Gizra
 cd behat
-# By default the base URL is set to https://www.gizra.com
+# By default the base URL is set to 
 cp behat.local.yml.example behat.local.yml
 # Assuming you have composer instlled globally https://getcomposer.org/doc/00-intro.md#globally
 composer install

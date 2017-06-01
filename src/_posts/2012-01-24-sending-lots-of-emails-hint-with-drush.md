@@ -8,7 +8,7 @@ title: "Sending LOTS of emails (Hint: with Drush)"
 created: 1327404852
 layout: post
 ---
-On my <a href="https://www.gizra.com/content/message-notify-multilingual-email-notifications">last blog</a> post I talked about Message notify module, and mentioned we were using it to send digest emails. While Message notify really eases the pain of creating personalized emails, and sending them, we still needed to find a scalable solutions for sending lots of emails. LOTS of emails!
+On my <a href="/content/message-notify-multilingual-email-notifications">last blog</a> post I talked about Message notify module, and mentioned we were using it to send digest emails. While Message notify really eases the pain of creating personalized emails, and sending them, we still needed to find a scalable solutions for sending lots of emails. LOTS of emails!
 
 Doing it on hook_cron() is nice if you need to send few emails, but when you need to send thousands of emails a day, it won’t do. Cron will take too long, or might hang up if we try to process too many digest emails at once.
 

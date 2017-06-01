@@ -12,7 +12,7 @@ published: true
 
 
 
-Following our [unfortunate bug](https://www.gizra.com/content/live-monitor-shoov-irony/) in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.
+Following our [unfortunate bug](/content/live-monitor-shoov-irony/) in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.
 
 Writing the Behat test was pretty easy, however it had a major problem - it didn't work.
 

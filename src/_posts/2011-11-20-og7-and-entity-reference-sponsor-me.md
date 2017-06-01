@@ -25,4 +25,4 @@ The idea is to create a 2.x branch, to allow people to migrate from 1.x. I hones
 In the above issue there are already comments from known community members giving it a big +1, and saying "Let’s see this sooner than later". I also want to see this happening _fast, but my time resources are not enough.
 
 I’m looking for someone to sponsor this huge and non-trivial feature, which will cost US$7,500
-Please do <a href="https://www.gizra.com/contact">contact</a> me if you are interested. I will credit you on the OG module page, in the README file, and on this blog. The community will thank you greatly.
+Please do <a href="/contact">contact</a> me if you are interested. I will credit you on the OG module page, in the README file, and on this blog. The community will thank you greatly.

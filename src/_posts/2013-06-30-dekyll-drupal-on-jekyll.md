@@ -13,7 +13,7 @@ Drupal is no doubt one of the best CMS out there; Jekyll is no doubt one of the 
 
 ### The DrupalCon Portland BoF
 
-So we had this idea, of combining Drupal and Jekyll. It was a result of building [gizra.com](https://www.gizra.com) with Jekyll. When I came to Portland I already knew that apart of the usual business schmoozing, and presenting OG and the Message stack, I wanted to get other people's opinion on our idea.
+So we had this idea, of combining Drupal and Jekyll. It was a result of building [gizra.com]() with Jekyll. When I came to Portland I already knew that apart of the usual business schmoozing, and presenting OG and the Message stack, I wanted to get other people's opinion on our idea.
 
 I was pleasantly surprised to see more than 20 people in the BoF (Birds of Feather) session. I had a vision of what I wanted but I still didn't have the elevator pitch for it. The discussion we had helped sharpen the way I can explain that vision. To quote Steve Persch (@stevector)
 

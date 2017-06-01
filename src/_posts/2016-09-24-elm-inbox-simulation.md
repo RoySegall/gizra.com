@@ -33,7 +33,7 @@ The problem they had was that none of the software they had tried was giving the
 ## Enter Proof of Concept
 That conversation led to a "show us what you can do" meeting. This was a problem because, well, we had never done it before. My five-or-six-years-ago brain said to myself, "We can't possibly create a demo of an inbox simulation -- I'll just put together a slide deck that explains what I'm talking about here with web frameworks."
 
-That's when [Amitai](https://www.gizra.com/team/#amitaibu) said, "Let's create an inbox simulation for your meeting -- we can do it in [Elm](http://elm-lang.org/). Open a repo and I'll show you how. What should it have?"
+That's when [Amitai](/team/#amitaibu) said, "Let's create an inbox simulation for your meeting -- we can do it in [Elm](http://elm-lang.org/). Open a repo and I'll show you how. What should it have?"
 
 I answered (dubiously), "Well, it should look and feel like an Outlook inbox, and we should be able to demonstrate that their training logic can be applied to simple email tasks."
 
@@ -86,6 +86,6 @@ We spent the next day or two refining features, polishing the layout, and replac
 Of course, I needed to add a few tweaks to the layout, and add sample emails that were more realistic, and some logic that made sense. To do that I had to get into Elm and figure out how it works - in particular how to make it present the HTML syntax I needed. It turns out that was pretty logical and straightforward. I've barely scratched the surface, but I'm pretty pleased to have my first few commits on an Elm project.
 
 ## The Result
-You can look at the [Github repository](https://github.com/Gizra/inbox-simulation) and try out the [sample application](http://inbox-simulation.gizra.com/), but the final product is a simple response to a complex need. We got there in several days by breaking down a complex problem into small surmountable tasks - a method we call [The Gizra Way](https://www.gizra.com/#gizra-way). In this case, we ignored all other features, even how to permanently store the data -- just a simple single page application that shows a realistic inbox with a few features. I never got my admin screen - there wasn't enough time, and there's other stuff to do.
+You can look at the [Github repository](https://github.com/Gizra/inbox-simulation) and try out the [sample application](http://inbox-simulation.gizra.com/), but the final product is a simple response to a complex need. We got there in several days by breaking down a complex problem into small surmountable tasks - a method we call [The Gizra Way](/#gizra-way). In this case, we ignored all other features, even how to permanently store the data -- just a simple single page application that shows a realistic inbox with a few features. I never got my admin screen - there wasn't enough time, and there's other stuff to do.
 
 We are, of course, helped enormously by a robust set of web frameworks that are helping us do web tasks, faster, with greater flexibility, and with a preciseness like never before.
