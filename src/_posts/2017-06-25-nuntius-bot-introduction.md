@@ -17,9 +17,9 @@ In case you haven't noticed, we are on the verge of a new era - the bot era!!
 [*Dramatic music in the background*]
 
 Sort of... [Mark Zuckerberg](https://www.youtube.com/watch?v=4na-wZte6Co) showed
-us what it could really be. Though, we need to put our minds into our heads and
-understand that bot, for now, would be more like what Dries showed us in his
-Keynote at [DrupalCon Baltimore](https://youtu.be/q25eaJHpXFo?t=1h7m30s).
+us what it could really be. Though, we need to understand that for now, bots 
+are more like what Dries showed us in his
+keynote at [DrupalCon Baltimore](https://youtu.be/q25eaJHpXFo?t=1h7m30s).
 
 ## Ro-bot 101
 So what is a bot? If you've ever said `Hey Siri`, `OK Google`, `Hey Cortona`, or `Alexa`,
@@ -28,9 +28,9 @@ it woke you up, reminded you of something, sent an email, or ordered
 a new book from Amazon - and you if you're lucky, a drone delivered it!
 
 ## Platforms and technologies
-After understanding what is a bot let's start and see how we can write one. Now,
-any chat platform have provided bots in some way or another, and there are two
-ways for bots to communicate:
+Now that we understand what a bot is, let's start to see how we can write one. 
+Any chat platform provide bots, and there are two
+ways for them to communicate:
 
 1. **Web sockets** - Though we use this technology for push events to the user's
 browser, platforms provide a web socket channel and push events when something
@@ -105,7 +105,7 @@ And this is the result:
 ## But Wait, There's More!
 Slack was kind and embedded the picture for us, but it's not the best
 practice. Using attachments makes the
-message much more readable and gives us something like this:
+message much more readable and gives us this:
 
 ![Improved embed image in slack](/assets/images/posts/nuntius-bot/good_kitten_image.jpg)
 
