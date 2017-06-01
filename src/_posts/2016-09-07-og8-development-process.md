@@ -30,7 +30,7 @@ It's not too rare to hear rants about OG. Often they are not backed by actual da
 
 I was even quite surprised to find out in one of DrupalCon BOFs that an "OG alternative" module (that now seems to be without any much activity for the past year) was created by an author that never bothered to check OG 7.x-2.x. They knew OG 6 and kind of knew OG 7.x-1.x, and yet they used to bash OG pretty badly.
 
-(And just to prevent any mistake, but still not call out the module by name - I am not referring to the Group module. The above section is about another module. You can read about my positive and negative [critique of Group here](http://www.gizra.com/content/og-message-stack-drupal8/).)
+(And just to prevent any mistake, but still not call out the module by name - I am not referring to the Group module. The above section is about another module. You can read about my positive and negative [critique of Group here](https://www.gizra.com/content/og-message-stack-drupal8/).)
 
 Being in that BOF was both funny, and a little sad at the same time.
 

@@ -18,7 +18,7 @@ Chances are that you already using Travis or another Cool CI to execute your tes
 
 It might be that the browser could not click on an element, or the frontend could not contact the backend, or the frontend has a runtime error (well, you might be faced with it, but at Gizra we use [Elm](http://elm-lang.org/), where it is practically impossible). Who knows, even the browser could crash due to lack of memory - the same applies to Travis too. One solution is to manually start reproducing what Travis does. It's fun the first time, but doing it again and again is just a waste of time. But recently, our CTO, Amitai gave excellent pointers about dockerized Selenium and insisted that having video recordings is much better than simple static screenshots - and it was so true.
 
-These days at Gizra - on client projects - we can benefit by knowing exactly how and why our browser-based tests failed. The fact that we already used [Docker inside Travis](http://www.gizra.com/content/docker-travis-ci/) helped a lot, but this additional video recording on the browser-based test makes the life of the developers much easier.
+These days at Gizra - on client projects - we can benefit by knowing exactly how and why our browser-based tests failed. The fact that we already used [Docker inside Travis](https://www.gizra.com/content/docker-travis-ci/) helped a lot, but this additional video recording on the browser-based test makes the life of the developers much easier.
 
 ## Ingredients
 

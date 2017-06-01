@@ -45,7 +45,7 @@ For this blog post I created a dummy Drupal 8 [installation profile](https://git
 
 If you'll look closely you can see that I've attached an SQL dump with raw tables.
 This raw table will be the source that eventually will migrated into nodes, and you can
-read [here](http://www.gizra.com/content/migration-best-practices/) how it was created
+read [here](https://www.gizra.com/content/migration-best-practices/) how it was created
 with [csv2sql](https://www.drupal.org/project/csv2sql).
 
 ## Basic structure of migration

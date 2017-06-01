@@ -10,7 +10,7 @@ published: true
 
 
 
-As part of our adoption of [Elm in production](http://www.gizra.com/content/thinking-choosing-elm/), Gizra devs are learning and practicing their Elm skills.
+As part of our adoption of [Elm in production](https://www.gizra.com/content/thinking-choosing-elm/), Gizra devs are learning and practicing their Elm skills.
 
 After they are done going over the existing videos/tutorials, we let them get their hands dirty. [elm-hedley](https://github.com/Gizra/elm-hedley) was created just for that - to simulate a simple yet typical web app with login, RESTful, etc.
 

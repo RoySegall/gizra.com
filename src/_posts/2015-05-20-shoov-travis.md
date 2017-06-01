@@ -23,7 +23,7 @@ Don't be alarmed by the long list. Each one of these does one thing very well, a
 
 You can jump right into the [.travis](https://github.com/Gizra/Gizra/blob/master/.travis.yml) file of the Gizra repo to see its configuration, or check the [webdriverCSS](https://github.com/Gizra/Gizra/blob/master/ui-tests/test/tests.js#L36-L37) test. Here's the high level overview of what we're doing:
 
-[Gizra.com](http://gizra.com) is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.
+[Gizra.com](https://www.gizra.com) is built on Jekyll but visual regression could be executed on every site, regardless of the underlying technology. Travis is there to help us build a local installation. Travis also allows adding encrypted keys, so even though the repo is public, we were able to add our Shoov.io and ngrok access tokens in a secure way.
 
 We want to use services such as [BrowserStack](http://www.browserstack.com/) or [Sauce-Labs](https://saucelabs.com/) to test our local installation on different browsers (e.g. latest chrome and IE11). For that we need to have an external URL accessible by the outside world, which is where ngrok comes in: `ngrok http -log=stdout -subdomain=$TRAVIS_COMMIT 9000` from the `.travis.yml` file exposes our Jekyll site inside the Travis box to a unique temporary URL based on the Git commit (e.g. `https://someCommitHash.ngrok.io`).
 

@@ -10,7 +10,7 @@ author: niryariv
 ---
 
 
-As we [mentioned](http://www.gizra.com/content/the-gizra-way/) before, in Gizra each project's GitHub repository - code, issues etc - is completely open & transparent to the client from the day we start working together. We've discovered this provides us with some unexpected benefits.
+As we [mentioned](https://www.gizra.com/content/the-gizra-way/) before, in Gizra each project's GitHub repository - code, issues etc - is completely open & transparent to the client from the day we start working together. We've discovered this provides us with some unexpected benefits.
 
 <!-- more -->
 
