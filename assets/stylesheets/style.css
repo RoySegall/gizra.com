@@ -42,6 +42,9 @@ footer.ui.vertical.segment {
   display: -ms-flexbox;
   display: flex; }
 
+.gist .ui.table tr td {
+  border-top: none; }
+
 @media only screen and (max-width: 767px) {
   .post .ui.dividing.header {
     -webkit-box-orient: vertical;

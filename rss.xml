@@ -4,10 +4,152 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Thu, 01 Jun 2017 10:25:08 -0400</lastBuildDate>
-    <pubDate>Thu, 01 Jun 2017 10:25:08 -0400</pubDate>
+    <lastBuildDate>Thu, 01 Jun 2017 10:40:49 -0400</lastBuildDate>
+    <pubDate>Thu, 01 Jun 2017 10:40:49 -0400</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Write Your First Bot Using Nuntius</title>
+        <description>
+          &lt;p&gt;In case you haven’t noticed, we are on the verge of a new era - the bot era!!&lt;/p&gt;
+
+&lt;p&gt;[&lt;em&gt;Dramatic music in the background&lt;/em&gt;]&lt;/p&gt;
+
+&lt;p&gt;Sort of… &lt;a href=&quot;https://www.youtube.com/watch?v=4na-wZte6Co&quot;&gt;Mark Zuckerberg&lt;/a&gt; showed
+us what it could really be. Though, we need to understand that for now, bots 
+are more like what Dries showed us in his
+keynote at &lt;a href=&quot;https://youtu.be/q25eaJHpXFo?t=1h7m30s&quot;&gt;DrupalCon Baltimore&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;ro-bot-101&quot;&gt;Ro-bot 101&lt;/h2&gt;
+&lt;p&gt;So what is a bot? If you’ve ever said &lt;code class=&quot;highlighter-rouge&quot;&gt;Hey Siri&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;OK Google&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Hey Cortona&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;Alexa&lt;/code&gt;,
+then you have interacted with a bot. That bot received an input, returned an output - 
+it woke you up, reminded you of something, sent an email, or ordered
+a new book from Amazon - and you if you’re lucky, a drone delivered it!&lt;/p&gt;
+
+&lt;h2 id=&quot;platforms-and-technologies&quot;&gt;Platforms and technologies&lt;/h2&gt;
+&lt;p&gt;Now that we understand what a bot is, let’s start to see how we can write one. 
+Any chat platform provide bots, and there are two
+ways for them to communicate:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Web sockets&lt;/strong&gt; - Though we use this technology for push events to the user’s
+browser, platforms provide a web socket channel and push events when something
+happens in a channel in which your bot is listening.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web hooks&lt;/strong&gt; - In this case you get http requests with the information on
+events.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Slack, Facebook Messenger, Skype, and Telegram all provide integrations with bots in
+one way or another, but in this post we will focus on Slack.&lt;/p&gt;
+
+&lt;h2 id=&quot;writing-your-first-bot-is-easier-than-you-think&quot;&gt;Writing Your First Bot is Easier than You Think&lt;/h2&gt;
+&lt;p&gt;First, create a bot in your team. You can do it under
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourteam.slack.com/apps&lt;/code&gt; and create a custom bot integration.&lt;/p&gt;
+
+&lt;p&gt;Next you’ll need to start with a library. There’s something like a
+quadrillion libraries - PHP, NodeJS, Python, and couple in Go lang. For 
+our purposes, we need an easy setup, listening to events and acting, 
+understanding from the text what kind of task the user requires, and even
+more (cron tasks for reminders, incoming web hooks, DB layer, etc.).
+Sounds a bit daunting, no? You’re right!&lt;/p&gt;
+
+&lt;p&gt;When I started to write the first task, I saw that analyzing the text is more than
+just matching a function to the text. When there are a lot of tasks,
+the code will get long and messy. And that’s why I created Nuntius: a PHP
+framework based on Symfony components that helped me organize the code.&lt;/p&gt;
+
+&lt;h2 id=&quot;introducing-nuntius&quot;&gt;Introducing Nuntius&lt;/h2&gt;
+&lt;p&gt;Though &lt;a href=&quot;http://nuntius.xyz&quot;&gt;Nuntius&lt;/a&gt; is well-documented, let’s see how
+easy is to set up a task. After
+&lt;a href=&quot;http://nuntius.xyz/Nuntius_Slack_Bot.html&quot;&gt;settings up nuntius&lt;/a&gt; we need to
+write the first task.&lt;/p&gt;
+
+&lt;h2 id=&quot;hooks-event-dispatching&quot;&gt;Hooks? Event dispatching?&lt;/h2&gt;
+&lt;p&gt;No and no. To make things easy, Nuntius does not use hooks or events
+dispatching to integrate with custom code. Instead, all of the integrations
+defined in a YML file.&lt;/p&gt;
+
+&lt;p&gt;In our &lt;code class=&quot;highlighter-rouge&quot;&gt;hooks.local.yml&lt;/code&gt; we will add a custom task:
+&lt;script src=&quot;https://gist.github.com/RoySegall/8b6f57d49281352b6f5217c902d2c023.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Our task will be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;src/Custom/LookForAPicture.php&lt;/code&gt;:
+&lt;script src=&quot;https://gist.github.com/RoySegall/2bf556c2994b0bc89bc5ede26605f366.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After implementing the task, we can start to code. So, what should this task 
+do? Get a keyword, look for an image which relates to that keyword, and send it
+as an attachment to the message. When you are feeling down you could ask for a
+picture of a cute kitten to take away your sorrow.&lt;/p&gt;
+
+&lt;p&gt;We will need to search for pictures via a REST request. I found a nice service
+for that: &lt;a href=&quot;https://pixabay.com&quot;&gt;pixabay&lt;/a&gt;. You’ll need to register and get an
+API key.&lt;/p&gt;
+
+&lt;p&gt;After acquiring the access token, we need to store it somewhere. The best place
+would be in the &lt;code class=&quot;highlighter-rouge&quot;&gt;credentials.local.yml&lt;/code&gt; which located under the &lt;code class=&quot;highlighter-rouge&quot;&gt;settings&lt;/code&gt;
+library:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/RoySegall/53be42b81314186a5e308cb8fad3cad3.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Let’s have a look at the code to get the picture:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/RoySegall/d648637cf5518ab3f5e06dec704d2621.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;What we need to do is to return the image URL, and that’s it! This the full
+ code:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/RoySegall/94a3fbae852dbbfa26c0bbfe20436472.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;And this is the result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/nuntius-bot/bad_kitten_image.jpg&quot; alt=&quot;Embed image in slack&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;but-wait-theres-more&quot;&gt;But Wait, There’s More!&lt;/h2&gt;
+&lt;p&gt;Slack was kind and embedded the picture for us, but it’s not the best
+practice. Using attachments makes the
+message much more readable and gives us this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/nuntius-bot/good_kitten_image.jpg&quot; alt=&quot;Improved embed image in slack&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The code is a bit more complex than the simple URL we returned:
+&lt;script src=&quot;https://gist.github.com/RoySegall/b872dccfb12c01cbd2fa080c27fd281b.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;external-services&quot;&gt;External Services&lt;/h2&gt;
+
+&lt;p&gt;Your mind was blown, I know. But what’s next? If you thought that this branch of
+development is left without any SAAS solution, you are wrong. Bots need to
+interact with people and require deep learning and natural language analysis.
+There are two famous players in the market (for now) -
+&lt;a href=&quot;https://api.ai&quot;&gt;api.ai&lt;/a&gt; and &lt;a href=&quot;https://wit.ai&quot;&gt;wit.ai&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, they will give you informative object to interact
+with and train with deep learning.&lt;/p&gt;
+
+&lt;h1 id=&quot;is-that-the-end&quot;&gt;Is That the End?&lt;/h1&gt;
+&lt;p&gt;No. Skynet is not around the corner, and HAL 9000 isn’t going to be in NASA’s
+new spaceships. This is just the beginning. Unless you are a big company like
+Apple, Google, or Facebook you probably won’t provide a solution like Siri and
+other bots.&lt;/p&gt;
+
+&lt;p&gt;Bots, as I can see it, will be another interaction with the product and can
+provide a simple way to get information like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When are you going launch the new version?&lt;/li&gt;
+  &lt;li&gt;Let users know that the site is under maintenance for now, and when it’s back.&lt;/li&gt;
+  &lt;li&gt;Notify the user when a new season of a TV show is going to launch (I was
+informed about Silicon Valley new season via Facebook Messenger.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Don’t forget that QA was once done pretty much manually. Now, QA is automated but still
+need to be written and maintained. We might be killing one field but creating a
+new field.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/write-your-first-bot-using-nuntius//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/write-your-first-bot-using-nuntius/</link>
+        <guid>https://www.gizra.com/content/nuntius-bot-introduction</guid>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 -0400</pubDate>
+      </item>
     
       <item>
         <title>Travis and WDIO - Breaking out of the Black Box</title>
