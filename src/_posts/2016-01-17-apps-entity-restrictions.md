@@ -29,7 +29,7 @@ How can we prevent the Secret Santa application (an app that provides addresses 
 Or prevent the Midburn questionnaire application from accessing attendees private data?
 
 {% include thumbnail.html
-   iframe="<iframe src='http://gfycat.com/ifr/FragrantUnequaledHerculesbeetle' frameborder='0' scrolling='no' width='100%' height='600' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
+   iframe="<iframe src='https://gfycat.com/ifr/FragrantUnequaledHerculesbeetle' frameborder='0' scrolling='no' width='100%' height='600' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
    caption="Apps Entity Restrictions in action"
    %}
 

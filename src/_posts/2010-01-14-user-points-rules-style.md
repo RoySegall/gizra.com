@@ -12,7 +12,7 @@ I commented that
 My top 5 are: Views, CCK, Flag, Rules, Panels. I think that the Flag & Rules combo is less known in the community, but there are so many use cases they can cover. Because they are a bit abstracted it's hard for newbies to realize their potential.
 </blockquote>
 
-I think there's no better way to show my point, than a tutorial. Lazy people can even download the feature from <a href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">here</a>. This tutorial will be about having "User points" functionality without using the user points module. I'm not saying that module is bad, but sometimes I need multiple user points per user. Also, re-using existing modules always feels me with great joy. GREAT joy! Also, thinking about Drupal 7 with fields API, suddenly _user points can become _any-fieldable-entity points...
+I think there's no better way to show my point, than a tutorial. Lazy people can even download the feature from <a href="/sites/default/files/user_points_rules.tar_.gz">here</a>. This tutorial will be about having "User points" functionality without using the user points module. I'm not saying that module is bad, but sometimes I need multiple user points per user. Also, re-using existing modules always feels me with great joy. GREAT joy! Also, thinking about Drupal 7 with fields API, suddenly _user points can become _any-fieldable-entity points...
 The tutorial will cover the "Rule sets" concept in Rules module, which is also considered by many as a great mystery. Let's define our mission:
 
 <!-- more -->
@@ -79,7 +79,7 @@ return array(
 
 The implementation of "reset" points and grant points on user registration is similar in concept to our previous mission. We create a rule sets labeled "User points grant" which will set the field value to 3 and grant "story editor" role. This rule sets will be called from two different triggered rules - once upon content profile creation, and second when a site admin will "reset" the user points. How will the site admin "reset"? Easily - we'll create a new user type flag called "Reset user points", and in Rules create a triggered rule that is invoked on the event _A user has been flagged, under "Reset user points".
 
-That's it. Download the <A href="http://www.gizra.com/sites/default/files/user_points_rules.tar_.gz">feature</a>, and add your own logic.
+That's it. Download the <A href="/sites/default/files/user_points_rules.tar_.gz">feature</a>, and add your own logic.
 
 --
 Notice if you download the modules manually to use Flag module with version 6.x-2.x or higher and strongarm version 6.x-2.x or higher.

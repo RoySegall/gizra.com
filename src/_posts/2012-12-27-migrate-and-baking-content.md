@@ -43,7 +43,7 @@ That’s it for site developers. Create a table, make sure everything sits the w
 <h4>The Drupal side: (a.k.a - Dave’s side of the story)</h4>
 
 If you’re reading this, I’m assuming you are a Drupal developer (it’s quite technical from now on). I’ve written a simplified example, divided into parts. In this example, I’ve shown how to migrate content from CSV files. A complete, working example of an abstract migration class can be found <a href="https://github.com/Gizra/Garment-Box/blob/7.x-1.x/garmentbox/modules/custom/garmentbox_migrate/includes/garmentbox_migrate.migrate.entity.inc">here</a> - and in the same git repository there is a complete implementation of a custom Migrate module. All the CSV files under under a csv direcrory using a naming convention ```csv/entity_type/bundle.csv```. Example of using this abstract class to import taxonomy terms is shown below:
-< img src="http://www.gizra.com/sites/default/files/s033.png" />
+< img src="/sites/default/files/s033.png" />
 
 ```php
 <?php

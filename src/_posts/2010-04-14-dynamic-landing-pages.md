@@ -28,7 +28,7 @@ Or we can say it differently - don't show the sidebars. A quick and dirty way of
 ...three columns layout...
 </blockquote>
 
-That's easy with Panel's three column layout (or we can create our own layout using <a href="http://www.gizra.com/content/thinking-grid-960">960</a>).
+That's easy with Panel's three column layout (or we can create our own layout using <a href="/content/thinking-grid-960">960</a>).
 
 <blockquote>
 ...with dynamic content.
@@ -36,7 +36,7 @@ That's easy with Panel's three column layout (or we can create our own layout us
 
 Dynamic content - that sounds like a job for Views. We can have a content type, that will have cck fields that describe the location of it (e.g. left, middle), and the page it should appear (e.g. /landing-page/foo). Views will get the right nodes for us.
 
-Ok, now we know how we want to implement it, let's get our hands dirty (or download the <a href="http://www.gizra.com/sites/default/files/landing_pages_0.zip">example module</a>, and skip to 7).
+Ok, now we know how we want to implement it, let's get our hands dirty (or download the <a href="/sites/default/files/landing_pages_0.zip">example module</a>, and skip to 7).
 
 <ol>
 <li>Download and enable necessary modules:

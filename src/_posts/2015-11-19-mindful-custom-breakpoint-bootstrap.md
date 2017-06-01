@@ -22,7 +22,7 @@ __A__: No. Or, to say it differently: Yes. But not necessarily immediately.
 Don't get me wrong. I'm not against responsive design. I'm just saying each breakpoint has an impact on the project length and budget. It's up to us to help the client decide how many breakpoints are right for them. As you know, Bootstrap can have [custom breakpoints](http://mindful-custom-breakpoint-bootstrap.gizra.com/).
 
 {% include thumbnail.html   
-  iframe="<iframe src='http://gfycat.com/ifr/DistortedBarrenGroundbeetle' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
+  iframe="<iframe src='https://gfycat.com/ifr/DistortedBarrenGroundbeetle' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
   caption="Bootstrap default layout VS Bootstrap custom layout"
   %}
 

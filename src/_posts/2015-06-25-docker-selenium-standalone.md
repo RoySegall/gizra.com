@@ -12,7 +12,7 @@ published: true
 
 
 
-Following our [unfortunate bug](http://www.gizra.com/content/live-monitor-shoov-irony/) in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.
+Following our [unfortunate bug](/content/live-monitor-shoov-irony/) in Shoov which caused login to stop working, we decided to write a Behat test that will continuously check the live site and make sure login with GitHub is working properly.
 
 Writing the Behat test was pretty easy, however it had a major problem - it didn't work.
 
@@ -33,7 +33,7 @@ But the test we wrote just failed on all versions of PhantomJS we tried. Which m
 So after spending some time trying to figure out a workaround, I suddenly stared at the browser I was using to find the answer - Chrome!
 
 {% include thumbnail.html
-  iframe="<iframe src='http://gfycat.com/ifr/ThirstyOfficialDikkops' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);'></iframe>"
+  iframe="<iframe src='https://gfycat.com/ifr/ThirstyOfficialDikkops' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);'></iframe>"
   caption="Behat test running on headless Chrome, seen via VNC"
   %}
 

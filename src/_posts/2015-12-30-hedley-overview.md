@@ -39,7 +39,7 @@ In line with the "Keep it Simple" approach, we realized that it's not required f
 
 ## Router
 
-When building an SPA (Single Page Application) in Elm, this [router](https://github.com/rgrempel/elm-route-hash) package is fun to work with. If you are new to Elm's syntax it might seem a bit daunting at first, but I can assure you it's doing exactly what it [should]((https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/App/Router.elm)) be doing - and not more. I've written in [more detail](http://www.gizra.com/content/thinking-choosing-elm/) about how we love the fact that the URL change is in fact just a side-effect.
+When building an SPA (Single Page Application) in Elm, this [router](https://github.com/rgrempel/elm-route-hash) package is fun to work with. If you are new to Elm's syntax it might seem a bit daunting at first, but I can assure you it's doing exactly what it [should]((https://github.com/Gizra/elm-hedley/blob/v1.0.0/src/elm/App/Router.elm)) be doing - and not more. I've written in [more detail](/content/thinking-choosing-elm/) about how we love the fact that the URL change is in fact just a side-effect.
 
 ## Unit test and CI integration
 

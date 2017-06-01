@@ -15,4 +15,4 @@ Amitai returned from DrupalCon Portland reporting it was raining all the time, t
 
 Still, he had an awesome conference and a great presentation on Organic Groups and Message modules, sprinkled with anecdotes from the open source module developer's life. Thanks to [Pantheon's](https://www.getpantheon.com/blog/drupalcon-portland-video-amitai-burstein-organic-groups-message) video crew, you can now verify the latter claim yourself:
 
-{% include thumbnail.html iframe='<iframe width="853" height="480" src="http://www.youtube.com/embed/XglUUroifsg" frameborder="0" allowfullscreen></iframe>' %}
+{% include thumbnail.html iframe='<iframe width="853" height="480" src="https://www.youtube.com/embed/XglUUroifsg" frameborder="0" allowfullscreen></iframe>' %}

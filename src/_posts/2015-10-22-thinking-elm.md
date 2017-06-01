@@ -17,7 +17,7 @@ The reason? In short - I believe it will save us money.
 (Oh, and it's fun)
 
 {% include thumbnail.html
-  iframe="<iframe src='http://gfycat.com/ifr/BountifulGloomyChickadee' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
+  iframe="<iframe src='https://gfycat.com/ifr/BountifulGloomyChickadee' frameborder='0' scrolling='no' width='100%' height='555' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
   %}
 
 <!-- more -->

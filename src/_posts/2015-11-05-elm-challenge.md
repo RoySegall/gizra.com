@@ -10,7 +10,7 @@ published: true
 
 
 
-As part of our adoption of [Elm in production](http://www.gizra.com/content/thinking-choosing-elm/), Gizra devs are learning and practicing their Elm skills.
+As part of our adoption of [Elm in production](/content/thinking-choosing-elm/), Gizra devs are learning and practicing their Elm skills.
 
 After they are done going over the existing videos/tutorials, we let them get their hands dirty. [elm-hedley](https://github.com/Gizra/elm-hedley) was created just for that - to simulate a simple yet typical web app with login, RESTful, etc.
 
@@ -20,7 +20,7 @@ The challenge is to add a counter next to each event label that increments when 
 
 In short, it should look like this (notice the bottom left list):
 
-{% include thumbnail.html iframe='<iframe src="http://gfycat.com/ifr/MellowUnpleasantBoar" frameborder="0" scrolling="no" width="653" height="390" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>' %}
+{% include thumbnail.html iframe='<iframe src="https://gfycat.com/ifr/MellowUnpleasantBoar" frameborder="0" scrolling="no" width="653" height="390" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>' %}
 
 Go ahead, fork the repo and try for yourself. And don't peek below, as it has the answer!
 

@@ -21,7 +21,7 @@ So we can use <a href="http://drupal.org/project/panels">Panels</a> for that. It
 
 <ul>
 <li>since the Panels are in code (same as having exported Views), it means we can prepare the Panels page on a development server and easily deploy it on a production server, without copying/ pasting nodes or do some db merge weirdness</li>
-<li>Different layout and content for different roles or languages - checkout our own home page <a href="http://www.gizra.com/">English</a> Vs. <a href="http://www.gizra.com/he">Hebrew</a>. You can see we flip the image and change the text layout - those are just different Panels variants.</li>
+<li>Different layout and content for different roles or languages - checkout our own home page <a href="/">English</a> Vs. <a href="/he">Hebrew</a>. You can see we flip the image and change the text layout - those are just different Panels variants.</li>
 <li>Reusing our tools. We have many websites that have a standard skeleton (home page, about us, services, etc'). Once we have the Panels in code as a module, we can place it in other websites and quickly do the needed adjustment. Hack, we can even do it directly from within the code</li>
 </ul>
 

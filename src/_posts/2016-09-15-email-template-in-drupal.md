@@ -19,7 +19,7 @@ This post will walk you through a solution we use to address these requirements,
 
 
 By doing this, we can focus on our logic without worrying about how it may look with different dynamic content. Focusing on Frontend and Backend as separate tasks makes building websites easier and faster. Even fixing bugs discovered while implementing dynamic content can now be easily fixed. Our
-[No more CSS in your Drupal Theme!](http://www.gizra.com/content/custom-css-as-contrib-with-jekyll/) blog post talks more extensively about the way we work with Drupal themes.
+[No more CSS in your Drupal Theme!](/content/custom-css-as-contrib-with-jekyll/) blog post talks more extensively about the way we work with Drupal themes.
 
 The same approach is implemented when we create an email template. We first build the email markup with static content, and then we use it to create dynamic content messages. Oh, and we cheat, because we don't write a single line of HTML or CSS!
 

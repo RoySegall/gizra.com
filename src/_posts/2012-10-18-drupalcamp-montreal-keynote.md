@@ -13,4 +13,4 @@ If your not a total geek the first 15 minutes will be enough. Unless you are int
 
 <!-- more -->
 
-{% include thumbnail.html iframe='<iframe src="http://player.vimeo.com/video/51646056?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' %}
+{% include thumbnail.html iframe='<iframe src="https://player.vimeo.com/video/51646056?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' %}

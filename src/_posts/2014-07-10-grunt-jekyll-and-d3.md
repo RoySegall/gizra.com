@@ -10,7 +10,7 @@ author: ceoaliongroo
 published: true
 ---
 
-When we started working on a mobile web site for [Casa del Lector](http://www.gizra.com/content/casa-del-lector/)'s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:
+When we started working on a mobile web site for [Casa del Lector](/content/casa-del-lector/)'s exhibition, we decided early on it would be a backend-free app, mainly for reasons of stability and performance:
 
 {% include thumbnail.html image_path="assets/images/posts/backendless-apps/image1.jpg" caption="App is faster than 96% of other websites" %}
 
