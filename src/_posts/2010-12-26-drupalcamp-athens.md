@@ -20,4 +20,4 @@ Although my stay was very short I still had the chance to see the Acropolis a la
 
 Here is my own presentation about Organic groups for Drupal 7. I think it is a good introduction for those who still try to understand the concept of Entity and Fields and how it changes the way we approach a task in Drupal 7.
 
-{% include thumbnail.html iframe='<iframe src="http://player.vimeo.com/video/18079022?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>' %}
+{% include thumbnail.html iframe='<iframe src="https://player.vimeo.com/video/18079022?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>' %}

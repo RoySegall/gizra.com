@@ -16,7 +16,7 @@ In recent months I've been demoing visual monitoring to many developers. The rea
 If you have been following my recent blog posts or tweets you've probably noticed we are trying to bring visual monitoring along with [Shoov](http://shoov.io) to the masses. To do so we're trying to reduce the complexity and codify our "lessons learned".
 
 {% include thumbnail.html  
-  iframe="<iframe src='http://gfycat.com/ifr/FrailVioletEmperorpenguin' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
+  iframe="<iframe src='https://gfycat.com/ifr/FrailVioletEmperorpenguin' frameborder='0' scrolling='no' width='100%' height='424' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>"
   caption="Drupal.org visually monitored by Shoov"
   %}
 

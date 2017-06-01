@@ -20,4 +20,4 @@ It was a fun conversation that wandered onto many topics in nonprofit tech (the 
 
 Check out the podcast below, or over at the [Next in Nonprofits site](http://www.nextinnonprofits.com/2016/11/gizra/), along with a host of other great podcasts in the series.
 
-{% include thumbnail.html iframe='<iframe src="http://tunein.com/embed/player/t109974291/" style="width:100%;height:110px;" scrolling="no" frameborder="no"></iframe>' %}
+{% include thumbnail.html iframe='<iframe src="https://tunein.com/embed/player/t109974291/" style="width:100%;height:110px;" scrolling="no" frameborder="no"></iframe>' %}
