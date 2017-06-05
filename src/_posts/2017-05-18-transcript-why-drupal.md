@@ -11,7 +11,7 @@ description: "Sometimes, we have to stop what we are doing and think a little ab
 ---
 *This post is a translation of the transcript of the lightning talk I gave during [DrupalCamp Spain 2017](https://2017.drupalcamp.es/) in Madrid. The title of the talk was "[Why Drupal](https://2017.drupalcamp.es/sessions/why-drupal-davidbaltha)" and talked about my personal reasons for developing with Drupal. You can find the slides, with the transcript in Spanish [here](http://slides.com/david_hernandez/why-drupal/).*
 
-![Why Drupal?](/assets/images/posts/why-drupal/why-drupal.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/why-drupal.png" caption="Why Drupal?" %}
 
 ## Why Drupal?
 
@@ -23,11 +23,11 @@ I do not know why you choose to use Drupal, but in this session, I will tell you
 
 But before jumping to the conclusions, let's start from the beginning.
 
-![About me](/assets/images/posts/why-drupal/about-me.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/about-me.png" caption="About me" %}
 
 I am David Hernández and for me, it is a privilege to be here, sharing this lightning talk with all of you.
 
-![Privilege](/assets/images/posts/why-drupal/privilege.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/privilege.png" caption="Privilege" %}
 
 And I mean it.
 
@@ -41,13 +41,13 @@ The colour of my skin makes it that in most places, everybody is helpful and min
 
 My gender doesn't cause people to question why I have not settled yet, and why I do not yet have a family and children. My gender always helped me to find good jobs and better conditions than the fifty percent of the population of my country, under the same conditions.
 
-![The problem of privilege](/assets/images/posts/why-drupal/problem-of-privilege.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/problem-of-privilege.png)" caption="The problem of privilege" %}
 
 And this continues forever. And it is a problem. But does it have a solution?
 
 In my opinion, there is a really simple solution.
 
-![The end of privilege](/assets/images/posts/why-drupal/end-of-privilege.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/end-of-privilege.png)" caption="The end of privilege" %}
 
 To end privilege. But, as this is extremely complicated, we need to continue moving in that direction in little steps.
 
@@ -59,7 +59,7 @@ When we gain something before another person, we need to ask ourselves why did w
 
 But... How is all of this related to Drupal?
 
-![Free software](/assets/images/posts/why-drupal/free-software.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/free-software.png)" caption="Free Software" %}
 
 The answer is the Free / Libre Software.
 
@@ -71,7 +71,7 @@ Promoting the use of Free Software we help people with less privileges to use a 
 
 Let's use our privileged position to help the rest of the world to access those tools more easily. Let's give them more tools and more power. Let's contribute code. Let's spread the use of Free Software. Let's complain when we are forced to use a private software when a free / libre alternative exists.
 
-![Drupal](/assets/images/posts/why-drupal/drupal.png)
+{% include thumbnail.html image_path="/assets/images/posts/why-drupal/drupal.png)" caption="Drupal" %}
 
 And that's the reason I use Drupal. And also the reason I use Apache, MySQL, PHP, Firefox, Linux, Vim, Elm, LibreOffice and so many more tools. That's the reason I always ask or look for a free / libre alternative before being forced to use a private solution.
 
