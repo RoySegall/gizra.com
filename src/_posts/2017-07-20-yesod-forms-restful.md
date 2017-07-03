@@ -2,13 +2,11 @@
 title: "Yesod forms, and API first"
 tags:
   - Yesod
-permalink: "/content/yesod-forms-restful"
+permalink: "/content/yesod-forms-restful/"
 layout: post
 image:  "/assets/images/posts/yesod-forms-restful/thumb.jpg"
 description: "Create a Yesod entity that can be created and validated by forms and RESTful using the same validations handlers."
 ---
-
-{% include setup %}
 
 We have had a few entrepreneur projects in Gizra along the years, but as of last year one of them
 started picking up. [Circuit Auction](http://www.circuitauction.com/) is all in one solution for auctions houses: from a back office to manage their catalogs, to online site to show it and a web app for real time
