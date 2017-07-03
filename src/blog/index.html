@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+blog: true
+---
+
+<section class="ui segment basic" id="blog-page">
+
+  {% include page_header.html url=page.url title=page.title%}
+
+  <div class="ui three stackable cards">
+    {% for post in paginator.posts %} {% include post_teaser.html img_number=forloop.index %} {% endfor %}
+  </div>
+
+  <!--Pager-->
+  <div class="ui borderless secondary menu">
+    {% if paginator.previous_page %}
+    <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <i class="chevron left icon"></i> Previous
+    </a>
+    {% endif %}
+    <div class="right menu">
+      {% if paginator.next_page %}
+      <a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        Next <i class="chevron right icon"></i>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  </div>
+</section>

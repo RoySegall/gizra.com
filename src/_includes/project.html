@@ -1,0 +1,40 @@
+<div class="ui padded segment projects">
+
+  <h2 class="ui header">
+    <div class="project-title">
+      {{ include.title }}
+    </div>
+    <div class="sub header">
+      {{ include.client }} // &nbsp;
+      {% if include.url %}
+        <a target="_blank" href="http://{{ include.url }}">{{ include.url }}</a>
+
+      {% else %}
+        Internal project
+
+      {% endif %}
+    </div>
+  </h2>
+
+  <div class="ui stackable grid">
+    <div class="eight wide column center aligned">
+      <img src="/assets/images/projects/{{ include.image }}" alt="{{ include.title }}" class="ui image" />
+    </div>
+
+    <div class="eight wide column">
+      {{ include.content }}
+
+      {% if include.case_study %}
+
+        <a href="{{ include.case_study }}">
+          <div class="ui big teal label">
+            Read the Case Study
+          </div>
+        </a>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+</div>

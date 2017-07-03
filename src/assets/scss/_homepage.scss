@@ -1,0 +1,14 @@
+.intro {
+  color: white;
+  margin-top: 20px;
+
+  p {
+    font-size: 22px;
+    font-family: 'Rasa', serif;
+    color: black;
+
+    &.first {
+      font-size: 27px;
+    }
+  }
+}

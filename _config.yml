@@ -1,46 +1,54 @@
-# Jekyll configuration precedence:
-# 1. Gruntfile task
-# 2. config.build.yml
-# 3. config.yml
-
-name: yo-jekyllrb
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: Jekyll-base
 description:
-author:
-  name: Amitai Burstein
-  email: amitai@gizra.com
+tagline:
+url: http://localhost:3000
 
-# Grunt handles images and assets.
-exclude: ['images', 'css', 'js', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
-
-include: ['.htaccess']
-
-# _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
-show_drafts: true
 
-# Markdown library
-markdown: redcarpet
-redcarpet:
-  extensions: ['fenced_code_blocks', 'tables', 'smart']
+source: src
+destination: serve
 
-pygments: true
+disqus:
+  short_name: 'gizra'
+
+wrapper_classes:
+  full: "sixteen wide column"
+  narrow: "sixteen wide tablet twelve wide computer sixteen wide mobile centered column"
+
+collections:
+  story:
+    output: true
+  case-studies:
+    output: true
+
+# Allow incremental rebuild
+incremental: true
+
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 title : Gizra
 excerpt_separator: "<!-- more -->"
 
-paginate: 10
+paginate: 12
 paginate_path: "blog/page:num"
-
-url: http://www.gizra.com
 
 authors:
   - amitaibu:
       name: Amitai Burstein
       title: CTO, Co-Owner
       is_member: true
-      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/content/the-about-story/">The about story</a>.
+      bio: Maintainer of Organic groups, the Message stack, and co-maintainer of Drupal 8's Entity reference. <a href="/the-about-story/">The about story</a>.
       email: amitai@gizra.com
+      drupal: amitaibu
       twitter: amitaibu
       github: amitaibu
       avatar: amitaibu.jpg
@@ -51,20 +59,11 @@ authors:
       is_member: true
       bio: Brice leads strategy, and helps run projects at Gizra. He works closely with both the team and customers to strategize and develop the project end-to-end and coordinate project needs and delivery.
       email: brice@gizra.com
+      drupal:  bricel
       twitter: briceAtGizra
       github: bricel
       avatar: bricel.jpg
       image: bricel.jpg
-  - niryariv:
-      name: Nir Yariv
-      title: CPO
-      is_member: true
-      bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
-      email: nir@gizra.com
-      twitter: niryariv
-      github: niryariv
-      avatar: niryariv.jpg
-      image: niryariv.jpg
   - OritiMG:
       name: Orit Geron
       title: Operations Manager
@@ -78,7 +77,7 @@ authors:
   - kazabooboo:
       name: Adar Earon
       title: USA Director
-      is_member: true
+      is_member: false
       bio: I don't really need tips on how to fall asleep. I have twins.
       email: adar@gizra.com
       twitter: kzbooboo
@@ -91,6 +90,7 @@ authors:
       is_member: true
       bio: If I'm not here, I'm at Wrigley Field.
       email: adam@gizra.com
+      drupal: IshaDakota
       twitter: adamhstewart
       github: IshaDakota
       avatar: IshaDakota.jpg
@@ -149,6 +149,15 @@ authors:
       github: ordavidil
       avatar: male.jpg
       image: ordavidil.jpg
+  - noamcastel:
+      name: Noam Castel
+      title: Team Lead
+      is_member: true
+      bio: Loves home-made hummus and is still trying to convince people that computers and nature do not contradict.
+      email: noam@gizra.com
+      github: noamoss
+      avatar: noam.jpg
+      image: noam.jpg
   - efratn:
       name: Efrat Nitzan
       title: Account Manager
@@ -158,42 +167,15 @@ authors:
       github: efratn
       avatar: female.jpg
       image: efratn.jpg
-  - Moo64c:
-      name: Amir Arbel
-      title: Developer
-      is_member: false
-      bio: Something about Amir
-      email: amir@gizra.com
-      github: Moo64c
-      avatar: male.jpg
-      image: male.jpg
-  - DavidKohav:
-      name: David Kohav
-      title: QA Engineer
-      is_member: true
-      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
-      email: david@gizra.com
-      github: DavidKohav
-      avatar: male.jpg
-      image: DavidKohav.jpg
   - NirGalon:
       name: Nir Galon
       title: Developer
-      is_member: true
+      is_member: false
       bio: A geek who always want to learn new things.
       email: nir.galon@gizra.com
       github: nirgn975
       avatar: NirGalon.jpg
       image: NirGalon.jpg
-  - GuyTepper:
-      name: Guy Tepper
-      title: Developer
-      is_member: true
-      bio: Somthing about Guy.
-      email: guy.tepper@gizra.com
-      github: guytepper
-      avatar: GuyTepper.jpg
-      image: Guy.jpg
   - Pavel:
       name: Pavel Pirozhenko
       title: Developer
@@ -237,7 +219,7 @@ authors:
       bio: Half human half cat.
       email: davidb@gizra.com
       github: DavidBronfen
-      avatar: male.jpg
+      avatar: DavidBronfen.jpg
       image: DavidBronfen.jpg
   - ItamarGronich:
       name: Itamar Gronich
@@ -248,15 +230,6 @@ authors:
       github: ItamarGronich
       avatar: male.jpg
       image: ItamarGronich.jpg
-  - MoodyUser:
-      name: Yoni Mood
-      title: Developer
-      is_member: true
-      bio: Somthing about Yoni.
-      email: yoni@gizra.com
-      github: MoodyUser
-      avatar: male.jpg
-      image: MoodyUser.jpg
   - DavidHernandez:
       name: David Hernandez
       title: Developer
@@ -266,6 +239,52 @@ authors:
       github: DavidHernandez
       avatar: DavidHernandez.jpg
       image: DavidHernandez.jpg
+  - MoodyUser:
+      name: Yoni Mood
+      title: Developer
+      is_member: false
+      bio: Somthing about Yoni.
+      email: yoni@gizra.com
+      github: MoodyUser
+      avatar: male.jpg
+      image: MoodyUser.jpg
+  - GuyTepper:
+      name: Guy Tepper
+      title: Developer
+      is_member: false
+      bio: Somthing about Guy.
+      email: guy.tepper@gizra.com
+      github: guytepper
+      avatar: GuyTepper.jpg
+      image: Guy.jpg
+  - Moo64c:
+      name: Amir Arbel
+      title: Developer
+      is_member: false
+      bio: Something about Amir
+      email: amir@gizra.com
+      github: Moo64c
+      avatar: male.jpg
+      image: male.jpg
+  - DavidKohav:
+      name: David Kohav
+      title: QA Engineer
+      is_member: false
+      bio: There are no shortcuts in life, Do what is necessary, Everything matters!.
+      email: david@gizra.com
+      github: DavidKohav
+      avatar: male.jpg
+      image: DavidKohav.jpg
+  - niryariv:
+      name: Nir Yariv
+      title: CPO
+      is_member: false
+      bio: Messed with PHP since before it was cool, and for some time after. Now mostly herds cats.
+      email: nir@gizra.com
+      twitter: niryariv
+      github: niryariv
+      avatar: niryariv.jpg
+      image: niryariv.jpg
   - YaronMiro:
       name: Yaron Miro
       title: UX/UI Developer
@@ -311,6 +330,15 @@ authors:
       is_member: false
       bio: Luke is just another web nerd that loves to learn new technologies. He works at Qualcomm by day as a software application engineer and hangs at home by night as a dad and husband.
       avatar: lukeherrington.jpg
+  - AronNovak:
+     name: Áron Novák
+     title: developer
+     is_member: true
+     bio: Started with Drupal 4.7, passionate about performance and automation these days.
+     email: aron@gizra.com
+     github: AronNovak
+     avatar: AronNovak.jpg
+     image: AronNovak.jpg
   - You:
       name: You?
       is_member: false

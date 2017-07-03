@@ -1,17 +1,20 @@
-# Jekyll configuration precedence:
-# 1. Gruntfile task
-# 2. config.build.yml
-# 3. config.yml
+# Run during the 'gulp build' command
+# Overrides these options in _config.yml
 
+# Hides your drafts and future posts
 future: false
 show_drafts: false
+# Gives you more accurate related posts
+lsi: false
+# Removes the upper limit for posts generated
+limit_posts: 0
+url: https://www.gizra.com
 
-production_url : www.gizra.com
-disqus :
-  short_name : gizra
+# Allow incremental rebuild
+incremental: false
 
-custom:
-  BASE_PATH: http://www.gizra.com
+source: 'src'
+destination: 'serve'
 
 google:
   tracking_id: 'UA-6558346-3'

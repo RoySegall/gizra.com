@@ -1,0 +1,28 @@
+.post .ui.dividing.header {
+  display: flex;
+}
+
+.gist {
+  .ui.table tr td {
+    border-top: none;
+  }
+}
+
+// Mobile
+@media only screen and (max-width:767px) {
+  // Move the author image below the header.
+  .post .ui.dividing.header {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    // Make the author image centered.
+    & > .ui.image {
+      margin: 20px auto;
+    }
+
+    // Hide the ribbon.
+    .ui.ribbon.label {
+      display: none;
+    }
+  }
+}

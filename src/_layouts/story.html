@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="ui grid centered story">
+  <div class="twelve wide column">
+    <div class="ui basic segment">
+
+      <h1 class="ui dividing header {{ page.color }}">
+        <div class="content">
+          <a href="{{ page.url }}">{{ page.title }} </a>
+        </div>
+      </h1>
+
+      {{ content }}
+
+    </div>
+
+    {% include stories.html %}
+
+  </div>
+</div>

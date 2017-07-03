@@ -1,11 +1,7 @@
 {
-  "name": "Gizra.com",
-  "version": "0.0.0",
+  "name": "gizra-sui",
+  "description": "Gizra.com website with Semantic UI.",
   "dependencies": {
-    "parallax": "~1.0.0",
-    "jquery": "~1.10.2",
-    "bootstrap-sass-official": "~3.1.1",
-    "jquery-hoverIntent": "~1.8.1",
-    "anchor-js": "~3.2.1"
+    "anchor-js": "^3.2.2"
   }
 }

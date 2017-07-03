@@ -1,5 +1,9 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>1.4.0'
+gem 'jekyll'
 gem 'redcarpet'
-gem 'compass', '>=0.12'
+gem 'classifier-reborn'
+gem 'fast-stemmer'
+gem 'scss_lint'
+gem 'jekyll-paginate'
+gem 'jekyll-redirect-from'
