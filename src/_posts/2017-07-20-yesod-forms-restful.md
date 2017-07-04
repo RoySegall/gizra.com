@@ -75,7 +75,11 @@ validateNoExistingPrice price = do
 
 As you can see, the return value is now wrapped with a `Handler`. Without getting into scary words like Monad and IO, it's enough to understand that by simply having this `Handler` in place, means our function is now capable to interact with our HTTP requests, user session, DB, etc'.
 
-And indeed, on the first line we do a count query, to return all the items that already have the given price. Again, talking about type safety, this query isn't just a regukar query. It's a type-safe query, that will not compile if we give it wrong values. That `ItemPrice`
+And indeed, on the first line we do a count query, to return all the items that already have the given price. Again, talking about type safety, this query isn't just a regular query. It's a type-safe query, that will not compile if we give it wrong values.
+
+Lets go over `insertItem`:
+
+`validateNoExistingPrice` will return us for example `[ Left "Price already exist" ] :: [Handler (Either Text Int)]`.
 
 <!-- more -->
 
