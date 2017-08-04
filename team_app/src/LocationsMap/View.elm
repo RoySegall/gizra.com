@@ -1,9 +1,9 @@
-module PeopleMap.View exposing (viewMap)
+module LocationsMap.View exposing (viewMap)
 
 import Html exposing (..)
 import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import People.Model exposing (People)
-import PeopleMap.Model exposing (ShowMap)
+import LocationsMap.Model exposing (ShowMap)
 
 
 viewMap : People -> ShowMap -> Html msg

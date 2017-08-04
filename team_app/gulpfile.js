@@ -29,7 +29,7 @@ gulp.task('elm', ['elm-init'], function() {
     return gulp.src('src/Main.elm')
         .pipe(plumber())
         .pipe(elm({
-            'debug': false,
+            'debug': true,
             'warn': false
         }))
         .on('error', function(err) {

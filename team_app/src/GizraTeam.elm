@@ -1,7 +1,8 @@
-module GizraTeam exposing (..)
+module GizraTeam exposing (people, mapMarkers, mapManager)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
+import LocationsMap.Model exposing (Marker, MapManager)
 import People.Model exposing (..)
 
 
@@ -35,11 +36,6 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "amitaibu"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "bricel"
@@ -69,11 +65,6 @@ people =
             , SportAttr CrossFit
             , TvAndMovieGenereAttr Drama
             ]
-        , location =
-            { id = "bricel"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "OritiMG"
@@ -100,11 +91,6 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "OritiMG"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "IshaDakota"
@@ -130,11 +116,6 @@ people =
             , SportAttr Baseball
             , TvAndMovieGenereAttr Comedy
             ]
-        , location =
-            { id = "IshaDakota"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "RachelBaram"
@@ -168,11 +149,6 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
-        , location =
-            { id = "RachelBaram"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "LiatSadeSaadon"
@@ -198,11 +174,6 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
-        , location =
-            { id = "LiatSadeSaadon"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "RoySegall"
@@ -230,11 +201,6 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "RoySegall"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "NaderSafadi"
@@ -263,11 +229,6 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "NaderSafadi"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "bitamar"
@@ -295,11 +256,6 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
-        , location =
-            { id = "bitamar"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "ordavidil"
@@ -328,11 +284,6 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "ordavidil"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "efratn"
@@ -356,11 +307,6 @@ people =
             , PreferedWorkHoursAttr NineToFive
             , SportAttr Pilates
             ]
-        , location =
-            { id = "efratn"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "anvmn"
@@ -388,11 +334,6 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
-        , location =
-            { id = "anvmn"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "SavyonCohen"
@@ -418,11 +359,6 @@ people =
             , TvAndMovieGenereAttr Action
             , TvAndMovieGenereAttr Comedy
             ]
-        , location =
-            { id = "SavyonCohen"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "ybaras"
@@ -446,11 +382,6 @@ people =
             , Tattoo
             , TvAndMovieGenereAttr Comedy
             ]
-        , location =
-            { id = "ybaras"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "DavidBronfen"
@@ -479,11 +410,6 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr Drama
             ]
-        , location =
-            { id = "DavidBronfen"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "DavidHernandez"
@@ -512,11 +438,6 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
-        , location =
-            { id = "DavidHernandez"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "RyanRempel"
@@ -542,11 +463,6 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
-        , location =
-            { id = "RyanRempel"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     , ( "AronNovak"
@@ -572,12 +488,92 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
-        , location =
-            { id = "AronNovak"
-            , lat = 0
-            , lng = 0
-            }
         }
       )
     ]
         |> DictList.fromList
+
+
+mapMarkers : List Marker
+mapMarkers =
+    [ { id = "amitaibu"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "bricel"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "OritiMG"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "IshaDakota"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "RachelBaram"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "LiatSadeSaadon"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "RoySegall"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "NaderSafadi"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "bitamar"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "ordavidil"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "efratn"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "anvmn"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "SavyonCohen"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "ybaras"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "DavidBronfen"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "DavidHernandez"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "RyanRempel"
+      , lat = 0
+      , lng = 0
+      }
+    , { id = "AronNovak"
+      , lat = 0
+      , lng = 0
+      }
+    ]
+
+
+mapManager : MapManager
+mapManager =
+    { showMap = True
+    , markersLocations = []
+    , selectedMarker = Nothing
+    }

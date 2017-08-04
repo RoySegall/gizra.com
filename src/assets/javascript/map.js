@@ -14,61 +14,58 @@ for (var i = 0; i < 300; i++) {
 var node = document.getElementById('team-app');
 var elmApp = Elm.Main.embed(node, {
   randomNumbers: randomNumbers,
-  selectedMarker: null
+  selectMarker: null,
+  showMap: false
 });
 
-// // Maintain the map and marker state.
-// var mapEl = undefined;
-// var markersEl = {};
-//
-// var defaultIcon = L.icon({
-//   iconRetinaUrl: 'default@2x.png',
-//   iconSize: [35, 46]
-// });
-//
-// var selectedIcon = L.icon({
-//   iconRetinaUrl: 'selected@2x.png',
-//   iconSize: [35, 46]
-// });
-//
-// elmApp.ports.mapManager.subscribe(function(model) {
-//   // We use timeout, to let virtual-dom add the div we need to bind to.
-//   setTimeout(function () {
-//     if (!model.showMap && !!mapEl) {
-//       mapEl.remove();
-//       mapEl = undefined;
-//       var markersEl = {};
-//       return;
-//     }
-//
-//     var mapEl = mapEl || addMap();
-//
-//     model.markers.forEach(function(marker) {
-//       if (!markersEl[marker.id]) {
-//         markersEl[marker.id] = L.marker([marker.lat, marker.lng]).addTo(mapEl);
-//         selectMarker(markersEl[marker.id], marker.id);
-//       }
-//       else {
-//         markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
-//       }
-//
-//       // Set the marker's icon.
-//       markersEl[marker.id].setIcon(!!model.selectedMarker && model.selectedMarker === marker.id ? selectedIcon : defaultIcon);
-//     });
-//   }, 50);
-//
-// });
+// Maintain the map and marker state.
+var mapEl = undefined;
+var markersEl = {};
 
-setTimeout(function () {
-  addMap();
-}, 50);
+var defaultIcon = L.icon({
+  iconRetinaUrl: 'default@2x.png',
+  iconSize: [35, 46]
+});
+
+var selectedIcon = L.icon({
+  iconRetinaUrl: 'selected@2x.png',
+  iconSize: [35, 46]
+});
+
+
+// setTimeout(function () {
+//   addMap();
+// }, 50);
+
+elmApp.ports.showMap.subscribe(function(showMap) {
+  // We use timeout, to let virtual-dom add the div we need to bind to.
+  console.log(showMap);
+  setTimeout(function () {
+
+    addMap();
+
+    // model.markersLocations.forEach(function(marker) {
+    //   if (!markersEl[marker.id]) {
+    //     markersEl[marker.id] = L.marker([marker.lat, marker.lng]).addTo(mapEl);
+    //     selectMarker(markersEl[marker.id], marker.id);
+    //   }
+    //   else {
+    //     markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
+    //   }
+    //
+    //   // Set the marker's icon.
+    //   // markersEl[marker.id].setIcon(!!model.selectedMarker && model.selectedMarker === marker.id ? selectedIcon : defaultIcon);
+    // });
+  }, 50);
+
+});
 
 /**
  * Send marker click event to Elm.
  */
 function selectMarker(markerEl, id) {
   markerEl.on('click', function(e) {
-    elmApp.ports.selectedMarker.send(id);
+    elmApp.ports.selectMarker.send(id);
   });
 }
 

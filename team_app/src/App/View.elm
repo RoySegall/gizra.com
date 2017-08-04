@@ -4,14 +4,15 @@ import App.Model exposing (..)
 import App.Update exposing (..)
 import Attribute.View exposing (viewEmptyResult)
 import DictList
+import GizraTeam exposing (mapMarkers)
 import Html exposing (..)
 import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import Html.Events exposing (onClick)
+import LocationsMap.View exposing (viewMap)
 import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
 import People.Utils exposing (getAttributesFromPeople)
 import People.View exposing (viewPerson)
-import PeopleMap.View exposing (viewMap)
 
 
 view : Model -> Html Msg
@@ -56,9 +57,24 @@ view model =
                         )
                         (DictList.toList filteredPeople)
                     )
+
+        toggleMap =
+            if model.mapManager.showMap then
+                { showMap = False
+                , markersLocations = []
+                , selectedMarker = Nothing
+                }
+            else
+                { showMap = True
+                , markersLocations = mapMarkers
+                , selectedMarker = Nothing
+                }
     in
         div []
-            [ peopleOrEmptyResult
+            [ button
+                [ onClick (ToggleMap toggleMap) ]
+                [ text "Toggle Map" ]
+            , peopleOrEmptyResult
             , Html.map MsgMagnets <| Magnets.View.view model.magnets
-            , viewMap model.people model.showMap
+            , viewMap model.people model.mapManager.showMap
             ]
