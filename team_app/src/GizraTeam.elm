@@ -1,8 +1,8 @@
-module GizraTeam exposing (people, mapMarkers, mapManager)
+module GizraTeam exposing (people, mapMarkers)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
-import LocationsMap.Model exposing (Marker, MapManager)
+import LocationsMap.Model exposing (..)
 import People.Model exposing (..)
 
 
@@ -497,83 +497,75 @@ people =
 mapMarkers : List Marker
 mapMarkers =
     [ { id = "amitaibu"
-      , lat = 0
-      , lng = 0
+      , lat = 32.794
+      , lng = 34.9896
       }
     , { id = "bricel"
-      , lat = 0
-      , lng = 0
+      , lat = 32.0853
+      , lng = 34.7818
       }
     , { id = "OritiMG"
-      , lat = 0
-      , lng = 0
+      , lat = 32.0843
+      , lng = 34.7828
       }
     , { id = "IshaDakota"
-      , lat = 0
-      , lng = 0
+      , lat = 41.8781
+      , lng = 87.6298
       }
     , { id = "RachelBaram"
-      , lat = 0
-      , lng = 0
+      , lat = 32.1782
+      , lng = 34.9076
       }
     , { id = "LiatSadeSaadon"
-      , lat = 0
-      , lng = 0
+      , lat = 32.9506
+      , lng = 35.3123
       }
     , { id = "RoySegall"
-      , lat = 0
-      , lng = 0
+      , lat = 32.0684
+      , lng = 34.8248
       }
     , { id = "NaderSafadi"
-      , lat = 0
-      , lng = 0
+      , lat = 33.2691
+      , lng = 35.7721
       }
     , { id = "bitamar"
-      , lat = 0
-      , lng = 0
+      , lat = 52.52
+      , lng = 13.405
       }
     , { id = "ordavidil"
-      , lat = 0
-      , lng = 0
+      , lat = 32.084
+      , lng = 34.782
       }
     , { id = "efratn"
-      , lat = 0
-      , lng = 0
+      , lat = 31.7683
+      , lng = 35.2137
       }
     , { id = "anvmn"
-      , lat = 0
-      , lng = 0
+      , lat = 32.08
+      , lng = 34.77
       }
     , { id = "SavyonCohen"
-      , lat = 0
-      , lng = 0
+      , lat = 32.0722
+      , lng = 34.8089
       }
     , { id = "ybaras"
-      , lat = 0
-      , lng = 0
+      , lat = 32.08
+      , lng = 34.77
       }
     , { id = "DavidBronfen"
-      , lat = 0
-      , lng = 0
+      , lat = 32.08
+      , lng = 34.77
       }
     , { id = "DavidHernandez"
-      , lat = 0
-      , lng = 0
+      , lat = 39.4699
+      , lng = 0.3763
       }
     , { id = "RyanRempel"
-      , lat = 0
-      , lng = 0
+      , lat = 49.8951
+      , lng = -97.1384
       }
     , { id = "AronNovak"
-      , lat = 0
-      , lng = 0
+      , lat = 47.4979
+      , lng = 19.0402
       }
     ]
-
-
-mapManager : MapManager
-mapManager =
-    { showMap = True
-    , markersLocations = []
-    , selectedMarker = Nothing
-    }

@@ -1,18 +1,9 @@
 module LocationsMap.Model
     exposing
         ( MapManager
-        , MarkersLocations
-        , SelectedMarker
-        , ShowMap
         , Marker
+        , ShowMap
         )
-
-
-type alias MapManager =
-    { showMap : ShowMap
-    , markersLocations : MarkersLocations
-    , selectedMarker : SelectedMarker
-    }
 
 
 type alias GitHubName =
@@ -27,7 +18,7 @@ type alias ShowMap =
     Bool
 
 
-type alias MarkersLocations =
+type alias MapMarkers =
     List Marker
 
 
@@ -35,4 +26,11 @@ type alias Marker =
     { id : GitHubName
     , lat : Float
     , lng : Float
+    }
+
+
+type alias MapManager =
+    { showMap : ShowMap
+    , mapMarkers : MapMarkers
+    , selectedMarker : SelectedMarker
     }

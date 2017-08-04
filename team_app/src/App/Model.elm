@@ -9,8 +9,8 @@ module App.Model
 import Attribute.Model exposing (Attribute)
 import DictList exposing (DictList)
 import EveryDict exposing (EveryDict)
-import GizraTeam exposing (mapManager, people)
-import LocationsMap.Model exposing (MapManager, Marker, MarkersLocations, ShowMap)
+import GizraTeam exposing (people)
+import LocationsMap.Model exposing (MapManager, ShowMap)
 import Magnets.Model exposing (Magnets, Msg)
 import People.Model exposing (GitHubName, Person)
 
@@ -28,7 +28,7 @@ type alias Flags =
 type alias Model =
     { magnets : Magnets
     , people : DictList GitHubName Person
-    , mapManager : MapManager
+    , showMap : ShowMap
     }
 
 
@@ -36,5 +36,5 @@ emptyModel : Model
 emptyModel =
     { magnets = EveryDict.empty
     , people = people
-    , mapManager = mapManager
+    , showMap = False
     }

@@ -13,6 +13,7 @@ import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
 import People.Utils exposing (getAttributesFromPeople)
 import People.View exposing (viewPerson)
+import View.Extra exposing (viewHiddenIf)
 
 
 view : Model -> Html Msg
@@ -58,23 +59,23 @@ view model =
                         (DictList.toList filteredPeople)
                     )
 
-        toggleMap =
-            if model.mapManager.showMap then
+        mapParams =
+            if model.showMap then
                 { showMap = False
-                , markersLocations = []
+                , mapMarkers = []
                 , selectedMarker = Nothing
                 }
             else
                 { showMap = True
-                , markersLocations = mapMarkers
+                , mapMarkers = mapMarkers
                 , selectedMarker = Nothing
                 }
     in
         div []
             [ button
-                [ onClick (ToggleMap toggleMap) ]
+                [ onClick (ToggleMap mapParams) ]
                 [ text "Toggle Map" ]
-            , peopleOrEmptyResult
-            , Html.map MsgMagnets <| Magnets.View.view model.magnets
-            , viewMap model.people model.mapManager.showMap
+            , viewHiddenIf peopleOrEmptyResult (not model.showMap)
+            , viewHiddenIf (Html.map MsgMagnets <| Magnets.View.view model.magnets) (not model.showMap)
+            , viewMap model.showMap
             ]

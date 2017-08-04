@@ -37,25 +37,31 @@ var selectedIcon = L.icon({
 //   addMap();
 // }, 50);
 
-elmApp.ports.showMap.subscribe(function(showMap) {
+elmApp.ports.mapManager.subscribe(function(model) {
   // We use timeout, to let virtual-dom add the div we need to bind to.
-  console.log(showMap);
+  console.log(model);
   setTimeout(function () {
+    if (!model.showMap && !!mapEl) {
+      mapEl.remove();
+      mapEl = undefined;
+      markersEl = {};
+      return;
+    }
 
-    addMap();
+    mapEl = mapEl || addMap();
 
-    // model.markersLocations.forEach(function(marker) {
-    //   if (!markersEl[marker.id]) {
-    //     markersEl[marker.id] = L.marker([marker.lat, marker.lng]).addTo(mapEl);
-    //     selectMarker(markersEl[marker.id], marker.id);
-    //   }
-    //   else {
-    //     markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
-    //   }
-    //
-    //   // Set the marker's icon.
-    //   // markersEl[marker.id].setIcon(!!model.selectedMarker && model.selectedMarker === marker.id ? selectedIcon : defaultIcon);
-    // });
+    model.mapMarkers.forEach(function(marker) {
+      if (!markersEl[marker.id]) {
+        markersEl[marker.id] = L.marker([marker.lat, marker.lng]).addTo(mapEl);
+        selectMarker(markersEl[marker.id], marker.id);
+      }
+      else {
+        markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
+      }
+
+      // Set the marker's icon.
+      // markersEl[marker.id].setIcon(!!model.selectedMarker && model.selectedMarker === marker.id ? selectedIcon : defaultIcon);
+    });
   }, 50);
 
 });

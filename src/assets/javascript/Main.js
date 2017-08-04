@@ -9039,13 +9039,13 @@ var _eeue56$elm_all_dict$EveryDict$diff = F2(
 			t2);
 	});
 
-var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F3(
-	function (a, b, c) {
-		return {showMap: a, markersLocations: b, selectedMarker: c};
-	});
 var _Gizra$elm_spa_exmple$LocationsMap_Model$Marker = F3(
 	function (a, b, c) {
 		return {id: a, lat: b, lng: c};
+	});
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F3(
+	function (a, b, c) {
+		return {showMap: a, mapMarkers: b, selectedMarker: c};
 	});
 
 var _Gizra$elm_spa_exmple$People_Model$Person = F5(
@@ -9065,65 +9065,60 @@ var _Gizra$elm_spa_exmple$People_Model$Drupal = function (a) {
 	return {ctor: 'Drupal', _0: a};
 };
 
-var _Gizra$elm_spa_exmple$GizraTeam$mapManager = {
-	showMap: true,
-	markersLocations: {ctor: '[]'},
-	selectedMarker: _elm_lang$core$Maybe$Nothing
-};
 var _Gizra$elm_spa_exmple$GizraTeam$mapMarkers = {
 	ctor: '::',
-	_0: {id: 'amitaibu', lat: 0, lng: 0},
+	_0: {id: 'amitaibu', lat: 32.794, lng: 34.9896},
 	_1: {
 		ctor: '::',
-		_0: {id: 'bricel', lat: 0, lng: 0},
+		_0: {id: 'bricel', lat: 32.0853, lng: 34.7818},
 		_1: {
 			ctor: '::',
-			_0: {id: 'OritiMG', lat: 0, lng: 0},
+			_0: {id: 'OritiMG', lat: 32.0843, lng: 34.7828},
 			_1: {
 				ctor: '::',
-				_0: {id: 'IshaDakota', lat: 0, lng: 0},
+				_0: {id: 'IshaDakota', lat: 41.8781, lng: 87.6298},
 				_1: {
 					ctor: '::',
-					_0: {id: 'RachelBaram', lat: 0, lng: 0},
+					_0: {id: 'RachelBaram', lat: 32.1782, lng: 34.9076},
 					_1: {
 						ctor: '::',
-						_0: {id: 'LiatSadeSaadon', lat: 0, lng: 0},
+						_0: {id: 'LiatSadeSaadon', lat: 32.9506, lng: 35.3123},
 						_1: {
 							ctor: '::',
-							_0: {id: 'RoySegall', lat: 0, lng: 0},
+							_0: {id: 'RoySegall', lat: 32.0684, lng: 34.8248},
 							_1: {
 								ctor: '::',
-								_0: {id: 'NaderSafadi', lat: 0, lng: 0},
+								_0: {id: 'NaderSafadi', lat: 33.2691, lng: 35.7721},
 								_1: {
 									ctor: '::',
-									_0: {id: 'bitamar', lat: 0, lng: 0},
+									_0: {id: 'bitamar', lat: 52.52, lng: 13.405},
 									_1: {
 										ctor: '::',
-										_0: {id: 'ordavidil', lat: 0, lng: 0},
+										_0: {id: 'ordavidil', lat: 32.084, lng: 34.782},
 										_1: {
 											ctor: '::',
-											_0: {id: 'efratn', lat: 0, lng: 0},
+											_0: {id: 'efratn', lat: 31.7683, lng: 35.2137},
 											_1: {
 												ctor: '::',
-												_0: {id: 'anvmn', lat: 0, lng: 0},
+												_0: {id: 'anvmn', lat: 32.08, lng: 34.77},
 												_1: {
 													ctor: '::',
-													_0: {id: 'SavyonCohen', lat: 0, lng: 0},
+													_0: {id: 'SavyonCohen', lat: 32.0722, lng: 34.8089},
 													_1: {
 														ctor: '::',
-														_0: {id: 'ybaras', lat: 0, lng: 0},
+														_0: {id: 'ybaras', lat: 32.08, lng: 34.77},
 														_1: {
 															ctor: '::',
-															_0: {id: 'DavidBronfen', lat: 0, lng: 0},
+															_0: {id: 'DavidBronfen', lat: 32.08, lng: 34.77},
 															_1: {
 																ctor: '::',
-																_0: {id: 'DavidHernandez', lat: 0, lng: 0},
+																_0: {id: 'DavidHernandez', lat: 39.4699, lng: 0.3763},
 																_1: {
 																	ctor: '::',
-																	_0: {id: 'RyanRempel', lat: 0, lng: 0},
+																	_0: {id: 'RyanRempel', lat: 49.8951, lng: -97.1384},
 																	_1: {
 																		ctor: '::',
-																		_0: {id: 'AronNovak', lat: 0, lng: 0},
+																		_0: {id: 'AronNovak', lat: 47.4979, lng: 19.0402},
 																		_1: {ctor: '[]'}
 																	}
 																}
@@ -11416,13 +11411,13 @@ var _Gizra$elm_spa_exmple$Magnets_Model$DragStart = F3(
 		return {ctor: 'DragStart', _0: a, _1: b, _2: c};
 	});
 
-var _Gizra$elm_spa_exmple$App_Model$emptyModel = {magnets: _eeue56$elm_all_dict$EveryDict$empty, people: _Gizra$elm_spa_exmple$GizraTeam$people, mapManager: _Gizra$elm_spa_exmple$GizraTeam$mapManager};
+var _Gizra$elm_spa_exmple$App_Model$emptyModel = {magnets: _eeue56$elm_all_dict$EveryDict$empty, people: _Gizra$elm_spa_exmple$GizraTeam$people, showMap: false};
 var _Gizra$elm_spa_exmple$App_Model$Flags = function (a) {
 	return {randomNumbers: a};
 };
 var _Gizra$elm_spa_exmple$App_Model$Model = F3(
 	function (a, b, c) {
-		return {magnets: a, people: b, mapManager: c};
+		return {magnets: a, people: b, showMap: c};
 	});
 var _Gizra$elm_spa_exmple$App_Model$ToggleMap = function (a) {
 	return {ctor: 'ToggleMap', _0: a};
@@ -11595,36 +11590,6 @@ var _Gizra$elm_spa_exmple$Magnets_Update$update = F2(
 		}
 	});
 
-var _Gizra$elm_spa_exmple$LocationsMap_Update$mapManager = _elm_lang$core$Native_Platform.outgoingPort(
-	'mapManager',
-	function (v) {
-		return {
-			showMap: v.showMap,
-			markersLocations: _elm_lang$core$Native_List.toArray(v.markersLocations).map(
-				function (v) {
-					return {id: v.id, lat: v.lat, lng: v.lng};
-				}),
-			selectedMarker: (v.selectedMarker.ctor === 'Nothing') ? null : v.selectedMarker._0
-		};
-	});
-var _Gizra$elm_spa_exmple$LocationsMap_Update$showMap = _elm_lang$core$Native_Platform.outgoingPort(
-	'showMap',
-	function (v) {
-		return v;
-	});
-var _Gizra$elm_spa_exmple$LocationsMap_Update$selectMarker = _elm_lang$core$Native_Platform.incomingPort(
-	'selectMarker',
-	_elm_lang$core$Json_Decode$oneOf(
-		{
-			ctor: '::',
-			_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
-			_1: {
-				ctor: '::',
-				_0: A2(_elm_lang$core$Json_Decode$map, _elm_lang$core$Maybe$Just, _elm_lang$core$Json_Decode$string),
-				_1: {ctor: '[]'}
-			}
-		}));
-
 var _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople = function (people) {
 	return A3(
 		_Gizra$elm_dictlist$DictList$foldl,
@@ -11649,15 +11614,75 @@ var _Gizra$elm_spa_exmple$App_Update$subscriptions = function (model) {
 		_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
 		_Gizra$elm_spa_exmple$Magnets_Update$subscriptions(model.magnets));
 };
+var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
+	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(_Gizra$elm_spa_exmple$App_Model$emptyModel.people);
+	var getRandomNumber = function (index) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			A2(
+				_elm_lang$core$Maybe$map,
+				_elm_lang$core$Basics$identity,
+				A2(_elm_community$list_extra$List_Extra$getAt, index, flags.randomNumbers)));
+	};
+	var _p0 = A3(
+		_elm_lang$core$List$foldl,
+		F2(
+			function (attribute, _p1) {
+				var _p2 = _p1;
+				var _p3 = _p2._1;
+				var randomNumber3 = getRandomNumber((_p3 * 3) + 2);
+				var rotation = (_elm_lang$core$Basics$toFloat(randomNumber3) / 50) - 10;
+				var randomNumber2 = getRandomNumber((_p3 * 3) + 1);
+				var y = _elm_lang$core$Basics$floor(
+					_elm_lang$core$Basics$toFloat(randomNumber2) / 6);
+				var randomNumber1 = getRandomNumber(_p3 * 3);
+				var x = _elm_lang$core$Basics$floor(
+					_elm_lang$core$Basics$toFloat(randomNumber1) * 1.19);
+				var magent = {
+					selected: false,
+					position: A2(_elm_lang$mouse$Mouse$Position, x, y),
+					drag: _elm_lang$core$Maybe$Nothing,
+					rotation: rotation
+				};
+				return {
+					ctor: '_Tuple2',
+					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p2._0),
+					_1: _p3 + 1
+				};
+			}),
+		{ctor: '_Tuple2', _0: _eeue56$elm_all_dict$EveryDict$empty, _1: 0},
+		allAttributes);
+	var magnets = _p0._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_Gizra$elm_spa_exmple$App_Model$emptyModel,
+			{magnets: magnets}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _Gizra$elm_spa_exmple$App_Update$mapManager = _elm_lang$core$Native_Platform.outgoingPort(
+	'mapManager',
+	function (v) {
+		return {
+			showMap: v.showMap,
+			mapMarkers: _elm_lang$core$Native_List.toArray(v.mapMarkers).map(
+				function (v) {
+					return {id: v.id, lat: v.lat, lng: v.lng};
+				}),
+			selectedMarker: (v.selectedMarker.ctor === 'Nothing') ? null : v.selectedMarker._0
+		};
+	});
 var _Gizra$elm_spa_exmple$App_Update$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
+		var _p4 = msg;
+		switch (_p4.ctor) {
 			case 'MsgMagnets':
-				var _p1 = A2(_Gizra$elm_spa_exmple$Magnets_Update$update, _p0._0, model.magnets);
-				var subModel = _p1._0;
-				var subCmds = _p1._1;
-				var maybeAttribute = _p1._2;
+				var _p5 = A2(_Gizra$elm_spa_exmple$Magnets_Update$update, _p4._0, model.magnets);
+				var subModel = _p5._0;
+				var subCmds = _p5._1;
+				var maybeAttribute = _p5._2;
 				var modelUpdated = _elm_lang$core$Native_Utils.update(
 					model,
 					{magnets: subModel});
@@ -11680,7 +11705,7 @@ var _Gizra$elm_spa_exmple$App_Update$update = F2(
 					_1: A2(_elm_lang$core$Platform_Cmd$map, _Gizra$elm_spa_exmple$App_Model$MsgMagnets, subCmds)
 				};
 			case 'ToggleAttribute':
-				var _p2 = _p0._0;
+				var _p6 = _p4._0;
 				var modelUpdated = A2(
 					_elm_lang$core$Maybe$withDefault,
 					model,
@@ -11690,74 +11715,39 @@ var _Gizra$elm_spa_exmple$App_Update$update = F2(
 							var magnetUpdated = _elm_lang$core$Native_Utils.update(
 								magnet,
 								{selected: !magnet.selected});
-							var magnetsUpdated = A3(_eeue56$elm_all_dict$EveryDict$insert, _p2, magnetUpdated, model.magnets);
+							var magnetsUpdated = A3(_eeue56$elm_all_dict$EveryDict$insert, _p6, magnetUpdated, model.magnets);
 							return _elm_lang$core$Native_Utils.update(
 								model,
 								{magnets: magnetsUpdated});
 						},
-						A2(_eeue56$elm_all_dict$EveryDict$get, _p2, model.magnets)));
+						A2(_eeue56$elm_all_dict$EveryDict$get, _p6, model.magnets)));
 				return A2(
 					_elm_lang$core$Platform_Cmd_ops['!'],
 					modelUpdated,
 					{ctor: '[]'});
 			default:
+				var _p7 = _p4._0;
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{mapManager: _p0._0}),
-					_1: _elm_lang$core$Platform_Cmd$none
+						{showMap: _p7.showMap}),
+					_1: _Gizra$elm_spa_exmple$App_Update$mapManager(_p7)
 				};
 		}
 	});
-var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
-	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(_Gizra$elm_spa_exmple$App_Model$emptyModel.people);
-	var getRandomNumber = function (index) {
-		return A2(
-			_elm_lang$core$Maybe$withDefault,
-			0,
-			A2(
-				_elm_lang$core$Maybe$map,
-				_elm_lang$core$Basics$identity,
-				A2(_elm_community$list_extra$List_Extra$getAt, index, flags.randomNumbers)));
-	};
-	var _p3 = A3(
-		_elm_lang$core$List$foldl,
-		F2(
-			function (attribute, _p4) {
-				var _p5 = _p4;
-				var _p6 = _p5._1;
-				var randomNumber3 = getRandomNumber((_p6 * 3) + 2);
-				var rotation = (_elm_lang$core$Basics$toFloat(randomNumber3) / 50) - 10;
-				var randomNumber2 = getRandomNumber((_p6 * 3) + 1);
-				var y = _elm_lang$core$Basics$floor(
-					_elm_lang$core$Basics$toFloat(randomNumber2) / 6);
-				var randomNumber1 = getRandomNumber(_p6 * 3);
-				var x = _elm_lang$core$Basics$floor(
-					_elm_lang$core$Basics$toFloat(randomNumber1) * 1.19);
-				var magent = {
-					selected: false,
-					position: A2(_elm_lang$mouse$Mouse$Position, x, y),
-					drag: _elm_lang$core$Maybe$Nothing,
-					rotation: rotation
-				};
-				return {
-					ctor: '_Tuple2',
-					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p5._0),
-					_1: _p6 + 1
-				};
-			}),
-		{ctor: '_Tuple2', _0: _eeue56$elm_all_dict$EveryDict$empty, _1: 0},
-		allAttributes);
-	var magnets = _p3._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_Gizra$elm_spa_exmple$App_Model$emptyModel,
-			{magnets: magnets}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
+var _Gizra$elm_spa_exmple$App_Update$selectMarker = _elm_lang$core$Native_Platform.incomingPort(
+	'selectMarker',
+	_elm_lang$core$Json_Decode$oneOf(
+		{
+			ctor: '::',
+			_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
+			_1: {
+				ctor: '::',
+				_0: A2(_elm_lang$core$Json_Decode$map, _elm_lang$core$Maybe$Just, _elm_lang$core$Json_Decode$string),
+				_1: {ctor: '[]'}
+			}
+		}));
 
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrap;
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrapWithFlags;
@@ -18276,28 +18266,27 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _Gizra$elm_spa_exmple$LocationsMap_View$viewMap = F2(
-	function (people, showMap) {
-		var mapEl = showMap ? A2(
-			_elm_lang$html$Html$div,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$id('map'),
-				_1: {ctor: '[]'}
-			},
-			{ctor: '[]'}) : A2(
-			_elm_lang$html$Html$span,
-			{ctor: '[]'},
-			{ctor: '[]'});
-		return A2(
-			_elm_lang$html$Html$div,
-			{ctor: '[]'},
-			{
-				ctor: '::',
-				_0: mapEl,
-				_1: {ctor: '[]'}
-			});
-	});
+var _Gizra$elm_spa_exmple$LocationsMap_View$viewMap = function (showMap) {
+	var mapEl = showMap ? A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('map'),
+			_1: {ctor: '[]'}
+		},
+		{ctor: '[]'}) : A2(
+		_elm_lang$html$Html$span,
+		{ctor: '[]'},
+		{ctor: '[]'});
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: mapEl,
+			_1: {ctor: '[]'}
+		});
+};
 
 var _Gizra$elm_spa_exmple$Magnets_Utils$getSelectedAttributesFromMagnets = function (magnets) {
 	return A3(
@@ -18645,12 +18634,69 @@ var _Gizra$elm_spa_exmple$People_View$viewPerson = function (person) {
 		});
 };
 
+var _NoRedInk$view_extra$View_Extra$viewIfElements = F2(
+	function (view, list) {
+		return _elm_lang$core$List$isEmpty(list) ? _elm_lang$html$Html$text('') : view(
+			{ctor: '_Tuple0'});
+	});
+var _NoRedInk$view_extra$View_Extra$viewMaybe = F3(
+	function (viewValue, viewError, maybe) {
+		var _p0 = maybe;
+		if (_p0.ctor === 'Just') {
+			return viewValue(_p0._0);
+		} else {
+			return viewError(
+				{ctor: '_Tuple0'});
+		}
+	});
+var _NoRedInk$view_extra$View_Extra$viewJust = F2(
+	function (view, maybe) {
+		var _p1 = maybe;
+		if (_p1.ctor === 'Just') {
+			return view(_p1._0);
+		} else {
+			return _elm_lang$html$Html$text('');
+		}
+	});
+var _NoRedInk$view_extra$View_Extra$viewHiddenIf = F2(
+	function (view, condition) {
+		return condition ? A2(
+			_elm_lang$html$Html$span,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: view,
+				_1: {ctor: '[]'}
+			}) : A2(
+			_elm_lang$html$Html$span,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'display', _1: 'none'},
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: view,
+				_1: {ctor: '[]'}
+			});
+	});
+var _NoRedInk$view_extra$View_Extra$viewIf = F2(
+	function (view, condition) {
+		return condition ? view(
+			{ctor: '_Tuple0'}) : _elm_lang$html$Html$text('');
+	});
+
 var _Gizra$elm_spa_exmple$App_View$view = function (model) {
-	var toggleMap = model.mapManager.showMap ? {
+	var mapParams = model.showMap ? {
 		showMap: false,
-		markersLocations: {ctor: '[]'},
+		mapMarkers: {ctor: '[]'},
 		selectedMarker: _elm_lang$core$Maybe$Nothing
-	} : {showMap: true, markersLocations: _Gizra$elm_spa_exmple$GizraTeam$mapMarkers, selectedMarker: _elm_lang$core$Maybe$Nothing};
+	} : {showMap: true, mapMarkers: _Gizra$elm_spa_exmple$GizraTeam$mapMarkers, selectedMarker: _elm_lang$core$Maybe$Nothing};
 	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(model.people);
 	var selectedAttributes = _Gizra$elm_spa_exmple$Magnets_Utils$getSelectedAttributesFromMagnets(model.magnets);
 	var filteredPeople = _elm_lang$core$List$isEmpty(selectedAttributes) ? model.people : A2(
@@ -18691,7 +18737,7 @@ var _Gizra$elm_spa_exmple$App_View$view = function (model) {
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html_Events$onClick(
-						_Gizra$elm_spa_exmple$App_Model$ToggleMap(toggleMap)),
+						_Gizra$elm_spa_exmple$App_Model$ToggleMap(mapParams)),
 					_1: {ctor: '[]'}
 				},
 				{
@@ -18701,16 +18747,19 @@ var _Gizra$elm_spa_exmple$App_View$view = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: peopleOrEmptyResult,
+				_0: A2(_NoRedInk$view_extra$View_Extra$viewHiddenIf, peopleOrEmptyResult, !model.showMap),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$map,
-						_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
-						_Gizra$elm_spa_exmple$Magnets_View$view(model.magnets)),
+						_NoRedInk$view_extra$View_Extra$viewHiddenIf,
+						A2(
+							_elm_lang$html$Html$map,
+							_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
+							_Gizra$elm_spa_exmple$Magnets_View$view(model.magnets)),
+						!model.showMap),
 					_1: {
 						ctor: '::',
-						_0: A2(_Gizra$elm_spa_exmple$LocationsMap_View$viewMap, model.people, model.mapManager.showMap),
+						_0: _Gizra$elm_spa_exmple$LocationsMap_View$viewMap(model.showMap),
 						_1: {ctor: '[]'}
 					}
 				}
@@ -18734,7 +18783,7 @@ var _Gizra$elm_spa_exmple$Main$main = _elm_lang$html$Html$programWithFlags(
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 if (typeof _Gizra$elm_spa_exmple$Main$main !== 'undefined') {
-    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName, lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , markersLocations : LocationsMap.Model.MarkersLocations , selectedMarker : LocationsMap.Model.SelectedMarker }"},"LocationsMap.Model.MarkersLocations":{"args":[],"type":"List LocationsMap.Model.Marker"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.SelectedMarker":{"args":[],"type":"Maybe.Maybe String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
+    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName, lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , mapMarkers : LocationsMap.Model.MapMarkers , selectedMarker : LocationsMap.Model.SelectedMarker }"},"LocationsMap.Model.MapMarkers":{"args":[],"type":"List LocationsMap.Model.Marker"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.SelectedMarker":{"args":[],"type":"Maybe.Maybe String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
 }
 
 if (typeof define === "function" && define['amd'])
