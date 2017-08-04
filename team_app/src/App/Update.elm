@@ -10,7 +10,9 @@ import EveryDict exposing (EveryDict)
 import List.Extra as List exposing (getAt)
 import Magnets.Update
 import Mouse exposing (Position)
+import People.Model exposing (People)
 import People.Utils exposing (getAttributesFromPeople)
+import PeopleMap.Model exposing (Marker)
 
 
 init : Flags -> ( Model, Cmd Msg )
@@ -115,3 +117,11 @@ update msg model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.map MsgMagnets <| Magnets.Update.subscriptions model.magnets
+
+
+
+-- interactions with Leaflet
+-- port mapManager : Model -> Cmd msg
+
+
+port selectedMarker : (Maybe String -> msg) -> Sub msg

@@ -5,12 +5,13 @@ import App.Update exposing (..)
 import Attribute.View exposing (viewEmptyResult)
 import DictList
 import Html exposing (..)
-import Html.Attributes exposing (alt, class, classList, href, src, style, target)
+import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import Html.Events exposing (onClick)
 import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
 import People.Utils exposing (getAttributesFromPeople)
 import People.View exposing (viewPerson)
+import PeopleMap.View exposing (viewMap)
 
 
 view : Model -> Html Msg
@@ -59,4 +60,5 @@ view model =
         div []
             [ peopleOrEmptyResult
             , Html.map MsgMagnets <| Magnets.View.view model.magnets
+            , viewMap model.people model.showMap
             ]

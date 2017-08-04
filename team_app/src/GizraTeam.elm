@@ -35,6 +35,11 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "amitaibu"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "bricel"
@@ -64,6 +69,11 @@ people =
             , SportAttr CrossFit
             , TvAndMovieGenereAttr Drama
             ]
+        , location =
+            { id = "bricel"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "OritiMG"
@@ -90,6 +100,11 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "OritiMG"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "IshaDakota"
@@ -115,6 +130,11 @@ people =
             , SportAttr Baseball
             , TvAndMovieGenereAttr Comedy
             ]
+        , location =
+            { id = "IshaDakota"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "RachelBaram"
@@ -148,6 +168,11 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , location =
+            { id = "RachelBaram"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "LiatSadeSaadon"
@@ -173,6 +198,11 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , location =
+            { id = "LiatSadeSaadon"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "RoySegall"
@@ -200,6 +230,11 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "RoySegall"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "NaderSafadi"
@@ -228,6 +263,11 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "NaderSafadi"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "bitamar"
@@ -255,6 +295,11 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , location =
+            { id = "bitamar"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "ordavidil"
@@ -283,6 +328,11 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "ordavidil"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "efratn"
@@ -306,36 +356,11 @@ people =
             , PreferedWorkHoursAttr NineToFive
             , SportAttr Pilates
             ]
-        }
-      )
-    , ( "Pavel"
-      , { name = "Pavel Pirozhenko"
-        , image = "Pavel.jpg"
-        , socialNetworks =
-            [ Email "pavel@gizra.com"
-            , Github "ppavels"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , FamilyAttr Kids
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , LanguageAttr Russian
-            , LanguageAttr Ukrainian
-            , LivedAbroad
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr NightOwl
-            , SportAttr Soccer
-            , SportAttr Volleyball
-            , TvAndMovieGenereAttr Action
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Horror
-            , TvAndMovieGenereAttr SciFi
-            ]
+        , location =
+            { id = "efratn"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "anvmn"
@@ -363,6 +388,11 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , location =
+            { id = "anvmn"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "SavyonCohen"
@@ -388,6 +418,11 @@ people =
             , TvAndMovieGenereAttr Action
             , TvAndMovieGenereAttr Comedy
             ]
+        , location =
+            { id = "SavyonCohen"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "ybaras"
@@ -411,6 +446,11 @@ people =
             , Tattoo
             , TvAndMovieGenereAttr Comedy
             ]
+        , location =
+            { id = "ybaras"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "DavidBronfen"
@@ -439,31 +479,11 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr Drama
             ]
-        }
-      )
-    , ( "ItamarGronich"
-      , { name = "Itamar Gronich"
-        , image = "ItamarGronich.jpg"
-        , socialNetworks =
-            [ Email "itamargronich@gizra.com"
-            , Github "ItamarGronich"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , LivedAbroad
-            , MusicAttr PlayingInstrument
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , SportAttr CrossFit
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Drama
-            ]
+        , location =
+            { id = "DavidBronfen"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "DavidHernandez"
@@ -492,6 +512,11 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , location =
+            { id = "DavidHernandez"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "RyanRempel"
@@ -517,6 +542,11 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , location =
+            { id = "RyanRempel"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     , ( "AronNovak"
@@ -542,6 +572,11 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , location =
+            { id = "AronNovak"
+            , lat = 0
+            , lng = 0
+            }
         }
       )
     ]
