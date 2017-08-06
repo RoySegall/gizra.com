@@ -22,15 +22,15 @@ var elmApp = Elm.Main.embed(node, {
 var mapEl = undefined;
 var markersEl = {};
 
-var defaultIcon = L.icon({
-  iconRetinaUrl: 'default@2x.png',
-  iconSize: [35, 46]
-});
-
-var selectedIcon = L.icon({
-  iconRetinaUrl: 'selected@2x.png',
-  iconSize: [35, 46]
-});
+// var defaultIcon = L.icon({
+//   iconRetinaUrl: 'default@2x.png',
+//   iconSize: [35, 46]
+// });
+//
+// var selectedIcon = L.icon({
+//   iconRetinaUrl: 'selected@2x.png',
+//   iconSize: [35, 46]
+// });
 
 
 // setTimeout(function () {
@@ -39,7 +39,6 @@ var selectedIcon = L.icon({
 
 elmApp.ports.mapManager.subscribe(function(model) {
   // We use timeout, to let virtual-dom add the div we need to bind to.
-  console.log(model);
   setTimeout(function () {
     if (!model.showMap && !!mapEl) {
       mapEl.remove();
@@ -51,29 +50,23 @@ elmApp.ports.mapManager.subscribe(function(model) {
     mapEl = mapEl || addMap();
 
     model.mapMarkers.forEach(function(marker) {
-      if (!markersEl[marker.id]) {
-        markersEl[marker.id] = L.marker([marker.lat, marker.lng]).addTo(mapEl);
-        selectMarker(markersEl[marker.id], marker.id);
-      }
-      else {
-        markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
-      }
+      markersEl[marker.id].setLatLng([marker.lat, marker.lng]);
+
+      var icon = L.icon({
+        iconUrl: '/assets/images/team/members/' + marker.id + '.jpg',
+        iconSize: [35, 52],
+        popupAnchor:  [0, -25]
+      });
 
       // Set the marker's icon.
-      // markersEl[marker.id].setIcon(!!model.selectedMarker && model.selectedMarker === marker.id ? selectedIcon : defaultIcon);
+      markersEl[marker.id].setIcon(icon);
+
+      // Add a popup to the marker.
+      markersEl[marker.id].bindPopup("<b>Hello world!</b><br>I am a popup.");
     });
   }, 50);
 
 });
-
-/**
- * Send marker click event to Elm.
- */
-function selectMarker(markerEl, id) {
-  markerEl.on('click', function(e) {
-    elmApp.ports.selectMarker.send(id);
-  });
-}
 
 /**
  * Initialize a Leaflet map.

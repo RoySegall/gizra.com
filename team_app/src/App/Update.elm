@@ -122,6 +122,3 @@ subscriptions model =
 
 
 port mapManager : MapManager -> Cmd msg
-
-
-port selectMarker : (Maybe String -> msg) -> Sub msg

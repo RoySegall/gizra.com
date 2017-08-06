@@ -9039,18 +9039,22 @@ var _eeue56$elm_all_dict$EveryDict$diff = F2(
 			t2);
 	});
 
-var _Gizra$elm_spa_exmple$LocationsMap_Model$Marker = F3(
-	function (a, b, c) {
-		return {id: a, lat: b, lng: c};
+var _Gizra$elm_spa_exmple$LocationsMap_Model$Marker = F2(
+	function (a, b) {
+		return {lat: a, lng: b};
 	});
-var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F3(
-	function (a, b, c) {
-		return {showMap: a, mapMarkers: b, selectedMarker: c};
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MarkerInfo = F4(
+	function (a, b, c, d) {
+		return {id: a, name: b, image: c, coordinates: d};
+	});
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F2(
+	function (a, b) {
+		return {showMap: a, mapMarkers: b};
 	});
 
-var _Gizra$elm_spa_exmple$People_Model$Person = F5(
-	function (a, b, c, d, e) {
-		return {name: a, image: b, socialNetworks: c, title: d, attributes: e};
+var _Gizra$elm_spa_exmple$People_Model$Person = F6(
+	function (a, b, c, d, e, f) {
+		return {name: a, image: b, socialNetworks: c, title: d, attributes: e, coordinates: f};
 	});
 var _Gizra$elm_spa_exmple$People_Model$Twitter = function (a) {
 	return {ctor: 'Twitter', _0: a};
@@ -9065,79 +9069,6 @@ var _Gizra$elm_spa_exmple$People_Model$Drupal = function (a) {
 	return {ctor: 'Drupal', _0: a};
 };
 
-var _Gizra$elm_spa_exmple$GizraTeam$mapMarkers = {
-	ctor: '::',
-	_0: {id: 'amitaibu', lat: 32.794, lng: 34.9896},
-	_1: {
-		ctor: '::',
-		_0: {id: 'bricel', lat: 32.0853, lng: 34.7818},
-		_1: {
-			ctor: '::',
-			_0: {id: 'OritiMG', lat: 32.0843, lng: 34.7828},
-			_1: {
-				ctor: '::',
-				_0: {id: 'IshaDakota', lat: 41.8781, lng: 87.6298},
-				_1: {
-					ctor: '::',
-					_0: {id: 'RachelBaram', lat: 32.1782, lng: 34.9076},
-					_1: {
-						ctor: '::',
-						_0: {id: 'LiatSadeSaadon', lat: 32.9506, lng: 35.3123},
-						_1: {
-							ctor: '::',
-							_0: {id: 'RoySegall', lat: 32.0684, lng: 34.8248},
-							_1: {
-								ctor: '::',
-								_0: {id: 'NaderSafadi', lat: 33.2691, lng: 35.7721},
-								_1: {
-									ctor: '::',
-									_0: {id: 'bitamar', lat: 52.52, lng: 13.405},
-									_1: {
-										ctor: '::',
-										_0: {id: 'ordavidil', lat: 32.084, lng: 34.782},
-										_1: {
-											ctor: '::',
-											_0: {id: 'efratn', lat: 31.7683, lng: 35.2137},
-											_1: {
-												ctor: '::',
-												_0: {id: 'anvmn', lat: 32.08, lng: 34.77},
-												_1: {
-													ctor: '::',
-													_0: {id: 'SavyonCohen', lat: 32.0722, lng: 34.8089},
-													_1: {
-														ctor: '::',
-														_0: {id: 'ybaras', lat: 32.08, lng: 34.77},
-														_1: {
-															ctor: '::',
-															_0: {id: 'DavidBronfen', lat: 32.08, lng: 34.77},
-															_1: {
-																ctor: '::',
-																_0: {id: 'DavidHernandez', lat: 39.4699, lng: 0.3763},
-																_1: {
-																	ctor: '::',
-																	_0: {id: 'RyanRempel', lat: 49.8951, lng: -97.1384},
-																	_1: {
-																		ctor: '::',
-																		_0: {id: 'AronNovak', lat: 47.4979, lng: 19.0402},
-																		_1: {ctor: '[]'}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-};
 var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromList(
 	{
 		ctor: '::',
@@ -9229,7 +9160,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 							}
 						}
 					}
-				}
+				},
+				coordinates: {lat: 32.794, lng: 34.9896}
 			}
 		},
 		_1: {
@@ -9318,7 +9250,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 								}
 							}
 						}
-					}
+					},
+					coordinates: {lat: 32.0853, lng: 34.7818}
 				}
 			},
 			_1: {
@@ -9395,7 +9328,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 									}
 								}
 							}
-						}
+						},
+						coordinates: {lat: 32.0843, lng: 34.7828}
 					}
 				},
 				_1: {
@@ -9468,7 +9402,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 										}
 									}
 								}
-							}
+							},
+							coordinates: {lat: 41.8781, lng: -87.6298}
 						}
 					},
 					_1: {
@@ -9573,7 +9508,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 											}
 										}
 									}
-								}
+								},
+								coordinates: {lat: 32.1782, lng: 34.9076}
 							}
 						},
 						_1: {
@@ -9646,7 +9582,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 												}
 											}
 										}
-									}
+									},
+									coordinates: {lat: 32.9506, lng: 35.3123}
 								}
 							},
 							_1: {
@@ -9727,7 +9664,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 													}
 												}
 											}
-										}
+										},
+										coordinates: {lat: 32.0684, lng: 34.8248}
 									}
 								},
 								_1: {
@@ -9812,7 +9750,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 														}
 													}
 												}
-											}
+											},
+											coordinates: {lat: 33.2691, lng: 35.7721}
 										}
 									},
 									_1: {
@@ -9893,7 +9832,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													}
-												}
+												},
+												coordinates: {lat: 52.52, lng: 13.405}
 											}
 										},
 										_1: {
@@ -9978,7 +9918,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																}
 															}
 														}
-													}
+													},
+													coordinates: {lat: 32.084, lng: 34.782}
 												}
 											},
 											_1: {
@@ -10043,7 +9984,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																	}
 																}
 															}
-														}
+														},
+														coordinates: {lat: 31.7683, lng: 35.2137}
 													}
 												},
 												_1: {
@@ -10124,7 +10066,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																		}
 																	}
 																}
-															}
+															},
+															coordinates: {lat: 32.08, lng: 34.77}
 														}
 													},
 													_1: {
@@ -10197,7 +10140,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			}
 																		}
 																	}
-																}
+																},
+																coordinates: {lat: 32.0722, lng: 34.8089}
 															}
 														},
 														_1: {
@@ -10262,7 +10206,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				}
 																			}
 																		}
-																	}
+																	},
+																	coordinates: {lat: 32.08, lng: 34.77}
 																}
 															},
 															_1: {
@@ -10347,7 +10292,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			}
-																		}
+																		},
+																		coordinates: {lat: 32.08, lng: 34.77}
 																	}
 																},
 																_1: {
@@ -10432,7 +10378,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																						}
 																					}
 																				}
-																			}
+																			},
+																			coordinates: {lat: 39.4699, lng: 0.3763}
 																		}
 																	},
 																	_1: {
@@ -10505,7 +10452,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																							}
 																						}
 																					}
-																				}
+																				},
+																				coordinates: {lat: 49.8951, lng: -97.1384}
 																			}
 																		},
 																		_1: {
@@ -10578,7 +10526,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																								}
 																							}
 																						}
-																					}
+																					},
+																					coordinates: {lat: 47.4979, lng: 19.0402}
 																				}
 																			},
 																			_1: {ctor: '[]'}
@@ -11590,6 +11539,9 @@ var _Gizra$elm_spa_exmple$Magnets_Update$update = F2(
 		}
 	});
 
+var _Gizra$elm_spa_exmple$People_Utils$getMapPropertiesFromPeople = function (people) {
+	return {ctor: '[]'};
+};
 var _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople = function (people) {
 	return A3(
 		_Gizra$elm_dictlist$DictList$foldl,
@@ -11669,9 +11621,13 @@ var _Gizra$elm_spa_exmple$App_Update$mapManager = _elm_lang$core$Native_Platform
 			showMap: v.showMap,
 			mapMarkers: _elm_lang$core$Native_List.toArray(v.mapMarkers).map(
 				function (v) {
-					return {id: v.id, lat: v.lat, lng: v.lng};
-				}),
-			selectedMarker: (v.selectedMarker.ctor === 'Nothing') ? null : v.selectedMarker._0
+					return {
+						id: v.id,
+						name: v.name,
+						image: v.image,
+						coordinates: {lat: v.coordinates.lat, lng: v.coordinates.lng}
+					};
+				})
 		};
 	});
 var _Gizra$elm_spa_exmple$App_Update$update = F2(
@@ -11736,18 +11692,6 @@ var _Gizra$elm_spa_exmple$App_Update$update = F2(
 				};
 		}
 	});
-var _Gizra$elm_spa_exmple$App_Update$selectMarker = _elm_lang$core$Native_Platform.incomingPort(
-	'selectMarker',
-	_elm_lang$core$Json_Decode$oneOf(
-		{
-			ctor: '::',
-			_0: _elm_lang$core$Json_Decode$null(_elm_lang$core$Maybe$Nothing),
-			_1: {
-				ctor: '::',
-				_0: A2(_elm_lang$core$Json_Decode$map, _elm_lang$core$Maybe$Just, _elm_lang$core$Json_Decode$string),
-				_1: {ctor: '[]'}
-			}
-		}));
 
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrap;
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrapWithFlags;
@@ -18694,9 +18638,11 @@ var _NoRedInk$view_extra$View_Extra$viewIf = F2(
 var _Gizra$elm_spa_exmple$App_View$view = function (model) {
 	var mapParams = model.showMap ? {
 		showMap: false,
-		mapMarkers: {ctor: '[]'},
-		selectedMarker: _elm_lang$core$Maybe$Nothing
-	} : {showMap: true, mapMarkers: _Gizra$elm_spa_exmple$GizraTeam$mapMarkers, selectedMarker: _elm_lang$core$Maybe$Nothing};
+		mapMarkers: {ctor: '[]'}
+	} : {
+		showMap: true,
+		mapMarkers: _Gizra$elm_spa_exmple$People_Utils$getMapPropertiesFromPeople(model.people)
+	};
 	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(model.people);
 	var selectedAttributes = _Gizra$elm_spa_exmple$Magnets_Utils$getSelectedAttributesFromMagnets(model.magnets);
 	var filteredPeople = _elm_lang$core$List$isEmpty(selectedAttributes) ? model.people : A2(
@@ -18783,7 +18729,7 @@ var _Gizra$elm_spa_exmple$Main$main = _elm_lang$html$Html$programWithFlags(
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 if (typeof _Gizra$elm_spa_exmple$Main$main !== 'undefined') {
-    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName, lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , mapMarkers : LocationsMap.Model.MapMarkers , selectedMarker : LocationsMap.Model.SelectedMarker }"},"LocationsMap.Model.MapMarkers":{"args":[],"type":"List LocationsMap.Model.Marker"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.SelectedMarker":{"args":[],"type":"Maybe.Maybe String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
+    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , mapMarkers : LocationsMap.Model.MapMarkers }"},"LocationsMap.Model.MapMarkers":{"args":[],"type":"List LocationsMap.Model.MarkerInfo"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.MarkerInfo":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName , name : String , image : LocationsMap.Model.Url , coordinates : LocationsMap.Model.Marker }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.Url":{"args":[],"type":"String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
 }
 
 if (typeof define === "function" && define['amd'])

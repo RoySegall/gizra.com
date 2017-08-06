@@ -1,11 +1,13 @@
 module People.Utils
     exposing
         ( getAttributesFromPeople
+        , getMapPropertiesFromPeople
         )
 
 import Attribute.Model exposing (Attribute(..))
 import DictList
 import List.Extra exposing (unique)
+import LocationsMap.Model exposing (MapMarkers)
 import People.Model exposing (People)
 
 
@@ -30,3 +32,11 @@ getAttributesFromPeople people =
         )
         []
         people
+
+
+{-| We return a list of map markers containing the properties important for the
+markers.
+-}
+getMapPropertiesFromPeople : People -> MapMarkers
+getMapPropertiesFromPeople people =
+    []

@@ -1,17 +1,18 @@
 module LocationsMap.Model
     exposing
         ( MapManager
+        , MapMarkers
         , Marker
         , ShowMap
         )
 
 
-type alias GitHubName =
+type alias Url =
     String
 
 
-type alias SelectedMarker =
-    Maybe String
+type alias GitHubName =
+    String
 
 
 type alias ShowMap =
@@ -19,18 +20,24 @@ type alias ShowMap =
 
 
 type alias MapMarkers =
-    List Marker
+    List MarkerInfo
 
 
 type alias Marker =
-    { id : GitHubName
-    , lat : Float
+    { lat : Float
     , lng : Float
+    }
+
+
+type alias MarkerInfo =
+    { id : GitHubName
+    , name : String
+    , image : Url
+    , coordinates : Marker
     }
 
 
 type alias MapManager =
     { showMap : ShowMap
     , mapMarkers : MapMarkers
-    , selectedMarker : SelectedMarker
     }

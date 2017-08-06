@@ -4,14 +4,14 @@ import App.Model exposing (..)
 import App.Update exposing (..)
 import Attribute.View exposing (viewEmptyResult)
 import DictList
-import GizraTeam exposing (mapMarkers)
+import EveryDict exposing (EveryDict)
 import Html exposing (..)
 import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import Html.Events exposing (onClick)
 import LocationsMap.View exposing (viewMap)
 import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
-import People.Utils exposing (getAttributesFromPeople)
+import People.Utils exposing (getAttributesFromPeople, getMapPropertiesFromPeople)
 import People.View exposing (viewPerson)
 import View.Extra exposing (viewHiddenIf)
 
@@ -63,12 +63,10 @@ view model =
             if model.showMap then
                 { showMap = False
                 , mapMarkers = []
-                , selectedMarker = Nothing
                 }
             else
                 { showMap = True
-                , mapMarkers = mapMarkers
-                , selectedMarker = Nothing
+                , mapMarkers = getMapPropertiesFromPeople model.people
                 }
     in
         div []

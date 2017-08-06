@@ -1,4 +1,4 @@
-module GizraTeam exposing (people, mapMarkers)
+module GizraTeam exposing (people)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
@@ -36,6 +36,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.794
+            , lng = 34.9896
+            }
         }
       )
     , ( "bricel"
@@ -65,6 +69,10 @@ people =
             , SportAttr CrossFit
             , TvAndMovieGenereAttr Drama
             ]
+        , coordinates =
+            { lat = 32.0853
+            , lng = 34.7818
+            }
         }
       )
     , ( "OritiMG"
@@ -91,6 +99,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.0843
+            , lng = 34.7828
+            }
         }
       )
     , ( "IshaDakota"
@@ -116,6 +128,10 @@ people =
             , SportAttr Baseball
             , TvAndMovieGenereAttr Comedy
             ]
+        , coordinates =
+            { lat = 41.8781
+            , lng = -87.6298
+            }
         }
       )
     , ( "RachelBaram"
@@ -149,6 +165,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 32.1782
+            , lng = 34.9076
+            }
         }
       )
     , ( "LiatSadeSaadon"
@@ -174,6 +194,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 32.9506
+            , lng = 35.3123
+            }
         }
       )
     , ( "RoySegall"
@@ -201,6 +225,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.0684
+            , lng = 34.8248
+            }
         }
       )
     , ( "NaderSafadi"
@@ -229,6 +257,10 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 33.2691
+            , lng = 35.7721
+            }
         }
       )
     , ( "bitamar"
@@ -256,6 +288,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 52.52
+            , lng = 13.405
+            }
         }
       )
     , ( "ordavidil"
@@ -284,6 +320,10 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.084
+            , lng = 34.782
+            }
         }
       )
     , ( "efratn"
@@ -307,6 +347,10 @@ people =
             , PreferedWorkHoursAttr NineToFive
             , SportAttr Pilates
             ]
+        , coordinates =
+            { lat = 31.7683
+            , lng = 35.2137
+            }
         }
       )
     , ( "anvmn"
@@ -334,6 +378,10 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.08
+            , lng = 34.77
+            }
         }
       )
     , ( "SavyonCohen"
@@ -359,6 +407,10 @@ people =
             , TvAndMovieGenereAttr Action
             , TvAndMovieGenereAttr Comedy
             ]
+        , coordinates =
+            { lat = 32.0722
+            , lng = 34.8089
+            }
         }
       )
     , ( "ybaras"
@@ -382,6 +434,10 @@ people =
             , Tattoo
             , TvAndMovieGenereAttr Comedy
             ]
+        , coordinates =
+            { lat = 32.08
+            , lng = 34.77
+            }
         }
       )
     , ( "DavidBronfen"
@@ -410,6 +466,10 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr Drama
             ]
+        , coordinates =
+            { lat = 32.08
+            , lng = 34.77
+            }
         }
       )
     , ( "DavidHernandez"
@@ -438,6 +498,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 39.4699
+            , lng = 0.3763
+            }
         }
       )
     , ( "RyanRempel"
@@ -463,6 +527,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 49.8951
+            , lng = -97.1384
+            }
         }
       )
     , ( "AronNovak"
@@ -488,84 +556,11 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 47.4979
+            , lng = 19.0402
+            }
         }
       )
     ]
         |> DictList.fromList
-
-
-mapMarkers : List Marker
-mapMarkers =
-    [ { id = "amitaibu"
-      , lat = 32.794
-      , lng = 34.9896
-      }
-    , { id = "bricel"
-      , lat = 32.0853
-      , lng = 34.7818
-      }
-    , { id = "OritiMG"
-      , lat = 32.0843
-      , lng = 34.7828
-      }
-    , { id = "IshaDakota"
-      , lat = 41.8781
-      , lng = 87.6298
-      }
-    , { id = "RachelBaram"
-      , lat = 32.1782
-      , lng = 34.9076
-      }
-    , { id = "LiatSadeSaadon"
-      , lat = 32.9506
-      , lng = 35.3123
-      }
-    , { id = "RoySegall"
-      , lat = 32.0684
-      , lng = 34.8248
-      }
-    , { id = "NaderSafadi"
-      , lat = 33.2691
-      , lng = 35.7721
-      }
-    , { id = "bitamar"
-      , lat = 52.52
-      , lng = 13.405
-      }
-    , { id = "ordavidil"
-      , lat = 32.084
-      , lng = 34.782
-      }
-    , { id = "efratn"
-      , lat = 31.7683
-      , lng = 35.2137
-      }
-    , { id = "anvmn"
-      , lat = 32.08
-      , lng = 34.77
-      }
-    , { id = "SavyonCohen"
-      , lat = 32.0722
-      , lng = 34.8089
-      }
-    , { id = "ybaras"
-      , lat = 32.08
-      , lng = 34.77
-      }
-    , { id = "DavidBronfen"
-      , lat = 32.08
-      , lng = 34.77
-      }
-    , { id = "DavidHernandez"
-      , lat = 39.4699
-      , lng = 0.3763
-      }
-    , { id = "RyanRempel"
-      , lat = 49.8951
-      , lng = -97.1384
-      }
-    , { id = "AronNovak"
-      , lat = 47.4979
-      , lng = 19.0402
-      }
-    ]
