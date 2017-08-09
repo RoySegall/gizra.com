@@ -64,6 +64,7 @@ type Nationality
     | Spain
     | UK
     | USA
+    | Russia
 
 
 type PreferedWorkHours

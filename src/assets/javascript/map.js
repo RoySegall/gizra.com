@@ -64,7 +64,7 @@ elmApp.ports.mapManager.subscribe(function(model) {
  */
 function addMap() {
   // Leaflet
-  var mapEl = L.map('map').setView([45, -2], 3);
+  var mapEl = L.map('map').setView([45, -25], 3);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={access_token}', {
     access_token: 'pk.eyJ1IjoiZ2l6cmEiLCJhIjoiWlNyQ2FsayJ9.bFV68ExxW9TFTVQxtbI_Fw',

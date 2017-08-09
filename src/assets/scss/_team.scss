@@ -1,6 +1,21 @@
 #team-app {
   user-select: none;
 
+  #team-toggle-view {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: -78px;
+
+    a {
+      cursor: pointer;
+
+      &:first-child {
+        padding-right: 20px;
+      }
+    }
+  }
+
   .magnets div {
     color: white;
     background-color: #333;

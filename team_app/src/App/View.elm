@@ -59,20 +59,36 @@ view model =
                         (DictList.toList filteredPeople)
                     )
 
-        mapParams =
-            if model.showMap then
-                { showMap = False
-                , mapMarkers = []
-                }
-            else
-                { showMap = True
-                , mapMarkers = getMapPropertiesFromPeople model.people
-                }
+        hideMap =
+            { showMap = False
+            , mapMarkers = []
+            }
+
+        showMap =
+            { showMap = True
+            , mapMarkers = getMapPropertiesFromPeople model.people
+            }
     in
         div []
-            [ button
-                [ onClick (ToggleMap mapParams) ]
-                [ text "Toggle Map" ]
+            [ div
+                [ id "team-toggle-view"
+                , class "ui header computer only right aligned"
+                ]
+                [ a
+                    [ onClick (ToggleMap hideMap) ]
+                    [ i
+                        [ class "grid layout icon" ]
+                        []
+                    , text "Grid View"
+                    ]
+                , a
+                    [ onClick (ToggleMap showMap) ]
+                    [ i
+                        [ class "map icon" ]
+                        []
+                    , text "Map View"
+                    ]
+                ]
             , viewHiddenIf peopleOrEmptyResult (not model.showMap)
             , viewHiddenIf (Html.map MsgMagnets <| Magnets.View.view model.magnets) (not model.showMap)
             , viewMap model.showMap
