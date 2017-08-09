@@ -1,7 +1,7 @@
 module LocationsMap.View exposing (viewMap)
 
 import Html exposing (..)
-import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
+import Html.Attributes exposing (class, id, src)
 import LocationsMap.Model exposing (ShowMap)
 
 

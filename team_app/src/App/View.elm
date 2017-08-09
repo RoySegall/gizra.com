@@ -4,7 +4,6 @@ import App.Model exposing (..)
 import App.Update exposing (..)
 import Attribute.View exposing (viewEmptyResult)
 import DictList
-import EveryDict exposing (EveryDict)
 import Html exposing (..)
 import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import Html.Events exposing (onClick)

@@ -2,7 +2,6 @@ module GizraTeam exposing (people)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
-import LocationsMap.Model exposing (..)
 import People.Model exposing (..)
 
 
