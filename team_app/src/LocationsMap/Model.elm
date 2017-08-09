@@ -32,6 +32,7 @@ type alias Marker =
 type alias MarkerInfo =
     { id : GitHubName
     , name : String
+    , title : String
     , image : Url
     , coordinates : Marker
     }

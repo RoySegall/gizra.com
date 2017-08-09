@@ -9043,9 +9043,9 @@ var _Gizra$elm_spa_exmple$LocationsMap_Model$Marker = F2(
 	function (a, b) {
 		return {lat: a, lng: b};
 	});
-var _Gizra$elm_spa_exmple$LocationsMap_Model$MarkerInfo = F4(
-	function (a, b, c, d) {
-		return {id: a, name: b, image: c, coordinates: d};
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MarkerInfo = F5(
+	function (a, b, c, d, e) {
+		return {id: a, name: b, title: c, image: d, coordinates: e};
 	});
 var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F2(
 	function (a, b) {
@@ -9251,7 +9251,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 							}
 						}
 					},
-					coordinates: {lat: 32.0853, lng: 34.7818}
+					coordinates: {lat: 32.0691471, lng: 34.7706788}
 				}
 			},
 			_1: {
@@ -9329,7 +9329,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 								}
 							}
 						},
-						coordinates: {lat: 32.0843, lng: 34.7828}
+						coordinates: {lat: 32.061143, lng: 34.777318}
 					}
 				},
 				_1: {
@@ -9509,7 +9509,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 										}
 									}
 								},
-								coordinates: {lat: 32.1782, lng: 34.9076}
+								coordinates: {lat: 32.175344, lng: 34.908442}
 							}
 						},
 						_1: {
@@ -9919,7 +9919,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													},
-													coordinates: {lat: 32.084, lng: 34.782}
+													coordinates: {lat: 32.094286, lng: 34.783612}
 												}
 											},
 											_1: {
@@ -10207,7 +10207,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			}
 																		}
 																	},
-																	coordinates: {lat: 32.08, lng: 34.77}
+																	coordinates: {lat: 32.083708, lng: 34.888097}
 																}
 															},
 															_1: {
@@ -11540,7 +11540,19 @@ var _Gizra$elm_spa_exmple$Magnets_Update$update = F2(
 	});
 
 var _Gizra$elm_spa_exmple$People_Utils$getMapPropertiesFromPeople = function (people) {
-	return {ctor: '[]'};
+	return A3(
+		_Gizra$elm_dictlist$DictList$foldl,
+		F3(
+			function (gitHubName, person, accum) {
+				var mapProperties = {
+					ctor: '::',
+					_0: {id: gitHubName, name: person.name, title: person.title, image: person.image, coordinates: person.coordinates},
+					_1: {ctor: '[]'}
+				};
+				return A2(_elm_lang$core$List$append, mapProperties, accum);
+			}),
+		{ctor: '[]'},
+		people);
 };
 var _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople = function (people) {
 	return A3(
@@ -11624,6 +11636,7 @@ var _Gizra$elm_spa_exmple$App_Update$mapManager = _elm_lang$core$Native_Platform
 					return {
 						id: v.id,
 						name: v.name,
+						title: v.title,
 						image: v.image,
 						coordinates: {lat: v.coordinates.lat, lng: v.coordinates.lng}
 					};
@@ -18729,7 +18742,7 @@ var _Gizra$elm_spa_exmple$Main$main = _elm_lang$html$Html$programWithFlags(
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};
 if (typeof _Gizra$elm_spa_exmple$Main$main !== 'undefined') {
-    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , mapMarkers : LocationsMap.Model.MapMarkers }"},"LocationsMap.Model.MapMarkers":{"args":[],"type":"List LocationsMap.Model.MarkerInfo"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.MarkerInfo":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName , name : String , image : LocationsMap.Model.Url , coordinates : LocationsMap.Model.Marker }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.Url":{"args":[],"type":"String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
+    _Gizra$elm_spa_exmple$Main$main(Elm['Main'], 'Main', {"types":{"unions":{"Attribute.Model.PreferedWorkHours":{"args":[],"tags":{"NineToFive":[],"EarlyRise":[],"NightOwl":[]}},"Maybe.Maybe":{"args":["a"],"tags":{"Just":["a"],"Nothing":[]}},"Magnets.Model.Msg":{"args":[],"tags":{"MouseUp":["Mouse.Position"],"MouseMove":["Mouse.Position"],"DragStart":["Attribute.Model.Attribute","Magnet.Model.Magnet","Mouse.Position"],"ToggleAttribute":["Attribute.Model.Attribute"]}},"Attribute.Model.Food":{"args":[],"tags":{"Paleo":[],"Kosher":[],"Vegetarian":[],"Vegan":[],"Pescetarian":[]}},"Attribute.Model.TvAndMovieGenere":{"args":[],"tags":{"Action":[],"SciFi":[],"Horror":[],"Drama":[],"Comedy":[]}},"Attribute.Model.Gender":{"args":[],"tags":{"Male":[],"Female":[]}},"Attribute.Model.Attribute":{"args":[],"tags":{"MusicWhileWorking":[],"MusicAttr":["Attribute.Model.Music"],"DoingSports":[],"Tattoo":[],"WorkingRemote":[],"SportAttr":["Attribute.Model.Sport"],"NationalityAttr":["Attribute.Model.Nationality"],"FoodAttr":["Attribute.Model.Food"],"TvAndMovieGenereAttr":["Attribute.Model.TvAndMovieGenere"],"GenderAttr":["Attribute.Model.Gender"],"FamilyAttr":["Attribute.Model.Family"],"PreferedWorkHoursAttr":["Attribute.Model.PreferedWorkHours"],"LivedAbroad":[],"LanguageAttr":["Attribute.Model.Language"],"Pet":[]}},"App.Model.Msg":{"args":[],"tags":{"ToggleMap":["LocationsMap.Model.MapManager"],"ToggleAttribute":["Attribute.Model.Attribute"],"MsgMagnets":["Magnets.Model.Msg"]}},"Attribute.Model.Music":{"args":[],"tags":{"Sing":[],"PlayingInstrument":[]}},"Attribute.Model.Family":{"args":[],"tags":{"Kids":[],"Married":[]}},"Magnet.Model.Side":{"args":[],"tags":{"Left":[],"Right":[]}},"Attribute.Model.Sport":{"args":[],"tags":{"Yoga":[],"Pilates":[],"Baseball":[],"Volleyball":[],"CrossFit":[],"Soccer":[]}},"Attribute.Model.Language":{"args":[],"tags":{"Catalonian":[],"Hebrew":[],"English":[],"Italian":[],"Ukrainian":[],"French":[],"German":[],"Arabic":[],"Spanish":[],"Hungarian":[],"Russian":[]}},"Attribute.Model.Nationality":{"args":[],"tags":{"Spain":[],"Israel":[],"Canada":[],"Hungary":[],"USA":[],"UK":[],"Austria":[]}}},"aliases":{"LocationsMap.Model.Marker":{"args":[],"type":"{ lat : Float, lng : Float }"},"Magnet.Model.Magnet":{"args":[],"type":"{ selected : Bool , position : Mouse.Position , drag : Maybe.Maybe Magnet.Model.Drag , rotation : Float }"},"LocationsMap.Model.MapManager":{"args":[],"type":"{ showMap : LocationsMap.Model.ShowMap , mapMarkers : LocationsMap.Model.MapMarkers }"},"LocationsMap.Model.MapMarkers":{"args":[],"type":"List LocationsMap.Model.MarkerInfo"},"Mouse.Position":{"args":[],"type":"{ x : Int, y : Int }"},"LocationsMap.Model.MarkerInfo":{"args":[],"type":"{ id : LocationsMap.Model.GitHubName , name : String , title : String , image : LocationsMap.Model.Url , coordinates : LocationsMap.Model.Marker }"},"LocationsMap.Model.GitHubName":{"args":[],"type":"String"},"LocationsMap.Model.ShowMap":{"args":[],"type":"Bool"},"Magnet.Model.Drag":{"args":[],"type":"{ start : Mouse.Position , current : Mouse.Position , distanceFromCenter : Float , side : Magnet.Model.Side }"},"LocationsMap.Model.Url":{"args":[],"type":"String"}},"message":"App.Model.Msg"},"versions":{"elm":"0.18.0"}});
 }
 
 if (typeof define === "function" && define['amd'])

@@ -39,4 +39,19 @@ markers.
 -}
 getMapPropertiesFromPeople : People -> MapMarkers
 getMapPropertiesFromPeople people =
-    []
+    DictList.foldl
+        (\gitHubName person accum ->
+            let
+                mapProperties =
+                    [ { id = gitHubName
+                      , name = person.name
+                      , title = person.title
+                      , image = person.image
+                      , coordinates = person.coordinates
+                      }
+                    ]
+            in
+                (List.append mapProperties accum)
+        )
+        []
+        people

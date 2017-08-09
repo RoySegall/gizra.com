@@ -70,8 +70,8 @@ people =
             , TvAndMovieGenereAttr Drama
             ]
         , coordinates =
-            { lat = 32.0853
-            , lng = 34.7818
+            { lat = 32.0691471
+            , lng = 34.7706788
             }
         }
       )
@@ -100,8 +100,8 @@ people =
             , TvAndMovieGenereAttr SciFi
             ]
         , coordinates =
-            { lat = 32.0843
-            , lng = 34.7828
+            { lat = 32.061143
+            , lng = 34.777318
             }
         }
       )
@@ -166,8 +166,8 @@ people =
             , WorkingRemote
             ]
         , coordinates =
-            { lat = 32.1782
-            , lng = 34.9076
+            { lat = 32.175344
+            , lng = 34.908442
             }
         }
       )
@@ -321,8 +321,8 @@ people =
             , TvAndMovieGenereAttr SciFi
             ]
         , coordinates =
-            { lat = 32.084
-            , lng = 34.782
+            { lat = 32.094286
+            , lng = 34.783612
             }
         }
       )
@@ -435,8 +435,8 @@ people =
             , TvAndMovieGenereAttr Comedy
             ]
         , coordinates =
-            { lat = 32.08
-            , lng = 34.77
+            { lat = 32.083708
+            , lng = 34.888097
             }
         }
       )
