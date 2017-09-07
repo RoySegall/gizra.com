@@ -33,9 +33,11 @@ elmApp.ports.mapManager.subscribe(function(model) {
 
     mapEl = mapEl || addMap();
 
+    var markerClusters = L.markerClusterGroup();
+
     model.mapMarkers.forEach(function(marker) {
       if (!markersEl[marker.id]) {
-        markersEl[marker.id] = L.marker([marker.coordinates.lat, marker.coordinates.lng]).addTo(mapEl);
+        markersEl[marker.id] = L.marker([marker.coordinates.lat, marker.coordinates.lng]);
       }
       else {
         markersEl[marker.id].setLatLng([marker.coordinates.lat, marker.coordinates.lng]);
@@ -54,7 +56,11 @@ elmApp.ports.mapManager.subscribe(function(model) {
 
       // Add a popup to the marker.
       markersEl[marker.id].bindPopup(popupHtml);
+
+      markerClusters.addLayer(markersEl[marker.id]);
     });
+
+    mapEl.addLayer(markerClusters);
   }, 50);
 
 });
