@@ -12,6 +12,7 @@ import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
 import People.Utils exposing (getAttributesFromPeople, getMapPropertiesFromPeople)
 import People.View exposing (viewPerson)
+import Svg.Attributes exposing (mode)
 import View.Extra exposing (viewHiddenIf)
 
 
@@ -67,6 +68,16 @@ view model =
             { showMap = True
             , mapMarkers = getMapPropertiesFromPeople model.people
             }
+
+        ( gridLinkClasses, mapLinkClasses ) =
+            if model.showMap then
+                ( "grid-link"
+                , "active map-link"
+                )
+            else
+                ( "active grid-link"
+                , "map-link"
+                )
     in
         div []
             [ div
@@ -74,14 +85,18 @@ view model =
                 , class "ui header computer only right aligned"
                 ]
                 [ a
-                    [ onClick (ToggleMap hideMap) ]
+                    [ class gridLinkClasses
+                    , onClick (ToggleMap hideMap)
+                    ]
                     [ i
                         [ class "grid layout icon" ]
                         []
                     , text "Grid View"
                     ]
                 , a
-                    [ onClick (ToggleMap showMap) ]
+                    [ class mapLinkClasses
+                    , onClick (ToggleMap showMap)
+                    ]
                     [ i
                         [ class "map icon" ]
                         []

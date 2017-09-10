@@ -4,11 +4,19 @@
   #team-toggle-view {
     width: 30%;
     position: absolute;
-    right: 0;
+    right: 33px;
     top: -78px;
 
     a {
       cursor: pointer;
+      color: gray;
+      font-weight: normal;
+      font-size: 17px;
+
+      &.active {
+        color: black;
+        cursor: default;
+      }
 
       &:first-child {
         padding-right: 20px;
