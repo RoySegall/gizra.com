@@ -439,38 +439,6 @@ people =
             }
         }
       )
-    , ( "DavidBronfen"
-      , { name = "David Bronfen"
-        , image = "DavidBronfen.jpg"
-        , socialNetworks =
-            [ Email "davidb@gizra.com"
-            , Github "DavidBronfen"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , FoodAttr Vegetarian
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr Italian
-            , LanguageAttr English
-            , LanguageAttr Russian
-            , NationalityAttr Israel
-            , MusicAttr Sing
-            , MusicWhileWorking
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , SportAttr CrossFit
-            , Tattoo
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Drama
-            ]
-        , coordinates =
-            { lat = 32.08
-            , lng = 34.77
-            }
-        }
-      )
     , ( "DavidHernandez"
       , { name = "David Hernandez"
         , image = "DavidHernandez.jpg"
@@ -589,6 +557,28 @@ people =
         , coordinates =
             { lat = 47.4979
             , lng = 19.0402
+            }
+        }
+      )
+    , ( "LuisRosenstrauch"
+      , { name = "Luis Rosenstrauch"
+        , image = "placeholder-wolf.jpg"
+        , socialNetworks =
+            [ Email "luis@gizra.com"
+            , Github "rosenstrauch"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ GenderAttr Male
+            , LanguageAttr English
+            , MusicWhileWorking
+            , NationalityAttr Austria
+            , WorkingRemote
+            , PreferedWorkHoursAttr NightOwl
+            ]
+        , coordinates =
+            { lat = 48.220778
+            , lng = 16.3100207
             }
         }
       )

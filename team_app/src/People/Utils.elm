@@ -51,7 +51,7 @@ getMapPropertiesFromPeople people =
                       }
                     ]
             in
-                (List.append mapProperties accum)
+                List.append mapProperties accum
         )
         []
         people
