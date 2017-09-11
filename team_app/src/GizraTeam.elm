@@ -471,37 +471,6 @@ people =
             }
         }
       )
-    , ( "NoamCastel"
-      , { name = "Noam Castel"
-        , image = "placeholder-dog.jpg"
-        , socialNetworks =
-            [ Email "noam@gizra.com"
-            , Github "noamoss"
-            ]
-        , title = "Account Manager"
-        , attributes =
-            [ DoingSports
-            , GenderAttr Male
-            , LanguageAttr English
-            , LanguageAttr Hebrew
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , PreferedWorkHoursAttr NineToFive
-            , PreferedWorkHoursAttr NightOwl
-            , TvAndMovieGenereAttr SciFi
-            , TvAndMovieGenereAttr Action
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Drama
-            , WorkingRemote
-            ]
-        , coordinates =
-            { lat = 31.84604
-            , lng = 34.918982
-            }
-        }
-      )
     , ( "RyanRempel"
       , { name = "Ryan Rempel"
         , image = "RyanRempel.jpg"
@@ -557,93 +526,6 @@ people =
         , coordinates =
             { lat = 47.4979
             , lng = 19.0402
-            }
-        }
-      )
-    , ( "LuisRosenstrauch"
-      , { name = "Luis Rosenstrauch"
-        , image = "placeholder-wolf.jpg"
-        , socialNetworks =
-            [ Email "luis@gizra.com"
-            , Github "rosenstrauch"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ GenderAttr Male
-            , LanguageAttr English
-            , MusicWhileWorking
-            , NationalityAttr Austria
-            , WorkingRemote
-            , PreferedWorkHoursAttr NightOwl
-            ]
-        , coordinates =
-            { lat = 48.220778
-            , lng = 16.3100207
-            }
-        }
-      )
-    , ( "AlanRempel"
-      , { name = "Alan Rempel"
-        , image = "placeholder-cat.jpg"
-        , socialNetworks =
-            [ Email "alan@gizra.com"
-            , Github "zarvunk"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ GenderAttr Male
-            , LanguageAttr English
-            , MusicWhileWorking
-            , NationalityAttr Canada
-            , WorkingRemote
-            ]
-        , coordinates =
-            { lat = 49.886286
-            , lng = -96.992741
-            }
-        }
-      )
-    , ( "RonanMcCabe"
-      , { name = "Ronan McCabe"
-        , image = "placeholder-dog.jpg"
-        , socialNetworks =
-            [ Email "ronan@gizra.com"
-            , Github "ronanyeah"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ GenderAttr Male
-            , LanguageAttr English
-            , MusicWhileWorking
-            , NationalityAttr UK
-            , WorkingRemote
-            ]
-        , coordinates =
-            { lat = 53.480246
-            , lng = -2.242541
-            }
-        }
-      )
-    , ( "AlekseyMaksimov"
-      , { name = "Aleksey Maksimov"
-        , image = "placeholder-wolf.jpg"
-        , socialNetworks =
-            [ Email "aleksey@gizra.com"
-            , Github "amaksimov"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ GenderAttr Male
-            , LanguageAttr English
-            , LanguageAttr Russian
-            , FamilyAttr Married
-            , MusicWhileWorking
-            , NationalityAttr Russia
-            , WorkingRemote
-            ]
-        , coordinates =
-            { lat = 55.761533
-            , lng = 37.861618
             }
         }
       )
