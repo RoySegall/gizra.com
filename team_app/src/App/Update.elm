@@ -1,15 +1,12 @@
-port module App.Update
-    exposing
-        ( init
-        , subscriptions
-        , update
-        )
+port module App.Update exposing (..)
 
 import App.Model exposing (..)
 import EveryDict exposing (EveryDict)
 import List.Extra as List exposing (getAt)
+import LocationsMap.Model exposing (MapManager, ShowMap)
 import Magnets.Update
 import Mouse exposing (Position)
+import People.Model exposing (People)
 import People.Utils exposing (getAttributesFromPeople)
 
 
@@ -111,7 +108,17 @@ update msg model =
             in
                 modelUpdated ! []
 
+        ToggleMap mapParams ->
+            ( { model | showMap = mapParams.showMap }, mapManager mapParams )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.map MsgMagnets <| Magnets.Update.subscriptions model.magnets
+
+
+
+-- interactions with Leaflet
+
+
+port mapManager : MapManager -> Cmd msg

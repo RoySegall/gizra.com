@@ -2,6 +2,7 @@ module People.Model exposing (..)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
+import LocationsMap.Model exposing (Marker)
 
 
 type alias GitHubName =
@@ -29,4 +30,5 @@ type alias Person =
     , socialNetworks : List SocialNetwork
     , title : String
     , attributes : List Attribute
+    , coordinates : Marker
     }

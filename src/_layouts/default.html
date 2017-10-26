@@ -49,6 +49,11 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" integrity="sha256-wT6CFc7EKRuf7uyVfi+MQNHUzojuHN2pSw0YWFt2K5E=" crossorigin="anonymous" />
   <link rel="stylesheet" href="/assets/stylesheets/style.css" />
+  {% if page.url == '/team/' %}
+  <link rel="stylesheet" href="//unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="//unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="//unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.Default.css" />
+  {% endif %}
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js" integrity="sha256-flVaeawsBV96vCHiLmXn03IRJym7+ZfcLVvUWONCas8=" crossorigin="anonymous"></script>
@@ -94,6 +99,11 @@
 </div>
   <script src="/bower_components/anchor-js/anchor.min.js"></script>
   <script src="/assets/javascript/script.js"></script>
+  {% if page.url == '/team/' %}
+  <script src="//unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <script src="//unpkg.com/leaflet.markercluster@1.0.6/dist/leaflet.markercluster.js"></script>
+  <script src="/assets/javascript/map.js"></script>
+  {% endif %}
 </body>
 
 </html>

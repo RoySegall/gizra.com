@@ -5,12 +5,15 @@ import App.Update exposing (..)
 import Attribute.View exposing (viewEmptyResult)
 import DictList
 import Html exposing (..)
-import Html.Attributes exposing (alt, class, classList, href, src, style, target)
+import Html.Attributes exposing (alt, class, classList, href, id, src, style, target)
 import Html.Events exposing (onClick)
+import LocationsMap.View exposing (viewMap)
 import Magnets.Utils exposing (getSelectedAttributesFromMagnets)
 import Magnets.View
-import People.Utils exposing (getAttributesFromPeople)
+import People.Utils exposing (getAttributesFromPeople, getMapPropertiesFromPeople)
 import People.View exposing (viewPerson)
+import Svg.Attributes exposing (mode)
+import View.Extra exposing (viewHiddenIf)
 
 
 view : Model -> Html Msg
@@ -55,8 +58,52 @@ view model =
                         )
                         (DictList.toList filteredPeople)
                     )
+
+        hideMap =
+            { showMap = False
+            , mapMarkers = []
+            }
+
+        showMap =
+            { showMap = True
+            , mapMarkers = getMapPropertiesFromPeople model.people
+            }
+
+        ( gridLinkClasses, mapLinkClasses ) =
+            if model.showMap then
+                ( "grid-link"
+                , "active map-link"
+                )
+            else
+                ( "active grid-link"
+                , "map-link"
+                )
     in
         div []
-            [ peopleOrEmptyResult
-            , Html.map MsgMagnets <| Magnets.View.view model.magnets
+            [ div
+                [ id "team-toggle-view"
+                , class "ui header computer only right aligned"
+                ]
+                [ a
+                    [ class gridLinkClasses
+                    , onClick (ToggleMap hideMap)
+                    ]
+                    [ i
+                        [ class "grid layout icon" ]
+                        []
+                    , text "Grid View"
+                    ]
+                , a
+                    [ class mapLinkClasses
+                    , onClick (ToggleMap showMap)
+                    ]
+                    [ i
+                        [ class "map icon" ]
+                        []
+                    , text "Map View"
+                    ]
+                ]
+            , viewHiddenIf peopleOrEmptyResult (not model.showMap)
+            , viewHiddenIf (Html.map MsgMagnets <| Magnets.View.view model.magnets) (not model.showMap)
+            , viewMap model.showMap
             ]

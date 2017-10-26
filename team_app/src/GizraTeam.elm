@@ -1,4 +1,4 @@
-module GizraTeam exposing (..)
+module GizraTeam exposing (people)
 
 import Attribute.Model exposing (..)
 import DictList exposing (DictList)
@@ -35,6 +35,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.794
+            , lng = 34.9896
+            }
         }
       )
     , ( "bricel"
@@ -64,6 +68,10 @@ people =
             , SportAttr CrossFit
             , TvAndMovieGenereAttr Drama
             ]
+        , coordinates =
+            { lat = 32.0691471
+            , lng = 34.7706788
+            }
         }
       )
     , ( "OritiMG"
@@ -90,6 +98,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.061143
+            , lng = 34.777318
+            }
         }
       )
     , ( "IshaDakota"
@@ -115,6 +127,10 @@ people =
             , SportAttr Baseball
             , TvAndMovieGenereAttr Comedy
             ]
+        , coordinates =
+            { lat = 41.8781
+            , lng = -87.6298
+            }
         }
       )
     , ( "RachelBaram"
@@ -148,6 +164,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 32.175344
+            , lng = 34.908442
+            }
         }
       )
     , ( "LiatSadeSaadon"
@@ -173,6 +193,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 32.9506
+            , lng = 35.3123
+            }
         }
       )
     , ( "RoySegall"
@@ -200,15 +224,19 @@ people =
             , TvAndMovieGenereAttr Drama
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.0684
+            , lng = 34.8248
+            }
         }
       )
-    , ( "NaderSafadi"
+    , ( "nedSaf"
       , { name = "Nader Safadi"
         , image = "nader77.jpg"
         , socialNetworks =
             [ Email "nader@gizra.com"
-            , Github "nader77"
-            , Drupal "nader77"
+            , Github "nedSaf"
+            , Drupal "nedSaf"
             ]
         , title = "Team Lead"
         , attributes =
@@ -228,6 +256,10 @@ people =
             , TvAndMovieGenereAttr Comedy
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 33.2691
+            , lng = 35.7721
+            }
         }
       )
     , ( "bitamar"
@@ -255,6 +287,10 @@ people =
             , TvAndMovieGenereAttr Drama
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 52.52
+            , lng = 13.405
+            }
         }
       )
     , ( "ordavidil"
@@ -283,6 +319,10 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.094286
+            , lng = 34.783612
+            }
         }
       )
     , ( "efratn"
@@ -306,36 +346,10 @@ people =
             , PreferedWorkHoursAttr NineToFive
             , SportAttr Pilates
             ]
-        }
-      )
-    , ( "Pavel"
-      , { name = "Pavel Pirozhenko"
-        , image = "Pavel.jpg"
-        , socialNetworks =
-            [ Email "pavel@gizra.com"
-            , Github "ppavels"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , FamilyAttr Kids
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , LanguageAttr Russian
-            , LanguageAttr Ukrainian
-            , LivedAbroad
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr NightOwl
-            , SportAttr Soccer
-            , SportAttr Volleyball
-            , TvAndMovieGenereAttr Action
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Horror
-            , TvAndMovieGenereAttr SciFi
-            ]
+        , coordinates =
+            { lat = 31.7683
+            , lng = 35.2137
+            }
         }
       )
     , ( "anvmn"
@@ -363,6 +377,10 @@ people =
             , TvAndMovieGenereAttr Horror
             , TvAndMovieGenereAttr SciFi
             ]
+        , coordinates =
+            { lat = 32.08
+            , lng = 34.77
+            }
         }
       )
     , ( "SavyonCohen"
@@ -388,6 +406,10 @@ people =
             , TvAndMovieGenereAttr Action
             , TvAndMovieGenereAttr Comedy
             ]
+        , coordinates =
+            { lat = 32.0722
+            , lng = 34.8089
+            }
         }
       )
     , ( "ybaras"
@@ -411,59 +433,10 @@ people =
             , Tattoo
             , TvAndMovieGenereAttr Comedy
             ]
-        }
-      )
-    , ( "DavidBronfen"
-      , { name = "David Bronfen"
-        , image = "DavidBronfen.jpg"
-        , socialNetworks =
-            [ Email "davidb@gizra.com"
-            , Github "DavidBronfen"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , FoodAttr Vegetarian
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr Italian
-            , LanguageAttr English
-            , LanguageAttr Russian
-            , NationalityAttr Israel
-            , MusicAttr Sing
-            , MusicWhileWorking
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , SportAttr CrossFit
-            , Tattoo
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Drama
-            ]
-        }
-      )
-    , ( "ItamarGronich"
-      , { name = "Itamar Gronich"
-        , image = "ItamarGronich.jpg"
-        , socialNetworks =
-            [ Email "itamargronich@gizra.com"
-            , Github "ItamarGronich"
-            ]
-        , title = "Developer"
-        , attributes =
-            [ DoingSports
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , LivedAbroad
-            , MusicAttr PlayingInstrument
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr EarlyRise
-            , SportAttr CrossFit
-            , TvAndMovieGenereAttr Comedy
-            , TvAndMovieGenereAttr Drama
-            ]
+        , coordinates =
+            { lat = 32.083708
+            , lng = 34.888097
+            }
         }
       )
     , ( "DavidHernandez"
@@ -492,6 +465,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 39.4699
+            , lng = 0.3763
+            }
         }
       )
     , ( "RyanRempel"
@@ -517,6 +494,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 49.8951
+            , lng = -97.1384
+            }
         }
       )
     , ( "AronNovak"
@@ -542,6 +523,10 @@ people =
             , TvAndMovieGenereAttr SciFi
             , WorkingRemote
             ]
+        , coordinates =
+            { lat = 47.4979
+            , lng = 19.0402
+            }
         }
       )
     ]
