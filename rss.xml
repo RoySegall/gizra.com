@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Thu, 01 Jun 2017 13:55:49 -0400</lastBuildDate>
-    <pubDate>Thu, 01 Jun 2017 13:55:49 -0400</pubDate>
+    <lastBuildDate>Thu, 26 Oct 2017 17:19:42 -0400</lastBuildDate>
+    <pubDate>Thu, 26 Oct 2017 17:19:42 -0400</pubDate>
     <ttl>1800</ttl>
 
     
@@ -17,18 +17,18 @@
 &lt;p&gt;[&lt;em&gt;Dramatic music in the background&lt;/em&gt;]&lt;/p&gt;
 
 &lt;p&gt;Sort of… &lt;a href=&quot;https://www.youtube.com/watch?v=4na-wZte6Co&quot;&gt;Mark Zuckerberg&lt;/a&gt; showed
-us what it could really be. Though, we need to understand that for now, bots 
+us what it could really be. Though, we need to understand that for now, bots
 are more like what Dries showed us in his
 keynote at &lt;a href=&quot;https://youtu.be/q25eaJHpXFo?t=1h7m30s&quot;&gt;DrupalCon Baltimore&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;ro-bot-101&quot;&gt;Ro-bot 101&lt;/h2&gt;
 &lt;p&gt;So what is a bot? If you’ve ever said &lt;code class=&quot;highlighter-rouge&quot;&gt;Hey Siri&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;OK Google&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Hey Cortona&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;Alexa&lt;/code&gt;,
-then you have interacted with a bot. That bot received an input, returned an output - 
+then you have interacted with a bot. That bot received an input, returned an output -
 it woke you up, reminded you of something, sent an email, or ordered
 a new book from Amazon - and you if you’re lucky, a drone delivered it!&lt;/p&gt;
 
 &lt;h2 id=&quot;platforms-and-technologies&quot;&gt;Platforms and technologies&lt;/h2&gt;
-&lt;p&gt;Now that we understand what a bot is, let’s start to see how we can write one. 
+&lt;p&gt;Now that we understand what a bot is, let’s start to see how we can write one.
 Any chat platform provide bots, and there are two
 ways for them to communicate:&lt;/p&gt;
 
@@ -48,8 +48,8 @@ one way or another, but in this post we will focus on Slack.&lt;/p&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourteam.slack.com/apps&lt;/code&gt; and create a custom bot integration.&lt;/p&gt;
 
 &lt;p&gt;Next you’ll need to start with a library. There’s something like a
-quadrillion libraries - PHP, NodeJS, Python, and couple in Go lang. For 
-our purposes, we need an easy setup, listening to events and acting, 
+quadrillion libraries - PHP, NodeJS, Python, and couple in Go lang. For
+our purposes, we need an easy setup, listening to events and acting,
 understanding from the text what kind of task the user requires, and even
 more (cron tasks for reminders, incoming web hooks, DB layer, etc.).
 Sounds a bit daunting, no? You’re right!&lt;/p&gt;
@@ -76,7 +76,7 @@ defined in a YML file.&lt;/p&gt;
 &lt;p&gt;Our task will be located at &lt;code class=&quot;highlighter-rouge&quot;&gt;src/Custom/LookForAPicture.php&lt;/code&gt;:
 &lt;script src=&quot;https://gist.github.com/RoySegall/2bf556c2994b0bc89bc5ede26605f366.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;After implementing the task, we can start to code. So, what should this task 
+&lt;p&gt;After implementing the task, we can start to code. So, what should this task
 do? Get a keyword, look for an image which relates to that keyword, and send it
 as an attachment to the message. When you are feeling down you could ask for a
 picture of a cute kitten to take away your sorrow.&lt;/p&gt;
@@ -102,14 +102,50 @@ library:&lt;/p&gt;
 
 &lt;p&gt;And this is the result:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/nuntius-bot/bad_kitten_image.jpg&quot; alt=&quot;Embed image in slack&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com/assets/images/posts/nuntius-bot/bad_kitten_image.jpg&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      An embedded kitten image.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;h2 id=&quot;but-wait-theres-more&quot;&gt;But Wait, There’s More!&lt;/h2&gt;
 &lt;p&gt;Slack was kind and embedded the picture for us, but it’s not the best
 practice. Using attachments makes the
 message much more readable and gives us this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/nuntius-bot/good_kitten_image.jpg&quot; alt=&quot;Improved embed image in slack&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com/assets/images/posts/nuntius-bot/good_kitten_image.jpg&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Attaching an image by Slack best practice.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;The code is a bit more complex than the simple URL we returned:
 &lt;script src=&quot;https://gist.github.com/RoySegall/b872dccfb12c01cbd2fa080c27fd281b.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;

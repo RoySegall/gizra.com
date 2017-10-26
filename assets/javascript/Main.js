@@ -4855,8 +4855,136 @@ var _elm_lang$core$Json_Decode$bool = _elm_lang$core$Native_Json.decodePrimitive
 var _elm_lang$core$Json_Decode$string = _elm_lang$core$Native_Json.decodePrimitive('string');
 var _elm_lang$core$Json_Decode$Decoder = {ctor: 'Decoder'};
 
-var _elm_lang$core$Debug$crash = _elm_lang$core$Native_Debug.crash;
-var _elm_lang$core$Debug$log = _elm_lang$core$Native_Debug.log;
+var _elm_lang$core$Set$foldr = F3(
+	function (f, b, _p0) {
+		var _p1 = _p0;
+		return A3(
+			_elm_lang$core$Dict$foldr,
+			F3(
+				function (k, _p2, b) {
+					return A2(f, k, b);
+				}),
+			b,
+			_p1._0);
+	});
+var _elm_lang$core$Set$foldl = F3(
+	function (f, b, _p3) {
+		var _p4 = _p3;
+		return A3(
+			_elm_lang$core$Dict$foldl,
+			F3(
+				function (k, _p5, b) {
+					return A2(f, k, b);
+				}),
+			b,
+			_p4._0);
+	});
+var _elm_lang$core$Set$toList = function (_p6) {
+	var _p7 = _p6;
+	return _elm_lang$core$Dict$keys(_p7._0);
+};
+var _elm_lang$core$Set$size = function (_p8) {
+	var _p9 = _p8;
+	return _elm_lang$core$Dict$size(_p9._0);
+};
+var _elm_lang$core$Set$member = F2(
+	function (k, _p10) {
+		var _p11 = _p10;
+		return A2(_elm_lang$core$Dict$member, k, _p11._0);
+	});
+var _elm_lang$core$Set$isEmpty = function (_p12) {
+	var _p13 = _p12;
+	return _elm_lang$core$Dict$isEmpty(_p13._0);
+};
+var _elm_lang$core$Set$Set_elm_builtin = function (a) {
+	return {ctor: 'Set_elm_builtin', _0: a};
+};
+var _elm_lang$core$Set$empty = _elm_lang$core$Set$Set_elm_builtin(_elm_lang$core$Dict$empty);
+var _elm_lang$core$Set$singleton = function (k) {
+	return _elm_lang$core$Set$Set_elm_builtin(
+		A2(
+			_elm_lang$core$Dict$singleton,
+			k,
+			{ctor: '_Tuple0'}));
+};
+var _elm_lang$core$Set$insert = F2(
+	function (k, _p14) {
+		var _p15 = _p14;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A3(
+				_elm_lang$core$Dict$insert,
+				k,
+				{ctor: '_Tuple0'},
+				_p15._0));
+	});
+var _elm_lang$core$Set$fromList = function (xs) {
+	return A3(_elm_lang$core$List$foldl, _elm_lang$core$Set$insert, _elm_lang$core$Set$empty, xs);
+};
+var _elm_lang$core$Set$map = F2(
+	function (f, s) {
+		return _elm_lang$core$Set$fromList(
+			A2(
+				_elm_lang$core$List$map,
+				f,
+				_elm_lang$core$Set$toList(s)));
+	});
+var _elm_lang$core$Set$remove = F2(
+	function (k, _p16) {
+		var _p17 = _p16;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A2(_elm_lang$core$Dict$remove, k, _p17._0));
+	});
+var _elm_lang$core$Set$union = F2(
+	function (_p19, _p18) {
+		var _p20 = _p19;
+		var _p21 = _p18;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A2(_elm_lang$core$Dict$union, _p20._0, _p21._0));
+	});
+var _elm_lang$core$Set$intersect = F2(
+	function (_p23, _p22) {
+		var _p24 = _p23;
+		var _p25 = _p22;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A2(_elm_lang$core$Dict$intersect, _p24._0, _p25._0));
+	});
+var _elm_lang$core$Set$diff = F2(
+	function (_p27, _p26) {
+		var _p28 = _p27;
+		var _p29 = _p26;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A2(_elm_lang$core$Dict$diff, _p28._0, _p29._0));
+	});
+var _elm_lang$core$Set$filter = F2(
+	function (p, _p30) {
+		var _p31 = _p30;
+		return _elm_lang$core$Set$Set_elm_builtin(
+			A2(
+				_elm_lang$core$Dict$filter,
+				F2(
+					function (k, _p32) {
+						return p(k);
+					}),
+				_p31._0));
+	});
+var _elm_lang$core$Set$partition = F2(
+	function (p, _p33) {
+		var _p34 = _p33;
+		var _p35 = A2(
+			_elm_lang$core$Dict$partition,
+			F2(
+				function (k, _p36) {
+					return p(k);
+				}),
+			_p34._0);
+		var p1 = _p35._0;
+		var p2 = _p35._1;
+		return {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Set$Set_elm_builtin(p1),
+			_1: _elm_lang$core$Set$Set_elm_builtin(p2)
+		};
+	});
 
 var _elm_lang$core$Tuple$mapSecond = F2(
 	function (func, _p0) {
@@ -4884,6 +5012,9 @@ var _elm_lang$core$Tuple$first = function (_p6) {
 	var _p7 = _p6;
 	return _p7._0;
 };
+
+var _elm_lang$core$Debug$crash = _elm_lang$core$Native_Debug.crash;
+var _elm_lang$core$Debug$log = _elm_lang$core$Native_Debug.log;
 
 //import //
 
@@ -5756,156 +5887,6 @@ var _elm_lang$core$Platform$Program = {ctor: 'Program'};
 var _elm_lang$core$Platform$Task = {ctor: 'Task'};
 var _elm_lang$core$Platform$ProcessId = {ctor: 'ProcessId'};
 var _elm_lang$core$Platform$Router = {ctor: 'Router'};
-
-var _Gizra$elm_dictlist$DictList_Compat$second = _elm_lang$core$Tuple$second;
-var _Gizra$elm_dictlist$DictList_Compat$first = _elm_lang$core$Tuple$first;
-var _Gizra$elm_dictlist$DictList_Compat$customDecoder = F2(
-	function (decoder, toResult) {
-		return A2(
-			_elm_lang$core$Json_Decode$andThen,
-			function (a) {
-				var _p0 = toResult(a);
-				if (_p0.ctor === 'Ok') {
-					return _elm_lang$core$Json_Decode$succeed(_p0._0);
-				} else {
-					return _elm_lang$core$Json_Decode$fail(_p0._0);
-				}
-			},
-			decoder);
-	});
-var _Gizra$elm_dictlist$DictList_Compat$maybeAndThen = _elm_lang$core$Maybe$andThen;
-var _Gizra$elm_dictlist$DictList_Compat$decodeAndThen = _elm_lang$core$Json_Decode$andThen;
-
-var _elm_lang$core$Set$foldr = F3(
-	function (f, b, _p0) {
-		var _p1 = _p0;
-		return A3(
-			_elm_lang$core$Dict$foldr,
-			F3(
-				function (k, _p2, b) {
-					return A2(f, k, b);
-				}),
-			b,
-			_p1._0);
-	});
-var _elm_lang$core$Set$foldl = F3(
-	function (f, b, _p3) {
-		var _p4 = _p3;
-		return A3(
-			_elm_lang$core$Dict$foldl,
-			F3(
-				function (k, _p5, b) {
-					return A2(f, k, b);
-				}),
-			b,
-			_p4._0);
-	});
-var _elm_lang$core$Set$toList = function (_p6) {
-	var _p7 = _p6;
-	return _elm_lang$core$Dict$keys(_p7._0);
-};
-var _elm_lang$core$Set$size = function (_p8) {
-	var _p9 = _p8;
-	return _elm_lang$core$Dict$size(_p9._0);
-};
-var _elm_lang$core$Set$member = F2(
-	function (k, _p10) {
-		var _p11 = _p10;
-		return A2(_elm_lang$core$Dict$member, k, _p11._0);
-	});
-var _elm_lang$core$Set$isEmpty = function (_p12) {
-	var _p13 = _p12;
-	return _elm_lang$core$Dict$isEmpty(_p13._0);
-};
-var _elm_lang$core$Set$Set_elm_builtin = function (a) {
-	return {ctor: 'Set_elm_builtin', _0: a};
-};
-var _elm_lang$core$Set$empty = _elm_lang$core$Set$Set_elm_builtin(_elm_lang$core$Dict$empty);
-var _elm_lang$core$Set$singleton = function (k) {
-	return _elm_lang$core$Set$Set_elm_builtin(
-		A2(
-			_elm_lang$core$Dict$singleton,
-			k,
-			{ctor: '_Tuple0'}));
-};
-var _elm_lang$core$Set$insert = F2(
-	function (k, _p14) {
-		var _p15 = _p14;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A3(
-				_elm_lang$core$Dict$insert,
-				k,
-				{ctor: '_Tuple0'},
-				_p15._0));
-	});
-var _elm_lang$core$Set$fromList = function (xs) {
-	return A3(_elm_lang$core$List$foldl, _elm_lang$core$Set$insert, _elm_lang$core$Set$empty, xs);
-};
-var _elm_lang$core$Set$map = F2(
-	function (f, s) {
-		return _elm_lang$core$Set$fromList(
-			A2(
-				_elm_lang$core$List$map,
-				f,
-				_elm_lang$core$Set$toList(s)));
-	});
-var _elm_lang$core$Set$remove = F2(
-	function (k, _p16) {
-		var _p17 = _p16;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A2(_elm_lang$core$Dict$remove, k, _p17._0));
-	});
-var _elm_lang$core$Set$union = F2(
-	function (_p19, _p18) {
-		var _p20 = _p19;
-		var _p21 = _p18;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A2(_elm_lang$core$Dict$union, _p20._0, _p21._0));
-	});
-var _elm_lang$core$Set$intersect = F2(
-	function (_p23, _p22) {
-		var _p24 = _p23;
-		var _p25 = _p22;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A2(_elm_lang$core$Dict$intersect, _p24._0, _p25._0));
-	});
-var _elm_lang$core$Set$diff = F2(
-	function (_p27, _p26) {
-		var _p28 = _p27;
-		var _p29 = _p26;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A2(_elm_lang$core$Dict$diff, _p28._0, _p29._0));
-	});
-var _elm_lang$core$Set$filter = F2(
-	function (p, _p30) {
-		var _p31 = _p30;
-		return _elm_lang$core$Set$Set_elm_builtin(
-			A2(
-				_elm_lang$core$Dict$filter,
-				F2(
-					function (k, _p32) {
-						return p(k);
-					}),
-				_p31._0));
-	});
-var _elm_lang$core$Set$partition = F2(
-	function (p, _p33) {
-		var _p34 = _p33;
-		var _p35 = A2(
-			_elm_lang$core$Dict$partition,
-			F2(
-				function (k, _p36) {
-					return p(k);
-				}),
-			_p34._0);
-		var p1 = _p35._0;
-		var p2 = _p35._1;
-		return {
-			ctor: '_Tuple2',
-			_0: _elm_lang$core$Set$Set_elm_builtin(p1),
-			_1: _elm_lang$core$Set$Set_elm_builtin(p2)
-		};
-	});
 
 var _elm_community$list_extra$List_Extra$greedyGroupsOfWithStep = F3(
 	function (size, step, xs) {
@@ -7122,8 +7103,8 @@ var _Gizra$elm_dictlist$DictList$unsafeGet = F2(
 			return _elm_lang$core$Native_Utils.crashCase(
 				'DictList',
 				{
-					start: {line: 950, column: 5},
-					end: {line: 955, column: 78}
+					start: {line: 1150, column: 5},
+					end: {line: 1155, column: 78}
 				},
 				_p0)('Internal error: DictList list not in sync with dict');
 		}
@@ -7148,8 +7129,8 @@ var _Gizra$elm_dictlist$DictList$foldr = F3(
 					return _elm_lang$core$Native_Utils.crashCase(
 						'DictList',
 						{
-							start: {line: 853, column: 13},
-							end: {line: 858, column: 86}
+							start: {line: 967, column: 13},
+							end: {line: 972, column: 86}
 						},
 						_p8)('Internal error: DictList list not in sync with dict');
 				}
@@ -7262,7 +7243,7 @@ var _Gizra$elm_dictlist$DictList$getAt = F2(
 	function (index, _p31) {
 		var _p32 = _p31;
 		return A2(
-			_Gizra$elm_dictlist$DictList_Compat$maybeAndThen,
+			_elm_lang$core$Maybe$andThen,
 			function (key) {
 				return A2(
 					_elm_lang$core$Maybe$map,
@@ -7286,7 +7267,7 @@ var _Gizra$elm_dictlist$DictList$indexOfKey = F2(
 var _Gizra$elm_dictlist$DictList$next = F2(
 	function (key, dictlist) {
 		return A2(
-			_Gizra$elm_dictlist$DictList_Compat$maybeAndThen,
+			_elm_lang$core$Maybe$andThen,
 			function (index) {
 				return A2(_Gizra$elm_dictlist$DictList$getAt, index + 1, dictlist);
 			},
@@ -7295,42 +7276,51 @@ var _Gizra$elm_dictlist$DictList$next = F2(
 var _Gizra$elm_dictlist$DictList$previous = F2(
 	function (key, dictlist) {
 		return A2(
-			_Gizra$elm_dictlist$DictList_Compat$maybeAndThen,
+			_elm_lang$core$Maybe$andThen,
 			function (index) {
 				return A2(_Gizra$elm_dictlist$DictList$getAt, index - 1, dictlist);
 			},
 			A2(_Gizra$elm_dictlist$DictList$indexOfKey, key, dictlist));
 	});
-var _Gizra$elm_dictlist$DictList$minimum = function (_p37) {
-	var _p38 = _p37;
+var _Gizra$elm_dictlist$DictList$atRelativePosition = F2(
+	function (position, dictlist) {
+		var _p37 = position;
+		if (_p37.ctor === 'BeforeKey') {
+			return A2(_Gizra$elm_dictlist$DictList$previous, _p37._0, dictlist);
+		} else {
+			return A2(_Gizra$elm_dictlist$DictList$next, _p37._0, dictlist);
+		}
+	});
+var _Gizra$elm_dictlist$DictList$minimum = function (_p38) {
+	var _p39 = _p38;
 	var go = F3(
-		function (_p39, value, acc) {
-			var _p40 = acc;
-			if (_p40.ctor === 'Nothing') {
+		function (_p40, value, acc) {
+			var _p41 = acc;
+			if (_p41.ctor === 'Nothing') {
 				return _elm_lang$core$Maybe$Just(value);
 			} else {
 				return _elm_lang$core$Maybe$Just(
-					A2(_elm_lang$core$Basics$min, _p40._0, value));
+					A2(_elm_lang$core$Basics$min, _p41._0, value));
 			}
 		});
-	return A3(_elm_lang$core$Dict$foldl, go, _elm_lang$core$Maybe$Nothing, _p38._0);
+	return A3(_elm_lang$core$Dict$foldl, go, _elm_lang$core$Maybe$Nothing, _p39._0);
 };
-var _Gizra$elm_dictlist$DictList$maximum = function (_p41) {
-	var _p42 = _p41;
+var _Gizra$elm_dictlist$DictList$maximum = function (_p42) {
+	var _p43 = _p42;
 	var go = F3(
-		function (_p43, value, acc) {
-			var _p44 = acc;
-			if (_p44.ctor === 'Nothing') {
+		function (_p44, value, acc) {
+			var _p45 = acc;
+			if (_p45.ctor === 'Nothing') {
 				return _elm_lang$core$Maybe$Just(value);
 			} else {
 				return _elm_lang$core$Maybe$Just(
-					A2(_elm_lang$core$Basics$max, _p44._0, value));
+					A2(_elm_lang$core$Basics$max, _p45._0, value));
 			}
 		});
-	return A3(_elm_lang$core$Dict$foldl, go, _elm_lang$core$Maybe$Nothing, _p42._0);
+	return A3(_elm_lang$core$Dict$foldl, go, _elm_lang$core$Maybe$Nothing, _p43._0);
 };
-var _Gizra$elm_dictlist$DictList$product = function (_p45) {
-	var _p46 = _p45;
+var _Gizra$elm_dictlist$DictList$product = function (_p46) {
+	var _p47 = _p46;
 	return A3(
 		_elm_lang$core$Dict$foldl,
 		_elm_lang$core$Basics$always(
@@ -7339,10 +7329,10 @@ var _Gizra$elm_dictlist$DictList$product = function (_p45) {
 					return x * y;
 				})),
 		1,
-		_p46._0);
+		_p47._0);
 };
-var _Gizra$elm_dictlist$DictList$sum = function (_p47) {
-	var _p48 = _p47;
+var _Gizra$elm_dictlist$DictList$sum = function (_p48) {
+	var _p49 = _p48;
 	return A3(
 		_elm_lang$core$Dict$foldl,
 		_elm_lang$core$Basics$always(
@@ -7351,33 +7341,33 @@ var _Gizra$elm_dictlist$DictList$sum = function (_p47) {
 					return x + y;
 				})),
 		0,
-		_p48._0);
+		_p49._0);
 };
 var _Gizra$elm_dictlist$DictList$any = F2(
-	function (func, _p49) {
-		var _p50 = _p49;
+	function (func, _p50) {
+		var _p51 = _p50;
 		var go = function (innerList) {
 			go:
 			while (true) {
-				var _p51 = innerList;
-				if (_p51.ctor === '[]') {
+				var _p52 = innerList;
+				if (_p52.ctor === '[]') {
 					return false;
 				} else {
-					var _p52 = _p51._0;
+					var _p53 = _p52._0;
 					if (A2(
 						func,
-						_p52,
-						A2(_Gizra$elm_dictlist$DictList$unsafeGet, _p52, _p50._0))) {
+						_p53,
+						A2(_Gizra$elm_dictlist$DictList$unsafeGet, _p53, _p51._0))) {
 						return true;
 					} else {
-						var _v26 = _p51._1;
-						innerList = _v26;
+						var _v27 = _p52._1;
+						innerList = _v27;
 						continue go;
 					}
 				}
 			}
 		};
-		return go(_p50._1);
+		return go(_p51._1);
 	});
 var _Gizra$elm_dictlist$DictList$all = F2(
 	function (func, dictList) {
@@ -7390,33 +7380,33 @@ var _Gizra$elm_dictlist$DictList$all = F2(
 			dictList);
 	});
 var _Gizra$elm_dictlist$DictList$length = _Gizra$elm_dictlist$DictList$size;
-var _Gizra$elm_dictlist$DictList$head = function (_p53) {
-	var _p54 = _p53;
+var _Gizra$elm_dictlist$DictList$head = function (_p54) {
+	var _p55 = _p54;
 	return A2(
-		_Gizra$elm_dictlist$DictList_Compat$maybeAndThen,
+		_elm_lang$core$Maybe$andThen,
 		function (key) {
 			return A2(
 				_elm_lang$core$Maybe$map,
 				function (value) {
 					return {ctor: '_Tuple2', _0: key, _1: value};
 				},
-				A2(_elm_lang$core$Dict$get, key, _p54._0));
+				A2(_elm_lang$core$Dict$get, key, _p55._0));
 		},
-		_elm_lang$core$List$head(_p54._1));
+		_elm_lang$core$List$head(_p55._1));
 };
 var _Gizra$elm_dictlist$DictList$DictList = F2(
 	function (a, b) {
 		return {ctor: 'DictList', _0: a, _1: b};
 	});
 var _Gizra$elm_dictlist$DictList$cons = F3(
-	function (key, value, _p55) {
-		var _p56 = _p55;
-		var _p58 = _p56._1;
-		var _p57 = _p56._0;
-		var restOfList = A2(_elm_lang$core$Dict$member, key, _p57) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p58) : _p58;
+	function (key, value, _p56) {
+		var _p57 = _p56;
+		var _p59 = _p57._1;
+		var _p58 = _p57._0;
+		var restOfList = A2(_elm_lang$core$Dict$member, key, _p58) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p59) : _p59;
 		return A2(
 			_Gizra$elm_dictlist$DictList$DictList,
-			A3(_elm_lang$core$Dict$insert, key, value, _p57),
+			A3(_elm_lang$core$Dict$insert, key, value, _p58),
 			{ctor: '::', _0: key, _1: restOfList});
 	});
 var _Gizra$elm_dictlist$DictList$append = F2(
@@ -7431,122 +7421,122 @@ var _Gizra$elm_dictlist$DictList$union = F2(
 	function (t1, t2) {
 		return A3(_Gizra$elm_dictlist$DictList$foldr, _Gizra$elm_dictlist$DictList$cons, t2, t1);
 	});
-var _Gizra$elm_dictlist$DictList$tail = function (_p59) {
-	var _p60 = _p59;
-	var _p61 = _p60._1;
-	if (_p61.ctor === '::') {
+var _Gizra$elm_dictlist$DictList$tail = function (_p60) {
+	var _p61 = _p60;
+	var _p62 = _p61._1;
+	if (_p62.ctor === '::') {
 		return _elm_lang$core$Maybe$Just(
 			A2(
 				_Gizra$elm_dictlist$DictList$DictList,
-				A2(_elm_lang$core$Dict$remove, _p61._0, _p60._0),
-				_p61._1));
+				A2(_elm_lang$core$Dict$remove, _p62._0, _p61._0),
+				_p62._1));
 	} else {
 		return _elm_lang$core$Maybe$Nothing;
 	}
 };
-var _Gizra$elm_dictlist$DictList$reverse = function (_p62) {
-	var _p63 = _p62;
+var _Gizra$elm_dictlist$DictList$reverse = function (_p63) {
+	var _p64 = _p63;
 	return A2(
 		_Gizra$elm_dictlist$DictList$DictList,
-		_p63._0,
-		_elm_lang$core$List$reverse(_p63._1));
+		_p64._0,
+		_elm_lang$core$List$reverse(_p64._1));
 };
 var _Gizra$elm_dictlist$DictList$take = F2(
-	function (n, _p64) {
-		var _p65 = _p64;
+	function (n, _p65) {
+		var _p66 = _p65;
 		var go = function (key) {
 			return A2(
 				_elm_lang$core$Dict$insert,
 				key,
-				A2(_Gizra$elm_dictlist$DictList$unsafeGet, key, _p65._0));
+				A2(_Gizra$elm_dictlist$DictList$unsafeGet, key, _p66._0));
 		};
-		var newList = A2(_elm_lang$core$List$take, n, _p65._1);
+		var newList = A2(_elm_lang$core$List$take, n, _p66._1);
 		var newDict = A3(_elm_lang$core$List$foldl, go, _elm_lang$core$Dict$empty, newList);
 		return A2(_Gizra$elm_dictlist$DictList$DictList, newDict, newList);
 	});
 var _Gizra$elm_dictlist$DictList$drop = F2(
-	function (n, _p66) {
-		var _p67 = _p66;
+	function (n, _p67) {
+		var _p68 = _p67;
 		var go = function (key) {
 			return A2(
 				_elm_lang$core$Dict$insert,
 				key,
-				A2(_Gizra$elm_dictlist$DictList$unsafeGet, key, _p67._0));
+				A2(_Gizra$elm_dictlist$DictList$unsafeGet, key, _p68._0));
 		};
-		var newList = A2(_elm_lang$core$List$drop, n, _p67._1);
+		var newList = A2(_elm_lang$core$List$drop, n, _p68._1);
 		var newDict = A3(_elm_lang$core$List$foldl, go, _elm_lang$core$Dict$empty, newList);
 		return A2(_Gizra$elm_dictlist$DictList$DictList, newDict, newList);
 	});
 var _Gizra$elm_dictlist$DictList$sort = function (dictList) {
-	var _p68 = dictList;
+	var _p69 = dictList;
 	return A2(
 		_Gizra$elm_dictlist$DictList$DictList,
-		_p68._0,
+		_p69._0,
 		A2(
 			_elm_lang$core$List$map,
-			_Gizra$elm_dictlist$DictList_Compat$first,
+			_elm_lang$core$Tuple$first,
 			A2(
 				_elm_lang$core$List$sortBy,
-				_Gizra$elm_dictlist$DictList_Compat$second,
+				_elm_lang$core$Tuple$second,
 				_Gizra$elm_dictlist$DictList$toList(dictList))));
 };
 var _Gizra$elm_dictlist$DictList$sortBy = F2(
 	function (func, dictList) {
-		var _p69 = dictList;
+		var _p70 = dictList;
 		return A2(
 			_Gizra$elm_dictlist$DictList$DictList,
-			_p69._0,
+			_p70._0,
 			A2(
 				_elm_lang$core$List$map,
-				_Gizra$elm_dictlist$DictList_Compat$first,
+				_elm_lang$core$Tuple$first,
 				A2(
 					_elm_lang$core$List$sortBy,
-					function (_p70) {
+					function (_p71) {
 						return func(
-							_Gizra$elm_dictlist$DictList_Compat$second(_p70));
+							_elm_lang$core$Tuple$second(_p71));
 					},
 					_Gizra$elm_dictlist$DictList$toList(dictList))));
 	});
 var _Gizra$elm_dictlist$DictList$sortWith = F2(
 	function (func, dictList) {
-		var _p71 = dictList;
+		var _p72 = dictList;
 		return A2(
 			_Gizra$elm_dictlist$DictList$DictList,
-			_p71._0,
+			_p72._0,
 			A2(
 				_elm_lang$core$List$map,
-				_Gizra$elm_dictlist$DictList_Compat$first,
+				_elm_lang$core$Tuple$first,
 				A2(
 					_elm_lang$core$List$sortWith,
 					F2(
 						function (v1, v2) {
 							return A2(
 								func,
-								_Gizra$elm_dictlist$DictList_Compat$second(v1),
-								_Gizra$elm_dictlist$DictList_Compat$second(v2));
+								_elm_lang$core$Tuple$second(v1),
+								_elm_lang$core$Tuple$second(v2));
 						}),
 					_Gizra$elm_dictlist$DictList$toList(dictList))));
 	});
 var _Gizra$elm_dictlist$DictList$insertAfter = F4(
-	function (afterKey, key, value, _p72) {
-		var _p73 = _p72;
-		var _p77 = _p73._1;
-		var _p76 = _p73._0;
+	function (afterKey, key, value, _p73) {
+		var _p74 = _p73;
+		var _p78 = _p74._1;
+		var _p77 = _p74._0;
 		var newList = function () {
 			if (_elm_lang$core$Native_Utils.eq(afterKey, key)) {
-				return _p77;
+				return _p78;
 			} else {
-				var listWithoutKey = A2(_elm_lang$core$Dict$member, key, _p76) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p77) : _p77;
-				var _p74 = A2(_elm_community$list_extra$List_Extra$elemIndex, afterKey, listWithoutKey);
-				if (_p74.ctor === 'Just') {
-					var _p75 = _p74._0;
+				var listWithoutKey = A2(_elm_lang$core$Dict$member, key, _p77) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p78) : _p78;
+				var _p75 = A2(_elm_community$list_extra$List_Extra$elemIndex, afterKey, listWithoutKey);
+				if (_p75.ctor === 'Just') {
+					var _p76 = _p75._0;
 					return A2(
 						_elm_lang$core$Basics_ops['++'],
-						A2(_elm_lang$core$List$take, _p75 + 1, listWithoutKey),
+						A2(_elm_lang$core$List$take, _p76 + 1, listWithoutKey),
 						{
 							ctor: '::',
 							_0: key,
-							_1: A2(_elm_lang$core$List$drop, _p75 + 1, listWithoutKey)
+							_1: A2(_elm_lang$core$List$drop, _p76 + 1, listWithoutKey)
 						});
 				} else {
 					return A2(
@@ -7560,68 +7550,76 @@ var _Gizra$elm_dictlist$DictList$insertAfter = F4(
 				}
 			}
 		}();
-		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p76);
+		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p77);
 		return A2(_Gizra$elm_dictlist$DictList$DictList, newDict, newList);
 	});
 var _Gizra$elm_dictlist$DictList$insertBefore = F4(
-	function (beforeKey, key, value, _p78) {
-		var _p79 = _p78;
-		var _p83 = _p79._1;
-		var _p82 = _p79._0;
+	function (beforeKey, key, value, _p79) {
+		var _p80 = _p79;
+		var _p84 = _p80._1;
+		var _p83 = _p80._0;
 		var newList = function () {
 			if (_elm_lang$core$Native_Utils.eq(beforeKey, key)) {
-				return _p83;
+				return _p84;
 			} else {
-				var listWithoutKey = A2(_elm_lang$core$Dict$member, key, _p82) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p83) : _p83;
-				var _p80 = A2(_elm_community$list_extra$List_Extra$elemIndex, beforeKey, listWithoutKey);
-				if (_p80.ctor === 'Just') {
-					var _p81 = _p80._0;
+				var listWithoutKey = A2(_elm_lang$core$Dict$member, key, _p83) ? A2(_elm_community$list_extra$List_Extra$remove, key, _p84) : _p84;
+				var _p81 = A2(_elm_community$list_extra$List_Extra$elemIndex, beforeKey, listWithoutKey);
+				if (_p81.ctor === 'Just') {
+					var _p82 = _p81._0;
 					return A2(
 						_elm_lang$core$Basics_ops['++'],
-						A2(_elm_lang$core$List$take, _p81, listWithoutKey),
+						A2(_elm_lang$core$List$take, _p82, listWithoutKey),
 						{
 							ctor: '::',
 							_0: key,
-							_1: A2(_elm_lang$core$List$drop, _p81, listWithoutKey)
+							_1: A2(_elm_lang$core$List$drop, _p82, listWithoutKey)
 						});
 				} else {
 					return {ctor: '::', _0: key, _1: listWithoutKey};
 				}
 			}
 		}();
-		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p82);
+		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p83);
 		return A2(_Gizra$elm_dictlist$DictList$DictList, newDict, newList);
 	});
+var _Gizra$elm_dictlist$DictList$insertRelativeTo = function (position) {
+	var _p85 = position;
+	if (_p85.ctor === 'BeforeKey') {
+		return _Gizra$elm_dictlist$DictList$insertBefore(_p85._0);
+	} else {
+		return _Gizra$elm_dictlist$DictList$insertAfter(_p85._0);
+	}
+};
 var _Gizra$elm_dictlist$DictList$empty = A2(
 	_Gizra$elm_dictlist$DictList$DictList,
 	_elm_lang$core$Dict$empty,
 	{ctor: '[]'});
 var _Gizra$elm_dictlist$DictList$indexedMap = function (func) {
 	var go = F3(
-		function (key, value, _p84) {
-			var _p85 = _p84;
-			var _p86 = _p85._0;
+		function (key, value, _p86) {
+			var _p87 = _p86;
+			var _p88 = _p87._0;
 			return {
 				ctor: '_Tuple2',
-				_0: _p86 + 1,
+				_0: _p88 + 1,
 				_1: A2(
 					_Gizra$elm_dictlist$DictList$DictList,
 					A3(
 						_elm_lang$core$Dict$insert,
 						key,
-						A3(func, _p86, key, value),
-						_p85._1._0),
-					{ctor: '::', _0: key, _1: _p85._1._1})
+						A3(func, _p88, key, value),
+						_p87._1._0),
+					{ctor: '::', _0: key, _1: _p87._1._1})
 			};
 		});
-	return function (_p87) {
+	return function (_p89) {
 		return _Gizra$elm_dictlist$DictList$reverse(
-			_Gizra$elm_dictlist$DictList_Compat$second(
+			_elm_lang$core$Tuple$second(
 				A3(
 					_Gizra$elm_dictlist$DictList$foldl,
 					go,
 					{ctor: '_Tuple2', _0: 0, _1: _Gizra$elm_dictlist$DictList$empty},
-					_p87)));
+					_p89)));
 	};
 };
 var _Gizra$elm_dictlist$DictList$filterMap = function (func) {
@@ -7643,26 +7641,26 @@ var _Gizra$elm_dictlist$DictList$concat = function (lists) {
 	return A3(_elm_lang$core$List$foldr, _Gizra$elm_dictlist$DictList$append, _Gizra$elm_dictlist$DictList$empty, lists);
 };
 var _Gizra$elm_dictlist$DictList$insert = F3(
-	function (key, value, _p88) {
-		var _p89 = _p88;
-		var _p91 = _p89._1;
-		var _p90 = _p89._0;
-		var newList = A2(_elm_lang$core$Dict$member, key, _p90) ? _p91 : A2(
+	function (key, value, _p90) {
+		var _p91 = _p90;
+		var _p93 = _p91._1;
+		var _p92 = _p91._0;
+		var newList = A2(_elm_lang$core$Dict$member, key, _p92) ? _p93 : A2(
 			_elm_lang$core$Basics_ops['++'],
-			_p91,
+			_p93,
 			{
 				ctor: '::',
 				_0: key,
 				_1: {ctor: '[]'}
 			});
-		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p90);
+		var newDict = A3(_elm_lang$core$Dict$insert, key, value, _p92);
 		return A2(_Gizra$elm_dictlist$DictList$DictList, newDict, newList);
 	});
 var _Gizra$elm_dictlist$DictList$decodeWithKeys = F2(
 	function (keys, func) {
 		var go = F3(
 			function (jsonValue, key, accum) {
-				var _p92 = {
+				var _p94 = {
 					ctor: '_Tuple2',
 					_0: accum,
 					_1: A2(
@@ -7670,40 +7668,45 @@ var _Gizra$elm_dictlist$DictList$decodeWithKeys = F2(
 						func(key),
 						jsonValue)
 				};
-				if (_p92._0.ctor === 'Ok') {
-					if (_p92._1.ctor === 'Ok') {
+				if (_p94._0.ctor === 'Ok') {
+					if (_p94._1.ctor === 'Ok') {
 						return _elm_lang$core$Result$Ok(
-							A3(_Gizra$elm_dictlist$DictList$insert, key, _p92._1._0, _p92._0._0));
+							A3(_Gizra$elm_dictlist$DictList$insert, key, _p94._1._0, _p94._0._0));
 					} else {
-						return _elm_lang$core$Result$Err(_p92._1._0);
+						return _elm_lang$core$Result$Err(_p94._1._0);
 					}
 				} else {
-					if (_p92._1.ctor === 'Ok') {
+					if (_p94._1.ctor === 'Ok') {
 						return accum;
 					} else {
 						return _elm_lang$core$Result$Err(
 							A2(
 								_elm_lang$core$Basics_ops['++'],
-								_p92._0._0,
-								A2(_elm_lang$core$Basics_ops['++'], '\n', _p92._1._0)));
+								_p94._0._0,
+								A2(_elm_lang$core$Basics_ops['++'], '\n', _p94._1._0)));
 					}
 				}
 			});
 		return A2(
-			_Gizra$elm_dictlist$DictList_Compat$customDecoder,
-			_elm_lang$core$Json_Decode$value,
+			_elm_lang$core$Json_Decode$andThen,
 			function (jsonValue) {
-				return A3(
+				var _p95 = A3(
 					_elm_lang$core$List$foldl,
 					go(jsonValue),
 					_elm_lang$core$Result$Ok(_Gizra$elm_dictlist$DictList$empty),
 					keys);
-			});
+				if (_p95.ctor === 'Ok') {
+					return _elm_lang$core$Json_Decode$succeed(_p95._0);
+				} else {
+					return _elm_lang$core$Json_Decode$fail(_p95._0);
+				}
+			},
+			_elm_lang$core$Json_Decode$value);
 	});
 var _Gizra$elm_dictlist$DictList$decodeKeysAndValues = F2(
 	function (keyDecoder, func) {
 		return A2(
-			_Gizra$elm_dictlist$DictList_Compat$decodeAndThen,
+			_elm_lang$core$Json_Decode$andThen,
 			function (keys) {
 				return A2(_Gizra$elm_dictlist$DictList$decodeWithKeys, keys, func);
 			},
@@ -7722,26 +7725,36 @@ var _Gizra$elm_dictlist$DictList$intersect = F2(
 		return A2(
 			_Gizra$elm_dictlist$DictList$filter,
 			F2(
-				function (k, _p93) {
+				function (k, _p96) {
 					return A2(_Gizra$elm_dictlist$DictList$member, k, t2);
 				}),
 			t1);
 	});
+var _Gizra$elm_dictlist$DictList$removeWhen = F2(
+	function (pred, dict) {
+		return A2(
+			_Gizra$elm_dictlist$DictList$filter,
+			F2(
+				function (k, v) {
+					return !A2(pred, k, v);
+				}),
+			dict);
+	});
 var _Gizra$elm_dictlist$DictList$partition = F2(
 	function (predicate, dict) {
 		var add = F3(
-			function (key, value, _p94) {
-				var _p95 = _p94;
-				var _p97 = _p95._1;
-				var _p96 = _p95._0;
+			function (key, value, _p97) {
+				var _p98 = _p97;
+				var _p100 = _p98._1;
+				var _p99 = _p98._0;
 				return A2(predicate, key, value) ? {
 					ctor: '_Tuple2',
-					_0: A3(_Gizra$elm_dictlist$DictList$insert, key, value, _p96),
-					_1: _p97
+					_0: A3(_Gizra$elm_dictlist$DictList$insert, key, value, _p99),
+					_1: _p100
 				} : {
 					ctor: '_Tuple2',
-					_0: _p96,
-					_1: A3(_Gizra$elm_dictlist$DictList$insert, key, value, _p97)
+					_0: _p99,
+					_1: A3(_Gizra$elm_dictlist$DictList$insert, key, value, _p100)
 				};
 			});
 		return A3(
@@ -7754,9 +7767,9 @@ var _Gizra$elm_dictlist$DictList$fromList = function (assocs) {
 	return A3(
 		_elm_lang$core$List$foldl,
 		F2(
-			function (_p98, dict) {
-				var _p99 = _p98;
-				return A3(_Gizra$elm_dictlist$DictList$insert, _p99._0, _p99._1, dict);
+			function (_p101, dict) {
+				var _p102 = _p101;
+				return A3(_Gizra$elm_dictlist$DictList$insert, _p102._0, _p102._1, dict);
 			}),
 		_Gizra$elm_dictlist$DictList$empty,
 		assocs);
@@ -7771,7 +7784,7 @@ var _Gizra$elm_dictlist$DictList$decodeArray = F2(
 	function (keyMapper, valueDecoder) {
 		return A2(
 			_elm_lang$core$Json_Decode$map,
-			function (_p100) {
+			function (_p103) {
 				return _Gizra$elm_dictlist$DictList$fromList(
 					A2(
 						_elm_lang$core$List$map,
@@ -7782,28 +7795,120 @@ var _Gizra$elm_dictlist$DictList$decodeArray = F2(
 								_1: value
 							};
 						},
-						_p100));
+						_p103));
 			},
 			_elm_lang$core$Json_Decode$list(valueDecoder));
 	});
+var _Gizra$elm_dictlist$DictList$decodeArray2 = F2(
+	function (keyDecoder, valueDecoder) {
+		return A2(
+			_elm_lang$core$Json_Decode$map,
+			_Gizra$elm_dictlist$DictList$fromList,
+			_elm_lang$core$Json_Decode$list(
+				A3(
+					_elm_lang$core$Json_Decode$map2,
+					F2(
+						function (v0, v1) {
+							return {ctor: '_Tuple2', _0: v0, _1: v1};
+						}),
+					keyDecoder,
+					valueDecoder)));
+	});
+var _Gizra$elm_dictlist$DictList$fromListBy = F2(
+	function (keyfn, xs) {
+		return A3(
+			_elm_lang$core$List$foldl,
+			F2(
+				function (x, acc) {
+					return A3(
+						_Gizra$elm_dictlist$DictList$insert,
+						keyfn(x),
+						x,
+						acc);
+				}),
+			_Gizra$elm_dictlist$DictList$empty,
+			xs);
+	});
+var _Gizra$elm_dictlist$DictList$keepOnly = F2(
+	function (set, dict) {
+		return A3(
+			_elm_lang$core$Set$foldl,
+			F2(
+				function (k, acc) {
+					return A2(
+						_elm_lang$core$Maybe$withDefault,
+						acc,
+						A2(
+							_elm_lang$core$Maybe$map,
+							function (v) {
+								return A3(_Gizra$elm_dictlist$DictList$insert, k, v, acc);
+							},
+							A2(_Gizra$elm_dictlist$DictList$get, k, dict)));
+				}),
+			_Gizra$elm_dictlist$DictList$empty,
+			set);
+	});
+var _Gizra$elm_dictlist$DictList$mapKeys = F2(
+	function (keyMapper, dict) {
+		var addKey = F3(
+			function (key, value, d) {
+				return A3(
+					_Gizra$elm_dictlist$DictList$insert,
+					keyMapper(key),
+					value,
+					d);
+			});
+		return A3(_Gizra$elm_dictlist$DictList$foldl, addKey, _Gizra$elm_dictlist$DictList$empty, dict);
+	});
 var _Gizra$elm_dictlist$DictList$remove = F2(
 	function (key, dictList) {
-		var _p101 = dictList;
-		var _p102 = _p101._0;
-		return A2(_elm_lang$core$Dict$member, key, _p102) ? A2(
+		var _p104 = dictList;
+		var _p105 = _p104._0;
+		return A2(_elm_lang$core$Dict$member, key, _p105) ? A2(
 			_Gizra$elm_dictlist$DictList$DictList,
-			A2(_elm_lang$core$Dict$remove, key, _p102),
-			A2(_elm_community$list_extra$List_Extra$remove, key, _p101._1)) : dictList;
+			A2(_elm_lang$core$Dict$remove, key, _p105),
+			A2(_elm_community$list_extra$List_Extra$remove, key, _p104._1)) : dictList;
 	});
 var _Gizra$elm_dictlist$DictList$update = F3(
 	function (key, alter, dictList) {
-		var _p103 = alter(
+		var _p106 = alter(
 			A2(_Gizra$elm_dictlist$DictList$get, key, dictList));
-		if (_p103.ctor === 'Nothing') {
+		if (_p106.ctor === 'Nothing') {
 			return A2(_Gizra$elm_dictlist$DictList$remove, key, dictList);
 		} else {
-			return A3(_Gizra$elm_dictlist$DictList$insert, key, _p103._0, dictList);
+			return A3(_Gizra$elm_dictlist$DictList$insert, key, _p106._0, dictList);
 		}
+	});
+var _Gizra$elm_dictlist$DictList$groupBy = F2(
+	function (keyfn, list) {
+		return A3(
+			_elm_lang$core$List$foldr,
+			F2(
+				function (x, acc) {
+					return A3(
+						_Gizra$elm_dictlist$DictList$update,
+						keyfn(x),
+						function (_p107) {
+							return _elm_lang$core$Maybe$Just(
+								A2(
+									_elm_lang$core$Maybe$withDefault,
+									{
+										ctor: '::',
+										_0: x,
+										_1: {ctor: '[]'}
+									},
+									A2(
+										_elm_lang$core$Maybe$map,
+										F2(
+											function (x, y) {
+												return {ctor: '::', _0: x, _1: y};
+											})(x),
+										_p107)));
+						},
+						acc);
+				}),
+			_Gizra$elm_dictlist$DictList$empty,
+			list);
 	});
 var _Gizra$elm_dictlist$DictList$diff = F2(
 	function (t1, t2) {
@@ -7815,6 +7920,17 @@ var _Gizra$elm_dictlist$DictList$diff = F2(
 				}),
 			t1,
 			t2);
+	});
+var _Gizra$elm_dictlist$DictList$removeMany = F2(
+	function (set, dict) {
+		return A3(
+			_elm_lang$core$Set$foldl,
+			F2(
+				function (k, acc) {
+					return A2(_Gizra$elm_dictlist$DictList$remove, k, acc);
+				}),
+			dict,
+			set);
 	});
 var _Gizra$elm_dictlist$DictList$singleton = F2(
 	function (key, value) {
@@ -7828,12 +7944,12 @@ var _Gizra$elm_dictlist$DictList$singleton = F2(
 			});
 	});
 var _Gizra$elm_dictlist$DictList$map = F2(
-	function (func, _p104) {
-		var _p105 = _p104;
+	function (func, _p108) {
+		var _p109 = _p108;
 		return A2(
 			_Gizra$elm_dictlist$DictList$DictList,
-			A2(_elm_lang$core$Dict$map, func, _p105._0),
-			_p105._1);
+			A2(_elm_lang$core$Dict$map, func, _p109._0),
+			_p109._1);
 	});
 var _Gizra$elm_dictlist$DictList$fromDict = function (dict) {
 	return A2(
@@ -7841,6 +7957,28 @@ var _Gizra$elm_dictlist$DictList$fromDict = function (dict) {
 		dict,
 		_elm_lang$core$Dict$keys(dict));
 };
+var _Gizra$elm_dictlist$DictList$AfterKey = function (a) {
+	return {ctor: 'AfterKey', _0: a};
+};
+var _Gizra$elm_dictlist$DictList$BeforeKey = function (a) {
+	return {ctor: 'BeforeKey', _0: a};
+};
+var _Gizra$elm_dictlist$DictList$relativePosition = F2(
+	function (key, dictlist) {
+		var _p110 = A2(_Gizra$elm_dictlist$DictList$previous, key, dictlist);
+		if (_p110.ctor === 'Just') {
+			return _elm_lang$core$Maybe$Just(
+				_Gizra$elm_dictlist$DictList$AfterKey(_p110._0._0));
+		} else {
+			var _p111 = A2(_Gizra$elm_dictlist$DictList$next, key, dictlist);
+			if (_p111.ctor === 'Just') {
+				return _elm_lang$core$Maybe$Just(
+					_Gizra$elm_dictlist$DictList$BeforeKey(_p111._0._0));
+			} else {
+				return _elm_lang$core$Maybe$Nothing;
+			}
+		}
+	});
 
 var _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote = {ctor: 'WorkingRemote'};
 var _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr = function (a) {
@@ -7897,6 +8035,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$Male = {ctor: 'Male'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Female = {ctor: 'Female'};
 var _Gizra$elm_spa_exmple$Attribute_Model$PlayingInstrument = {ctor: 'PlayingInstrument'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Sing = {ctor: 'Sing'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Russia = {ctor: 'Russia'};
 var _Gizra$elm_spa_exmple$Attribute_Model$USA = {ctor: 'USA'};
 var _Gizra$elm_spa_exmple$Attribute_Model$UK = {ctor: 'UK'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Spain = {ctor: 'Spain'};
@@ -8901,9 +9040,22 @@ var _eeue56$elm_all_dict$EveryDict$diff = F2(
 			t2);
 	});
 
-var _Gizra$elm_spa_exmple$People_Model$Person = F5(
+var _Gizra$elm_spa_exmple$LocationsMap_Model$Marker = F2(
+	function (a, b) {
+		return {lat: a, lng: b};
+	});
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MarkerInfo = F5(
 	function (a, b, c, d, e) {
-		return {name: a, image: b, socialNetworks: c, title: d, attributes: e};
+		return {id: a, name: b, title: c, image: d, coordinates: e};
+	});
+var _Gizra$elm_spa_exmple$LocationsMap_Model$MapManager = F2(
+	function (a, b) {
+		return {showMap: a, mapMarkers: b};
+	});
+
+var _Gizra$elm_spa_exmple$People_Model$Person = F6(
+	function (a, b, c, d, e, f) {
+		return {name: a, image: b, socialNetworks: c, title: d, attributes: e, coordinates: f};
 	});
 var _Gizra$elm_spa_exmple$People_Model$Twitter = function (a) {
 	return {ctor: 'Twitter', _0: a};
@@ -9009,7 +9161,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 							}
 						}
 					}
-				}
+				},
+				coordinates: {lat: 32.794, lng: 34.9896}
 			}
 		},
 		_1: {
@@ -9098,7 +9251,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 								}
 							}
 						}
-					}
+					},
+					coordinates: {lat: 32.0691471, lng: 34.7706788}
 				}
 			},
 			_1: {
@@ -9175,7 +9329,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 									}
 								}
 							}
-						}
+						},
+						coordinates: {lat: 32.061143, lng: 34.777318}
 					}
 				},
 				_1: {
@@ -9248,7 +9403,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 										}
 									}
 								}
-							}
+							},
+							coordinates: {lat: 41.8781, lng: -87.6298}
 						}
 					},
 					_1: {
@@ -9353,7 +9509,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 											}
 										}
 									}
-								}
+								},
+								coordinates: {lat: 32.175344, lng: 34.908442}
 							}
 						},
 						_1: {
@@ -9426,7 +9583,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 												}
 											}
 										}
-									}
+									},
+									coordinates: {lat: 32.9506, lng: 35.3123}
 								}
 							},
 							_1: {
@@ -9507,14 +9665,15 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 													}
 												}
 											}
-										}
+										},
+										coordinates: {lat: 32.0684, lng: 34.8248}
 									}
 								},
 								_1: {
 									ctor: '::',
 									_0: {
 										ctor: '_Tuple2',
-										_0: 'NaderSafadi',
+										_0: 'nedSaf',
 										_1: {
 											name: 'Nader Safadi',
 											image: 'nader77.jpg',
@@ -9523,10 +9682,10 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 												_0: _Gizra$elm_spa_exmple$People_Model$Email('nader@gizra.com'),
 												_1: {
 													ctor: '::',
-													_0: _Gizra$elm_spa_exmple$People_Model$Github('nader77'),
+													_0: _Gizra$elm_spa_exmple$People_Model$Github('nedSaf'),
 													_1: {
 														ctor: '::',
-														_0: _Gizra$elm_spa_exmple$People_Model$Drupal('nader77'),
+														_0: _Gizra$elm_spa_exmple$People_Model$Drupal('nedSaf'),
 														_1: {ctor: '[]'}
 													}
 												}
@@ -9592,7 +9751,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 														}
 													}
 												}
-											}
+											},
+											coordinates: {lat: 33.2691, lng: 35.7721}
 										}
 									},
 									_1: {
@@ -9673,7 +9833,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													}
-												}
+												},
+												coordinates: {lat: 52.52, lng: 13.405}
 											}
 										},
 										_1: {
@@ -9758,7 +9919,8 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																}
 															}
 														}
-													}
+													},
+													coordinates: {lat: 32.094286, lng: 34.783612}
 												}
 											},
 											_1: {
@@ -9823,23 +9985,24 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																	}
 																}
 															}
-														}
+														},
+														coordinates: {lat: 31.7683, lng: 35.2137}
 													}
 												},
 												_1: {
 													ctor: '::',
 													_0: {
 														ctor: '_Tuple2',
-														_0: 'Pavel',
+														_0: 'anvmn',
 														_1: {
-															name: 'Pavel Pirozhenko',
-															image: 'Pavel.jpg',
+															name: 'Anatoly Vaitsman',
+															image: 'anvmn.jpg',
 															socialNetworks: {
 																ctor: '::',
-																_0: _Gizra$elm_spa_exmple$People_Model$Email('pavel@gizra.com'),
+																_0: _Gizra$elm_spa_exmple$People_Model$Email('anatoly@gizra.com'),
 																_1: {
 																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$People_Model$Github('ppavels'),
+																	_0: _Gizra$elm_spa_exmple$People_Model$Github('anvmn'),
 																	_1: {ctor: '[]'}
 																}
 															},
@@ -9849,214 +10012,46 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
 																_1: {
 																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																	_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
 																	_1: {
 																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																		_1: {
 																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																			_1: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Ukrainian),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Soccer),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Volleyball),
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
-																														_1: {
-																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																															_1: {
-																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																																	_1: {ctor: '[]'}
-																																}
-																															}
-																														}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													},
-													_1: {
-														ctor: '::',
-														_0: {
-															ctor: '_Tuple2',
-															_0: 'anvmn',
-															_1: {
-																name: 'Anatoly Vaitsman',
-																image: 'anvmn.jpg',
-																socialNetworks: {
-																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$People_Model$Email('anatoly@gizra.com'),
-																	_1: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$People_Model$Github('anvmn'),
-																		_1: {ctor: '[]'}
-																	}
-																},
-																title: 'Developer',
-																attributes: {
-																	ctor: '::',
-																	_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																	_1: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Horror),
-																														_1: {
-																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																															_1: {ctor: '[]'}
-																														}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														},
-														_1: {
-															ctor: '::',
-															_0: {
-																ctor: '_Tuple2',
-																_0: 'SavyonCohen',
-																_1: {
-																	name: 'Savyon Cohen',
-																	image: 'savyoncohen.jpg',
-																	socialNetworks: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$People_Model$Email('savyon@gizra.com'),
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$People_Model$Github('savyoncohen'),
-																			_1: {ctor: '[]'}
-																		}
-																	},
-																	title: 'Developer',
-																	attributes: {
-																		ctor: '::',
-																		_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																		_1: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kosher),
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Female),
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
 																														_1: {ctor: '[]'}
 																													}
 																												}
@@ -10073,54 +10068,63 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																	}
 																}
 															},
+															coordinates: {lat: 32.08, lng: 34.77}
+														}
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'SavyonCohen',
 															_1: {
-																ctor: '::',
-																_0: {
-																	ctor: '_Tuple2',
-																	_0: 'ybaras',
+																name: 'Savyon Cohen',
+																image: 'savyoncohen.jpg',
+																socialNetworks: {
+																	ctor: '::',
+																	_0: _Gizra$elm_spa_exmple$People_Model$Email('savyon@gizra.com'),
 																	_1: {
-																		name: 'Yoav Baras',
-																		image: 'ybaras.jpg',
-																		socialNetworks: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$People_Model$Github('savyoncohen'),
+																		_1: {ctor: '[]'}
+																	}
+																},
+																title: 'Developer',
+																attributes: {
+																	ctor: '::',
+																	_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																	_1: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																		_1: {
 																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$People_Model$Email('yoav@gizra.com'),
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
 																			_1: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$People_Model$Github('ybaras'),
-																				_1: {ctor: '[]'}
-																			}
-																		},
-																		title: 'Developer',
-																		attributes: {
-																			ctor: '::',
-																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																			_1: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kosher),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Female),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Action),
 																												_1: {
 																													ctor: '::',
 																													_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
@@ -10138,80 +10142,61 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																		}
 																	}
 																},
+																coordinates: {lat: 32.0722, lng: 34.8089}
+															}
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'ybaras',
 																_1: {
-																	ctor: '::',
-																	_0: {
-																		ctor: '_Tuple2',
-																		_0: 'DavidBronfen',
+																	name: 'Yoav Baras',
+																	image: 'ybaras.jpg',
+																	socialNetworks: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$People_Model$Email('yoav@gizra.com'),
 																		_1: {
-																			name: 'David Bronfen',
-																			image: 'DavidBronfen.jpg',
-																			socialNetworks: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$People_Model$Github('ybaras'),
+																			_1: {ctor: '[]'}
+																		}
+																	},
+																	title: 'Developer',
+																	attributes: {
+																		ctor: '::',
+																		_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																		_1: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																			_1: {
 																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$People_Model$Email('davidb@gizra.com'),
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
 																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidBronfen'),
-																					_1: {ctor: '[]'}
-																				}
-																			},
-																			title: 'Developer',
-																			attributes: {
-																				ctor: '::',
-																				_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																				_1: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegetarian),
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Italian),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Russian),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
-																														_1: {
-																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
-																															_1: {
-																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																																	_1: {
-																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																																		_1: {
-																																			ctor: '::',
-																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
-																																			_1: {ctor: '[]'}
-																																		}
-																																	}
-																																}
-																															}
-																														}
-																													}
-																												}
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																												_1: {ctor: '[]'}
 																											}
 																										}
 																									}
@@ -10223,63 +10208,76 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																			}
 																		}
 																	},
+																	coordinates: {lat: 32.083708, lng: 34.888097}
+																}
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'DavidHernandez',
 																	_1: {
-																		ctor: '::',
-																		_0: {
-																			ctor: '_Tuple2',
-																			_0: 'ItamarGronich',
+																		name: 'David Hernandez',
+																		image: 'DavidHernandez.jpg',
+																		socialNetworks: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$People_Model$Email('david.hernandez@gizra.com'),
 																			_1: {
-																				name: 'Itamar Gronich',
-																				image: 'ItamarGronich.jpg',
-																				socialNetworks: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																				_1: {
 																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$People_Model$Email('itamargronich@gizra.com'),
+																					_0: _Gizra$elm_spa_exmple$People_Model$Drupal('david-hernández'),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		},
+																		title: 'Developer',
+																		attributes: {
+																			ctor: '::',
+																			_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegan),
+																			_1: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																				_1: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Catalonian),
 																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$People_Model$Github('ItamarGronich'),
-																						_1: {ctor: '[]'}
-																					}
-																				},
-																				title: 'Developer',
-																				attributes: {
-																					ctor: '::',
-																					_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																					_1: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hebrew),
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spanish),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$PlayingInstrument),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spain),
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Israel),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$CrossFit),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																															_1: {
 																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
 																																_1: {
 																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Drama),
+																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
 																																	_1: {ctor: '[]'}
 																																}
 																															}
@@ -10296,78 +10294,67 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				}
 																			}
 																		},
+																		coordinates: {lat: 39.4699, lng: 0.3763}
+																	}
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'RyanRempel',
 																		_1: {
-																			ctor: '::',
-																			_0: {
-																				ctor: '_Tuple2',
-																				_0: 'DavidHernandez',
+																			name: 'Ryan Rempel',
+																			image: 'RyanRempel.jpg',
+																			socialNetworks: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$People_Model$Email('ryan@gizra.com'),
 																				_1: {
-																					name: 'David Hernandez',
-																					image: 'DavidHernandez.jpg',
-																					socialNetworks: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$People_Model$Github('rgrempel'),
+																					_1: {ctor: '[]'}
+																				}
+																			},
+																			title: 'Developer',
+																			attributes: {
+																				ctor: '::',
+																				_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																				_1: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																					_1: {
 																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$People_Model$Email('david.hernandez@gizra.com'),
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
 																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$People_Model$Github('DavidHernandez'),
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$People_Model$Drupal('david-hernández'),
-																								_1: {ctor: '[]'}
-																							}
-																						}
-																					},
-																					title: 'Developer',
-																					attributes: {
-																						ctor: '::',
-																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FoodAttr(_Gizra$elm_spa_exmple$Attribute_Model$Vegan),
-																						_1: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Catalonian),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Canada),
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spanish),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spain),
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
 																															_1: {
 																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
-																																	_1: {
-																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																																		_1: {
-																																			ctor: '::',
-																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																																			_1: {
-																																				ctor: '::',
-																																				_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
-																																				_1: {ctor: '[]'}
-																																			}
-																																		}
-																																	}
-																																}
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																																_1: {ctor: '[]'}
 																															}
 																														}
 																													}
@@ -10381,67 +10368,68 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			},
+																			coordinates: {lat: 49.8951, lng: -97.1384}
+																		}
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'AronNovak',
 																			_1: {
-																				ctor: '::',
-																				_0: {
-																					ctor: '_Tuple2',
-																					_0: 'RyanRempel',
+																				name: 'Aron Novak',
+																				image: 'AronNovak.jpg',
+																				socialNetworks: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$People_Model$Email('aron@gizra.com'),
 																					_1: {
-																						name: 'Ryan Rempel',
-																						image: 'RyanRempel.jpg',
-																						socialNetworks: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$People_Model$Github('AronNovak'),
+																						_1: {
 																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$People_Model$Email('ryan@gizra.com'),
+																							_0: _Gizra$elm_spa_exmple$People_Model$Drupal('aron-novak'),
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				},
+																				title: 'Developer',
+																				attributes: {
+																					ctor: '::',
+																					_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
+																					_1: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
 																							_1: {
 																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$People_Model$Github('rgrempel'),
-																								_1: {ctor: '[]'}
-																							}
-																						},
-																						title: 'Developer',
-																						attributes: {
-																							ctor: '::',
-																							_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																							_1: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
 																								_1: {
 																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungarian),
 																									_1: {
 																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$LivedAbroad,
 																										_1: {
 																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicAttr(_Gizra$elm_spa_exmple$Attribute_Model$Sing),
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Canada),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungary),
 																												_1: {
 																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$Pet,
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
 																													_1: {
 																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
+																														_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
 																														_1: {
 																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NightOwl),
+																															_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
 																															_1: {
 																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$Comedy),
-																																	_1: {
-																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																																		_1: {
-																																			ctor: '::',
-																																			_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
-																																			_1: {ctor: '[]'}
-																																		}
-																																	}
-																																}
+																																_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																																_1: {ctor: '[]'}
 																															}
 																														}
 																													}
@@ -10454,79 +10442,10 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																						}
 																					}
 																				},
-																				_1: {
-																					ctor: '::',
-																					_0: {
-																						ctor: '_Tuple2',
-																						_0: 'AronNovak',
-																						_1: {
-																							name: 'Aron Novak',
-																							image: 'AronNovak.jpg',
-																							socialNetworks: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$People_Model$Email('aron@gizra.com'),
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$People_Model$Github('AronNovak'),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$People_Model$Drupal('aron-novak'),
-																										_1: {ctor: '[]'}
-																									}
-																								}
-																							},
-																							title: 'Developer',
-																							attributes: {
-																								ctor: '::',
-																								_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
-																								_1: {
-																									ctor: '::',
-																									_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
-																									_1: {
-																										ctor: '::',
-																										_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Kids),
-																										_1: {
-																											ctor: '::',
-																											_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
-																											_1: {
-																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungarian),
-																												_1: {
-																													ctor: '::',
-																													_0: _Gizra$elm_spa_exmple$Attribute_Model$MusicWhileWorking,
-																													_1: {
-																														ctor: '::',
-																														_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Hungary),
-																														_1: {
-																															ctor: '::',
-																															_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$NineToFive),
-																															_1: {
-																																ctor: '::',
-																																_0: _Gizra$elm_spa_exmple$Attribute_Model$Tattoo,
-																																_1: {
-																																	ctor: '::',
-																																	_0: _Gizra$elm_spa_exmple$Attribute_Model$TvAndMovieGenereAttr(_Gizra$elm_spa_exmple$Attribute_Model$SciFi),
-																																	_1: {
-																																		ctor: '::',
-																																		_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
-																																		_1: {ctor: '[]'}
-																																	}
-																																}
-																															}
-																														}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					},
-																					_1: {ctor: '[]'}
-																				}
+																				coordinates: {lat: 47.4979, lng: 19.0402}
 																			}
-																		}
+																		},
+																		_1: {ctor: '[]'}
 																	}
 																}
 															}
@@ -11355,14 +11274,17 @@ var _Gizra$elm_spa_exmple$Magnets_Model$DragStart = F3(
 		return {ctor: 'DragStart', _0: a, _1: b, _2: c};
 	});
 
-var _Gizra$elm_spa_exmple$App_Model$emptyModel = {magnets: _eeue56$elm_all_dict$EveryDict$empty, people: _Gizra$elm_spa_exmple$GizraTeam$people};
+var _Gizra$elm_spa_exmple$App_Model$emptyModel = {magnets: _eeue56$elm_all_dict$EveryDict$empty, people: _Gizra$elm_spa_exmple$GizraTeam$people, showMap: false};
 var _Gizra$elm_spa_exmple$App_Model$Flags = function (a) {
 	return {randomNumbers: a};
 };
-var _Gizra$elm_spa_exmple$App_Model$Model = F2(
-	function (a, b) {
-		return {magnets: a, people: b};
+var _Gizra$elm_spa_exmple$App_Model$Model = F3(
+	function (a, b, c) {
+		return {magnets: a, people: b, showMap: c};
 	});
+var _Gizra$elm_spa_exmple$App_Model$ToggleMap = function (a) {
+	return {ctor: 'ToggleMap', _0: a};
+};
 var _Gizra$elm_spa_exmple$App_Model$ToggleAttribute = function (a) {
 	return {ctor: 'ToggleAttribute', _0: a};
 };
@@ -11531,6 +11453,21 @@ var _Gizra$elm_spa_exmple$Magnets_Update$update = F2(
 		}
 	});
 
+var _Gizra$elm_spa_exmple$People_Utils$getMapPropertiesFromPeople = function (people) {
+	return A3(
+		_Gizra$elm_dictlist$DictList$foldl,
+		F3(
+			function (gitHubName, person, accum) {
+				var mapProperties = {
+					ctor: '::',
+					_0: {id: gitHubName, name: person.name, title: person.title, image: person.image, coordinates: person.coordinates},
+					_1: {ctor: '[]'}
+				};
+				return A2(_elm_lang$core$List$append, mapProperties, accum);
+			}),
+		{ctor: '[]'},
+		people);
+};
 var _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople = function (people) {
 	return A3(
 		_Gizra$elm_dictlist$DictList$foldl,
@@ -11555,58 +11492,6 @@ var _Gizra$elm_spa_exmple$App_Update$subscriptions = function (model) {
 		_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
 		_Gizra$elm_spa_exmple$Magnets_Update$subscriptions(model.magnets));
 };
-var _Gizra$elm_spa_exmple$App_Update$update = F2(
-	function (msg, model) {
-		var _p0 = msg;
-		if (_p0.ctor === 'MsgMagnets') {
-			var _p1 = A2(_Gizra$elm_spa_exmple$Magnets_Update$update, _p0._0, model.magnets);
-			var subModel = _p1._0;
-			var subCmds = _p1._1;
-			var maybeAttribute = _p1._2;
-			var modelUpdated = _elm_lang$core$Native_Utils.update(
-				model,
-				{magnets: subModel});
-			var modelUpdatedWithAttributeToggle = A2(
-				_elm_lang$core$Maybe$withDefault,
-				modelUpdated,
-				A2(
-					_elm_lang$core$Maybe$map,
-					function (attribute) {
-						return _elm_lang$core$Tuple$first(
-							A2(
-								_Gizra$elm_spa_exmple$App_Update$update,
-								_Gizra$elm_spa_exmple$App_Model$ToggleAttribute(attribute),
-								modelUpdated));
-					},
-					maybeAttribute));
-			return {
-				ctor: '_Tuple2',
-				_0: modelUpdatedWithAttributeToggle,
-				_1: A2(_elm_lang$core$Platform_Cmd$map, _Gizra$elm_spa_exmple$App_Model$MsgMagnets, subCmds)
-			};
-		} else {
-			var _p2 = _p0._0;
-			var modelUpdated = A2(
-				_elm_lang$core$Maybe$withDefault,
-				model,
-				A2(
-					_elm_lang$core$Maybe$map,
-					function (magnet) {
-						var magnetUpdated = _elm_lang$core$Native_Utils.update(
-							magnet,
-							{selected: !magnet.selected});
-						var magnetsUpdated = A3(_eeue56$elm_all_dict$EveryDict$insert, _p2, magnetUpdated, model.magnets);
-						return _elm_lang$core$Native_Utils.update(
-							model,
-							{magnets: magnetsUpdated});
-					},
-					A2(_eeue56$elm_all_dict$EveryDict$get, _p2, model.magnets)));
-			return A2(
-				_elm_lang$core$Platform_Cmd_ops['!'],
-				modelUpdated,
-				{ctor: '[]'});
-		}
-	});
 var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(_Gizra$elm_spa_exmple$App_Model$emptyModel.people);
 	var getRandomNumber = function (index) {
@@ -11618,18 +11503,18 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 				_elm_lang$core$Basics$identity,
 				A2(_elm_community$list_extra$List_Extra$getAt, index, flags.randomNumbers)));
 	};
-	var _p3 = A3(
+	var _p0 = A3(
 		_elm_lang$core$List$foldl,
 		F2(
-			function (attribute, _p4) {
-				var _p5 = _p4;
-				var _p6 = _p5._1;
-				var randomNumber3 = getRandomNumber((_p6 * 3) + 2);
+			function (attribute, _p1) {
+				var _p2 = _p1;
+				var _p3 = _p2._1;
+				var randomNumber3 = getRandomNumber((_p3 * 3) + 2);
 				var rotation = (_elm_lang$core$Basics$toFloat(randomNumber3) / 50) - 10;
-				var randomNumber2 = getRandomNumber((_p6 * 3) + 1);
+				var randomNumber2 = getRandomNumber((_p3 * 3) + 1);
 				var y = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber2) / 6);
-				var randomNumber1 = getRandomNumber(_p6 * 3);
+				var randomNumber1 = getRandomNumber(_p3 * 3);
 				var x = _elm_lang$core$Basics$floor(
 					_elm_lang$core$Basics$toFloat(randomNumber1) * 1.19);
 				var magent = {
@@ -11640,13 +11525,13 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 				};
 				return {
 					ctor: '_Tuple2',
-					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p5._0),
-					_1: _p6 + 1
+					_0: A3(_eeue56$elm_all_dict$EveryDict$insert, attribute, magent, _p2._0),
+					_1: _p3 + 1
 				};
 			}),
 		{ctor: '_Tuple2', _0: _eeue56$elm_all_dict$EveryDict$empty, _1: 0},
 		allAttributes);
-	var magnets = _p3._0;
+	var magnets = _p0._0;
 	return {
 		ctor: '_Tuple2',
 		_0: _elm_lang$core$Native_Utils.update(
@@ -11655,6 +11540,85 @@ var _Gizra$elm_spa_exmple$App_Update$init = function (flags) {
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
 };
+var _Gizra$elm_spa_exmple$App_Update$mapManager = _elm_lang$core$Native_Platform.outgoingPort(
+	'mapManager',
+	function (v) {
+		return {
+			showMap: v.showMap,
+			mapMarkers: _elm_lang$core$Native_List.toArray(v.mapMarkers).map(
+				function (v) {
+					return {
+						id: v.id,
+						name: v.name,
+						title: v.title,
+						image: v.image,
+						coordinates: {lat: v.coordinates.lat, lng: v.coordinates.lng}
+					};
+				})
+		};
+	});
+var _Gizra$elm_spa_exmple$App_Update$update = F2(
+	function (msg, model) {
+		var _p4 = msg;
+		switch (_p4.ctor) {
+			case 'MsgMagnets':
+				var _p5 = A2(_Gizra$elm_spa_exmple$Magnets_Update$update, _p4._0, model.magnets);
+				var subModel = _p5._0;
+				var subCmds = _p5._1;
+				var maybeAttribute = _p5._2;
+				var modelUpdated = _elm_lang$core$Native_Utils.update(
+					model,
+					{magnets: subModel});
+				var modelUpdatedWithAttributeToggle = A2(
+					_elm_lang$core$Maybe$withDefault,
+					modelUpdated,
+					A2(
+						_elm_lang$core$Maybe$map,
+						function (attribute) {
+							return _elm_lang$core$Tuple$first(
+								A2(
+									_Gizra$elm_spa_exmple$App_Update$update,
+									_Gizra$elm_spa_exmple$App_Model$ToggleAttribute(attribute),
+									modelUpdated));
+						},
+						maybeAttribute));
+				return {
+					ctor: '_Tuple2',
+					_0: modelUpdatedWithAttributeToggle,
+					_1: A2(_elm_lang$core$Platform_Cmd$map, _Gizra$elm_spa_exmple$App_Model$MsgMagnets, subCmds)
+				};
+			case 'ToggleAttribute':
+				var _p6 = _p4._0;
+				var modelUpdated = A2(
+					_elm_lang$core$Maybe$withDefault,
+					model,
+					A2(
+						_elm_lang$core$Maybe$map,
+						function (magnet) {
+							var magnetUpdated = _elm_lang$core$Native_Utils.update(
+								magnet,
+								{selected: !magnet.selected});
+							var magnetsUpdated = A3(_eeue56$elm_all_dict$EveryDict$insert, _p6, magnetUpdated, model.magnets);
+							return _elm_lang$core$Native_Utils.update(
+								model,
+								{magnets: magnetsUpdated});
+						},
+						A2(_eeue56$elm_all_dict$EveryDict$get, _p6, model.magnets)));
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					modelUpdated,
+					{ctor: '[]'});
+			default:
+				var _p7 = _p4._0;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{showMap: _p7.showMap}),
+					_1: _Gizra$elm_spa_exmple$App_Update$mapManager(_p7)
+				};
+		}
+	});
 
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrap;
 var _elm_lang$virtual_dom$VirtualDom_Debug$wrapWithFlags;
@@ -14214,6 +14178,28 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
+var _Gizra$elm_spa_exmple$LocationsMap_View$viewMap = function (showMap) {
+	var mapEl = showMap ? A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('map'),
+			_1: {ctor: '[]'}
+		},
+		{ctor: '[]'}) : A2(
+		_elm_lang$html$Html$span,
+		{ctor: '[]'},
+		{ctor: '[]'});
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: mapEl,
+			_1: {ctor: '[]'}
+		});
+};
+
 var _Gizra$elm_spa_exmple$Magnets_Utils$getSelectedAttributesFromMagnets = function (magnets) {
 	return A3(
 		_eeue56$elm_all_dict$EveryDict$foldl,
@@ -14560,13 +14546,422 @@ var _Gizra$elm_spa_exmple$People_View$viewPerson = function (person) {
 		});
 };
 
+var _elm_lang$svg$Svg$map = _elm_lang$virtual_dom$VirtualDom$map;
+var _elm_lang$svg$Svg$text = _elm_lang$virtual_dom$VirtualDom$text;
+var _elm_lang$svg$Svg$svgNamespace = A2(
+	_elm_lang$virtual_dom$VirtualDom$property,
+	'namespace',
+	_elm_lang$core$Json_Encode$string('http://www.w3.org/2000/svg'));
+var _elm_lang$svg$Svg$node = F3(
+	function (name, attributes, children) {
+		return A3(
+			_elm_lang$virtual_dom$VirtualDom$node,
+			name,
+			{ctor: '::', _0: _elm_lang$svg$Svg$svgNamespace, _1: attributes},
+			children);
+	});
+var _elm_lang$svg$Svg$svg = _elm_lang$svg$Svg$node('svg');
+var _elm_lang$svg$Svg$foreignObject = _elm_lang$svg$Svg$node('foreignObject');
+var _elm_lang$svg$Svg$animate = _elm_lang$svg$Svg$node('animate');
+var _elm_lang$svg$Svg$animateColor = _elm_lang$svg$Svg$node('animateColor');
+var _elm_lang$svg$Svg$animateMotion = _elm_lang$svg$Svg$node('animateMotion');
+var _elm_lang$svg$Svg$animateTransform = _elm_lang$svg$Svg$node('animateTransform');
+var _elm_lang$svg$Svg$mpath = _elm_lang$svg$Svg$node('mpath');
+var _elm_lang$svg$Svg$set = _elm_lang$svg$Svg$node('set');
+var _elm_lang$svg$Svg$a = _elm_lang$svg$Svg$node('a');
+var _elm_lang$svg$Svg$defs = _elm_lang$svg$Svg$node('defs');
+var _elm_lang$svg$Svg$g = _elm_lang$svg$Svg$node('g');
+var _elm_lang$svg$Svg$marker = _elm_lang$svg$Svg$node('marker');
+var _elm_lang$svg$Svg$mask = _elm_lang$svg$Svg$node('mask');
+var _elm_lang$svg$Svg$pattern = _elm_lang$svg$Svg$node('pattern');
+var _elm_lang$svg$Svg$switch = _elm_lang$svg$Svg$node('switch');
+var _elm_lang$svg$Svg$symbol = _elm_lang$svg$Svg$node('symbol');
+var _elm_lang$svg$Svg$desc = _elm_lang$svg$Svg$node('desc');
+var _elm_lang$svg$Svg$metadata = _elm_lang$svg$Svg$node('metadata');
+var _elm_lang$svg$Svg$title = _elm_lang$svg$Svg$node('title');
+var _elm_lang$svg$Svg$feBlend = _elm_lang$svg$Svg$node('feBlend');
+var _elm_lang$svg$Svg$feColorMatrix = _elm_lang$svg$Svg$node('feColorMatrix');
+var _elm_lang$svg$Svg$feComponentTransfer = _elm_lang$svg$Svg$node('feComponentTransfer');
+var _elm_lang$svg$Svg$feComposite = _elm_lang$svg$Svg$node('feComposite');
+var _elm_lang$svg$Svg$feConvolveMatrix = _elm_lang$svg$Svg$node('feConvolveMatrix');
+var _elm_lang$svg$Svg$feDiffuseLighting = _elm_lang$svg$Svg$node('feDiffuseLighting');
+var _elm_lang$svg$Svg$feDisplacementMap = _elm_lang$svg$Svg$node('feDisplacementMap');
+var _elm_lang$svg$Svg$feFlood = _elm_lang$svg$Svg$node('feFlood');
+var _elm_lang$svg$Svg$feFuncA = _elm_lang$svg$Svg$node('feFuncA');
+var _elm_lang$svg$Svg$feFuncB = _elm_lang$svg$Svg$node('feFuncB');
+var _elm_lang$svg$Svg$feFuncG = _elm_lang$svg$Svg$node('feFuncG');
+var _elm_lang$svg$Svg$feFuncR = _elm_lang$svg$Svg$node('feFuncR');
+var _elm_lang$svg$Svg$feGaussianBlur = _elm_lang$svg$Svg$node('feGaussianBlur');
+var _elm_lang$svg$Svg$feImage = _elm_lang$svg$Svg$node('feImage');
+var _elm_lang$svg$Svg$feMerge = _elm_lang$svg$Svg$node('feMerge');
+var _elm_lang$svg$Svg$feMergeNode = _elm_lang$svg$Svg$node('feMergeNode');
+var _elm_lang$svg$Svg$feMorphology = _elm_lang$svg$Svg$node('feMorphology');
+var _elm_lang$svg$Svg$feOffset = _elm_lang$svg$Svg$node('feOffset');
+var _elm_lang$svg$Svg$feSpecularLighting = _elm_lang$svg$Svg$node('feSpecularLighting');
+var _elm_lang$svg$Svg$feTile = _elm_lang$svg$Svg$node('feTile');
+var _elm_lang$svg$Svg$feTurbulence = _elm_lang$svg$Svg$node('feTurbulence');
+var _elm_lang$svg$Svg$font = _elm_lang$svg$Svg$node('font');
+var _elm_lang$svg$Svg$linearGradient = _elm_lang$svg$Svg$node('linearGradient');
+var _elm_lang$svg$Svg$radialGradient = _elm_lang$svg$Svg$node('radialGradient');
+var _elm_lang$svg$Svg$stop = _elm_lang$svg$Svg$node('stop');
+var _elm_lang$svg$Svg$circle = _elm_lang$svg$Svg$node('circle');
+var _elm_lang$svg$Svg$ellipse = _elm_lang$svg$Svg$node('ellipse');
+var _elm_lang$svg$Svg$image = _elm_lang$svg$Svg$node('image');
+var _elm_lang$svg$Svg$line = _elm_lang$svg$Svg$node('line');
+var _elm_lang$svg$Svg$path = _elm_lang$svg$Svg$node('path');
+var _elm_lang$svg$Svg$polygon = _elm_lang$svg$Svg$node('polygon');
+var _elm_lang$svg$Svg$polyline = _elm_lang$svg$Svg$node('polyline');
+var _elm_lang$svg$Svg$rect = _elm_lang$svg$Svg$node('rect');
+var _elm_lang$svg$Svg$use = _elm_lang$svg$Svg$node('use');
+var _elm_lang$svg$Svg$feDistantLight = _elm_lang$svg$Svg$node('feDistantLight');
+var _elm_lang$svg$Svg$fePointLight = _elm_lang$svg$Svg$node('fePointLight');
+var _elm_lang$svg$Svg$feSpotLight = _elm_lang$svg$Svg$node('feSpotLight');
+var _elm_lang$svg$Svg$altGlyph = _elm_lang$svg$Svg$node('altGlyph');
+var _elm_lang$svg$Svg$altGlyphDef = _elm_lang$svg$Svg$node('altGlyphDef');
+var _elm_lang$svg$Svg$altGlyphItem = _elm_lang$svg$Svg$node('altGlyphItem');
+var _elm_lang$svg$Svg$glyph = _elm_lang$svg$Svg$node('glyph');
+var _elm_lang$svg$Svg$glyphRef = _elm_lang$svg$Svg$node('glyphRef');
+var _elm_lang$svg$Svg$textPath = _elm_lang$svg$Svg$node('textPath');
+var _elm_lang$svg$Svg$text_ = _elm_lang$svg$Svg$node('text');
+var _elm_lang$svg$Svg$tref = _elm_lang$svg$Svg$node('tref');
+var _elm_lang$svg$Svg$tspan = _elm_lang$svg$Svg$node('tspan');
+var _elm_lang$svg$Svg$clipPath = _elm_lang$svg$Svg$node('clipPath');
+var _elm_lang$svg$Svg$colorProfile = _elm_lang$svg$Svg$node('colorProfile');
+var _elm_lang$svg$Svg$cursor = _elm_lang$svg$Svg$node('cursor');
+var _elm_lang$svg$Svg$filter = _elm_lang$svg$Svg$node('filter');
+var _elm_lang$svg$Svg$script = _elm_lang$svg$Svg$node('script');
+var _elm_lang$svg$Svg$style = _elm_lang$svg$Svg$node('style');
+var _elm_lang$svg$Svg$view = _elm_lang$svg$Svg$node('view');
+
+var _elm_lang$svg$Svg_Attributes$writingMode = _elm_lang$virtual_dom$VirtualDom$attribute('writing-mode');
+var _elm_lang$svg$Svg_Attributes$wordSpacing = _elm_lang$virtual_dom$VirtualDom$attribute('word-spacing');
+var _elm_lang$svg$Svg_Attributes$visibility = _elm_lang$virtual_dom$VirtualDom$attribute('visibility');
+var _elm_lang$svg$Svg_Attributes$unicodeBidi = _elm_lang$virtual_dom$VirtualDom$attribute('unicode-bidi');
+var _elm_lang$svg$Svg_Attributes$textRendering = _elm_lang$virtual_dom$VirtualDom$attribute('text-rendering');
+var _elm_lang$svg$Svg_Attributes$textDecoration = _elm_lang$virtual_dom$VirtualDom$attribute('text-decoration');
+var _elm_lang$svg$Svg_Attributes$textAnchor = _elm_lang$virtual_dom$VirtualDom$attribute('text-anchor');
+var _elm_lang$svg$Svg_Attributes$stroke = _elm_lang$virtual_dom$VirtualDom$attribute('stroke');
+var _elm_lang$svg$Svg_Attributes$strokeWidth = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-width');
+var _elm_lang$svg$Svg_Attributes$strokeOpacity = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-opacity');
+var _elm_lang$svg$Svg_Attributes$strokeMiterlimit = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-miterlimit');
+var _elm_lang$svg$Svg_Attributes$strokeLinejoin = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-linejoin');
+var _elm_lang$svg$Svg_Attributes$strokeLinecap = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-linecap');
+var _elm_lang$svg$Svg_Attributes$strokeDashoffset = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-dashoffset');
+var _elm_lang$svg$Svg_Attributes$strokeDasharray = _elm_lang$virtual_dom$VirtualDom$attribute('stroke-dasharray');
+var _elm_lang$svg$Svg_Attributes$stopOpacity = _elm_lang$virtual_dom$VirtualDom$attribute('stop-opacity');
+var _elm_lang$svg$Svg_Attributes$stopColor = _elm_lang$virtual_dom$VirtualDom$attribute('stop-color');
+var _elm_lang$svg$Svg_Attributes$shapeRendering = _elm_lang$virtual_dom$VirtualDom$attribute('shape-rendering');
+var _elm_lang$svg$Svg_Attributes$pointerEvents = _elm_lang$virtual_dom$VirtualDom$attribute('pointer-events');
+var _elm_lang$svg$Svg_Attributes$overflow = _elm_lang$virtual_dom$VirtualDom$attribute('overflow');
+var _elm_lang$svg$Svg_Attributes$opacity = _elm_lang$virtual_dom$VirtualDom$attribute('opacity');
+var _elm_lang$svg$Svg_Attributes$mask = _elm_lang$virtual_dom$VirtualDom$attribute('mask');
+var _elm_lang$svg$Svg_Attributes$markerStart = _elm_lang$virtual_dom$VirtualDom$attribute('marker-start');
+var _elm_lang$svg$Svg_Attributes$markerMid = _elm_lang$virtual_dom$VirtualDom$attribute('marker-mid');
+var _elm_lang$svg$Svg_Attributes$markerEnd = _elm_lang$virtual_dom$VirtualDom$attribute('marker-end');
+var _elm_lang$svg$Svg_Attributes$lightingColor = _elm_lang$virtual_dom$VirtualDom$attribute('lighting-color');
+var _elm_lang$svg$Svg_Attributes$letterSpacing = _elm_lang$virtual_dom$VirtualDom$attribute('letter-spacing');
+var _elm_lang$svg$Svg_Attributes$kerning = _elm_lang$virtual_dom$VirtualDom$attribute('kerning');
+var _elm_lang$svg$Svg_Attributes$imageRendering = _elm_lang$virtual_dom$VirtualDom$attribute('image-rendering');
+var _elm_lang$svg$Svg_Attributes$glyphOrientationVertical = _elm_lang$virtual_dom$VirtualDom$attribute('glyph-orientation-vertical');
+var _elm_lang$svg$Svg_Attributes$glyphOrientationHorizontal = _elm_lang$virtual_dom$VirtualDom$attribute('glyph-orientation-horizontal');
+var _elm_lang$svg$Svg_Attributes$fontWeight = _elm_lang$virtual_dom$VirtualDom$attribute('font-weight');
+var _elm_lang$svg$Svg_Attributes$fontVariant = _elm_lang$virtual_dom$VirtualDom$attribute('font-variant');
+var _elm_lang$svg$Svg_Attributes$fontStyle = _elm_lang$virtual_dom$VirtualDom$attribute('font-style');
+var _elm_lang$svg$Svg_Attributes$fontStretch = _elm_lang$virtual_dom$VirtualDom$attribute('font-stretch');
+var _elm_lang$svg$Svg_Attributes$fontSize = _elm_lang$virtual_dom$VirtualDom$attribute('font-size');
+var _elm_lang$svg$Svg_Attributes$fontSizeAdjust = _elm_lang$virtual_dom$VirtualDom$attribute('font-size-adjust');
+var _elm_lang$svg$Svg_Attributes$fontFamily = _elm_lang$virtual_dom$VirtualDom$attribute('font-family');
+var _elm_lang$svg$Svg_Attributes$floodOpacity = _elm_lang$virtual_dom$VirtualDom$attribute('flood-opacity');
+var _elm_lang$svg$Svg_Attributes$floodColor = _elm_lang$virtual_dom$VirtualDom$attribute('flood-color');
+var _elm_lang$svg$Svg_Attributes$filter = _elm_lang$virtual_dom$VirtualDom$attribute('filter');
+var _elm_lang$svg$Svg_Attributes$fill = _elm_lang$virtual_dom$VirtualDom$attribute('fill');
+var _elm_lang$svg$Svg_Attributes$fillRule = _elm_lang$virtual_dom$VirtualDom$attribute('fill-rule');
+var _elm_lang$svg$Svg_Attributes$fillOpacity = _elm_lang$virtual_dom$VirtualDom$attribute('fill-opacity');
+var _elm_lang$svg$Svg_Attributes$enableBackground = _elm_lang$virtual_dom$VirtualDom$attribute('enable-background');
+var _elm_lang$svg$Svg_Attributes$dominantBaseline = _elm_lang$virtual_dom$VirtualDom$attribute('dominant-baseline');
+var _elm_lang$svg$Svg_Attributes$display = _elm_lang$virtual_dom$VirtualDom$attribute('display');
+var _elm_lang$svg$Svg_Attributes$direction = _elm_lang$virtual_dom$VirtualDom$attribute('direction');
+var _elm_lang$svg$Svg_Attributes$cursor = _elm_lang$virtual_dom$VirtualDom$attribute('cursor');
+var _elm_lang$svg$Svg_Attributes$color = _elm_lang$virtual_dom$VirtualDom$attribute('color');
+var _elm_lang$svg$Svg_Attributes$colorRendering = _elm_lang$virtual_dom$VirtualDom$attribute('color-rendering');
+var _elm_lang$svg$Svg_Attributes$colorProfile = _elm_lang$virtual_dom$VirtualDom$attribute('color-profile');
+var _elm_lang$svg$Svg_Attributes$colorInterpolation = _elm_lang$virtual_dom$VirtualDom$attribute('color-interpolation');
+var _elm_lang$svg$Svg_Attributes$colorInterpolationFilters = _elm_lang$virtual_dom$VirtualDom$attribute('color-interpolation-filters');
+var _elm_lang$svg$Svg_Attributes$clip = _elm_lang$virtual_dom$VirtualDom$attribute('clip');
+var _elm_lang$svg$Svg_Attributes$clipRule = _elm_lang$virtual_dom$VirtualDom$attribute('clip-rule');
+var _elm_lang$svg$Svg_Attributes$clipPath = _elm_lang$virtual_dom$VirtualDom$attribute('clip-path');
+var _elm_lang$svg$Svg_Attributes$baselineShift = _elm_lang$virtual_dom$VirtualDom$attribute('baseline-shift');
+var _elm_lang$svg$Svg_Attributes$alignmentBaseline = _elm_lang$virtual_dom$VirtualDom$attribute('alignment-baseline');
+var _elm_lang$svg$Svg_Attributes$zoomAndPan = _elm_lang$virtual_dom$VirtualDom$attribute('zoomAndPan');
+var _elm_lang$svg$Svg_Attributes$z = _elm_lang$virtual_dom$VirtualDom$attribute('z');
+var _elm_lang$svg$Svg_Attributes$yChannelSelector = _elm_lang$virtual_dom$VirtualDom$attribute('yChannelSelector');
+var _elm_lang$svg$Svg_Attributes$y2 = _elm_lang$virtual_dom$VirtualDom$attribute('y2');
+var _elm_lang$svg$Svg_Attributes$y1 = _elm_lang$virtual_dom$VirtualDom$attribute('y1');
+var _elm_lang$svg$Svg_Attributes$y = _elm_lang$virtual_dom$VirtualDom$attribute('y');
+var _elm_lang$svg$Svg_Attributes$xmlSpace = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/XML/1998/namespace', 'xml:space');
+var _elm_lang$svg$Svg_Attributes$xmlLang = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/XML/1998/namespace', 'xml:lang');
+var _elm_lang$svg$Svg_Attributes$xmlBase = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/XML/1998/namespace', 'xml:base');
+var _elm_lang$svg$Svg_Attributes$xlinkType = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:type');
+var _elm_lang$svg$Svg_Attributes$xlinkTitle = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:title');
+var _elm_lang$svg$Svg_Attributes$xlinkShow = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:show');
+var _elm_lang$svg$Svg_Attributes$xlinkRole = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:role');
+var _elm_lang$svg$Svg_Attributes$xlinkHref = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:href');
+var _elm_lang$svg$Svg_Attributes$xlinkArcrole = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:arcrole');
+var _elm_lang$svg$Svg_Attributes$xlinkActuate = A2(_elm_lang$virtual_dom$VirtualDom$attributeNS, 'http://www.w3.org/1999/xlink', 'xlink:actuate');
+var _elm_lang$svg$Svg_Attributes$xChannelSelector = _elm_lang$virtual_dom$VirtualDom$attribute('xChannelSelector');
+var _elm_lang$svg$Svg_Attributes$x2 = _elm_lang$virtual_dom$VirtualDom$attribute('x2');
+var _elm_lang$svg$Svg_Attributes$x1 = _elm_lang$virtual_dom$VirtualDom$attribute('x1');
+var _elm_lang$svg$Svg_Attributes$xHeight = _elm_lang$virtual_dom$VirtualDom$attribute('x-height');
+var _elm_lang$svg$Svg_Attributes$x = _elm_lang$virtual_dom$VirtualDom$attribute('x');
+var _elm_lang$svg$Svg_Attributes$widths = _elm_lang$virtual_dom$VirtualDom$attribute('widths');
+var _elm_lang$svg$Svg_Attributes$width = _elm_lang$virtual_dom$VirtualDom$attribute('width');
+var _elm_lang$svg$Svg_Attributes$viewTarget = _elm_lang$virtual_dom$VirtualDom$attribute('viewTarget');
+var _elm_lang$svg$Svg_Attributes$viewBox = _elm_lang$virtual_dom$VirtualDom$attribute('viewBox');
+var _elm_lang$svg$Svg_Attributes$vertOriginY = _elm_lang$virtual_dom$VirtualDom$attribute('vert-origin-y');
+var _elm_lang$svg$Svg_Attributes$vertOriginX = _elm_lang$virtual_dom$VirtualDom$attribute('vert-origin-x');
+var _elm_lang$svg$Svg_Attributes$vertAdvY = _elm_lang$virtual_dom$VirtualDom$attribute('vert-adv-y');
+var _elm_lang$svg$Svg_Attributes$version = _elm_lang$virtual_dom$VirtualDom$attribute('version');
+var _elm_lang$svg$Svg_Attributes$values = _elm_lang$virtual_dom$VirtualDom$attribute('values');
+var _elm_lang$svg$Svg_Attributes$vMathematical = _elm_lang$virtual_dom$VirtualDom$attribute('v-mathematical');
+var _elm_lang$svg$Svg_Attributes$vIdeographic = _elm_lang$virtual_dom$VirtualDom$attribute('v-ideographic');
+var _elm_lang$svg$Svg_Attributes$vHanging = _elm_lang$virtual_dom$VirtualDom$attribute('v-hanging');
+var _elm_lang$svg$Svg_Attributes$vAlphabetic = _elm_lang$virtual_dom$VirtualDom$attribute('v-alphabetic');
+var _elm_lang$svg$Svg_Attributes$unitsPerEm = _elm_lang$virtual_dom$VirtualDom$attribute('units-per-em');
+var _elm_lang$svg$Svg_Attributes$unicodeRange = _elm_lang$virtual_dom$VirtualDom$attribute('unicode-range');
+var _elm_lang$svg$Svg_Attributes$unicode = _elm_lang$virtual_dom$VirtualDom$attribute('unicode');
+var _elm_lang$svg$Svg_Attributes$underlineThickness = _elm_lang$virtual_dom$VirtualDom$attribute('underline-thickness');
+var _elm_lang$svg$Svg_Attributes$underlinePosition = _elm_lang$virtual_dom$VirtualDom$attribute('underline-position');
+var _elm_lang$svg$Svg_Attributes$u2 = _elm_lang$virtual_dom$VirtualDom$attribute('u2');
+var _elm_lang$svg$Svg_Attributes$u1 = _elm_lang$virtual_dom$VirtualDom$attribute('u1');
+var _elm_lang$svg$Svg_Attributes$type_ = _elm_lang$virtual_dom$VirtualDom$attribute('type');
+var _elm_lang$svg$Svg_Attributes$transform = _elm_lang$virtual_dom$VirtualDom$attribute('transform');
+var _elm_lang$svg$Svg_Attributes$to = _elm_lang$virtual_dom$VirtualDom$attribute('to');
+var _elm_lang$svg$Svg_Attributes$title = _elm_lang$virtual_dom$VirtualDom$attribute('title');
+var _elm_lang$svg$Svg_Attributes$textLength = _elm_lang$virtual_dom$VirtualDom$attribute('textLength');
+var _elm_lang$svg$Svg_Attributes$targetY = _elm_lang$virtual_dom$VirtualDom$attribute('targetY');
+var _elm_lang$svg$Svg_Attributes$targetX = _elm_lang$virtual_dom$VirtualDom$attribute('targetX');
+var _elm_lang$svg$Svg_Attributes$target = _elm_lang$virtual_dom$VirtualDom$attribute('target');
+var _elm_lang$svg$Svg_Attributes$tableValues = _elm_lang$virtual_dom$VirtualDom$attribute('tableValues');
+var _elm_lang$svg$Svg_Attributes$systemLanguage = _elm_lang$virtual_dom$VirtualDom$attribute('systemLanguage');
+var _elm_lang$svg$Svg_Attributes$surfaceScale = _elm_lang$virtual_dom$VirtualDom$attribute('surfaceScale');
+var _elm_lang$svg$Svg_Attributes$style = _elm_lang$virtual_dom$VirtualDom$attribute('style');
+var _elm_lang$svg$Svg_Attributes$string = _elm_lang$virtual_dom$VirtualDom$attribute('string');
+var _elm_lang$svg$Svg_Attributes$strikethroughThickness = _elm_lang$virtual_dom$VirtualDom$attribute('strikethrough-thickness');
+var _elm_lang$svg$Svg_Attributes$strikethroughPosition = _elm_lang$virtual_dom$VirtualDom$attribute('strikethrough-position');
+var _elm_lang$svg$Svg_Attributes$stitchTiles = _elm_lang$virtual_dom$VirtualDom$attribute('stitchTiles');
+var _elm_lang$svg$Svg_Attributes$stemv = _elm_lang$virtual_dom$VirtualDom$attribute('stemv');
+var _elm_lang$svg$Svg_Attributes$stemh = _elm_lang$virtual_dom$VirtualDom$attribute('stemh');
+var _elm_lang$svg$Svg_Attributes$stdDeviation = _elm_lang$virtual_dom$VirtualDom$attribute('stdDeviation');
+var _elm_lang$svg$Svg_Attributes$startOffset = _elm_lang$virtual_dom$VirtualDom$attribute('startOffset');
+var _elm_lang$svg$Svg_Attributes$spreadMethod = _elm_lang$virtual_dom$VirtualDom$attribute('spreadMethod');
+var _elm_lang$svg$Svg_Attributes$speed = _elm_lang$virtual_dom$VirtualDom$attribute('speed');
+var _elm_lang$svg$Svg_Attributes$specularExponent = _elm_lang$virtual_dom$VirtualDom$attribute('specularExponent');
+var _elm_lang$svg$Svg_Attributes$specularConstant = _elm_lang$virtual_dom$VirtualDom$attribute('specularConstant');
+var _elm_lang$svg$Svg_Attributes$spacing = _elm_lang$virtual_dom$VirtualDom$attribute('spacing');
+var _elm_lang$svg$Svg_Attributes$slope = _elm_lang$virtual_dom$VirtualDom$attribute('slope');
+var _elm_lang$svg$Svg_Attributes$seed = _elm_lang$virtual_dom$VirtualDom$attribute('seed');
+var _elm_lang$svg$Svg_Attributes$scale = _elm_lang$virtual_dom$VirtualDom$attribute('scale');
+var _elm_lang$svg$Svg_Attributes$ry = _elm_lang$virtual_dom$VirtualDom$attribute('ry');
+var _elm_lang$svg$Svg_Attributes$rx = _elm_lang$virtual_dom$VirtualDom$attribute('rx');
+var _elm_lang$svg$Svg_Attributes$rotate = _elm_lang$virtual_dom$VirtualDom$attribute('rotate');
+var _elm_lang$svg$Svg_Attributes$result = _elm_lang$virtual_dom$VirtualDom$attribute('result');
+var _elm_lang$svg$Svg_Attributes$restart = _elm_lang$virtual_dom$VirtualDom$attribute('restart');
+var _elm_lang$svg$Svg_Attributes$requiredFeatures = _elm_lang$virtual_dom$VirtualDom$attribute('requiredFeatures');
+var _elm_lang$svg$Svg_Attributes$requiredExtensions = _elm_lang$virtual_dom$VirtualDom$attribute('requiredExtensions');
+var _elm_lang$svg$Svg_Attributes$repeatDur = _elm_lang$virtual_dom$VirtualDom$attribute('repeatDur');
+var _elm_lang$svg$Svg_Attributes$repeatCount = _elm_lang$virtual_dom$VirtualDom$attribute('repeatCount');
+var _elm_lang$svg$Svg_Attributes$renderingIntent = _elm_lang$virtual_dom$VirtualDom$attribute('rendering-intent');
+var _elm_lang$svg$Svg_Attributes$refY = _elm_lang$virtual_dom$VirtualDom$attribute('refY');
+var _elm_lang$svg$Svg_Attributes$refX = _elm_lang$virtual_dom$VirtualDom$attribute('refX');
+var _elm_lang$svg$Svg_Attributes$radius = _elm_lang$virtual_dom$VirtualDom$attribute('radius');
+var _elm_lang$svg$Svg_Attributes$r = _elm_lang$virtual_dom$VirtualDom$attribute('r');
+var _elm_lang$svg$Svg_Attributes$primitiveUnits = _elm_lang$virtual_dom$VirtualDom$attribute('primitiveUnits');
+var _elm_lang$svg$Svg_Attributes$preserveAspectRatio = _elm_lang$virtual_dom$VirtualDom$attribute('preserveAspectRatio');
+var _elm_lang$svg$Svg_Attributes$preserveAlpha = _elm_lang$virtual_dom$VirtualDom$attribute('preserveAlpha');
+var _elm_lang$svg$Svg_Attributes$pointsAtZ = _elm_lang$virtual_dom$VirtualDom$attribute('pointsAtZ');
+var _elm_lang$svg$Svg_Attributes$pointsAtY = _elm_lang$virtual_dom$VirtualDom$attribute('pointsAtY');
+var _elm_lang$svg$Svg_Attributes$pointsAtX = _elm_lang$virtual_dom$VirtualDom$attribute('pointsAtX');
+var _elm_lang$svg$Svg_Attributes$points = _elm_lang$virtual_dom$VirtualDom$attribute('points');
+var _elm_lang$svg$Svg_Attributes$pointOrder = _elm_lang$virtual_dom$VirtualDom$attribute('point-order');
+var _elm_lang$svg$Svg_Attributes$patternUnits = _elm_lang$virtual_dom$VirtualDom$attribute('patternUnits');
+var _elm_lang$svg$Svg_Attributes$patternTransform = _elm_lang$virtual_dom$VirtualDom$attribute('patternTransform');
+var _elm_lang$svg$Svg_Attributes$patternContentUnits = _elm_lang$virtual_dom$VirtualDom$attribute('patternContentUnits');
+var _elm_lang$svg$Svg_Attributes$pathLength = _elm_lang$virtual_dom$VirtualDom$attribute('pathLength');
+var _elm_lang$svg$Svg_Attributes$path = _elm_lang$virtual_dom$VirtualDom$attribute('path');
+var _elm_lang$svg$Svg_Attributes$panose1 = _elm_lang$virtual_dom$VirtualDom$attribute('panose-1');
+var _elm_lang$svg$Svg_Attributes$overlineThickness = _elm_lang$virtual_dom$VirtualDom$attribute('overline-thickness');
+var _elm_lang$svg$Svg_Attributes$overlinePosition = _elm_lang$virtual_dom$VirtualDom$attribute('overline-position');
+var _elm_lang$svg$Svg_Attributes$origin = _elm_lang$virtual_dom$VirtualDom$attribute('origin');
+var _elm_lang$svg$Svg_Attributes$orientation = _elm_lang$virtual_dom$VirtualDom$attribute('orientation');
+var _elm_lang$svg$Svg_Attributes$orient = _elm_lang$virtual_dom$VirtualDom$attribute('orient');
+var _elm_lang$svg$Svg_Attributes$order = _elm_lang$virtual_dom$VirtualDom$attribute('order');
+var _elm_lang$svg$Svg_Attributes$operator = _elm_lang$virtual_dom$VirtualDom$attribute('operator');
+var _elm_lang$svg$Svg_Attributes$offset = _elm_lang$virtual_dom$VirtualDom$attribute('offset');
+var _elm_lang$svg$Svg_Attributes$numOctaves = _elm_lang$virtual_dom$VirtualDom$attribute('numOctaves');
+var _elm_lang$svg$Svg_Attributes$name = _elm_lang$virtual_dom$VirtualDom$attribute('name');
+var _elm_lang$svg$Svg_Attributes$mode = _elm_lang$virtual_dom$VirtualDom$attribute('mode');
+var _elm_lang$svg$Svg_Attributes$min = _elm_lang$virtual_dom$VirtualDom$attribute('min');
+var _elm_lang$svg$Svg_Attributes$method = _elm_lang$virtual_dom$VirtualDom$attribute('method');
+var _elm_lang$svg$Svg_Attributes$media = _elm_lang$virtual_dom$VirtualDom$attribute('media');
+var _elm_lang$svg$Svg_Attributes$max = _elm_lang$virtual_dom$VirtualDom$attribute('max');
+var _elm_lang$svg$Svg_Attributes$mathematical = _elm_lang$virtual_dom$VirtualDom$attribute('mathematical');
+var _elm_lang$svg$Svg_Attributes$maskUnits = _elm_lang$virtual_dom$VirtualDom$attribute('maskUnits');
+var _elm_lang$svg$Svg_Attributes$maskContentUnits = _elm_lang$virtual_dom$VirtualDom$attribute('maskContentUnits');
+var _elm_lang$svg$Svg_Attributes$markerWidth = _elm_lang$virtual_dom$VirtualDom$attribute('markerWidth');
+var _elm_lang$svg$Svg_Attributes$markerUnits = _elm_lang$virtual_dom$VirtualDom$attribute('markerUnits');
+var _elm_lang$svg$Svg_Attributes$markerHeight = _elm_lang$virtual_dom$VirtualDom$attribute('markerHeight');
+var _elm_lang$svg$Svg_Attributes$local = _elm_lang$virtual_dom$VirtualDom$attribute('local');
+var _elm_lang$svg$Svg_Attributes$limitingConeAngle = _elm_lang$virtual_dom$VirtualDom$attribute('limitingConeAngle');
+var _elm_lang$svg$Svg_Attributes$lengthAdjust = _elm_lang$virtual_dom$VirtualDom$attribute('lengthAdjust');
+var _elm_lang$svg$Svg_Attributes$lang = _elm_lang$virtual_dom$VirtualDom$attribute('lang');
+var _elm_lang$svg$Svg_Attributes$keyTimes = _elm_lang$virtual_dom$VirtualDom$attribute('keyTimes');
+var _elm_lang$svg$Svg_Attributes$keySplines = _elm_lang$virtual_dom$VirtualDom$attribute('keySplines');
+var _elm_lang$svg$Svg_Attributes$keyPoints = _elm_lang$virtual_dom$VirtualDom$attribute('keyPoints');
+var _elm_lang$svg$Svg_Attributes$kernelUnitLength = _elm_lang$virtual_dom$VirtualDom$attribute('kernelUnitLength');
+var _elm_lang$svg$Svg_Attributes$kernelMatrix = _elm_lang$virtual_dom$VirtualDom$attribute('kernelMatrix');
+var _elm_lang$svg$Svg_Attributes$k4 = _elm_lang$virtual_dom$VirtualDom$attribute('k4');
+var _elm_lang$svg$Svg_Attributes$k3 = _elm_lang$virtual_dom$VirtualDom$attribute('k3');
+var _elm_lang$svg$Svg_Attributes$k2 = _elm_lang$virtual_dom$VirtualDom$attribute('k2');
+var _elm_lang$svg$Svg_Attributes$k1 = _elm_lang$virtual_dom$VirtualDom$attribute('k1');
+var _elm_lang$svg$Svg_Attributes$k = _elm_lang$virtual_dom$VirtualDom$attribute('k');
+var _elm_lang$svg$Svg_Attributes$intercept = _elm_lang$virtual_dom$VirtualDom$attribute('intercept');
+var _elm_lang$svg$Svg_Attributes$in2 = _elm_lang$virtual_dom$VirtualDom$attribute('in2');
+var _elm_lang$svg$Svg_Attributes$in_ = _elm_lang$virtual_dom$VirtualDom$attribute('in');
+var _elm_lang$svg$Svg_Attributes$ideographic = _elm_lang$virtual_dom$VirtualDom$attribute('ideographic');
+var _elm_lang$svg$Svg_Attributes$id = _elm_lang$virtual_dom$VirtualDom$attribute('id');
+var _elm_lang$svg$Svg_Attributes$horizOriginY = _elm_lang$virtual_dom$VirtualDom$attribute('horiz-origin-y');
+var _elm_lang$svg$Svg_Attributes$horizOriginX = _elm_lang$virtual_dom$VirtualDom$attribute('horiz-origin-x');
+var _elm_lang$svg$Svg_Attributes$horizAdvX = _elm_lang$virtual_dom$VirtualDom$attribute('horiz-adv-x');
+var _elm_lang$svg$Svg_Attributes$height = _elm_lang$virtual_dom$VirtualDom$attribute('height');
+var _elm_lang$svg$Svg_Attributes$hanging = _elm_lang$virtual_dom$VirtualDom$attribute('hanging');
+var _elm_lang$svg$Svg_Attributes$gradientUnits = _elm_lang$virtual_dom$VirtualDom$attribute('gradientUnits');
+var _elm_lang$svg$Svg_Attributes$gradientTransform = _elm_lang$virtual_dom$VirtualDom$attribute('gradientTransform');
+var _elm_lang$svg$Svg_Attributes$glyphRef = _elm_lang$virtual_dom$VirtualDom$attribute('glyphRef');
+var _elm_lang$svg$Svg_Attributes$glyphName = _elm_lang$virtual_dom$VirtualDom$attribute('glyph-name');
+var _elm_lang$svg$Svg_Attributes$g2 = _elm_lang$virtual_dom$VirtualDom$attribute('g2');
+var _elm_lang$svg$Svg_Attributes$g1 = _elm_lang$virtual_dom$VirtualDom$attribute('g1');
+var _elm_lang$svg$Svg_Attributes$fy = _elm_lang$virtual_dom$VirtualDom$attribute('fy');
+var _elm_lang$svg$Svg_Attributes$fx = _elm_lang$virtual_dom$VirtualDom$attribute('fx');
+var _elm_lang$svg$Svg_Attributes$from = _elm_lang$virtual_dom$VirtualDom$attribute('from');
+var _elm_lang$svg$Svg_Attributes$format = _elm_lang$virtual_dom$VirtualDom$attribute('format');
+var _elm_lang$svg$Svg_Attributes$filterUnits = _elm_lang$virtual_dom$VirtualDom$attribute('filterUnits');
+var _elm_lang$svg$Svg_Attributes$filterRes = _elm_lang$virtual_dom$VirtualDom$attribute('filterRes');
+var _elm_lang$svg$Svg_Attributes$externalResourcesRequired = _elm_lang$virtual_dom$VirtualDom$attribute('externalResourcesRequired');
+var _elm_lang$svg$Svg_Attributes$exponent = _elm_lang$virtual_dom$VirtualDom$attribute('exponent');
+var _elm_lang$svg$Svg_Attributes$end = _elm_lang$virtual_dom$VirtualDom$attribute('end');
+var _elm_lang$svg$Svg_Attributes$elevation = _elm_lang$virtual_dom$VirtualDom$attribute('elevation');
+var _elm_lang$svg$Svg_Attributes$edgeMode = _elm_lang$virtual_dom$VirtualDom$attribute('edgeMode');
+var _elm_lang$svg$Svg_Attributes$dy = _elm_lang$virtual_dom$VirtualDom$attribute('dy');
+var _elm_lang$svg$Svg_Attributes$dx = _elm_lang$virtual_dom$VirtualDom$attribute('dx');
+var _elm_lang$svg$Svg_Attributes$dur = _elm_lang$virtual_dom$VirtualDom$attribute('dur');
+var _elm_lang$svg$Svg_Attributes$divisor = _elm_lang$virtual_dom$VirtualDom$attribute('divisor');
+var _elm_lang$svg$Svg_Attributes$diffuseConstant = _elm_lang$virtual_dom$VirtualDom$attribute('diffuseConstant');
+var _elm_lang$svg$Svg_Attributes$descent = _elm_lang$virtual_dom$VirtualDom$attribute('descent');
+var _elm_lang$svg$Svg_Attributes$decelerate = _elm_lang$virtual_dom$VirtualDom$attribute('decelerate');
+var _elm_lang$svg$Svg_Attributes$d = _elm_lang$virtual_dom$VirtualDom$attribute('d');
+var _elm_lang$svg$Svg_Attributes$cy = _elm_lang$virtual_dom$VirtualDom$attribute('cy');
+var _elm_lang$svg$Svg_Attributes$cx = _elm_lang$virtual_dom$VirtualDom$attribute('cx');
+var _elm_lang$svg$Svg_Attributes$contentStyleType = _elm_lang$virtual_dom$VirtualDom$attribute('contentStyleType');
+var _elm_lang$svg$Svg_Attributes$contentScriptType = _elm_lang$virtual_dom$VirtualDom$attribute('contentScriptType');
+var _elm_lang$svg$Svg_Attributes$clipPathUnits = _elm_lang$virtual_dom$VirtualDom$attribute('clipPathUnits');
+var _elm_lang$svg$Svg_Attributes$class = _elm_lang$virtual_dom$VirtualDom$attribute('class');
+var _elm_lang$svg$Svg_Attributes$capHeight = _elm_lang$virtual_dom$VirtualDom$attribute('cap-height');
+var _elm_lang$svg$Svg_Attributes$calcMode = _elm_lang$virtual_dom$VirtualDom$attribute('calcMode');
+var _elm_lang$svg$Svg_Attributes$by = _elm_lang$virtual_dom$VirtualDom$attribute('by');
+var _elm_lang$svg$Svg_Attributes$bias = _elm_lang$virtual_dom$VirtualDom$attribute('bias');
+var _elm_lang$svg$Svg_Attributes$begin = _elm_lang$virtual_dom$VirtualDom$attribute('begin');
+var _elm_lang$svg$Svg_Attributes$bbox = _elm_lang$virtual_dom$VirtualDom$attribute('bbox');
+var _elm_lang$svg$Svg_Attributes$baseProfile = _elm_lang$virtual_dom$VirtualDom$attribute('baseProfile');
+var _elm_lang$svg$Svg_Attributes$baseFrequency = _elm_lang$virtual_dom$VirtualDom$attribute('baseFrequency');
+var _elm_lang$svg$Svg_Attributes$azimuth = _elm_lang$virtual_dom$VirtualDom$attribute('azimuth');
+var _elm_lang$svg$Svg_Attributes$autoReverse = _elm_lang$virtual_dom$VirtualDom$attribute('autoReverse');
+var _elm_lang$svg$Svg_Attributes$attributeType = _elm_lang$virtual_dom$VirtualDom$attribute('attributeType');
+var _elm_lang$svg$Svg_Attributes$attributeName = _elm_lang$virtual_dom$VirtualDom$attribute('attributeName');
+var _elm_lang$svg$Svg_Attributes$ascent = _elm_lang$virtual_dom$VirtualDom$attribute('ascent');
+var _elm_lang$svg$Svg_Attributes$arabicForm = _elm_lang$virtual_dom$VirtualDom$attribute('arabic-form');
+var _elm_lang$svg$Svg_Attributes$amplitude = _elm_lang$virtual_dom$VirtualDom$attribute('amplitude');
+var _elm_lang$svg$Svg_Attributes$allowReorder = _elm_lang$virtual_dom$VirtualDom$attribute('allowReorder');
+var _elm_lang$svg$Svg_Attributes$alphabetic = _elm_lang$virtual_dom$VirtualDom$attribute('alphabetic');
+var _elm_lang$svg$Svg_Attributes$additive = _elm_lang$virtual_dom$VirtualDom$attribute('additive');
+var _elm_lang$svg$Svg_Attributes$accumulate = _elm_lang$virtual_dom$VirtualDom$attribute('accumulate');
+var _elm_lang$svg$Svg_Attributes$accelerate = _elm_lang$virtual_dom$VirtualDom$attribute('accelerate');
+var _elm_lang$svg$Svg_Attributes$accentHeight = _elm_lang$virtual_dom$VirtualDom$attribute('accent-height');
+
+var _NoRedInk$view_extra$View_Extra$viewIfElements = F2(
+	function (view, list) {
+		return _elm_lang$core$List$isEmpty(list) ? _elm_lang$html$Html$text('') : view(
+			{ctor: '_Tuple0'});
+	});
+var _NoRedInk$view_extra$View_Extra$viewMaybe = F3(
+	function (viewValue, viewError, maybe) {
+		var _p0 = maybe;
+		if (_p0.ctor === 'Just') {
+			return viewValue(_p0._0);
+		} else {
+			return viewError(
+				{ctor: '_Tuple0'});
+		}
+	});
+var _NoRedInk$view_extra$View_Extra$viewJust = F2(
+	function (view, maybe) {
+		var _p1 = maybe;
+		if (_p1.ctor === 'Just') {
+			return view(_p1._0);
+		} else {
+			return _elm_lang$html$Html$text('');
+		}
+	});
+var _NoRedInk$view_extra$View_Extra$viewHiddenIf = F2(
+	function (view, condition) {
+		return condition ? A2(
+			_elm_lang$html$Html$span,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: view,
+				_1: {ctor: '[]'}
+			}) : A2(
+			_elm_lang$html$Html$span,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'display', _1: 'none'},
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: view,
+				_1: {ctor: '[]'}
+			});
+	});
+var _NoRedInk$view_extra$View_Extra$viewIf = F2(
+	function (view, condition) {
+		return condition ? view(
+			{ctor: '_Tuple0'}) : _elm_lang$html$Html$text('');
+	});
+
 var _Gizra$elm_spa_exmple$App_View$view = function (model) {
+	var _p0 = model.showMap ? {ctor: '_Tuple2', _0: 'grid-link', _1: 'active map-link'} : {ctor: '_Tuple2', _0: 'active grid-link', _1: 'map-link'};
+	var gridLinkClasses = _p0._0;
+	var mapLinkClasses = _p0._1;
+	var showMap = {
+		showMap: true,
+		mapMarkers: _Gizra$elm_spa_exmple$People_Utils$getMapPropertiesFromPeople(model.people)
+	};
+	var hideMap = {
+		showMap: false,
+		mapMarkers: {ctor: '[]'}
+	};
 	var allAttributes = _Gizra$elm_spa_exmple$People_Utils$getAttributesFromPeople(model.people);
 	var selectedAttributes = _Gizra$elm_spa_exmple$Magnets_Utils$getSelectedAttributesFromMagnets(model.magnets);
 	var filteredPeople = _elm_lang$core$List$isEmpty(selectedAttributes) ? model.people : A2(
 		_Gizra$elm_dictlist$DictList$filter,
 		F2(
-			function (_p0, person) {
+			function (_p1, person) {
 				return A3(
 					_elm_lang$core$List$foldl,
 					F2(
@@ -14586,9 +14981,9 @@ var _Gizra$elm_spa_exmple$App_View$view = function (model) {
 		},
 		A2(
 			_elm_lang$core$List$map,
-			function (_p1) {
-				var _p2 = _p1;
-				return _Gizra$elm_spa_exmple$People_View$viewPerson(_p2._1);
+			function (_p2) {
+				var _p3 = _p2;
+				return _Gizra$elm_spa_exmple$People_View$viewPerson(_p3._1);
 			},
 			_Gizra$elm_dictlist$DictList$toList(filteredPeople)));
 	return A2(
@@ -14596,14 +14991,98 @@ var _Gizra$elm_spa_exmple$App_View$view = function (model) {
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: peopleOrEmptyResult,
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$id('team-toggle-view'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('ui header computer only right aligned'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$a,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class(gridLinkClasses),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									_Gizra$elm_spa_exmple$App_Model$ToggleMap(hideMap)),
+								_1: {ctor: '[]'}
+							}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$i,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('grid layout icon'),
+									_1: {ctor: '[]'}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Grid View'),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class(mapLinkClasses),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_Gizra$elm_spa_exmple$App_Model$ToggleMap(showMap)),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$i,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('map icon'),
+										_1: {ctor: '[]'}
+									},
+									{ctor: '[]'}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Map View'),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$map,
-					_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
-					_Gizra$elm_spa_exmple$Magnets_View$view(model.magnets)),
-				_1: {ctor: '[]'}
+				_0: A2(_NoRedInk$view_extra$View_Extra$viewHiddenIf, peopleOrEmptyResult, !model.showMap),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_NoRedInk$view_extra$View_Extra$viewHiddenIf,
+						A2(
+							_elm_lang$html$Html$map,
+							_Gizra$elm_spa_exmple$App_Model$MsgMagnets,
+							_Gizra$elm_spa_exmple$Magnets_View$view(model.magnets)),
+						!model.showMap),
+					_1: {
+						ctor: '::',
+						_0: _Gizra$elm_spa_exmple$LocationsMap_View$viewMap(model.showMap),
+						_1: {ctor: '[]'}
+					}
+				}
 			}
 		});
 };
