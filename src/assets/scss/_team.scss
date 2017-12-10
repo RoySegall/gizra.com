@@ -22,6 +22,16 @@
         padding-right: 20px;
       }
     }
+
+    @media only screen and (max-width:991px) {
+      a {
+        display: block;
+
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
   }
 
   .magnets div {
