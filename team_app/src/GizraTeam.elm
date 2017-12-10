@@ -82,7 +82,7 @@ people =
             , Twitter "OritiMG"
             , Github "OritGeron"
             ]
-        , title = "Operations Manager"
+        , title = "Operations Director"
         , attributes =
             [ FamilyAttr Kids
             , FamilyAttr Married
@@ -104,6 +104,33 @@ people =
             }
         }
       )
+      , ( "efratn"
+        , { name = "Efrat Nitzan"
+          , image = "efratn.jpg"
+          , socialNetworks =
+              [ Email "efrat@gizra.com"
+              , Github "efratn"
+              ]
+          , title = "Israel/Europe Executive Director"
+          , attributes =
+              [ DoingSports
+              , FamilyAttr Kids
+              , FoodAttr Kosher
+              , GenderAttr Female
+              , LanguageAttr Hebrew
+              , LanguageAttr English
+              , MusicWhileWorking
+              , NationalityAttr Israel
+              , Pet
+              , PreferedWorkHoursAttr NineToFive
+              , SportAttr Pilates
+              ]
+          , coordinates =
+              { lat = 31.7683
+              , lng = 35.2137
+              }
+          }
+        )
     , ( "IshaDakota"
       , { name = "Adam Stewart"
         , image = "ishadakota.jpg"
@@ -141,7 +168,7 @@ people =
             , Twitter "RachelBaram"
             , Github "RachelBaram"
             ]
-        , title = "Business Development"
+        , title = "Business Development and Strategy"
         , attributes =
             [ DoingSports
             , FamilyAttr Kids
@@ -179,7 +206,7 @@ people =
             , Github "liatsade"
             , Drupal "liats75"
             ]
-        , title = "Employee Training & Development"
+        , title = "UI/UX Specialist and Client Training"
         , attributes =
             [ DoingSports
             , FamilyAttr Kids
@@ -262,37 +289,6 @@ people =
             }
         }
       )
-    , ( "bitamar"
-      , { name = "Itamar Bar-Lev"
-        , image = "bitamar.jpg"
-        , socialNetworks =
-            [ Email "itamar@gizra.com"
-            , Github "bitamar"
-            , Drupal "itamar"
-            ]
-        , title = "Team Lead"
-        , attributes =
-            [ FamilyAttr Kids
-            , FamilyAttr Married
-            , GenderAttr Male
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , LanguageAttr German
-            , LivedAbroad
-            , MusicAttr PlayingInstrument
-            , MusicAttr Sing
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , PreferedWorkHoursAttr NineToFive
-            , TvAndMovieGenereAttr Drama
-            , WorkingRemote
-            ]
-        , coordinates =
-            { lat = 52.52
-            , lng = 13.405
-            }
-        }
-      )
     , ( "ordavidil"
       , { name = "Or David"
         , image = "ordavidil.jpg"
@@ -322,33 +318,6 @@ people =
         , coordinates =
             { lat = 32.094286
             , lng = 34.783612
-            }
-        }
-      )
-    , ( "efratn"
-      , { name = "Efrat Nitzan"
-        , image = "efratn.jpg"
-        , socialNetworks =
-            [ Email "efrat@gizra.com"
-            , Github "efratn"
-            ]
-        , title = "Account Manager"
-        , attributes =
-            [ DoingSports
-            , FamilyAttr Kids
-            , FoodAttr Kosher
-            , GenderAttr Female
-            , LanguageAttr Hebrew
-            , LanguageAttr English
-            , MusicWhileWorking
-            , NationalityAttr Israel
-            , Pet
-            , PreferedWorkHoursAttr NineToFive
-            , SportAttr Pilates
-            ]
-        , coordinates =
-            { lat = 31.7683
-            , lng = 35.2137
             }
         }
       )
@@ -529,5 +498,29 @@ people =
             }
         }
       )
+      , ( "amaksimov"
+        , { name = "Alex Maksimov"
+          , image = "alex.jpg"
+          , socialNetworks =
+              [ Email "aleksey@gizra.com"
+              , Github "amaksimov"
+              ]
+          , title = "Developer"
+          , attributes =
+              [ FamilyAttr Married
+              , GenderAttr Male
+              , LanguageAttr English
+              , LanguageAttr Russian
+              , LivedAbroad
+              , NationalityAttr Russia
+              , PreferedWorkHoursAttr NineToFive
+              , WorkingRemote
+              ]
+          , coordinates =
+              { lat = 55.763
+              , lng = 37.849
+              }
+          }
+        )
     ]
         |> DictList.fromList
