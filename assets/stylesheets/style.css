@@ -77,6 +77,11 @@ footer.ui.vertical.segment {
         cursor: default; }
       #team-app #team-toggle-view a:first-child {
         padding-right: 20px; }
+    @media only screen and (max-width: 991px) {
+      #team-app #team-toggle-view a {
+        display: block; }
+        #team-app #team-toggle-view a:first-child {
+          padding: 0; } }
   #team-app .magnets div {
     color: white;
     background-color: #333;
