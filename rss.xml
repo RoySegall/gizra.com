@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Sat, 09 Dec 2017 19:30:07 -0600</lastBuildDate>
-    <pubDate>Sat, 09 Dec 2017 19:30:07 -0600</pubDate>
+    <lastBuildDate>Sat, 09 Dec 2017 19:34:13 -0600</lastBuildDate>
+    <pubDate>Sat, 09 Dec 2017 19:34:13 -0600</pubDate>
     <ttl>1800</ttl>
 
     
@@ -282,7 +282,25 @@ new field.&lt;/p&gt;
         <description>
           &lt;p&gt;&lt;em&gt;This post is a translation of the transcript of the lightning talk I gave during &lt;a href=&quot;https://2017.drupalcamp.es/&quot;&gt;DrupalCamp Spain 2017&lt;/a&gt; in Madrid. The title of the talk was “&lt;a href=&quot;https://2017.drupalcamp.es/sessions/why-drupal-davidbaltha&quot;&gt;Why Drupal&lt;/a&gt;” and talked about my personal reasons for developing with Drupal. You can find the slides, with the transcript in Spanish &lt;a href=&quot;http://slides.com/david_hernandez/why-drupal/&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/why-drupal.png&quot; alt=&quot;Why Drupal?&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/why-drupal.png&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Why Drupal?
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;h2 id=&quot;why-drupal&quot;&gt;Why Drupal?&lt;/h2&gt;
 
@@ -294,11 +312,47 @@ new field.&lt;/p&gt;
 
 &lt;p&gt;But before jumping to the conclusions, let’s start from the beginning.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/about-me.png&quot; alt=&quot;About me&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/about-me.png&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      About me
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;I am David Hernández and for me, it is a privilege to be here, sharing this lightning talk with all of you.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/privilege.png&quot; alt=&quot;Privilege&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/privilege.png&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Privilege
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;And I mean it.&lt;/p&gt;
 
@@ -312,13 +366,49 @@ new field.&lt;/p&gt;
 
 &lt;p&gt;My gender doesn’t cause people to question why I have not settled yet, and why I do not yet have a family and children. My gender always helped me to find good jobs and better conditions than the fifty percent of the population of my country, under the same conditions.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/problem-of-privilege.png&quot; alt=&quot;The problem of privilege&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/problem-of-privilege.png)&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      The problem of privilege
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;And this continues forever. And it is a problem. But does it have a solution?&lt;/p&gt;
 
 &lt;p&gt;In my opinion, there is a really simple solution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/end-of-privilege.png&quot; alt=&quot;The end of privilege&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/end-of-privilege.png)&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      The end of privilege
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;To end privilege. But, as this is extremely complicated, we need to continue moving in that direction in little steps.&lt;/p&gt;
 
@@ -330,7 +420,25 @@ new field.&lt;/p&gt;
 
 &lt;p&gt;But… How is all of this related to Drupal?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/free-software.png&quot; alt=&quot;Free software&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/free-software.png)&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Free Software
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;The answer is the Free / Libre Software.&lt;/p&gt;
 
@@ -342,7 +450,25 @@ new field.&lt;/p&gt;
 
 &lt;p&gt;Let’s use our privileged position to help the rest of the world to access those tools more easily. Let’s give them more tools and more power. Let’s contribute code. Let’s spread the use of Free Software. Let’s complain when we are forced to use a private software when a free / libre alternative exists.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/why-drupal/drupal.png&quot; alt=&quot;Drupal&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/why-drupal/drupal.png)&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Drupal
+    &lt;/div&gt;
+  
+&lt;/div&gt;
 
 &lt;p&gt;And that’s the reason I use Drupal. And also the reason I use Apache, MySQL, PHP, Firefox, Linux, Vim, Elm, LibreOffice and so many more tools. That’s the reason I always ask or look for a free / libre alternative before being forced to use a private solution.&lt;/p&gt;
 
