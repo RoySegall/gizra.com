@@ -2,6 +2,7 @@
 title: Internal Email - as Post
 tags:
   - The Gizra Way
+  - Internal Emails
 permalink: "/content/internal-email/"
 layout: post
 image: "/assets/images/posts/internal-email/thumb.jpg"
