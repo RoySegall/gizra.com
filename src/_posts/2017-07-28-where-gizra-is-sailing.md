@@ -1,5 +1,5 @@
 ---
-title: "Where Gizra is sailing"
+title: "Where Gizra is Sailing"
 tags:
   - The Gizra Way
   - Internal Emails
@@ -10,7 +10,7 @@ published: true
 description: "Internal email about becoming distributed, layoffs we had, and raising the bar."
 ---
 
-Below you will find a real and un-touched internal letter I've sent to all Gizra employees.
+Below you will find a real and un-edited internal letter I've sent to all Gizra employees.
 
 It's about becoming distributed, layoffs we had, and raising the bar.
 
@@ -22,9 +22,9 @@ Subject: __Where Gizra is sailing__
 
 <!-- more -->
 
-On the third year of my studies (B.A in Fashion Design) I decided to take a one year break. I had an idea for a book I wanted to try to write. People going for a "one year break" just before their final year usually, as you may guess, never come back.
+On the third year of my studies (B.A in Fashion Design) I decided to take a one-year break. I had an idea for a book I wanted to try to write. People going for a "one-year break" just before their final year usually, as you may guess, never come back.
 
-I remember talking with one of my Professors, and I told him I know that everybody thinks I won't come back. They think that I'm abandoning ship.
+I remember talking with one of my professors, and I told him I know that everybody thinks I won't come back. They think that I'm abandoning ship.
 
 I remember he smiled when he told me: "You were never on the ship. You were always on your own sailboat, and floated next to the ship for three years. Now, you are just taking a detour. Maybe you'll come back."
 
