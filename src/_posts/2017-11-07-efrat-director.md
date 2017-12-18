@@ -6,7 +6,7 @@ tags:
 permalink: "/content/efrat-executive-director/"
 layout: post
 image: "/assets/images/posts/efrat-executive-director/thumb.jpg"
-published: true
+published: false
 description: "Internal email about Efrat becoming our Executive Director."
 ---
 
