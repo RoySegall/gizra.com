@@ -109,6 +109,7 @@ people =
           , image = "efratn.jpg"
           , socialNetworks =
               [ Email "efrat@gizra.com"
+              , Twitter "efratns"
               , Github "efratn"
               ]
           , title = "Israel/Europe Executive Director"
