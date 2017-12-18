@@ -9346,8 +9346,12 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 								_0: _Gizra$elm_spa_exmple$People_Model$Email('efrat@gizra.com'),
 								_1: {
 									ctor: '::',
-									_0: _Gizra$elm_spa_exmple$People_Model$Github('efratn'),
-									_1: {ctor: '[]'}
+									_0: _Gizra$elm_spa_exmple$People_Model$Twitter('efratns'),
+									_1: {
+										ctor: '::',
+										_0: _Gizra$elm_spa_exmple$People_Model$Github('efratn'),
+										_1: {ctor: '[]'}
+									}
 								}
 							},
 							title: 'Israel/Europe Executive Director',
