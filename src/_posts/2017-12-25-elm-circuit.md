@@ -10,7 +10,7 @@ image: "/assets/images/posts/elm-circuit/thumb.jpg"
 description: "Elm and Headless Drupal help drive live auction sales"
 ---
 
-If you happen to know Brice - my colleague and Gizra's CEO - you probably have picked up that he doesn't get rattled too easily.  While I find myself developing extremely annoying ticks during  stressful situations, Brice is a role model for stoicism.
+If you happen to know Brice - my colleague and Gizra's CEO - you probably have picked up that he doesn't get rattled too easily. While I find myself developing extremely annoying ticks during stressful situations, Brice is a role model for stoicism.
 
 Combine that with the fact that he knows I dislike speaking on the phone, let alone at 6:53pm, almost two hours after my work day is over, you'd probably understand why I was surprised to get a call from him. "Surprised" as in, immediately getting a stomach ache.
 
@@ -18,14 +18,14 @@ The day I got that call from him was a Sale day. You see, we have this product w
 
 
 `-` "Listen Bruce," (that's how I call him) "I'm on my way to working out. Did something crash?"
-I don’t  always think that the worst has happened, but you did just read the background.  
+I don’t always think that the worst has happened, but you did just read the background.  
 `-` "No."
 
-I was expecting a long pause. In a way, I think he kind of enjoys those moments, where he knows I don't know if it's good or bad news.  In a way, I think I actually do somehow enjoy them myself. But instead he said, "Are you next to a computer?"
+I was expecting a long pause. In a way, I think he kind of enjoys those moments, where he knows I don't know if it's good or bad news. In a way, I think I actually do somehow enjoy them myself. But instead he said, "Are you next to a computer?"
 
 `-` "No. I'm in the car. Should I turn back? What happened?"
 
-I really hate to do this, but in order for his  next sentence to make sense I have to go back exactly 95 years, to 1922  Tokyo, Japan.
+I really hate to do this, but in order for his next sentence to make sense I have to go back exactly 95 years, to 1922 Tokyo, Japan.
 
 <!-- more -->
 
@@ -35,15 +35,15 @@ Professor Albert Einstein was visiting there, and the story tells that he scribb
 
 I wonder if it's really the way it went. I'd like to believe it is. Seriously, just imagine that event!
 
-Anyway, back to late October of 2017. Professor Einstein is long dead. The bellboy, even if still alive, is surely no longer a bellboy. Me, in my car, waiting for the light to turn Green - it's either a left to go workout, or  a u-turn back home.  And the note. The note!
+Anyway, back to late October of 2017. Professor Einstein is long dead. The bellboy, even if still alive, is surely no longer a bellboy. Me, in my car, waiting for the light to turn Green - it's either a left to go workout, or a u-turn back home. And the note. The note!
 
-That note was up for  sale that day. The opening price was $2,000, and it was estimated to be sold between $5,000 to $8,000.
+That note was up for sale that day. The opening price was $2,000, and it was estimated to be sold between $5,000 to $8,000.
 
 `-` "It's just passed a million dollars!"
 
 That's what he said next. Mind the exclamation mark. Brice almost never pronounces it, but this time I could swear I heard it. Heck, if we were next to each other we might have ended up hugging and crying together, and marvelling at how something we've created ended up selling a note for $1.6M!
 
-Yes, the same note that reads "A calm and modest life brings more happiness than the pursuit of success combined with constant restlessness" was finally purchased after  a hectic thirty minutes bidding war for lots and lots of money. I always enjoy  good irony as much as I enjoy a good story. And by the way - it [totally happened](https://www.nytimes.com/2017/10/25/world/middleeast/einstein-theory-of-happiness.html).
+Yes, the same note that reads "A calm and modest life brings more happiness than the pursuit of success combined with constant restlessness" was finally purchased after a hectic thirty minutes bidding war for lots and lots of money. I always enjoy good irony as much as I enjoy a good story. And by the way - it [totally happened](https://www.nytimes.com/2017/10/25/world/middleeast/einstein-theory-of-happiness.html).
 
 
 {% include thumbnail.html image_path="/assets/images/posts/elm-circuit/winners.jpg" caption="Screenshot of the live sale" %}
@@ -75,9 +75,9 @@ __A__: Could you also ask me why not Haskell? It would be easier to answer both 
 __Q__: Why not Haskell?  
 __A__: Great questions! I'll start with the latter. We've been dabbling with Haskell for some time now, and after doing Elm for so long we can definitely appreciate the language. However, our team was missing two important things: experience and mastery.
 
-I think that often time, in the (silly) arguments of which is the best framework/ system, we are presented with the language’s features. But we need to also take  into account experience. After 10 years with Drupal, there are very few problems we haven't encountered, and we have had a chance to iterate and improve those solutions. We have the manpower in Gizra that is most experienced with Drupal, so scaling the dev team is easier. Combine it with a big ecosystem such as Panteon for hosting, Blackfire.io integrated in our CI to prevent regression in performance, Drupal was in the end the budget correct choice.
+I think that often time, in the (silly) arguments of which is the best framework/ system, we are presented with the language’s features. But we need to also take into account experience. After 10 years with Drupal, there are very few problems we haven't encountered, and we have had a chance to iterate and improve those solutions. We have the manpower in Gizra that is most experienced with Drupal, so scaling the dev team is easier. Combine it with a big ecosystem such as Panteon for hosting, Blackfire.io integrated in our CI to prevent regression in performance, Drupal was in the end the budget correct choice.
 
-So back to Drupal 8. I've never been too shy on my opinion of Drupal 8. It's probably the best CMS out there, but from my Drupal 7 perspective and current needs, it doesn't offer anything that is much better. For example, we've never had config problems in Drupal 7 we couldn't solve, so Drupal 8's config feature that everybody waves around isn't that appealing. Also, Drupal 8's DX is indeed better, but at a cost of way more complexity. In the end, the way I see it - if you scratch Drupal 8 in some part, you will find Drupal 7 buried.
+So back to Drupal 8. I've never been too shy on my opinion of Drupal 8. It's probably the best CMS out there, but from my Drupal 7 perspective and current needs, it doesn't offer anything that is much better. For example, we've never had config problems in Drupal 7 we couldn't solve, so Drupal 8's config feature that everybody raves around isn't that appealing. Also, Drupal 8's DX is indeed better, but at a cost of way more complexity. In the end, the way I see it - if you scratch Drupal 8 in some part, you will find Drupal 7 buried.
 
 So Drupal 8 is on one hand not so far from Drupal 7, and in the other not radically different enough to be worth the learning curve.
 
