@@ -117,3 +117,5 @@ Keen.io is nifty, since it allows us to create analytics page per auction house,
 Even Though the latency of keen is quite low (about 30 sec), it's not good enough for real-time experience -- certainly where each items sale can be even less than a minute. This is where Serverless comes in. It acts as a proxy server, where each client sends `MouseIn`, `MouseOut` events, and Serverless is responsible to Broadcasting it via Pusher to the Auctioneers' private channel.
 
 Setting up Serverless was lots of fun, and knowing there's zero thought we need to give to the infrastructure, along with its cost - made it fit nicely into our product.
+
+{% include thumbnail.html image_path="/assets/images/posts/elm-circuit/keen.jpg" caption="Showing the number of hovers a specific user over the `Place bid` button" %}
