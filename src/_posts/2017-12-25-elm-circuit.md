@@ -53,7 +53,7 @@ We're now launching a new version of the webapp. It has a Headless Drupal in the
 
 ## Elm
 
-Even after almost three years, Elm doesn't seize to amaze me. I honestly don’t get why people are still directly JSing without at least TypeScript, to get a taste of something better and move on to a better solution. For our needs, Elm is definitely the right solution. If rewriting 60 flies with zero bugs once it compiles doesn't impress you, then probably nothing I'll present here will.
+Even after almost three years, [Elm](http://elm-lang.org/) doesn't seize to amaze me. I honestly don’t get why people are still directly JSing without at least TypeScript, to get a taste of something better and move on to a better solution. For our needs, Elm is definitely the right solution. If rewriting 60 flies with zero bugs once it compiles doesn't impress you, then probably nothing I'll present here will.
 
 There are many advantages to Elm, and one of the bigger ones is how we can help the compiler help us use types. Here's an example of how we model the notion of an Item status. When selling an item it transitions through many different statuses. Is it open for sale? Is it the active item? Was it withdrawn by the auctioneer? Is it Active, Going, Gone?
 
@@ -65,15 +65,15 @@ The above is our way of telling the compiler what are the allowed states. You ca
 
 We decided to go with a super complex Drupal 8 setup. The kind that, you at your home probably don't have and never will. It's a super secret branch that …
 
-No, just kidding, It's Drupal 7. With RESTful 1.x, and just the custom code we need along with some key modules such as Entity API, Message, Features and it is all tested with a large amount of SimpleTests.
+No, just kidding, It's Drupal 7. With [RESTful 1.x](https://github.com/RESTful-Drupal/restful/tree/7.x-1.x), and just the custom code we need along with some key modules such as Entity API, Message, Features and it is all tested with a large amount of SimpleTests.
 
 Here is a short Q&A to questions no one really asked me, probably because I offer an answer before they are asked:
 
-Q: Why not Drupal 8?
-A: Could you also ask me why not Haskell? It would be easier to answer both these questions together.
+__Q__: Why not Drupal 8?  
+__A__: Could you also ask me why not Haskell? It would be easier to answer both these questions together.
 
-Q: Why not Haskell?
-A: Great questions! I'll start with the latter. We've been dabbling with Haskell for some time now, and after doing Elm for so long we can definitely appreciate the language. However, we were missing two important things: experience and mastery.
+__Q__: Why not Haskell?  
+__A__: Great questions! I'll start with the latter. We've been dabbling with Haskell for some time now, and after doing Elm for so long we can definitely appreciate the language. However, we were missing two important things: experience and mastery.
 
 I think that often time, in the (silly) arguments of which is the best framework/system, we are presented with the language’s features. But we need to also take  into account experience. After 10 years with Drupal, there are very few problems we haven't encountered, and we have ha a chance to iterate and improve those solutions. We have the manpower in Gizra that is most experienced with Drupal, so scaling the dev team is easier. Combine it with a big ecosystem such as Panteon for hosting, Blackfire.io integrated in our CI to prevent regression in performance, Drupal was in the end the budget correct choice.
 
@@ -81,7 +81,7 @@ So back to Drupal 8. I've never been too shy on my opinion of Drupal 8. It's pro
 
 So Drupal 8 is on one hand not so far from Drupal 7, and in the other not radically different enough to be worth the learning curve.
 
-Don't get me wrong, we do develop on Drupal 8 for clients in Gizra. But for new projects, we still recommend starting with Drupal 7. And for non-CMS (similar to our CircuitAuction webapp), we're looking to start using Yesod - a Haskell framework.
+Don't get me wrong, we do develop on Drupal 8 for clients in Gizra. But for new projects, we still recommend starting with Drupal 7. And for non-CMS (similar to our [Circuit Auction](http://www.circuitauction.com/) webapp), we're looking to start using Yesod - a Haskell framework.
 
 If I had to choose one topic I'm proud of in this project on the Drupal side, I'd have to pick our attention to docs and automatic testing.
 
