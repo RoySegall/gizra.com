@@ -18,7 +18,7 @@ The day I got that call from him was a Sale day. You see, we have this product w
 
 
 `-` "Listen Bruce," (that's how I call him) "I'm on my way to working out. Did something crash?"
-I don’t  always think that the worst has happened, but you did just read the background.
+I don’t  always think that the worst has happened, but you did just read the background.  
 `-` "No."
 
 I was expecting a long pause. In a way, I think he kind of enjoys those moments, where he knows I don't know if it's good or bad news.  In a way, I think I actually do somehow enjoy them myself. But instead he said, "Are you next to a computer?"
