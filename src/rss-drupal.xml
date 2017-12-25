@@ -1,6 +1,6 @@
 ---
 layout: nil
-title : Elm RSS Feed
+title : Drupal RSS Feed
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
@@ -11,11 +11,10 @@ title : Elm RSS Feed
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <ttl>1800</ttl>
-
     {% for post in site.posts %}
       {% assign planet = false %}
       {% for t in post.tags %}
-        {% if t == 'Elm' %}
+        {% if t == 'Drupal-planet' %}
           {% assign planet = true %}
         {% endif %}
       {% endfor %}
