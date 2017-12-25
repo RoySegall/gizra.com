@@ -112,7 +112,7 @@ We're using [keen.io](https://keen.io/) to get analytics. It's pretty exciting t
 
 Keen.io is nifty, since it allows us to create analytics page per auction house, without them having any access to others auction houses.
 
-[Serverless](https://serverless.com/) is useful when we want to answer some of those questions in real time. That is the question "Which user hovered over the `Place Bid` button but didn't press it?" is useful for some post-sale conclusions, but what if we wanted to ask "Which user is __currently__ hovering  over the `Place Bid` button?", so the Auctioneer could stall the sale, giving a hesitating bidder a chance to place their bid.
+[Serverless](https://serverless.com/) is useful when we want to answer some of those questions in real time. That is the question "Which user hovered over the `Place Bid` button but didn't press it?" is useful for some post-sale conclusions, but what if we wanted to ask "Which user is _currently_ hovering  over the `Place Bid` button?", so the Auctioneer could stall the sale, giving a hesitating bidder a chance to place their bid.
 
 Even Though the latency of keen is quite low (about 30 sec), it's not good enough for real-time experience -- certainly where each items sale can be even less than a minute. This is where Serverless comes in. It acts as a proxy server, where each client sends `MouseIn`, `MouseOut` events, and Serverless is responsible to Broadcasting it via Pusher to the Auctioneers' private channel.
 
