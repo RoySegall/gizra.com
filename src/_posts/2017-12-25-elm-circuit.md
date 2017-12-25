@@ -17,13 +17,13 @@ Combine that with the fact that he knows I dislike speaking on the phone, let al
 The day I got that call from him was a Sale day. You see, we have this product we've developed called ״Circuit Auction״, which allows auction houses to manage their catalog and run live, real-time, auction sales - the "Going once, Going twice" type.
 
 
-- "Listen Bruce," (that's how I call him) "I'm on my way to working out. Did something crash?"
+`-` "Listen Bruce," (that's how I call him) "I'm on my way to working out. Did something crash?"
 I don’t  always think that the worst has happened, but you did just read the background.
-- "No."
+`-` "No."
 
 I was expecting a long pause. In a way, I think he kind of enjoys those moments, where he knows I don't know if it's good or bad news.  In a way, I think I actually do somehow enjoy them myself. But instead he said, "Are you next to a computer?"
 
-- "No. I'm in the car. Should I turn back? What happened?"
+`-` "No. I'm in the car. Should I turn back? What happened?"
 
 I really hate to do this, but in order for his  next sentence to make sense I have to go back exactly 95 years, to 1922  Tokyo, Japan.
 
@@ -39,7 +39,7 @@ Anyway, back to late October of 2017. Professor Einstein is long dead. The bellb
 
 That note was up for  sale that day. The opening price was $2,000, and it was estimated to be sold between $5,000 to $8,000.
 
-- "It's just passed a million dollars!"
+`-` "It's just passed a million dollars!"
 
 That's what he said next. Mind the exclamation mark. Brice almost never pronounces it, but this time I could swear I heard it. Heck, if we were next to each other we might have ended up hugging and crying together, and marvelling at how something we've created ended up selling a note for $1.6M!
 
@@ -105,10 +105,10 @@ It's actually a bit more complicated than that as different people should see sl
 
 We're using [keen.io](https://keen.io/) to get analytics. It's pretty exciting to see the reactions of the clients - the auction house owners, when we tell them about this. Because they can suddenly start getting answers for questions they didn't know they could ask.
 
-- "Which user hovered over the `Place Bid` button but didn't press it?"
-- "Who used the carousel, and to which item did they they scroll?"
-- "Do second time bidders bid more?"
-- "When do most bidders join the sale?"
+`-` "Which user hovered over the `Place Bid` button but didn't press it?"
+`-` "Who used the carousel, and to which item did they they scroll?"
+`-` "Do second time bidders bid more?"
+`-` "When do most bidders join the sale?"
 
 Keen.io is nifty, since it allows us to create analytics page per auction house, without them having any access to others auction houses.
 
@@ -117,6 +117,3 @@ Keen.io is nifty, since it allows us to create analytics page per auction house,
 Even Though the latency of keen is quite low (about 30 sec), it's not good enough for real-time experience -- certainly where each items sale can be even less than a minute. This is where Serverless comes in. It acts as a proxy server, where each client sends `MouseIn`, `MouseOut` events, and Serverless is responsible to Broadcasting it via Pusher to the Auctioneers' private channel.
 
 Setting up Serverless was lots of fun, and knowing there's zero thought we need to give to the infrastructure, along with its cost - made it fit nicely into our product.
-
-*** GIF***
-<img src="https://user-images.githubusercontent.com/125707/32192704-9f242468-bdbd-11e7-8071-e2a8eda8f10c.gif" />
