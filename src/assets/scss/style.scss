@@ -7,8 +7,9 @@ $gizra-blue-dark-shadow: #172f4f;
 
 //Font Stacks
 $esteban: 'Esteban', serif;
-$montserat: 'Montserat', sans-serif;
 $gizra: 'Abril Fatface', sans-serif;
+$montserat: 'Montserat', sans-serif;
+$openSans : 'Open Sans', sans-serif;
 
 @import 'blog_list';
 @import 'homepage';
@@ -18,7 +19,7 @@ $gizra: 'Abril Fatface', sans-serif;
 @import 'pygments';
 
 body {
-  font-family: 'Esteban', serif;
+  font-family: $openSans;
 }
 
 a {
