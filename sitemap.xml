@@ -1248,10 +1248,6 @@
      </url>
   
     <url>
-      <loc>https://www.gizra.com/elm-rss/</loc>
-     </url>
-  
-    <url>
       <loc>https://www.gizra.com/jobs/project-manager/</loc>
      </url>
   
@@ -1264,15 +1260,11 @@
      </url>
   
     <url>
+      <loc>https://www.gizra.com/projects/</loc>
+     </url>
+  
+    <url>
       <loc>https://www.gizra.com/</loc>
-     </url>
-  
-    <url>
-      <loc>https://www.gizra.com/taxonomy/term/1/all/feed/</loc>
-     </url>
-  
-    <url>
-      <loc>https://www.gizra.com/team/</loc>
      </url>
   
     <url>
@@ -1280,7 +1272,15 @@
      </url>
   
     <url>
-      <loc>https://www.gizra.com/projects/</loc>
+      <loc>https://www.gizra.com/team/</loc>
+     </url>
+  
+    <url>
+      <loc>https://www.gizra.com/rss-drupal.xml</loc>
+     </url>
+  
+    <url>
+      <loc>https://www.gizra.com/rss-elm.xml</loc>
      </url>
   
     <url>
