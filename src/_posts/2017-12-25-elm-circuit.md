@@ -53,7 +53,7 @@ We're now launching a new version of the webapp. It has Headless Drupal in the b
 
 ## Elm
 
-Even after almost three years, [Elm](http://elm-lang.org/) doesn't seize to amaze me. I honestly don’t get why people are still directly JSing without at least TypeScript, to get a taste of something better and move on to a better solution. For our needs, Elm is definitely the right solution. If rewriting 60 flies with zero bugs once it compiles doesn't impress you, then probably nothing I'll present here will.
+Even after almost three years, [Elm](http://elm-lang.org/) doesn't cease to amaze me. I honestly don’t get why people are still directly JSing without at least TypeScript, to get a taste of something better and move on to a better solution. For our needs, Elm is definitely the right solution. If rewriting 60 flies with zero bugs once it compiles doesn't impress you, then probably nothing I'll present here will.
 
 There are many advantages to Elm, and one of the bigger ones is how we can help the compiler help us using types. Here's an example of how we model the notion of an Item status. When selling an item it transitions through many different states. Is it open for sale? Is it the currently selected item? Was it withdrawn by the auctioneer? Is it Active, Going, Gone?
 
