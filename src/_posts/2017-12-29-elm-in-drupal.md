@@ -3,6 +3,8 @@ title: "Have Your Cake and Eat it Too: Elm Apps in Drupal Panels"
 tags:
   - Drupal
   - Elm
+  - "Drupal-planet"
+  - "Non-Profit"
 permalink: "/content/elm-in-drupal-panels/"
 layout: post
 image: "/assets/images/posts/elm-in-drupal-panels/thumb.jpg"
@@ -26,6 +28,8 @@ And so it goes with web projects:
 **Stakeholder:** [*eyes glazed over*] Yeah, we don’t want to do that.
 
 But there’s is a way.
+
+<!-- more -->
 
 {% include thumbnail.html image_path="assets/images/posts/elm-in-drupal-panels/cake.jpg" caption="Have your cake and eat it too - ©Leslie Fay Richards (CC BY 2.0)" %}
 
@@ -61,7 +65,7 @@ Once a user gets into their planner (the equivalent of the shopping cart on a co
 
 Drupal could certainly handle those actions, but given the page refreshes that would be needed, the resulting interface would be sluggish, prone to error, and not at all in line with users’ expectation of a modern “shopping” experience. But because we could define all of the actions that we wanted on one screen, we began to think of the "cart" page as a SPA. As such, it was a perfect opportunity to use Elm inside a Panel and provide a really robust user experience.
 
-{% include thumbnail.html image_path="assets/images/posts/elm-in-drupal-panels/participation.gif" caption="Have your cake and eat it too - ©Leslie Fay Richards (CC BY 2.0)" %}
+{% include thumbnail.html image_path="assets/images/posts/elm-in-drupal-panels/participation.gif" caption="Fast and stable (and well-tested) performance, slick user experience, and cost efficiency using Elm." %}
 
 While the biggest benefit to the user is the greatly enhanced interaction, perhaps the biggest benefit to the client was the cost. The cost to handle this feature with an Elm application was only marginally more costly than it would have been in Drupal only. The most significant extra development is to provide the necessary data to the Elm app via RESTful endpoints, everything else - from the developer experience perspective -  is vastly improved, because Elm is so much easier to deal with and provides so many guarantees.
 
