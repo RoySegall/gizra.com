@@ -8,7 +8,7 @@ layout: post
 image: "/assets/images/posts/elm-in-drupal-panels/thumb.jpg"
 author: IshaDakota
 published: true
-description: "I tell my kids all the time that they can’t have both."
+description: "In these cases where our clients have existing Drupal websites and big ideas for functionality that their users have come to expect, we can now deliver something better."
 ---
 
 I tell my kids all the time that they can’t have both - whether it’s ice cream and cake or pizza and donuts - and they don’t like it. It’s because kids are uncorrupted, and their view of the world is pretty straightforward - usually characterized by a simple question: why not?
