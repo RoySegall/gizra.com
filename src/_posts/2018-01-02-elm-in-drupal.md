@@ -1,7 +1,6 @@
 ---
 title: "Have Your Cake and Eat it Too: Elm Apps in Drupal Panels"
 tags:
-  - Drupal
   - Elm
   - "Drupal-planet"
   - "Non-Profit"
