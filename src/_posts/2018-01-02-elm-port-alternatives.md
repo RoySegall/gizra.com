@@ -10,9 +10,9 @@ author: rgrempel
 
 Once you start writing apps (and packages) in [Elm](http://elm-lang.org/), it's
 tempting to avoid the rough-and-tumble world of Javascript as much as possible.
-Yet in the world of implementing features for paying clients, it doesn't always
-make sense to take things that already have a Javascript implementation and
-re-implement them in pure Elm. In fact, sometimes it isn't even possible!
+Yet when implementing features for paying clients, it doesn't always make sense
+to take things that already have a Javascript implementation and re-implement
+them in pure Elm. In fact, sometimes it isn't even possible!
 
 Now, Elm has a very fine mechanism for integrating bits of Javascript when
 necessary -- [ports](https://guide.elm-lang.org/interop/javascript.html)!
@@ -60,7 +60,7 @@ asynchronous, Elm's port mechanism is strangely unhelpful when you need to
 associate questions with answers. Consider the
 [example](https://guide.elm-lang.org/interop/javascript.html) given in the Elm
 docs, for integrating a Javascript spell-checking mechanism. It imagines two
-ports -- one for sending strings from Elm to Javascript to check, and one for Javascript
+ports -- one for sending strings from Elm to Javascript, and one for Javascript
 to send suggestions back to Elm.
 
 ```elm
@@ -141,13 +141,14 @@ into something roughly like:
 The Javascript code does receive an ID which it needs to include in the response, but
 that's it -- the rest of the book-keeping is handled by the `Porter` module.
 
-So, that looks like a promising approach, but it doesn't have all the elegance
-of tasks.  For one thing, there is some setup that I haven't shown you (the
-usual integration of `PortMsg` with the Elm architecture, and some
-configuration). Plus, what you eventually get is a `Cmd` rather than a `Task`,
-so your ability to deal with intermediate results is limited. For instance, you
-can't do neat stuff like chaining several tasks together before feeding things
-back into your `update` function.
+So, that looks like a promising approach, which I'm planning to try on the next
+suitable occasion. However, it still doesn't have all the elegance of tasks.
+For one thing, there is some setup that I haven't shown you (the usual
+integration of `PortMsg` with the Elm architecture, and some configuration).
+Plus, what you eventually get is a `Cmd` rather than a `Task`, so your ability
+to deal with intermediate results is limited. For instance, you can't do neat
+stuff like chaining several tasks together before feeding things back into your
+`update` function.
 
 ```elm
     let
@@ -188,25 +189,26 @@ Here's how it can work.
 - However, you can determine what response to provide however you like. So, you
   can check for a specially-defined URL that represents a specific question,
   take a look at the JSON the app has provided, and construct a response
-  based on that JSON in whatever manner is appropriate.
+  in whatever manner is appropriate.
 
-So, from the Elm app's point of view, it is:
+In other words, you can treat the special URL as if it were a kind of function call,
+and the JSON body as if it were the parameters provided to the function. So, from the
+Elm app's point of view, you:
 
-- constructing an HTTP request to a special URL;
-- providing some JSON which represents the question it is asking; and
-- decoding the answer that it gets.
+- construct an HTTP request to a special URL;
+- provide some JSON which represents the question you are asking; and
+- decode the answer that you get.
 
 But no network request is actually made. Instead, the request is intercepted by
 your Javascript service-worker code, which can construct a response as it
 wishes.
 
-The reason this can be attractive is that HTTP requests are pretty nice in Elm.
-You can encode the JSON to provide, decode the JSON that comes back, and you
-get a task that can be chained and can carry along implicit context. You even
-have a well-understood way of communicating and handling errors. It's a
-pleasant, well-understood mechanism.  So, it's nice to be able to use it invoke
-arbitrary Javascript code inside the service-worker, rather than just an actual
-network request.
+Why might this be an attractive option? Well, HTTP requests are pretty nice in
+Elm.  You can encode the JSON to provide, decode the JSON that comes back, and
+you get a task that can be chained and can carry along implicit context. You
+even have a well-defined way of handling errors. It's a pleasant,
+well-understood mechanism.  So, it's nice to be able to re-use this familiar
+mechanism to invoke arbitrary Javascript code inside the service-worker.
 
 Now, one difficulty is that the service-worker does not have direct access to
 the DOM.  A service-worker can access the DOM indirectly via `postMessage`, so
@@ -222,8 +224,10 @@ Javascript libraries like [TinyMCE](https://www.tinymce.com/) or
 [DropzoneJS](http://www.dropzonejs.com/) work.
 
 - You put a special `div` in your HTML with a particular ID and/or class.
+
 - You call some function that initializes your `div` and sets up some
   listeners for events emitted by it.
+
 - The library provides some content inside the `div`, the user interacts
   with it, and events are emitted.
 
