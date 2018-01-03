@@ -40,10 +40,9 @@ function.
 
 Now, there are important reasons why ports work this way. Basically, it means
 that you don't need to worry about whether your Javascript code is "pure" and
-free of side-effects. (If you don't know what that means, then that's part of
-the reason it has to be that way). So, the ports mechanism treats all
-Javascript as if it were impure or effectful, and forces all communication
-through the `update` mechanism.
+free of side-effects. Instead, the ports mechanism treats all Javascript as if
+it were impure or effectful, and forces all communication through the `update`
+mechanism.
 
 Yet it is certainly possible to write Javascript that is pure and free of
 side-effects -- and sometimes it's necessary to have Elm treat it that way. In
@@ -215,7 +214,7 @@ that may be a feasible approach (I haven't tried it). Otherwise, doing
 Javascript interop via a service worker would be limited to operations that
 don't need the DOM.
 
-## 2. Managing foreign DOM
+## 3. Managing foreign DOM
 
 None of the techniques I've discussed so far handle the case where you have
 some Javascript code that wants to "manage" parts of the DOM. Consider how
