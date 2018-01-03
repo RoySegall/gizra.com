@@ -231,25 +231,163 @@ Javascript libraries like [TinyMCE](https://www.tinymce.com/) or
 - The library provides some content inside the `div`, the user interacts
   with it, and events are emitted.
 
-So, how can one do this in Elm?
+So, how can you integrate this into an Elm app?
 
 ### a) Special div
 
-- Avoid having it re-created unless necessary, and avoid confusing the virtual DOM.
-- So, keyed node, and its parents.
+The first thing you'll need to consider is how you write out the special `div`.
+The Javascript library is going to "manage" the content of that `div`, writing
+and re-writing nodes within it. But Elm's virtual DOM doesn't expect that -- it
+expects to be the only thing that can change the DOM underneath Elm's root
+node. This has a couple of implications.
+
+- Elm's virtual DOM is going to feel free to destroy and recreate the special
+  `div` when it (or an ancestor) moves relative to other nodes. But you won't
+  want that -- you'll want the special `div` to remain intact and be moved,
+  rather than destroyed and recreated. Otherwise, the content written by the
+  Javascript library will be lost.
+
+- Elm has some optimizations in its virtual DOM which depend on a match between
+  the virtual DOM and the real DOM. If there are things in the real DOM that the
+  virtual DOM didn't put there, these optimizations can produce strange bugs when
+  updating the DOM.
+
+The solution is to make the special `div` a `keyed` node. Using keys to
+construct your nodes gives the virtual DOM a kind of index so that it can track
+nodes that should be considered equivalent, even if they move around. So, if
+your special `div` moves, it will actually be moved by the virtual DOM, not
+destroyed and recreated. And, the keyed nodes also side-step the optimizations
+which can otherwise cause trouble when there are things in the real DOM that
+the virtual DOM didn't put there.
+
+(To be completely safe, you'll need to use `keyed` nodes for all the ancestors
+of the special `div`, since destroying and recreating any of those ancestors
+would destroy and recreate the special `div` itself).
 
 ### b) Initialization
 
-- Actual act of initialization is easy via ports.
-- Hard thing is knowing when to do it.
-- Partly solved by requestAnimationFrame
-- But in your `update` dispatch, not `view`. So, you need to "catch" the state transitions
-  which will cause the special `div` to be drawn. Uggh.
+Having created the special `div`, how can you go about initializing it?
 
-What's the alternative?
+The actual act of initialization is easily enough done via ports. You can
+simply set up a port which accepts a DOM id, finds the node with that ID, and
+runs the Javascript needed to initalize the node. The hard part is knowing
+**when** to do this.
 
-- Write a script tag.
-- You'll say this is hacky. But, actually, it isn't.
+One minor difficulty is that Elm's virtual DOM operates on a bit of a delay.
+Instead of writing each change to the DOM as each update takes place, it uses
+`requestAnimationFrame` to debounce the DOM changes, only making them as often
+as the screen will refresh. So, your Javascript code will need to wait a bit
+for the special `div` to appear.
+
+By itself, this is easily handled. If you know that the virtual DOM is about to
+write out your special `div` for the first time, your Javascript code can
+itself use `requestAnimationFrame` to wait for a screen refresh. This turns out
+(at least in the current implementaton) to reliably trigger after the virtual
+DOM has done its work.
+
+The harder part is knowing that the virtual DOM is about to write out your
+special `div` for the first time. In one way, it is your `view` function which
+controls when this happens -- after all, the special `div` must be contained in
+your `view` function. However, it is fundametal to the Elm architecture that
+your `view` function depends on states, not transitions. It merely takes your
+`model` and produces some `Html`.  There is nothing within the `view` function
+that lets you know whether this is the first time your special `div` is going
+to be written.
+
+Even if your `view` function knew when the special `div` would first be written,
+there isn't anything you can do from your `view` function to send a message to a
+port. That can only be done from your `update` function. And, it can be done there.
+But, it is an awkward computation. Consider the questions you must answer:
+
+- Given the current model, will the special `div` already have been drawn?
+
+- If not, will it be drawn given the new model that I will return?
+
+In effect, your `update` function needs to answer some questions about what
+your `view` function is about to do. Two approaches are possible:
+
+- You can identify every state transition (i.e. every message) that will make your
+  `view` function draw your special `div` for the first time.
+
+- You can write a function `willDrawMySpecialDiv` which, given your model,
+  determines whether your `view` function will draw the special `div`. Then,
+  apply that function to the current model, to see whether it will already have
+  been drawn, and apply it to the new model you're returning, to see whether it
+  is about to be drawn.
+
+Identifying all the state transitions that will write your special `div` for the
+first time can work in simple cases, but it is error prone -- it's easy to miss
+some of them.
+
+Using a `willDrawMySpecialDiv` function has its own difficulties. You will need
+to keep your actual `view` function in sync with `willDrawMySpecialDiv`.
+Worse, in a modular app, the dispatch of your `update` function typicaly
+depends on the `Msg`, but the dispatch of your `view` function typcially
+depends on something in the `Model`, such as a `Page` or the like. So, reliably
+determining `willDrawMySpecialDiv` in a modular app requires another round of
+function dispatch from the top-level of the app down -- it's not a concern that
+can be handled wholly within a single module. (To put it another way, the answer
+you get to `willDrawMySpecialDiv` may change even if the `update` function in
+your particular module is never invoked).
+
+Now, despite these difficulties, particular cases can be made to work -- you just
+have to think through the particular features of the way your app is organized that
+allow you to know when your special `div` will be written for the first time.
+Sometimes, it's entirely straightforward. But, having done this a few times, I
+wondered whether there might be a more general, less awkward solution.
+
+The idea which occurred to me was this. What if, in our `view` function, we
+wrote out a `<script>` tag, right next to our special div? Browsers **execute**
+script tags once they've been written. Now, normally this would be a terrible
+idea, an awful hack. After all, the `view` function is supposed to be free of
+side-effects, and (sometimes) executing a script sure seems like a side-effect.
+But, consider how well this fits our needs:
+
+- If our `view` function writes the `script` tag next to the special div, it
+  will necessarily be written only when the special div is written, and not
+  otherwise.
+
+- So, the script will run only when the special div has been written.
+
+- And, it won't run again until the nodes are destroyed and re-created (which
+  we ensure only happens when we intend, using `keyed` nodes).
+
+Isn't that lovely? It turns out to work quite well -- it looks something like this:
+
+```elm
+script : String -> Html any
+script code =
+    node "script"
+        []
+        [ text code ]
+
+view : Model -> Html Msg
+view model =
+    ...
+    [ div
+        [ id "dropzone"
+        , class "eight wide column dropzone"
+        , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+        ]
+        []
+            |> keyed "dropzone"
+
+    -- This runs the function from our `app.js` at the precise moment this gets
+    -- written to the DOM. Isn't that convenient?
+    , script "bindDropZone()"
+        |> keyed "script"
+    ]
+    ...
+
+```
+
+As noted above, the guts of the initialization happens in a Javascript function
+defined externally.  This keeps the `<script>` node itself pretty simple, but
+it could be more complex if necessary.
+
+So, this turns out to be a pretty convenient way to handle the initialization of DOM
+nodes by Javascript libraries that want to manage some DOM. But, initialization isn't
+our only need -- what about the events which those libraries generate?
 
 ### c) Handling events
 
