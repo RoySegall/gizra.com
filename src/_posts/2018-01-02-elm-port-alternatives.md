@@ -391,10 +391,118 @@ our only need -- what about the events which those libraries generate?
 
 ### c) Handling events
 
-- You can listen for events and send them in via a port.
-- But then you've got the context problem noted above ... e.g. what if there are possibly several
-  on a page? Need to distinguish amongst them.
-- So, you can make **custom** events on the Javascript side, and listen for them
-  in the usual way on the Elm side. I.e. in the view, not the port.
-- Works for messages inherently tied to the DOM. (In other cases, you wouldn't want to drop
-  a message because the DOM node has gone away).
+When you initialize your special `div`, you'll want to set up some listeners
+for events that it generates. For instance, for DropzoneJS, you'll want to know
+when a file has been uploaded. Or, for TinyMCE, you'll want to know when the
+content has been edited.
+
+One approach would be to set up Javascript listeners, which in turn send
+messages to an incoming Elm port. This works, but it has the "context"
+awkwardness which I identified above. Consider the case where there are several
+instances of your special `div`, and you need to deal with events from one
+differently than events from another? Of course, you can initialize each one
+with some context, provide the context back with each event, and then use the
+context in dispatching the subscription to the port.
+
+That works, but it is a bit awkward and verbose, compared with how we usually
+handle events in views. Usually, we just use `Html.Events.on` to attach an Elm
+listener to some event, and we can then route it using the familiar `Html.map`
+to provide some context, without having to communicate that context to the
+Javascript side and feed it back to Elm.
+
+Well, if you look carefully at the sample code I quoted above, that's exactly
+what I've done for some DropzoneJS events. Here's the key bit again:
+
+```elm
+    div
+        [ id "dropzone"
+        , class "eight wide column dropzone"
+        , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+        ]
+        []
+```
+
+Notice the `on "dropzonecomplete"`. Instead of subscribing to a message from a
+port, we're listening for an event on a DOM node, in the usual way. We supply a
+decoder for the event (`decodeDropZoneFile`), and a tag to route it to our
+`Msg` type (`DropZoneComplete`). If there was some additional context needed,
+we could provide it as an extra parameter to our `DropZoneComplete` tag. And,
+we don't need to set up a port and subscription at all -- we just listen for
+events, in the usual way.
+
+But how do we generate the events? Here's an example of what `bindDropZone()` looks
+like on the Javascript side.
+
+```js
+var dropZone = undefined;
+
+function bindDropZone () {
+    // We could make this dynamic, if needed
+    var selector = "#dropzone";
+    var element = document.querySelector(selector);
+
+    if (element) {
+        if (element.dropZone) {
+            // Bail, since already initialized
+            return;
+        } else {
+            // If we had one, and it's gone away, destroy it.  So, we should
+            // only leak one ... it would be even nicer to catch the removal
+            // from the DOM, but that's not entirely straightforward. Or,
+            // perhaps we'd actually avoid any leak if we just didn't keep a
+            // reference? But we necessarily need to keep a reference to the
+            // element.
+            if (dropZone) dropZone.destroy();
+        }
+    } else {
+        console.log("Could not find dropzone div");
+        return;
+    }
+
+    dropZone = new Dropzone(selector, {
+        url: "cache-upload/images",
+        dictDefaultMessage: "Touch here to take a photo, or drop a photo file here.",
+        resizeWidth: 800,
+        resizeHeight: 800,
+        resizeMethod: "contain",
+        acceptedFiles: "jpg,jpeg,png,gif,image/*"
+    });
+
+    dropZone.on('complete', function (file) {
+        // We just send the `file` back into Elm, via the view ... Elm can
+        // decode the file as it pleases.
+        var event = makeCustomEvent("dropzonecomplete", {
+            file: file
+        });
+
+        element.dispatchEvent(event);
+
+        dropZone.removeFile(file);
+    });
+}
+
+function makeCustomEvent (eventName, detail) {
+    if (typeof(CustomEvent) === 'function') {
+        return new CustomEvent(eventName, {
+            detail: detail,
+            bubbles: true
+        });
+    } else {
+        var event = document.createEvent('CustomEvent');
+        event.initCustomEvent(eventName, true, false, detail);
+        return event;
+    }
+}
+```
+
+So, instead of feeding events back into Elm via ports, we just feed them back
+in via the DOM. Then, we can listen for them, decode them and handle them in
+the usual way.
+
+## 4. Plain Old Ports
+
+I hope you've enjoyed a this tour through some alternatives to using ports when
+you need to communicate between Javascript and Elm. But I should repeat what I
+said at the beginning. This isn't the best way to begin if you're not familiar
+with ports. Plain old ports work really well for many situations -- these are
+just some alternatives for certain cases where ports can be a bit awkward.
