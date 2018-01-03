@@ -4,10 +4,42 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Tue, 26 Dec 2017 07:14:42 +0200</lastBuildDate>
-    <pubDate>Tue, 26 Dec 2017 07:14:42 +0200</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2018 17:47:10 -0600</lastBuildDate>
+    <pubDate>Tue, 02 Jan 2018 17:47:10 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+      
+
+      
+      <item>
+        <title>Have Your Cake and Eat it Too: Elm Apps in Drupal Panels</title>
+        <description>
+          &lt;p&gt;I tell my kids all the time that they can’t have both - whether it’s ice cream and cake or pizza and donuts - and they don’t like it. It’s because kids are uncorrupted, and their view of the world is pretty straightforward - usually characterized by a simple question: why not?&lt;/p&gt;
+
+&lt;p&gt;And so it goes with web projects:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stakeholder:&lt;/strong&gt; I want it to be like [&lt;em&gt;insert billion dollar company&lt;/em&gt;]’s site where the options refresh as the user makes choices.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; [&lt;em&gt;Thinks to self, “Do you know how many millions of dollars went into that?”&lt;/em&gt;] Hmm, well, it’s complicated…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stakeholder:&lt;/strong&gt; What do you mean? I’ve seen it in a few places [&lt;em&gt;names other billion dollar companies&lt;/em&gt;].&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; [&lt;em&gt;Gosh, you know, you’re right&lt;/em&gt;] Well, I mean, that’s a pretty sophisticated application, and well, your current site is Drupal, and well, Drupal is in fact really great for decoupled solutions, but generally we’d want to redo the whole architecture… and that’s kind of a total rebuild…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stakeholder:&lt;/strong&gt; [&lt;em&gt;eyes glazed over&lt;/em&gt;] Yeah, we don’t want to do that.&lt;/p&gt;
+
+&lt;p&gt;But there’s is a way.&lt;/p&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/elm-in-drupal-panels//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/elm-in-drupal-panels/</link>
+        <guid isPermaLink="false">https://www.gizra.com/content/elm-in-drupal</guid>
+        <pubDate>Tue, 02 Jan 2018 00:00:00 -0600</pubDate>
+      </item>
+      
     
       
       
@@ -37,7 +69,7 @@ I don’t always think that the worst has happened, but you did just read the ba
         </description>
         <link>https://www.gizra.com/content/selling-item-for-millions-elm-headless-drupal/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-circuit</guid>
-        <pubDate>Mon, 25 Dec 2017 00:00:00 +0200</pubDate>
+        <pubDate>Mon, 25 Dec 2017 00:00:00 -0600</pubDate>
       </item>
       
     
@@ -142,7 +174,7 @@ I don’t always think that the worst has happened, but you did just read the ba
         </description>
         <link>https://www.gizra.com/content/travis-wdio/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/Travis-WDIO</guid>
-        <pubDate>Tue, 23 May 2017 00:00:00 +0300</pubDate>
+        <pubDate>Tue, 23 May 2017 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -204,7 +236,7 @@ I don’t always think that the worst has happened, but you did just read the ba
         </description>
         <link>https://www.gizra.com/content/elm-business-perspective/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-business-perspective</guid>
-        <pubDate>Wed, 09 Nov 2016 00:00:00 +0200</pubDate>
+        <pubDate>Wed, 09 Nov 2016 00:00:00 -0600</pubDate>
       </item>
       
     
@@ -405,7 +437,7 @@ I don’t always think that the worst has happened, but you did just read the ba
         </description>
         <link>https://www.gizra.com/content/elm-inbox-simulation/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-inbox-simulation</guid>
-        <pubDate>Sat, 24 Sep 2016 00:00:00 +0300</pubDate>
+        <pubDate>Sat, 24 Sep 2016 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -459,7 +491,7 @@ I don’t always think that the worst has happened, but you did just read the ba
         </description>
         <link>https://www.gizra.com/content/elm-electron-build/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-with-electron</guid>
-        <pubDate>Thu, 28 Jul 2016 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 28 Jul 2016 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -519,7 +551,7 @@ so easy it almost felt like cheating (and note that I rarely write “easy” or
         </description>
         <link>https://www.gizra.com/content/faithful-elm-amazing-router/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/faithful-elm-amazing-router</guid>
-        <pubDate>Thu, 16 Jun 2016 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 16 Jun 2016 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -591,7 +623,7 @@ might give you a nudge in the right direction.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/how-think-elm/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/how-think-elm</guid>
-        <pubDate>Thu, 24 Mar 2016 00:00:00 +0200</pubDate>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -643,7 +675,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/elm-i18n-type-safety/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-i18n</guid>
-        <pubDate>Thu, 24 Mar 2016 00:00:00 +0200</pubDate>
+        <pubDate>Thu, 24 Mar 2016 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -711,7 +743,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/elm-hedley-overview/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/hedley-overview</guid>
-        <pubDate>Wed, 30 Dec 2015 00:00:00 +0200</pubDate>
+        <pubDate>Wed, 30 Dec 2015 00:00:00 -0600</pubDate>
       </item>
       
     
@@ -752,7 +784,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/planet-elm/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/planet-elm</guid>
-        <pubDate>Mon, 23 Nov 2015 00:00:00 +0200</pubDate>
+        <pubDate>Mon, 23 Nov 2015 00:00:00 -0600</pubDate>
       </item>
       
     
@@ -805,7 +837,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/elm-challenge/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elm-challenge</guid>
-        <pubDate>Thu, 05 Nov 2015 00:00:00 +0200</pubDate>
+        <pubDate>Thu, 05 Nov 2015 00:00:00 -0600</pubDate>
       </item>
       
     
@@ -845,7 +877,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/thinking-choosing-elm/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/thinking-elm</guid>
-        <pubDate>Thu, 22 Oct 2015 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 -0500</pubDate>
       </item>
       
     
@@ -908,7 +940,7 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         </description>
         <link>https://www.gizra.com/content/elmlang-headless-drupal/</link>
         <guid isPermaLink="false">https://www.gizra.com/content/elmlang</guid>
-        <pubDate>Thu, 01 Oct 2015 00:00:00 +0300</pubDate>
+        <pubDate>Thu, 01 Oct 2015 00:00:00 -0500</pubDate>
       </item>
       
     
