@@ -504,6 +504,8 @@ So, instead of feeding events back into Elm via ports, we just feed them back
 in via the DOM. Then, we can listen for them, decode them and handle them in
 the usual way.
 
+{% include thumbnail.html image_path="/assets/images/posts/elm-port-alternatives/dropzone.gif" caption="DropzoneJS in action inside Elm" %}
+
 ## Plain Old Ports
 
 I hope you've enjoyed this tour through some alternatives to using ports when
