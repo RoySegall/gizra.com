@@ -24,6 +24,10 @@ which can be useful in certain situations.
 going to assume that you're familiar with the many cases in which they work
 well, and focus on a few cases where you might want to try something else.
 
+- When you want synchronous answers.
+- When you need some context when you get the answer.
+- When you want to manage parts of the DOM using Javascript.
+
 <!-- more -->
 
 ## 1. Getting immediate answers
@@ -94,7 +98,7 @@ simple string (for example, a position in a document). You may need to encode
 and decode the context to a JSON value, since it won't necessarily be limited
 to the types that ports can handle without help.
 
-At least, it seems awkward by comparison to how tasks work in Elm. With tasks,
+It definitely seems awkward by comparison to how tasks work in Elm. With tasks,
 you can keep a bunch of state **implicitly**, without having to explicitly
 supply the context to the task, and have the task supply the context back.
 If checking suggestions were a task, you could do something like this:
@@ -139,8 +143,10 @@ into something roughly like:
             |> Cmd.map PortMsg
 ```
 
-The Javascript code does receive an ID which it needs to include in the response, but
-that's it -- the rest of the book-keeping is handled by the `Porter` module.
+The Javascript code does receive an ID which it needs to include in the
+response, but that's it -- the rest of the book-keeping is handled by the
+`Porter` module. It remembers the context you provide with the request, and
+supplies it back to you when the response arrives.
 
 So, that looks like a promising approach, which I'm planning to try on the next
 suitable occasion. However, it still doesn't have all the elegance of tasks.
@@ -193,7 +199,7 @@ Here's how it can work.
   in whatever manner is appropriate.
 
 In other words, you can treat the special URL as if it were a kind of function call,
-and the JSON body as if it were the parameters provided to the function. So, from the
+and the JSON body as if it were the parameters provided to the function. Thus, from the
 Elm app's point of view, you:
 
 - construct an HTTP request to a special URL;
@@ -219,17 +225,17 @@ don't need the DOM.
 
 ## 3. Managing foreign DOM
 
-None of the techniques I've discussed so far handle the case where you have
+In fact, none of the techniques I've discussed so far handle the case where you have
 some Javascript code that wants to "manage" parts of the DOM. Consider how
 Javascript libraries like [TinyMCE](https://www.tinymce.com/) or
 [DropzoneJS](http://www.dropzonejs.com/) work.
 
 - You put a special `div` in your HTML with a particular ID and/or class.
 
-- You call some function that initializes your `div` and sets up some
+- You call a function that initializes your `div` and sets up some
   listeners for events emitted by it.
 
-- The library provides some content inside the `div`, the user interacts
+- The library writes some content inside the `div`, the user interacts
   with it, and events are emitted.
 
 So, how can you integrate this into an Elm app?
@@ -276,7 +282,7 @@ runs the Javascript needed to initalize the node. The hard part is knowing
 
 One minor difficulty is that Elm's virtual DOM operates on a bit of a delay.
 Instead of writing each change to the DOM as each update takes place, it uses
-`requestAnimationFrame` to debounce the DOM changes, only making them as often
+`requestAnimationFrame` to throttle the DOM changes, only making them as often
 as the screen will refresh. So, your Javascript code will need to wait a bit
 for the special `div` to appear.
 
@@ -297,39 +303,40 @@ to be written.
 
 Even if your `view` function knew when the special `div` would first be written,
 there isn't anything you can do from your `view` function to send a message to a
-port. That can only be done from your `update` function. And, it can be done there.
-But, it is an awkward computation. Consider the questions you must answer:
+port. That can only be done from your `update` function. But, it awkward to ask
+your `update` function to handle this. Consider the questions it must answer:
 
 - Given the current model, will the special `div` already have been drawn?
 
 - If not, will it be drawn given the new model that I will return?
 
 In effect, your `update` function needs to answer some questions about what
-your `view` function is about to do. Two approaches are possible:
+your `view` function is about to do. Now, you can imagine doing this.
+Two approaches are possible:
 
 - You can identify every state transition (i.e. every message) that will make your
   `view` function draw your special `div` for the first time.
 
 - You can write a function `willDrawMySpecialDiv` which, given your model,
   determines whether your `view` function will draw the special `div`. Then,
-  apply that function to the current model, to see whether it will already have
+  you can apply that function to the current model, to see whether it will already have
   been drawn, and apply it to the new model you're returning, to see whether it
   is about to be drawn.
 
-Identifying all the state transitions that will write your special `div` for the
-first time can work in simple cases, but it is error prone -- it's easy to miss
-some of them.
+Yet both of these approaches have difficulties. Identifying all the state
+transitions that will write your special `div` for the first time can work in
+simple cases, but it is error prone -- it's easy to miss some of them.
 
-Using a `willDrawMySpecialDiv` function has its own difficulties. You will need
-to keep your actual `view` function in sync with `willDrawMySpecialDiv`.
-Worse, in a modular app, the dispatch of your `update` function typicaly
-depends on the `Msg`, but the dispatch of your `view` function typcially
-depends on something in the `Model`, such as a `Page` or the like. So, reliably
+Using a `willDrawMySpecialDiv` function has other problems. You will need to
+keep your actual `view` function in sync with `willDrawMySpecialDiv`.  Worse,
+in a modular app, the dispatch of your `update` function typicaly depends on
+the `Msg`, but the dispatch of your `view` function typcially depends on
+something in the `Model`, such as a `Page` or the like. So, reliably
 determining `willDrawMySpecialDiv` in a modular app requires another round of
-function dispatch from the top-level of the app down -- it's not a concern that
-can be handled wholly within a single module. (To put it another way, the answer
+function dispatch from the top-level of the app down. It's not a concern that
+can be handled wholly within a single module. To put it another way, the answer
 you get to `willDrawMySpecialDiv` may change even if the `update` function in
-your particular module is never invoked).
+your particular module is never invoked.
 
 Now, despite these difficulties, particular cases can be made to work -- you just
 have to think through the particular features of the way your app is organized that
@@ -429,7 +436,7 @@ decoder for the event (`decodeDropZoneFile`), and a tag to route it to our
 `Msg` type (`DropZoneComplete`). If there was some additional context needed,
 we could provide it as an extra parameter to our `DropZoneComplete` tag. And,
 we don't need to set up a port and subscription at all -- we just listen for
-events, in the usual way.
+events.
 
 But how do we generate the events? Here's an example of what `bindDropZone()` looks
 like on the Javascript side.
@@ -502,7 +509,7 @@ the usual way.
 
 ## 4. Plain Old Ports
 
-I hope you've enjoyed a this tour through some alternatives to using ports when
+I hope you've enjoyed this tour through some alternatives to using ports when
 you need to communicate between Javascript and Elm. But I should repeat what I
 said at the beginning. This isn't the best way to begin if you're not familiar
 with ports. Plain old ports work really well for many situations -- these are
