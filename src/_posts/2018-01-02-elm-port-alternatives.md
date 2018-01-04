@@ -30,7 +30,7 @@ well, and focus on a few cases where you might want to try something else.
 
 One characteristic of ports in Elm is that they are inherently asynchronous.
 There are "outgoing" ports, which send messages from Elm to Javascript.  There
-an "incoming" ports, which send messages from Javascript to Elm. Suppose your
+are "incoming" ports, which send messages from Javascript to Elm. Suppose your
 Elm code wants to ask a question that Javascript code can answer. You can send
 a message on an outgoing port, and the Javascript code which is listening there
 can send the answer on an incoming port. However, the answer will arrive
@@ -291,7 +291,7 @@ special `div` for the first time. In one way, it is your `view` function which
 controls when this happens -- after all, the special `div` must be contained in
 your `view` function. However, it is fundametal to the Elm architecture that
 your `view` function depends on states, not transitions. It merely takes your
-`model` and produces some `Html`.  There is nothing within the `view` function
+`Model` and produces some `Html`.  There is nothing within the `view` function
 that lets you know whether this is the first time your special `div` is going
 to be written.
 
@@ -401,7 +401,7 @@ One approach would be to set up Javascript listeners, which in turn send
 messages to an incoming Elm port. This works, but it has the "context"
 awkwardness which I identified above. Consider the case where there are several
 instances of your special `div`, and you need to deal with events from one
-differently than events from another? Of course, you can initialize each one
+differently than events from another. Of course, you can initialize each one
 with some context, provide the context back with each event, and then use the
 context in dispatching the subscription to the port.
 
