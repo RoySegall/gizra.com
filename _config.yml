@@ -339,6 +339,16 @@ authors:
      github: AronNovak
      avatar: AronNovak.jpg
      image: AronNovak.jpg
+  - rgrempel:
+      name: Ryan Rempel
+      title: Developer
+      is_member: true
+      bio: Elm afficiando
+      email: ryan@gizra.com
+      twitter: rgrempel
+      github: rgrempel
+      avatar: rgrempel.jpg
+      image: rgrempel.jpg
   - You:
       name: You?
       is_member: false
