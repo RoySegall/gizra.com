@@ -1,5 +1,5 @@
 ---
-title: "Integrating Javascript into Elm: Alternatives to ports"
+title: "Integrating Javascript into Elm: Alternatives to Ports"
 tags:
   - Elm
 permalink: "/content/elm-port-alternatives/"
@@ -20,9 +20,9 @@ necessary -- [ports](https://guide.elm-lang.org/interop/javascript.html)!
 Yet ports aren't always the right answer, and there are several alternatives
 which can be useful in certain situations.
 
-*If you're unfamiliar with ports, then this isn't the best place to start.* I'm
-going to assume that you're familiar with the many cases in which they work
-well, and focus on a few cases where you might want to try something else.
+For the purposes of this post, I'm going to assume that you're familiar with
+the many cases in which ports work well, and focus instead on a few cases where
+you might want to try something else:
 
 - When you want synchronous answers.
 - When you need some context when you get the answer.
@@ -30,7 +30,7 @@ well, and focus on a few cases where you might want to try something else.
 
 <!-- more -->
 
-## 1. Getting immediate answers
+## Getting Immediate Answers
 
 One characteristic of ports in Elm is that they are inherently asynchronous.
 There are "outgoing" ports, which send messages from Elm to Javascript.  There
@@ -58,7 +58,7 @@ you can't figure it out on your own, you probably won't avoid shooting yourself
 in the foot with it. So, I'll say no more, except that the source code for
 Elm's core libraries is very illuminating.
 
-## 2. Associating questions and answers
+## Associating Questions and Answers
 
 Even in cases where the things you want to do in Javascript are necessarily
 asynchronous, Elm's port mechanism is strangely unhelpful when you need to
@@ -82,7 +82,7 @@ it's possible to have more than one `check` in-flight at a time (this is
 asynchronous, after all), then there's nothing here to tell you which answer
 goes with which question.
 
-### a) Manually
+### Manually
 
 Now, in some cases this can be easily fixed. For instance, you could imagine a
 helpful change in the API quoted above -- one could include the input along
@@ -104,13 +104,12 @@ supply the context to the task, and have the task supply the context back.
 If checking suggestions were a task, you could do something like this:
 
 ```elm
-    let
-        context =
-            ...
-    in
-        checkSuggestions wordToCheck
-            |> Task.attempt (HandleSuggestions context)
-
+let
+    context =
+        ...
+in
+    checkSuggestions wordToCheck
+        |> Task.attempt (HandleSuggestions context)
 ```
 
 Eventually, your `update` function is going to be called with a
@@ -125,7 +124,7 @@ Fundamentally, the problem is said to be that it would
 [work too well](https://groups.google.com/forum/#!topic/elm-dev/kNKilHjUYqo),
 thus leading to greater use of Javascript within Elm than is considered desirable.
 
-### b) With `Porter`
+### With `Porter`
 
 However, there is an interesting package (which I haven't tried yet) that looks
 as though it would allow you to use ports with some of the elegance of tasks.
@@ -135,12 +134,12 @@ on a per-request basis. So, the above code would translate (with the appropriate
 into something roughly like:
 
 ```elm
-    let
-        context =
-            ...
-    in
-        Porter.send (HandleSuggestions context) wordToCheck
-            |> Cmd.map PortMsg
+let
+    context =
+        ...
+in
+    Porter.send (HandleSuggestions context) wordToCheck
+        |> Cmd.map PortMsg
 ```
 
 The Javascript code does receive an ID which it needs to include in the
@@ -158,19 +157,19 @@ stuff like chaining several tasks together before feeding things back into your
 `update` function.
 
 ```elm
-    let
-        context =
-            ...
-    in
-        checkSuggestions wordToCheck
-            |> Task.andThen doAnotherTaskThatDependsOnTheResult
-            |> Task.attempt (HandleSuggestions context)
+let
+    context =
+        ...
+in
+    checkSuggestions wordToCheck
+        |> Task.andThen doAnotherTaskThatDependsOnTheResult
+        |> Task.attempt (HandleSuggestions context)
 ```
 
 But, I recently came across another interesting alternative that fits some
 niches very nicely -- service-workers.
 
-### c) With service workers
+### With Service Workers
 
 If you're not familiar with
 [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/),
@@ -223,7 +222,7 @@ that may be a feasible approach (I haven't tried it). Otherwise, doing
 Javascript interop via a service worker would be limited to operations that
 don't need the DOM.
 
-## 3. Managing foreign DOM
+## Managing Foreign DOM
 
 In fact, none of the techniques I've discussed so far handle the case where you have
 some Javascript code that wants to "manage" parts of the DOM. Consider how
@@ -240,7 +239,7 @@ Javascript libraries like [TinyMCE](https://www.tinymce.com/) or
 
 So, how can you integrate this into an Elm app?
 
-### a) Special div
+### Special `div`
 
 The first thing you'll need to consider is how you write out the special `div`.
 The Javascript library is going to "manage" the content of that `div`, writing
@@ -271,7 +270,7 @@ the virtual DOM didn't put there.
 of the special `div`, since destroying and recreating any of those ancestors
 would destroy and recreate the special `div` itself).
 
-### b) Initialization
+### Initialization
 
 Having created the special `div`, how can you go about initializing it?
 
@@ -374,7 +373,6 @@ view model =
     ...
     [ div
         [ id "dropzone"
-        , class "eight wide column dropzone"
         , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
         ]
         []
@@ -397,7 +395,7 @@ So, this turns out to be a pretty convenient way to handle the initialization of
 nodes by Javascript libraries that want to manage some DOM. But, initialization isn't
 our only need -- what about the events which those libraries generate?
 
-### c) Handling events
+### Handling Events
 
 When you initialize your special `div`, you'll want to set up some listeners
 for events that it generates. For instance, for DropzoneJS, you'll want to know
@@ -422,12 +420,11 @@ Well, if you look carefully at the sample code I quoted above, that's exactly
 what I've done for some DropzoneJS events. Here's the key bit again:
 
 ```elm
-    div
-        [ id "dropzone"
-        , class "eight wide column dropzone"
-        , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
-        ]
-        []
+div
+    [ id "dropzone"
+    , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+    ]
+    []
 ```
 
 Notice the `on "dropzonecomplete"`. Instead of subscribing to a message from a
@@ -507,10 +504,10 @@ So, instead of feeding events back into Elm via ports, we just feed them back
 in via the DOM. Then, we can listen for them, decode them and handle them in
 the usual way.
 
-## 4. Plain Old Ports
+## Plain Old Ports
 
 I hope you've enjoyed this tour through some alternatives to using ports when
 you need to communicate between Javascript and Elm. But I should repeat what I
-said at the beginning. This isn't the best way to begin if you're not familiar
-with ports. Plain old ports work really well for many situations -- these are
-just some alternatives for certain cases where ports can be a bit awkward.
+said at the beginning. Plain old ports work really well for many situations --
+these are just some alternatives for certain cases where ports can be a bit
+awkward.
