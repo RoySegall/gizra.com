@@ -4,6 +4,7 @@ tags:
   - Elm
 permalink: "/content/elm-port-alternatives/"
 layout: post
+image: "/assets/images/posts/elm-port-alternatives/thumb.jpg"
 description: "How can you integrate some Javascript into Elm when ports won't quite do?"
 author: rgrempel
 ---
