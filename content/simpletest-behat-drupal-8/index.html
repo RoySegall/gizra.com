@@ -10,11 +10,11 @@
     And I fill in 'Password' with '@user-pass'
    When I press 'Log in'
    Then I should see '@user-name'
-</code></pre><p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p><div class="ui segments"><div class="ui attached center aligned segment"><div class="ui image"><img src="https://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png"/></div></div><div class="ui attached center aligned caption segment">Behat code executed from within Drupal's simpleTest</div></div><p>This functionality is provided by an experimental <a href=https://github.com/RoySegall/behat>repo</a>, which comes with an example test.</p><h2 id=the-implementation>The Implementation</h2><p>The step definition mechanism discovers the methods it needs to invoke by reading the annotation on the class. In order to get the same flexible functionality the <code class=highlighter-rouge>I visit "login"</code> is translated to the following annotated class:</p><div class="language-php highlighter-rouge"><pre class=highlight><code><span class=cp>&lt;?</span> <span class=nx>php</span>
-<span class=c1># src/Plugin/Step/Visit.php
-</span>
-<span class=c1>// ..
-</span>
+</code></pre><p>Amazingly enough, the above Gherkin code which is being executed by PHPunit can test your Drupal installation!</p><div class="ui segments"><div class="ui attached center aligned segment"><div class="ui image"><img src="https://www.gizra.com/assets/images/posts/behat-drupal8/test_results.png"/></div></div><div class="ui attached center aligned caption segment">Behat code executed from within Drupal's simpleTest</div></div><p>This functionality is provided by an experimental <a href=https://github.com/RoySegall/behat>repo</a>, which comes with an example test.</p><h2 id=the-implementation>The Implementation</h2><p>The step definition mechanism discovers the methods it needs to invoke by reading the annotation on the class. In order to get the same flexible functionality the <code class=highlighter-rouge>I visit "login"</code> is translated to the following annotated class:</p><div class="language-php highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=cp>&lt;?</span> <span class=nx>php</span>
+<span class=c1># src/Plugin/Step/Visit.php</span>
+
+<span class=c1>// ..</span>
+
 <span class=sd>/**
  * @Step(
  *  id = "I visit '(.*?)'"
@@ -26,33 +26,33 @@
     <span class=nv>$behat</span><span class=o>-&gt;</span><span class=na>visit</span><span class=p>(</span><span class=nv>$url</span><span class=p>);</span>
   <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></div><p>Each placeholder <code class=highlighter-rouge>(.*?)</code> will be passed as additional argument. The <code class=highlighter-rouge>$Behat</code> object is an instance of <code class=highlighter-rouge>BehatTestsAbstract</code> which allows us to invoke the methods of the simpletest class.</p><h2 id=making-it-work>Making it work</h2><p>We know how Behat works, how to define a test and that we need to write a feature file. But how can we run it? Let’s see the commented code on how the login tests work:</p><div class="language-php highlighter-rouge"><pre class=highlight><code><span class=cp>&lt;?php</span>
+</code></pre></div></div><p>Each placeholder <code class=highlighter-rouge>(.*?)</code> will be passed as additional argument. The <code class=highlighter-rouge>$Behat</code> object is an instance of <code class=highlighter-rouge>BehatTestsAbstract</code> which allows us to invoke the methods of the simpletest class.</p><h2 id=making-it-work>Making it work</h2><p>We know how Behat works, how to define a test and that we need to write a feature file. But how can we run it? Let’s see the commented code on how the login tests work:</p><div class="language-php highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=cp>&lt;?php</span>
 
 <span class=k>class</span> <span class=nc>Login</span> <span class=k>extends</span> <span class=nx>BehatTestsAbstract</span> <span class=p>{</span>
 
   <span class=k>public</span> <span class=k>function</span> <span class=nf>testLogin</span><span class=p>()</span> <span class=p>{</span>
-    <span class=c1>// Create a user.
-</span>    <span class=nv>$account</span> <span class=o>=</span> <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>drupalCreateUser</span><span class=p>();</span>
+    <span class=c1>// Create a user.</span>
+    <span class=nv>$account</span> <span class=o>=</span> <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>drupalCreateUser</span><span class=p>();</span>
     <span class=nv>$this</span>
-      <span class=c1>// Populate the behat arguments. Pass the username and password.
-</span>      <span class=o>-&gt;</span><span class=na>setPlaceholder</span><span class=p>(</span><span class=s1>'@user-name'</span><span class=p>,</span> <span class=nv>$account</span><span class=o>-&gt;</span><span class=na>label</span><span class=p>())</span>
+      <span class=c1>// Populate the behat arguments. Pass the username and password.</span>
+      <span class=o>-&gt;</span><span class=na>setPlaceholder</span><span class=p>(</span><span class=s1>'@user-name'</span><span class=p>,</span> <span class=nv>$account</span><span class=o>-&gt;</span><span class=na>label</span><span class=p>())</span>
       <span class=o>-&gt;</span><span class=na>setPlaceholder</span><span class=p>(</span><span class=s1>'@user-pass'</span><span class=p>,</span> <span class=nv>$account</span><span class=o>-&gt;</span><span class=na>passRaw</span><span class=p>)</span>
-      <span class=c1>// As each feature file could contain a bunch of scenario and we might
-</span>      <span class=c1>// want to run tests with different tags.
-</span>      <span class=c1>// This will make sure only scenarios with the `@login-success` tag will
-</span>      <span class=c1>// run.
-</span>      <span class=o>-&gt;</span><span class=na>setTag</span><span class=p>(</span><span class=s1>'@login-success'</span><span class=p>)</span>
-      <span class=c1>// Execute the correct scenario.
-</span>      <span class=o>-&gt;</span><span class=na>executeScenario</span><span class=p>(</span><span class=s1>'login'</span><span class=p>,</span> <span class=s1>'behat'</span><span class=p>);</span>
+      <span class=c1>// As each feature file could contain a bunch of scenario and we might</span>
+      <span class=c1>// want to run tests with different tags.</span>
+      <span class=c1>// This will make sure only scenarios with the `@login-success` tag will</span>
+      <span class=c1>// run.</span>
+      <span class=o>-&gt;</span><span class=na>setTag</span><span class=p>(</span><span class=s1>'@login-success'</span><span class=p>)</span>
+      <span class=c1>// Execute the correct scenario.</span>
+      <span class=o>-&gt;</span><span class=na>executeScenario</span><span class=p>(</span><span class=s1>'login'</span><span class=p>,</span> <span class=s1>'behat'</span><span class=p>);</span>
   <span class=p>}</span>
 
   <span class=k>public</span> <span class=k>function</span> <span class=nf>testLoginFailed</span><span class=p>()</span> <span class=p>{</span>
     <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>setTag</span><span class=p>(</span><span class=s1>'login-failed'</span><span class=p>)</span><span class=o>-&gt;</span><span class=na>executeScenario</span><span class=p>(</span><span class=s1>'login'</span><span class=p>,</span> <span class=s1>'behat'</span><span class=p>);</span>
   <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></div><p>Lets have a look at the following:</p><div class="language-php highlighter-rouge"><pre class=highlight><code><span class=cp>&lt;?php</span>
+</code></pre></div></div><p>Lets have a look at the following:</p><div class="language-php highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=cp>&lt;?php</span>
 <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>executeScenario</span><span class=p>(</span><span class=s1>'login'</span><span class=p>,</span> <span class=s1>'Behat'</span><span class=p>);</span>
-</code></pre></div><p>The first argument will be the name of the file, in our example <code class=highlighter-rouge>login.feature</code><br/>The second argument is the module. This tells us which module contains the feature files, so in theory even themes could provide their own tests and step definitions.</p><h2 id=next-steps>Next steps</h2><p>In Drupal Dev Days 2015 quite a few people showed interest in this. Even if it won’t be used by the vast majority, I still feel experiments such as this one help us explore more options, and find better tools for better QA.</p><p>My plan for the future is to to completely eliminate the need for <code class=highlighter-rouge>executeScenario</code>, thus allow having a feature file without a Drupal class, while still being able to use all the step definitions provided by other modules and themes.</p></div></div><div class="twelve wide column computer only"><div class="ui borderless secondary menu"><a class=item href="/content/shoov-ci-tests-live-site/"><i class="chevron left icon"></i> Shoov - CI tests on the live site</a><div class="right menu"><a class=item href="/content/cross-browser-visual-regression-with-shoov/">Cross Browser Visual Regression Tests With Shoov <i class="chevron right icon"></i></a></div></div></div><div class="twelve wide column"><div class="ui segment basic"><div id=disqus_thread></div><script type=text/javascript>var disqus_shortname = 'gizra';
+</code></pre></div></div><p>The first argument will be the name of the file, in our example <code class=highlighter-rouge>login.feature</code><br/>The second argument is the module. This tells us which module contains the feature files, so in theory even themes could provide their own tests and step definitions.</p><h2 id=next-steps>Next steps</h2><p>In Drupal Dev Days 2015 quite a few people showed interest in this. Even if it won’t be used by the vast majority, I still feel experiments such as this one help us explore more options, and find better tools for better QA.</p><p>My plan for the future is to to completely eliminate the need for <code class=highlighter-rouge>executeScenario</code>, thus allow having a feature file without a Drupal class, while still being able to use all the step definitions provided by other modules and themes.</p></div></div><div class="twelve wide column computer only"><div class="ui borderless secondary menu"><a class=item href="/content/shoov-ci-tests-live-site/"><i class="chevron left icon"></i> Shoov - CI tests on the live site</a><div class="right menu"><a class=item href="/content/cross-browser-visual-regression-with-shoov/">Cross Browser Visual Regression Tests With Shoov <i class="chevron right icon"></i></a></div></div></div><div class="twelve wide column"><div class="ui segment basic"><div id=disqus_thread></div><script type=text/javascript>var disqus_shortname = 'gizra';
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -4,10 +4,42 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Tue, 02 Jan 2018 17:47:10 -0600</lastBuildDate>
-    <pubDate>Tue, 02 Jan 2018 17:47:10 -0600</pubDate>
+    <lastBuildDate>Fri, 05 Jan 2018 14:19:56 -0600</lastBuildDate>
+    <pubDate>Fri, 05 Jan 2018 14:19:56 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Integrating Javascript into Elm: Alternatives to Ports</title>
+        <description>
+          &lt;p&gt;Once you start writing apps (and packages) in &lt;a href=&quot;http://elm-lang.org/&quot;&gt;Elm&lt;/a&gt;, it’s
+tempting to avoid the rough-and-tumble world of Javascript as much as possible.
+Yet when implementing features for paying clients, it doesn’t always make sense
+to take things that already have a Javascript implementation and re-implement
+them in pure Elm. In fact, sometimes it isn’t even possible!&lt;/p&gt;
+
+&lt;p&gt;Now, Elm has a very fine mechanism for integrating bits of Javascript when
+necessary – &lt;a href=&quot;https://guide.elm-lang.org/interop/javascript.html&quot;&gt;ports&lt;/a&gt;!
+Yet ports aren’t always the right answer, and there are several alternatives
+which can be useful in certain situations.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of this post, I’m going to assume that you’re familiar with
+the many cases in which ports work well, and focus instead on a few cases where
+you might want to try something else:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you want synchronous answers.&lt;/li&gt;
+  &lt;li&gt;When you need some context when you get the answer.&lt;/li&gt;
+  &lt;li&gt;When you want to manage parts of the DOM using Javascript.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/elm-port-alternatives//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/elm-port-alternatives/</link>
+        <guid>https://www.gizra.com/content/elm-port-alternatives</guid>
+        <pubDate>Fri, 05 Jan 2018 00:00:00 -0600</pubDate>
+      </item>
     
       <item>
         <title>Have Your Cake and Eat it Too: Elm Apps in Drupal Panels</title>
@@ -1553,11 +1585,10 @@ Before Yesod, we were running NodeJs as our proxy server for light tasks or real
 
 &lt;p&gt;Below are examples from the REPL (the interactive shell for Haskell)&lt;/p&gt;
 
-&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;What we have here are two lists of integers that are appended to each other. A list of integers is represented as &lt;code class=&quot;highlighter-rouge&quot;&gt;[Int]&lt;/code&gt; in Haskell. The &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; is the operation that causes those two lists to be grouped into a single one.&lt;/p&gt;
 
@@ -2824,14 +2855,13 @@ Do you remember that time in the past where functional testing was just a &lt;em
 
 &lt;p&gt;Writing the Behat test was pretty easy, however it had a major problem - it didn’t work.&lt;/p&gt;
 
-&lt;div class=&quot;language-gherkin highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;@javascript&lt;/span&gt;
+&lt;div class=&quot;language-gherkin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;@javascript&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;Scenario&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; Login to shoov
-  &lt;span class=&quot;nf&quot;&gt;Given&lt;/span&gt; I am an anonymous user
-   &lt;span class=&quot;nf&quot;&gt;When&lt;/span&gt; I visit the homepage
-    &lt;span class=&quot;nf&quot;&gt;And&lt;/span&gt; I login with my GitHub account
-   &lt;span class=&quot;nf&quot;&gt;Then&lt;/span&gt; I should wait for the text &lt;span class=&quot;s&quot;&gt;&quot;My Account&quot;&lt;/span&gt; to &lt;span class=&quot;s&quot;&gt;&quot;appear&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+  &lt;span class=&quot;nf&quot;&gt;Given &lt;/span&gt;I am an anonymous user
+   &lt;span class=&quot;nf&quot;&gt;When &lt;/span&gt;I visit the homepage
+    &lt;span class=&quot;nf&quot;&gt;And &lt;/span&gt;I login with my GitHub account
+   &lt;span class=&quot;nf&quot;&gt;Then &lt;/span&gt;I should wait for the text &lt;span class=&quot;s&quot;&gt;&quot;My Account&quot;&lt;/span&gt; to &lt;span class=&quot;s&quot;&gt;&quot;appear&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;When Behat sees the &lt;code class=&quot;highlighter-rouge&quot;&gt;@javascript&lt;/code&gt; tag in the begining of the scenario, it launches it (with the help of Mink extension) in PhantomJS, Firefox or Chrome.&lt;br /&gt;
 PhantomJS is usually the easiest to configure and hook into the CI workflow later on.&lt;/p&gt;
@@ -3387,6 +3417,42 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
       </item>
     
       <item>
+        <title>Behat vs. Casper (In Drupal Context)</title>
+        <description>
+          &lt;p&gt;In my previous blog post &lt;a href=&quot;/content/behat-the-right-way&quot;&gt;Behat - The Right Way&lt;/a&gt; I made a statement that I think Behat was a better choice for writing tests even for the frontend. Some good arguments were raised in favor of CasperJS.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-conversation=&quot;none&quot; data-cards=&quot;hidden&quot; data-partner=&quot;tweetdeck&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/amitaibu&quot;&gt;@amitaibu&lt;/a&gt; &lt;a href=&quot;https://twitter.com/juampy72&quot;&gt;@juampy72&lt;/a&gt; it boils down to this: I&amp;#39;m a frontend dev. Writing PHP is something I avoid whenever possible.&lt;/p&gt;&amp;mdash; Chris Ruppel (@rupl) &lt;a href=&quot;https://twitter.com/rupl/status/535025236702683136&quot;&gt;November 19, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I believe my comparison was wrong in the sense it was lacking the key point to Behat’s stength for us. It’s not really about “Behat vs. Casper”. The proper comparison should have been “Behat vs. Casper - &lt;em&gt;With a Drupal backend&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;And here’s the key difference: With Behat you can interact with Drupal’s API even when testing using PhantomJS. That is a lot of testing power!&lt;/p&gt;
+
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com//assets/images/posts/behat-casper/image1.gif&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+&lt;/div&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/behat-vs-casper-for-drupal//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/behat-vs-casper-for-drupal/</link>
+        <guid>https://www.gizra.com/content/behat-drupal-phantomjs</guid>
+        <pubDate>Thu, 04 Dec 2014 00:00:00 -0600</pubDate>
+      </item>
+    
+      <item>
         <title>Todo app with RESTful backend</title>
         <description>
           &lt;p&gt;The Drupal community can now proudly claim its own implementation of a &lt;a href=&quot;http://gizra.github.io/todo_restful/#/&quot;&gt;Todo app&lt;/a&gt; with a RESTful backend!&lt;/p&gt;
@@ -3428,14 +3494,13 @@ Travis-CI, &lt;a href=&quot;https://github.com/webdriverio/webdrivercss&quot;&gt
 
 &lt;p&gt;With that said, it’s super easy to abuse Behat. We are developers and we think sort of like machines (not really, but you get my point). If you would like to test login to your site you could easily do&lt;/p&gt;
 
-&lt;div class=&quot;language-cucumber highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Given&lt;/span&gt; I visit &lt;span class=&quot;s&quot;&gt;&quot;/user/login&quot;&lt;/span&gt;
+&lt;div class=&quot;language-cucumber highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Given &lt;/span&gt;I visit &lt;span class=&quot;s&quot;&gt;&quot;/user/login&quot;&lt;/span&gt;
  &lt;span class=&quot;c&quot;&gt;# fill the username and password input fields, and click submit&lt;/span&gt;
- &lt;span class=&quot;nf&quot;&gt;When&lt;/span&gt; I fill &lt;span class=&quot;s&quot;&gt;&quot;username&quot;&lt;/span&gt; with &lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;
-  &lt;span class=&quot;nf&quot;&gt;And&lt;/span&gt; I fill &lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; with &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;
-  &lt;span class=&quot;nf&quot;&gt;And&lt;/span&gt; I press &lt;span class=&quot;s&quot;&gt;&quot;Login&quot;&lt;/span&gt;
- &lt;span class=&quot;nf&quot;&gt;Then&lt;/span&gt; I should get a &lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; HTTP response
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+ &lt;span class=&quot;nf&quot;&gt;When &lt;/span&gt;I fill &lt;span class=&quot;s&quot;&gt;&quot;username&quot;&lt;/span&gt; with &lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;And &lt;/span&gt;I fill &lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt; with &lt;span class=&quot;s&quot;&gt;&quot;bar&quot;&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;And &lt;/span&gt;I press &lt;span class=&quot;s&quot;&gt;&quot;Login&quot;&lt;/span&gt;
+ &lt;span class=&quot;nf&quot;&gt;Then &lt;/span&gt;I should get a &lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; HTTP response
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Your test will return green, but it could be improved:&lt;/p&gt;
 
@@ -3814,32 +3879,31 @@ If you share the same feeling reading the above lines, this blog post if for you
         <description>
           &lt;p&gt;&lt;a href=&quot;https://github.com/Gizra/restful#restful-best-practices-for-drupal&quot;&gt;RESTful module&lt;/a&gt; is a new approach to providing a REST server in Drupal. Its concepts and philosophy appears in the module’s README so I won’t repeat it, but I’d like to go over some of the key points.&lt;/p&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Handler v1.0
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restful_get_restful_handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'articles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// GET method.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Handler v1.0&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restful_get_restful_handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'articles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// GET method.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Output:
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Output:&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'label'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'example title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'self'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://example.com/node/1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Handler v1.1 extends v1.0, and removes the &quot;self&quot; property from the
-// exposed properties.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restful_get_restful_handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'articles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Handler v1.1 extends v1.0, and removes the &quot;self&quot; property from the&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// exposed properties.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;restful_get_restful_handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'articles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$handler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Output:
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Output:&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;s1&quot;&gt;'label'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'example title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;In the past year almost every site we have is either completely decoupled from the server side where AngularJs serves the webapp, or AngularJS plays a smaller part, and we just embed web components inside a Drupal page to provide a slick UI.&lt;/p&gt;
 
@@ -4791,9 +4855,8 @@ Migrate V2 uses &lt;a href=&quot;http://drupal.org/project/drush&quot;&gt;Drush&
         <description>
           &lt;p&gt;Here’s the story in one (code) line:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find ./ -name *.* -type f -exec s -i &quot;s/group/og/g&quot; '{}' \;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find ./ -name *.* -type f -exec s -i &quot;s/group/og/g&quot; '{}' \;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;For the humans amongst us, I’ll explain. As part of the rewrite of Organic groups to Drupal 7, I thought that the name also deserves a rename – to follow Drupal’s naming standards. Since there weren’t enough votes in the &lt;a href=&quot;http://groups.drupal.org/node/75988/&quot;&gt;poll&lt;/a&gt; in g.d.o I’ve decided _not to go with the change. OG module will keep its name - although in the UI we will use “Group” (the same way as node is refereed to as content).&lt;/p&gt;
 

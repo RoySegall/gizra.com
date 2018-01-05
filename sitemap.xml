@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://www.gizra.com/content/elm-port-alternatives/</loc>
+      
+        <lastmod>2018-01-05T00:00:00-06:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://www.gizra.com/content/elm-in-drupal-panels/</loc>
       
         <lastmod>2018-01-02T00:00:00-06:00</lastmod>
@@ -581,6 +590,15 @@
       <loc>https://www.gizra.com/content/yo-hedley/</loc>
       
         <lastmod>2014-12-26T00:00:00-06:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
+      <loc>https://www.gizra.com/content/behat-vs-casper-for-drupal/</loc>
+      
+        <lastmod>2014-12-04T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>

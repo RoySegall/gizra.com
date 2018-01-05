@@ -4,10 +4,47 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Tue, 02 Jan 2018 17:47:10 -0600</lastBuildDate>
-    <pubDate>Tue, 02 Jan 2018 17:47:10 -0600</pubDate>
+    <lastBuildDate>Fri, 05 Jan 2018 14:19:56 -0600</lastBuildDate>
+    <pubDate>Fri, 05 Jan 2018 14:19:56 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+      
+
+      
+      <item>
+        <title>Integrating Javascript into Elm: Alternatives to Ports</title>
+        <description>
+          &lt;p&gt;Once you start writing apps (and packages) in &lt;a href=&quot;http://elm-lang.org/&quot;&gt;Elm&lt;/a&gt;, it’s
+tempting to avoid the rough-and-tumble world of Javascript as much as possible.
+Yet when implementing features for paying clients, it doesn’t always make sense
+to take things that already have a Javascript implementation and re-implement
+them in pure Elm. In fact, sometimes it isn’t even possible!&lt;/p&gt;
+
+&lt;p&gt;Now, Elm has a very fine mechanism for integrating bits of Javascript when
+necessary – &lt;a href=&quot;https://guide.elm-lang.org/interop/javascript.html&quot;&gt;ports&lt;/a&gt;!
+Yet ports aren’t always the right answer, and there are several alternatives
+which can be useful in certain situations.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of this post, I’m going to assume that you’re familiar with
+the many cases in which ports work well, and focus instead on a few cases where
+you might want to try something else:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you want synchronous answers.&lt;/li&gt;
+  &lt;li&gt;When you need some context when you get the answer.&lt;/li&gt;
+  &lt;li&gt;When you want to manage parts of the DOM using Javascript.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/elm-port-alternatives//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/elm-port-alternatives/</link>
+        <guid isPermaLink="false">https://www.gizra.com/content/elm-port-alternatives</guid>
+        <pubDate>Fri, 05 Jan 2018 00:00:00 -0600</pubDate>
+      </item>
+      
     
       
       
@@ -942,6 +979,11 @@ worst case we know we will catch our bugs on run time.&lt;/p&gt;
         <guid isPermaLink="false">https://www.gizra.com/content/elmlang</guid>
         <pubDate>Thu, 01 Oct 2015 00:00:00 -0500</pubDate>
       </item>
+      
+    
+      
+      
+
       
     
       
