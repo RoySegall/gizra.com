@@ -69,11 +69,11 @@ ports -- one for sending strings from Elm to Javascript, and one for Javascript
 to send suggestions back to Elm.
 
 ```elm
--- port for sending strings out to JavaScript
-port check : String -> Cmd msg
+    -- port for sending strings out to JavaScript
+    port check : String -> Cmd msg
 
--- port for listening for suggestions from JavaScript
-port suggestions : (List String -> msg) -> Sub msg
+    -- port for listening for suggestions from JavaScript
+    port suggestions : (List String -> msg) -> Sub msg
 ```
 
 Notice that there is nothing in the response which provides any context. It's
@@ -89,7 +89,7 @@ helpful change in the API quoted above -- one could include the input along
 with the response:
 
 ```elm
-port suggestions : ((String, List String) -> msg) -> Sub msg
+    port suggestions : ((String, List String) -> msg) -> Sub msg
 ```
 
 I've used this kind of approach, and it can work, but it's often more awkward
@@ -104,12 +104,12 @@ supply the context to the task, and have the task supply the context back.
 If checking suggestions were a task, you could do something like this:
 
 ```elm
-let
-    context =
-        ...
-in
-    checkSuggestions wordToCheck
-        |> Task.attempt (HandleSuggestions context)
+    let
+        context =
+            ...
+    in
+        checkSuggestions wordToCheck
+            |> Task.attempt (HandleSuggestions context)
 ```
 
 Eventually, your `update` function is going to be called with a
@@ -134,12 +134,12 @@ on a per-request basis. So, the above code would translate (with the appropriate
 into something roughly like:
 
 ```elm
-let
-    context =
-        ...
-in
-    Porter.send (HandleSuggestions context) wordToCheck
-        |> Cmd.map PortMsg
+    let
+        context =
+            ...
+    in
+        Porter.send (HandleSuggestions context) wordToCheck
+            |> Cmd.map PortMsg
 ```
 
 The Javascript code does receive an ID which it needs to include in the
@@ -157,13 +157,13 @@ stuff like chaining several tasks together before feeding things back into your
 `update` function.
 
 ```elm
-let
-    context =
-        ...
-in
-    checkSuggestions wordToCheck
-        |> Task.andThen doAnotherTaskThatDependsOnTheResult
-        |> Task.attempt (HandleSuggestions context)
+    let
+        context =
+            ...
+    in
+        checkSuggestions wordToCheck
+            |> Task.andThen doAnotherTaskThatDependsOnTheResult
+            |> Task.attempt (HandleSuggestions context)
 ```
 
 But, I recently came across another interesting alternative that fits some
@@ -362,29 +362,28 @@ But, consider how well this fits our needs:
 Isn't that lovely? It turns out to work quite well -- it looks something like this:
 
 ```elm
-script : String -> Html any
-script code =
-    node "script"
-        []
-        [ text code ]
+    script : String -> Html any
+    script code =
+        node "script"
+            []
+            [ text code ]
 
-view : Model -> Html Msg
-view model =
-    ...
-    [ div
-        [ id "dropzone"
-        , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+    view : Model -> Html Msg
+    view model =
+        ...
+        [ div
+            [ id "dropzone"
+            , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+            ]
+            []
+                |> keyed "dropzone"
+
+        -- This runs the function from our `app.js` at the precise moment this gets
+        -- written to the DOM. Isn't that convenient?
+        , script "bindDropZone()"
+            |> keyed "script"
         ]
-        []
-            |> keyed "dropzone"
-
-    -- This runs the function from our `app.js` at the precise moment this gets
-    -- written to the DOM. Isn't that convenient?
-    , script "bindDropZone()"
-        |> keyed "script"
-    ]
-    ...
-
+        ...
 ```
 
 As noted above, the guts of the initialization happens in a Javascript function
@@ -420,11 +419,11 @@ Well, if you look carefully at the sample code I quoted above, that's exactly
 what I've done for some DropzoneJS events. Here's the key bit again:
 
 ```elm
-div
-    [ id "dropzone"
-    , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
-    ]
-    []
+    div
+        [ id "dropzone"
+        , on "dropzonecomplete" (Json.Decode.map DropZoneComplete decodeDropZoneFile)
+        ]
+        []
 ```
 
 Notice the `on "dropzonecomplete"`. Instead of subscribing to a message from a
@@ -439,65 +438,65 @@ But how do we generate the events? Here's an example of what `bindDropZone()` lo
 like on the Javascript side.
 
 ```js
-var dropZone = undefined;
+    var dropZone = undefined;
 
-function bindDropZone () {
-    // We could make this dynamic, if needed
-    var selector = "#dropzone";
-    var element = document.querySelector(selector);
+    function bindDropZone () {
+        // We could make this dynamic, if needed
+        var selector = "#dropzone";
+        var element = document.querySelector(selector);
 
-    if (element) {
-        if (element.dropZone) {
-            // Bail, since already initialized
-            return;
+        if (element) {
+            if (element.dropZone) {
+                // Bail, since already initialized
+                return;
+            } else {
+                // If we had one, and it's gone away, destroy it.  So, we should
+                // only leak one ... it would be even nicer to catch the removal
+                // from the DOM, but that's not entirely straightforward. Or,
+                // perhaps we'd actually avoid any leak if we just didn't keep a
+                // reference? But we necessarily need to keep a reference to the
+                // element.
+                if (dropZone) dropZone.destroy();
+            }
         } else {
-            // If we had one, and it's gone away, destroy it.  So, we should
-            // only leak one ... it would be even nicer to catch the removal
-            // from the DOM, but that's not entirely straightforward. Or,
-            // perhaps we'd actually avoid any leak if we just didn't keep a
-            // reference? But we necessarily need to keep a reference to the
-            // element.
-            if (dropZone) dropZone.destroy();
+            console.log("Could not find dropzone div");
+            return;
         }
-    } else {
-        console.log("Could not find dropzone div");
-        return;
-    }
 
-    dropZone = new Dropzone(selector, {
-        url: "cache-upload/images",
-        dictDefaultMessage: "Touch here to take a photo, or drop a photo file here.",
-        resizeWidth: 800,
-        resizeHeight: 800,
-        resizeMethod: "contain",
-        acceptedFiles: "jpg,jpeg,png,gif,image/*"
-    });
-
-    dropZone.on('complete', function (file) {
-        // We just send the `file` back into Elm, via the view ... Elm can
-        // decode the file as it pleases.
-        var event = makeCustomEvent("dropzonecomplete", {
-            file: file
+        dropZone = new Dropzone(selector, {
+            url: "cache-upload/images",
+            dictDefaultMessage: "Touch here to take a photo, or drop a photo file here.",
+            resizeWidth: 800,
+            resizeHeight: 800,
+            resizeMethod: "contain",
+            acceptedFiles: "jpg,jpeg,png,gif,image/*"
         });
 
-        element.dispatchEvent(event);
+        dropZone.on('complete', function (file) {
+            // We just send the `file` back into Elm, via the view ... Elm can
+            // decode the file as it pleases.
+            var event = makeCustomEvent("dropzonecomplete", {
+                file: file
+            });
 
-        dropZone.removeFile(file);
-    });
-}
+            element.dispatchEvent(event);
 
-function makeCustomEvent (eventName, detail) {
-    if (typeof(CustomEvent) === 'function') {
-        return new CustomEvent(eventName, {
-            detail: detail,
-            bubbles: true
+            dropZone.removeFile(file);
         });
-    } else {
-        var event = document.createEvent('CustomEvent');
-        event.initCustomEvent(eventName, true, false, detail);
-        return event;
     }
-}
+
+    function makeCustomEvent (eventName, detail) {
+        if (typeof(CustomEvent) === 'function') {
+            return new CustomEvent(eventName, {
+                detail: detail,
+                bubbles: true
+            });
+        } else {
+            var event = document.createEvent('CustomEvent');
+            event.initCustomEvent(eventName, true, false, detail);
+            return event;
+        }
+    }
 ```
 
 So, instead of feeding events back into Elm via ports, we just feed them back
