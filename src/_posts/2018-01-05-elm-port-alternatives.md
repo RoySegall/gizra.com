@@ -93,7 +93,7 @@ with the response:
 ```
 
 I've used this kind of approach, and it can work, but it's often more awkward
-than this simple exmaple.  Often, you need to retain more context than just a
+than this simple example. Often, you need to retain more context than just a
 simple string (for example, a position in a document). You may need to encode
 and decode the context to a JSON value, since it won't necessarily be limited
 to the types that ports can handle without help.
