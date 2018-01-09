@@ -22,12 +22,22 @@
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
   <meta property="og:description" content="{{ page.description }}">
+
+  {% else %}
+  <meta name="description" content="Gizra is a web strategy, design, and
+  development agency with an extensive track record in complex content
+  management solutions in Drupal and Elm.">
+  <meta property="og:description" content="{{ page.description }}">
+  {% endif %}
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@gizra_drupal" />
-  {% endif %}
 
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/images/homepage/gizra-logo-site.jpg">
   {% endif %}
 
   <!-- Favicon for all platforms -->
