@@ -23,7 +23,7 @@ were certain operations which could be done on a `Mother` but not a `Child`
     There were no fathers in our app's data model.
 
 Yet, a `Mother` and a `Child` clearly have a lot in common as well. For this
-reason, it sometimes felt natural to write functions that could accept.  So, in
+reason, it sometimes felt natural to write functions that could accept either.  So, in
 those cases, it was a little awkward for them to be separate types.  Something
 was needed to express a relationship between the two types.
 
@@ -63,10 +63,10 @@ this will give you a sense of the kind of data we were working with.
         , birthDate : NominalDate
         }
 
-    type alias MotherId =
+    type MotherId =
         MotherId Int
 
-    type alias ChildId =
+    type ChildId =
         ChildId Int
 ```
 
@@ -96,8 +96,6 @@ bit compared to the actual app):
         { height : List Height
         , weight : List Weight
         , photo : List Photo
-        , muac : List Muac
-        , nutrition : List Nutrition
         }
 ```
 
@@ -120,8 +118,6 @@ at the data level (rather than just the type level) ... something like:[^singlet
         = TakePhoto
         | MeasureHeight
         | MeasureWeight
-        | MeasureMuac
-        | MeasureNutrition
 
     type MotherActivity
         = RecordFamilyPlanningMethod
