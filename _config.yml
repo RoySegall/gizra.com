@@ -97,7 +97,7 @@ authors:
       image: ishadakota.jpg
   - RachelBaram:
       name: Rachel Baram
-      title: Business Development
+      title: Business Development and Strategy, Account Manager
       is_member: true
       bio: Loves to make things make sense.
       email: rachel@gizra.com
@@ -106,7 +106,7 @@ authors:
       image: RachelBaram.jpg
   - LiatSadeSaadon:
       name: Liat Sade Saadon
-      title: Employee Training & Development
+      title: UI/UX and Training Specialist, Account Manager
       is_member: true
       bio: Drupal - Just when I thought I was out... they pull me back in
       email: liat@gizra.com
@@ -115,7 +115,7 @@ authors:
       image: liatsade.jpg
   - RoySegall:
       name: Roy Segall
-      title: Team Lead
+      title: Senior Developer
       is_member: true
       bio: Not afraid of patching Organic groups, Entity reference or the Message stack. Knows how to make tasty Pizza.
       email: roy.segall@gizra.com
@@ -124,7 +124,7 @@ authors:
       image: RoySegall.jpg
   - NaderSafadi:
       name: Nader Safadi
-      title: Team Lead
+      title: Senior Developer
       is_member: true
       bio: Show me the source code and I'll be happy!
       email: nader@gizra.com
@@ -142,7 +142,7 @@ authors:
       image: bitamar.jpg
   - ordavidil:
       name: Or David
-      title: Team Lead
+      title: Senior Developer
       is_member: true
       bio: Something about Or
       email: or@gizra.com
@@ -160,7 +160,7 @@ authors:
       image: noam.jpg
   - efratn:
       name: Efrat Nitzan
-      title: Account Manager
+      title: Executive Director
       is_member: true
       bio: Something about Efrat
       email: efrat@gizra.com
@@ -187,7 +187,7 @@ authors:
       image: Pavel.jpg
   - anvmn:
       name: Anatoly Vaitsman
-      title: Developer
+      title: Senior Developer
       is_member: true
       bio: Somthing about Anatoly.
       email: anatoly@gizra.com
@@ -196,7 +196,7 @@ authors:
       image: anvmn.jpg
   - SavyonCohen:
       name: Savyon Cohen
-      title: Developer
+      title: QA and Automation Specialist
       is_member: true
       bio: I'm the mother of twins... What is your superpower?
       email: savyon@gizra.com
@@ -332,7 +332,7 @@ authors:
       avatar: lukeherrington.jpg
   - AronNovak:
      name: Áron Novák
-     title: developer
+     title: Senior Developer
      is_member: true
      bio: Started with Drupal 4.7, passionate about performance and automation these days.
      email: aron@gizra.com
@@ -341,7 +341,7 @@ authors:
      image: AronNovak.jpg
   - rgrempel:
       name: Ryan Rempel
-      title: Developer
+      title: Senior Developer
       is_member: true
       bio: Elm aficianado
       email: ryan@gizra.com
