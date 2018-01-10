@@ -9354,7 +9354,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 									}
 								}
 							},
-							title: 'Israel/Europe Executive Director',
+							title: 'Executive Director',
 							attributes: {
 								ctor: '::',
 								_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9498,7 +9498,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 											}
 										}
 									},
-									title: 'Business Development and Strategy',
+									title: 'Business Development and Strategy, Account Manager',
 									attributes: {
 										ctor: '::',
 										_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9608,7 +9608,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 												}
 											}
 										},
-										title: 'UI/UX Specialist and Client Training',
+										title: 'UI/UX and Training Specialist, Account Manager',
 										attributes: {
 											ctor: '::',
 											_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9678,7 +9678,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 													}
 												}
 											},
-											title: 'Team Lead',
+											title: 'Senior Developer',
 											attributes: {
 												ctor: '::',
 												_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9760,7 +9760,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 														}
 													}
 												},
-												title: 'Team Lead',
+												title: 'Senior Developer',
 												attributes: {
 													ctor: '::',
 													_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9846,7 +9846,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													},
-													title: 'Team Lead',
+													title: 'Senior Developer',
 													attributes: {
 														ctor: '::',
 														_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9928,7 +9928,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																_1: {ctor: '[]'}
 															}
 														},
-														title: 'Developer',
+														title: 'Senior Developer',
 														attributes: {
 															ctor: '::',
 															_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10010,7 +10010,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																	_1: {ctor: '[]'}
 																}
 															},
-															title: 'Developer',
+															title: 'QA and Automation Specialist',
 															attributes: {
 																ctor: '::',
 																_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10236,7 +10236,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				_1: {ctor: '[]'}
 																			}
 																		},
-																		title: 'Developer',
+																		title: 'Senior Developer',
 																		attributes: {
 																			ctor: '::',
 																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10314,7 +10314,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			},
-																			title: 'Developer',
+																			title: 'Senior Developer',
 																			attributes: {
 																				ctor: '::',
 																				_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
