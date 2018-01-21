@@ -188,7 +188,7 @@ something which might be one sort of thing or another sort of thing. So, a
     type Person
         = Mother Mother
         | Child Child
-    
+
     type PersonId
         = PersonIdMother MotherId
         | PersonIdChild ChildId
@@ -242,8 +242,8 @@ sketched above:
                     |> Maybe.map .motherId
 
             MotherId id ->
-                Just id    
-    
+                Just id
+
     getChildren : PersonId -> Container -> List ChildId
     getChildren personId container =
         getMotherId personId
@@ -343,37 +343,236 @@ ugly. Perhaps we can do better!
 
 ## Type Classes
 
-You may be aware that Elm does not have type classes. But what, exactly, are
-type classes anyway?
+What if we conceived of the `Person` type not as a "wrapper" for `Child` and
+`Mother`, but instead as a set of requirements that we must fulfill in order to
+deal with a type as a person? In Elm, we could express those requirements in
+the form of a record, along these lines:
 
-... insert discussion here ...
+```elm
+    type alias Person p =
+        { getAllActivities : p -> List Activity
+        , getAvatarUrl : p -> Maybe String
+        , getBirthDate : p -> NominalDate
+        , getName : p -> String
+        , iconClass : p -> String
+        ...
+        }
+```
 
-In fact, the need to be explicit about type-class selection in Elm is actually
-sometimes a bit of an advantage, compared to languages like Haskell or
-Purescript that handle it automatically. It's sometimes not easy to keep the correct
-mental model of how those languages go about selecting a type class instance where
-one is needed. In Elm, it's a no-brainer -- you just say which instance you want.
-Plus, this makes things like constructing an instance on the fly trivial -- something
-which would be an advanced feature in other languages.[^onthefly]
+Then, we need to fill in the record for `Child` and for `Mother`, something
+like this:
 
-[^onthefly]:
-    Normally, you should try to avoid constructing instances on the fly,
-    but occasionaly it is useful.
+```elm
+    childPerson : Person Child
+    childPerson =
+        { getAllActivities =
+            List.map ChildActivity
+                [ TakePhoto
+                , MeasureHeight
+                , MeasureWeight
+                ]
+        , getAvatarUrl = .avatarUrl
+        , iconClass = "child"
+        ...
+        }
 
-One extension to Elm that would help when using manual type classes would be
-higher-kinded polymorphism.
+    motherPerson : Person Mother
+    motherPerson =
+        { getAllActivities =
+            List.map MotherActivity
+                [ TakePhoto
+                , MeasureHeight
+                , MeasureWeight
+                ]
+        , getAvatarUrl = .avatarUrl
+        , iconClass = "mother"
+        ...
+        }
+```
+
+So `Person` now describes a class of types (or, perhaps, a "typeclass") with
+certain capabilities. If we're writing a function that needs to make use of one
+of those capabilities, we no longer have to specify exactly which type to
+it takes. Instead, we can ask for any type that has the capability we need.
+
+Consider, for instance, a function to view a person. In our first attempt at
+this, with a tagged type for `Person`, a simple version might look something
+like this.
+
+```elm
+    viewPerson : Person -> Html a
+    viewPerson person =
+        div []
+            [ h4 [] [ text <| getName person ]
+            , getAvatarUrl person
+                |> maybeViewImage (iconClass person)
+            ]
+```
+
+Using `Person` as a typeclass instead would look something like this:
+
+```elm
+    viewPerson : Person p -> p -> Html a
+    viewPerson personConfig person =
+        div []
+            [ h4 [] [ text <| personConfig.getName person ]
+            , personConfig.getAvatarUrl person
+                |> maybeViewImage (personConfig.iconClass person)
+            ]
+```
+
+This leads to a corresponding difference in how you would call the two
+functions. In our previous case, assuming you knew you had a `Child`, you'd
+need to wrap it up as a `Person` ... something like `viewPerson (Child child)`.
+Using typeclasses, you can simply supply the child itself, along with the
+implementation which allows you to treat a child as a person ... something like
+`viewPerson childPerson child`.
+
+Now, so far, we haven't actually gained a lot by using `Person` as a typeclass
+instead of a tagged type -- it's just an alternate idiom, so far. The
+compelling advantage comes when dealing with additional related types. Consider
+something like `getAllActivities` and `hasPendingActivity`. Instead of dealing
+with a wrapped `Activity` type, they can now deal directly with the exact type
+that expresses the activities which are relevant to this kind of person. This
+can be expressed in Elm as additional type parameters to the `Person` record,
+along these lines:
+
+```elm
+    type alias Person p a id m =
+        { getAllActivities : p -> List a
+        , getAvatarUrl : p -> Maybe String
+        , getBirthDate : p -> NominalDate
+        , getChildren : id -> Container -> List ChildId
+        , getMotherId : id -> Container -> Maybe MotherId
+        , getName : p -> String
+        , hasPendingActivity : id -> a -> Container -> Bool
+        , iconClass : p -> String
+        , getMeasurements : id -> Container -> m
+        }
+```
+
+You might call this a "multi-parameter type class", if you were so inclined.
+
+Adding these additional type parameters neatly solves our difficulty with
+implementing `hasPendingActivity`, since we can now depending on getting an
+activity of the appropriate type -- the compiler will complain if we don't. So,
+we can do something like:
+
+```elm
+    motherConfig : Person Mother MotherActivity MotherId MotherMeasurements
+    motherConfig =
+        { hasPendingActivity = hasPendingMotherActivity
+        , ...
+        }
+
+    childConfig : Person Child ChildActivity ChildId ChildMeasuurements
+    childConfig
+        { hasPendingActivity = hasPendingChildActivity
+        , ...
+        }
+
+    hasPendingChildActivity : ChildId -> ChildActivity -> Container -> Bool
+    hasPendingChildActivity childId childActivity container =
+        ...
+
+    hasPendingMotherActivity : MotherId -> MotherActivity -> Container -> Bool
+    hasPendingMotherActivity motherId MotherActivity container =
+        ...
+
+```
+
+There can no longer be any mismatches between the `id` and the `activity`
+supplied to `hasPendingActivity`, since the compiler is aware of all the
+related types and will complain if any of them are wrong.
+
+So, while you might have heard that Elm lacks typeclasses, my own experience is
+that I use them (at least somewhere) in pretty much every app.  However, there
+are a few limitations of typeclasses in Elm which I should mention.
+
+One is that you must explicitly mention the typeclass implemenation when you
+call a function that requires one. So, for instance, to call the `viewPerson`
+function sketched above, you need to explicitly refer to the typeclass ...
+soemthing like `viewPerson childConfig child`, or `viewPerson motherConfig
+mother`.  In some lanugages, the compiler can deduce that if you're supplying a
+`child` to `viewPerson`, you must want to use the `childConfig`, so you don't
+have to mention it explicitly. That is a convenience, but it is often confusing
+to try to follow the compiler's reasoning about which typeclass implementation
+it will supply. It may not be such a terrible thing to just say which one you want.
+
+A bigger difficulty is Elm's lack of higher-kinded polymorphism. What this
+means is that type parameters cannot be used as wrappers -- they can only be
+wrapped. So, in the example above, we definitely need to say `List p` ... the
+`p` can be a parameter, but we have to make a definite choice about `List`. To
+put it another way, you must always choose concrete "container" types. So,
+there are some relationships between types that you won't be able to model
+accurately. However, that still leaves a lot of room for this technique to be
+useful.
+
+Finally, there are cases in which you really do want a tagged type. Consider a
+case where you might want to include both children and mothers in the same
+list.
+
+- You can say `List p`, but that is either a list of all mothers, or all
+  children, not a list that can include both.
+
+- You could do something fancy with existential types (or rank-n types),
+  but Elm doesn't have those.
+
+So, if you need a list that can include both mothers and children, you're pretty
+much going to need a tagged type. In our app, it turned out that we didn't need
+that for mothers and children, but there were cases in which we wanted lists
+of activities. So, in addition to the `Person` record, we also had a tagged type
+for activities.
+
+```elm
+    type Activity
+        = MotherActivity MotherActivity
+        | ChildActivity ChildActivity
+```
+
+Once you have that, constructing a `List Activity` is straightforward. We also
+added something to `Person` so that we could convert (when necessary) from its
+generic activity type to the more concrete `Activity`, along these lines:
+
+```elm
+    type alias Person p a id m =
+        { ...
+        , wrapActivity : a -> Activity
+        }
+
+    childConfig : Person Child ChildActivity ChildId ChildMeasurements
+    childConfig =
+        { ...
+        , wrapActivity = ChildActivity
+        }
+
+    motherConfig : Person Mother MotherActivity MotherId MotherMeasurements
+    motherConfig =
+        { ...
+        , wrapActivity = MotherActivity
+        }
+```
+
+This allows you to use both approaches (tagged types and typeclasses) together,
+in cases where you need both. However, it is often the case that just one or the
+other approach is fine on its own.
 
 ## Just Don't Do It
 
-Now, I should digress for a moment to ask why we want to represent a
-relationship between these types at all. After all, when writing Elm code, the
-right answer to some of our impulses is "just don't do it" -- especially when
-the impulse is towards greater abstraction.
+A question which may have occurred to some readers by now is whether we have
+really gained anything by expressing a relationship between `Mother` and
+`Child` (whether by tagged types or typeclasses). What if we didn't bother?
+What if we just let mothers be mothers and children be children, without
+bothering with unifying types? After all, when writing Elm code, the right
+answer to some of our impulses is "just don't do it" -- especially when the
+impulse is towards greater abstraction.
 
-So, how do some of the functions I've been talking about get used? What would
-our code look like if we didn't bother with them?
+Consider the `hasPendingActivity` function I've sketched above. No matter how
+we structure things, we still need the more concrete `hasPendingChildActivity`
+and `hasPendingMotherActivity` anwyway. So, what exactly do we gain by also
+having the more abstract version at our disposal?
 
-... insert discussion here ...
+... insert discussion ...
 
 ## Extensible Records
 
