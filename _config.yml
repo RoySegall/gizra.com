@@ -26,7 +26,7 @@ collections:
 # Allow incremental rebuild
 incremental: true
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-redirect-from
 
