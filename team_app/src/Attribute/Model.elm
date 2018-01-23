@@ -65,6 +65,7 @@ type Nationality
     | UK
     | USA
     | Russia
+    | Argentina
 
 
 type PreferedWorkHours
@@ -80,6 +81,7 @@ type Sport
     | Soccer
     | Yoga
     | Volleyball
+    | Bike
 
 
 type TvAndMovieGenere

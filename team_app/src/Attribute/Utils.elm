@@ -75,6 +75,9 @@ attributeToString attribute =
                 Volleyball ->
                     "Volleyball"
 
+                Bike ->
+                    "Bike"
+
         Tattoo ->
             "Tattoo"
 
