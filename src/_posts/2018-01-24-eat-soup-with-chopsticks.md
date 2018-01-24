@@ -23,7 +23,7 @@ Suddenly I found myself having to do my job, that I do well, in a different lang
 ### “Courage is Resistance to Fear, Mastery of Fear, Not Absence of Fear” - Mark Twain
 How do I begin mastering my fear? Instead of continuing to bypass it, I made it a task. ‘Doing’ does not leave room for anything else. My first task was to find an English tutor. It did not seem right and in the end a search ‘fear of English’ brought me to an English Anxiety Therapist - yes, that is a thing. I just needed four sessions to continue on my own.  
 
-### English is a journey, not a destination
+### English is a Journey, not a Destination
 Last summer we were on a family trip to the United States. This, of course, was a great opportunity to improve my English, but it was not the most significant thing I learned on this trip. I discovered that my son speaks excellent English, which was inversely proportional to his grades in school. “How do you know English so well?” I asked him. “Well mom”, he gave me his winning look, “remember this question the next time you complain that I spend too much time on YouTube”. Then I realized - to improve my English, I have to make it part of my daily life. And to make it part of my daily life, I have to enjoy it!    
 
 Children learn to speak by hearing the language and then, one day, they just open their mouth and start talking, imitating what they heard. So I also started to listen to the language - I downloaded the TED application, found lectures that interested me, and turned on the English subtitles to help with unclear pronunciations. Learning English stopped being a goal that needed to be achieved, but a pleasant way to walk - it made learning a whole lot more fun.  
