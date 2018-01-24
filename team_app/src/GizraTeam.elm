@@ -539,7 +539,7 @@ people =
               , LanguageAttr Spanish
               , NationalityAttr Argentina
               , PreferedWorkHoursAttr EarlyRise
-              , SportAttr Bike
+              , SportAttr Biking
               , WorkingRemote
               ]
           , coordinates =

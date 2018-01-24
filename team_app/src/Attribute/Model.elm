@@ -81,7 +81,7 @@ type Sport
     | Soccer
     | Yoga
     | Volleyball
-    | Bike
+    | Biking
 
 
 type TvAndMovieGenere

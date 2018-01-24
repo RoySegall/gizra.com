@@ -8047,7 +8047,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$Austria = {ctor: 'Austria'};
 var _Gizra$elm_spa_exmple$Attribute_Model$NightOwl = {ctor: 'NightOwl'};
 var _Gizra$elm_spa_exmple$Attribute_Model$NineToFive = {ctor: 'NineToFive'};
 var _Gizra$elm_spa_exmple$Attribute_Model$EarlyRise = {ctor: 'EarlyRise'};
-var _Gizra$elm_spa_exmple$Attribute_Model$Bike = {ctor: 'Bike'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Biking = {ctor: 'Biking'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Volleyball = {ctor: 'Volleyball'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Yoga = {ctor: 'Yoga'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Soccer = {ctor: 'Soccer'};
@@ -10465,7 +10465,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
 																											_1: {
 																												ctor: '::',
-																												_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Bike),
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Biking),
 																												_1: {
 																													ctor: '::',
 																													_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
@@ -14302,7 +14302,7 @@ var _Gizra$elm_spa_exmple$Attribute_Utils$attributeToString = function (attribut
 				case 'Volleyball':
 					return 'Volleyball';
 				default:
-					return 'Bike';
+					return 'Biking';
 			}
 		case 'Tattoo':
 			return 'Tattoo';
