@@ -9,7 +9,7 @@ author: LiatSadeSaadon
 description: "Sometimes there are things in life that you learn how to work around, and then one day something happens that forces you to face up to your weaknesses and grow up."
 ---
 
-
+_The post was reviewed and corrected by Rachel, an English native speaker._
 
 When I decided more than a year ago to leave my comfortable job to join Gizra, I knew it would be challenging, but I did not imagine it would bring me face to face with my greatest fear - speaking English. Gizra has a lot of overseas clients, and over the past year, as we become more distributed, most of our new hires have joined from abroad. Obviously, this requires communicating in English.  
 
