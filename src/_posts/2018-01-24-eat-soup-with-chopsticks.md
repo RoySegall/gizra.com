@@ -6,7 +6,7 @@ permalink: "/content/eat-soup-with-chopsticks/"
 layout: post  
 image: "/assets/images/posts/chopsticks/thumb.jpg"   
 author: LiatSadeSaadon  
-description: "."
+description: "Sometimes there are things in life that you learn how to work around, and then one day something happens that forces you to face up to your weaknesses and grow up."
 ---
 
 
