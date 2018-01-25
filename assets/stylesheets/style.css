@@ -119,6 +119,9 @@ footer.ui.vertical.segment {
   #team-toggle-view {
     display: none; } }
 
+.podcast.description {
+  margin-bottom: 20px; }
+
 .highlight .hll {
   background-color: #ffffcc; }
 
