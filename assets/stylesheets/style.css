@@ -111,7 +111,7 @@ footer.ui.vertical.segment {
     pointer-events: none; }
   #team-app #map {
     width: 100%;
-    height: 500px; }
+    height: 800px; }
 
 @media only screen and (max-width: 767px) {
   .magnets {
