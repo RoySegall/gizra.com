@@ -69,6 +69,11 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js" integrity="sha256-flVaeawsBV96vCHiLmXn03IRJym7+ZfcLVvUWONCas8=" crossorigin="anonymous"></script>
 
+  {% if page.url == '/podcast/' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/mediaelementplayer.min.css" />
+  {% endif %}
+
   {% include google_analytics.html %}
 </head>
 
@@ -83,6 +88,9 @@
     </a>
     <a class="item" href="/blog">
       Blog
+    </a>
+    <a class="item" href="/podcast">
+      Podcast
     </a>
     <a class="item" href="/projects">
       Projects
