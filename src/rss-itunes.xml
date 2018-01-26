@@ -31,8 +31,8 @@ title : Podcast RSS Feed
         <link>{{ site.url }}/podcast/</link>
         <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <enclosure url="{{ podcast.file }}" length="{{ podcast.filesize }}" type="audio/mpeg" />
-        <itunes:duration>{{ podcast.length }}</itunes:summary>
-        <itunes:summary>{{ podcast.description }}</description>
+        <itunes:duration>{{ podcast.length }}</itunes:duration>
+        <itunes:summary>{{ podcast.description }}</summary>
         <itunes:explicit>no</itunes:explicit>
       </item>
     {% endfor %}
