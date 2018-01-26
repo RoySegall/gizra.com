@@ -6,8 +6,8 @@
     <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
     <language>en-us</language>
     <copyright>Gizra, USA LLC, 2018</copyright>
-    <lastBuildDate>Thu, 25 Jan 2018 22:07:23 -0600</lastBuildDate>
-    <pubDate>Thu, 25 Jan 2018 22:07:23 -0600</pubDate>
+    <lastBuildDate>Thu, 25 Jan 2018 22:20:36 -0600</lastBuildDate>
+    <pubDate>Thu, 25 Jan 2018 22:20:36 -0600</pubDate>
     <itunes:author>Gizra</itunes:author>
     <itunes:summary>The Gizra Way podcast feed</itunes:summary>
     <itunes:author>Gizra</itunes:author>
@@ -15,7 +15,6 @@
       <itunes:name>Gizra</itunes:name>
       <itunes:email>info@gizra.com</itunes:email>
     </itunes:owner>
-    <itunes:image>https://www.gizra.com/assets/images/social/gizra-way-podcast.jpg<itunes:image>
     <itunes:category text="Technology">
       <itunes:category text="Developers"/>
     </itunes:category>
