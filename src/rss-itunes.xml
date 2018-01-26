@@ -21,11 +21,8 @@ title : Podcast RSS Feed
     <itunes:category text="Technology">
       <itunes:category text="Developers"/>
     </itunes:category>
-    <itunes:image>
-      <url>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg</url>
-      <title>The Gizra Way Podcast</title>
-      <link>{{ site.url }}/podcast/</link>
-    </itunes:image>
+    <itunes:image href="{{ site.url }}/assets/images/social/gizra-way-podcast.jpg"/>
+    <itunes:explicit>no</itunes:explicit>
 
     {% for podcast in site.data.podcast %}
       <item>
@@ -34,7 +31,8 @@ title : Podcast RSS Feed
         <link>{{ site.url }}/podcast/</link>
         <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <enclosure url="{{ podcast.file }}" length="{{ podcast.filesize }}" type="audio/mpeg" />
-        <itunes:duration>{{ podcast.length }}</itunes:duration>
+        <itunes:duration>{{ podcast.length }}</itunes:summary>
+        <itunes:summary>{{ podcast.description }}</description>
         <itunes:explicit>no</itunes:explicit>
       </item>
     {% endfor %}
