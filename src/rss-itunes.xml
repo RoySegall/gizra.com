@@ -10,25 +10,33 @@ title : Podcast RSS Feed
     <language>en-us</language>
     <copyright>Gizra, USA LLC, {{ 'now' | date: "%Y" }}</copyright>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <itunes:author>Gizra</itunes:author>
     <itunes:summary>The Gizra Way podcast feed</itunes:summary>
+    <itunes:author>Gizra</itunes:author>
     <itunes:owner>
       <itunes:name>Gizra</itunes:name>
       <itunes:email>info@gizra.com</itunes:email>
     </itunes:owner>
-    <itunes:explicit>No</itunes:explicit>
     <itunes:image>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg<itunes:image>
-    <itunes:category>Technology</itunes:category>
-    <ttl>1800</ttl>
+    <itunes:category text="Technology">
+      <itunes:category text="Developers"/>
+    </itunes:category>
+    <itunes:image>
+      <url>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg</url>
+      <title>The Gizra Way Podcast</title>
+      <link>{{ site.url }}/podcast/</link>
+    </itunes:image>
 
     {% for podcast in site.data.podcast %}
       <item>
         <title>Episode {{ podcast.episode }}: {{ podcast.title }}</title>
         <description>{{ podcast.description }}</description>
-        <link>{{ podcast.file }}</link>
+        <link>{{ site.url }}/podcast/</link>
         <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <enclosure url="{{ podcast.file }}" type="audio/mpeg" />
-        <itunes:image>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg</itunes:image>
+        <enclosure url="{{ podcast.file }}" length="{{ podcast.filesize }}" type="audio/mpeg" />
+        <itunes:duration>{{ podcast.length }}</itunes:duration>
+        <itunes:explicit>no</itunes:explicit>
       </item>
     {% endfor %}
 
