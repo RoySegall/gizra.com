@@ -28,7 +28,7 @@ title : Podcast RSS Feed
         <link>{{ podcast.file }}</link>
         <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <enclosure url="{{ podcast.file }}" type="audio/mpeg" />
-        <itunes:image>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg<itunes:image>
+        <itunes:image>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg</itunes:image>
       </item>
     {% endfor %}
 
