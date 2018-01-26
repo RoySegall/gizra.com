@@ -18,7 +18,6 @@ title : Podcast RSS Feed
       <itunes:name>Gizra</itunes:name>
       <itunes:email>info@gizra.com</itunes:email>
     </itunes:owner>
-    <itunes:image>{{ site.url }}/assets/images/social/gizra-way-podcast.jpg<itunes:image>
     <itunes:category text="Technology">
       <itunes:category text="Developers"/>
     </itunes:category>
