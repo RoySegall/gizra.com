@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>The Gizra Way Podcast</title>
+    <link>https://www.gizra.com</link>
+    <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
+    <language>en-us</language>
+    <copyright>Gizra, USA LLC, 2018</copyright>
+    <lastBuildDate>Thu, 25 Jan 2018 21:28:06 -0600</lastBuildDate>
+    <itunes:author>Gizra</itunes:author>
+    <itunes:summary>The Gizra Way podcast feed</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Gizra</itunes:name>
+      <itunes:email>info@gizra.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image>https://www.gizra.com/assets/images/social/gizra-way-podcast.jpg<itunes:image>
+    <itunes:category>Technology</itunes:category>
+    <ttl>1800</ttl>
+
+    
+      <item>
+        <title>Episode 1: We Don't Need an Intro Tune</title>
+        <description>Amitai and Adam discuss a 1.6 million dollar stamp sale, skill set mastery and technological decision making, and the value of slowing down. Along the way Amitai explains his indifference to Drupal 8 and why Gizra's Drupal-Elm Starter Kit uses Drupal 7 and Restful 1.x.</description>
+        <link>https://storage.googleapis.com/gizra-podcasts/podcast-ep1.mp3</link>
+        <pubDate>Thu, 25 Jan 2018 00:00:00 -0600</pubDate>
+        <enclosure url="https://storage.googleapis.com/gizra-podcasts/podcast-ep1.mp3" type="audio/mpeg" />
+        <itunes:image>https://www.gizra.com/assets/images/social/gizra-way-podcast.jpg<itunes:image>
+      </item>
+    
+
+  </channel>
+</rss>
