@@ -1,0 +1,81 @@
+---
+layout: default
+post: true
+---
+
+<div class="ui grid centered post">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
+    <div class="ui raised padded segment">
+
+
+        <h1 class="ui header podcast-title">
+          <div class="content">
+            <a href="{{ page.url }}">Episode {{ page.podcast_episode }}: {{ page.title }}</a>
+          </div>
+          <div class="right floated column">
+            <a href="/podcast" class="ui teal right ribbon big label">Podcast</a>
+          </div>
+        </h1>
+
+      <div class="podcast description">
+        <p>{{ content }}</p>
+      </div>
+      <p>
+        <audio src="{{ page.podcast_file }}"
+        		class="mejs__player"
+        		data-mejsoptions='{"alwaysShowControls": "true", "stretching": "responsive"}'>
+        </audio>
+      </p>
+      <div class="podcast descriptor">
+        <strong>Recorded:</strong> {{ page.date | date: "%b %-d, %Y"}}
+      </div>
+      <div class="podcast descriptor">
+        <strong>Length:</strong> {{ page.podcast_length }}
+      </div>
+      <div class="podcast descriptor">
+        <strong>Intro/Outro Tune:</strong> <a href="{{ page.podcast_tune_link }}">{{ page.podcast_tune }}</a>
+      </div>
+      <div class="podcast descriptor">
+        <strong>Download the MP3:</strong> <a href="{{ page.podcast_file }}">Episode {{ page.podcast_episode }}</a>
+      </div>
+    </div>
+  </div>
+
+  <!--Pager-->
+  {% assign next_episode = page.podcast_episode | plus:1 %}
+  {% assign previous_episode = page.podcast_episode | minus:1 %}
+  {% assign podcasts = site.posts | where:"layout","podcast" %}
+
+  <div class="twelve wide column computer only">
+    <div class="ui borderless secondary menu">
+
+      {% for podcast in podcasts %}
+        {% if podcast.podcast_episode == previous_episode %}
+          <a class="item" href="{{ podcast.url }}">
+            <i class="chevron left icon"></i>
+            Episode {{ podcast.podcast_episode}}: {{ podcast.title }}
+          </a>
+        {% endif %}
+      {% endfor %}
+
+      {% for podcast in podcasts %}
+        {% if podcast.podcast_episode == next_episode %}
+          <div class="right menu">
+            <a class="item" href="{{ podcast.url }}">
+              Episode {{ podcast.podcast_episode}}: {{ podcast.title }}
+              <i class="chevron right icon"></i>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+<!--Disqus-->
+  <div class="twelve wide column">
+    <div class="ui segment basic">
+      {% include disqus.html %}
+    </div>
+  </div>
+
+</div>
