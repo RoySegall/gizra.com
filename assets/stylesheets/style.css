@@ -122,6 +122,9 @@ footer.ui.vertical.segment {
 .podcast.description {
   margin-bottom: 20px; }
 
+.podcasts .mejs__player {
+  max-width: 500px; }
+
 .highlight .hll {
   background-color: #ffffcc; }
 

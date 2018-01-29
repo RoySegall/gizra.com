@@ -2,15 +2,14 @@
 <rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
   <channel>
     <title>The Gizra Way Podcast</title>
-    <link>https://www.gizra.com</link>
+    <link>https://www.gizra.com/podcast/</link>
     <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
     <language>en-us</language>
     <copyright>Gizra, USA LLC, 2018</copyright>
-    <lastBuildDate>Mon, 29 Jan 2018 16:06:18 -0600</lastBuildDate>
-    <pubDate>Mon, 29 Jan 2018 16:06:18 -0600</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 16:16:37 -0600</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 16:16:37 -0600</pubDate>
     <itunes:author>Gizra</itunes:author>
     <itunes:summary>The Gizra Way podcast feed</itunes:summary>
-    <itunes:author>Gizra</itunes:author>
     <itunes:owner>
       <itunes:name>Gizra</itunes:name>
       <itunes:email>info@gizra.com</itunes:email>
@@ -22,11 +21,12 @@
     <itunes:explicit>no</itunes:explicit>
 
     
+    
       <item>
         <title>Episode 1: We Don't Need an Intro Tune</title>
         <description>Amitai and Adam discuss a 1.6 million dollar stamp sale, skill set mastery and technological decision making, and the value of slowing down. Along the way Amitai explains his indifference to Drupal 8 and why Gizra's Drupal-Elm Starter Kit uses Drupal 7 and Restful 1.x.</description>
-        <link>https://www.gizra.com/podcast/</link>
-        <pubDate>Thu, 25 Jan 2018 00:00:00 -0600</pubDate>
+        <link>https://www.gizra.com/podcast/we-dont-need-an-intro/</link>
+        <pubDate>Mon, 29 Jan 2018 00:00:00 -0600</pubDate>
         <enclosure url="https://storage.googleapis.com/gizra-podcasts/podcast-ep1.mp3" length="58364304" type="audio/mpeg" />
         <itunes:duration>40:31</itunes:duration>
         <itunes:summary>Amitai and Adam discuss a 1.6 million dollar stamp sale, skill set mastery and technological decision making, and the value of slowing down. Along the way Amitai explains his indifference to Drupal 8 and why Gizra's Drupal-Elm Starter Kit uses Drupal 7 and Restful 1.x.</itunes:summary>
