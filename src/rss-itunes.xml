@@ -5,7 +5,7 @@ title : Podcast RSS Feed
 <rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
   <channel>
     <title>The Gizra Way Podcast</title>
-    <link>{{ site.url }}</link>
+    <link>{{ site.url }}/podcast/</link>
     <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
     <language>en-us</language>
     <copyright>Gizra, USA LLC, {{ 'now' | date: "%Y" }}</copyright>
@@ -13,7 +13,6 @@ title : Podcast RSS Feed
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <itunes:author>Gizra</itunes:author>
     <itunes:summary>The Gizra Way podcast feed</itunes:summary>
-    <itunes:author>Gizra</itunes:author>
     <itunes:owner>
       <itunes:name>Gizra</itunes:name>
       <itunes:email>info@gizra.com</itunes:email>
@@ -24,14 +23,15 @@ title : Podcast RSS Feed
     <itunes:image href="{{ site.url }}/assets/images/social/gizra-way-podcast.jpg"/>
     <itunes:explicit>no</itunes:explicit>
 
-    {% for podcast in site.data.podcast %}
+    {% assign podcasts = site.posts | where:"layout","podcast" %}
+    {% for podcast in podcasts  %}
       <item>
-        <title>Episode {{ podcast.episode }}: {{ podcast.title }}</title>
+        <title>Episode {{ podcast.podcast_episode }}: {{ podcast.title }}</title>
         <description>{{ podcast.description }}</description>
-        <link>{{ site.url }}/podcast/</link>
+        <link>{{ site.url }}{{ podcast.url }}</link>
         <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <enclosure url="{{ podcast.file }}" length="{{ podcast.filesize }}" type="audio/mpeg" />
-        <itunes:duration>{{ podcast.length }}</itunes:duration>
+        <enclosure url="{{ podcast.podcast_file }}" length="{{ podcast.podcast_filesize }}" type="audio/mpeg" />
+        <itunes:duration>{{ podcast.podcast_length }}</itunes:duration>
         <itunes:summary>{{ podcast.description }}</itunes:summary>
         <itunes:explicit>no</itunes:explicit>
       </item>

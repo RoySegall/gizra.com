@@ -8,25 +8,47 @@ image: /assets/images/social/gizra-way-podcast.jpg
 <div class="{{ site.wrapper_classes.full }}">
 
   {% include page_header.html url=page.url title=page.title%}
+  <div class="podcast description">
+    <p>
+      A semi-regular conversation about the web, technology, and what we call The Gizra Way.
+    </p>
+    <div class="ui stackable text menu">
+      <div class="header item"><i class="big podcast icon"></i></div>
+        <a class="item" href="https://itunes.apple.com/us/podcast/the-gizra-way-podcast/id1340713442">
+          Listen on iTunes
+        </a>
+        <a class="item" href="https://www.stitcher.com/podcast/gizra/the-gizra-way-podcast?refid=stpr">
+          Listen on Stitcher
+        </a>
+        <a class="item" href="/rss-itunes.xml">
+          RSS Feed
+        </a>
+      </div>
+    </div>
   <div class="ui segments">
 
-    {% for podcast in site.data.podcast %}
-      <div class="ui padded segment projects">
-      <h2 class="ui header podcast-title">Episode {{ podcast.episode }}: {{ podcast.title }}</h2>
-      <div class="podcast description">
-        <p>{{ podcast.description }}</p>
+    {% assign podcasts = site.posts | where:"layout","podcast" %}
+    {% for podcast in podcasts  %}
+      <div class="ui padded segment podcasts">
+        <a href="{{ podcast.permalink }}">
+          <h2 class="ui header podcast-title">
+            Episode {{ podcast.podcast_episode }}: {{ podcast.title }}
+          </h2>
+        </a>
+        <div class="podcast description">
+          <p>{{ podcast.description }}</p>
+        </div>
+        <p>
+          <audio src="{{ podcast.podcast_file }}"
+          		class="mejs__player"
+          		data-mejsoptions='{"alwaysShowControls": "true", "stretching": "responsive"}'>
+          </audio>
+        </p>
+        <div class="podcast descriptor"><strong>Recorded:</strong> {{ podcast.date | date: "%b %-d, %Y"}}</div>
+        <div class="podcast descriptor"><strong>Length:</strong> {{ podcast.podcast_length }}</div>
+        <div class="podcast descriptor"><strong>Intro/Outro Tune:</strong> <a href="{{ podcast.podcast_tune_link }}">{{ podcast.podcast_tune }}</a></div>
+        <div class="podcast descriptor"><strong>Download the MP3:</strong> <a href="{{ podcast.podcast_file }}">Episode {{ podcast.podcast_episode }}</a></div>
       </div>
-      <p>
-        <audio src="{{ podcast.file }}"
-        		class="mejs__player"
-        		data-mejsoptions='{"alwaysShowControls": "true"}'>
-        </audio>
-      </p>
-      <div class="podcast descriptor"><strong>Recorded:</strong> {{ podcast.date }}</div>
-      <div class="podcast descriptor"><strong>Length:</strong> {{ podcast.length }}</div>
-      <div class="podcast descriptor"><strong>Intro/Outro Tune:</strong> <a href="{{ podcast.tune_link }}">{{ podcast.tune }}</a></div>
-      <div class="podcast descriptor"><strong>Download the MP3:</strong> <a href="{{ podcast.file }}">Episode {{ podcast.episode }}</a></div>
-    </div>
     {% endfor %}
 
   </div>
