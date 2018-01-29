@@ -1,5 +1,9 @@
 .podcast {
 
+  .podcast-title > .right.column {
+    margin-top: -55px;
+  }
+
   &.description {
     margin-bottom: 20px;
   }

@@ -3,20 +3,29 @@ layout: default
 post: true
 ---
 
-<div class="ui grid centered post">
+<div class="ui grid centered podcast">
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
     <div class="ui raised padded segment">
-
-
-        <h1 class="ui header podcast-title">
-          <div class="content">
-            <a href="{{ page.url }}">Episode {{ page.podcast_episode }}: {{ page.title }}</a>
+      <h1 class="ui header podcast-title">
+        <div class="content">
+          <a href="{{ page.url }}">Episode {{ page.podcast_episode }}: {{ page.title }}</a>
+        </div>
+        <div class="ui stackable text menu">
+          <div class="header item"><i class="big podcast icon"></i></div>
+            <a class="item" href="https://itunes.apple.com/us/podcast/the-gizra-way-podcast/id1340713442">
+              Listen on iTunes
+            </a>
+            <a class="item" href="https://www.stitcher.com/podcast/gizra/the-gizra-way-podcast?refid=stpr">
+              Listen on Stitcher
+            </a>
+            <a class="item" href="/rss-itunes.xml">
+              RSS Feed
+            </a>
           </div>
           <div class="right floated column">
             <a href="/podcast" class="ui teal right ribbon big label">Podcast</a>
           </div>
         </h1>
-
       <div class="podcast description">
         <p>{{ content }}</p>
       </div>
