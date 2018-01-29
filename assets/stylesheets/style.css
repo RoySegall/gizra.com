@@ -119,6 +119,9 @@ footer.ui.vertical.segment {
   #team-toggle-view {
     display: none; } }
 
+.podcast .podcast-title > .right.column {
+  margin-top: -55px; }
+
 .podcast.description {
   margin-bottom: 20px; }
 
