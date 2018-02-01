@@ -4,10 +4,29 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Mon, 29 Jan 2018 16:36:27 -0600</lastBuildDate>
-    <pubDate>Mon, 29 Jan 2018 16:36:27 -0600</pubDate>
+    <lastBuildDate>Thu, 01 Feb 2018 12:43:34 -0600</lastBuildDate>
+    <pubDate>Thu, 01 Feb 2018 12:43:34 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Walking the Tightrope without a Net: Prototyping in Browser with CSS Grid</title>
+        <description>
+          &lt;p&gt;Not long ago, I was reviewing some ideas with a client about his homepage. It was a pretty typical issue – some dynamic content (in this case, educational resources) that needed to be arranged and highlighted in different ways in order to draw in users. There are a lot of known patterns to use here some of which would work well. I had a few ideas – none of them particularly earth-shattering – that might solve the problem.&lt;/p&gt;
+
+&lt;p&gt;So what’s the next step?&lt;/p&gt;
+
+&lt;p&gt;I could have gone to a designer, translated the idea, waited for PSDs to come back, shared with the client, and rinsed and repeated. A totally valid and worthwhile process in cases where a designer’s creative treatment is needed. But in this simple (and low-budget) scenario, there were some clear tropes that could be used. Of course, there are prototype apps like &lt;a href=&quot;https://www.invisionapp.com/&quot;&gt;InVision&lt;/a&gt; or &lt;a href=&quot;https://www.axure.com/&quot;&gt;Axure&lt;/a&gt;, but I haven’t really found the case where fumbling through these tools myself was worth the learning curve. Here’s where CSS-Grid settled into the process really nicely.&lt;/p&gt;
+
+&lt;p&gt;Because I had been following the &lt;a href=&quot;https://www.w3.org/TR/css-grid-1/&quot;&gt;CSS-Grid Specification&lt;/a&gt; quite closely – mainly through the Twitter feeds of leading advocates and members of the CSS Working Group like &lt;a href=&quot;https://twitter.com/jensimmons&quot;&gt;Jen Simmons&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/rachelandrew&quot;&gt;Rachel Andrew&lt;/a&gt; (more on the importance of that below) – I was eager to try it out in this context.&lt;/p&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/prototype-with-css-grid//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/prototype-with-css-grid/</link>
+        <guid>https://www.gizra.com/content/prototyping-with-css-grid</guid>
+        <pubDate>Thu, 01 Feb 2018 00:00:00 -0600</pubDate>
+      </item>
     
       <item>
         <title>We Don't Need an Intro Tune</title>

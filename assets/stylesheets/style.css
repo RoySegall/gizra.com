@@ -41,6 +41,8 @@ footer.ui.vertical.segment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .post .ui.dividing.header .content {
+    margin-right: 1em; }
 
 .gist .ui.table tr td {
   border-top: none; }
