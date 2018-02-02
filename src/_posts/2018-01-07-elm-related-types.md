@@ -588,7 +588,169 @@ we structure things, we still need the more concrete `hasPendingChildActivity`
 and `hasPendingMotherActivity` anwyway. So, what exactly do we gain by also
 having the more abstract version at our disposal?
 
-... insert discussion ...
+One way of addressing this question is to look at the `viewPerson` function
+which I sketched out above:
+
+```elm
+    -- With tagged types
+    viewperson : person -> html a
+    viewperson person =
+        div []
+            [ h4 [] [ text <| getname person ]
+            , getavatarurl person
+                |> maybeviewimage (iconclass person)
+            ]
+
+    -- With type classes
+    viewPerson : Person p -> p -> Html a
+    viewPerson personConfig person =
+        div []
+            [ h4 [] [ text <| personConfig.getName person ]
+            , personConfig.getAvatarUrl person
+                |> maybeViewImage (personConfig.iconClass person)
+            ]
+```
+
+What if we didn't have a `Person` type at all -- just `Mother` and `Child`. Then,
+we'd end up with something like this:
+
+```elm
+    viewMother : Mother -> Html a
+    viewMother mother =
+        div []
+            [ h4 [] [ text mother.name ]
+            , maybeViewImage "mother" mother.avatarUrl
+            ]
+
+    viewChild : Child -> Html a
+    viewChild child =
+        div []
+            [ h4 [] [ text child.name ]
+            , maybeViewImage "child" child.avatarUrl
+            ]
+```
+
+I suppose it's true that we're repeating ourselves a little bit here.  However,
+if our `view` function really were this simple, it would be obviously better to
+repeat ourselves rather than engage in the complexity of constructing a type
+class. That is, you wouldn't want to use type classes to avoid this little bit
+of repitition -- the repitition would be less painful (and, fewer lines of
+code) than the type classes.
+
+Of course, in our real app, the `view` function was much more complex than this.
+It's always difficulty writing about programming techniques that only make sense
+in the presence of complexity, since it would be tedious, and distracting, to
+actually provide all the complexity. But, consider the following sort of pseduo-code
+that is somewhat typical:
+
+```elm
+    viewMother : Mother -> Html a
+    viewMother mother =
+        let
+            nameBlock =
+                viewName mother.name
+
+            imageBlock =
+                maybeViewImage "mother" mother.avatarUrl
+
+            part3 =
+                ...
+
+            part4 =
+                ...
+
+            part5 =
+                ...
+
+            part6 =
+                ...
+        in
+        div []
+            [ nameBlock
+            , imageBlock
+            , part3
+            , part4
+            , part5
+            , part6
+            ]
+```
+
+Now, suppose you want to be able to view a `Child` in a roughly similar way,
+while avoiding as much code repitition as is reasonable. One way is to
+generalize the whole function, using tagged types or type classes (the
+approaches we've considered so far). But that's not the first technique I'd
+actually reach for. The first technique I'd reach for is generalizing the
+**parts** of the function. So, you could imagine something like this for
+`viewChild`:
+
+```elm
+    viewChild : Child -> Html a
+    viewChild child =
+        let
+            nameBlock =
+                viewName child.name
+
+            imageBlock =
+                maybeViewImage "child" child.avatarUrl
+
+            part3 =
+                ...
+
+            part4 =
+                ...
+
+            part5 =
+                ...
+
+            part6 =
+                ...
+        in
+        div []
+            [ nameBlock
+            , imageBlock
+            , part3
+            , part4
+            , part5
+            , part6
+            ]
+```
+
+Here, we're identifying multiple "helper" functions, like `viewName` and
+`maybeViewImage`, which we can re-use **inside** our two distinct functions,
+rather than trying to create a single, master function. Now, this does leave
+some repitition in `viewChild` and `viewMother`. However, the guts of the logic
+is not repeated, since it is broken out into multiple functions that both
+`viewChild` and `viewMother` can call. Depending on what kind of computation
+goes into `part3`, `part4`, `part5` and `part6`, we may have many more
+opportunities to create additional helper functions.
+
+Why is this often a preferable approach? One reason is that the helper
+functions often make a great deal of sense in their own right -- you'd probably
+want to create them anyway. One of the main questions I ask myself when
+structuring code is: how can I structure this in a way that I can be confident
+that it's finished -- that I won't have to revisit it? That is a lot easier to
+do for `viewNameBlock` than it is for `viewMother`. Well, I suppose you might
+want to change the way the name is viewed at some point. But it's a small,
+well-defined function that you may be able to just leave alone for quite a
+while. That's the kind of function I like.
+
+The other reason is that the similarities between `viewChild` and `viewMother`
+may not be as profound as you initially thought. What if the product manager
+comes back to you tomorrow, humble developer, and says that children ought to
+be viewed in a subtly different way than mothers? (They are known to do such
+things).  If you've created a `viewPerson` function that handles both mothers
+and children, you can deal with that by creating some sort of configuration in
+your `Person` type -- for instance, something like the `iconClass` I use above.
+However, if you have to do too much of that, your `viewPerson` function can
+become convoluted and tricky to understand. It might have been better to break
+out a bunch of helper functions, so that you can make more comprehensible
+changes in separate `viewChild` and `viewMother` functions.
+
+So, you need to develop an intuition for which techniques best fit which
+situation.  I say "intuition" because you can't really sketch out each approach
+in detail and see which is nicer -- it would take too long! Instead, you need
+to think about the app's requirements now, and what they are likely to become,
+and make the best choice you can.
 
 ## Extensible Records
 
