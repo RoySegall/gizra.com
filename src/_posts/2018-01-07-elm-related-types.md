@@ -178,11 +178,11 @@ So, what approaches are possible? I can think of four:
 
 ## Tagged Types
 
-If what we want is to define a type that can either by a `Child` or a `Mother`,
-the simplest way of doing it is via a tagged type (sometimes referred to as a
-sum type or algebraic data type). That is the basic way in which we can define
-something which might be one sort of thing or another sort of thing. So, a
-`Person` could be defined in this way:
+If what we want is to define a type that can either by a `Child` or a
+`Mother`, the simplest way of doing it is via a tagged type (sometimes
+referred to as a sum type, union type, or algebraic data type). That is the
+most basic way in which we can define something which might be one sort of
+thing or another sort of thing. So, a `Person` could be defined in this way:
 
 ```elm
     type Person
@@ -241,12 +241,12 @@ sketched above:
                 EveryDict.get id container.children
                     |> Maybe.map .motherId
 
-            MotherId id ->
+            PersonIdMother id ->
                 Just id
 
     getChildren : PersonId -> Container -> List ChildId
     getChildren personId container =
-        getMotherId personId
+        getMotherId personId container
             |> Maybe.andThen (\id -> EveryDict.get id container.mothers)
             |> Maybe.map .children
             |> Maybe.withDefault []
@@ -259,7 +259,7 @@ types:
 
 ```elm
     type Measurements
-        = MotherMeasurements MotherMeasurments
+        = MotherMeasurements MotherMeasurements
         | ChildMeasurements ChildMeasurements
 
     type Activity
@@ -346,7 +346,7 @@ ugly. Perhaps we can do better!
 What if we conceived of the `Person` type not as a "wrapper" for `Child` and
 `Mother`, but instead as a set of requirements that we must fulfill in order to
 deal with a type as a person? In Elm, we could express those requirements in
-the form of a record, along these lines:
+the form of a record, along these lines (with some omissions):
 
 ```elm
     type alias Person p =
@@ -355,7 +355,6 @@ the form of a record, along these lines:
         , getBirthDate : p -> NominalDate
         , getName : p -> String
         , iconClass : p -> String
-        ...
         }
 ```
 
@@ -366,33 +365,36 @@ like this:
     childPerson : Person Child
     childPerson =
         { getAllActivities =
-            List.map ChildActivity
-                [ TakePhoto
-                , MeasureHeight
-                , MeasureWeight
-                ]
+            always <|
+                List.map ChildActivity
+                    [ TakePhoto
+                    , MeasureHeight
+                    , MeasureWeight
+                    ]
         , getAvatarUrl = .avatarUrl
-        , iconClass = "child"
-        ...
+        , getBirthDate = .birthDate
+        , getName = .name
+        , iconClass = always "child"
         }
+
 
     motherPerson : Person Mother
     motherPerson =
         { getAllActivities =
-            List.map MotherActivity
-                [ TakePhoto
-                , MeasureHeight
-                , MeasureWeight
-                ]
+            always <|
+                List.map MotherActivity
+                    [ RecordFamilyPlanningMethod
+                    ]
         , getAvatarUrl = .avatarUrl
-        , iconClass = "mother"
-        ...
+        , getBirthDate = .birthDate
+        , getName = .name
+        , iconClass = always "mother"
         }
 ```
 
 So `Person` now describes a class of types (or, perhaps, a "typeclass") with
 certain capabilities. If we're writing a function that needs to make use of one
-of those capabilities, we no longer have to specify exactly which type to
+of those capabilities, we no longer have to specify exactly which type
 it takes. Instead, we can ask for any type that has the capability we need.
 
 Consider, for instance, a function to view a person. In our first attempt at
@@ -409,7 +411,13 @@ like this.
             ]
 ```
 
-Using `Person` as a typeclass instead would look something like this:
+Using `Person` as a typeclass instead would look something like this:[^haskelldeclaration]
+
+[^haskelldeclaration]:
+    If you happen to be familiar with languages like Haskell which have explicit
+    support for typeclasses, the declaration of this kind of function wouldn't
+    actually look much different. Instead of `viewPerson : Person p -> p -> Html
+    a`, you'd have something like `viewPerson :: Person p => p -> Html a`.
 
 ```elm
     viewPerson : Person p -> p -> Html a
@@ -454,7 +462,7 @@ along these lines:
 You might call this a "multi-parameter type class", if you were so inclined.
 
 Adding these additional type parameters neatly solves our difficulty with
-implementing `hasPendingActivity`, since we can now depending on getting an
+implementing `hasPendingActivity`, since we can now depend on getting an
 activity of the appropriate type -- the compiler will complain if we don't. So,
 we can do something like:
 
@@ -465,7 +473,7 @@ we can do something like:
         , ...
         }
 
-    childConfig : Person Child ChildActivity ChildId ChildMeasuurements
+    childConfig : Person Child ChildActivity ChildId ChildMeasurements
     childConfig
         { hasPendingActivity = hasPendingChildActivity
         , ...
@@ -476,7 +484,7 @@ we can do something like:
         ...
 
     hasPendingMotherActivity : MotherId -> MotherActivity -> Container -> Bool
-    hasPendingMotherActivity motherId MotherActivity container =
+    hasPendingMotherActivity motherId motherActivity container =
         ...
 
 ```
@@ -486,18 +494,26 @@ supplied to `hasPendingActivity`, since the compiler is aware of all the
 related types and will complain if any of them are wrong.
 
 So, while you might have heard that Elm lacks typeclasses, my own experience is
-that I use them (at least somewhere) in pretty much every app.  However, there
-are a few limitations of typeclasses in Elm which I should mention.
+that I use them (at least somewhere) in pretty much every app. You can also
+find examples of this technique in packages such as
+[elm-sortable-table](http://package.elm-lang.org/packages/evancz/elm-sortable-table/1.0.1),
+where the `Config data msg` in `view : Config data msg -> State -> List data ->
+Html msg` is a kind of typeclass.
 
-One is that you must explicitly mention the typeclass implemenation when you
-call a function that requires one. So, for instance, to call the `viewPerson`
-function sketched above, you need to explicitly refer to the typeclass ...
-soemthing like `viewPerson childConfig child`, or `viewPerson motherConfig
-mother`.  In some lanugages, the compiler can deduce that if you're supplying a
-`child` to `viewPerson`, you must want to use the `childConfig`, so you don't
-have to mention it explicitly. That is a convenience, but it is often confusing
-to try to follow the compiler's reasoning about which typeclass implementation
-it will supply. It may not be such a terrible thing to just say which one you want.
+There are a few limitations of typeclasses in Elm which I should
+mention.  One is that you must explicitly mention the typeclass implemenation
+when you call a function that requires one. So, for instance, to call the
+`viewPerson` function sketched above, you need to explicitly refer to the
+typeclass ...  soemthing like `viewPerson childConfig child`, or `viewPerson
+motherConfig mother`.  In some languages, the compiler can deduce that if
+you're supplying a `child` to `viewPerson`, you must want to use the
+`childConfig`, so you don't have to mention it explicitly. That is a
+convenience, but it is often confusing to try to follow the compiler's
+reasoning about which typeclass instance it will deduce. It may not be
+such a terrible thing to just say which one you want. Saying which typeclass
+you want also makes it easy to construct typeclasses at run-time, which is
+occasionaly handy, and is more convoluted (but not impossible) in languages
+like Haskell.
 
 A bigger difficulty is Elm's lack of higher-kinded polymorphism. What this
 means is that type parameters cannot be used as wrappers -- they can only be
