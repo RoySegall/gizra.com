@@ -746,20 +746,78 @@ become convoluted and tricky to understand. It might have been better to break
 out a bunch of helper functions, so that you can make more comprehensible
 changes in separate `viewChild` and `viewMother` functions.
 
-So, you need to develop an intuition for which techniques best fit which
-situation.  I say "intuition" because you can't really sketch out each approach
-in detail and see which is nicer -- it would take too long! Instead, you need
-to think about the app's requirements now, and what they are likely to become,
-and make the best choice you can.
+Now, in the case of the app I was working on, I was pretty confident that the
+view for children was going to stay structurally similar to the view for
+mothers, as we continued to develop the app. So, it seemed worthwhile to
+construct a unified `viewPerson` function using type classes. But, you can
+never be entirely sure -- you have to rely on an intuition as to which
+techniques best fit which situation.  After all, you can't really sketch out
+each approach in detail and see which is nicer -- it would take too long!
+(Unless you're writing a blog post!).  Instead, you need to think about the
+app's requirements now, and what they are likely to become, and make the best
+choice you can.
 
 ## Extensible Records
 
 Finally, I should at least mention one option which we never seriously tried,
 but which could be interesting in some cases: extensible records.
 
-... insert discussion ...
+When you have two related types that are both "record" types, and they share
+some field definitions in common, it is possible to use Elm's record syntax to
+work with just those fields. Consider a `getName` function which we want to use
+with both `Mother` and `Child`. Each of those has a field `name : String`. So,
+we could define a `getName` function like this:
 
------
+```elm
+    getName : { a | name : String } -> String
+    getName thingWithAName =
+        thingWithAName.name
+
+    -- Or, more succintly
+    getName2 : { a | name : String } -> String
+    getName2 =
+        .name
+```
+
+Either of those functions can be called with a `Mother` or a `Child`, because
+both a `Mother` and a `Child` have the required `name` field. (The `a` type
+parameter tells the compiler that the argument can have other fields as well,
+in addition to `name`).
+
+Now, as the second version of the example points out, you don't really even
+need to define `getName`, since Elm will magically build it for you if you say
+`.name`. But, this can get more interesting where two types share multiple
+fields. It becomes possible to define a type that expresses all the fields
+that the two types have in common. For instance, you could imagine a `Person`
+type that contains the fields that `Child` and `Mother` have in common:
+
+```elm
+    type alias Person a =
+        { a
+            | name : String
+            , avatarUrl : Maybe String
+            , birthDate : NominalDate
+        }
+```
+
+Then, you could almost write the sinplest version of our `viewPerson` function
+in a way that will accept either a `Child` or a `Mother` as an argument.
+
+```elm
+    viewPerson : Person a -> Html b
+    viewPerson person =
+        div []
+            [ h4 [] [ text person.name ]
+            , maybeViewImage "?" person.avatarUrl
+            ]
+```
+
+This can be a useful technique in simple cases. However, even our simplest
+version of `viewPerson` isn't quite simple enough. We want to associate a
+different `iconClass` with mothers and children, for use in `maybeViewIamge`.
+Extensible records don't, by themselves, provide a mechanims for doing that.
+So, you'll often need more complex techniques than extensible records. However,
+in cases where extensible records are sufficient, they are very convenient.
 
 ## Notes
 
