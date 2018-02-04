@@ -523,5 +523,30 @@ people =
               }
           }
         )
+      , ( "mariano-dagostino"
+        , { name = "Mariano D'Agostino"
+          , image = "mariano.jpg"
+          , socialNetworks =
+              [ Email "mariano@gizra.com"
+              , Twitter "cuencodigital"
+              , Drupal "dagmar"
+              ]
+          , title = "Senior Developer"
+          , attributes =
+              [ FamilyAttr Married
+              , GenderAttr Male
+              , LanguageAttr English
+              , LanguageAttr Spanish
+              , NationalityAttr Argentina
+              , PreferedWorkHoursAttr EarlyRise
+              , SportAttr Biking
+              , WorkingRemote
+              ]
+          , coordinates =
+              { lat = -32.9468
+              , lng = -60.6393
+              }
+          }
+        )
     ]
         |> DictList.fromList

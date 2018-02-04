@@ -1,0 +1,41 @@
+---
+title : Podcast RSS Feed
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>The Gizra Way Podcast</title>
+    <link>{{ site.url }}/podcast/</link>
+    <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
+    <language>en-us</language>
+    <copyright>Gizra, USA LLC, {{ 'now' | date: "%Y" }}</copyright>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <itunes:author>Gizra</itunes:author>
+    <itunes:summary>The Gizra Way podcast feed</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Gizra</itunes:name>
+      <itunes:email>info@gizra.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology">
+      <itunes:category text="Developers"/>
+    </itunes:category>
+    <itunes:image href="{{ site.url }}/assets/images/social/gizra-way-podcast.jpg"/>
+    <itunes:explicit>no</itunes:explicit>
+
+    {% assign podcasts = site.posts | where:"layout","podcast" %}
+    {% for podcast in podcasts  %}
+      <item>
+        <title>Episode {{ podcast.podcast_episode }}: {{ podcast.title }}</title>
+        <description>{{ podcast.description }}</description>
+        <link>{{ site.url }}{{ podcast.url }}</link>
+        <pubDate>{{ podcast.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <enclosure url="{{ podcast.podcast_file }}" length="{{ podcast.podcast_filesize }}" type="audio/mpeg" />
+        <itunes:duration>{{ podcast.podcast_length }}</itunes:duration>
+        <itunes:summary>{{ podcast.description }}</itunes:summary>
+        <itunes:explicit>no</itunes:explicit>
+      </item>
+    {% endfor %}
+
+  </channel>
+</rss>

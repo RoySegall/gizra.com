@@ -1,5 +1,8 @@
 .post .ui.dividing.header {
   display: flex;
+  .content {
+    margin-right: 1em;
+  }
 }
 
 .gist {
