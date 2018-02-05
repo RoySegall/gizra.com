@@ -1,15 +1,18 @@
 //Colors
 $gizra-orange: #e27058;
-$gizra-blue: #578E9B;
+$gizra-blue: #578e9b;
 $gizra-blue-shadow: #3a626b;
 $gizra-blue-dark: #244b80;
 $gizra-blue-dark-shadow: #172f4f;
+$gizra-background-gray: #f5f5f5;
+$gizra-code-blue: #458;
+$gizra-code-border: rgba(34,36,38,.15);
 
 //Font Stacks
 $esteban: 'Esteban', serif;
 $gizra: 'Abril Fatface', sans-serif;
 $montserat: 'Montserat', sans-serif;
-$openSans : 'Open Sans', sans-serif;
+$openSans: 'Open Sans', sans-serif;
 
 @import 'blog_list';
 @import 'homepage';
