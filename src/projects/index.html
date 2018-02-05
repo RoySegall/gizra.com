@@ -77,7 +77,54 @@ title: Project Portfolio
           content=project_content
         %}
 
-      <!-- Case Del Lector -->
+        <!-- Ihangane -->
+
+        {% capture project_content %}
+        <p>
+           Ihangane provides counseling to Rwandan mothers with HIV to prevent the
+           transmission of the virus to their child. Gizra has developed a
+           mobile application that helps nurses record measurements from
+           evaluations and display historical progress back to the mother.
+           Because bandwidth conditions in Rwanda are variable, Gizra implemented
+           a progressive web app, allowing for offline collection of data,
+           storing things like images in the local device storage, until a
+           bandwidth is available to upload to the backend.
+        </p>
+        {% endcapture %}
+
+          {% include project.html
+            title="E-HEZA EMR Application"
+            client="The Ihangane Project"
+            image="ihangane.jpg"
+            content=project_content
+          %}
+
+          <!-- FindYourSummer -->
+
+          {% capture project_content %}
+          <p>
+            FindYourSummer is a program of the Jewish Education Project in New
+            York and is dedicated to helping teens find meaningful Jewish summer
+            experiences. They have amassed a catalogue of nearly 400 summer programs,
+            and when they decided to expand their Drupal site into a more
+            sophisticated tool for sorting options, comparing calendars, and
+            sharing lists. Gizra developed a “drop in” Elm application (in a
+            Drupal Panel page) - the result is a “summer planner” that allows
+            the user to tag programs, and send them by email or create a custom
+            page on the website to share.
+          </p>
+          {% endcapture %}
+
+            {% include project.html
+              title="FindYourSummer - Summer Planner"
+              client="The Jewish Education Project"
+              url="findyoursummer.org"
+              image="findyoursummer.jpg"
+              content=project_content
+            %}
+
+
+      <!-- Casa Del Lector -->
 
       {% capture project_content %}
       <p>
