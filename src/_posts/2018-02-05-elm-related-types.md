@@ -100,7 +100,7 @@ Now, what are all these "measurements"? They were the main point of the app we
 were working on -- we were collecting and displaying those measurements (and a
 few others I've omitted for the sake of simplicity).
 
-Note that these measurments are themselves an example of related types. You
+Note that these measurements are themselves an example of related types. You
 could, for instance, say that `ChildMeasurements` is to `Child` as
 `MotherMeasurements` is to `Mother`. Furthermore, we needed another couple of
 related types to represent the various measurements at the data level (rather
@@ -252,7 +252,7 @@ sketched above:
             |> Maybe.withDefault []
 ```
 
-That all works very well. However, this approach turned out to have some
+That all works very well, so far. However, this approach turned out to have some
 pitfalls in our app, especially when we started implementing functions which
 depended on additional related types. Consider how one might express those other
 types:
@@ -337,7 +337,7 @@ of `hasPendingActivity` to return a `Maybe` (or a `Result`)...something like:
     hasPendingActivity : PersonId -> Activity -> Container -> Maybe Bool
 ```
 
-That way, we could return `Nothing` in cases where there is a mis-match between
+That way, we could return `Nothing` in cases where there is a mismatch between
 our parameters. This would be technically correct at some level, but is really
 ugly. Perhaps we can do better!
 
@@ -358,8 +358,10 @@ the form of a record, along these lines (with some omissions):
         }
 ```
 
-Then, we need to fill in the record for `Child` and for `Mother`, something
-like this:
+In effect, we're saying that any type (here, represented as `p`) can be a
+`Person`, so long as you provide an implementation for each of the indicated
+functions.  So, we need to fill in the record for `Child` and for `Mother`,
+something like this:
 
 ```elm
     childPerson : Person Child
@@ -501,7 +503,7 @@ where the `Config data msg` in `view : Config data msg -> State -> List data ->
 Html msg` is a kind of typeclass.
 
 There are a few limitations of typeclasses in Elm which I should
-mention.  One is that you must explicitly mention the typeclass implemenation
+mention.  One is that you must explicitly mention the typeclass implementation
 when you call a function that requires one. So, for instance, to call the
 `viewPerson` function sketched above, you need to explicitly refer to the
 typeclass...something like `viewPerson childConfig child`, or `viewPerson
@@ -512,15 +514,15 @@ convenience, but it is often confusing to try to follow the compiler's
 reasoning about which typeclass instance it will deduce. It may not be
 such a terrible thing to just say which one you want. Saying which typeclass
 you want also makes it easy to construct typeclasses at run-time, which is
-occasionaly handy, and is more convoluted (but not impossible) in languages
+occasionally handy, and is more convoluted (but not impossible) in languages
 like Haskell.
 
 A bigger difficulty is Elm's lack of higher-kinded polymorphism. What this
 means is that type parameters cannot be used as wrappers -- they can only be
-wrapped. So, in the example above, we definitely need to say `List p`...the
-`p` can be a parameter, but we have to make a definite choice about `List`. To
-put it another way, you must always choose concrete "container" types. So,
-there are some relationships between types that you won't be able to model
+wrapped. So, in the example above, we have to be specific about the <u>List</u>
+in `List p`. The `p` can be a parameter, but we have to make a definite choice
+about `List` -- you must always choose concrete "container" types. So, there
+are some relationships between types that you won't be able to model
 accurately. However, that still leaves a lot of room for this technique to be
 useful.
 
@@ -585,7 +587,7 @@ impulse is towards greater abstraction.
 
 Consider the `hasPendingActivity` function I've sketched above. No matter how
 we structure things, we still need the more concrete `hasPendingChildActivity`
-and `hasPendingMotherActivity` anwyway. So, what exactly do we gain by also
+and `hasPendingMotherActivity` anyway. So, what exactly do we gain by also
 having the more abstract version at our disposal?
 
 One way of addressing this question is to look at the `viewPerson` function
@@ -634,7 +636,7 @@ I suppose it's true that we're repeating ourselves a little bit here.  However,
 if our `view` function really were this simple, it would be obviously better to
 repeat ourselves rather than engage in the complexity of constructing a type
 class. That is, you wouldn't want to use type classes to avoid this little bit
-of repitition -- the repitition would be less painful (and, fewer lines of
+of repetition -- the repetition would be less painful (and, fewer lines of
 code) than the type classes.
 
 Of course, in our real app, the `view` function was much more complex than this.
@@ -676,7 +678,7 @@ that is somewhat typical:
 ```
 
 Now, suppose you want to be able to view a `Child` in a roughly similar way,
-while avoiding as much code repitition as is reasonable. One way is to
+while avoiding as much code repetition as is reasonable. One way is to
 generalize the whole function, using tagged types or type classes (the
 approaches we've considered so far). But that's not the first technique I'd
 actually reach for. The first technique I'd reach for is generalizing the
@@ -718,7 +720,7 @@ actually reach for. The first technique I'd reach for is generalizing the
 Here, we're identifying multiple "helper" functions, like `viewName` and
 `maybeViewImage`, which we can re-use **inside** our two distinct functions,
 rather than trying to create a single, master function. Now, this does leave
-some repitition in `viewChild` and `viewMother`. However, the guts of the logic
+some repetition in `viewChild` and `viewMother`. However, the guts of the logic
 is not repeated, since it is broken out into multiple functions that both
 `viewChild` and `viewMother` can call. Depending on what kind of computation
 goes into `part3`, `part4`, `part5` and `part6`, we may have many more
@@ -752,20 +754,20 @@ mothers, as we continued to develop the app. So, it seemed worthwhile to
 construct a unified `viewPerson` function using type classes. But, you can
 never be entirely sure -- you have to rely on an intuition as to which
 techniques best fit which situation.  After all, you can't really sketch out
-each approach in detail and see which is nicer -- it would take too long!
+each approach in detail and see which is actually nicer -- it would take too long!
 (Unless you're writing a blog post!).  Instead, you need to think about the
 app's requirements now, and what they are likely to become, and make the best
 choice you can.
 
 ## Extensible Records
 
-Finally, I should at least mention one option which we never seriously tried,
+Finally, I should at least mention one option which wasn't suitable for our example,
 but which could be interesting in some cases: extensible records.
 
 When you have two related types that are both "record" types, and they share
 some field definitions in common, it is possible to use Elm's record syntax to
 work with just those fields. Consider a `getName` function which we want to use
-with both `Mother` and `Child`. Each of those has a field `name : String`. So,
+with both `Mother` and `Child`. Both types have a field defined as `name : String`. So,
 we could define a `getName` function like this:
 
 ```elm
@@ -784,7 +786,7 @@ both a `Mother` and a `Child` have the required `name` field. (The `a` type
 parameter tells the compiler that the argument can have other fields as well,
 in addition to `name`).
 
-Now, as the second version of the example points out, you don't really even
+Now, as `getName2` suggests, you don't really even
 need to define `getName`, since Elm will magically build it for you if you say
 `.name`. But, this can get more interesting where two types share multiple
 fields. It becomes possible to define a type that expresses all the fields
@@ -800,7 +802,7 @@ type that contains the fields that `Child` and `Mother` have in common:
         }
 ```
 
-Then, you could almost write the sinplest version of our `viewPerson` function
+Then, you could almost write the simplest version of our `viewPerson` function
 in a way that will accept either a `Child` or a `Mother` as an argument.
 
 ```elm
@@ -815,7 +817,7 @@ in a way that will accept either a `Child` or a `Mother` as an argument.
 This can be a useful technique in simple cases. However, even our simplest
 version of `viewPerson` isn't quite simple enough. We want to associate a
 different `iconClass` with mothers and children, for use in `maybeViewIamge`.
-Extensible records don't, by themselves, provide a mechanims for doing that.
+Extensible records don't, by themselves, provide a mechanism for doing that.
 So, you'll often need more complex techniques than extensible records. However,
 in cases where extensible records are sufficient, they are very convenient.
 
