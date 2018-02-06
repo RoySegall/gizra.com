@@ -1,11 +1,11 @@
 ---
-title: "Expressing a relationship between multiple types in Elm"
+title: "Expressing a Relationship between Multiple Types in Elm"
 tags:
   - Elm
 permalink: "/content/elm-related-types/"
 layout: post
 image: "/assets/images/posts/elm-related-types/thumb.jpg"
-description: "What options do you have when types have something in common? Have you considered type classes?"
+description: "What options do you have when Elm types have something in common? Have you considered type classes?"
 author: rgrempel
 ---
 
@@ -31,7 +31,7 @@ end up choosing? For answers to these questions, and more, read on!
 
 <!-- more -->
 
-## Our data model
+## Our Data Model
 
 Before proceeding further, here's a little excerpt from our data model, to get
 us started. Of course, some of this would have been a little different had we
@@ -104,7 +104,7 @@ Note that these measurments are themselves an example of related types. You
 could, for instance, say that `ChildMeasurements` is to `Child` as
 `MotherMeasurements` is to `Mother`. Furthermore, we needed another couple of
 related types to represent the various measurements at the data level (rather
-than just the type level) ... something like:[^singleton]
+than just the type level)...something like:[^singleton]
 
 [^singleton]:
     You might think it odd that the `MotherMeasurements` and `MotherActivty`
@@ -143,8 +143,8 @@ to put it another way, how might you fill in the gaps in this pseudo-code:
 ```
 
 To evaluate the available alternatives, you'll need to know a little more about
-the kinds of manipulations which we wanted to do with these types -- in other
-words, the sort of functions we wanted to be able to write. In pseudo-code, here
+the sort of work that we wanted to do with these types -- in other
+words, the functions we wanted to be able to write. In pseudo-code, here
 are some example function signatures that we ended up needing. (You can probably
 form an intuition about why we'd want most of these things, and we'll discuss
 some of them in more detail below).
@@ -202,7 +202,7 @@ the words `Child` and `Mother` as "tags" which identify, for a particular
 [^tagsandtypes]:
     Elm can distinguish tags from the types by context, so you can re-use the
     type names as tag names if you like. This is what we do with `Mother
-    Mother`, where the first `Mother` is a tag and the second `Mother` a type.
+    Mother`, where the first `Mother` is a tag and the second `Mother` is a type.
     Or, you can invent arbitrary tags. This is necessary for `PersonIdMother
     MotherId` -- we can't just say `MotherId MotherId` because we've already
     used `MotherId` as a tag when we defined `type MotherId = MotherId Int`. At
@@ -331,7 +331,7 @@ the result of calling `hasPendingActivity`? All of a sudden, it doesn't seem so
 reasonable to have returned `False` to a non-sensical question.
 
 Now, I suppose one option to deal with this would be to change the signature
-of `hasPendingActivity` to return a `Maybe` (or a `Result`) ... something like:
+of `hasPendingActivity` to return a `Maybe` (or a `Result`)...something like:
 
 ```elm
     hasPendingActivity : PersonId -> Activity -> Container -> Maybe Bool
@@ -431,9 +431,9 @@ Using `Person` as a typeclass instead would look something like this:[^haskellde
 
 This leads to a corresponding difference in how you would call the two
 functions. In our previous case, assuming you knew you had a `Child`, you'd
-need to wrap it up as a `Person` ... something like `viewPerson (Child child)`.
+need to wrap it up as a `Person`...something like `viewPerson (Child child)`.
 Using typeclasses, you can simply supply the child itself, along with the
-implementation which allows you to treat a child as a person ... something like
+implementation which allows you to treat a child as a person...something like
 `viewPerson childPerson child`.
 
 Now, so far, we haven't actually gained a lot by using `Person` as a typeclass
@@ -504,7 +504,7 @@ There are a few limitations of typeclasses in Elm which I should
 mention.  One is that you must explicitly mention the typeclass implemenation
 when you call a function that requires one. So, for instance, to call the
 `viewPerson` function sketched above, you need to explicitly refer to the
-typeclass ...  soemthing like `viewPerson childConfig child`, or `viewPerson
+typeclass...something like `viewPerson childConfig child`, or `viewPerson
 motherConfig mother`.  In some languages, the compiler can deduce that if
 you're supplying a `child` to `viewPerson`, you must want to use the
 `childConfig`, so you don't have to mention it explicitly. That is a
@@ -517,7 +517,7 @@ like Haskell.
 
 A bigger difficulty is Elm's lack of higher-kinded polymorphism. What this
 means is that type parameters cannot be used as wrappers -- they can only be
-wrapped. So, in the example above, we definitely need to say `List p` ... the
+wrapped. So, in the example above, we definitely need to say `List p`...the
 `p` can be a parameter, but we have to make a definite choice about `List`. To
 put it another way, you must always choose concrete "container" types. So,
 there are some relationships between types that you won't be able to model
