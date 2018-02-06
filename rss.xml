@@ -4,8 +4,8 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Tue, 06 Feb 2018 09:24:05 -0600</lastBuildDate>
-    <pubDate>Tue, 06 Feb 2018 09:24:05 -0600</pubDate>
+    <lastBuildDate>Tue, 06 Feb 2018 10:07:52 -0600</lastBuildDate>
+    <pubDate>Tue, 06 Feb 2018 10:07:52 -0600</pubDate>
     <ttl>1800</ttl>
 
     
@@ -16,7 +16,7 @@
 fine-grained distinctions between roughly similar types.  In a
 &lt;a href=&quot;/projects/#e-heza-emr-application&quot;&gt;recent project&lt;/a&gt;, for instance, we ended up
 with a separate type for a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt;.&lt;sup id=&quot;fnref:nofathers&quot;&gt;&lt;a href=&quot;#fn:nofathers&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Now, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt;
-is a little different than a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt;.Most obviously, mothers have children,
+is a little different than a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt;. Most obviously, mothers have children,
 whereas (at least, in our data model) children do not. So, it was nice for them
 to be separate types. In fact, there were certain operations which could be done
 on a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt; but not a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt; (and vice versa). So it was nice to be able to
