@@ -4,10 +4,52 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Thu, 01 Feb 2018 12:43:34 -0600</lastBuildDate>
-    <pubDate>Thu, 01 Feb 2018 12:43:34 -0600</pubDate>
+    <lastBuildDate>Tue, 06 Feb 2018 09:15:00 -0600</lastBuildDate>
+    <pubDate>Tue, 06 Feb 2018 09:15:00 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      
+      
+
+      
+      <item>
+        <title>Expressing a Relationship between Multiple Types in Elm</title>
+        <description>
+          &lt;p&gt;Elm’s type system is sufficiently sophisticated that you’ll often want to make
+fine-grained distinctions between roughly similar types.  In a
+&lt;a href=&quot;/projects/#e-heza-emr-application&quot;&gt;recent project&lt;/a&gt;, for instance, we ended up
+with a separate type for a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt;.&lt;sup id=&quot;fnref:nofathers&quot;&gt;&lt;a href=&quot;#fn:nofathers&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Now, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt;
+is a little different than a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt;.Most obviously, mothers have children,
+whereas (at least, in our data model) children do not. So, it was nice for them
+to be separate types. In fact, there were certain operations which could be done
+on a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt; but not a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt; (and vice versa). So it was nice to be able to
+enforce that at the type level.&lt;/p&gt;
+
+&lt;p&gt;Yet, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Mother&lt;/code&gt; and a &lt;code class=&quot;highlighter-rouge&quot;&gt;Child&lt;/code&gt; clearly have a lot in common as well. For this
+reason, it sometimes felt natural to write functions that could accept either.  So, in
+those cases, it was a little awkward for them to be separate types.  Something
+was needed to express a relationship between the two types.&lt;/p&gt;
+
+&lt;p&gt;What alternatives are available to do this sort of thing in Elm? Which did we
+end up choosing? For answers to these questions, and more, read on!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:nofathers&quot;&gt;
+
+      &lt;p&gt;There were no fathers in our app’s data model. &lt;a href=&quot;#fnref:nofathers&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/elm-related-types//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/elm-related-types/</link>
+        <guid isPermaLink="false">https://www.gizra.com/content/elm-related-types</guid>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 -0600</pubDate>
+      </item>
+      
     
       
       
