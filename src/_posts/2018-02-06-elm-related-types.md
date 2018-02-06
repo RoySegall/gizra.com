@@ -13,7 +13,7 @@ Elm's type system is sufficiently sophisticated that you'll often want to make
 fine-grained distinctions between roughly similar types.  In a
 [recent project](/projects/#e-heza-emr-application), for instance, we ended up
 with a separate type for a `Mother` and a `Child`.[^nofathers] Now, a `Mother`
-is a little different than a `Child`.Most obviously, mothers have children,
+is a little different than a `Child`. Most obviously, mothers have children,
 whereas (at least, in our data model) children do not. So, it was nice for them
 to be separate types. In fact, there were certain operations which could be done
 on a `Mother` but not a `Child` (and vice versa). So it was nice to be able to
