@@ -112,7 +112,7 @@ people =
               , Twitter "efratns"
               , Github "efratn"
               ]
-          , title = "Israel/Europe Executive Director"
+          , title = "Executive Director"
           , attributes =
               [ DoingSports
               , FamilyAttr Kids
@@ -169,7 +169,7 @@ people =
             , Twitter "RachelBaram"
             , Github "RachelBaram"
             ]
-        , title = "Business Development and Strategy"
+        , title = "Business Development and Strategy, Account Manager"
         , attributes =
             [ DoingSports
             , FamilyAttr Kids
@@ -207,7 +207,7 @@ people =
             , Github "liatsade"
             , Drupal "liats75"
             ]
-        , title = "UI/UX Specialist and Client Training"
+        , title = "UI/UX and Training Specialist, Account Manager"
         , attributes =
             [ DoingSports
             , FamilyAttr Kids
@@ -235,7 +235,7 @@ people =
             , Github "RoySegall"
             , Drupal "RoySegall"
             ]
-        , title = "Team Lead"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , GenderAttr Male
@@ -266,7 +266,7 @@ people =
             , Github "nedSaf"
             , Drupal "nedSaf"
             ]
-        , title = "Team Lead"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , GenderAttr Male
@@ -298,7 +298,7 @@ people =
             , Github "ordavidil"
             , Drupal "ordavidil"
             ]
-        , title = "Team Lead"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , GenderAttr Male
@@ -329,7 +329,7 @@ people =
             [ Email "anatoly@gizra.com"
             , Github "anvmn"
             ]
-        , title = "Developer"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , GenderAttr Male
@@ -360,7 +360,7 @@ people =
             [ Email "savyon@gizra.com"
             , Github "savyoncohen"
             ]
-        , title = "Developer"
+        , title = "QA and Automation Specialist"
         , attributes =
             [ DoingSports
             , FamilyAttr Kids
@@ -448,7 +448,7 @@ people =
             [ Email "ryan@gizra.com"
             , Github "rgrempel"
             ]
-        , title = "Developer"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , FamilyAttr Married
@@ -478,7 +478,7 @@ people =
             , Github "AronNovak"
             , Drupal "aron-novak"
             ]
-        , title = "Developer"
+        , title = "Senior Developer"
         , attributes =
             [ DoingSports
             , FamilyAttr Married
@@ -520,6 +520,31 @@ people =
           , coordinates =
               { lat = 55.763
               , lng = 37.849
+              }
+          }
+        )
+      , ( "mariano-dagostino"
+        , { name = "Mariano D'Agostino"
+          , image = "mariano.jpg"
+          , socialNetworks =
+              [ Email "mariano@gizra.com"
+              , Twitter "cuencodigital"
+              , Drupal "dagmar"
+              ]
+          , title = "Senior Developer"
+          , attributes =
+              [ FamilyAttr Married
+              , GenderAttr Male
+              , LanguageAttr English
+              , LanguageAttr Spanish
+              , NationalityAttr Argentina
+              , PreferedWorkHoursAttr EarlyRise
+              , SportAttr Biking
+              , WorkingRemote
+              ]
+          , coordinates =
+              { lat = -32.9468
+              , lng = -60.6393
               }
           }
         )

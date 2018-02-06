@@ -8035,6 +8035,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$Male = {ctor: 'Male'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Female = {ctor: 'Female'};
 var _Gizra$elm_spa_exmple$Attribute_Model$PlayingInstrument = {ctor: 'PlayingInstrument'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Sing = {ctor: 'Sing'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Argentina = {ctor: 'Argentina'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Russia = {ctor: 'Russia'};
 var _Gizra$elm_spa_exmple$Attribute_Model$USA = {ctor: 'USA'};
 var _Gizra$elm_spa_exmple$Attribute_Model$UK = {ctor: 'UK'};
@@ -8046,6 +8047,7 @@ var _Gizra$elm_spa_exmple$Attribute_Model$Austria = {ctor: 'Austria'};
 var _Gizra$elm_spa_exmple$Attribute_Model$NightOwl = {ctor: 'NightOwl'};
 var _Gizra$elm_spa_exmple$Attribute_Model$NineToFive = {ctor: 'NineToFive'};
 var _Gizra$elm_spa_exmple$Attribute_Model$EarlyRise = {ctor: 'EarlyRise'};
+var _Gizra$elm_spa_exmple$Attribute_Model$Biking = {ctor: 'Biking'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Volleyball = {ctor: 'Volleyball'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Yoga = {ctor: 'Yoga'};
 var _Gizra$elm_spa_exmple$Attribute_Model$Soccer = {ctor: 'Soccer'};
@@ -9354,7 +9356,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 									}
 								}
 							},
-							title: 'Israel/Europe Executive Director',
+							title: 'Executive Director',
 							attributes: {
 								ctor: '::',
 								_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9498,7 +9500,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 											}
 										}
 									},
-									title: 'Business Development and Strategy',
+									title: 'Business Development and Strategy, Account Manager',
 									attributes: {
 										ctor: '::',
 										_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9608,7 +9610,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 												}
 											}
 										},
-										title: 'UI/UX Specialist and Client Training',
+										title: 'UI/UX and Training Specialist, Account Manager',
 										attributes: {
 											ctor: '::',
 											_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9678,7 +9680,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 													}
 												}
 											},
-											title: 'Team Lead',
+											title: 'Senior Developer',
 											attributes: {
 												ctor: '::',
 												_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9760,7 +9762,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 														}
 													}
 												},
-												title: 'Team Lead',
+												title: 'Senior Developer',
 												attributes: {
 													ctor: '::',
 													_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9846,7 +9848,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													},
-													title: 'Team Lead',
+													title: 'Senior Developer',
 													attributes: {
 														ctor: '::',
 														_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -9928,7 +9930,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																_1: {ctor: '[]'}
 															}
 														},
-														title: 'Developer',
+														title: 'Senior Developer',
 														attributes: {
 															ctor: '::',
 															_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10010,7 +10012,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																	_1: {ctor: '[]'}
 																}
 															},
-															title: 'Developer',
+															title: 'QA and Automation Specialist',
 															attributes: {
 																ctor: '::',
 																_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10236,7 +10238,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				_1: {ctor: '[]'}
 																			}
 																		},
-																		title: 'Developer',
+																		title: 'Senior Developer',
 																		attributes: {
 																			ctor: '::',
 																			_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10314,7 +10316,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																					}
 																				}
 																			},
-																			title: 'Developer',
+																			title: 'Senior Developer',
 																			attributes: {
 																				ctor: '::',
 																				_0: _Gizra$elm_spa_exmple$Attribute_Model$DoingSports,
@@ -10421,7 +10423,66 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 																				coordinates: {lat: 55.763, lng: 37.849}
 																			}
 																		},
-																		_1: {ctor: '[]'}
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'mariano-dagostino',
+																				_1: {
+																					name: 'Mariano D\'Agostino',
+																					image: 'mariano.jpg',
+																					socialNetworks: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$People_Model$Email('mariano@gizra.com'),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$People_Model$Twitter('cuencodigital'),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$People_Model$Drupal('dagmar'),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					},
+																					title: 'Senior Developer',
+																					attributes: {
+																						ctor: '::',
+																						_0: _Gizra$elm_spa_exmple$Attribute_Model$FamilyAttr(_Gizra$elm_spa_exmple$Attribute_Model$Married),
+																						_1: {
+																							ctor: '::',
+																							_0: _Gizra$elm_spa_exmple$Attribute_Model$GenderAttr(_Gizra$elm_spa_exmple$Attribute_Model$Male),
+																							_1: {
+																								ctor: '::',
+																								_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$English),
+																								_1: {
+																									ctor: '::',
+																									_0: _Gizra$elm_spa_exmple$Attribute_Model$LanguageAttr(_Gizra$elm_spa_exmple$Attribute_Model$Spanish),
+																									_1: {
+																										ctor: '::',
+																										_0: _Gizra$elm_spa_exmple$Attribute_Model$NationalityAttr(_Gizra$elm_spa_exmple$Attribute_Model$Argentina),
+																										_1: {
+																											ctor: '::',
+																											_0: _Gizra$elm_spa_exmple$Attribute_Model$PreferedWorkHoursAttr(_Gizra$elm_spa_exmple$Attribute_Model$EarlyRise),
+																											_1: {
+																												ctor: '::',
+																												_0: _Gizra$elm_spa_exmple$Attribute_Model$SportAttr(_Gizra$elm_spa_exmple$Attribute_Model$Biking),
+																												_1: {
+																													ctor: '::',
+																													_0: _Gizra$elm_spa_exmple$Attribute_Model$WorkingRemote,
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					},
+																					coordinates: {lat: -32.9468, lng: -60.6393}
+																				}
+																			},
+																			_1: {ctor: '[]'}
+																		}
 																	}
 																}
 															}
@@ -14238,8 +14299,10 @@ var _Gizra$elm_spa_exmple$Attribute_Utils$attributeToString = function (attribut
 					return 'Soccer';
 				case 'Yoga':
 					return 'Yoga';
-				default:
+				case 'Volleyball':
 					return 'Volleyball';
+				default:
+					return 'Biking';
 			}
 		case 'Tattoo':
 			return 'Tattoo';
