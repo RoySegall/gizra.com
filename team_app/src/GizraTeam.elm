@@ -104,34 +104,34 @@ people =
             }
         }
       )
-      , ( "efratn"
-        , { name = "Efrat Nitzan"
-          , image = "efratn.jpg"
-          , socialNetworks =
-              [ Email "efrat@gizra.com"
-              , Twitter "efratns"
-              , Github "efratn"
-              ]
-          , title = "Executive Director"
-          , attributes =
-              [ DoingSports
-              , FamilyAttr Kids
-              , FoodAttr Kosher
-              , GenderAttr Female
-              , LanguageAttr Hebrew
-              , LanguageAttr English
-              , MusicWhileWorking
-              , NationalityAttr Israel
-              , Pet
-              , PreferedWorkHoursAttr NineToFive
-              , SportAttr Pilates
-              ]
-          , coordinates =
-              { lat = 31.7683
-              , lng = 35.2137
-              }
-          }
-        )
+    , ( "efratn"
+      , { name = "Efrat Nitzan"
+        , image = "efratn.jpg"
+        , socialNetworks =
+            [ Email "efrat@gizra.com"
+            , Twitter "efratns"
+            , Github "efratn"
+            ]
+        , title = "Executive Director"
+        , attributes =
+            [ DoingSports
+            , FamilyAttr Kids
+            , FoodAttr Kosher
+            , GenderAttr Female
+            , LanguageAttr Hebrew
+            , LanguageAttr English
+            , MusicWhileWorking
+            , NationalityAttr Israel
+            , Pet
+            , PreferedWorkHoursAttr NineToFive
+            , SportAttr Pilates
+            ]
+        , coordinates =
+            { lat = 31.7683
+            , lng = 35.2137
+            }
+        }
+      )
     , ( "IshaDakota"
       , { name = "Adam Stewart"
         , image = "ishadakota.jpg"
@@ -317,8 +317,8 @@ people =
             , TvAndMovieGenereAttr SciFi
             ]
         , coordinates =
-            { lat = 32.094286
-            , lng = 34.783612
+            { lat = 53.341059
+            , lng = -6.2386723
             }
         }
       )
@@ -499,54 +499,54 @@ people =
             }
         }
       )
-      , ( "amaksimov"
-        , { name = "Alex Maksimov"
-          , image = "alex.jpg"
-          , socialNetworks =
-              [ Email "aleksey@gizra.com"
-              , Github "amaksimov"
-              ]
-          , title = "Developer"
-          , attributes =
-              [ FamilyAttr Married
-              , GenderAttr Male
-              , LanguageAttr English
-              , LanguageAttr Russian
-              , LivedAbroad
-              , NationalityAttr Russia
-              , PreferedWorkHoursAttr NineToFive
-              , WorkingRemote
-              ]
-          , coordinates =
-              { lat = 55.763
-              , lng = 37.849
-              }
-          }
-        )
-      , ( "mariano-dagostino"
-        , { name = "Mariano D'Agostino"
-          , image = "mariano.jpg"
-          , socialNetworks =
-              [ Email "mariano@gizra.com"
-              , Twitter "cuencodigital"
-              , Drupal "dagmar"
-              ]
-          , title = "Senior Developer"
-          , attributes =
-              [ FamilyAttr Married
-              , GenderAttr Male
-              , LanguageAttr English
-              , LanguageAttr Spanish
-              , NationalityAttr Argentina
-              , PreferedWorkHoursAttr EarlyRise
-              , SportAttr Biking
-              , WorkingRemote
-              ]
-          , coordinates =
-              { lat = -32.9468
-              , lng = -60.6393
-              }
-          }
-        )
+    , ( "amaksimov"
+      , { name = "Alex Maksimov"
+        , image = "alex.jpg"
+        , socialNetworks =
+            [ Email "aleksey@gizra.com"
+            , Github "amaksimov"
+            ]
+        , title = "Developer"
+        , attributes =
+            [ FamilyAttr Married
+            , GenderAttr Male
+            , LanguageAttr English
+            , LanguageAttr Russian
+            , LivedAbroad
+            , NationalityAttr Russia
+            , PreferedWorkHoursAttr NineToFive
+            , WorkingRemote
+            ]
+        , coordinates =
+            { lat = 55.763
+            , lng = 37.849
+            }
+        }
+      )
+    , ( "mariano-dagostino"
+      , { name = "Mariano D'Agostino"
+        , image = "mariano.jpg"
+        , socialNetworks =
+            [ Email "mariano@gizra.com"
+            , Twitter "cuencodigital"
+            , Drupal "dagmar"
+            ]
+        , title = "Senior Developer"
+        , attributes =
+            [ FamilyAttr Married
+            , GenderAttr Male
+            , LanguageAttr English
+            , LanguageAttr Spanish
+            , NationalityAttr Argentina
+            , PreferedWorkHoursAttr EarlyRise
+            , SportAttr Biking
+            , WorkingRemote
+            ]
+        , coordinates =
+            { lat = -32.9468
+            , lng = -60.6393
+            }
+        }
+      )
     ]
         |> DictList.fromList

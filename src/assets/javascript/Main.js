@@ -9910,7 +9910,7 @@ var _Gizra$elm_spa_exmple$GizraTeam$people = _Gizra$elm_dictlist$DictList$fromLi
 															}
 														}
 													},
-													coordinates: {lat: 32.094286, lng: 34.783612}
+													coordinates: {lat: 53.341059, lng: -6.2386723}
 												}
 											},
 											_1: {
