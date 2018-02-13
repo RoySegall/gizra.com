@@ -7,7 +7,7 @@ tags:
   - Elm
   - Drupal-planet
 permalink: "/content/travis-speed/"
-image: "/assets/images/posts/travis-speed/car.png"
+image: "/assets/images/posts/travis-speed/car.jpg"
 layout: post
 published: true
 author: AronNovak
