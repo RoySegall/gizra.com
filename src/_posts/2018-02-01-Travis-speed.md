@@ -15,9 +15,9 @@ description: "Every second matters, do not demoralize your team"
 ---
 
 
-Chances are that you already using Travis or another Cool CI to execute your tests, therefore everyone politely waits for CI checks before even think about merging, right? After a while, this tidiness disappears and you click on the merge: it's a trivial change and I need it now. If it happens (often), it's the responsibility of those who worked on all those scripts tthat Travis crunches. What are the trivial and not so trivial options to make the team always be willing to wait for the completion?
+Chances are that you already use Travis or another Cool CI to execute your tests, and everyone politely waits for CI checks before even thinking about merging, right? After a while, this discipline disappears and you click on the merge: it's a trivial change and you need it now. If this happens (often), it's the responsibility of those who worked on all those scripts that Travis crunches to make some changes. What are the trivial and not so trivial options to make the team always be willing to wait for the completion?
 
-This blog post is for you if you have a project with Travis integration, and you'd like to maintain and optimize it, or just courious what's possible. Users of other CI tools, keep reading, many areas would just apply in your case too.
+This blog post is for you if you have a project with Travis integration, and you'd like to maintain and optimize it, or just curious what's possible. Users of other CI tools, keep reading, many areas apply in your case too.
 
 Unlike other performance optimization areas, here doing before-after benchmarks are not so crucial, as Travis mostly collects the data, all you need to do is to make sure to do the math and [present the numbers proudly](https://github.com/Gizra/drupal-elm-starter/pull/171#issuecomment-334493419).
 
