@@ -19,6 +19,8 @@ Chances are that you already using Travis or another Cool CI to execute your tes
 
 This blog post is for you if you have a project with Travis integration, and you'd like to maintain and optimize it, or just courious what's possible. Users of other CI tools, keep reading, many areas would just apply in your case too.
 
+Unlike other performance optimization areas, here doing before-after benchmarks are not so crucial, as Travis mostly collects the data, all you need to do is to make sure to do the math and [present the numbers proudly](https://github.com/Gizra/drupal-elm-starter/pull/171#issuecomment-334493419).
+
 ## Caching
 
 At start, if your `.travis.yml` lacks the `cache:` directive, you may start with the simplest form, that's about caching dependencies, for a Drupal-based projects, it's sane to think about cache all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn't it?). So even a variant of:
@@ -42,7 +44,7 @@ From this point, you could just read the standard documentation instead of this 
 {% include thumbnail.html image_path="assets/images/posts/travis-speed/travis-benchmark.gif" caption="WebdriverI/O in action"%}
 
 Mind the bottleneck when making a decision on what to cache and how.
-For us, it meant to cache the installed, initialized Drupal database and the full documentroot. Cache invalidation is hard, we cannot decline that, but it turned out to be a good compromise between complexity and execution speed gain, check our examples:
+For us, it meant to cache the installed, initialized Drupal database and the full document root. Cache invalidation is hard, we cannot decline that, but it turned out to be a good compromise between complexity and execution speed gain, check our examples:
  - [`pre_cache.sh`](https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/pre_cache.sh)
  - [`post_cache.sh`](https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/post_cache.sh)
 
@@ -66,7 +68,7 @@ php:
   - '7.2'
 ```
 
-Almost certain that such section can be written about Node.js, or relational databases and so on. Know what's the bottleneck in your build and find the best performing versions, newer or older, it will turn out.
+Almost certain that such section can be written about Node.js, or relational databases and so on. Know what's the bottleneck in your build and find the best performing versions, newer or older, it will turn out. Is it just conflicting with our previous point about pre-installed versions? Not quite, measure which one helps your build the most!
 
 ## Make it parallel
 
