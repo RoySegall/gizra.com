@@ -7,11 +7,11 @@ tags:
   - Elm
   - Drupal-planet
 permalink: "/content/travis-speed/"
-image: "/assets/images/posts/travis-speed/car.jpg"
+image: "/assets/images/posts/travis-speed/thumb.jpg"
 layout: post
 published: true
 author: AronNovak
-description: "Every second matters, do not demoralize your team"
+description: "In continuous integration, every second matters - and can even save a hasty merge. Explore ways to fine-tune Travis so that it hums along for your team."
 ---
 
 
