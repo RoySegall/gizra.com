@@ -23,7 +23,7 @@ Unlike other performance optimization areas, doing before-after benchmarks is no
 
 ## Caching
 
-To start, if your `.travis.yml` lacks the `cache:` directive, then you might start wiin the easiest place: caching dependencies. For a Drupal-based project, it's a good idea to think about caching all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn't it?). So even a variant of:
+To start, if your `.travis.yml` lacks the `cache:` directive, then you might start in the easiest place: caching dependencies. For a Drupal-based project, it's a good idea to think about caching all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn't it?). So even a variant of:
 
 ```yml
 cache:
