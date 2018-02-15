@@ -15,15 +15,15 @@ description: "Every second matters, do not demoralize your team"
 ---
 
 
-Chances are that you already use Travis or another Cool CI to execute your tests, and everyone politely waits for CI checks before even thinking about merging, right? After a while, this discipline disappears and you click on the merge: it's a trivial change and you need it now. If this happens (often), it's the responsibility of those who worked on all those scripts that Travis crunches to make some changes. What are the trivial and not so trivial options to make the team always be willing to wait for the completion?
+Chances are that you already use Travis or another Cool CI to execute your tests, and everyone politely waits for CI checks before even thinking about merging, right? More likely, waiting your turn becomes a pain and you click on the merge: it's a trivial change and you need it now. If this happens (often), then it's the responsibility of those who worked on all those scripts that Travis crunches to make some changes. There are some trivial and not so trivial options to make the team always be willing to wait for the completion.
 
 This blog post is for you if you have a project with Travis integration, and you'd like to maintain and optimize it, or just curious what's possible. Users of other CI tools, keep reading, many areas apply in your case too.
 
-Unlike other performance optimization areas, here doing before-after benchmarks are not so crucial, as Travis mostly collects the data, all you need to do is to make sure to do the math and [present the numbers proudly](https://github.com/Gizra/drupal-elm-starter/pull/171#issuecomment-334493419).
+Unlike other performance optimization areas, doing before-after benchmarks is not so crucial, as Travis mostly collects the data, you just have to make sure to do the math and [present the numbers proudly](https://github.com/Gizra/drupal-elm-starter/pull/171#issuecomment-334493419).
 
 ## Caching
 
-At start, if your `.travis.yml` lacks the `cache:` directive, you may start with the simplest form, that's about caching dependencies, for a Drupal-based projects, it's sane to think about cache all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn't it?). So even a variant of:
+At start, if your `.travis.yml` lacks the `cache:` directive, you may start with the simplest form, that's about caching dependencies. For a Drupal-based project, it's sane to think about cache all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn't it?). So even a variant of:
 ```yml
 cache:
   directories:
@@ -37,14 +37,14 @@ cache:
     - $HOME/.drush/cache
 ```
 
-It's explained well in the verbose [documentation](https://docs.travis-ci.com/user/caching) at Travis-ci.com. Before your script is executed, Travis populates the cache directories automatically from a successful previous build. If your project has only a few packages, it won't help much, actually it can make the things even slower, what's critical that we need to cache slow-to-generate, easy-to-download materials. Caching a large ZIP file would not make sense for example, caching many small ones from multiple origin servers would be more sane.
+It's explained well in the verbose [documentation](https://docs.travis-ci.com/user/caching) at Travis-ci.com. Before your script is executed, Travis populates the cache directories automatically from a successful previous build. If your project has only a few packages, it won't help much, and actually it can make things even slower. What's critical is that we need to cache slow-to-generate, easy-to-download materials. Caching a large ZIP file would not make sense for example, caching many small ones from multiple origin servers would be more sane.
 
-From this point, you could just read the standard documentation instead of this blog post, but we have as well icing on the cake for you. A Drupal installation can take several minutes, initializing all the modules, executing the logic of the install profile and so on. Travis is kind enough to provide a bird-eye-view on what eats up build time:
+From this point, you could just read the standard documentation instead of this blog post, but we also have icing on the cake for you. A Drupal installation can take several minutes, initializing all the modules, executing the logic of the install profile and so on. Travis is kind enough to provide a bird's-eye view on what eats up build time:
 
 {% include thumbnail.html image_path="assets/images/posts/travis-speed/travis-benchmark.png" caption="Execution speed measurements built in the log" %}
 
 Mind the bottleneck when making a decision on what to cache and how.
-For us, it meant to cache the installed, initialized Drupal database and the full document root. Cache invalidation is hard, we cannot decline that, but it turned out to be a good compromise between complexity and execution speed gain, check our examples:
+For us, it means cache of the installed, initialized Drupal database and the full document root. Cache invalidation is hard, we cannot decline that, but it turned out to be a good compromise between complexity and execution speed gain, check our examples:
  - [`pre_cache.sh`](https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/pre_cache.sh)
  - [`post_cache.sh`](https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/post_cache.sh)
 
@@ -55,7 +55,7 @@ Do your homework and cache what's the most resource-consuming to generate, SQL d
 There are two reasons to pay attention to software versions.
 
 ### Use pre-installed version
-Travis uses containers of different distributions, let's say you use `trusty`, the default one these days, then if you choose   PHP 7.0.7, it's [pre-installled](https://docs.travis-ci.com/user/reference/trusty/#PHP-images), in case of 7.1, it's needed to fetch separately what takes time for every single build. When you have production constraints, that's almost certainly more imprtant to match, but in some cases, using the pre-installed version can speed up the things.
+Travis uses containers of different distributions, let's say you use `trusty`, the default one these days, then if you choose   PHP 7.0.7, it's [pre-installled](https://docs.travis-ci.com/user/reference/trusty/#PHP-images), in case of 7.1, it's needed to fetch separately what takes time for every single build. When you have production constraints, that's almost certainly more important to match, but in some cases, using the pre-installed version can speed up things.
 And moreover let's say you prefer [MariaDB](https://docs.travis-ci.com/user/database-setup/#MariaDB) over MySQL, then do not `sudo` and start to install it with the package manager, there is the addon system to make it available, same goes for [Google Chrome](https://docs.travis-ci.com/user/chrome) and so on.
 What's inside the image already, stick to it if you can, what Travis can fetch via the YML definition, exploit that possibility!
 
@@ -81,11 +81,11 @@ All in all, it's a warm fuzzy feeling that Travis is glad to create so many cont
 
 The available memory is between 4 and 7.5 GBytes currently, depending on the configuration, and it should be used as much as possible. One example could be to move the database main working directory to a memory-based filesystem. For many simpler projects, that's absolutely doable and at least for Drupal, a solid speedup. Needless to say, we have an [example](https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/install_server.sh#L13) and on client projects, we saw 15-30% improvement at SimpleTest execution. For traditional RMDBS, you can give it a try. If your DB cannot fit in memory, you can still ask [InnoDB to fill memory](https://www.percona.com/blog/2013/09/20/innodb-performance-optimization-basics-updated/).
 
-Think about your use-case, moving the whole document root there could be legitimate, also if you need to compile a source code, doing it there makes sense.
+Think about your use case, moving the whole document root there could be legitimate, also if you need to compile a source code, doing it there makes sense.
 
 ## Build your own Docker image
 
-If your project is really exotic or a legacy one, it potentially make sense to maintain your own Docker image and in Travis, all to do is to download and execute it, we did it in the past and then [converted](https://github.com/Gizra/drupal-elm-starter/pull/165/files). Maintaining your image means recurring effort, fighting with outdated versions, unavailable dependencies, that's what to expect. Still, even it could be a type of performance optimization if you have lots of software dependencies that are hard-to-install on the current Travis container images.
+If your project is really exotic or a legacy one, it potentially makes sense to maintain your own Docker image and in Travis, all to do is to download and execute it, we did it in the past and then [converted](https://github.com/Gizra/drupal-elm-starter/pull/165/files). Maintaining your image means recurring effort, fighting with outdated versions, unavailable dependencies, that's what to expect. Still, even it could be a type of performance optimization if you have lots of software dependencies that are hard-to-install on the current Travis container images.
 
 ## +1 - Debug with ease
 
@@ -95,4 +95,4 @@ In the past, we propagated [video recording](https://github.com/Gizra/drupal-elm
 
 ## Takeaway
 
-Working on such improvements have benefits of many kind. The entire development team can benefit from the shorter queues and faster merges therefore, and you can go ahead and apply part of the optimizations to your local environment, especially if you dig deep into database performance optimization and make the things paralell. And even more, clients love to hear that you are going to speed up their sites, practise can be transferred there, but with different tools and best practises. More to come in further blog posts.
+Working on such improvements have benefits of many kinds. The entire development team can benefit from the shorter queues and faster merges therefore, and you can go ahead and apply part of the optimizations to your local environment, especially if you dig deep into database performance optimization and make the things paralell. And even more, clients love to hear that you are going to speed up their sites, practise can be transferred there, but with different tools and best practices.
