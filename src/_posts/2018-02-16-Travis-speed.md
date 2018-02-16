@@ -102,4 +102,4 @@ In the past, we propagated [video recording](https://github.com/Gizra/drupal-elm
 
 ## Takeaway
 
-Working on such improvements has benefits of many kinds. The entire development team can enjoy the shorter queues and faster merges, and you can go ahead and apply part of the enhancements to your local environment, especially if you dig deep into database performance optimization and make the things parallel. And even more, clients love to hear that you are going to speed up their sites, this mindset should be also used at production.
+Working on such improvements has benefits of many kinds. The entire development team can enjoy the shorter queues and faster merges, and you can go ahead and apply part of the enhancements to your local environment, especially if you dig deep into database performance optimization and make the things parallel. And even more, clients love to hear that you are going to speed up their sites, as this mindset should be also used at production.
