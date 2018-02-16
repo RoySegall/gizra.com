@@ -29,6 +29,16 @@
         text-transform: uppercase;
       }
 
+      .description .title {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 1.618em;
+      }
+
+      .description .text {
+        font-size: 1.2em;
+      }
+
       .description button {
         margin-top: 2em;
       }
