@@ -4,10 +4,143 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Thu, 15 Feb 2018 05:52:32 -0600</lastBuildDate>
-    <pubDate>Thu, 15 Feb 2018 05:52:32 -0600</pubDate>
+    <lastBuildDate>Fri, 16 Feb 2018 06:28:41 -0600</lastBuildDate>
+    <pubDate>Fri, 16 Feb 2018 06:28:41 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Travis - The Need for Speed</title>
+        <description>
+          &lt;p&gt;Chances are that you already use Travis or another cool CI to execute your tests, and everyone politely waits for the CI checks before even thinking about merging, right? More likely, waiting your turn becomes a pain and you click on the merge: it’s a trivial change and you need it now. If this happens often, then it’s the responsibility of those who worked on those scripts that Travis crunches to make some changes. There are some trivial and not so trivial options to make the team always be willing to wait for the completion.&lt;/p&gt;
+
+&lt;p&gt;This blog post is for you if you have a project with Travis integration, and you’d like to maintain and optimize it, or just curious what’s possible. Users of other CI tools, keep reading, many areas may apply in your case too.&lt;/p&gt;
+
+&lt;p&gt;Unlike other performance optimization areas, doing before-after benchmarks is not so crucial, as Travis mostly collects the data, you just have to make sure to do the math and &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/pull/171#issuecomment-334493419&quot;&gt;present the numbers proudly&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;caching&quot;&gt;Caching&lt;/h2&gt;
+
+&lt;p&gt;To start, if your &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; lacks the &lt;code class=&quot;highlighter-rouge&quot;&gt;cache:&lt;/code&gt; directive, then you might start in the easiest place: caching dependencies. For a Drupal-based project, it’s a good idea to think about caching all the modules and libraries that must be downloaded to build the project (it uses a buildsystem, doesn’t it?). So even a variant of:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;directories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$HOME/.composer/cache/files&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or for Drush&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;directories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$HOME/.drush/cache&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s explained well in the verbose &lt;a href=&quot;https://docs.travis-ci.com/user/caching&quot;&gt;documentation&lt;/a&gt; at Travis-ci.com. Before your script is executed, Travis populates the cache directories automatically from a successful previous build. If your project has only a few packages, it won’t help much, and actually it can make things even slower. What’s critical is that we need to cache slow-to-generate, easy-to-download materials. Caching a large ZIP file would not make sense for example, caching many small ones from multiple origin servers would be more beneficial.&lt;/p&gt;
+
+&lt;p&gt;From this point, you could just read the standard documentation instead of this blog post, but we also have icing on the cake for you. A Drupal installation can take several minutes, initializing all the modules, executing the logic of the install profile and so on. Travis is kind enough to provide a bird’s-eye view on what eats up build time:&lt;/p&gt;
+
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com/assets/images/posts/travis-speed/travis-benchmark.png&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      Execution speed measurements built in the log
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;p&gt;Mind the bottleneck when making a decision on what to cache and how.&lt;/p&gt;
+
+&lt;p&gt;For us, it means cache of the installed, initialized Drupal database and the full document root. Cache invalidation is hard, we can’t change that, but it turned out to be a good compromise between complexity and execution speed gain, check our examples:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/pre_cache.sh&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pre_cache.sh&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/post_cache.sh&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;post_cache.sh&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do your homework and cache what’s the most resource-consuming to generate, SQL database, built source code or compiled binary, Travis is here to assist with that.&lt;/p&gt;
+
+&lt;h2 id=&quot;software-versions&quot;&gt;Software Versions&lt;/h2&gt;
+
+&lt;p&gt;There are two reasons to pay attention to software versions.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-pre-installed-versions&quot;&gt;Use Pre-installed Versions&lt;/h3&gt;
+&lt;p&gt;Travis uses containers of different distributions, let’s say you use &lt;code class=&quot;highlighter-rouge&quot;&gt;trusty&lt;/code&gt;, the default one these days, then if you choose   PHP 7.0.7, it’s &lt;a href=&quot;https://docs.travis-ci.com/user/reference/trusty/#PHP-images&quot;&gt;pre-installled&lt;/a&gt;, in case of 7.1, it’s needed to fetch separately and that takes time for every single build. When you have production constraints, that’s almost certainly more important to match, but in some cases, using the pre-installed version can speed things up.&lt;/p&gt;
+
+&lt;p&gt;And moreover, let’s say you prefer &lt;a href=&quot;https://docs.travis-ci.com/user/database-setup/#MariaDB&quot;&gt;MariaDB&lt;/a&gt; over MySQL, then do not &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt; and start to install it with the package manager, as there is the add-on system to make it available. The same goes for &lt;a href=&quot;https://docs.travis-ci.com/user/chrome&quot;&gt;Google Chrome&lt;/a&gt;, and so on.
+Stick to what’s inside the image already if you can.  Exploit that possibility of what Travis can fetch via the YML definition!&lt;/p&gt;
+
+&lt;h3 id=&quot;use-the-latest-and-or-greatest&quot;&gt;Use the Latest and (or) Greatest&lt;/h3&gt;
+
+&lt;p&gt;If you ever read an article about the performance gain from migrating to PHP 7, you sense the importance of selecting the versions carefully. If your build is PHP-execution heavy, fetching PHP 7.2 (it’s another leap, but mind the &lt;a href=&quot;http://php.net/manual/en/migration72.incompatible.php&quot;&gt;backward incompatibilities&lt;/a&gt;) could totally make sense and it’s as easy as can be after making your code compatible:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;php&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;7.2'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Almost certainly, a similar thing could be written about Node.js, or relational databases, etc. If you know what’s the bottleneck in your build and find the best performing versions – newer or older – it will improve your speed. Does that conflict with the previous point about pre-installed versions? Not really, just measure which one helps your build the most!&lt;/p&gt;
+
+&lt;h2 id=&quot;make-it-parallel&quot;&gt;Make it Parallel&lt;/h2&gt;
+
+&lt;p&gt;When a Travis job is running, 2 cores and 4 GBytes of RAM is &lt;a href=&quot;https://docs.travis-ci.com/user/reference/overview/#Virtualization-environments&quot;&gt;available&lt;/a&gt; – that’s something to rely on! Downloading packages should happen in parallel. &lt;code class=&quot;highlighter-rouge&quot;&gt;drush make&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt; and other tools like that might use it out of the box: check your parameters and configfiles. However, on the higher level, let’s say you’d like to execute a unit test and a browser-based test, as well. You can ask Travis to spin up two (or more) containers concurrently. In the first, you can install the unit testing dependencies and execute it; then the second one can take care of only the functional test. We have a fine-grained example of this approach in our &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/.travis.yml#L10&quot;&gt;Drupal-Elm Starter&lt;/a&gt;, where 7 containers are used for various testing and linting. In addition to the great execution speed reduction, the benefit is that the result is also more fine-grained, instead of having a single boolean value, just by checking the build, you have an overview what can be broken.&lt;/p&gt;
+
+&lt;p&gt;All in all, it’s a warm fuzzy feeling that Travis is happy to create so many containers for your humble project:&lt;/p&gt;
+
+&lt;div class=&quot;ui segments&quot;&gt;
+  &lt;div class=&quot;ui attached center aligned segment&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;ui image&quot;&gt;
+      &lt;img src=&quot;https://www.gizra.com/assets/images/posts/travis-speed/parallel.gif&quot; /&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+
+  
+    &lt;div class=&quot;ui attached center aligned caption segment&quot;&gt;
+      If it's independent, no need to serialize the execution
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+
+&lt;h2 id=&quot;utilize-ram&quot;&gt;Utilize RAM&lt;/h2&gt;
+
+&lt;p&gt;The available memory is currently between 4 and 7.5 GBytes , depending on the configuration, and it should be used as much as possible. One example could be to move the database main working directory to a memory-based filesystem. For many simpler projects, that’s absolutely doable and at least for Drupal, a solid speedup. Needless to say, we have an &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/blob/master/ci-scripts/install_server.sh#L13&quot;&gt;example&lt;/a&gt; and on client projects, we saw 15-30% improvement at SimpleTest execution. For traditional RMDBS, you can give it a try. If your DB cannot fit in memory, you can still ask &lt;a href=&quot;https://www.percona.com/blog/2013/09/20/innodb-performance-optimization-basics-updated/&quot;&gt;InnoDB to fill memory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Think about your use case – even moving the whole document root there could be legitimate. Also if you need to compile a source code, doing it there makes sense as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-your-own-docker-image&quot;&gt;Build Your Own Docker Image&lt;/h2&gt;
+
+&lt;p&gt;If your project is really exotic or a legacy one, it potentially makes sense to maintain your own Docker image and then download and execute it in Travis. We did it in the past and then &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/pull/165/files&quot;&gt;converted&lt;/a&gt;. Maintaining your image means recurring effort, fighting with outdated versions, unavailable dependencies, that’s what to expect. Still, even it could be a type of performance optimization if you have lots of software dependencies that are hard to install on the current Travis container images.&lt;/p&gt;
+
+&lt;h2 id=&quot;1---debug-with-ease&quot;&gt;+1 - Debug with Ease&lt;/h2&gt;
+
+&lt;p&gt;To work on various improvements in the Travis integration for your projects, it’s a &lt;em&gt;must&lt;/em&gt; to spot issues quickly. What worked on localhost, might or might not work on Travis – and you should know the root cause quickly.&lt;/p&gt;
+
+&lt;p&gt;In the past, we propagated &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/pull/165/files&quot;&gt;video recording&lt;/a&gt;, now I’d recommend something else. You have a web application, for all the backend errors, there’s a tool to access the logs, at Drupal, you can use Drush. But what about the frontend? Headless Chrome is neat, it has built-in debugging capability, the best of which is that you can break out of the box using Ngrok. Without any X11 forwarding (which is not available) or a local hack to try to mimic Travis, you can play with your app running in the Travis environment. All you need to do is to execute a &lt;a href=&quot;https://github.com/Gizra/drupal-elm-starter/pull/165/files&quot;&gt;Debug build&lt;/a&gt;, execute the installation part (&lt;code class=&quot;highlighter-rouge&quot;&gt;travis_run_before_install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;travis_run_install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;travis_run_before_script&lt;/code&gt;), start Headless Chrome (&lt;code class=&quot;highlighter-rouge&quot;&gt;google-chrome --headless --remote-debugging-port=9222&lt;/code&gt;), download &lt;a href=&quot;https://ngrok.com/download&quot;&gt;Ngrok&lt;/a&gt;, start a tunnel (&lt;code class=&quot;highlighter-rouge&quot;&gt;ngrok http 9222&lt;/code&gt;), visit the exposed URL from your local Chrome and have fun with inspection, debugger console, and &lt;a href=&quot;https://chromedevtools.github.io/devtools-protocol/&quot;&gt;more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;takeaway&quot;&gt;Takeaway&lt;/h2&gt;
+
+&lt;p&gt;Working on such improvements has benefits of many kinds. The entire development team can enjoy the shorter queues and faster merges, and you can go ahead and apply part of the enhancements to your local environment, especially if you dig deep into database performance optimization and make the things parallel. And even more, clients love to hear that you are going to speed up their sites, as this mindset should be also used at production.&lt;/p&gt;
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/travis-speed//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/travis-speed/</link>
+        <guid>https://www.gizra.com/content/Travis-speed</guid>
+        <pubDate>Fri, 16 Feb 2018 00:00:00 -0600</pubDate>
+      </item>
     
       <item>
         <title>Expressing a Relationship between Multiple Types in Elm</title>
