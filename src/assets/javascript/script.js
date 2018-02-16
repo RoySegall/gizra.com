@@ -10,4 +10,19 @@ $(function() {
 
     // Add Semantic UI related classes to tables.
     $('table').addClass('ui table');
+
+    // Modals for the services page.
+    $('.strategy .content').click(function() {
+      $('.ui.modal.strategy').modal('show');
+    });
+
+    $('.development .content').click(function() {
+      $('.ui.modal.development').modal('show');
+    });
+    $('.maintenance .content').click(function() {
+      $('.ui.modal.maintenance').modal('show');
+    });
+    $('.advisory .content').click(function() {
+      $('.ui.modal.advisory').modal('show');
+    });
 });

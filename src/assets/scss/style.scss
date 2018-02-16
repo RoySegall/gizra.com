@@ -14,12 +14,17 @@ $gizra: 'Abril Fatface', sans-serif;
 $montserat: 'Montserat', sans-serif;
 $openSans: 'Open Sans', sans-serif;
 
+//Screen Sizes
+$medium-screen: 720px;
+$small-screen: 480px;
+
 @import 'blog_list';
 @import 'homepage';
 @import 'layout';
-@import 'post';
-@import 'team';
 @import 'podcast';
+@import 'post';
+@import 'services';
+@import 'team';
 @import 'pygments';
 
 body {
