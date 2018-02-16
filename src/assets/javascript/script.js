@@ -12,17 +12,23 @@ $(function() {
     $('table').addClass('ui table');
 
     // Modals for the services page.
-    $('.strategy .content').click(function() {
+    $('.strategy .main-content').click(function() {
       $('.ui.modal.strategy').modal('show');
+      if (document.activeElement != document.body) document.activeElement.blur();
     });
 
-    $('.development .content').click(function() {
+    $('.development .main-content').click(function() {
       $('.ui.modal.development').modal('show');
+      if (document.activeElement != document.body) document.activeElement.blur();
     });
-    $('.maintenance .content').click(function() {
+
+    $('.maintenance .main-content').click(function() {
       $('.ui.modal.maintenance').modal('show');
+      if (document.activeElement != document.body) document.activeElement.blur();
     });
-    $('.advisory .content').click(function() {
+
+    $('.advisory .main-content').click(function() {
       $('.ui.modal.advisory').modal('show');
+      if (document.activeElement != document.body) document.activeElement.blur();
     });
 });
