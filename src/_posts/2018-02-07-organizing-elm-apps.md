@@ -9,16 +9,14 @@ description: "Organizing Elm apps isn't entirely straightforward. Here are a few
 author: rgrempel
 ---
 
-Here at Gizra, we now have a fair number of large client-server apps written in Elm.
+Here at Gizra, we have a number of apps in production with an Elm frontend and
+(mostly) headless Drupal backend. The largest of these has more than 8,000
+commits, with 40,000 lines of Elm code in 184 files. So, we've had to think a
+little bit about how to structure large Elm apps.
 
-- Refer to a few
-- Mention Drupal
-- Mention LOC
-
-We've gained some insight about how to structure these kinds of apps.
-
-- Refer to Adam's post on integrating smaller bits of Elm.
-- This one about big, Elm-first apps. We're on roughly version 2 of an approach to organizing these things.
+My colleague Adam Stewart has blogged about techniques for adding a [little bit of
+Elm](https://www.gizra.com/content/elm-in-drupal-panels/) to an existing Drupal site.
+For some insight into how we structure larger Elm-first apps, read on!
 
 <!-- more -->
 
