@@ -152,6 +152,12 @@ Real questions are:
 
 A survey of files we typically have in an app, with reference to the preceding discussion.
 
+`view` in its own file. Why?
+
+- One nice thing is that you can do open imports more reasonably. E.g. `import
+  Html exposing (..)` makes more sense in a `View.elm` file than it would in a
+  file that had other concerns as well
+
 (I had planned to address client-server considerations more than this outline
 actually does. Now, I'm thinking that some more details about how to manage
 the interaction between client and server might make a nice follow-up blog
