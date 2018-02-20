@@ -12,14 +12,14 @@ description: "Can we write good code without automatic tests?"
 author: NaderSafadi
 ---
 
-We have covered the subject of automatic tests quite a lot here at Gizra and I'm sure that there're a lot of posts and articles covering the subject but I'm having a bizarre experience lately while writing any new features that I had to share it with you folks, keeping in mind I don't write a lot of blog posts and I always feared following up on my previous smashing hit [Bootstrap custom breakpoint](/content/custom-breakpoint-bootstrap-sass/) :)
+We have covered the subject of automatic tests quite a lot here at Gizra and I'm sure that there are a lot of posts and articles covering the subject but I'm having a bizarre experience lately while writing any new features that I had to share it with you folks, keeping in mind I don't write a lot of blog posts and I always feared following up on my previous smashing hit [Bootstrap custom breakpoint](/content/custom-breakpoint-bootstrap-sass/) :)
 
-So the experience I want to talk about was that of insecurity, which was quite odd for me considering I'm quite vain and I'm always proud of my code until [@amitaibu](https://github.com/amitaibu) reviews it and smashes my ego to pieces (which I learned to love).
+So the experience I want to talk about was that of insecurity, which was quite odd for me considering I'm always proud of my code until [@amitaibu](https://github.com/amitaibu) reviews it and smashes my ego to pieces (which I learned to love).
 
 In the past few months while working mainly on Elm apps, I have been writing tests on each possible level following the addition of [WDIO](/content/travis-wdio/) to our #theGizraWay which at the time didn't seem like a huge deal for me, for sure, I knew it was an awesome thing but I didn't grasp the magnitude of the situation which will be clear for you why in a minute. Without realizing it I was writing a much better code thanks to [elm-tests](https://github.com/elm-community/elm-test), SimpleTests in Drupal, and WDIO.
 
 What we are using for testing is the following:
-1. Elm-Tests for elm apps. (My projects were specific to apps inside of a Drupal site - inline apps - not headless apps but the tests apply the same for both methods)
+1. [Elm-Tests for elm apps.](/content/elm-in-drupal-panels/) (My projects were specific to apps inside of a Drupal site - inline apps - not headless apps but the tests apply the same for both methods)
 2. WDIO for the application's workflow (Doesn't matter what technology).
 3. SimpleTests for the API functions we were writing in Drupal to handle Elm's data from the backend and any other logic needed for the project, but definitely API functions.
 
@@ -36,9 +36,9 @@ This part of the development will cost you more of what you had in mind for sure
 
 That was just my rant about the mindset of believing that all will be well, QA will catch our bugs and hey, that's why we have staging environments, business owners will test and check everything there, but the business owners and QA people, no matter how amazing at their job they are, they are still humans, why the heck we give a job that a bot can do to a human? that just seems to me that we are still trying to stop evolution, bots will take over our world, get over it, there's no way around. [Skynet is coming!]
 
-just kidding, you still need QA, this is not a replacement, this is just making QA's life easier, instead of testing the whole thing each time, they are confident that they only need to test what is stated in the release.
+just kidding, you still need QA, this is not a replacement, this is just making QA's life easier, instead of testing the whole thing each time, they are confident that they only need to test what is stated in the release, because what automatic tests are quite good at catching are permissions for different roles of users for various features, it's really easy to write a permission test and it will save the QA team the trouble of checking permissions for each feature each time a new thing is developed which you should be doing if you don't have any kind of automated tests. There are just some things that you can't just test each time a new release has been made, core site functionality that is developed and then just expected to work all the time, but you can't expect that unless you have some sort of automated tests.
 
-From a developer POV, at first at may seem that it's just boring, hard or even unnecessary but believe me, once you get used to it, you never want to code without it, you are always confident that your code really works and you don't have to go into different users to test with different permissions that the same feature work, you don't have to worry about messing up other features or logic.
+From a developer POV, at first it may seem that it's just boring, hard or even unnecessary but believe me, once you get used to it, you never want to code without it, you are always confident that your code really works and you don't have to go into different users to test with different permissions that the same feature work, you don't have to worry about messing up other features or logic.
 
 You need to make sure to integrate different types of tests for each type of technology you are using, don't focus on one layer and leave the rest.
 It just makes you a better developer and more importantly a more chilled developer, you are confident, you are covered, you are one of the best, what more do you need?
