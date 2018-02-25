@@ -74,6 +74,15 @@
     </url>
   
     <url>
+      <loc>https://www.gizra.com/content/efrat-executive-director/</loc>
+      
+        <lastmod>2017-11-07T00:00:00-06:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  
+    <url>
       <loc>https://www.gizra.com/content/where-gizra-is-sailing/</loc>
       
         <lastmod>2017-07-28T00:00:00-05:00</lastmod>
@@ -1429,6 +1438,10 @@
   
     <url>
       <loc>https://www.gizra.com/blog/page12/</loc>
+     </url>
+  
+    <url>
+      <loc>https://www.gizra.com/blog/page13/</loc>
      </url>
   
 </urlset>
