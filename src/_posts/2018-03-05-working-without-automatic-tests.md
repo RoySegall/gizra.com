@@ -8,7 +8,7 @@ tags:
 permalink: "/content/working-without-automatic-tests/"
 layout: post
 image: "/assets/images/posts/working-without-automatic-tests/thumb.jpg"
-description: "Can we write good code without automatic tests?"
+description: "Can our applications be successful without automatic tests? Can we write good code without automatic tests?"
 author: NaderSafadi
 ---
 
