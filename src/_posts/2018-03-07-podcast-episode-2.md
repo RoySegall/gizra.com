@@ -1,7 +1,7 @@
 ---
 title: "What’s So Special About the Gizra Way"
 description: "Efrat, Rachel, and Adam discuss what it's like to work at a
-company that does things differently."
+company that does things differently - finding the right balance between challenging the status quo and learning from it."
 permalink: "/podcast/whats-so-special/"
 podcast_episode: 2
 podcast_file: https://storage.googleapis.com/gizra-podcasts/podcast-ep2.mp3
