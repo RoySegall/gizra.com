@@ -6,8 +6,8 @@
     <description>A semi-regular conversation about the web, technology, and what we call The Gizra Way.</description>
     <language>en-us</language>
     <copyright>Gizra, USA LLC, 2018</copyright>
-    <lastBuildDate>Sun, 25 Feb 2018 06:40:41 -0600</lastBuildDate>
-    <pubDate>Sun, 25 Feb 2018 06:40:41 -0600</pubDate>
+    <lastBuildDate>Wed, 07 Mar 2018 12:46:21 -0600</lastBuildDate>
+    <pubDate>Wed, 07 Mar 2018 12:46:21 -0600</pubDate>
     <itunes:author>Gizra</itunes:author>
     <itunes:summary>The Gizra Way podcast feed</itunes:summary>
     <itunes:owner>
@@ -21,6 +21,17 @@
     <itunes:explicit>no</itunes:explicit>
 
     
+    
+      <item>
+        <title>Episode 2: What’s So Special About the Gizra Way</title>
+        <description>Efrat, Rachel, and Adam discuss what it's like to work at a company that does things differently - finding the right balance between challenging the status quo and learning from it.</description>
+        <link>https://www.gizra.com/podcast/whats-so-special/</link>
+        <pubDate>Wed, 07 Mar 2018 00:00:00 -0600</pubDate>
+        <enclosure url="https://storage.googleapis.com/gizra-podcasts/podcast-ep2.mp3" length="56521524" type="audio/mpeg" />
+        <itunes:duration>39:14</itunes:duration>
+        <itunes:summary>Efrat, Rachel, and Adam discuss what it's like to work at a company that does things differently - finding the right balance between challenging the status quo and learning from it.</itunes:summary>
+        <itunes:explicit>no</itunes:explicit>
+      </item>
     
       <item>
         <title>Episode 1: We Don't Need an Intro Tune</title>
