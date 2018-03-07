@@ -18,5 +18,5 @@ hidden: true
 
 Efrat, Rachel, and Adam discuss what it's like to work at a company that does things differently - finding the right balance between challenging the status quo and
 learning from it. In response to [some Twitter questions](https://twitter.com/e0ipso/status/953727237848748039), we talked a bit about a newly-distributed and international workforce and some of our learnings. We also chatted
-about the long-term results of [A Job Post Goes Viral](http://localhost:3000/content/job-post-goes-viral/) and welcoming
+about the long-term results of [A Job Post Goes Viral](/content/job-post-goes-viral/) and welcoming
 diversity at a company.
