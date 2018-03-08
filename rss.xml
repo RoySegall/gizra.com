@@ -4,10 +4,26 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Wed, 07 Mar 2018 13:47:59 -0600</lastBuildDate>
-    <pubDate>Wed, 07 Mar 2018 13:47:59 -0600</pubDate>
+    <lastBuildDate>Thu, 08 Mar 2018 07:21:54 -0600</lastBuildDate>
+    <pubDate>Thu, 08 Mar 2018 07:21:54 -0600</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>My New Insecurity: Working Without Automatic Tests</title>
+        <description>
+          &lt;h2 id=&quot;testing-at-gizra&quot;&gt;Testing at Gizra&lt;/h2&gt;
+&lt;p&gt;We have covered the subject of automatic tests quite a lot here at Gizra and I’m sure that there are a lot of posts and articles covering the subject. However, I’m having a bizarre experience lately while writing new features that I had to share it with you folks. Keep in mind that I don’t write a lot of blog posts and I always feared following up on my previous smashing hit &lt;a href=&quot;/content/custom-breakpoint-bootstrap-sass/&quot;&gt;Bootstrap custom breakpoint&lt;/a&gt; :)&lt;/p&gt;
+
+&lt;p&gt;So the experience I want to talk about was that of insecurity, which was quite odd for me considering I’m always proud of my code until &lt;a href=&quot;https://github.com/amitaibu&quot;&gt;@amitaibu&lt;/a&gt; reviews it and smashes my ego to pieces (which I learned to love).&lt;/p&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/working-without-automatic-tests//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/working-without-automatic-tests/</link>
+        <guid>https://www.gizra.com/content/working-without-automatic-tests</guid>
+        <pubDate>Thu, 08 Mar 2018 00:00:00 -0600</pubDate>
+      </item>
     
       <item>
         <title>What’s So Special About the Gizra Way</title>
