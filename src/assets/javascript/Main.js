@@ -14461,27 +14461,31 @@ var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 		switch (_p0.ctor) {
 			case 'Drupal':
 				return {
-					ctor: '_Tuple2',
-					_0: 'drupal',
-					_1: A2(_elm_lang$core$Basics_ops['++'], 'https://www.drupal.org/u/', _p0._0)
+					ctor: '_Tuple3',
+					_0: 'Drupal Profile',
+					_1: 'drupal',
+					_2: A2(_elm_lang$core$Basics_ops['++'], 'https://www.drupal.org/u/', _p0._0)
 				};
 			case 'Email':
 				return {
-					ctor: '_Tuple2',
-					_0: 'mail',
-					_1: A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _p0._0)
+					ctor: '_Tuple3',
+					_0: 'Email Address',
+					_1: 'mail',
+					_2: A2(_elm_lang$core$Basics_ops['++'], 'mailto:', _p0._0)
 				};
 			case 'Github':
 				return {
-					ctor: '_Tuple2',
-					_0: 'github',
-					_1: A2(_elm_lang$core$Basics_ops['++'], 'https://github.com/', _p0._0)
+					ctor: '_Tuple3',
+					_0: 'Github Profile',
+					_1: 'github',
+					_2: A2(_elm_lang$core$Basics_ops['++'], 'https://github.com/', _p0._0)
 				};
 			default:
 				return {
-					ctor: '_Tuple2',
-					_0: 'twitter',
-					_1: A2(_elm_lang$core$Basics_ops['++'], 'https://twitter.com/', _p0._0)
+					ctor: '_Tuple3',
+					_0: 'Twitter Profile',
+					_1: 'twitter',
+					_2: A2(_elm_lang$core$Basics_ops['++'], 'https://twitter.com/', _p0._0)
 				};
 		}
 	};
@@ -14496,8 +14500,9 @@ var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 			_elm_lang$core$List$map,
 			function (socialNetwork) {
 				var _p1 = viewSocialNetwork(socialNetwork);
-				var icon = _p1._0;
-				var url = _p1._1;
+				var profile = _p1._0;
+				var icon = _p1._1;
+				var url = _p1._2;
 				return A2(
 					_elm_lang$html$Html$a,
 					{
@@ -14508,7 +14513,11 @@ var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 							_0: _elm_lang$html$Html_Attributes$target('_blank'),
 							_1: {
 								ctor: '::',
-								_0: _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel(person.name),
+								_0: _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel(
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										person.name,
+										A2(_elm_lang$core$Basics_ops['++'], '\'s ', profile))),
 								_1: {ctor: '[]'}
 							}
 						}

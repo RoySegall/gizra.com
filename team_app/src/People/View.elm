@@ -30,32 +30,32 @@ viewPerson person =
 viewSocailNetowrks : Person -> Html msg
 viewSocailNetowrks person =
     let
-        viewSocialNetwork : SocialNetwork -> ( String, String )
+        viewSocialNetwork : SocialNetwork -> ( String, String, String )
         viewSocialNetwork socialNetwork =
             case socialNetwork of
                 Drupal name ->
-                    ( "drupal", "https://www.drupal.org/u/" ++ name )
+                    ( "Drupal Profile", "drupal", "https://www.drupal.org/u/" ++ name )
 
                 Email name ->
-                    ( "mail", "mailto:" ++ name )
+                    ( "Email Address", "mail", "mailto:" ++ name )
 
                 Github name ->
-                    ( "github", "https://github.com/" ++ name )
+                    ( "Github Profile", "github", "https://github.com/" ++ name )
 
                 Twitter name ->
-                    ( "twitter", "https://twitter.com/" ++ name )
+                    ( "Twitter Profile", "twitter", "https://twitter.com/" ++ name )
     in
         div [ class "description" ]
             (List.map
                 (\socialNetwork ->
                     let
-                        ( icon, url ) =
+                        ( profile, icon, url ) =
                             viewSocialNetwork socialNetwork
                     in
                         a
                             [ href url
                             , target "_blank"
-                            , ariaLabel person.name
+                            , ariaLabel <| person.name ++ "'s " ++ profile
                             ]
                             [ i [ class <| icon ++ " icon" ] [] ]
                 )
