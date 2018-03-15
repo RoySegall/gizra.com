@@ -14428,6 +14428,33 @@ var _Gizra$elm_spa_exmple$Magnets_View$view = function (model) {
 		});
 };
 
+var _fapian$elm_html_aria$Html_Attributes_Aria$role = _elm_lang$html$Html_Attributes$attribute('role');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaSelected = _elm_lang$html$Html_Attributes$attribute('aria-selected');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaLive = _elm_lang$html$Html_Attributes$attribute('aria-live');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabelledby = _elm_lang$html$Html_Attributes$attribute('aria-labelledby');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel = _elm_lang$html$Html_Attributes$attribute('aria-label');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaHasPopup = _elm_lang$html$Html_Attributes$attribute('aria-haspopup');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaExpanded = _elm_lang$html$Html_Attributes$attribute('aria-expanded');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaDescribedby = _elm_lang$html$Html_Attributes$attribute('aria-describedby');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaControls = _elm_lang$html$Html_Attributes$attribute('aria-controls');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaChecked = _elm_lang$html$Html_Attributes$attribute('aria-checked');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaActiveDescendant = _elm_lang$html$Html_Attributes$attribute('aria-activedescendant');
+var _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute = F2(
+	function (name, val) {
+		return A2(
+			_elm_lang$html$Html_Attributes$attribute,
+			name,
+			A2(
+				_elm_lang$core$Json_Encode$encode,
+				0,
+				_elm_lang$core$Json_Encode$bool(val)));
+	});
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaDisabled = _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute('aria-disabled');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaHidden = _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute('aria-hidden');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaPressed = _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute('aria-pressed');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaReadonly = _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute('aria-readonly');
+var _fapian$elm_html_aria$Html_Attributes_Aria$ariaRequired = _fapian$elm_html_aria$Html_Attributes_Aria$boolAttribute('aria-required');
+
 var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 	var viewSocialNetwork = function (socialNetwork) {
 		var _p0 = socialNetwork;
@@ -14479,7 +14506,11 @@ var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 						_1: {
 							ctor: '::',
 							_0: _elm_lang$html$Html_Attributes$target('_blank'),
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel(person.name),
+								_1: {ctor: '[]'}
+							}
 						}
 					},
 					{
