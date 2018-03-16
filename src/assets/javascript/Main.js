@@ -14513,12 +14513,16 @@ var _Gizra$elm_spa_exmple$People_View$viewSocailNetowrks = function (person) {
 							_0: _elm_lang$html$Html_Attributes$target('_blank'),
 							_1: {
 								ctor: '::',
-								_0: _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel(
-									A2(
-										_elm_lang$core$Basics_ops['++'],
-										person.name,
-										A2(_elm_lang$core$Basics_ops['++'], '\'s ', profile))),
-								_1: {ctor: '[]'}
+								_0: _elm_lang$html$Html_Attributes$rel('noopener'),
+								_1: {
+									ctor: '::',
+									_0: _fapian$elm_html_aria$Html_Attributes_Aria$ariaLabel(
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											person.name,
+											A2(_elm_lang$core$Basics_ops['++'], '\'s ', profile))),
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					},

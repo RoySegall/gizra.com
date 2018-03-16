@@ -1,7 +1,7 @@
 module People.View exposing (viewPerson)
 
 import Html exposing (..)
-import Html.Attributes exposing (alt, class, classList, href, src, style, target)
+import Html.Attributes exposing (alt, class, classList, href, src, style, target, rel)
 import Html.Attributes.Aria exposing (ariaLabel)
 import Html.Events exposing (onClick)
 import People.Model exposing (Person, SocialNetwork(..))
@@ -55,6 +55,7 @@ viewSocailNetowrks person =
                         a
                             [ href url
                             , target "_blank"
+                            , rel "noopener"
                             , ariaLabel <| person.name ++ "'s " ++ profile
                             ]
                             [ i [ class <| icon ++ " icon" ] [] ]
