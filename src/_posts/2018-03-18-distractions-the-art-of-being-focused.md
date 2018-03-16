@@ -18,18 +18,18 @@ Timeboxing](https://www.thegizraway.com/escalation_and_timeboxing.html).
 
 > Yes, take breaks as needed but when you work, be focused.
 
-It turns out that being focused is something that may be much harder than you would
-expect...
+It turns out that being focused is something that may be much harder than you
+would expect...
 
 ## Turn off distractions
 
-It is a known practice when trying to be productive to turn off
-distractions including slack, twitter, email, all those things that take away your
-focus. But there are more. Maybe hidden in your current workflow.
+It is a known practice when trying to be productive to turn off distractions
+including slack, twitter, email, all those things that take away your focus.
+But there are more. Maybe hidden in your current workflow.
 
-For me for example, a big distraction came from not having the right tools for the job. I learned that
-spending some time now to configure my environment correctly can save me a lot of
-hours of distractions in the future.
+For me for example, a big distraction came from not having the right tools for
+the job. I learned that spending some time now to configure my environment
+correctly can save me a lot of hours of distractions in the future.
 
 If you are a drupal developer, make sure you understand and make use of at least
 these three things:
@@ -40,19 +40,21 @@ these three things:
 
 ## There may be a better way.
 
-It may just sound obvious, but do not insist on something that doesn't work for you.
+It may just sound obvious, but do not insist on something that doesn't work for
+you.
 
 For example, a week before I joined Gizra, I decided to try i3wm windows
-manager. It was a joy. I believed that I would not have to think about where to place a window
-anymore. But after four weeks of using it and configuring it, I realized that
-I was wasting a lot of time just trying to remember how to open new windows, so
-I returned to XFCE. However I did adopt some key shortcuts from i3wn, like opening
-a terminal with Command + Enter, that turned out to be really helpful.
+manager. It was a joy. I believed that I would not have to think about where to
+place a window anymore. But after four weeks of using it and configuring it,
+I realized that I was wasting a lot of time just trying to remember how to open
+new windows, so I returned to XFCE. However I did adopt some key shortcuts from
+i3wn, like opening a terminal with Command + Enter, that turned out to be
+really helpful.
 
-Listening to your coworkers advice is a good thing too. I been working with Drupal
-the last ten years, and that implies doing things in the wrong way, for a long
-of period of time... The point here is being enough humble to listen other ways
-to do things, and make them part of your current workflow.
+Listening to your coworkers advice is a good thing too. I been working with
+Drupal the last ten years, and that implies doing things in the wrong way, for
+a long of period of time... The point here is being enough humble to listen
+other ways to do things, and make them part of your current workflow.
 
 ## Keep track of what you do
 
