@@ -52,9 +52,9 @@ i3wn, like opening a terminal with Command + Enter, that turned out to be
 really helpful.
 
 Listening to your coworkers advice is a good thing too. I been working with
-Drupal the last ten years, and that implies doing things in the wrong way, for
-a long of period of time... The point here is being enough humble to listen
-other ways to do things, and make them part of your current workflow.
+Drupal the last ten years, and may imply that things you think are right may not
+be as the best way. Being enough humble to listen other ways to do things is
+crucial, and then try to make them part of your current workflow.
 
 ## Keep track of what you do
 
@@ -62,19 +62,22 @@ Eventually, you will get time to work on some task. Then you need to find a way
 to prevent yourself of spending too much time focused. Your health is important
 and taking enough breaks make your life more pleasant.
 
-For me the pomodoro technique is a good way to find a balance between working
-and resting. There are a lot of cellphone apps to track this, but all of them
-requires to have your phone close enough to check it. And the phone is another
-source of distraction.
+For me the [pomodoro
+technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) is a good way to
+find a balance between working and resting. There are a lot of cellphone apps
+to track this, but all of them requires to have your phone close enough to
+check it. And the phone is another source of distraction.
 
 So I thought about another way to track time, and built a pomodoro timer using
 an arduino.
 
 ## Pomoduino
 
-There are several schematics of how to build a timer. Lot of them are just to
-simple, I needed a way to track how much time I sent working, because reporting
-hours is a crucial part of the Gizra way.
+There are [several
+schematics](https://www.makeuseof.com/tag/pomoduino-make-arduino-powered-pomodoro-timer/)
+of how to build a timer. Lot of them are just to simple, I needed a way to
+track how much time I sent working, because reporting hours is a crucial part
+of the Gizra way.
 
 +{% include thumbnail.html image_path="assets/images/posts/distractions/pomoduino.png" caption="Pomodoro made with arduino" %}
 
@@ -84,6 +87,16 @@ a rest session.
 Each time you complete a set of 4 periods of work or rest, a new light is
 turned on in the matrix, so you can track an entire working day sesion using
 a 8x8 led matrix.
+
+Even if you this doesn't work well after a few months of using it it teachs you
+a few things:
+
+- First, times flies. So having something tracking it for you is a good helper.
+- Second, calculating how much time you invested in something is as easy as
+  count a few lights.
+- Third, it was a really fun experience, if you are interested on getting your
+  own timer, here is the [source
+  code](https://github.com/mariano-dagostino/pomoduino), for free.
 
 ## It is all about finding your way to improve yourself
 
