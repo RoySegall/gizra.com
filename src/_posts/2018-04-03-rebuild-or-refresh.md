@@ -20,15 +20,15 @@ As I'm preparing for the NTEN's, Nonprofit Technology Conference next week, I'm 
 
 <!-- more -->
 
-So the drip, drip, drip of your slightly broken, out-of-date, not-quite-meeting-your-needs website is constantly in your ear, like the leaky pipe somewhere in your wall that you can hear clearly when everything else is quite, and you know id going to be harder to find than it will even be to repair. And it's going to cost a lot. So let's just let it keep dripping and we'll deal with it when we have enough saved - or when it becomes a real emergency.
+So the drip, drip, drip of your slightly broken, out-of-date, not-quite-meeting-your-needs website is constantly in your ear, like the leaky pipe somewhere in your wall that you can hear clearly when everything else is quiet, and you know is going to be harder to find than it will even be to repair. And it's going to cost a lot. So let's just let it keep dripping and we'll deal with it when we have enough saved - or when it becomes a real emergency.
 
 {% include thumbnail.html image_path="assets/images/posts/rebuild-or-refresh/drip.jpg" caption="Drip, drip, drip - do you hear your website at night? - Photo by Jeremy Kunz, https://www.flickr.com/photos/jkunz/3591367450/in/gallery-75059479@N00-72157627802537169/,  (CC BY-NC-SA 2.0)" %}
 
-But that's where this analogy ends. Because you're going to have to fix that pipe eventually. The leak will get bigger or you going to have a mold problem. There's no way around it: that pipe deliver's water to the rest of your house. You can't do without it.
+But that's where this analogy ends. Because you're going to have to fix that pipe eventually. The leak will get bigger or you are going to have a mold problem. There's no way around it: that pipe delivers water to the rest of your house. You can't do without it.
 
 ## A Website is a Tool, Not a Product (probably)
 
-It's might not be your website that's stuck in the past - it could be that your organizational thinking about what a website is, is stuck there as well. The idea that a website is a product in itself is a natural outgrowth of the "brochureware" era, where sites were just an extension of other printed marketing materials.
+It might not be your website that's stuck in the past - it could be that your organizational thinking about what a website is, is stuck there as well. The idea that a website is a product in itself is a natural outgrowth of the "brochureware" era, where sites were just an extension of other printed marketing materials.
 
 Marketing is still a very important part of what a website can do - but it's very likely that either through passive analytics, or more dynamic user interactions, your website is engaging your key constituents in ways that go beyond the one-way transfer of static information. Chances are - if you are like most nonprofits - a part of your website, or some web tool you have created, helps you carry out an aspect of your mission.
 
