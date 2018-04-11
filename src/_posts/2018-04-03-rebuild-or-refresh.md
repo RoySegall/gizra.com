@@ -39,3 +39,13 @@ But (except in some rare circumstances) the website itself isn't the mission - a
 So why do we treat websites like an end product? Why do we ever say "We need to redo our website"? Would we ever say that we need to "redo" our development department? or our volunteer program? Rather we should say, let's adapt our website, learning from our successes and recovering from our failures.
 
 ## Neither Rebuild or Refresh
+
+One of the things that pains me often is when I encounter organizations sitting on a horribly broken web experience because they are "saving up" for a website overhaul. They know it's broken, but they also know they don't have the money or bandwidth to deal with it. Rather than using that time to think about what they could be doing on the web, they spend it making excuses for their outdated website. I can say that bluntly because, well... been there, done that.
+
+So just like that leaky pipe: yeah, it would be great to have all new copper pipe throughout the house. That would keep you happy for years. But in the meantime, let's fix that leak. There's probably a solution to your web problem and it's probably cheaper than a rebuild.
+
+But what about a "refresh," you say? I'm not a fan of that either. In most cases it's a cop out to uncovering the real problem. Not that there's any problem with a prettier website or a fancier UI - but a pretty broken web experience is still a broken experience.
+
+## Do a Lean Discovery
+
+{% include thumbnail.html image_path="https://gfycat.com/gifs/detail/EasygoingBoldHoneyeater" caption=" Photo by Nicolas Nova, https://www.flickr.com/photos/nnova/2970063644,  (CC BY-NC-SA 2.0)" %}
