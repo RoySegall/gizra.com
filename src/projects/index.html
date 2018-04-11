@@ -9,6 +9,31 @@ title: Project Portfolio
 
   <div class="ui segments">
 
+    <!-- UNICEF -->
+    {% capture project_content %}
+    <p>
+      Gizra performed a multilingual migration from the legacy RedDot CMS for
+      UNICEF’s new global and branch websites under Drupal 8.
+    </p>
+
+    <p>
+      In addition, Gizra served in an advisory role implementing a process of
+      code review and technical project management that helps the organization
+      better support its Global Communication and Public Advocacy Strategy.
+      The project started with a technical audit and recommendations,
+      implementing an internal development workflow, applying best practices
+      for code review, and implementing automatic tests.
+    </p>
+    {% endcapture %}
+
+      {% include project.html
+        title="UNICEF Global and Regional Sites"
+        client="UNICEF"
+        url="unicef.org"
+        image="unicef.jpg"
+        content=project_content
+      %}
+
     <!-- OpenScholar -->
     {% capture project_content %}
     <p>
