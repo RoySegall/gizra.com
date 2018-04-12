@@ -195,9 +195,31 @@ title: Project Portfolio
           case_study="/case-studies/casa-del-lector"
         %}
 
+        <!-- Danel -->
+
+        {% capture project_content %}
+        <p>
+          Danel is an online Human Resource and Staffing web service, connecting
+          employers with potential employees.
+
+          Gizra advised, implemented, and maintains the new website for one of
+          the top staffing agencies in Israel. This end-to-end project includes
+          connecting to the organization’s CRM, managing the ongoing process of
+          posting job offers and user applications, and promoting the brand
+          online.  The user facing features include a resume building tool and
+          a smart agent where the users can sets job opportunity notifications.
+        </p>
+        {% endcapture %}
+
+          {% include project.html
+            title="Danel Jobs"
+            client="Danel Human Resources"
+            url="https://www.danel-jobs.co.il/ "
+            image="danel.jpg"
+            content=project_content
+          %}
 
       <!-- Huji -->
-
 
       {% capture project_content %}
       <p>
