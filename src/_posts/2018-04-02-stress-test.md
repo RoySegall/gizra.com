@@ -2,7 +2,6 @@
 title: Stress testing - crash your site
 tags:
   - Devops
-  - Drupal
   - Gatling
   - Drupal-planet
 permalink: "/content/stress-testing/"
@@ -155,7 +154,7 @@ We ask Gatling that during 10 seconds, add 10 users. There are many strategies t
 
 ### A simulation class
 
-Now it's the time to use a bit more from Scala, but actually it does not vary a lot from test to test:
+Now it's the time to use a bit more from Scala, but actually it does not vary a lot from test to test, so our whole class looks like this:
 ```scala
 import scala.concurrent.duration._
 
@@ -166,11 +165,8 @@ import io.gatling.jdbc.Predef._
 class GizraCom extends Simulation {
   val testServerUrl = scala.util.Properties.envOrElse("GIZRA_COM_BASE_URL", "https://www.gizra.com")
 
-  setUp(scn.inject(
-    rampUsers(10) over(10 seconds),
-  )).protocols(httpProtocol)
-
   val httpProtocol = http
+    .baseURL(testServerUrl)
     .acceptHeader("*/*")
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
@@ -179,14 +175,27 @@ class GizraCom extends Simulation {
 
   val scn = scenario("Gizra")
     .exec(http("request_0")
-      .get("/blog")
-      .check(css("#blog-page .content:first-of-type a", "href")).saveAs("blogentry")
+      .get("/blog/")
+      .check(css("#blog-page .content:first-of-type a", "href").saveAs("blogentry"))
     )
     .exec(http("request_1")
-      .get(blogentry)
+      .get("${blogentry}")
     )
+
+  setUp(scn.inject(
+    rampUsers(10) over(10 seconds),
+  )).protocols(httpProtocol)
+
 }
 ```
+
+It is convenient for `local` execution that you can override the base URL via the `GIZRA_COM_BASE_URL` environment variable, so:
+```shell
+export GIZRA_COM_BASE_URL="http://gizra.local"
+./run.sh
+```
+
+would test your local instance instead of the `live` site, for this `run.sh`, continue reading.
 
 ### A wrapper to execute the things locally
 
@@ -207,9 +216,15 @@ cd "$BASE_DIR"/gatling-charts-highcharts-bundle-2.3.0 || exit 1
 ./bin/gatling.sh -s GizraCom
 ```
 
+The HTML report is detailed and ready to show even for business stakeholders with your expert insights in addition:
+
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/report.png" caption="Report from Gatling.io about Gizra.com" %}
+
 ### Execute it on BlazeMeter
 
-Taurus configfile:
+Optionally, if you aim for realistic, large-scale executions of this test, we can put it in the cloud these, the ingredients are:
+ - a (free) BlazeMeter account
+ - a Taurus configfile, `test.yml`:
 ```yml
 execution:
 - executor: gatling
@@ -221,17 +236,25 @@ scenarios:
     simulation: GizraCom
     keepalive: true
 ```
-
 This is needed for BlazeMeter to be able to recognize the Gatling test, it's fully specific to this service, if you execute it locally, you simply don't need it.
 
-After all these, you can launch the simulation:
+After all these, you can upload the simulation files (as Taurus tests), do a little configuration:
 
-And have the results likewise:
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/blazemeter.png" caption="File upload and configuration" %}
+
+And you have even fancier reports than last time, enjoy!
+
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/blazemeter-report.png" caption="The report of BlazeMeter" %}
 
 ### Simulation recorder
 
 There is a lazy way to be able to [record simulation](https://gatling.io/docs/2.3/http/recorder/) using a GUI, if you just start to experiment with Gatling, try it out, but for any non-trivial tests, you need to touch the Scala code. For such tests where you're interested in downloading a lots of static resources and it would be quite boring to code it manually, give it a shot, it works steadily.
 
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/recorder.png" caption="GUI recorder of Gatling.io - good companion in writing the actual Scala classes" %}
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/engine-health.png" caption="BlazeMeter monitors the executor machines for you" %}
+
 ## Takeaway
+
+You can access this tiny showcase at [GitHub](https://github.com/AronNovak/gizra.com-stress-test), fork it, make it a fully-featured boilerplate, make a PR, all highly appreciated!
 
 Stress testing has a friendly learning curve if you already have the mindset for browser-based testing, let's start it today and you can make commitments to your client that your site will scale.
