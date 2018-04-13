@@ -93,7 +93,7 @@ To issue a single static HTTP request, it can be as simple as:
 ```scala
 val scn = scenario("Gizra")
     .exec(http("request_0")
-      .get("/blog")
+      .get("/blog/")
     )
 ```
 
@@ -116,7 +116,7 @@ val headers_0 = Map(
 
 val scn = scenario("Gizra")
     .exec(http("request_0")
-      .get("/blog")
+      .get("/blog/")
       .headers(headers_0)
     )
 ```
@@ -130,11 +130,11 @@ Let's say we'd like to simulate a user who arrives to the blog page and visits t
 ```scala
   val scn = scenario("Gizra")
     .exec(http("request_0")
-      .get("/blog")
-      .check(css("#blog-page .content:first-of-type a", "href")).saveAs("blogentry")
+      .get("/blog/")
+      .check(css("#blog-page .content:first-of-type a", "href").saveAs("blogentry"))
     )
     .exec(http("request_1")
-      .get(blogentry)
+      .get("${blogentry}")
     )
 ```
 
