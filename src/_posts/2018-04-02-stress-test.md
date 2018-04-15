@@ -197,7 +197,7 @@ export GIZRA_COM_BASE_URL="http://gizra.local"
 
 would test your local instance instead of the `live` site, for this `run.sh`, continue reading.
 
-### A wrapper to execute the things locally
+### Execute it on local
 
 During the implementation of your test, you surely want to execute it locally, a little script can be convenient, especially if you are not alone on your project:
 ```shell
@@ -253,8 +253,12 @@ There is a lazy way to be able to [record simulation](https://gatling.io/docs/2.
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/recorder.png" caption="GUI recorder of Gatling.io - good companion in writing the actual Scala classes" %}
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/engine-health.png" caption="BlazeMeter monitors the executor machines for you" %}
 
+### Icing on the cake - integration test on Travis
+
+So you just developed a neat, complex stress test suite for your intranet and you have a plan to maintain it alongside your core project. That's great! Create a tiny [Travis integration](https://github.com/AronNovak/gizra.com-stress-test/blob/master/.travis.yml) for the stress test repository, then you can relax: if Travis remains green, the Scala code compiles and the stress test can be executed. If you do it with minimal amount of users, it's likely acceptable to do it on the production site, so your stress testing repository can have the usual Travis status image as your other repositories.
+
 ## Takeaway
 
 You can access this tiny showcase at [GitHub](https://github.com/AronNovak/gizra.com-stress-test), fork it, make it a fully-featured boilerplate, make a PR, all highly appreciated!
 
-Stress testing has a friendly learning curve if you already have the mindset for browser-based testing, let's start it today and you can make commitments to your client that your site will scale.
+Stress testing has a friendly learning curve if you already have the mindset for browser-based testing, let's start it today and you can make commitments to your clients that your site will scale.
