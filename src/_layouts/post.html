@@ -50,19 +50,34 @@ post: true
   </div>
 
   <!--Pager-->
+  {% assign posts = site.posts | where:"layout","post" %}
+  {% for post in posts %}
+    {% if post.url == page.url %}
+      {% assign prev = forloop.index %}
+      {% if forloop.index0 != 0 %}
+        {% assign next = forloop.index0 | minus: 1 %}
+      {% endif %}
+      {% if prev %}
+          {% assign prevPage = posts[prev] %}
+      {% endif %}
+      {% if next %}
+          {% assign nextPage = posts[next] %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
   <div class="twelve wide column computer only">
     <div class="ui borderless secondary menu">
-      {% if page.previous %}
-      <a class="item" href="{{ page.previous.url }}">
+      {% if prevPage %}
+      <a class="item" href="{{ prevPage.url }}">
         <i class="chevron left icon"></i>
-        {{ page.previous.title }}
-
+        {{ prevPage.title }}
       </a>
       {% endif %}
       <div class="right menu">
-        {% if page.next %}
-        <a class="item" href="{{ page.next.url }}">
-          {{ page.next.title }}
+        {% if nextPage %}
+        <a class="item" href="{{ nextPage.url }}">
+          {{ nextPage.title }}
           <i class="chevron right icon"></i>
         </a>
         {% endif %}
