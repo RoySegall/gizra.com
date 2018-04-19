@@ -1,13 +1,14 @@
 ---
-title: "Rebuild or Refresh? How About Neither"
+title: "Rebuild or Refresh Your Website: How About Neither?"
 tags:
   - Web Projects
+  - Nonprofit
   - The Gizra Way
 permalink: "/content/rebuild-or-refresh/"
 layout: post  
 image: "/assets/images/posts/rebuild-or-refresh/thumb.jpg"   
 author: IshaDakota  
-description: "Sometimes the answer to rebuild or refresh is neither - a lean discovery can help you out."
+description: "Sometimes the answer to whether you should rebuild or refresh your website is neither - a lean discovery can help you out."
 ---
 
 **The big question:** Is it time to rebuild your site or can you do with a refresh?
@@ -38,7 +39,7 @@ So why do we treat websites like an end product? Why do we ever say "We need to 
 
 {% include thumbnail.html image_path="assets/images/posts/rebuild-or-refresh/first-web-server.jpg" caption="DO NOT POWER DOWN! Even the first web server was just a tool - nothing flashy, just a way for scientists to communicate." %}
 
-## Neither Rebuild or Refresh
+## Neither Rebuild nor Refresh
 
 I get that twitchy feeling when I encounter organizations sitting on a horribly broken web experience because they are "saving up" for a website overhaul. They know it's broken, but they also know they don't have the money or bandwidth to deal with it. Rather than using that time to think about what they could be doing on the web, they spend it making excuses for their outdated website. I can say that bluntly because, well... been there, done that.
 
