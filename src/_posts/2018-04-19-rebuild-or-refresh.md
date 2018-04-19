@@ -25,7 +25,7 @@ So the drip, drip, drip of your slightly broken, out-of-date, not-quite-meeting-
 
 But like your website, you're going to have to fix that pipe eventually. You can't do without it.
 
-Your Website, a Tool, Not a Product
+## Your Website, a Tool, Not a Product
 
 Much like pipes are just a tool to bring fresh water to your home, your website is a tool allow you to interact in some way with your constituency.
 
