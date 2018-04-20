@@ -9,7 +9,7 @@ image: "/assets/images/posts/stress-testing/thumb.jpg"
 layout: post
 published: true
 author: AronNovak
-description: "Let's learn how to crash your site before your visitors do."
+description: "Using some available tools for website stress testing, let's learn how to crash your site before your visitors do!"
 ---
 
 If you'd like to challenge your infrastructure provider, your development team, or you're simply looking forward to optimizing the scalability of your web application, join us for a short adventure to stress test [gizra.com](https://www.gizra.com).
