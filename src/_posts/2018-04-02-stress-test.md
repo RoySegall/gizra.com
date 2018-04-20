@@ -1,5 +1,5 @@
 ---
-title: Stress testing - crash your site
+title: Stress Testing - Crash Your Site
 tags:
   - Devops
   - Gatling
@@ -9,10 +9,11 @@ image: "/assets/images/posts/stress-testing/thumb.jpg"
 layout: post
 published: true
 author: AronNovak
-description: "Let's learn how to crash your site before your visitors would do it"
+description: "Let's learn how to crash your site before your visitors do."
 ---
 
 Either if you'd like to challenge your infrastructure provider, your development team or looking forward to optimize the scalability of your web application, join us for a short adventure to stress test gizra.com.
+
 If you're in a TL;DR mode, jump to the [explanation of the implementation](#how).
 
 ## Who?
@@ -27,16 +28,17 @@ The icing on the cake that Gatling.io provides a framework to write your tests i
 
 ## What?
 
-### What is stress testing?
+### What is Stress Testing?
 
 Stress testing is really not web development specific, you can stress test [your CPU](https://en.wikipedia.org/wiki/Prime95), [your network](https://github.com/jwbensley/EtherateMT) and eventually your website too. There are various goals:
  - determine the available capacity
  - know how the system degrades when it fails to perform perfectly
  - determine when the system becomes totally unavailable
 
-### What do you want to stress test?
+### What Do You Want to Stress Test?
 
 In case of stress testing a website, there is a decision on what to stress test actually:
+
  - the infrastructure where the given instance of the site is hosted
  - one of the caching layers that's present (CDN, Drupal page cache and so on)
  - for anonymous visitors or for logged in users
@@ -87,7 +89,7 @@ Have you noticed that we use Scala to describe the tests? Don't worry, with all 
 
 Let's incrementally add new pieces to a small building block together until we arrive to an executable test.
 
-### A simple HTTP request
+### A Simple HTTP Request
 
 To issue a single static HTTP request, it can be as simple as:
 ```scala
@@ -152,7 +154,7 @@ We have our `httpProtocol` and the `scn` scenario, we can ask Gatling to create 
 
 We ask Gatling that during 10 seconds, add 10 users. There are many strategies that Gatling can follow when injecting new [sessions](https://gatling.io/docs/2.3/general/simulation_setup/) to the simulation.
 
-### A simulation class
+### A Simulation Class
 
 Now it's the time to use a bit more from Scala, but actually it does not vary a lot from test to test, so our whole class looks like this:
 ```scala
@@ -220,7 +222,7 @@ The HTML report is detailed and ready to show even for business stakeholders wit
 
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/report.png" caption="Report from Gatling.io about Gizra.com" %}
 
-### Execute it on BlazeMeter
+### Execute It on BlazeMeter
 
 Optionally, if you aim for realistic, large-scale executions of this test, we can put it in the cloud these, the ingredients are:
  - a (free) BlazeMeter account
@@ -246,14 +248,14 @@ And you have even fancier reports than last time, enjoy!
 
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/blazemeter-report.png" caption="The report of BlazeMeter" %}
 
-### Simulation recorder
+### Simulation Recorder
 
 There is a lazy way to be able to [record simulation](https://gatling.io/docs/2.3/http/recorder/) using a GUI, if you just start to experiment with Gatling, try it out, but for any non-trivial tests, you need to touch the Scala code. For such tests where you're interested in downloading a lots of static resources and it would be quite boring to code it manually, give it a shot, it works steadily.
 
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/recorder.png" caption="GUI recorder of Gatling.io - good companion in writing the actual Scala classes" %}
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/engine-health.png" caption="BlazeMeter monitors the executor machines for you" %}
 
-### Icing on the cake - integration test on Travis
+### Icing on the Cake - Integration Tests on Travis
 
 So you just developed a neat, complex stress test suite for your intranet and you have a plan to maintain it alongside your core project. That's great! Create a tiny [Travis integration](https://github.com/AronNovak/gizra.com-stress-test/blob/master/.travis.yml) for the stress test repository, then you can relax: if Travis remains green, the Scala code compiles and the stress test can be executed. If you do it with minimal amount of users, it's likely acceptable to do it on the production site, so your stress testing repository can have the usual Travis status image as your other repositories.
 
