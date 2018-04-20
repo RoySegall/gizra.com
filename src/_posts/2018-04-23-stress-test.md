@@ -1,9 +1,9 @@
 ---
-title: Stress Testing - Crash Your Site
+title: Stress Testing - Go Ahead and Crash Your Site
 tags:
   - Devops
   - Gatling
-  - Drupal-planet
+  - Automated tests
 permalink: "/content/stress-testing/"
 image: "/assets/images/posts/stress-testing/thumb.jpg"
 layout: post
@@ -15,6 +15,8 @@ description: "Let's learn how to crash your site before your visitors do."
 If you'd like to challenge your infrastructure provider, your development team, or you're simply looking forward to optimizing the scalability of your web application, join us for a short adventure to stress test [gizra.com](https://www.gizra.com).
 
 If you're in a TL;DR mode, you can jump to the [explanation of the implementation](#how).
+
+<!-- more -->
 
 ## Who?
 
