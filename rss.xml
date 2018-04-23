@@ -4,10 +4,25 @@
     <description></description>
     <title>Gizra</title>
     <link>https://www.gizra.com</link>
-    <lastBuildDate>Thu, 19 Apr 2018 08:49:14 -0500</lastBuildDate>
-    <pubDate>Thu, 19 Apr 2018 08:49:14 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Apr 2018 11:23:04 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Apr 2018 11:23:04 -0500</pubDate>
     <ttl>1800</ttl>
 
+    
+      <item>
+        <title>Stress Testing - Go Ahead and Crash Your Site</title>
+        <description>
+          &lt;p&gt;If you’d like to challenge your infrastructure provider, your development team, or you’re simply looking forward to optimizing the scalability of your web application, join us for a short adventure to stress test &lt;a href=&quot;https://www.gizra.com&quot;&gt;gizra.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At the beginning, we discuss some conceptual lessons learned, so you may jump to the &lt;a href=&quot;#how&quot;&gt;explanation of the implementation&lt;/a&gt; directly .&lt;/p&gt;
+
+
+          &lt;p&gt;&lt;a href=&quot;https://www.gizra.com/content/stress-testing//&quot;&gt;Continue reading…&lt;/a&gt;&lt;/p&gt;
+        </description>
+        <link>https://www.gizra.com/content/stress-testing/</link>
+        <guid>https://www.gizra.com/content/stress-test</guid>
+        <pubDate>Mon, 23 Apr 2018 00:00:00 -0500</pubDate>
+      </item>
     
       <item>
         <title>Rebuild or Refresh Your Website: How About Neither?</title>

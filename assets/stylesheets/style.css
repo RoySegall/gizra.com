@@ -55,7 +55,8 @@ footer.ui.vertical.segment {
   box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15); }
 
 .post pre.highlight {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  white-space: pre-wrap; }
 
 .post code.highlighter-rouge {
   padding: .2em .5em;
