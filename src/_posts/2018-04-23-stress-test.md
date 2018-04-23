@@ -14,7 +14,7 @@ description: "Using some available tools for website stress testing, let's learn
 
 If you'd like to challenge your infrastructure provider, your development team, or you're simply looking forward to optimizing the scalability of your web application, join us for a short adventure to stress test [gizra.com](https://www.gizra.com).
 
-If you're in a TL;DR mode, you can jump to the [explanation of the implementation](#how).
+At the beginning, we discuss some conceptual lessons learned, so you may jump to the [explanation of the implementation](#how) directly .
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ In case of stress testing a website, there is a decision on what precisely to te
  - for anonymous visitors or for logged in users.
  - with or without executing the front-end code of the website.
 
-You can mix your set of goals, but during the implementation, you need to pay attention to follow this decision. For instance, if you would like to exclude Varnish cache from the testing, but still, you want Drupal to use page cache, you'll need to do some tricks, such as setting an invalid session cookie header that prevents Varnish from caching, but still allows Drupal to use the page cache as usual.
+You can mix your set of goals, but during the implementation, you need to pay attention to follow this decision. For instance, if you would like to exclude Varnish cache from the testing, but still, you want Drupal to use page cache, you'll need to do some tricks, such as setting an invalid session cookie header that prevents Varnish from caching, however allows Drupal to use the page cache as usual.
 
 ## When?
 
@@ -57,7 +57,7 @@ We could just say 'always', but the more nuanced answer depends on your applicat
 
 ## Where?
 
-If you're at the beginning of your project and it's critical to provide excellent performance and scalability, you can integrate Gatling.io into Travis. When your site is bootstrapped, it's perfectly possible to execute a stress test and define a threshold for the throughput and let Travis fail if the result does not exceed the defined value. Be prepared that this will slightly increase the instability of your Travis builds, as the available resources in the environment that Travis provides are not fully stable, and sometimes there will be sporadic failures. Despite that, it can be a very appealing option to ensure that the performance and the scalability does not degrade during sprints.
+So you're at the beginning of your project and it's critical to provide excellent performance and scalability, then you can integrate Gatling.io into Travis. When your site is bootstrapped, it's perfectly possible to execute a stress test and define a threshold for the throughput and let Travis fail if the result does not exceed the defined value. Be prepared that this will slightly increase the instability of your Travis builds, as the available resources in the environment that Travis provides are not fully stable, and sometimes there will be sporadic failures. Despite that, it can be a very appealing option to ensure that the performance and the scalability does not degrade during sprints.
 
 If you would like to perform a test in a production-like environment, Travis won't tell you if your infrastructure or service provider lags behind its promise. A production-like environment has:
 
@@ -83,7 +83,7 @@ As you're reading this paragraph, likely you have your own answers. My short ans
  - Misconfigured Varnish.
  - Non-functioning anonymous page cache.
  - Non-scalable algorithm in custom/contributed code.
- - Insufficient bandwidth available (compared to the static assets on the site).
+ - Insufficient available bandwidth (compared to the static assets on the site and the expected traffic).
 
 It's actually an exciting problem-solving game to analyze the output and understand what kind of problems there are, if any.
 
@@ -91,7 +91,7 @@ It's actually an exciting problem-solving game to analyze the output and underst
 <a name="how"></a>
 Now after reading my various thoughts on stress testing, let's craft one test together against [Gizra.com](https://www.gizra.com).
 
-You may notice that we use Scala to write the tests? Don't worry, with all the great [tutorials](https://gatling.io/docs/current/quickstart/) and [examples](https://gatling.io/docs/current/cookbook/), no Scala knowledge is needed, a little experience with functional programming will certainly help. Let's incrementally add new pieces to a small building block together until we arrive to an executable test.
+You may notice that we use Scala to write the tests. Don't worry, with all the great [tutorials](https://gatling.io/docs/current/quickstart/) and [examples](https://gatling.io/docs/current/cookbook/), no Scala knowledge is needed, a little experience with functional programming will certainly help. Let's incrementally add new pieces to a small building block together until we have  an executable test.
 
 ### A Simple HTTP Request
 
@@ -259,13 +259,15 @@ And you have even fancier reports than last time - enjoy!
 
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/blazemeter-report.png" caption="A BlazeMeter report." %}
 
+Moreover without extra effort, you can trivially make sure that the test is not bound by the infrastructure:
+
+{% include thumbnail.html image_path="assets/images/posts/stress-testing/engine-health.png" caption="BlazeMeter monitors the executor machines for you." %}
+
 ### Simulation Recorder
 
 There is a lazy way to be able to [record simulation](https://gatling.io/docs/2.3/http/recorder/) using a GUI, if you just start to experiment with Gatling. Try it out, but for any non-trivial tests, you need to touch the Scala code. For such tests, where you're interested in downloading a lots of static resources and it would be quite boring to code it manually, give it a shot.
 
 {% include thumbnail.html image_path="assets/images/posts/stress-testing/recorder.png" caption="The GUI recorder of Gatling.io - a good companion in writing the actual Scala classes." %}
-
-{% include thumbnail.html image_path="assets/images/posts/stress-testing/engine-health.png" caption="BlazeMeter monitors the executor machines for you." %}
 
 ### Icing on the Cake - Integration Tests on Travis
 
