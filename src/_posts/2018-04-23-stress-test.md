@@ -108,7 +108,7 @@ Here, we issue a single HTTP request at the host, to retrieve the [blog page](ht
 
 ### Headers
 
-Real browsers do send various headers alongside the request, we can make it more realistic this way:_
+Real browsers do send various headers alongside the request, we can make it more realistic this way:
 ```scala
 val httpProtocol = http
   .acceptHeader("*/*")
